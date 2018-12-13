@@ -1,0 +1,24 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.0.4
+  Changes:
+	- Fixed that bio-reactor wasnt unlocked with the recipe it was needed for
+---------------------------------------------------------------------------------------------------
+Version: 0.0.3
+  Changes:
+	- Removed pump from quenching tower recipe.
+	- adjusted sinkhole to have crafting speed of 10 to increase void speed
+	- added 1 extra sinkhole to inventory on spawn
+---------------------------------------------------------------------------------------------------
+Version: 0.0.2
+  Changes:
+	- added a small 3x3 island to spawn player on to hopefully stop the player from instatly dying in some starts
+	- changed game spawn to modify defualt nauvis surface instead of generating a new one
+---------------------------------------------------------------------------------------------------
+Version: 0.0.1
+  Changes:
+	- Moved several building and recipes to being unlocked on game start
+	- changed tar to iron and copper to output more ore per cycle
+	- changed tar to borax and niobium to output more ore per cycle
+	- reduced landfill cost from 20 stone to 5
+	- added recipe to wash stone from soil
+	- Created early concreate tech to give access to basic concreate in the red science only period to allow crafting of more quenching towers
