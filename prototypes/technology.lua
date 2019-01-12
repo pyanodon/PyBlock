@@ -1,6 +1,17 @@
 --[[
-spawn a few rocks in start area
 start process for merging resources for bobs, angels + madclown, omni, yuki, 5dim?
+
+DONE/NEED TO TEST
+add tin to game start. need for sci 1
+sci-2
+needs aluminium ore
+spawn rocks
+
+NEEDS DONE
+quartz. need for sci 1
+auto screener adjusts
+make slower cheaper mines for early game resources
+
 
 ]]--
 

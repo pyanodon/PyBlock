@@ -1,3 +1,5 @@
+require("functions/functions")
+
 data.raw.item["landfill"].stack_size = 1000
 
 data.raw.recipe["landfill"].ingredients={{type="item", name="stone", amount=5}}
@@ -97,7 +99,39 @@ data:extend
 	icon_size = 32,
 	subgroup = "py-fusion-recipes",
     order = "h"
+	},
+	{
+	type = "recipe",
+    name = "tailings-tin-alum",
+    localised_name = {"recipe-name.tailings-ore-extraction", {"item-name.ore-tin"}, {"item-name.ore-aluminium"}, {"fluid-name.tar"}},
+    category = "quenching-tower",
+    enabled = true,
+    energy_required = 2,
+    ingredients = {
+        {type = "fluid", name = "tar", amount = 200},
+        {type = "fluid", name = "dirty-water", amount = 500}
+    },
+    results = {
+        {type = "fluid", name = "dirty-water", amount = 100},
+        {type = "fluid", name = "flue-gas", amount = 300},
+        {type = "fluid", name = "water-saline", amount = 200},
+		{type = "item", name = "ore-tin", amount = 10},
+		{type = "item", name = "ore-aluminium", amount = 10}
+    },
+    icons = {
+        {icon = "__pycoalprocessing__/graphics/icons/dirty-water.png", icon_size = 32}
+    },
+    icon_size = 32,
+    subgroup = "py-quenching-ores",
+    order = "tailings-a"
+	},
+	--TODO:finish sand to quartz recipe.
+	--[[
+	{
+	type = "recipe",
+	name = "sand-quartz-sifting",
 	}
+	]]--
 }
 )
 

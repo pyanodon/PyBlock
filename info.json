@@ -12,6 +12,7 @@
 	"pycoalprocessing >= 0.3.7",
 	"pyfusionenergy >= 0.1.3",
 	"pyhightech >= 1.0.0",
-	"pyindustry >= 1.0.10"
+	"pyindustry >= 1.0.10",
+	"pyrawores >= 1.1.2"
 	]
 }
