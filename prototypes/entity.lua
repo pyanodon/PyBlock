@@ -214,12 +214,13 @@ data:extend(
     vertical_window_bounding_box = {{-0.28125, -0.5}, {0.03125, 0.125}}
   },
   {
-  type = "assembling-machine",
+  --type = "assembling-machine",
+  type = "furnace",
   name = "basic-ddc",
   icon = "__PyBlock__/graphics/hr-basic-ddc.png",
   icon_size = 32,
   flags = {"placeable-neutral", "placeable-player", "player-creation"},
-  ingredient_count = 4,
+  --ingredient_count = 20,
   minable = {mining_time = 1, result = "basic-ddc"},
     max_health = 200,
     corpse = "medium-remnants",
@@ -247,13 +248,13 @@ data:extend(
         percent = 30
       }
     },
-	collision_box = {{-1.3, -1.3}, {1.3, 1.3}},
+	collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
-	fluid_box =
+	fluid_boxes =
     {
 		{
 		production_type = "output",
-		base_area = 10,
+		--base_area = 10,
 		base_level = 1,
 		pipe_covers = pipecoverspictures(),
 		pipe_connections =
@@ -264,7 +265,7 @@ data:extend(
 		},
 		{
 		production_type = "output",
-		base_area = 10,
+		--base_area = 10,
 		base_level = 1,
 		pipe_covers = pipecoverspictures(),
 		pipe_connections =
@@ -277,9 +278,9 @@ data:extend(
     },
 	crafting_categories = {"distilator"},
 	crafting_speed = 1,
-	--result_inventory_size = 4,
+	result_inventory_size = 4,
     energy_usage = "150kW",
-	--source_inventory_size = 1,
+	source_inventory_size = 1,
 	energy_source =
     {
       type = "burner",
@@ -306,18 +307,18 @@ data:extend(
         {
         filename = "__PyBlock__/graphics/hr-basic-ddc.png",
         priority = "extra-high",
-        width = 110,
-        height = 108,
+        width = 57.25,
+        height = 56.25,
         frame_count = 1,
-        shift = util.by_pixel(0, 4),
+        --shift = util.by_pixel(0, 4),
         hr_version =
         {
           filename = "__PyBlock__/graphics/hr-basic-ddc.png",
           priority = "extra-high",
-          width = 114.5,
-          height = 112.5,
+          width = 219,
+          height = 215,
           frame_count = 1,
-          shift = util.by_pixel(-0.25, 3.75),
+          --shift = util.by_pixel(-0.25, 3.75),
           scale = 0.5
           }
         },
@@ -360,7 +361,7 @@ data:extend(
             frame_count = 48,
             axially_symmetrical = false,
             direction_count = 1,
-            shift = util.by_pixel(2, 5.5),
+            shift = util.by_pixel(2, 21.5),
             hr_version =
         {
               filename = "__base__/graphics/entity/stone-furnace/hr-stone-furnace-fire.png",
@@ -371,7 +372,7 @@ data:extend(
               frame_count = 48,
               axially_symmetrical = false,
               direction_count = 1,
-              shift = util.by_pixel(-0.75, 5.5),
+              shift = util.by_pixel(-0.75, 21.5),
               scale = 0.5
             }
           },
