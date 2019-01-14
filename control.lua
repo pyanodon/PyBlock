@@ -99,7 +99,7 @@ script.on_event(defines.events.on_chunk_generated, function(event)
 
 local SelectedRock = math.random(1,15)
 
-log(serpent.block(event))
+--log(serpent.block(event))
 
 local tx = event.area.left_top.x
 local ty = event.area.left_top.y

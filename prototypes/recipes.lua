@@ -125,15 +125,93 @@ data:extend
     subgroup = "py-quenching-ores",
     order = "tailings-a"
 	},
-	--TODO:finish sand to quartz recipe.
-	--[[
+	
 	{
 	type = "recipe",
 	name = "sand-quartz-sifting",
+	category = "screener",
+	enabled = true,
+	ingredients =
+		{
+			{type = "item", name = "sand", amount = 10}
+		},
+	results = 
+		{
+			{type = "item", name = "ore-quartz", amount = 2}
+		},
+	main_product = "ore-quartz",
+	icon = "__pyrawores__/graphics/icons/ores/ore-quartz.png",
+	icon_size = 32,
+	subgroup = "py-washer",
+	order = "c",
+	energy_required = 4
+	},
+	{
+	type = "recipe",
+	name = "wrought-iron",
+	category = "smelting",
+	enabled = true,
+	ingredients = 
+		{
+			{type = "item", name = "iron-ore", amount = 2}
+		},
+	results = 
+		{
+			{type = "item", name = "pb-wrought-iron-plate", amount = 1}
+		},
+	main_product = "pb-wrought-iron-plate",
+	icon = "__base__/graphics/icons/iron-plate.png",
+	icon_size = 32,
+	energy_required = 3,
+	--order = "a[smelting]",
+	},
+	
+	--new building recipes:
+	{
+    type = "recipe",
+    name = "cheap-iron-mine",
+    energy_required = 10,
+    enabled = true,
+    ingredients = {
+        {"automated-factory-mk01", 1},
+        {"burner-mining-drill", 2},
+		{"wrought-iron-gear-wheel", 25},
+		{"wrought-iron-pipe", 10},
+        {"pb-wrought-iron-plate", 50},
+        {"electronic-circuit", 20}
+    },
+    results = {
+        {"cheap-iron-mine", 1}
+    }
+	},
+	
+	--new item recipes:
+	{
+	type = "recipe",
+	name = "wrought-iron-pipe",
+	energy_required = 1,
+	enabled = true,
+	ingredients = 
+		{
+			{"pb-wrought-iron-plate", 1}
+		},
+	results = 
+		{
+			{"wrought-iron-pipe", 1}
+		},
+	main_product = "wrought-iron-pipe"
+	},
+	{
+    type = "recipe",
+    name = "wrought-iron-gear-wheel",
+    ingredients = {{"pb-wrought-iron-plate", 2}},
+    result = "wrought-iron-gear-wheel"
 	}
-	]]--
+
 }
 )
+
+data.raw.recipe["iron-plate"].enabled = false
 
 RECIPE("bio-reactor"):replace_ingredient('super-alloy','boron')
 RECIPE("bio-reactor"):replace_ingredient('gasturbinemk02','gasturbinemk01')

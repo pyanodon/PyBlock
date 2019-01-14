@@ -1,4 +1,6 @@
 require("prototypes/technology")
+require("prototypes/item")
+require("prototypes/entity")
 require("prototypes/recipes")
 require("autoplace-controls")
 
