@@ -1,3 +1,4 @@
+require("functions/functions")
 require("prototypes/technology")
 require("prototypes/item")
 require("prototypes/entity")

@@ -206,6 +206,27 @@ data:extend
     name = "wrought-iron-gear-wheel",
     ingredients = {{"pb-wrought-iron-plate", 2}},
     result = "wrought-iron-gear-wheel"
+	},
+	
+	--Wrought iron to regulear
+	{
+	type = "recipe",
+	name = "wrought-to-iron",
+	ingredients = 
+		{
+			{"pb-wrought-iron-plate", 5}
+		},
+	result = "iron-plate"
+	},
+	{
+	type = "recipe",
+	name = "iron-to-wrought",
+	ingredients =
+		{
+			{"iron-plate", 1}
+		},
+	result = "pb-wrought-iron-plate",
+	result_count = 5
 	}
 
 }

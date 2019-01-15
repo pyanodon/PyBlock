@@ -37,6 +37,15 @@ game.surfaces["nauvis"].set_tiles(Tiles)
 
 end)
 
+local crashedshipparts = 
+		{
+		"big-ship-wreck-1",
+		"big-ship-wreck-2",
+		"big-ship-wreck-3",
+		"medium-ship-wreck",
+		"small-ship-wreck"
+		}
+			
 script.on_event(defines.events.on_player_created, function(event)
 	
   local player = game.players[event.player_index]
@@ -55,6 +64,22 @@ script.on_event(defines.events.on_player_created, function(event)
   player.insert({name="stone-furnace", count=2})
   player.insert({name="py-sinkhole", count=2})
   player.insert({name="py-gas-vent", count=2})
+  
+  local shippieces = math.random(3,10)
+  
+  for a=1,shippieces do
+  
+  local pickedpiece = crashedshipparts[math.random(1,5)]
+  
+  local x = math.random(-25,25)
+  local y = math.random(-25,25)
+  
+  local cs = game.surfaces["nauvis"].create_entity{name=pickedpiece,position={x,y},force=game.players[1].force}
+  
+  cs.insert("pb-wrought-iron-plate")
+  cs.insert({name = "copper-plate", count = 50})
+  
+  end
   
 end)
 

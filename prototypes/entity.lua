@@ -385,6 +385,50 @@ data:extend(
 }
 )
 
+--Add minablity to crashed ship parts
+table.insert(data.raw["simple-entity"]["big-ship-wreck-1"],minable)
+table.insert(data.raw["simple-entity"]["big-ship-wreck-2"],minable)
+table.insert(data.raw["simple-entity"]["big-ship-wreck-3"],minable)
+table.insert(data.raw["simple-entity"]["medium-ship-wreck"],minable)
+table.insert(data.raw["simple-entity"]["small-ship-wreck"],minable)
+
+
+local minable = 
+		{
+		mining_particle = "stone-particle",
+		mining_time = 8,
+		results = {{name = "pb-wrought-iron-plate", amount_min = 25, amount_max = 75}, {name = "copper-plate", amount_min = 24, amount_max = 75}},
+		}
+		
+table.insert(data.raw["simple-entity"]["big-ship-wreck-1"].minable,minable)
+table.insert(data.raw["simple-entity"]["big-ship-wreck-2"].minable,minable)
+table.insert(data.raw["simple-entity"]["big-ship-wreck-3"].minable,minable)
+table.insert(data.raw["simple-entity"]["medium-ship-wreck"].minable,minable)
+table.insert(data.raw["simple-entity"]["small-ship-wreck"].minable,minable)
+
+--data.raw["simple-entity"]["medium-ship-wreck"].minable = minable
+
+log(serpent.block(data.raw["simple-entity"]["medium-ship-wreck"]))
+	
+
+ingredient_replace("burner-mining-drill","iron-plate","pb-wrought-iron-plate")
+ingredient_replace("burner-mining-drill","iron-gear-wheel","wrought-iron-gear-wheel")
+ingredient_replace("offshore-pump","pipe","wrought-iron-pipe")
+ingredient_replace("offshore-pump","iron-gear-wheel","wrought-iron-gear-wheel")
+ingredient_replace("steam-engine","iron-gear-wheel","wrought-iron-gear-wheel")
+ingredient_replace("steam-engine","pipe","wrought-iron-pipe")
+ingredient_replace("steam-engine","iron-plate","pb-wrought-iron-plate")
+ingredient_replace("boiler","pipe","wrought-iron-pipe")
+ingredient_replace("burner-inserter","iron-plate","pb-wrought-iron-plate")
+ingredient_replace("burner-inserter","iron-gear-wheel","wrought-iron-gear-wheel")
+ingredient_replace("wpu","iron-plate","pb-wrought-iron-plate")
+ingredient_replace("wpu","iron-gear-wheel","wrought-iron-gear-wheel")
+ingredient_replace("washer","iron-plate","pb-wrought-iron-plate")
+ingredient_replace("washer","pipe","wrought-iron-pipe")
+
+
+
+
 local famount = fluid_amount
 local rfluid = required_fluid
 
@@ -394,4 +438,4 @@ table.insert(data.raw.resource["iron-rock"].minable, rfluid)
 data.raw.resource["iron-rock"].minable.fluid_amount = 100
 data.raw.resource["iron-rock"].minable.required_fluid = "steam"
 
-log(serpent.block(data.raw.resource["iron-rock"].minable))
+--log(serpent.block(data.raw.resource["iron-rock"].minable))
