@@ -277,7 +277,7 @@ data:extend(
 		off_when_no_fluid_recipe = true
     },
 	crafting_categories = {"distilator"},
-	crafting_speed = 1,
+	crafting_speed = 0.5,
 	result_inventory_size = 4,
     energy_usage = "150kW",
 	source_inventory_size = 1,
@@ -285,7 +285,7 @@ data:extend(
     {
       type = "burner",
       fuel_category = "chemical",
-      effectivity = 1,
+      effectivity = .25,
       fuel_inventory_size = 1,
       emissions = 0.01,
       smoke =
@@ -380,35 +380,366 @@ data:extend(
         }
       },
     --fast_replaceable_group = "furnace"
-  }
+  },
+  
+  {
+    type = "assembling-machine",
+    name = "starter-botanical-nursery",
+    icon = "__pycoalprocessing__/graphics/icons/botanical-nursery.png",
+    icon_size = 32,
+    flags = {"placeable-neutral", "player-creation"},
+    minable = {mining_time = 1, result = "starter-botanical-nursery"},
+    fast_replaceable_group = "botanical-nursery",
+    max_health = 700,
+    corpse = "big-remnants",
+    dying_explosion = "big-explosion",
+    collision_box = {{-3.3, -3.3}, {3.3, 3.3}},
+    selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
+    module_specification = {
+        module_slots = 0
+    },
+    allowed_effects = {"consumption", "speed", "productivity", "pollution"},
+    crafting_categories = {"starter-nursery"},
+    crafting_speed = 0.5,
+    energy_source = 
+		{
+      type = "burner",
+      fuel_category = "chemical",
+      effectivity = 10000,
+      fuel_inventory_size = 1,
+      emissions = 0.01,
+      smoke =
+      {
+        {
+          name = "smoke",
+          deviation = {0.1, 0.1},
+          frequency = 5,
+          position = {0.0, -0.8},
+          starting_vertical_speed = 0.08,
+          starting_frame_deviation = 60
+        }
+      }
+    },
+    energy_usage = "0.00001kW",
+    ingredient_count = 20,
+    animation = {
+        filename = "__pycoalprocessing__/graphics/entity/botanical-nursery/botanical-nursery.png",
+        width = 260,
+        height = 254,
+        line_length = 7,
+        frame_count = 35,
+        animation_speed = 0.4,
+        run_mode = "forward-then-backward",
+        shift = {0.1, 0.1}
+    },
+    fluid_boxes = {
+        --1
+        {
+            production_type = "input",
+            pipe_picture = DATA.Pipes.pictures("assembling-machine-3", {0.2, 4.13}, {0.12, -4.03}, {4.115, 0.1}, {-3.88, 0.16}, pipes),
+            pipe_covers = DATA.Pipes.covers(true, true, true, true),
+            base_area = 10,
+            base_level = -1,
+            pipe_connections = {{type = "input", position = {0.0, 4.0}}}
+        },
+        {
+            production_type = "input",
+            pipe_picture = DATA.Pipes.pictures("assembling-machine-3", {0.2, 4.13}, {0.12, -4.03}, {4.115, 0.1}, {-3.88, 0.16}, pipes),
+            pipe_covers = DATA.Pipes.covers(true, true, true, true),
+            base_area = 10,
+            base_level = -1,
+            pipe_connections = {{type = "input", position = {0.0, -4.0}}}
+        },
+        {
+            production_type = "output",
+            pipe_picture = DATA.Pipes.pictures("assembling-machine-3", {0.2, 4.13}, {0.12, -4.03}, {4.115, 0.1}, {-3.88, 0.16}, pipes),
+            pipe_covers = DATA.Pipes.covers(true, true, true, true),
+            base_level = 1,
+            pipe_connections = {{type = "output", position = {4.0, 0.0}}}
+        },
+        off_when_no_fluid_recipe = true
+    },
+    vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
+    working_sound = {
+        sound = {filename = "__pycoalprocessing__/sounds/botanical-nursery.ogg", volume = 1.8},
+        idle_sound = {filename = "__pycoalprocessing__/sounds/botanical-nursery.ogg", volume = 0.95},
+        apparent_volume = 2.5
+    }
+	},
+	
+	{
+    type = "assembling-machine",
+    name = "burner-soil-extractor",
+    icon = "__pycoalprocessing__/graphics/icons/soil-extractormk01.png",
+    icon_size = 32,
+    flags = {"placeable-neutral", "player-creation"},
+    minable = {mining_time = 1, result = "burner-soil-extractor"},
+    fast_replaceable_group = "soil-extractormk01",
+    max_health = 300,
+    corpse = "big-remnants",
+    dying_explosion = "medium-explosion",
+    collision_box = {{-3.48, -3.48}, {3.48, 3.48}},
+    selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
+    module_specification = {
+        module_slots = 0
+    },
+    allowed_effects = {"consumption", "speed", "productivity", "pollution"},
+    crafting_categories = {"soil-extraction"},
+    crafting_speed = 0.3,
+    energy_source = 
+		{
+      type = "burner",
+      fuel_category = "chemical",
+      effectivity = 0.5,
+      fuel_inventory_size = 1,
+      emissions = 0.01,
+      smoke =
+      {
+        {
+          name = "smoke",
+          deviation = {0.1, 0.1},
+          frequency = 5,
+          position = {0.0, -0.8},
+          starting_vertical_speed = 0.08,
+          starting_frame_deviation = 60
+        }
+      }
+    },
+    energy_usage = "400kW",
+    ingredient_count = 20,
+    animation = {
+        filename = "__pycoalprocessing__/graphics/entity/soil-extractormk01/soil-extractormk01.png",
+        width = 235,
+        height = 266,
+        frame_count = 30,
+        line_length = 6,
+        animation_speed = 0.8,
+        shift = {0.16, -0.609}
+    },
+    fluid_boxes = {
+        {
+            production_type = "input",
+            pipe_covers = DATA.Pipes.covers(true, true, true, true),
+            pipe_picture = DATA.Pipes.pictures("assembling-machine-3", {0, 1}, {0, -1}, nil, nil, pipes),
+            base_area = 10,
+            base_level = -1,
+            pipe_connections = {{type = "input", position = {4.0, 0.0}}}
+        }
+    },
+    vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
+    working_sound = {
+        sound = {filename = "__pycoalprocessing__/sounds/soil-extractormk01.ogg"},
+        idle_sound = {filename = "__pycoalprocessing__/sounds/soil-extractormk01.ogg", volume = 0.45},
+        apparent_volume = 2.5
+    }
+},
+{
+    type = "assembling-machine",
+    name = "burner-quenching-tower",
+    icon = "__pycoalprocessing__/graphics/icons/quenching-tower.png",
+    icon_size = 32,
+    flags = {"placeable-neutral", "player-creation"},
+    minable = {mining_time = 1, result = "burner-quenching-tower"},
+    fast_replaceable_group = "quenching-tower",
+    max_health = 500,
+    corpse = "big-remnants",
+    dying_explosion = "medium-explosion",
+    collision_box = {{-3.4, -3.4}, {3.4, 3.4}},
+    selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
+    module_specification = {
+        module_slots = 0
+    },
+    allowed_effects = {"consumption", "speed", "productivity", "pollution"},
+    crafting_categories = {"quenching-tower"},
+    crafting_speed = 1,
+    energy_source = 
+		{
+      type = "burner",
+      fuel_category = "chemical",
+      effectivity = 0.5,
+      fuel_inventory_size = 1,
+      emissions = 0.01,
+      smoke =
+      {
+        {
+          name = "smoke",
+          deviation = {0.1, 0.1},
+          frequency = 5,
+          position = {0.0, -0.8},
+          starting_vertical_speed = 0.08,
+          starting_frame_deviation = 60
+        }
+      }
+    },
+    energy_usage = "300kW",
+    ingredient_count = 20,
+    animation = {
+        filename = "__pycoalprocessing__/graphics/entity/quenching-tower/quenching-tower-anim.png",
+        width = 232,
+        height = 252,
+        frame_count = 60,
+        line_length = 8,
+        animation_speed = 0.7,
+        shift = {0.08, 0.0}
+    },
+    fluid_boxes = {
+        {
+            production_type = "input",
+            pipe_picture = DATA.Pipes.pictures("assembling-machine-3", {1.08, 4.0}, {-0.82, -4.0}, nil, nil, pipes2),
+            pipe_covers = DATA.Pipes.covers(false, true, true, true),
+            base_area = 10,
+            base_level = -1,
+            pipe_connections = {{type = "input", position = {4.0, -1.0}}}
+        },
+        {
+            production_type = "input",
+            pipe_picture = DATA.Pipes.pictures("assembling-machine-3", {-0.82, 4.0}, {1.12, -4.0}, nil, nil, pipes),
+            pipe_covers = DATA.Pipes.covers(false, true, true, true),
+            base_area = 10,
+            base_level = -1,
+            pipe_connections = {{type = "input", position = {4.0, 1.0}}}
+        },
+        {
+            production_type = "output",
+            pipe_picture = DATA.Pipes.pictures("assembling-machine-3", {-0.82, 4.0}, {1.12, -4.0}, nil, nil, pipes),
+            pipe_covers = DATA.Pipes.covers(false, true, true, true),
+            base_level = 1,
+            pipe_connections = {{type = "output", position = {-4.0, -1.0}}}
+        },
+        {
+            production_type = "output",
+            pipe_picture = DATA.Pipes.pictures("assembling-machine-3", {1.08, 4.0}, {-0.82, -4.0}, nil, nil, pipes2),
+            pipe_covers = DATA.Pipes.covers(false, true, true, true),
+            base_level = 1,
+            pipe_connections = {{type = "output", position = {-4.0, 1.0}}}
+        },
+        {
+            production_type = "output",
+            pipe_picture = DATA.Pipes.pictures("assembling-machine-3", {-0.82, 4.0}, {1.12, -4.0}, nil, nil, pipes),
+            pipe_covers = DATA.Pipes.covers(false, true, true, true),
+            base_level = 1,
+            pipe_connections = {{type = "output", position = {-1.0, 4.0}}}
+        },
+        off_when_no_fluid_recipe = true
+    },
+    vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
+    working_sound = {
+        sound = {filename = "__pycoalprocessing__/sounds/quenching-tower.ogg", volume = 0.42},
+        idle_sound = {filename = "__pycoalprocessing__/sounds/quenching-tower.ogg", volume = 0.36},
+        apparent_volume = 2.5
+    }
+},
+
+{
+    type = "assembling-machine",
+    name = "burner-washer",
+    icon = "__pycoalprocessing__/graphics/icons/washer.png",
+    icon_size = 32,
+    flags = {"placeable-neutral", "player-creation"},
+    minable = {mining_time = 1, result = "burner-washer"},
+    fast_replaceable_group = "washer",
+    max_health = 250,
+    corpse = "big-remnants",
+    dying_explosion = "medium-explosion",
+    collision_box = {{-3.0, -3.0}, {3.0, 3.0}},
+    selection_box = {{-3.1, -3.1}, {3.1, 3.1}},
+    module_specification = {
+        module_slots = 0
+    },
+    allowed_effects = {"consumption", "speed", "pollution"},
+    crafting_categories = {"washer"},
+    crafting_speed = 0.5,
+    energy_source = 
+		{
+      type = "burner",
+      fuel_category = "chemical",
+      effectivity = 0.5,
+      fuel_inventory_size = 1,
+      emissions = 0.01,
+      smoke =
+      {
+        {
+          name = "smoke",
+          deviation = {0.1, 0.1},
+          frequency = 5,
+          position = {0.0, -0.8},
+          starting_vertical_speed = 0.08,
+          starting_frame_deviation = 60
+        }
+      }
+    },
+    energy_usage = "100kW",
+    ingredient_count = 20,
+    animation = {
+        filename = "__pycoalprocessing__/graphics/entity/washer/washer.png",
+        width = 204,
+        height = 204,
+        frame_count = 80,
+        line_length = 10,
+        animation_speed = 0.9,
+        shift = {0.17, -0.17}
+    },
+    fluid_boxes = {
+        {
+            production_type = "input",
+            pipe_picture = DATA.Pipes.pictures("assembling-machine-2", {1.17, 2.78}, {-0.05, -0.8}, nil, nil, pipes2),
+            pipe_covers = DATA.Pipes.covers(true, true, true, true),
+            base_area = 10,
+            base_level = -1,
+            pipe_connections = {{type = "input", position = {0.5, 3.5}}}
+        },
+        {
+            production_type = "output",
+            pipe_covers = DATA.Pipes.covers(true, true, true, true),
+            pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {-0.05, -0.8}, nil, nil, pipes),
+            base_level = 1,
+            pipe_connections = {{position = {0.5, -3.5}}}
+        },
+        off_when_no_fluid_recipe = true
+    },
+    vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
+    working_sound = {
+        sound = {filename = "__pycoalprocessing__/sounds/washer.ogg", volume = 1.8},
+        idle_sound = {filename = "__pycoalprocessing__/sounds/washer.ogg", volume = 1.5},
+        apparent_volume = 1.8
+    }
+}
+
   
 }
 )
 
+table.insert(data.raw["assembling-machine"]["botanical-nursery"].crafting_categories,"nursery")
+
 --Add minablity to crashed ship parts
-table.insert(data.raw["simple-entity"]["big-ship-wreck-1"],minable)
-table.insert(data.raw["simple-entity"]["big-ship-wreck-2"],minable)
-table.insert(data.raw["simple-entity"]["big-ship-wreck-3"],minable)
+table.insert(data.raw["container"]["big-ship-wreck-1"],minable)
+table.insert(data.raw["container"]["big-ship-wreck-2"],minable)
+table.insert(data.raw["container"]["big-ship-wreck-3"],minable)
 table.insert(data.raw["simple-entity"]["medium-ship-wreck"],minable)
 table.insert(data.raw["simple-entity"]["small-ship-wreck"],minable)
 
 
-local minable = 
+local minableinfo = 
 		{
 		mining_particle = "stone-particle",
-		mining_time = 8,
-		results = {{name = "pb-wrought-iron-plate", amount_min = 25, amount_max = 75}, {name = "copper-plate", amount_min = 24, amount_max = 75}},
+		mining_time = 4,
+		results = {{name = "scrap-iron", amount_min = 75, amount_max = 250}, {name = "scrap-copper", amount_min = 50, amount_max = 150}},
 		}
 		
-table.insert(data.raw["simple-entity"]["big-ship-wreck-1"].minable,minable)
-table.insert(data.raw["simple-entity"]["big-ship-wreck-2"].minable,minable)
-table.insert(data.raw["simple-entity"]["big-ship-wreck-3"].minable,minable)
-table.insert(data.raw["simple-entity"]["medium-ship-wreck"].minable,minable)
-table.insert(data.raw["simple-entity"]["small-ship-wreck"].minable,minable)
+		
+data.raw["container"]["big-ship-wreck-1"].minable = minableinfo
+
+--log(serpent.block(data.raw["container"]["big-ship-wreck-1"]))
+
+--table.insert(data.raw["container"]["big-ship-wreck-1"].minable,minableinfo)
+data.raw["container"]["big-ship-wreck-2"].minable=minableinfo
+data.raw["container"]["big-ship-wreck-3"].minable=minableinfo
+data.raw["simple-entity"]["medium-ship-wreck"].minable=minableinfo
+data.raw["simple-entity"]["small-ship-wreck"].minable=minableinfo
 
 --data.raw["simple-entity"]["medium-ship-wreck"].minable = minable
 
-log(serpent.block(data.raw["simple-entity"]["medium-ship-wreck"]))
+--log(serpent.block(data.raw["simple-entity"]["medium-ship-wreck"]))
 	
 
 ingredient_replace("burner-mining-drill","iron-plate","pb-wrought-iron-plate")

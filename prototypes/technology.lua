@@ -1,16 +1,20 @@
 --[[
+
+NEEDS DONE
+auto screener adjusts : i think this was done at home but idk. need checked
+make slower cheaper mines for early game resources: iron mine done. idk if want to do rest. possibly adjust spawn to add few other starter ores
+
+delayed till pyro update is finished!!!
 start process for merging resources for bobs, angels + madclown, omni, yuki, 5dim?
 
 DONE/NEED TO TEST
 add tin to game start. need for sci 1
 sci-2
-needs aluminium ore
-spawn rocks
-
-NEEDS DONE
 quartz. need for sci 1
-auto screener adjusts
-make slower cheaper mines for early game resources
+
+more testing maybe?
+needs aluminium ore: is available
+spawn rocks: is good
 
 
 ]]--
@@ -31,6 +35,7 @@ table.insert(data.raw.technology["diamond-mining"].effects, {type = "unlock-reci
 table.insert(data.raw.technology["basic-electronics"].effects, {type="unlock-recipe", recipe = "bio-reactor"})
 table.insert(data.raw.technology["oil-processing"].effects,{type="unlock-recipe",recipe="dirty-reaction"})
 table.insert(data.raw.technology["oil-processing"].effects,{type="unlock-recipe",recipe="fts-reactor"})
+table.insert(data.raw.technology["iron-mk01"].effects,{type="unlock-recipe",recipe="iron-plate"})
 
 data:extend({
 	{

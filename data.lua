@@ -1,4 +1,5 @@
 require("functions/functions")
+require("prototypes/recipe-categories")
 require("prototypes/technology")
 require("prototypes/item")
 require("prototypes/entity")

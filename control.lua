@@ -50,6 +50,11 @@ script.on_event(defines.events.on_player_created, function(event)
 	
   local player = game.players[event.player_index]
 
+  player.insert({name="landfill", count=1000})
+  player.insert({name="stone", count=100})
+  player.insert({name="raw-wood", count=100})
+  player.insert({name="iron-axe", count=1})
+  --[[
   player.insert({name="quenching-tower", count=1})
   player.insert({name="botanical-nursery", count=1})
   player.insert({name="distilator", count=1})
@@ -57,15 +62,16 @@ script.on_event(defines.events.on_player_created, function(event)
   player.insert({name="iron-plate", count=92})
   player.insert({name="copper-plate", count=50})
   player.insert({name="copper-plate", count=50})
-  player.insert({name="landfill", count=1000})
   player.insert({name="washer", count=1})
-  player.insert({name="raw-wood", count=100})
   player.insert({name="wpu", count=1})
   player.insert({name="stone-furnace", count=2})
   player.insert({name="py-sinkhole", count=2})
   player.insert({name="py-gas-vent", count=2})
+  ]]--
   
-  local shippieces = math.random(3,10)
+  player.remove_item("iron-plate")
+  
+  local shippieces = math.random(5,10)
   
   for a=1,shippieces do
   
@@ -76,8 +82,8 @@ script.on_event(defines.events.on_player_created, function(event)
   
   local cs = game.surfaces["nauvis"].create_entity{name=pickedpiece,position={x,y},force=game.players[1].force}
   
-  cs.insert("pb-wrought-iron-plate")
-  cs.insert({name = "copper-plate", count = 50})
+  cs.insert("scrap-iron")
+  cs.insert({name = "scrap-copper", count = 50})
   
   end
   
@@ -87,29 +93,29 @@ script.on_event(defines.events.on_player_respawned, function(event)
 
   local player = game.players[event.player_index]
 
-  player.insert({name="quenching-tower", count=1})
-  player.insert({name="botanical-nursery", count=1})
-  player.insert({name="distilator", count=1})
-  player.insert({name="offshore-pump", count=1})
-  player.insert({name="iron-plate", count=92})
-  player.insert({name="copper-plate", count=50})
-  player.insert({name="landfill", count=1000})
-  player.insert({name="washer", count=1})
-  player.insert({name="raw-wood", count=100})
-  player.insert({name="wpu", count=1})
-  player.insert({name="stone-furnace", count=1})
-  player.insert({name="py-sinkhole", count=1})
+  --player.insert({name="quenching-tower", count=1})
+  --player.insert({name="botanical-nursery", count=1})
+  --player.insert({name="distilator", count=1})
+  --player.insert({name="offshore-pump", count=1})
+  --player.insert({name="iron-plate", count=92})
+  --player.insert({name="copper-plate", count=50})
+  --player.insert({name="landfill", count=1000})
+  --player.insert({name="washer", count=1})
+  --player.insert({name="raw-wood", count=100})
+  --player.insert({name="wpu", count=1})
+  --player.insert({name="stone-furnace", count=1})
+  --player.insert({name="py-sinkhole", count=1})
   
 end)
 
 local Rocks = {
+				"iron-rock",
 				"uranium-rock",
 				"zinc-rock",
 				"aluminium-rock",
 				"chromium-rock",
 				"coal-rock",
 				"copper-rock",
-				"iron-rock",
 				"lead-rock",
 				"nexelit-rock",
 				"nickel-rock",
@@ -120,6 +126,8 @@ local Rocks = {
 				"titanium-rock"
 				}
 
+local firstrock = true
+				
 script.on_event(defines.events.on_chunk_generated, function(event)
 
 local SelectedRock = math.random(1,15)
@@ -142,7 +150,19 @@ local y = Randy - 5
 local a=0
 local b=0
 
-local RandChance = math.random(0,40)
+local RandChance
+
+if firstrock == true then
+
+	SelectedRock = 1
+	
+	RandChance = math.random(0,40)
+	
+else
+
+	RandChance = math.random(0,480)
+	
+end
 
 if RandChance == 5 then
 
@@ -179,6 +199,12 @@ end
 game.surfaces["nauvis"].set_tiles(tiles)
 
 game.surfaces["nauvis"].create_entity{name=Rocks[SelectedRock],position={Randx,Randy},amount=math.random(1000000,15000000)}
+
+if firstrock == true then
+
+	firstrock = false
+	
+end
 
 end
 

@@ -165,6 +165,30 @@ data:extend
 	energy_required = 3,
 	--order = "a[smelting]",
 	},
+	{
+	type = "recipe",
+	name = "scrap-to-wrought-iron",
+	category = "smelting",
+	energy_required = 2,
+	ingredients = 
+		{
+			{"scrap-iron", 10}
+		},
+	result = "pb-wrought-iron-plate"
+	},
+	{
+	type = "recipe",
+	name = "scrap-to-copper",
+	category = "smelting",
+	energy_required = 2,
+	ingredients = 
+		{
+			{name = "scrap-copper", amount = 5}
+		},
+	results = {
+		{name = "copper-plate", amount = 1}
+	}
+	},
 	
 	--new building recipes:
 	{
@@ -182,6 +206,79 @@ data:extend
     },
     results = {
         {"cheap-iron-mine", 1}
+    }
+	},
+	{
+	type = "recipe",
+	name = "basic-ddc",
+	energy_required = 8,
+	enabled = true,
+	ingredients = {
+			{name = "pb-wrought-iron-plate", amount = 15},
+			{name = "stone-furnace", amount = 1},
+			{name = "wrought-iron-pipe", amount = 5}
+	},
+	results = {
+		{name = "basic-ddc", amount = 1}
+	}
+	},
+	{
+    type = "recipe",
+    name = "starter-botanical-nursery",
+    energy_required = 15,
+    enabled = true,
+    ingredients = {
+        {"burner-soil-extractor", 1},
+        {"pb-wrought-iron-plate", 15},
+        {"raw-wood", 5},
+        {"wrought-iron-pipe", 10}
+    },
+    results = {
+        {"starter-botanical-nursery", 1}
+    }
+	},
+	{
+    type = "recipe",
+    name = "burner-soil-extractor",
+    energy_required = 6,
+    enabled = true,
+    ingredients = {
+        {"burner-mining-drill", 2},
+        {"pb-wrought-iron-plate", 15},
+        {"copper-cable", 5},
+        {"wrought-iron-gear-wheel", 15}
+    },
+    results = {
+        {"burner-soil-extractor", 1}
+    }
+	},
+	{
+    type = "recipe",
+    name = "burner-quenching-tower",
+    energy_required = 5,
+    enabled = true,
+    ingredients = {
+        {"landfill", 25},
+        {"pb-wrought-iron-plate", 25},
+        {"wrought-iron-pipe", 10},
+        {"copper-plate", 15}
+    },
+    results = {
+        {"burner-quenching-tower", 1}
+    }
+	},
+	{
+    type = "recipe",
+    name = "burner-washer",
+    energy_required = 4,
+    enabled = true,
+    ingredients = {
+        {"pb-wrought-iron-plate", 10},
+        {"wrought-iron-pipe", 25},
+        {"stone-brick", 30}
+    },
+    results = {
+        {"burner-washer", 1}
     }
 	},
 	
@@ -212,6 +309,7 @@ data:extend
 	{
 	type = "recipe",
 	name = "wrought-to-iron",
+	category = "smelting",
 	ingredients = 
 		{
 			{"pb-wrought-iron-plate", 5}
@@ -232,6 +330,9 @@ data:extend
 }
 )
 
+	--update first log recipe
+	data.raw.recipe["log1"].category="starter-nursery"
+	
 data.raw.recipe["iron-plate"].enabled = false
 
 RECIPE("bio-reactor"):replace_ingredient('super-alloy','boron')
