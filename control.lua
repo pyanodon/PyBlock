@@ -90,8 +90,8 @@ script.on_event(defines.events.on_player_created, function(event)
   
   local cs = game.surfaces["nauvis"].create_entity{name=pickedpiece,position={x,y},force=game.players[1].force}
   
-  cs.insert({name = "scrap-iron", count = 400})
-  cs.insert({name = "scrap-copper", count = 50})
+  --cs.insert({name = "scrap-iron", count = 400})
+  --cs.insert({name = "scrap-copper", count = 50})
   
 	  if cs.type == "container" and firstcon == true then
 	  
@@ -105,6 +105,18 @@ script.on_event(defines.events.on_player_created, function(event)
   
   end
   
+end)
+
+script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_entity}, function(event)
+
+local E = event.created_entity
+	
+	if E.name == "py-sinkhole" or E.name == "py-gas-vent" then
+	
+		E.insert({name = "coal", count = 1})
+	
+	end
+
 end)
 
 script.on_event(defines.events.on_player_respawned, function(event)

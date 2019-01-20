@@ -401,7 +401,7 @@ data:extend(
     },
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
     crafting_categories = {"starter-nursery"},
-    crafting_speed = 0.5,
+    crafting_speed = 1,
     energy_source = 
 		{
       type = "burner",
@@ -785,6 +785,28 @@ data.raw["container"]["big-ship-wreck-2"].inventory_size = 10
 data.raw["container"]["big-ship-wreck-3"].inventory_size = 10
 
 table.insert(data.raw["assembling-machine"]["botanical-nursery"].crafting_categories,"nursery")
+local burner = {
+				  type = "burner",
+				  fuel_category = "chemical",
+				  effectivity = 10000,
+				  fuel_inventory_size = 1,
+				  emissions = 0.01,
+				  smoke =
+				  {
+					{
+					  name = "smoke",
+					  deviation = {0.1, 0.1},
+					  frequency = 5,
+					  position = {0.0, -0.8},
+					  starting_vertical_speed = 0.08,
+					  starting_frame_deviation = 60
+					}
+				  }
+				}
+				
+data.raw["furnace"]["py-sinkhole"].energy_source = burner
+data.raw["furnace"]["py-gas-vent"].energy_source = burner
+    
 
 --Add minablity to crashed ship parts
 table.insert(data.raw["container"]["big-ship-wreck-1"],minable)
@@ -798,7 +820,7 @@ local minableinfo =
 		{
 		mining_particle = "stone-particle",
 		mining_time = 4,
-		results = {{name = "scrap-iron", amount_min = 75, amount_max = 250}, {name = "scrap-copper", amount_min = 50, amount_max = 150}},
+		results = {{name = "scrap-iron", amount_min = 400, amount_max = 800}, {name = "scrap-copper", amount_min = 50, amount_max = 150}},
 		}
 		
 		
