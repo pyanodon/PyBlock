@@ -49,9 +49,11 @@ local crashedshipparts =
 script.on_event(defines.events.on_player_created, function(event)
 	
   local player = game.players[event.player_index]
+  
+  game.show_message_dialog{text = {"intro"}}
 
   player.insert({name="landfill", count=1000})
-  player.insert({name="stone", count=100})
+  player.insert({name="stone", count=200})
   player.insert({name="raw-wood", count=100})
   player.insert({name="iron-axe", count=1})
   --[[
@@ -70,9 +72,15 @@ script.on_event(defines.events.on_player_created, function(event)
   ]]--
   
   player.remove_item("iron-plate")
+  player.remove_item("stone-furnace")
+  player.remove_item("burner-mining-drill")
   
   local shippieces = math.random(5,10)
   
+  local cs
+  
+  local firstcon=true
+	
   for a=1,shippieces do
   
   local pickedpiece = crashedshipparts[math.random(1,5)]
@@ -82,8 +90,18 @@ script.on_event(defines.events.on_player_created, function(event)
   
   local cs = game.surfaces["nauvis"].create_entity{name=pickedpiece,position={x,y},force=game.players[1].force}
   
-  cs.insert("scrap-iron")
+  cs.insert({name = "scrap-iron", count = 400})
   cs.insert({name = "scrap-copper", count = 50})
+  
+	  if cs.type == "container" and firstcon == true then
+	  
+		cs.insert({name = "stone-furnace", count = 1})
+		cs.insert({name="py-sinkhole", count=2})
+		cs.insert({name="py-gas-vent", count=2})
+	  
+	  firstcon = false
+	  
+	  end
   
   end
   

@@ -281,6 +281,22 @@ data:extend
         {"burner-washer", 1}
     }
 	},
+	{
+    type = "recipe",
+    name = "burner-wpu",
+    energy_required = 5,
+    enabled = true,
+    ingredients = {
+        --{"raw-wood", 20},
+        {"pb-wrought-iron-plate", 20},
+        {"wrought-iron-gear-wheel", 15},
+        {"burner-mining-drill", 2},
+        {"copper-cable", 50}
+    },
+    results = {
+        {"burner-wpu", 1}
+    }
+	},
 	
 	--new item recipes:
 	{
@@ -324,6 +340,7 @@ data:extend
 			{"iron-plate", 1}
 		},
 	result = "pb-wrought-iron-plate",
+	main_product = "pb-wrought-iron-plate",
 	result_count = 5
 	}
 

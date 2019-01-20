@@ -1,7 +1,6 @@
 --[[
 
 NEEDS DONE
-auto screener adjusts : i think this was done at home but idk. need checked
 make slower cheaper mines for early game resources: iron mine done. idk if want to do rest. possibly adjust spawn to add few other starter ores
 
 delayed till pyro update is finished!!!
@@ -19,13 +18,31 @@ spawn rocks: is good
 
 ]]--
 
+--recipes unlocked at start:
 data.raw.recipe["log1"].enabled = true
 data.raw.recipe["tailings-copper-iron"].enabled = true
-data.raw.recipe["botanical-nursery"].enabled = true
-data.raw.recipe["quenching-tower"].enabled = true
 data.raw.recipe["log-wood"].enabled = true
 data.raw.recipe["landfill"].enabled = true
 data.raw.recipe["py-sinkhole"].enabled = true
+data.raw.recipe["steel-plate"].enabled = true
+
+--building unlocked at start:
+--data.raw.recipe["botanical-nursery"].enabled = true
+--data.raw.recipe["quenching-tower"].enabled = true
+
+--buildings removed from start:
+data.raw.recipe["distilator"].enabled=false
+table.insert(data.raw.technology["coal-processing-1"].effects,{type="unlock-recipe",recipe="distilator"})
+data.raw.recipe["wpu"].enabled=false
+table.insert(data.raw.technology["coal-processing-1"].effects,{type="unlock-recipe",recipe="wpu"})
+data.raw.recipe["washer"].enabled=false
+table.insert(data.raw.technology["separation"].effects,{type="unlock-recipe",recipe="washer"})
+data.raw.recipe["soil-extractormk01"].enabled=false
+table.insert(data.raw.technology["separation"].effects,{type="unlock-recipe",recipe="soil-extractormk01"})
+--data.raw.recipe["tar-processing-unit"].enabled=false
+table.insert(data.raw.technology["coal-processing-1"].effects,{type="unlock-recipe",recipe="tar-processing-unit"})
+
+--tech changes:
 table.insert(data.raw.technology["coal-processing-1"].effects, {type = "unlock-recipe", recipe = "tailings-borax-niobium"})
 data.raw.technology["excavation-1"].unit.ingredients = {{"science-pack-1", 1},{"science-pack-2",1}}
 data.raw.technology["excavation-1"].prerequisites = nil

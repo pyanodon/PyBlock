@@ -278,7 +278,7 @@ data:extend(
     },
 	crafting_categories = {"distilator"},
 	crafting_speed = 0.5,
-	result_inventory_size = 4,
+	result_inventory_size = 2,
     energy_usage = "150kW",
 	source_inventory_size = 1,
 	energy_source =
@@ -307,10 +307,11 @@ data:extend(
         {
         filename = "__PyBlock__/graphics/hr-basic-ddc.png",
         priority = "extra-high",
-        width = 57.25,
-        height = 56.25,
+        width = 219,
+        height = 215,
         frame_count = 1,
         --shift = util.by_pixel(0, 4),
+		scale = 0.5,
         hr_version =
         {
           filename = "__PyBlock__/graphics/hr-basic-ddc.png",
@@ -703,11 +704,85 @@ data:extend(
         idle_sound = {filename = "__pycoalprocessing__/sounds/washer.ogg", volume = 1.5},
         apparent_volume = 1.8
     }
+	},
+	
+	{
+    type = "assembling-machine",
+    name = "burner-wpu",
+    icon = "__pycoalprocessing__/graphics/icons/wpu.png",
+    icon_size = 32,
+    flags = {"placeable-neutral", "player-creation"},
+    minable = {mining_time = 1, result = "burner-wpu"},
+    fast_replaceable_group = "wpu",
+    max_health = 800,
+    corpse = "medium-remnants",
+    dying_explosion = "medium-explosion",
+    collision_box = {{-2.8, -2.8}, {2.8, 2.8}},
+    selection_box = {{-3.0, -3.0}, {3.0, 3.0}},
+    module_specification = {
+        module_slots = 0
+    },
+    allowed_effects = {"consumption", "speed", "productivity", "pollution"},
+    crafting_categories = {"wpu"},
+    crafting_speed = 1,
+    energy_source = 
+		{
+      type = "burner",
+      fuel_category = "chemical",
+      effectivity = 0.5,
+      fuel_inventory_size = 1,
+      emissions = 0.01,
+      smoke =
+      {
+        {
+          name = "smoke",
+          deviation = {0.1, 0.1},
+          frequency = 5,
+          position = {0.0, -0.8},
+          starting_vertical_speed = 0.08,
+          starting_frame_deviation = 60
+        }
+      }
+    },
+    energy_usage = "150kW",
+    ingredient_count = 20,
+    animation = {
+        layers = {
+            {
+                filename = "__pycoalprocessing__/graphics/entity/wpu/left.png",
+                width = 96,
+                height = 277,
+                line_length = 21,
+                frame_count = 130,
+                shift = {-1.5, -1.328},
+                animation_speed = 0.4
+            },
+            {
+                filename = "__pycoalprocessing__/graphics/entity/wpu/right.png",
+                width = 96,
+                height = 277,
+                line_length = 21,
+                frame_count = 130,
+                shift = {1.5, -1.328},
+                animation_speed = 0.4
+            }
+        }
+    },
+    vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
+    working_sound = {
+        sound = {filename = "__pycoalprocessing__/sounds/wpu.ogg", volume = 1.0},
+        idle_sound = {filename = "__pycoalprocessing__/sounds/wpu.ogg", volume = 0.6},
+        apparent_volume = 2.5
+    }
 }
 
   
 }
 )
+
+data.raw["container"]["big-ship-wreck-1"].inventory_size = 10
+data.raw["container"]["big-ship-wreck-2"].inventory_size = 10
+data.raw["container"]["big-ship-wreck-3"].inventory_size = 10
 
 table.insert(data.raw["assembling-machine"]["botanical-nursery"].crafting_categories,"nursery")
 
@@ -746,16 +821,16 @@ ingredient_replace("burner-mining-drill","iron-plate","pb-wrought-iron-plate")
 ingredient_replace("burner-mining-drill","iron-gear-wheel","wrought-iron-gear-wheel")
 ingredient_replace("offshore-pump","pipe","wrought-iron-pipe")
 ingredient_replace("offshore-pump","iron-gear-wheel","wrought-iron-gear-wheel")
-ingredient_replace("steam-engine","iron-gear-wheel","wrought-iron-gear-wheel")
-ingredient_replace("steam-engine","pipe","wrought-iron-pipe")
-ingredient_replace("steam-engine","iron-plate","pb-wrought-iron-plate")
-ingredient_replace("boiler","pipe","wrought-iron-pipe")
+--ingredient_replace("steam-engine","iron-gear-wheel","wrought-iron-gear-wheel")
+--ingredient_replace("steam-engine","pipe","wrought-iron-pipe")
+--ingredient_replace("steam-engine","iron-plate","pb-wrought-iron-plate")
+--ingredient_replace("boiler","pipe","wrought-iron-pipe")
 ingredient_replace("burner-inserter","iron-plate","pb-wrought-iron-plate")
 ingredient_replace("burner-inserter","iron-gear-wheel","wrought-iron-gear-wheel")
-ingredient_replace("wpu","iron-plate","pb-wrought-iron-plate")
-ingredient_replace("wpu","iron-gear-wheel","wrought-iron-gear-wheel")
-ingredient_replace("washer","iron-plate","pb-wrought-iron-plate")
-ingredient_replace("washer","pipe","wrought-iron-pipe")
+--ingredient_replace("wpu","iron-plate","pb-wrought-iron-plate")
+--ingredient_replace("wpu","iron-gear-wheel","wrought-iron-gear-wheel")
+--ingredient_replace("washer","iron-plate","pb-wrought-iron-plate")
+--ingredient_replace("washer","pipe","wrought-iron-pipe")
 
 
 

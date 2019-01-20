@@ -47,11 +47,11 @@ data:extend(
 	{
 	type = "item",
 	name = "basic-ddc",
-	icon = "__PyBlock__/graphics/hr-basic-ddc.png",
+	icon = "__PyBlock__/graphics/icons/hr-basic-ddc-icon.png",
 	icon_size = 32,
     flags = {"goes-to-quickbar"},
-    subgroup = "smelting-machine",
-    order = "a[stone-furnace]",
+    subgroup = "coal-processing",
+    order = "k",
     place_result = "basic-ddc",
     stack_size = 20
 	},
@@ -97,6 +97,17 @@ data:extend(
     subgroup = "coal-processing",
     order = "z2",
     place_result = "burner-washer",
+    stack_size = 10
+	},
+	{
+    type = "item",
+    name = "burner-wpu",
+    icon = "__pycoalprocessing__/graphics/icons/wpu.png",
+    icon_size = 32,
+    flags = {"goes-to-quickbar"},
+    subgroup = "coal-processing",
+    order = "c",
+    place_result = "burner-wpu",
     stack_size = 10
 	},
 	
