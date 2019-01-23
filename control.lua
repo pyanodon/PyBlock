@@ -9,6 +9,8 @@ local Tiles = {}
 
 script.on_init(function(event)
 
+global.firstrock = true
+
 local t
 
 for x = 0,10 do
@@ -50,7 +52,7 @@ script.on_event(defines.events.on_player_created, function(event)
 	
   local player = game.players[event.player_index]
   
-  game.show_message_dialog{text = {"intro"}}
+  --game.show_message_dialog{text = {"intro"}}
 
   player.insert({name="landfill", count=1000})
   player.insert({name="stone", count=200})
@@ -155,8 +157,8 @@ local Rocks = {
 				"tin-rock",
 				"titanium-rock"
 				}
-
-local firstrock = true
+			
+--local firstrock = true
 				
 script.on_event(defines.events.on_chunk_generated, function(event)
 
@@ -182,7 +184,7 @@ local b=0
 
 local RandChance
 
-if firstrock == true then
+if global.firstrock == true then
 
 	SelectedRock = 1
 	
@@ -230,9 +232,9 @@ game.surfaces["nauvis"].set_tiles(tiles)
 
 game.surfaces["nauvis"].create_entity{name=Rocks[SelectedRock],position={Randx,Randy},amount=math.random(1000000,15000000)}
 
-if firstrock == true then
+if global.firstrock == true then
 
-	firstrock = false
+	global.firstrock = false
 	
 end
 

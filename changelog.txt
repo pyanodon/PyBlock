@@ -1,5 +1,5 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.0.4
+Version: 0.0.5
   Changes:
 	- added pyro as required modif
 	- added pyro ore recipes to create ores from tar at game start for the first two science packs
