@@ -1,6 +1,13 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.4
   Changes:
+	- added pyro as required modif
+	- added pyro ore recipes to create ores from tar at game start for the first two science packs
+	- added several new building with recipes for early game and removed several old pymod buildings from start/ added techs to unlock them
+	- added pyro rocks to rarely spawn on the map
+---------------------------------------------------------------------------------------------------
+Version: 0.0.4
+  Changes:
 	- Fixed that bio-reactor wasnt unlocked with the recipe it was needed for
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.3
