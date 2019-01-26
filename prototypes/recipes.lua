@@ -14,8 +14,8 @@ for k, result in ipairs(data.raw.recipe["tailings-copper-iron"].results) do
 
 	if data.raw.recipe["tailings-copper-iron"].results[k].name == "copper-ore" then
 	
-		data.raw.recipe["tailings-copper-iron"].results[k].amount = 10
-		data.raw.recipe["tailings-copper-iron"].results[k].probability = 1
+		data.raw.recipe["tailings-copper-iron"].results[k].amount = 7.5
+		data.raw.recipe["tailings-copper-iron"].results[k].probability = .75
 		
 	end
 	
@@ -51,6 +51,7 @@ end
 data.raw.recipe["quenching-tower"].ingredients[4] = nil
 
 data.raw["furnace"]["py-sinkhole"].crafting_speed = 10
+data.raw["furnace"]["py-gas-vent"].crafting_speed = 10
 
 data:extend
 (

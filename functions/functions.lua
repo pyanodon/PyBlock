@@ -24,6 +24,10 @@ recipe = R
 
 end
 
+local ningredients
+
+local eingredients
+
 		if recipe.ingredients ~= nil then
 			
 			local ingredients = recipe.ingredients
@@ -83,12 +87,26 @@ end
 			--TODO:need to check for ingredients that dont have name declared
 		elseif recipe.normal or recipe.expensive then
 		
-			local ningredients = recipe.normal.ingredients 
-			local eingredients = recipe.expensive.ingredients
+		--log(serpent.block(recipe))
+		
+			if recipe.normal ~= nil then
+			
+			--log("is check good")
+			
+				ningredients = recipe.normal.ingredients 
+			
+			end
+			
+			if recipe.expensive ~= nil then
+			
+				eingredients = recipe.expensive.ingredients
+			
+			end
 			
 			if recipe.normal then
 			
 			--log(serpent.block(recipe.normal))
+			--log(serpent.block(ningredients))
 			
 				for i, ing in pairs(ningredients) do
 			

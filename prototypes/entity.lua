@@ -37,7 +37,7 @@ data:extend(
     energy_source =
     {
       type = "burner",
-      fuel_category = "mega-drill-head",
+      fuel_category = "chemical",
       effectivity = 1,
       fuel_inventory_size = 1,
       emissions = 0.1,

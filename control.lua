@@ -155,7 +155,11 @@ local Rocks = {
 				"quartz-rock",
 				"salt-rock",
 				"tin-rock",
-				"titanium-rock"
+				"titanium-rock",
+				"volcanic-pipe",
+				"regolites",
+				"rare-earth-bolide",
+				"phosphate-rock"
 				}
 			
 --local firstrock = true

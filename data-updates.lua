@@ -18,7 +18,19 @@ table.remove(data.raw.recipe["automated-screener"].ingredients,i)
 
 end
 
+if ing.name == "steel-plate" then
+
+	data.raw.recipe["automated-screener"].ingredients[i].amount = 5
+	
 end
 
-table.insert(data.raw.recipe["automated-screener"].ingredients,{"electric-mining-drill",3})
+if ing.name == "iron-plate" then
+
+	data.raw.recipe["automated-screener"].ingredients[i].amount = 20
+	
+end
+
+end
+
+table.insert(data.raw.recipe["automated-screener"].ingredients,{"electric-mining-drill",1})
 data.raw.recipe["automated-screener"].enabled = true

@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.7
+  Changes:
+	- upped gas vent crafting speed to 10 same as sinkhole
+	- reduced automated screener ingredients to needing 5 steel plate and 20 iron plate
+	- fixed issue in control.lua with a local variable desyncing mutiplayer. i hope
+	- changed burner iron mine from needing drill heads as fuel to using standard fuel items
+	- added missing minable rocks from the rest of pymods
+---------------------------------------------------------------------------------------------------
 Version: 0.0.5
   Changes:
 	- added pyro as required modif
