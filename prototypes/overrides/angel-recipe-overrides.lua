@@ -94,8 +94,8 @@ tailingsrecipe.name = nil
 
 Recipe["tailings-angels2-angels5"] = tailingsrecipe
 Recipe["tailings-angels2-angels5"].name = "tailings-angels2-angels5"
-Recipe["tailings-angels2-angels5"].results[4].name = "angels-ore6"
-Recipe["tailings-angels2-angels5"].results[5].name = "angels-ore4"
+Recipe["tailings-angels2-angels5"].results[4].name = "angels-ore2"
+Recipe["tailings-angels2-angels5"].results[5].name = "angels-ore5"
 Recipe["tailings-angels2-angels5"].localised_name = "Jivolite and Rubyte from Tar"
 
 
