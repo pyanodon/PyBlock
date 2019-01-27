@@ -15,7 +15,6 @@ more testing maybe?
 needs aluminium ore: is available
 spawn rocks: is good
 
-
 ]]--
 
 --recipes unlocked at start:

@@ -10,7 +10,7 @@ table.remove(data.raw.recipe["automated-screener"].ingredients,i)
 
 end
 
-log(serpent.block(ing))
+--log(serpent.block(ing))
 
 if ing.name == "engine-unit" then
 
@@ -34,3 +34,6 @@ end
 
 table.insert(data.raw.recipe["automated-screener"].ingredients,{"electric-mining-drill",1})
 data.raw.recipe["automated-screener"].enabled = true
+data.raw.recipe["angelsore5-crushed-smelting"].normal.results[1] = nil
+data.raw.recipe["angelsore5-crushed-smelting"].normal.results[1]= {type = "item", name = "aluminium-plate", amount = 1}
+--fix localization for crushed rubyte lead plate
