@@ -1,5 +1,7 @@
 require("functions/functions")
 
+--tailings recipes
+
 data.raw.item["landfill"].stack_size = 1000
 
 data.raw.recipe["landfill"].ingredients={{type="item", name="stone", amount=5}}
@@ -48,11 +50,60 @@ for k, result in ipairs(data.raw.recipe["tailings-borax-niobium"].results) do
 	
 end
 
+data:extend(
+{
+	{
+	type = "recipe",
+	name = "tailings-lead-chromium"
+	},
+	{
+	type = "recipe",
+    name = "tailings-tin-alum",
+    localised_name = {"recipe-name.tailings-ore-extraction", {"item-name.ore-tin"}, {"item-name.ore-aluminium"}, {"fluid-name.tar"}},
+    category = "quenching-tower",
+    enabled = true,
+    energy_required = 2,
+    ingredients = {
+        {type = "fluid", name = "tar", amount = 200},
+        {type = "fluid", name = "dirty-water", amount = 500}
+    },
+    results = {
+        {type = "fluid", name = "dirty-water", amount = 100},
+        {type = "fluid", name = "flue-gas", amount = 300},
+        {type = "fluid", name = "water-saline", amount = 200},
+		{type = "item", name = "ore-tin", amount = 10},
+		{type = "item", name = "ore-aluminium", amount = 10}
+    },
+    icons = {
+        {icon = "__pycoalprocessing__/graphics/icons/dirty-water.png", icon_size = 32}
+    },
+    icon_size = 32,
+    subgroup = "py-quenching-ores",
+    order = "tailings-a"
+	}
+	
+}
+)
+
+local Recipe = data.raw.recipe
+
+local tailingsrecipe = table.deepcopy(data.raw.recipe["tailings-copper-iron"])
+tailingsrecipe.name = nil
+
+Recipe["tailings-lead-chromium"] = tailingsrecipe
+Recipe["tailings-lead-chromium"].name = "tailings-lead-chromium"
+Recipe["tailings-lead-chromium"].results[4].name = "ore-lead"
+Recipe["tailings-lead-chromium"].results[5].name = "ore-chromium"
+Recipe["tailings-lead-chromium"].localised_name = "Lead and Chromium from Tar"
+
 data.raw.recipe["quenching-tower"].ingredients[4] = nil
+
+--adjust void entities
 
 data.raw["furnace"]["py-sinkhole"].crafting_speed = 10
 data.raw["furnace"]["py-gas-vent"].crafting_speed = 10
 
+--new recipes
 data:extend
 (
 {
@@ -100,31 +151,6 @@ data:extend
 	icon_size = 32,
 	subgroup = "py-fusion-recipes",
     order = "h"
-	},
-	{
-	type = "recipe",
-    name = "tailings-tin-alum",
-    localised_name = {"recipe-name.tailings-ore-extraction", {"item-name.ore-tin"}, {"item-name.ore-aluminium"}, {"fluid-name.tar"}},
-    category = "quenching-tower",
-    enabled = true,
-    energy_required = 2,
-    ingredients = {
-        {type = "fluid", name = "tar", amount = 200},
-        {type = "fluid", name = "dirty-water", amount = 500}
-    },
-    results = {
-        {type = "fluid", name = "dirty-water", amount = 100},
-        {type = "fluid", name = "flue-gas", amount = 300},
-        {type = "fluid", name = "water-saline", amount = 200},
-		{type = "item", name = "ore-tin", amount = 10},
-		{type = "item", name = "ore-aluminium", amount = 10}
-    },
-    icons = {
-        {icon = "__pycoalprocessing__/graphics/icons/dirty-water.png", icon_size = 32}
-    },
-    icon_size = 32,
-    subgroup = "py-quenching-ores",
-    order = "tailings-a"
 	},
 	
 	{
