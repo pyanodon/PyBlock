@@ -1,4 +1,8 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.9
+  Changes:
+	- updated migration file to update tech changes
+---------------------------------------------------------------------------------------------------
 Version: 0.0.8
   Changes:
 	- moved several recipes around in the tech tree
