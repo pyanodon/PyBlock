@@ -216,7 +216,49 @@ data:extend
 		{name = "copper-plate", amount = 1}
 	}
 	},
+	{
+	type = "recipe",
+	name = "liquid-alloy-to-nichrome",
+	category = "casting",
+	enabled = false,
+	energy_required = 5,
+	ingredients = 
+		{
+			{type = "fluid", name = "molten-nickel", amount = 50},
+			{type = "fluid", name = "molten-chromium", amount = 40},
+			{type = "item", name = "sand-casting", amount = 1}
+		},
+	results = 
+		{
+			{type = "item", name = "nichrome", amount = 2}
+		},
+	main_product = "nichrome",
+	subgroup = "py-rawores-plates",
+	order = "j2"
+	},
 	
+	--nickel from clay
+	
+	{
+	type = "recipe",
+	name = "nickel-alum-from-clay",
+	category = "hpf",
+	enabled = true,
+	energy_required = 6,
+	ingredients = 
+		{
+			{type = "item", name = "clay", amount = 6},
+			{type = "fluid", name = "sulfuric-acid", amount = 20}
+		},
+	results = 
+		{
+			{type = "item", name = "ore-nickel", amount = 2},
+			{type = "item", name = "ore-aluminium", amount = 1, probability = 0.2}
+		},
+	main_product = "ore-nickel",
+	subgroup = "py-quenching-ores",
+	order = "tailings-e"
+	},
 	--new building recipes:
 	{
     type = "recipe",
@@ -375,7 +417,7 @@ data:extend
 )
 
 	--update first log recipe
-	data.raw.recipe["log1"].category="starter-nursery"
+data.raw.recipe["log1"].category="starter-nursery"
 	
 data.raw.recipe["iron-plate"].enabled = false
 

@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.8
+  Changes:
+	- moved several recipes around in the tech tree
+	- fixed localization on techs
+	- fixed bottleneck created by ground bore needing lube needing ores from ground bore to get lube or a very long path to basic oil processing
+	- add missing check for angels mods on a recipe
+---------------------------------------------------------------------------------------------------
 Version: 0.0.7
   Changes:
 	- upped gas vent crafting speed to 10 same as sinkhole

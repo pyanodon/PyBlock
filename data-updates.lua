@@ -34,6 +34,27 @@ end
 
 table.insert(data.raw.recipe["automated-screener"].ingredients,{"electric-mining-drill",1})
 data.raw.recipe["automated-screener"].enabled = true
+
+
+--change nichrome to be availble earlier
+
+for i,ing in pairs(data.raw.recipe["nichrome"].ingredients) do
+
+	if ing.name == "nitrogen" then
+
+		data.raw.recipe["nichrome"].ingredients[i] = nil
+		
+	end
+	
+end
+
+data.raw.recipe["nichrome"].category = "smelting"
+
+if mods["angelsrefining"] then
+
 data.raw.recipe["angelsore5-crushed-smelting"].normal.results[1] = nil
 data.raw.recipe["angelsore5-crushed-smelting"].normal.results[1]= {type = "item", name = "aluminium-plate", amount = 1}
+
+end
+
 --fix localization for crushed rubyte lead plate

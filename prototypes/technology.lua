@@ -3,17 +3,9 @@
 NEEDS DONE
 make slower cheaper mines for early game resources: iron mine done. idk if want to do rest. possibly adjust spawn to add few other starter ores
 
-delayed till pyro update is finished!!!
-start process for merging resources for bobs, angels + madclown, omni, yuki, 5dim?
+continue testing process for merging resources for bobs, angels + madclown, omni, yuki, 5dim?
 
 DONE/NEED TO TEST
-add tin to game start. need for sci 1
-sci-2
-quartz. need for sci 1
-
-more testing maybe?
-needs aluminium ore: is available
-spawn rocks: is good
 
 ]]--
 
@@ -49,10 +41,23 @@ data.raw.technology["excavation-1"].prerequisites = nil
 data.raw.technology["excavation-2"].unit.ingredients = {{"science-pack-1", 1},{"science-pack-2",1}}
 data.raw.technology["excavation-2"].prerequisites = {"excavation-1"}
 table.insert(data.raw.technology["diamond-mining"].effects, {type = "unlock-recipe", recipe = "coaldust-to-diamond"})
+
+--oil products adjustments
 table.insert(data.raw.technology["basic-electronics"].effects, {type="unlock-recipe", recipe = "bio-reactor"})
 table.insert(data.raw.technology["oil-processing"].effects,{type="unlock-recipe",recipe="dirty-reaction"})
+
 table.insert(data.raw.technology["oil-processing"].effects,{type="unlock-recipe",recipe="fts-reactor"})
-table.insert(data.raw.technology["iron-mk01"].effects,{type="unlock-recipe",recipe="iron-plate"})
+table.insert(data.raw.technology["oil-processing"].effects,{type="unlock-recipe",recipe="tar-oil"})
+table.insert(data.raw.technology["oil-processing"].effects,{type="unlock-recipe",recipe="heavy-oil_from_coal-gas"})
+table.insert(data.raw.technology["oil-processing"].effects,{type="unlock-recipe",recipe="light-oil_from_syngas"})
+table.insert(data.raw.technology["oil-processing"].effects,{type="unlock-recipe",recipe="petgas-from-refsyngas"})
+
+
+--metals adjustments
+table.insert(data.raw.technology["iron-mk01"].effects,{type="unlock-recipe", recipe ="iron-plate"})
+table.insert(data.raw.technology["chromium-mk02"].effects, {type = "unlock-recipe", recipe = "molten-chromium-01"})
+data.raw.technology["nexelit-mk01"].prerequisites = {"machines-mk01"}
+
 
 data:extend({
 	{
@@ -77,8 +82,65 @@ data:extend({
       time = 30
     },
 	order = "c-c-a"
-	}
+	},
+	
+	--alloy recipes
+	{
+	type = "technology",
+	name = "alloying-mk01",
+	icon = "__pyrawores__/graphics/icons/casting-unit-mk01.png",
+	icon_size = 32,
+	order = "c-b",
+	prerequisites = 
+		{"machines-mk01"},
+	effects = 
+		{
+			{
+			type = "unlock-recipe",
+			recipe = "nichrome"
+			}
+		},
+	unit = 
+		{
+			count = 25,
+			ingredients =
+				{
+					{"science-pack-1", 4},
+					{"science-pack-2", 1}
+				},
+			time = 30
+		}
+	},
+	{
+	type = "technology",
+	name = "alloying-mk02",
+	icon = "__pyrawores__/graphics/icons/casting-unit-mk02.png",
+	icon_size = 32,
+	order = "c-b",
+	prerequisites = 
+		{"machines-mk02"},
+	effects = 
+		{
+			{
+			type = "unlock-recipe",
+			recipe = "liquid-alloy-to-nichrome"
+			}
+		},
+	unit = 
+		{
+			count = 100,
+			ingredients =
+				{
+					{"science-pack-1", 1},
+					{"science-pack-2", 1}
+				},
+			time = 30
+		}
+	},
 
 })
+
+--move crude oil, heavy oil, light oil and petrol from fuel production to oil processing
+--move molten chromium from sand to chromium processing 02
 
 --table.insert(data.raw.technology["advanced-material-processing"].prerequisites, {"early-concrete"})
