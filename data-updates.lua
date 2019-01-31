@@ -2,35 +2,47 @@ RECIPE("bio-reactor"):replace_ingredient('advanced-circuit','electronic-circuit'
 
 --TODO:make early copper plate for begining buildings. //idk if im make cheaper copper as copper is low use and proably be ok with the basic 10:1 to start after scrap supply is used up
 
+log(serpent.block(data.raw.recipe["automated-screener"]))
+
 for i,ing in pairs(data.raw.recipe["automated-screener"].ingredients) do
+
+log(serpent.block(data.raw.recipe["automated-screener"]))
+
+log(serpent.block(ing))
+log(serpent.block(data.raw.recipe["automated-screener"].ingredients[i]))
+
 
 if ing.name == "electric-mining-drill" then
 
-table.remove(data.raw.recipe["automated-screener"].ingredients,i)
-
+--table.remove(data.raw.recipe["automated-screener"].ingredients,i)
+data.raw.recipe["automated-screener"].ingredients[i]=nil
 end
 
 --log(serpent.block(ing))
 
 if ing.name == "engine-unit" then
 
-table.remove(data.raw.recipe["automated-screener"].ingredients,i)
-
+--table.remove(data.raw.recipe["automated-screener"].ingredients,i)
+data.raw.recipe["automated-screener"].ingredients[i]=nil
 end
 
-if ing.name == "steel-plate" then
+if ing[1] == "steel-plate" then
 
-	data.raw.recipe["automated-screener"].ingredients[i].amount = 5
+	data.raw.recipe["automated-screener"].ingredients[i][2] = 5
 	
 end
 
-if ing.name == "iron-plate" then
+if ing[1] == "iron-plate" then
 
-	data.raw.recipe["automated-screener"].ingredients[i].amount = 20
+	data.raw.recipe["automated-screener"].ingredients[i][2] = 20
 	
 end
 
+log(serpent.block(data.raw.recipe["automated-screener"]))
+
 end
+
+log(serpent.block(data.raw.recipe["automated-screener"]))
 
 table.insert(data.raw.recipe["automated-screener"].ingredients,{"electric-mining-drill",1})
 data.raw.recipe["automated-screener"].enabled = true
