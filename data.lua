@@ -36,3 +36,13 @@ for t, tile in ipairs(tiles) do
 	data.raw.tile[tile].autoplace = nil
 	
 end
+
+local recipeselect=
+	{
+	type = "custom-input",
+	name = "recipe-selector",
+	key_sequence = "SHIFT + R",
+	consuming = "none"
+	}
+	
+data:extend{recipeselect}

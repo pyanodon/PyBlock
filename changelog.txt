@@ -1,4 +1,8 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.10
+  Changes:
+	- added recipe to get titanium ore from rich dust
+---------------------------------------------------------------------------------------------------
 Version: 0.0.9
   Changes:
 	- updated migration file to update tech changes

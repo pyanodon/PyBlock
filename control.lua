@@ -1,3 +1,5 @@
+--require("functions/autobuilder")
+
 local startchunk = false
 
 local surface

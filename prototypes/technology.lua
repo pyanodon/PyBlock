@@ -57,6 +57,7 @@ table.insert(data.raw.technology["oil-processing"].effects,{type="unlock-recipe"
 table.insert(data.raw.technology["iron-mk01"].effects,{type="unlock-recipe", recipe ="iron-plate"})
 table.insert(data.raw.technology["chromium-mk02"].effects, {type = "unlock-recipe", recipe = "molten-chromium-01"})
 data.raw.technology["nexelit-mk01"].prerequisites = {"machines-mk01"}
+table.insert(data.raw.technology["separation"].effects,{type="unlock-recipe", recipe = "titanium-from-rich-dust"})
 
 
 data:extend({

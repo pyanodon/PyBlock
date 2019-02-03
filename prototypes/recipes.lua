@@ -173,6 +173,26 @@ data:extend
 	order = "c",
 	energy_required = 4
 	},
+	--tit ore from rich dust in classifer
+	{
+	type = "recipe",
+	name = "titanium-from-rich-dust",
+	category = "classifier",
+	enabled = false,
+	ingredients =
+		{
+			{type = "item", name = "rich-dust", amount = 10}
+		},
+	results =
+		{
+			{type = "item", name = "ore-titanium", amount = 2}
+		},
+	main_product = "ore-titanium",
+	icon = "__pyrawores__/graphics/icons/ores/ore-titanium.png",
+	icon_size = 32,
+	subgroup = "py-items-class",
+	order = "b"
+	},
 	{
 	type = "recipe",
 	name = "wrought-iron",
