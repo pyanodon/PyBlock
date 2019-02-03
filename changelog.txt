@@ -2,6 +2,7 @@
 Version: 0.0.10
   Changes:
 	- added recipe to get titanium ore from rich dust
+	- corrected error not properly adjusted ingrediants on automated screener
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.9
   Changes:
