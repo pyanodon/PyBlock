@@ -36,9 +36,9 @@ table.insert(data.raw.technology["coal-processing-1"].effects,{type="unlock-reci
 
 --tech changes:
 table.insert(data.raw.technology["coal-processing-1"].effects, {type = "unlock-recipe", recipe = "tailings-borax-niobium"})
-data.raw.technology["excavation-1"].unit.ingredients = {{"science-pack-1", 1},{"science-pack-2",1}}
+data.raw.technology["excavation-1"].unit.ingredients = {{"automation-science-pack", 1},{"logistic-science-pack",1}}
 data.raw.technology["excavation-1"].prerequisites = nil
-data.raw.technology["excavation-2"].unit.ingredients = {{"science-pack-1", 1},{"science-pack-2",1}}
+data.raw.technology["excavation-2"].unit.ingredients = {{"automation-science-pack", 1},{"logistic-science-pack",1}}
 data.raw.technology["excavation-2"].prerequisites = {"excavation-1"}
 table.insert(data.raw.technology["diamond-mining"].effects, {type = "unlock-recipe", recipe = "coaldust-to-diamond"})
 
@@ -78,7 +78,7 @@ data:extend({
       count = 40,
       ingredients =
       {
-        {"science-pack-1", 1}
+        {"automation-science-pack", 1}
       },
       time = 30
     },
@@ -106,8 +106,8 @@ data:extend({
 			count = 25,
 			ingredients =
 				{
-					{"science-pack-1", 4},
-					{"science-pack-2", 1}
+					{"automation-science-pack", 4},
+					{"logistic-science-pack", 1}
 				},
 			time = 30
 		}
@@ -132,8 +132,8 @@ data:extend({
 			count = 100,
 			ingredients =
 				{
-					{"science-pack-1", 1},
-					{"science-pack-2", 1}
+					{"automation-science-pack", 1},
+					{"logistic-science-pack", 1}
 				},
 			time = 30
 		}

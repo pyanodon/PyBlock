@@ -319,7 +319,7 @@ data:extend
     ingredients = {
         {"burner-soil-extractor", 1},
         {"pb-wrought-iron-plate", 15},
-        {"raw-wood", 5},
+        {"wood", 5},
         {"wrought-iron-pipe", 10}
     },
     results = {
@@ -376,7 +376,7 @@ data:extend
     energy_required = 5,
     enabled = true,
     ingredients = {
-        --{"raw-wood", 20},
+        --{"wood", 20},
         {"pb-wrought-iron-plate", 20},
         {"wrought-iron-gear-wheel", 15},
         {"burner-mining-drill", 2},

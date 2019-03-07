@@ -404,8 +404,8 @@ data:extend(
     crafting_speed = 1,
     energy_source = 
 		{
-      type = "burner",
-      fuel_category = "chemical",
+      type = "void"
+      --[[fuel_category = "chemical",
       effectivity = 10000,
       fuel_inventory_size = 1,
       emissions = 0.01,
@@ -420,6 +420,7 @@ data:extend(
           starting_frame_deviation = 60
         }
       }
+	  ]]
     },
     energy_usage = "0.00001kW",
     ingredient_count = 20,
@@ -786,8 +787,8 @@ data.raw["container"]["big-ship-wreck-3"].inventory_size = 10
 
 table.insert(data.raw["assembling-machine"]["botanical-nursery"].crafting_categories,"nursery")
 local burner = {
-				  type = "burner",
-				  fuel_category = "chemical",
+				  type = "void"--,
+				  --[[fuel_category = "chemical",
 				  effectivity = 10000,
 				  fuel_inventory_size = 1,
 				  emissions = 0.01,
@@ -802,6 +803,7 @@ local burner = {
 					  starting_frame_deviation = 60
 					}
 				  }
+				  ]]
 				}
 				
 data.raw["furnace"]["py-sinkhole"].energy_source = burner
