@@ -59,7 +59,7 @@ script.on_event(defines.events.on_player_created, function(event)
   player.insert({name="landfill", count=1000})
   player.insert({name="stone", count=200})
   player.insert({name="wood", count=100})
-  player.insert({name="iron-axe", count=1})
+  --player.insert({name="iron-axe", count=1})
   --[[
   player.insert({name="quenching-tower", count=1})
   player.insert({name="botanical-nursery", count=1})

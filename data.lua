@@ -4,7 +4,7 @@ require("prototypes/technology")
 require("prototypes/item")
 require("prototypes/entity")
 require("prototypes/recipes")
-require("autoplace-controls")
+--require("autoplace-controls")
 require("prototypes/overrides/angel-recipe-overrides")
 require("prototypes/overrides/angel-tech-overrides")
 

@@ -2,14 +2,14 @@ RECIPE("bio-reactor"):replace_ingredient('advanced-circuit','electronic-circuit'
 
 --TODO:make early copper plate for begining buildings. //idk if im make cheaper copper as copper is low use and proably be ok with the basic 10:1 to start after scrap supply is used up
 
-log(serpent.block(data.raw.recipe["automated-screener"]))
+--log(serpent.block(data.raw.recipe["automated-screener"]))
 
 for i,ing in pairs(data.raw.recipe["automated-screener"].ingredients) do
 
-log(serpent.block(data.raw.recipe["automated-screener"]))
+--log(serpent.block(data.raw.recipe["automated-screener"]))
 
-log(serpent.block(ing))
-log(serpent.block(data.raw.recipe["automated-screener"].ingredients[i]))
+--log(serpent.block(ing))
+--log(serpent.block(data.raw.recipe["automated-screener"].ingredients[i]))
 
 
 if ing.name == "electric-mining-drill" then
@@ -38,11 +38,11 @@ if ing[1] == "iron-plate" then
 	
 end
 
-log(serpent.block(data.raw.recipe["automated-screener"]))
+--log(serpent.block(data.raw.recipe["automated-screener"]))
 
 end
 
-log(serpent.block(data.raw.recipe["automated-screener"]))
+--log(serpent.block(data.raw.recipe["automated-screener"]))
 
 table.insert(data.raw.recipe["automated-screener"].ingredients,{"electric-mining-drill",1})
 data.raw.recipe["automated-screener"].enabled = true
