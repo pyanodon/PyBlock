@@ -17,7 +17,7 @@ local t
 
 for x = 0,10 do
 
-	table.insert(Tiles,{name="grass-1", position={X,Y}})
+	table.insert(Tiles,{name="landfill", position={X,Y}})
 	
 	X = X + 1
 	
@@ -206,7 +206,7 @@ if RandChance == 5 then
 
 for i = 0,121 do
 
-	table.insert(tiles,{name="grass-1", position={x,y}})
+	table.insert(tiles,{name="landfill", position={x,y}})
 	
 	x = x+1
 	
