@@ -1,14 +1,18 @@
-global_item_replacer = function (old, new)
+global_item_replacer = function (old, new, blackrecipe)
 
 local recipes = table.deepcopy(data.raw.recipe)
 
 --log(serpent.block(data.raw.recipe["ore-sorting-facility-2"]))
 
 	for i, recipe in pairs(recipes) do
+	
+		if recipe.name ~= blackrecipe then
 
 		ingredient_replace(recipe,old,new)
 
 		results_replacer(recipe,old,new)
+		
+		end
 		
 	end
 
