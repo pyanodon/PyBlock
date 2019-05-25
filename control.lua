@@ -11,6 +11,61 @@ local Tiles = {}
 
 script.on_init(function(event)
 
+--do first delete everything in the chunk + set it to water only
+
+local oldtiles = {}
+
+local waters =
+	{
+	"water",
+	"deepwater",
+	--"deepwater-green",
+	--"water-green",
+	--"water-shallow",
+	--"water-mud",
+	}
+
+local tx = -32
+local ty = -32
+
+local bx = 32
+local by = 32
+
+local fx = tx
+local fy = ty
+
+for i = 0,4096 do
+
+	table.insert(oldtiles,{name=waters[math.random(1,2)],position={fx,fy}})
+
+	fx = fx + 1
+	
+	if fx == tx + 64 then
+	
+		fx = tx
+		fy = fy + 1
+		
+	end
+
+end
+
+game.surfaces["nauvis"].set_tiles(oldtiles)
+
+local crap = game.surfaces["nauvis"].find_entities({{tx,ty},{bx,by}})
+
+for _,c in pairs(crap) do
+
+log(serpent.block(c))
+if c ~= game.player then
+
+c.destroy()
+
+end
+
+end
+
+--setup spawn area
+
 global.firstrock = true
 
 local t
@@ -110,7 +165,7 @@ script.on_event(defines.events.on_player_created, function(event)
   end
   
 end)
-
+--remove this convert them to void energy sources
 script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_entity}, function(event)
 
 local E = event.created_entity
@@ -122,7 +177,7 @@ local E = event.created_entity
 	end
 
 end)
-
+--[[
 script.on_event(defines.events.on_player_respawned, function(event)
 
   local player = game.players[event.player_index]
@@ -141,6 +196,7 @@ script.on_event(defines.events.on_player_respawned, function(event)
   --player.insert({name="py-sinkhole", count=1})
   
 end)
+]]--
 
 local Rocks = {
 				"iron-rock",
@@ -168,14 +224,72 @@ local Rocks = {
 				
 script.on_event(defines.events.on_chunk_generated, function(event)
 
-local SelectedRock = math.random(1,15)
-
---log(serpent.block(event))
+--getting chunk bounds
 
 local tx = event.area.left_top.x
 local ty = event.area.left_top.y
 local bx = event.area.right_bottom.x
 local by = event.area.right_bottom.y
+
+log(serpent.block(event.area))
+--do first delete everything in the chunk + set it to water only
+if tx == -32 and ty == -32 then
+	log("was start chunk")
+	log(serpent.block(event.area))
+elseif tx == -32 and ty == 0 then
+	log("was start chunk")
+	log(serpent.block(event.area))
+elseif tx == 0 and ty == -32 then
+	log("was start chunk")
+	log(serpent.block(event.area))
+elseif tx == 0 and ty == 0 then
+	log("was start chunk")
+	log(serpent.block(event.area))
+else
+
+		local oldtiles = {}
+
+		local waters =
+			{
+			"water",
+			"deepwater",
+			--"deepwater-green",
+			--"water-green",
+			--"water-shallow",
+			--"water-mud",
+			}
+
+		local fx = tx
+		local fy = ty
+
+		for i = 0,1024 do
+
+			table.insert(oldtiles,{name=waters[math.random(1,2)],position={fx,fy}})
+
+			fx = fx + 1
+			
+			if fx == tx + 32 then
+			
+				fx = tx
+				fy = fy + 1
+				
+			end
+
+		end
+
+		game.surfaces["nauvis"].set_tiles(oldtiles)
+
+		local crap = game.surfaces["nauvis"].find_entities({{tx,ty},{bx,by}})
+
+		for _,c in pairs(crap) do
+
+		c.destroy()
+
+		end
+	--end
+end
+--setting stuff in chunk
+local SelectedRock = math.random(1,15)
 
 local Randx = math.random(tx,bx)
 local Randy = math.random(ty,by)

@@ -39,19 +39,20 @@ local tiles =
 		
 	end
 ]]
-	data.raw.tile["landfill"].collision_mask = {}
-	data.raw.tile["out-of-map"].collision_mask = {}
+	--data.raw.tile["landfill"].collision_mask = {}
+	--data.raw.tile["out-of-map"].collision_mask = {}
 	
 for t, tile in ipairs(tiles) do
 
 --log(serpent.block(data.raw.tile[tile].autoplace))
 
-	--data.raw.tile[tile].autoplace = nil
-	data.raw.tile[tile] = nil
-	data.raw["optimized-decorative"]["sand-dune-decal"] = nil
+	data.raw.tile[tile].autoplace = nil
+	--data.raw.tile[tile] = nil
+	--data.raw["optimized-decorative"]["sand-dune-decal"] = nil
 	--data.raw.tile[tile].autoplace = autoplace_settings(tile,"grass",{{0,0},{0,0}})
 	
 end
+
 --[[
 for a, a in pairs(data.raw.tile) do
 	
