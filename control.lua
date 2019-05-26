@@ -55,7 +55,7 @@ local crap = game.surfaces["nauvis"].find_entities({{tx,ty},{bx,by}})
 
 for _,c in pairs(crap) do
 
-log(serpent.block(c))
+--log(serpent.block(c.name))
 if c ~= game.player then
 
 c.destroy()
@@ -134,7 +134,7 @@ script.on_event(defines.events.on_player_created, function(event)
   player.remove_item("stone-furnace")
   player.remove_item("burner-mining-drill")
   
-  local shippieces = math.random(5,10)
+  local shippieces = math.random(8,14)
   
   local cs
   
@@ -198,30 +198,37 @@ script.on_event(defines.events.on_player_respawned, function(event)
 end)
 ]]--
 
-local Rocks = {
-				"iron-rock",
-				"uranium-rock",
-				"zinc-rock",
-				"aluminium-rock",
-				"chromium-rock",
-				"coal-rock",
-				"copper-rock",
-				"lead-rock",
-				"nexelit-rock",
-				"nickel-rock",
-				"phosphate-rock-02",
-				"quartz-rock",
-				"salt-rock",
-				"tin-rock",
-				"titanium-rock",
-				"volcanic-pipe",
-				"regolites",
-				"rare-earth-bolide",
-				"phosphate-rock"
-				}
-			
+local Rocks =
+	{
+	"iron-rock",
+	"uranium-rock",
+	"zinc-rock",
+	"aluminium-rock",
+	"chromium-rock",
+	"coal-rock",
+	"copper-rock",
+	"lead-rock",
+	"nexelit-rock",
+	"nickel-rock",
+	"phosphate-rock-02",
+	"quartz-rock",
+	"salt-rock",
+	"tin-rock",
+	"titanium-rock",
+	"volcanic-pipe",
+	"regolites",
+	"rare-earth-bolide",
+	"phosphate-rock",
+	"sulfur-patch",
+	"oil-mk01",
+	"oil-mk02",
+	"oil-mk03",
+	"oil-mk04",
+	"tar-patch"
+	}
+
 --local firstrock = true
-				
+	
 script.on_event(defines.events.on_chunk_generated, function(event)
 
 --getting chunk bounds
@@ -231,21 +238,37 @@ local ty = event.area.left_top.y
 local bx = event.area.right_bottom.x
 local by = event.area.right_bottom.y
 
-log(serpent.block(event.area))
+--log(serpent.block(event.area))
 --do first delete everything in the chunk + set it to water only
 if tx == -32 and ty == -32 then
-	log("was start chunk")
-	log(serpent.block(event.area))
+	--log("was start chunk")
+	--log(serpent.block(event.area))
 elseif tx == -32 and ty == 0 then
-	log("was start chunk")
-	log(serpent.block(event.area))
+	--log("was start chunk")
+	--log(serpent.block(event.area))
 elseif tx == 0 and ty == -32 then
-	log("was start chunk")
-	log(serpent.block(event.area))
+	--log("was start chunk")
+	--log(serpent.block(event.area))
 elseif tx == 0 and ty == 0 then
-	log("was start chunk")
-	log(serpent.block(event.area))
+	--log("was start chunk")
+	--log(serpent.block(event.area))
 else
+
+
+		local crap = game.surfaces["nauvis"].find_entities({{tx,ty},{bx,by}})
+
+		for _,c in pairs(crap) do
+
+		--log(serpent.block(c.name))
+		--log(serpent.block(c.position))
+		
+			if c.name ~= "iron-rock" then
+			
+			c.destroy()
+			
+			end
+
+		end
 
 		local oldtiles = {}
 
@@ -263,16 +286,38 @@ else
 		local fy = ty
 
 		for i = 0,1024 do
-
-			table.insert(oldtiles,{name=waters[math.random(1,2)],position={fx,fy}})
+		
+		--check for landfill from another chunk and dont replace
+			if game.surfaces["nauvis"].get_tile(fx,fy).name == "landfill" then
+			
+				
+			
+			else
+			
+				--local ent = game.surfaces["nauvis"].find_entities({{fx,fy},{fx,fy}}) 
+			
+				--for _, e in pairs(ent) do
+			
+				--log(e.name)
+			
+					--if e.name == "iron-rock" then
+			
+					--else
+						table.insert(oldtiles,{name=waters[math.random(1,2)],position={fx,fy}})
+						
+					--end
+				
+				--end
+				
+			end
 
 			fx = fx + 1
-			
+				
 			if fx == tx + 32 then
-			
+				
 				fx = tx
 				fy = fy + 1
-				
+					
 			end
 
 		end
@@ -283,21 +328,22 @@ else
 
 		for _,c in pairs(crap) do
 
+		--log(serpent.block(c.name))
 		c.destroy()
 
 		end
 	--end
 end
 --setting stuff in chunk
-local SelectedRock = math.random(1,15)
+local SelectedRock = math.random(1,25)
 
-local Randx = math.random(tx,bx)
-local Randy = math.random(ty,by)
+local Randx = math.random(tx+7,bx-7)
+local Randy = math.random(ty+7,by-7)
 
 local tiles = {}
 
-local x = Randx - 5
-local y = Randy - 5
+local x = Randx - 7
+local y = Randy - 7
 
 local a=0
 local b=0
@@ -308,17 +354,17 @@ if global.firstrock == true then
 
 	SelectedRock = 1
 	
-	RandChance = math.random(0,40)
+	RandChance = math.random(0,30)
 	
 else
 
-	RandChance = math.random(0,480)
+	RandChance = math.random(0,240)
 	
 end
 
 if RandChance == 5 then
 
-for i = 0,121 do
+for i = 0,169 do
 
 	table.insert(tiles,{name="landfill", position={x,y}})
 	
@@ -326,19 +372,19 @@ for i = 0,121 do
 	
 	a=a+1
 		
-		if a==11 then
+		if a==13 then
 		
-		x=Randx-5
+		x = x-13
 		
-		y=y+1
+		y = y+1
 		
-		b=b+1
+		b = b+1
 		
 		a=0
 		
-			if b==11 then
+			if b==13 then
 			
-			y=Randy-5
+			y=y-13
 			
 			b=0
 			

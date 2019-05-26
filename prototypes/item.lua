@@ -9,7 +9,7 @@ data:extend(
     flags = {},
     subgroup = "raw-material",
     order = "a[iron-plate]",
-    stack_size = 100
+    stack_size = 500
 	},
 	{
     type = "item",
@@ -19,7 +19,7 @@ data:extend(
     flags = {},
     subgroup = "raw-material",
     order = "a[iron-plate]",
-    stack_size = 100
+    stack_size = 500
 	},
 	{
     type = "item",
@@ -29,7 +29,7 @@ data:extend(
     flags = {},
     subgroup = "raw-material",
     order = "a[iron-plate]",
-    stack_size = 100
+    stack_size = 500
 	},
 	
 	--new buildings

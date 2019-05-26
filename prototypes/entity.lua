@@ -14,6 +14,7 @@ data:extend(
     dying_explosion = "medium-explosion",
     collision_box = {{-6.3, -6.3}, {6.3, 6.3}},
     selection_box = {{-6.5, -6.5}, {6.5, 6.5}},
+	--[[
 	input_fluid_box =
     {
       production_type = "input-output",
@@ -29,6 +30,7 @@ data:extend(
         { position = {0, 7} }
       }
     },
+	]]--
     module_specification = {
         module_slots = 1
     },
@@ -36,11 +38,23 @@ data:extend(
     mining_speed = 1.94,
     energy_source =
     {
-      type = "burner",
-      fuel_category = "chemical",
+      type = "fluid",
       effectivity = 1,
-      fuel_inventory_size = 1,
-      emissions = 0.1,
+      emissions = 1,
+	  fluid_box =
+		{
+		base_area = 1,
+		height = 2,
+		base_level = -1,
+		pipe_connections =
+			{
+			{type = "input", position = {-7,0}},
+			{type = "input", position = {7, 0} },
+			{type = "input", position = {0, 7} },
+			},
+		filter = "steam",
+		},
+		scale_fluid_usage = true,
     },
     energy_usage = "1500kW",
     mining_power = 2,
@@ -488,24 +502,26 @@ data:extend(
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
     crafting_categories = {"soil-extraction"},
     crafting_speed = 0.3,
-    energy_source = 
+    energy_source =
+    {
+      type = "fluid",
+      effectivity = 1,
+      emissions = 1,
+	  fluid_box =
 		{
-      type = "burner",
-      fuel_category = "chemical",
-      effectivity = 0.5,
-      fuel_inventory_size = 1,
-      emissions = 0.01,
-      smoke =
-      {
-        {
-          name = "smoke",
-          deviation = {0.1, 0.1},
-          frequency = 5,
-          position = {0.0, -0.8},
-          starting_vertical_speed = 0.08,
-          starting_frame_deviation = 60
-        }
-      }
+		base_area = 1,
+		height = 2,
+		base_level = -1,
+		pipe_connections =
+			{
+			{type = "input", position = {-4,0}},
+			{type = "input", position = {4, 2} },
+			{type = "input", position = {0, 4} },
+			},
+		production_type = "input",
+		filter = "steam",
+		},
+		scale_fluid_usage = true,
     },
     energy_usage = "400kW",
     ingredient_count = 20,
@@ -554,24 +570,23 @@ data:extend(
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
     crafting_categories = {"quenching-tower"},
     crafting_speed = 1,
-    energy_source = 
+    energy_source =
+    {
+      type = "fluid",
+      effectivity = 1,
+      emissions = 1,
+	  fluid_box =
 		{
-      type = "burner",
-      fuel_category = "chemical",
-      effectivity = 0.5,
-      fuel_inventory_size = 1,
-      emissions = 0.01,
-      smoke =
-      {
-        {
-          name = "smoke",
-          deviation = {0.1, 0.1},
-          frequency = 5,
-          position = {0.0, -0.8},
-          starting_vertical_speed = 0.08,
-          starting_frame_deviation = 60
-        }
-      }
+		base_area = 1,
+		height = 2,
+		base_level = -1,
+		pipe_connections =
+			{
+			{type = "input", position = {-1,-4}}
+			},
+		filter = "steam",
+		},
+		scale_fluid_usage = true,
     },
     energy_usage = "300kW",
     ingredient_count = 20,
@@ -651,24 +666,24 @@ data:extend(
     allowed_effects = {"consumption", "speed", "pollution"},
     crafting_categories = {"washer"},
     crafting_speed = 0.5,
-    energy_source = 
+    energy_source =
+    {
+      type = "fluid",
+      effectivity = 1,
+      emissions = 1,
+	  fluid_box =
 		{
-      type = "burner",
-      fuel_category = "chemical",
-      effectivity = 0.5,
-      fuel_inventory_size = 1,
-      emissions = 0.01,
-      smoke =
-      {
-        {
-          name = "smoke",
-          deviation = {0.1, 0.1},
-          frequency = 5,
-          position = {0.0, -0.8},
-          starting_vertical_speed = 0.08,
-          starting_frame_deviation = 60
-        }
-      }
+		base_area = 1,
+		height = 2,
+		base_level = -1,
+		pipe_connections =
+			{
+			{type = "input", position = {-3.5,0.5}},
+			{type = "input", position = {3.5, 0.5} }
+			},
+		filter = "steam",
+		},
+		scale_fluid_usage = true,
     },
     energy_usage = "100kW",
     ingredient_count = 20,
@@ -726,24 +741,25 @@ data:extend(
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
     crafting_categories = {"wpu"},
     crafting_speed = 1,
-    energy_source = 
+    energy_source =
+    {
+      type = "fluid",
+      effectivity = 1,
+      emissions = 1,
+	  fluid_box =
 		{
-      type = "burner",
-      fuel_category = "chemical",
-      effectivity = 0.5,
-      fuel_inventory_size = 1,
-      emissions = 0.01,
-      smoke =
-      {
-        {
-          name = "smoke",
-          deviation = {0.1, 0.1},
-          frequency = 5,
-          position = {0.0, -0.8},
-          starting_vertical_speed = 0.08,
-          starting_frame_deviation = 60
-        }
-      }
+		base_area = 1,
+		height = 2,
+		base_level = -1,
+		pipe_connections =
+			{
+			{type = "input", position = {-3,0}},
+			{type = "input", position = {3, 0} },
+			{type = "input", position = {0, 3} },
+			},
+		filter = "steam",
+		},
+		scale_fluid_usage = true,
     },
     energy_usage = "150kW",
     ingredient_count = 20,
@@ -855,10 +871,10 @@ ingredient_replace("burner-inserter","iron-gear-wheel","wrought-iron-gear-wheel"
 --ingredient_replace("wpu","iron-gear-wheel","wrought-iron-gear-wheel")
 --ingredient_replace("washer","iron-plate","pb-wrought-iron-plate")
 --ingredient_replace("washer","pipe","wrought-iron-pipe")
+ingredient_replace("boiler","pipe","wrought-iron-pipe")
 
-
-
-
+--replaced with the steam energy source as i always planned
+--[[
 local famount = fluid_amount
 local rfluid = required_fluid
 
@@ -867,5 +883,5 @@ table.insert(data.raw.resource["iron-rock"].minable, rfluid)
 
 data.raw.resource["iron-rock"].minable.fluid_amount = 100
 data.raw.resource["iron-rock"].minable.required_fluid = "steam"
-
+]]--
 --log(serpent.block(data.raw.resource["iron-rock"].minable))
