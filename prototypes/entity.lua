@@ -46,6 +46,7 @@ data:extend(
 		base_area = 1,
 		height = 2,
 		base_level = -1,
+		pipe_covers = pipecoverspictures(),
 		pipe_connections =
 			{
 			{type = "input", position = {-7,0}},
@@ -53,6 +54,7 @@ data:extend(
 			{type = "input", position = {0, 7} },
 			},
 		filter = "steam",
+		production_type = "input",
 		},
 		scale_fluid_usage = true,
     },
@@ -585,6 +587,7 @@ data:extend(
 			{type = "input", position = {-1,-4}}
 			},
 		filter = "steam",
+		production_type = "input",
 		},
 		scale_fluid_usage = true,
     },
@@ -682,6 +685,7 @@ data:extend(
 			{type = "input", position = {3.5, 0.5} }
 			},
 		filter = "steam",
+		production_type = "input",
 		},
 		scale_fluid_usage = true,
     },
@@ -758,6 +762,7 @@ data:extend(
 			{type = "input", position = {0, 3} },
 			},
 		filter = "steam",
+		production_type = "input",
 		},
 		scale_fluid_usage = true,
     },

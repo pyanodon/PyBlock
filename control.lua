@@ -165,18 +165,7 @@ script.on_event(defines.events.on_player_created, function(event)
   end
   
 end)
---remove this convert them to void energy sources
-script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_entity}, function(event)
 
-local E = event.created_entity
-	
-	if E.name == "py-sinkhole" or E.name == "py-gas-vent" then
-	
-		E.insert({name = "coal", count = 1})
-	
-	end
-
-end)
 --[[
 script.on_event(defines.events.on_player_respawned, function(event)
 
