@@ -1,5 +1,7 @@
 --require("functions/autobuilder")
 
+--rare earth and moly need to show up around sci 2
+
 local startchunk = false
 
 local surface

@@ -1,3 +1,53 @@
+local fun = require("functions/functions")
+
+function make_2way_animation_from_spritesheet(animation)
+  local function make_animation_layer(idx, anim)
+    return
+    {
+      filename = anim.filename,
+      priority = anim.priority or "high",
+      x = idx * anim.width,
+      width = anim.width,
+      height = anim.height,
+      frame_count = anim.frame_count or 1,
+      line_length = anim.line_length,
+      shift = anim.shift,
+      draw_as_shadow = anim.draw_as_shadow,
+      apply_runtime_tint = anim.apply_runtime_tint,
+      scale = anim.scale or 1,
+      tint = anim.tint
+    }
+  end
+
+  local function make_animation_layer_with_hr_version(idx, anim)
+    local anim_parameters = make_animation_layer(idx, anim)
+    if anim.hr_version and anim.hr_version.filename then
+      anim_parameters.hr_version = make_animation_layer(idx, anim.hr_version)
+    end
+    return anim_parameters
+  end
+
+  local function make_animation(idx)
+    if animation.layers then
+      local tab = { layers = {} }
+      for k,v in ipairs(animation.layers) do
+        table.insert(tab.layers, make_animation_layer_with_hr_version(idx, v))
+      end
+      return tab
+    else
+      return make_animation_layer_with_hr_version(idx, animation)
+    end
+  end
+
+  return
+  {
+    north = make_animation(0),
+    east = make_animation(1),
+    south = make_animation(0),
+    west = make_animation(1)
+  }
+end
+
 data:extend(
 {
 	{
@@ -316,51 +366,49 @@ data:extend(
         }
       }
     },
-	animation =
-    {
-    layers =
+	animation = make_2way_animation_from_spritesheet({ layers =
       {
-        {
-        filename = "__PyBlock__/graphics/hr-basic-ddc.png",
-        priority = "extra-high",
-        width = 219,
-        height = 215,
-        frame_count = 1,
-        --shift = util.by_pixel(0, 4),
-		scale = 0.5,
-        hr_version =
         {
           filename = "__PyBlock__/graphics/hr-basic-ddc.png",
           priority = "extra-high",
           width = 219,
           height = 215,
           frame_count = 1,
-          --shift = util.by_pixel(-0.25, 3.75),
-          scale = 0.5
+          shift = util.by_pixel(0, 4),
+          scale = 0.5,
+          hr_version =
+          {
+            filename = "__PyBlock__/graphics/hr-basic-ddc.png",
+            priority = "extra-high",
+            width = 219,
+            height = 215,
+            frame_count = 1,
+            shift = util.by_pixel(-0.25, 3.75),
+            scale = 0.5
           }
         },
         {
-        filename = "__base__/graphics/entity/stone-furnace/stone-furnace-shadow.png",
-        priority = "extra-high",
-        width = 81,
-        height = 64,
-        frame_count = 1,
-        draw_as_shadow = true,
-        shift = {0.515625, 0.0625},
-        hr_version =
-        {
-          filename = "__base__/graphics/entity/stone-furnace/hr-stone-furnace-shadow.png",
+          filename = "__base__/graphics/entity/storage-tank/storage-tank-shadow.png",
           priority = "extra-high",
-          width = 164,
-          height = 74,
+          width = 146,
+          height = 77,
           frame_count = 1,
+          shift = util.by_pixel(30, 22.5),
           draw_as_shadow = true,
-          shift = util.by_pixel(14.5, 13),
-          scale = 0.5
+          hr_version =
+          {
+            filename = "__base__/graphics/entity/storage-tank/hr-storage-tank-shadow.png",
+            priority = "extra-high",
+            width = 291,
+            height = 153,
+            frame_count = 1,
+            draw_as_shadow = true,
+            shift = util.by_pixel(29.75, 22.25),
+            scale = 0.5,
+            draw_as_shadow = true
           }
         }
-      }
-    },
+      }}),
     working_visualisations =
       {
         {
@@ -514,6 +562,7 @@ data:extend(
 		base_area = 1,
 		height = 2,
 		base_level = -1,
+		pipe_covers = pipecoverspictures(),
 		pipe_connections =
 			{
 			{type = "input", position = {-4,0}},
@@ -582,6 +631,7 @@ data:extend(
 		base_area = 1,
 		height = 2,
 		base_level = -1,
+		pipe_covers = pipecoverspictures(),
 		pipe_connections =
 			{
 			{type = "input", position = {-1,-4}}
@@ -679,6 +729,7 @@ data:extend(
 		base_area = 1,
 		height = 2,
 		base_level = -1,
+		pipe_covers = pipecoverspictures(),
 		pipe_connections =
 			{
 			{type = "input", position = {-3.5,0.5}},
@@ -755,11 +806,12 @@ data:extend(
 		base_area = 1,
 		height = 2,
 		base_level = -1,
+		pipe_covers = pipecoverspictures(),
 		pipe_connections =
 			{
-			{type = "input", position = {-3,0}},
-			{type = "input", position = {3, 0} },
-			{type = "input", position = {0, 3} },
+			{type = "input", position = {-3.5,0.5}},
+			{type = "input", position = {3.5, 0.5} },
+			{type = "input", position = {0.5, 3.5} },
 			},
 		filter = "steam",
 		production_type = "input",
@@ -862,21 +914,21 @@ data.raw["simple-entity"]["small-ship-wreck"].minable=minableinfo
 --log(serpent.block(data.raw["simple-entity"]["medium-ship-wreck"]))
 	
 
-ingredient_replace("burner-mining-drill","iron-plate","pb-wrought-iron-plate")
-ingredient_replace("burner-mining-drill","iron-gear-wheel","wrought-iron-gear-wheel")
-ingredient_replace("offshore-pump","pipe","wrought-iron-pipe")
-ingredient_replace("offshore-pump","iron-gear-wheel","wrought-iron-gear-wheel")
---ingredient_replace("steam-engine","iron-gear-wheel","wrought-iron-gear-wheel")
---ingredient_replace("steam-engine","pipe","wrought-iron-pipe")
---ingredient_replace("steam-engine","iron-plate","pb-wrought-iron-plate")
---ingredient_replace("boiler","pipe","wrought-iron-pipe")
-ingredient_replace("burner-inserter","iron-plate","pb-wrought-iron-plate")
-ingredient_replace("burner-inserter","iron-gear-wheel","wrought-iron-gear-wheel")
---ingredient_replace("wpu","iron-plate","pb-wrought-iron-plate")
---ingredient_replace("wpu","iron-gear-wheel","wrought-iron-gear-wheel")
---ingredient_replace("washer","iron-plate","pb-wrought-iron-plate")
---ingredient_replace("washer","pipe","wrought-iron-pipe")
-ingredient_replace("boiler","pipe","wrought-iron-pipe")
+fun.ingredient_replace("burner-mining-drill","iron-plate","pb-wrought-iron-plate")
+fun.ingredient_replace("burner-mining-drill","iron-gear-wheel","wrought-iron-gear-wheel")
+fun.ingredient_replace("offshore-pump","pipe","wrought-iron-pipe")
+fun.ingredient_replace("offshore-pump","iron-gear-wheel","wrought-iron-gear-wheel")
+--fun.ingredient_replace("steam-engine","iron-gear-wheel","wrought-iron-gear-wheel")
+--fun.ingredient_replace("steam-engine","pipe","wrought-iron-pipe")
+--fun.ingredient_replace("steam-engine","iron-plate","pb-wrought-iron-plate")
+--fun.ingredient_replace("boiler","pipe","wrought-iron-pipe")
+fun.ingredient_replace("burner-inserter","iron-plate","pb-wrought-iron-plate")
+fun.ingredient_replace("burner-inserter","iron-gear-wheel","wrought-iron-gear-wheel")
+--fun.ingredient_replace("wpu","iron-plate","pb-wrought-iron-plate")
+--fun.ingredient_replace("wpu","iron-gear-wheel","wrought-iron-gear-wheel")
+--fun.ingredient_replace("washer","iron-plate","pb-wrought-iron-plate")
+--fun.ingredient_replace("washer","pipe","wrought-iron-pipe")
+fun.ingredient_replace("boiler","pipe","wrought-iron-pipe")
 
 --replaced with the steam energy source as i always planned
 --[[

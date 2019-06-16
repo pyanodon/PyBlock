@@ -59,6 +59,12 @@ table.insert(data.raw.technology["chromium-mk02"].effects, {type = "unlock-recip
 data.raw.technology["nexelit-mk01"].prerequisites = {"machines-mk01"}
 table.insert(data.raw.technology["separation"].effects,{type="unlock-recipe", recipe = "titanium-from-rich-dust"})
 
+--adding new recipes for ree
+table.insert(data.raw.technology["rare-earth-tech"].effects,{type="unlock-recipe", recipe = "propene-to-butanol"})
+table.insert(data.raw.technology["rare-earth-tech"].effects,{type="unlock-recipe", recipe = "phosphorus-tricloride"})
+table.insert(data.raw.technology["rare-earth-tech"].effects,{type="unlock-recipe", recipe = "phosphoryl-chloride"})
+table.insert(data.raw.technology["rare-earth-tech"].effects,{type="unlock-recipe", recipe = "tributyl-phosphate"})
+table.insert(data.raw.technology["rare-earth-tech"].effects,{type="unlock-recipe", recipe = "ree-from-ash"})
 
 data:extend({
 	{

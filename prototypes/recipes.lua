@@ -1,4 +1,4 @@
-require("functions/functions")
+local fun = require("functions/functions")
 
 --tailings recipes
 
@@ -431,8 +431,103 @@ data:extend
 	result = "pb-wrought-iron-plate",
 	main_product = "pb-wrought-iron-plate",
 	result_count = 5
-	}
-
+	},
+	--new fluids for ree from ash
+	{
+	type = "recipe",
+	name = "propene-to-butanol",
+	ingredients =
+		{
+			{type = "fluid", name = "propene", amount = 50},
+			{type = "fluid", name = "hydrogen", amount = 50},
+			{type = "fluid", name = "carbon-dioxide", amount = 25}
+		},
+	results =
+		{
+			{type = "fluid", name = "butanol", amount = 50}
+		},
+	main_product = "butanol",
+	category = "electrolyzer"
+	},
+	{
+	type = "recipe",
+	name = "phosphorus-tricloride",
+	ingredients =
+		{
+			{type = "item", name = "powdered-phosphate-rock", amount = 10},
+			{type = "fluid", name = "chlorine", amount = 60}
+		},
+	results =
+		{
+			{type = "fluid", name = "phosphorus-tricloride", amount = 50}
+		},
+	main_product = "phosphorus-tricloride",
+	category = "electrolyzer"
+	},
+	--make phosphorous acid: not used atm
+	--[[
+	{
+	type = "recipe",
+	name = "phosphorus-acid",
+	ingredients =
+		{
+			{type = "fluid", name = "phosphorus-tricloride", amount = 20},
+			{type = "fluid", name = "water", amount = 60}
+		},
+	results =
+		{
+			{type = "fluid", name = "phosphorus-acid", amount = 20},
+			{type = "fluid", name = "hydrogen-chloride", amount = 60},
+		},
+	main_product = "phosphorus-acid"
+	},
+	]]--
+	{
+	type = "recipe",
+	name = "phosphoryl-chloride",
+	ingredients =
+		{
+			{type = "fluid", name = "phosphorus-tricloride", amount = 20},
+			{type = "fluid", name = "oxygen", amount = 10}
+		},
+	results =
+		{
+			{type = "fluid", name = "phosphoryl-chloride", amount = 40}
+		},
+	main_product = "phosphoryl-chloride",
+	category = "electrolyzer"
+	},
+	{
+	type = "recipe",
+	name = "tributyl-phosphate",
+	ingredients =
+		{
+			{type = "fluid", name = "phosphoryl-chloride", amount = 10},
+			{type = "fluid", name = "butanol", amount = 30}
+		},
+	results =
+		{
+			{type = "fluid", name = "tributyl-phosphate", amount = 10},
+			{type = "fluid", name = "hydrogen-chloride", amount = 30},
+		},
+	main_product = "tributyl-phosphate",
+	category = "electrolyzer"
+	},
+	{
+	type = "recipe",
+	name = "ree-from-ash",
+	ingredients =
+		{
+			{type = "fluid", name = "tributyl-phosphate", amount = 20},
+			{type = "item", name = "ash", amount = 25}
+		},
+	results =
+		{
+			{type = "item", name = "rare-earth-ore", amount = 5},
+		},
+	main_product = "rare-earth-ore",
+	category = "electrolyzer"
+	},
 }
 )
 
@@ -443,3 +538,9 @@ data.raw.recipe["iron-plate"].enabled = false
 
 RECIPE("bio-reactor"):replace_ingredient('super-alloy','boron')
 RECIPE("bio-reactor"):replace_ingredient('gasturbinemk02','gasturbinemk01')
+
+
+--modify pyro recipes to give byproduct ores
+--copper gives moly
+fun.results_replacer(data.raw.recipe["grade-1-copper-crush"],"stone","molybdenum-ore")
+fun.results_replacer(data.raw.recipe["copper-rejects-recrush"],"gravel","molybdenum-ore")
