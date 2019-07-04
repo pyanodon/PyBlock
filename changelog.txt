@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.12
+  Changes:
+	- updated to v.17
+	- added steam power requirements to most starter buildings
+	- added method to get ree without needing a mine
+	- added method for moly ore that doesnt require a mine
+	- added pypetroleumhandling as a requirement
+---------------------------------------------------------------------------------------------------
 Version: 0.0.10
   Changes:
 	- added recipe to get titanium ore from rich dust

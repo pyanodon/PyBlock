@@ -14,6 +14,7 @@
 	"pyhightech >= 1.0.0",
 	"pyindustry >= 1.0.10",
 	"pyrawores >= 1.1.2",
+	"pypetroleumhandling >= 1.2.2",
 	"?PyCoalTBaA >= 0.0.39"
 	]
 }
