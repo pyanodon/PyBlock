@@ -69,6 +69,7 @@ end
 --setup spawn area
 
 global.firstrock = true
+global.secondrock = true
 
 local t
 
@@ -192,12 +193,12 @@ end)
 local Rocks =
 	{
 	"iron-rock",
+	"copper-rock",
 	"uranium-rock",
 	"zinc-rock",
 	"aluminium-rock",
 	"chromium-rock",
 	"coal-rock",
-	"copper-rock",
 	"lead-rock",
 	"nexelit-rock",
 	"nickel-rock",
@@ -347,6 +348,12 @@ if global.firstrock == true then
 	
 	RandChance = math.random(0,30)
 	
+elseif global.secondrock == true and global.firstrock == false then
+	
+	SelectedRock = 2
+	
+	RandChance = math.random(0,30)
+	
 else
 
 	RandChance = math.random(0,240)
@@ -393,6 +400,10 @@ if global.firstrock == true then
 
 	global.firstrock = false
 	
+elseif global.firstrock == false and global.secondrock == true then
+
+	global.secondrock = false
+
 end
 
 end
