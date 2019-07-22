@@ -1,3 +1,4 @@
+--fix the goddamn ore numbers
 require("functions/functions")
 require("prototypes/recipe-categories")
 require("prototypes/technology")
