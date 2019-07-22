@@ -1,0 +1,2 @@
+remove the auto fac from early mine. adjust early ore numbers/ actully go fix the hot air thing. lower steel processing tech cost as it only unlocks a chest now.
+add that damn copper mine
