@@ -4,7 +4,7 @@ RECIPE("bio-reactor"):replace_ingredient('advanced-circuit','electronic-circuit'
 
 --log(serpent.block(data.raw.recipe["automated-screener"]))
 
-for i,ing in pairs(data.raw.recipe["automated-screener"].ingredients) do
+for i,ing in pairs(data.raw.recipe["automated-screener-mk01"].ingredients) do
 
 --log(serpent.block(data.raw.recipe["automated-screener"]))
 
@@ -15,7 +15,7 @@ for i,ing in pairs(data.raw.recipe["automated-screener"].ingredients) do
 if ing.name == "electric-mining-drill" then
 
 --table.remove(data.raw.recipe["automated-screener"].ingredients,i)
-data.raw.recipe["automated-screener"].ingredients[i]=nil
+data.raw.recipe["automated-screener-mk01"].ingredients[i]=nil
 end
 
 --log(serpent.block(ing))
@@ -23,18 +23,18 @@ end
 if ing.name == "engine-unit" then
 
 --table.remove(data.raw.recipe["automated-screener"].ingredients,i)
-data.raw.recipe["automated-screener"].ingredients[i]=nil
+data.raw.recipe["automated-screener-mk01"].ingredients[i]=nil
 end
 
 if ing[1] == "steel-plate" then
 
-	data.raw.recipe["automated-screener"].ingredients[i][2] = 5
+	data.raw.recipe["automated-screener-mk01"].ingredients[i][2] = 5
 	
 end
 
 if ing[1] == "iron-plate" then
 
-	data.raw.recipe["automated-screener"].ingredients[i][2] = 20
+	data.raw.recipe["automated-screener-mk01"].ingredients[i][2] = 20
 	
 end
 
@@ -44,8 +44,8 @@ end
 
 --log(serpent.block(data.raw.recipe["automated-screener"]))
 
-table.insert(data.raw.recipe["automated-screener"].ingredients,{"electric-mining-drill",1})
-data.raw.recipe["automated-screener"].enabled = true
+table.insert(data.raw.recipe["automated-screener-mk01"].ingredients,{"electric-mining-drill",1})
+data.raw.recipe["automated-screener-mk01"].enabled = true
 
 
 --change nichrome to be availble earlier
