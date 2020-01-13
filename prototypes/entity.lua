@@ -53,7 +53,7 @@ data:extend(
 	{
     type = "mining-drill",
     name = "cheap-iron-mine",
-    icon = "__pyrawores__/graphics/icons/mega-iron.png",
+    icon = "__pyraworesgraphics__/graphics/icons/mega-iron.png",
 	icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1, result = "cheap-iron-mine"},
@@ -120,7 +120,7 @@ data:extend(
     animations = {
         layers = {
             {
-                filename = "__pyrawores__/graphics/entity/iron-mine/botleft.png",
+                filename = "__pyraworesgraphics__/graphics/entity/iron-mine/botleft.png",
                 width = 128,
                 height = 128,
                 line_length = 16,
@@ -129,7 +129,7 @@ data:extend(
                 shift = util.by_pixel(-144, 112)
             },
             {
-                filename = "__pyrawores__/graphics/entity/iron-mine/botmid.png",
+                filename = "__pyraworesgraphics__/graphics/entity/iron-mine/botmid.png",
                 width = 128,
                 height = 128,
                 line_length = 16,
@@ -138,7 +138,7 @@ data:extend(
                 shift = util.by_pixel(-16, 112)
             },
             {
-                filename = "__pyrawores__/graphics/entity/iron-mine/botright.png",
+                filename = "__pyraworesgraphics__/graphics/entity/iron-mine/botright.png",
                 width = 128,
                 height = 128,
                 line_length = 16,
@@ -147,7 +147,7 @@ data:extend(
                 shift = util.by_pixel(112, 112)
             },
             {
-                filename = "__pyrawores__/graphics/entity/iron-mine/midleft.png",
+                filename = "__pyraworesgraphics__/graphics/entity/iron-mine/midleft.png",
                 width = 128,
                 height = 128,
                 line_length = 16,
@@ -156,7 +156,7 @@ data:extend(
                 shift = util.by_pixel(-144, -16)
             },
             {
-                filename = "__pyrawores__/graphics/entity/iron-mine/midmid.png",
+                filename = "__pyraworesgraphics__/graphics/entity/iron-mine/midmid.png",
                 width = 128,
                 height = 128,
                 line_length = 16,
@@ -165,7 +165,7 @@ data:extend(
                 shift = util.by_pixel(-16, -16)
             },
             {
-                filename = "__pyrawores__/graphics/entity/iron-mine/midright.png",
+                filename = "__pyraworesgraphics__/graphics/entity/iron-mine/midright.png",
                 width = 128,
                 height = 128,
                 line_length = 16,
@@ -174,7 +174,7 @@ data:extend(
                 shift = util.by_pixel(112, -16)
             },
             {
-                filename = "__pyrawores__/graphics/entity/iron-mine/topleft.png",
+                filename = "__pyraworesgraphics__/graphics/entity/iron-mine/topleft.png",
                 width = 128,
                 height = 128,
                 line_length = 16,
@@ -183,7 +183,7 @@ data:extend(
                 shift = util.by_pixel(-144, -144)
             },
             {
-                filename = "__pyrawores__/graphics/entity/iron-mine/topmid.png",
+                filename = "__pyraworesgraphics__/graphics/entity/iron-mine/topmid.png",
                 width = 128,
                 height = 128,
                 line_length = 16,
@@ -192,7 +192,7 @@ data:extend(
                 shift = util.by_pixel(-16, -144)
             },
             {
-                filename = "__pyrawores__/graphics/entity/iron-mine/topright.png",
+                filename = "__pyraworesgraphics__/graphics/entity/iron-mine/topright.png",
                 width = 128,
                 height = 128,
                 line_length = 16,
@@ -201,7 +201,7 @@ data:extend(
                 shift = util.by_pixel(112, -144)
             },
             {
-                filename = "__pyrawores__/graphics/entity/iron-mine/botline.png",
+                filename = "__pyraworesgraphics__/graphics/entity/iron-mine/botline.png",
                 width = 416,
                 height = 32,
                 line_length = 4,
@@ -210,7 +210,7 @@ data:extend(
                 shift = util.by_pixel(0, 192)
             },
             {
-                filename = "__pyrawores__/graphics/entity/iron-mine/rightline.png",
+                filename = "__pyraworesgraphics__/graphics/entity/iron-mine/rightline.png",
                 width = 32,
                 height = 416,
                 line_length = 64,
@@ -222,8 +222,8 @@ data:extend(
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-        sound = {filename = "__pyrawores__/sounds/iron-mine.ogg", volume = 1.0},
-        idle_sound = {filename = "__pyrawores__/sounds/iron-mine.ogg", volume = 0.7},
+        sound = {filename = "__pyraworesgraphics__/sounds/iron-mine.ogg", volume = 1.0},
+        idle_sound = {filename = "__pyraworesgraphics__/sounds/iron-mine.ogg", volume = 0.7},
         apparent_volume = 2.5
     }
 	},
@@ -450,7 +450,7 @@ data:extend(
   {
     type = "assembling-machine",
     name = "starter-botanical-nursery",
-    icon = "__pycoalprocessing__/graphics/icons/botanical-nursery.png",
+    icon = "__pycoalprocessinggraphics__/graphics/icons/botanical-nursery.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1, result = "starter-botanical-nursery"},
@@ -489,7 +489,7 @@ data:extend(
     energy_usage = "0.00001kW",
     ingredient_count = 20,
     animation = {
-        filename = "__pycoalprocessing__/graphics/entity/botanical-nursery/botanical-nursery.png",
+        filename = "__pycoalprocessinggraphics__/graphics/entity/botanical-nursery/botanical-nursery.png",
         width = 260,
         height = 254,
         line_length = 7,
@@ -527,8 +527,8 @@ data:extend(
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-        sound = {filename = "__pycoalprocessing__/sounds/botanical-nursery.ogg", volume = 1.8},
-        idle_sound = {filename = "__pycoalprocessing__/sounds/botanical-nursery.ogg", volume = 0.95},
+        sound = {filename = "__pycoalprocessinggraphics__/sounds/botanical-nursery.ogg", volume = 1.8},
+        idle_sound = {filename = "__pycoalprocessinggraphics__/sounds/botanical-nursery.ogg", volume = 0.95},
         apparent_volume = 2.5
     }
 	},
@@ -536,7 +536,7 @@ data:extend(
 	{
     type = "assembling-machine",
     name = "burner-soil-extractor",
-    icon = "__pycoalprocessing__/graphics/icons/soil-extractormk01.png",
+    icon = "__pycoalprocessinggraphics__/graphics/icons/soil-extractormk01.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1, result = "burner-soil-extractor"},
@@ -577,7 +577,7 @@ data:extend(
     energy_usage = "400kW",
     ingredient_count = 20,
     animation = {
-        filename = "__pycoalprocessing__/graphics/entity/soil-extractormk01/soil-extractormk01.png",
+        filename = "__pycoalprocessinggraphics__/graphics/entity/soil-extractormk01/soil-extractormk01.png",
         width = 235,
         height = 266,
         frame_count = 30,
@@ -597,15 +597,15 @@ data:extend(
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-        sound = {filename = "__pycoalprocessing__/sounds/soil-extractormk01.ogg"},
-        idle_sound = {filename = "__pycoalprocessing__/sounds/soil-extractormk01.ogg", volume = 0.45},
+        sound = {filename = "__pycoalprocessinggraphics__/sounds/soil-extractormk01.ogg"},
+        idle_sound = {filename = "__pycoalprocessinggraphics__/sounds/soil-extractormk01.ogg", volume = 0.45},
         apparent_volume = 2.5
     }
 },
 {
     type = "assembling-machine",
     name = "burner-quenching-tower",
-    icon = "__pycoalprocessing__/graphics/icons/quenching-tower.png",
+    icon = "__pycoalprocessinggraphics__/graphics/icons/quenching-tower.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1, result = "burner-quenching-tower"},
@@ -644,7 +644,7 @@ data:extend(
     energy_usage = "300kW",
     ingredient_count = 20,
     animation = {
-        filename = "__pycoalprocessing__/graphics/entity/quenching-tower/quenching-tower-anim.png",
+        filename = "__pycoalprocessinggraphics__/graphics/entity/quenching-tower/quenching-tower-anim.png",
         width = 232,
         height = 252,
         frame_count = 60,
@@ -694,8 +694,8 @@ data:extend(
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-        sound = {filename = "__pycoalprocessing__/sounds/quenching-tower.ogg", volume = 0.42},
-        idle_sound = {filename = "__pycoalprocessing__/sounds/quenching-tower.ogg", volume = 0.36},
+        sound = {filename = "__pycoalprocessinggraphics__/sounds/quenching-tower.ogg", volume = 0.42},
+        idle_sound = {filename = "__pycoalprocessinggraphics__/sounds/quenching-tower.ogg", volume = 0.36},
         apparent_volume = 2.5
     }
 },
@@ -703,7 +703,7 @@ data:extend(
 {
     type = "assembling-machine",
     name = "burner-washer",
-    icon = "__pycoalprocessing__/graphics/icons/washer.png",
+    icon = "__pycoalprocessinggraphics__/graphics/icons/washer.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1, result = "burner-washer"},
@@ -743,7 +743,7 @@ data:extend(
     energy_usage = "100kW",
     ingredient_count = 20,
     animation = {
-        filename = "__pycoalprocessing__/graphics/entity/washer/washer.png",
+        filename = "__pycoalprocessinggraphics__/graphics/entity/washer/washer.png",
         width = 204,
         height = 204,
         frame_count = 80,
@@ -771,8 +771,8 @@ data:extend(
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-        sound = {filename = "__pycoalprocessing__/sounds/washer.ogg", volume = 1.8},
-        idle_sound = {filename = "__pycoalprocessing__/sounds/washer.ogg", volume = 1.5},
+        sound = {filename = "__pycoalprocessinggraphics__/sounds/washer.ogg", volume = 1.8},
+        idle_sound = {filename = "__pycoalprocessinggraphics__/sounds/washer.ogg", volume = 1.5},
         apparent_volume = 1.8
     }
 	},
@@ -780,7 +780,7 @@ data:extend(
 	{
     type = "assembling-machine",
     name = "burner-wpu",
-    icon = "__pycoalprocessing__/graphics/icons/wpu.png",
+    icon = "__pycoalprocessinggraphics__/graphics/icons/wpu.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1, result = "burner-wpu"},
@@ -823,7 +823,7 @@ data:extend(
     animation = {
         layers = {
             {
-                filename = "__pycoalprocessing__/graphics/entity/wpu/left.png",
+                filename = "__pycoalprocessinggraphics__/graphics/entity/wpu/left.png",
                 width = 96,
                 height = 277,
                 line_length = 21,
@@ -832,7 +832,7 @@ data:extend(
                 animation_speed = 0.4
             },
             {
-                filename = "__pycoalprocessing__/graphics/entity/wpu/right.png",
+                filename = "__pycoalprocessinggraphics__/graphics/entity/wpu/right.png",
                 width = 96,
                 height = 277,
                 line_length = 21,
@@ -844,8 +844,8 @@ data:extend(
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-        sound = {filename = "__pycoalprocessing__/sounds/wpu.ogg", volume = 1.0},
-        idle_sound = {filename = "__pycoalprocessing__/sounds/wpu.ogg", volume = 0.6},
+        sound = {filename = "__pycoalprocessinggraphics__/sounds/wpu.ogg", volume = 1.0},
+        idle_sound = {filename = "__pycoalprocessinggraphics__/sounds/wpu.ogg", volume = 0.6},
         apparent_volume = 2.5
     }
 }

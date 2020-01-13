@@ -1,6 +1,6 @@
 {
 	"name": "PyBlock",
-	"version": "0.0.14",
+	"version": "0.0.15",
 	"factorio_version": "0.17",
 	"title": "PyBlock",
 	"author": "KingArthur",
@@ -8,13 +8,14 @@
 	"homepage": "",
 	"description": "Pymod edition of a Sea Block style game",
 	"dependencies": [
-	"base >= 0.13.0",
+	"base >= 0.17.0",
 	"pycoalprocessing >= 0.3.7",
 	"pyfusionenergy >= 0.1.3",
 	"pyhightech >= 1.0.0",
 	"pyindustry >= 1.0.10",
 	"pyrawores >= 1.1.2",
 	"pypetroleumhandling >= 1.2.2",
+	"pyalienlife >= 1.0.0",
 	"?PyCoalTBaA >= 0.0.39"
 	]
 }

@@ -36,7 +36,7 @@ data:extend(
 	{
     type = "item",
     name = "cheap-iron-mine",
-    icon = "__pyrawores__/graphics/icons/mega-iron.png",
+    icon = "__pyraworesgraphics__/graphics/icons/mega-iron.png",
 	icon_size = 32,
     flags = {},
     subgroup = "py-rawores-mines",
@@ -58,7 +58,7 @@ data:extend(
 	{
     type = "item",
     name = "starter-botanical-nursery",
-    icon = "__pycoalprocessing__/graphics/icons/botanical-nursery.png",
+    icon = "__pycoalprocessinggraphics__/graphics/icons/botanical-nursery.png",
     icon_size = 32,
     flags = {},
     subgroup = "py-extraction",
@@ -69,7 +69,7 @@ data:extend(
 	{
     type = "item",
     name = "burner-soil-extractor",
-    icon = "__pycoalprocessing__/graphics/icons/soil-extractormk01.png",
+    icon = "__pycoalprocessinggraphics__/graphics/icons/soil-extractormk01.png",
     icon_size = 32,
     flags = {},
     subgroup = "py-extraction",
@@ -80,7 +80,7 @@ data:extend(
 	{
     type = "item",
     name = "burner-quenching-tower",
-    icon = "__pycoalprocessing__/graphics/icons/quenching-tower.png",
+    icon = "__pycoalprocessinggraphics__/graphics/icons/quenching-tower.png",
     icon_size = 32,
     flags = {},
     subgroup = "coal-processing",
@@ -91,7 +91,7 @@ data:extend(
 	{
     type = "item",
     name = "burner-washer",
-    icon = "__pycoalprocessing__/graphics/icons/washer.png",
+    icon = "__pycoalprocessinggraphics__/graphics/icons/washer.png",
     icon_size = 32,
     flags = {},
     subgroup = "coal-processing",
@@ -102,7 +102,7 @@ data:extend(
 	{
     type = "item",
     name = "burner-wpu",
-    icon = "__pycoalprocessing__/graphics/icons/wpu.png",
+    icon = "__pycoalprocessinggraphics__/graphics/icons/wpu.png",
     icon_size = 32,
     flags = {},
     subgroup = "coal-processing",

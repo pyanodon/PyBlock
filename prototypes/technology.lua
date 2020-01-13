@@ -95,7 +95,7 @@ data:extend({
 	{
 	type = "technology",
 	name = "alloying-mk01",
-	icon = "__pyrawores__/graphics/icons/casting-unit-mk01.png",
+	icon = "__pyraworesgraphics__/graphics/icons/casting-unit-mk01.png",
 	icon_size = 32,
 	order = "c-b",
 	prerequisites = 
@@ -121,7 +121,7 @@ data:extend({
 	{
 	type = "technology",
 	name = "alloying-mk02",
-	icon = "__pyrawores__/graphics/icons/casting-unit-mk02.png",
+	icon = "__pyraworesgraphics__/graphics/icons/casting-unit-mk02.png",
 	icon_size = 32,
 	order = "c-b",
 	prerequisites = 

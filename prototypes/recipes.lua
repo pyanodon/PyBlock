@@ -75,7 +75,7 @@ data:extend(
 		{type = "item", name = "ore-aluminium", amount = 10}
     },
     icons = {
-        {icon = "__pycoalprocessing__/graphics/icons/dirty-water.png", icon_size = 32}
+        {icon = "__pycoalprocessinggraphics__/graphics/icons/dirty-water.png", icon_size = 32}
     },
     icon_size = 32,
     subgroup = "py-quenching-ores",
@@ -124,7 +124,7 @@ data:extend
 			{type = "fluid", name = "dirty-water", amount = 50}
 		},
 	main_product = "stone",
-	icon = "__pycoalprocessing__/graphics/icons/soil-washer.png",
+	icon = "__pycoalprocessinggraphics__/graphics/icons/soil-washer.png",
     icon_size = 32,
     subgroup = "py-washer",
     order = "c"
@@ -147,7 +147,7 @@ data:extend
 			type = "item", name = "kimberlite-rock", amount = 1
 			}
 		},
-	icon = "__pyfusionenergy__/graphics/icons/ores/kimberlite-rock.png",
+	icon = "__pyfusionenergygraphics__/graphics/icons/ores/kimberlite-rock.png",
 	icon_size = 32,
 	subgroup = "py-fusion-recipes",
     order = "h"
@@ -167,7 +167,7 @@ data:extend
 			{type = "item", name = "ore-quartz", amount = 2}
 		},
 	main_product = "ore-quartz",
-	icon = "__pyrawores__/graphics/icons/ores/ore-quartz.png",
+	icon = "__pyraworesgraphics__/graphics/icons/ores/ore-quartz.png",
 	icon_size = 32,
 	subgroup = "py-washer",
 	order = "c",
@@ -188,7 +188,7 @@ data:extend
 			{type = "item", name = "ore-titanium", amount = 2}
 		},
 	main_product = "ore-titanium",
-	icon = "__pyrawores__/graphics/icons/ores/ore-titanium.png",
+	icon = "__pyraworesgraphics__/graphics/icons/ores/ore-titanium.png",
 	icon_size = 32,
 	subgroup = "py-items-class",
 	order = "b"
