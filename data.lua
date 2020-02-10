@@ -1,3 +1,7 @@
+
+--buildings--
+require('prototypes/buildings/fish-farm-mk00')
+
 --fix the goddamn ore numbers
 require("functions/functions")
 require("prototypes/recipe-categories")
@@ -7,8 +11,8 @@ require("prototypes/fluids")
 require("prototypes/entity")
 require("prototypes/recipes")
 --require("autoplace-controls")
-require("prototypes/overrides/angel-recipe-overrides")
-require("prototypes/overrides/angel-tech-overrides")
+--require("prototypes/overrides/angel-recipe-overrides")
+--require("prototypes/overrides/angel-tech-overrides")
 
 local recipeselect=
 	{

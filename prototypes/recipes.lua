@@ -544,3 +544,24 @@ RECIPE("bio-reactor"):replace_ingredient('gasturbinemk02','gasturbinemk01')
 --copper gives moly
 fun.results_replacer(data.raw.recipe["grade-1-copper-crush"],"stone","molybdenum-ore")
 fun.results_replacer(data.raw.recipe["copper-rejects-recrush"],"gravel","molybdenum-ore")
+
+
+data:extend({
+	{
+    type = 'recipe',
+    name = 'electronic-circuit-0',
+    category = 'handcrafting',
+    enabled = true,
+    energy_required = 2,
+    ingredients = {
+        {type = 'item', name = 'copper-plate', amount = 10},
+        {type = 'item', name = 'copper-cable', amount = 10},
+        {type = 'item', name = 'wood', amount = 1}, -- to be replaced with seaweed board
+    },
+    results = {
+        {type = 'item', name = 'electronic-circuit', amount = 3}
+    },
+    subgroup = 'py-hightech-tier-1',
+    order = 'aaa'
+	}
+})

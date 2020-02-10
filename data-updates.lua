@@ -1,3 +1,6 @@
+
+require('prototypes/updates/pyhightech-updates')
+
 RECIPE("bio-reactor"):replace_ingredient('advanced-circuit','electronic-circuit')
 
 --TODO:make early copper plate for begining buildings. //idk if im make cheaper copper as copper is low use and proably be ok with the basic 10:1 to start after scrap supply is used up

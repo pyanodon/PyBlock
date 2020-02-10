@@ -132,6 +132,16 @@ data:extend(
     subgroup = "intermediate-product",
     order = "c[iron-gear-wheel]",
     stack_size = 100
+	},
+	{
+    type = "item",
+    name = "electronic-circuit-0",
+    icon = "__pyhightechgraphics__/graphics/icons/circuit-board-1.png",
+	icon_size = 32,
+    flags = {},
+    subgroup = "py-hightech-tier-1",
+    order = "a",
+    stack_size = 100
 	}
 }
 )
