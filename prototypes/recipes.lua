@@ -559,9 +559,48 @@ data:extend({
         {type = 'item', name = 'wood', amount = 1}, -- to be replaced with seaweed board
     },
     results = {
-        {type = 'item', name = 'electronic-circuit', amount = 3}
+        {type = 'item', name = 'electronic-circuit-0', amount = 3}
     },
     subgroup = 'py-hightech-tier-1',
     order = 'aaa'
-	}
+	},
 })
+
+RECIPE {
+    type = 'recipe',
+    name = 'fish-start-01',
+    category = 'fish-farm',
+    enabled = true,
+    energy_required = 20,
+    ingredients = {
+        {type = 'item', name = 'seaweed', amount = 20},
+        {type = 'fluid', name = 'water', amount = 50},
+    },
+    results = {
+        {type = 'item', name = 'fish', amount = 2},
+    },
+    main_product = "fish",
+    subgroup = 'py-alienlife-fish',
+    order = 'a',
+	}
+	
+RECIPE {
+    type = "recipe",
+    name = "coal-gas-from-seaweed",
+    category = "distilator",
+    enabled = true,
+    energy_required = 3,
+    ingredients = {
+        {type = "item", name = "seaweed", amount = 10}
+    },
+    results = {
+        {type = "fluid", name = "coal-gas", amount = 5},
+        {type = "fluid", name = "tar", amount = 5},
+        {type = "item", name = "coal", amount = 2}
+    },
+    main_product = "coal-gas",
+    icon = "__PyBlock__/graphics/icons/coalgas-from-seaweed.png",
+    icon_size = 64,
+    subgroup = "py-syngas",
+    order = "f"
+}

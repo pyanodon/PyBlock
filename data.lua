@@ -1,6 +1,10 @@
 
 --buildings--
 require('prototypes/buildings/fish-farm-mk00')
+require('prototypes/buildings/atomizer-mk00')
+require('prototypes/buildings/slaughterhouse-mk00')
+require('prototypes/buildings/automated-screener-mk00')
+require('prototypes/buildings/seaweed-crop-mk00')
 
 --fix the goddamn ore numbers
 require("functions/functions")

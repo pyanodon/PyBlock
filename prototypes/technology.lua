@@ -10,9 +10,9 @@ DONE/NEED TO TEST
 ]]--
 
 --recipes unlocked at start:
-data.raw.recipe["log1"].enabled = true
-data.raw.recipe["tailings-copper-iron"].enabled = true
-data.raw.recipe["log-wood"].enabled = true
+--data.raw.recipe["log1"].enabled = true
+--data.raw.recipe["tailings-copper-iron"].enabled = true
+--data.raw.recipe["log-wood"].enabled = true
 data.raw.recipe["landfill"].enabled = true
 data.raw.recipe["py-sinkhole"].enabled = true
 data.raw.recipe["steel-plate"].normal.enabled = true

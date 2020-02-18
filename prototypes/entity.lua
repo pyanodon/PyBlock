@@ -895,7 +895,7 @@ local minableinfo =
 		{
 		mining_particle = "stone-particle",
 		mining_time = 4,
-		results = {{name = "scrap-iron", amount_min = 400, amount_max = 800}, {name = "scrap-copper", amount_min = 50, amount_max = 150}},
+		results = {{name = "scrap-iron", amount_min = 400, amount_max = 800}, {name = "scrap-copper", amount_min = 150, amount_max = 300}},
 		}
 		
 		
