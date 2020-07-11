@@ -57,8 +57,8 @@ local crap = game.surfaces["nauvis"].find_entities({{tx,ty},{bx,by}})
 
 for _,c in pairs(crap) do
 
---log(serpent.block(c.name))
-if c ~= game.player then
+log(serpent.block(c))
+if c ~= game.player and c.name ~= 'seaweed' and c.name ~= 'fish' then
 
 c.destroy()
 
@@ -160,6 +160,7 @@ script.on_event(defines.events.on_player_created, function(event)
 		cs.insert({name = "stone-furnace", count = 1})
 		cs.insert({name="py-sinkhole", count=2})
 		cs.insert({name="py-gas-vent", count=2})
+		cs.insert({name = "scrap-iron", count = 400})
 	  
 	  firstcon = false
 	  
@@ -251,11 +252,12 @@ else
 
 		for _,c in pairs(crap) do
 
-		--log(serpent.block(c.name))
-		--log(serpent.block(c.position))
+			--log(serpent.block(c))
+			log(serpent.block(c.name))
+			--log(serpent.block(c.position))
 		
-			if c.name ~= "iron-rock" then
-			
+			if c.name ~= "iron-rock" and c.name ~= 'seaweed' and c.name ~= 'fish' then
+			log('destroying')
 			c.destroy()
 			
 			end
@@ -319,10 +321,10 @@ else
 		local crap = game.surfaces["nauvis"].find_entities({{tx,ty},{bx,by}})
 
 		for _,c in pairs(crap) do
-
-		--log(serpent.block(c.name))
-		c.destroy()
-
+			log(serpent.block(c.name))
+			if c.name ~= 'fish' and c.name ~= 'seaweed' then
+				c.destroy()
+			end
 		end
 	--end
 end

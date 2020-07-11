@@ -1,6 +1,7 @@
 
 require('prototypes/updates/pyhightech-updates')
 require('prototypes/updates/pyalienlife-updates')
+require('prototypes/updates/pyrawores-updates')
 
 RECIPE("bio-reactor"):replace_ingredient('advanced-circuit','electronic-circuit')
 

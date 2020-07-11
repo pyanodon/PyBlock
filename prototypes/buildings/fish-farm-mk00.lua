@@ -42,11 +42,11 @@ ENTITY {
     draw_entity_info_icon_background = false,
     match_animation_speed_to_activity = false,
     module_specification = {
-        module_slots = 3
+        module_slots = 4
     },
     allowed_effects = {"speed"},
     crafting_categories = {"fish-farm"},
-    crafting_speed = 0.015,
+    crafting_speed = 0.04,
     energy_source = {
         type = "void",
         usage_priority = "secondary-input",

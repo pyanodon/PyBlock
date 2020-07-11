@@ -115,7 +115,7 @@ data:extend
     energy_required = 4,
 	ingredients =
 		{
-			{type = "item", name = "soil", amount = 25},
+			{type = "item", name = "soil", amount = 24},
 			{type = "fluid", name = "water", amount = 400}
 		},
 	results = 
@@ -596,7 +596,7 @@ RECIPE {
     results = {
         {type = "fluid", name = "coal-gas", amount = 5},
         {type = "fluid", name = "tar", amount = 5},
-        {type = "item", name = "coal", amount = 2}
+        {type = "item", name = "raw-coal", amount = 4}
     },
     main_product = "coal-gas",
     icon = "__PyBlock__/graphics/icons/coalgas-from-seaweed.png",
