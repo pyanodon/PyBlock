@@ -8,7 +8,7 @@ RECIPE {
         {"wrought-iron-pipe", 20},
         {"electronic-circuit-0", 25},
         {"wrought-iron-gear-wheel", 40},
-        {"glass", 50},
+        {"glass", 25},
     },
     results = {
         {"slaughterhouse-mk00", 1}

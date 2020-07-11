@@ -118,6 +118,7 @@ data:extend({
 			time = 30
 		}
 	},
+	--[[
 	{
 	type = "technology",
 	name = "alloying-mk02",
@@ -144,7 +145,7 @@ data:extend({
 			time = 30
 		}
 	},
-
+	]]--
 })
 
 --move crude oil, heavy oil, light oil and petrol from fuel production to oil processing

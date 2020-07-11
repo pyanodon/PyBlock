@@ -236,6 +236,7 @@ data:extend
 		{name = "copper-plate", amount = 1}
 	}
 	},
+	--[[
 	{
 	type = "recipe",
 	name = "liquid-alloy-to-nichrome",
@@ -256,7 +257,7 @@ data:extend
 	subgroup = "py-rawores-plates",
 	order = "j2"
 	},
-	
+	]]--
 	--nickel from clay
 	
 	{

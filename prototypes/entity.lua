@@ -814,7 +814,7 @@ data:extend(
 			{type = "input", position = {0.5, 3.5} },
 			},
 		filter = "steam",
-		production_type = "input",
+		production_type = "input-output",
 		},
 		scale_fluid_usage = true,
     },
@@ -894,8 +894,12 @@ table.insert(data.raw["simple-entity"]["small-ship-wreck"],minable)
 local minableinfo = 
 		{
 		mining_particle = "stone-particle",
-		mining_time = 4,
-		results = {{name = "scrap-iron", amount_min = 400, amount_max = 800}, {name = "scrap-copper", amount_min = 150, amount_max = 300}},
+		mining_time = 2,
+    results =
+      {
+        {name = "scrap-iron", amount_min = 400, amount_max = 800},
+        --{name = "scrap-copper", amount_min = 150, amount_max = 300}
+      },
 		}
 		
 		
