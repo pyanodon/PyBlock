@@ -91,21 +91,21 @@ data:extend(
       type = "fluid",
       effectivity = 1,
       emissions = 1,
-	  fluid_box =
-		{
-		base_area = 1,
-		height = 2,
-		base_level = -1,
-		pipe_covers = pipecoverspictures(),
-		pipe_connections =
-			{
-			{type = "input", position = {-7,0}},
-			{type = "input", position = {7, 0} },
-			{type = "input", position = {0, 7} },
-			},
-		filter = "steam",
-		production_type = "input-ouput",
-		},
+      fluid_box =
+        {
+          base_area = 1,
+          height = 2,
+          base_level = -1,
+          pipe_covers = pipecoverspictures(),
+          pipe_connections =
+            {
+            {type = "input-output", position = {-7,0}},
+            {type = "input-output", position = {7, 0} },
+            {type = "input-output", position = {0, 7} },
+            },
+          filter = "steam",
+          production_type = "input-output",
+        },
 		scale_fluid_usage = true,
     },
     energy_usage = "1500kW",
@@ -280,8 +280,7 @@ data:extend(
     vertical_window_bounding_box = {{-0.28125, -0.5}, {0.03125, 0.125}}
   },
   {
-  --type = "assembling-machine",
-  type = "furnace",
+  type = "assembling-machine",
   name = "basic-ddc",
   icon = "__PyBlock__/graphics/hr-basic-ddc.png",
   icon_size = 32,
@@ -318,28 +317,28 @@ data:extend(
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
 	fluid_boxes =
     {
-		{
-		production_type = "output",
-		--base_area = 10,
-		base_level = 1,
-		pipe_covers = pipecoverspictures(),
-		pipe_connections =
-		{
-			{type = "output", position = {-1, -2} },
-			--{ position = {2, 1} },
-		}
-		},
-		{
-		production_type = "output",
-		--base_area = 10,
-		base_level = 1,
-		pipe_covers = pipecoverspictures(),
-		pipe_connections =
-		{
-			{type = "output", position = {1, 2} },
-			--{ position = {-2, -1} }
-		}
-		},
+      {
+      production_type = "output",
+      --base_area = 10,
+      base_level = 1,
+      pipe_covers = pipecoverspictures(),
+      pipe_connections =
+        {
+          {type = "output", position = {-1, -2} },
+          --{ position = {2, 1} },
+        }
+      },
+      {
+      production_type = "output",
+      --base_area = 10,
+      base_level = 1,
+      pipe_covers = pipecoverspictures(),
+      pipe_connections =
+        {
+          {type = "output", position = {1, 2} },
+          --{ position = {-2, -1} }
+        }
+      },
 		off_when_no_fluid_recipe = true
     },
 	crafting_categories = {"distilator"},
@@ -446,7 +445,7 @@ data:extend(
       },
     --fast_replaceable_group = "furnace"
   },
-  
+--[[
   {
     type = "assembling-machine",
     name = "starter-botanical-nursery",
@@ -469,22 +468,6 @@ data:extend(
     energy_source = 
 		{
       type = "void"
-      --[[fuel_category = "chemical",
-      effectivity = 10000,
-      fuel_inventory_size = 1,
-      emissions = 0.01,
-      smoke =
-      {
-        {
-          name = "smoke",
-          deviation = {0.1, 0.1},
-          frequency = 5,
-          position = {0.0, -0.8},
-          starting_vertical_speed = 0.08,
-          starting_frame_deviation = 60
-        }
-      }
-	  ]]
     },
     energy_usage = "0.00001kW",
     ingredient_count = 20,
@@ -532,7 +515,7 @@ data:extend(
         apparent_volume = 2.5
     }
 	},
-	
+]]--
 	{
     type = "assembling-machine",
     name = "burner-soil-extractor",
@@ -565,9 +548,9 @@ data:extend(
 		pipe_covers = pipecoverspictures(),
 		pipe_connections =
 			{
-			{type = "input", position = {-4,0}},
-			{type = "input", position = {4, 2} },
-			{type = "input", position = {0, 4} },
+			{type = "input-output", position = {-4,0}},
+			{type = "input-output", position = {4, 2} },
+			{type = "input-output", position = {0, 4} },
 			},
 		production_type = "input-output",
 		filter = "steam",
@@ -732,8 +715,8 @@ data:extend(
 		pipe_covers = pipecoverspictures(),
 		pipe_connections =
 			{
-			{type = "input", position = {-3.5,0.5}},
-			{type = "input", position = {3.5, 0.5} }
+			{type = "input-output", position = {-3.5,0.5}},
+			{type = "input-output", position = {3.5, 0.5} }
 			},
 		filter = "steam",
 		production_type = "input-output",
@@ -809,9 +792,9 @@ data:extend(
 		pipe_covers = pipecoverspictures(),
 		pipe_connections =
 			{
-			{type = "input", position = {-3.5,0.5}},
-			{type = "input", position = {3.5, 0.5} },
-			{type = "input", position = {0.5, 3.5} },
+			{type = "input-output", position = {-3.5,0.5}},
+			{type = "input-output", position = {3.5, 0.5} },
+			{type = "input-output", position = {0.5, 3.5} },
 			},
 		filter = "steam",
 		production_type = "input-output",

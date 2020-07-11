@@ -312,21 +312,25 @@ data:extend
 		{name = "basic-ddc", amount = 1}
 	}
 	},
+	--[[
 	{
-    type = "recipe",
-    name = "starter-botanical-nursery",
-    energy_required = 15,
-    enabled = true,
-    ingredients = {
-        {"burner-soil-extractor", 1},
-        {"pb-wrought-iron-plate", 15},
-        {"wood", 5},
-        {"wrought-iron-pipe", 10}
-    },
-    results = {
-        {"starter-botanical-nursery", 1}
-    }
+		type = "recipe",
+		name = "starter-botanical-nursery",
+		energy_required = 15,
+		enabled = true,
+		ingredients =
+			{
+				{"burner-soil-extractor", 1},
+				{"pb-wrought-iron-plate", 15},
+				{"wood", 5},
+				{"wrought-iron-pipe", 10}
+			},
+		results =
+			{
+				{"starter-botanical-nursery", 1}
+			}
 	},
+	]]--
 	{
     type = "recipe",
     name = "burner-soil-extractor",

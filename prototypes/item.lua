@@ -55,7 +55,8 @@ data:extend(
     place_result = "basic-ddc",
     stack_size = 20
 	},
-	{
+    --[[
+    {
     type = "item",
     name = "starter-botanical-nursery",
     icon = "__pycoalprocessinggraphics__/graphics/icons/botanical-nursery.png",
@@ -65,7 +66,8 @@ data:extend(
     order = "f",
     place_result = "starter-botanical-nursery",
     stack_size = 10
-	},
+    },
+    ]]--
 	{
     type = "item",
     name = "burner-soil-extractor",
