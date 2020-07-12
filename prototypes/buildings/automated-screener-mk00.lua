@@ -6,7 +6,7 @@ RECIPE {
     ingredients = {
         {"pb-wrought-iron-plate", 40},
 		{"wrought-iron-gear-wheel", 10},
-        {"electronic-circuit-0", 20}
+        {"electronic-circuit", 20}
     },
     results = {
         {"automated-screener-mk00", 1}

@@ -223,6 +223,19 @@ data:extend
 		},
 	result = "pb-wrought-iron-plate"
 	},
+	--[[
+	{
+		type = "recipe",
+		name = "scrap-to-wrought-iron",
+		category = "smelting",
+		energy_required = 2,
+		ingredients = 
+			{
+				{"scrap-iron", 1}
+			},
+		result = "iron-oxide"
+	},
+	]]--
 	{
 	type = "recipe",
 	name = "scrap-to-copper",
@@ -235,6 +248,34 @@ data:extend
 	results = {
 		{name = "copper-plate", amount = 1}
 	}
+	},
+	{
+		type = "recipe",
+		name = "log-to-moss",
+		category = "wpu",
+		energy_required = 10,
+		ingredients = 
+			{
+				{name = "log", amount = 4}
+			},
+		results = {
+			{name = "moss", amount = 1}
+		}
+	},
+	{
+		type = "recipe",
+		name = "sap-from-seamoss",
+		category = "distilator",
+		energy_required = 10,
+		ingredients = 
+			{
+				{name = "seaweed", amount = 10},
+				{name = "moss", amount = 8},
+				{name = "wood", amount = 5}
+			},
+		results = {
+			{name = "saps", amount = 2}
+		}
 	},
 	--[[
 	{
@@ -565,7 +606,6 @@ fun.results_replacer(data.raw.recipe["copper-rejects-recrush"],"gravel","molybde
 
 
 RECIPE {
-	{
     type = 'recipe',
     name = 'electronic-circuit-initial',
     category = 'handcrafting',
@@ -581,8 +621,7 @@ RECIPE {
     },
     subgroup = 'py-hightech-tier-1',
     order = 'aaa'
-	},
-}
+	}
 
 RECIPE {
     type = 'recipe',

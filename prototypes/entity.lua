@@ -880,7 +880,7 @@ local minableinfo =
 		mining_time = 2,
     results =
       {
-        {name = "scrap-iron", amount_min = 400, amount_max = 800},
+        {name = "scrap-iron", amount_min = 600, amount_max = 800},
         --{name = "scrap-copper", amount_min = 150, amount_max = 300}
       },
 		}

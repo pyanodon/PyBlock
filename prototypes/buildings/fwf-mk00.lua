@@ -42,12 +42,13 @@ ENTITY {
     selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
     draw_entity_info_icon_background = false,
     match_animation_speed_to_activity = false,
+    fixed_recipe = 'log0',
     module_specification = {
-        module_slots = 12
+        module_slots = 0
     },
-    allowed_effects = {"consumption", "speed", "productivity", "pollution"},
+    allowed_effects = {},
     crafting_categories = {"fwf-basic"},
-    crafting_speed = 0.05,
+    crafting_speed = 0.5,
     energy_source =
     {
       type = "fluid",

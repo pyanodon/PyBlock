@@ -6,7 +6,7 @@ RECIPE {
     ingredients = {
         {"burner-washer", 1},
         {"pb-wrought-iron-plate", 35},
-        {"electronic-circuit-0", 10},
+        {"electronic-circuit", 10},
     },
     results = {
         {"atomizer-mk00", 1}
