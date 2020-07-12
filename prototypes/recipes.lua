@@ -536,8 +536,21 @@ data:extend
 }
 )
 
-	--update first log recipe
-data.raw.recipe["log1"].category="starter-nursery"
+RECIPE {
+    type = "recipe",
+    name = "log0",
+    category = "fwf-basic",
+    enabled = true,
+    energy_required = 60,
+    ingredients = {},
+    results = {
+        {type = "item", name = "log", amount = 3}
+    },
+    icon = "__pycoalprocessinggraphics__/graphics/icons/log.png",
+    icon_size = 32,
+    subgroup = "py-items",
+    order = "c6"
+}
 	
 data.raw.recipe["iron-plate"].enabled = false
 
@@ -551,25 +564,25 @@ fun.results_replacer(data.raw.recipe["grade-1-copper-crush"],"stone","molybdenum
 fun.results_replacer(data.raw.recipe["copper-rejects-recrush"],"gravel","molybdenum-ore")
 
 
-data:extend({
+RECIPE {
 	{
     type = 'recipe',
-    name = 'electronic-circuit-0',
+    name = 'electronic-circuit-initial',
     category = 'handcrafting',
     enabled = true,
     energy_required = 2,
     ingredients = {
         {type = 'item', name = 'copper-plate', amount = 10},
         {type = 'item', name = 'copper-cable', amount = 10},
-        {type = 'item', name = 'wood', amount = 1}, -- to be replaced with seaweed board
+        {type = 'item', name = 'seaweed', amount = 5},
     },
     results = {
-        {type = 'item', name = 'electronic-circuit-0', amount = 3}
+        {type = 'item', name = 'electronic-circuit', amount = 2}
     },
     subgroup = 'py-hightech-tier-1',
     order = 'aaa'
 	},
-})
+}
 
 RECIPE {
     type = 'recipe',

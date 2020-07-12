@@ -233,7 +233,7 @@ data:extend(
     icon = "__PyBlock__/graphics/pipe.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
-    minable = {hardness = 0.2, mining_time = 0.5, result = "wrought-iron-pipe"},
+    minable = {mining_time = 0.5, result = "wrought-iron-pipe"},
     max_health = 100,
     corpse = "small-remnants",
     resistances =
