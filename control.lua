@@ -41,12 +41,12 @@ for i = 0,4096 do
 	table.insert(oldtiles,{name=waters[math.random(1,2)],position={fx,fy}})
 
 	fx = fx + 1
-	
+
 	if fx == tx + 64 then
-	
+
 		fx = tx
 		fy = fy + 1
-		
+
 	end
 
 end
@@ -57,7 +57,7 @@ local crap = game.surfaces["nauvis"].find_entities({{tx,ty},{bx,by}})
 
 for _,c in pairs(crap) do
 
-log(serpent.block(c))
+--log(serpent.block(c))
 if c ~= game.player and c.name ~= 'seaweed' and c.name ~= 'fish' then
 
 c.destroy()
@@ -76,30 +76,30 @@ local t
 for x = 0,10 do
 
 	table.insert(Tiles,{name="landfill", position={X,Y}})
-	
+
 	X = X + 1
-	
+
 		if X == 2 then
-		
+
 			X = -1
-			
+
 			Y = Y + 1
-			
+
 			if Y == 2 then
-			
+
 				Y = -1
-			
+
 			end
-			
+
 		end
-	
+
 end
 
 game.surfaces["nauvis"].set_tiles(Tiles)
 
 end)
 
-local crashedshipparts = 
+local crashedshipparts =
 		{
 		"big-ship-wreck-1",
 		"big-ship-wreck-2",
@@ -107,15 +107,15 @@ local crashedshipparts =
 		"medium-ship-wreck",
 		"small-ship-wreck"
 		}
-			
+
 script.on_event(defines.events.on_player_created, function(event)
-	
+
   local player = game.players[event.player_index]
-  
+
   --game.show_message_dialog{text = {"intro"}}
 
   player.insert({name="landfill", count=1000})
-  player.insert({name="stone", count=200})
+  player.insert({name="stone", count=400})
   player.insert({name="wood", count=100})
   --player.insert({name="iron-axe", count=1})
   --[[
@@ -132,42 +132,42 @@ script.on_event(defines.events.on_player_created, function(event)
   player.insert({name="py-sinkhole", count=2})
   player.insert({name="py-gas-vent", count=2})
   ]]--
-  
+
   player.remove_item("iron-plate")
   player.remove_item("stone-furnace")
   player.remove_item("burner-mining-drill")
-  
+
   local shippieces = math.random(8,14)
-  
+
   local cs
-  
+
   local firstcon=true
-	
+
   for a=1,shippieces do
-  
+
   local pickedpiece = crashedshipparts[math.random(1,5)]
-  
+
   local x = math.random(-25,25)
   local y = math.random(-25,25)
-  
+
   local cs = game.surfaces["nauvis"].create_entity{name=pickedpiece,position={x,y},force=game.players[1].force}
-  
+
   --cs.insert({name = "scrap-iron", count = 400})
   --cs.insert({name = "scrap-copper", count = 50})
-  
+
 	  if cs.type == "container" and firstcon == true then
-	  
+
 		cs.insert({name = "stone-furnace", count = 1})
 		cs.insert({name="py-sinkhole", count=2})
 		cs.insert({name="py-gas-vent", count=2})
 		cs.insert({name = "scrap-iron", count = 400})
-	  
+
 	  firstcon = false
-	  
+
 	  end
-  
+
   end
-  
+
 end)
 
 --[[
@@ -187,7 +187,7 @@ script.on_event(defines.events.on_player_respawned, function(event)
   --player.insert({name="wpu", count=1})
   --player.insert({name="stone-furnace", count=1})
   --player.insert({name="py-sinkhole", count=1})
-  
+
 end)
 ]]--
 
@@ -221,7 +221,7 @@ local Rocks =
 	}
 
 --local firstrock = true
-	
+
 script.on_event(defines.events.on_chunk_generated, function(event)
 
 --getting chunk bounds
@@ -253,13 +253,13 @@ else
 		for _,c in pairs(crap) do
 
 			--log(serpent.block(c))
-			log(serpent.block(c.name))
+			--log(serpent.block(c.name))
 			--log(serpent.block(c.position))
-		
+
 			if c.name ~= "iron-rock" and c.name ~= 'seaweed' and c.name ~= 'fish' then
-			log('destroying')
+			--log('destroying')
 			c.destroy()
-			
+
 			end
 
 		end
@@ -280,38 +280,38 @@ else
 		local fy = ty
 
 		for i = 0,1024 do
-		
+
 		--check for landfill from another chunk and dont replace
 			if game.surfaces["nauvis"].get_tile(fx,fy).name == "landfill" then
-			
-				
-			
+
+
+
 			else
-			
-				--local ent = game.surfaces["nauvis"].find_entities({{fx,fy},{fx,fy}}) 
-			
+
+				--local ent = game.surfaces["nauvis"].find_entities({{fx,fy},{fx,fy}})
+
 				--for _, e in pairs(ent) do
-			
+
 				--log(e.name)
-			
+
 					--if e.name == "iron-rock" then
-			
+
 					--else
 						table.insert(oldtiles,{name=waters[math.random(1,2)],position={fx,fy}})
-						
+
 					--end
-				
+
 				--end
-				
+
 			end
 
 			fx = fx + 1
-				
+
 			if fx == tx + 32 then
-				
+
 				fx = tx
 				fy = fy + 1
-					
+
 			end
 
 		end
@@ -321,7 +321,7 @@ else
 		local crap = game.surfaces["nauvis"].find_entities({{tx,ty},{bx,by}})
 
 		for _,c in pairs(crap) do
-			log(serpent.block(c.name))
+			--log(serpent.block(c.name))
 			if c.name ~= 'fish' and c.name ~= 'seaweed' then
 				c.destroy()
 			end
@@ -347,19 +347,19 @@ local RandChance
 if global.firstrock == true then
 
 	SelectedRock = 1
-	
+
 	RandChance = math.random(0,30)
-	
+
 elseif global.secondrock == true and global.firstrock == false then
-	
+
 	SelectedRock = 2
-	
+
 	RandChance = math.random(0,30)
-	
+
 else
 
 	RandChance = math.random(0,240)
-	
+
 end
 
 if RandChance == 5 then
@@ -367,31 +367,31 @@ if RandChance == 5 then
 for i = 0,169 do
 
 	table.insert(tiles,{name="landfill", position={x,y}})
-	
+
 	x = x+1
-	
+
 	a=a+1
-		
+
 		if a==13 then
-		
+
 		x = x-13
-		
+
 		y = y+1
-		
+
 		b = b+1
-		
+
 		a=0
-		
+
 			if b==13 then
-			
+
 			y=y-13
-			
+
 			b=0
-			
+
 			end
-		
+
 		end
-		
+
 end
 
 game.surfaces["nauvis"].set_tiles(tiles)
@@ -401,7 +401,7 @@ game.surfaces["nauvis"].create_entity{name=Rocks[SelectedRock],position={Randx,R
 if global.firstrock == true then
 
 	global.firstrock = false
-	
+
 elseif global.firstrock == false and global.secondrock == true then
 
 	global.secondrock = false

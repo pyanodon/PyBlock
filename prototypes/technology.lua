@@ -11,8 +11,8 @@ DONE/NEED TO TEST
 
 --recipes unlocked at start:
 --data.raw.recipe["log1"].enabled = true
---data.raw.recipe["tailings-copper-iron"].enabled = true
---data.raw.recipe["log-wood"].enabled = true
+data.raw.recipe["tailings-copper-iron"].enabled = true
+data.raw.recipe["log-wood"].enabled = true
 data.raw.recipe["landfill"].enabled = true
 data.raw.recipe["py-sinkhole"].enabled = true
 data.raw.recipe["steel-plate"].normal.enabled = true
@@ -72,7 +72,7 @@ data:extend({
 	name = "early-concrete",
 	icon = "__base__/graphics/technology/concrete.png",
 	icon_size = 128,
-	effects = 
+	effects =
 		{
 			{
 			type = "unlock-recipe",
@@ -90,7 +90,7 @@ data:extend({
     },
 	order = "c-c-a"
 	},
-	
+
 	--alloy recipes
 	{
 	type = "technology",
@@ -98,16 +98,16 @@ data:extend({
 	icon = "__pyraworesgraphics__/graphics/icons/casting-unit-mk01.png",
 	icon_size = 32,
 	order = "c-b",
-	prerequisites = 
+	prerequisites =
 		{"machines-mk01"},
-	effects = 
+	effects =
 		{
 			{
 			type = "unlock-recipe",
 			recipe = "nichrome"
 			}
 		},
-	unit = 
+	unit =
 		{
 			count = 25,
 			ingredients =
@@ -125,16 +125,16 @@ data:extend({
 	icon = "__pyraworesgraphics__/graphics/icons/casting-unit-mk02.png",
 	icon_size = 32,
 	order = "c-b",
-	prerequisites = 
+	prerequisites =
 		{"machines-mk02"},
-	effects = 
+	effects =
 		{
 			{
 			type = "unlock-recipe",
 			recipe = "liquid-alloy-to-nichrome"
 			}
 		},
-	unit = 
+	unit =
 		{
 			count = 100,
 			ingredients =

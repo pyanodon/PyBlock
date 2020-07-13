@@ -344,13 +344,13 @@ data:extend(
 	crafting_categories = {"distilator"},
 	crafting_speed = 0.5,
 	result_inventory_size = 2,
-    energy_usage = "150kW",
+    energy_usage = "300kW",
 	source_inventory_size = 1,
 	energy_source =
     {
       type = "burner",
       fuel_category = "chemical",
-      effectivity = .25,
+      effectivity = 1,
       fuel_inventory_size = 1,
       emissions = 0.01,
       smoke =
@@ -465,7 +465,7 @@ data:extend(
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
     crafting_categories = {"starter-nursery"},
     crafting_speed = 1,
-    energy_source = 
+    energy_source =
 		{
       type = "void"
     },
@@ -557,7 +557,7 @@ data:extend(
 		},
 		scale_fluid_usage = true,
     },
-    energy_usage = "400kW",
+    energy_usage = "200kW",
     ingredient_count = 20,
     animation = {
         filename = "__pycoalprocessinggraphics__/graphics/entity/soil-extractormk01/soil-extractormk01.png",
@@ -759,7 +759,7 @@ data:extend(
         apparent_volume = 1.8
     }
 	},
-	
+
 	{
     type = "assembling-machine",
     name = "burner-wpu",
@@ -833,7 +833,7 @@ data:extend(
     }
 }
 
-  
+
 }
 )
 
@@ -861,10 +861,10 @@ local burner = {
 				  }
 				  ]]
 				}
-				
+
 data.raw["furnace"]["py-sinkhole"].energy_source = burner
 data.raw["furnace"]["py-gas-vent"].energy_source = burner
-    
+
 
 --Add minablity to crashed ship parts
 table.insert(data.raw["container"]["big-ship-wreck-1"],minable)
@@ -874,18 +874,17 @@ table.insert(data.raw["simple-entity"]["medium-ship-wreck"],minable)
 table.insert(data.raw["simple-entity"]["small-ship-wreck"],minable)
 
 
-local minableinfo = 
+local minableinfo =
 		{
 		mining_particle = "stone-particle",
-		mining_time = 2,
+		mining_time = 1,
     results =
       {
         {name = "scrap-iron", amount_min = 600, amount_max = 800},
-        --{name = "scrap-copper", amount_min = 150, amount_max = 300}
+        {name = "scrap-copper", amount_min = 150, amount_max = 300}
       },
 		}
-		
-		
+
 data.raw["container"]["big-ship-wreck-1"].minable = minableinfo
 
 --log(serpent.block(data.raw["container"]["big-ship-wreck-1"]))
@@ -899,7 +898,7 @@ data.raw["simple-entity"]["small-ship-wreck"].minable=minableinfo
 --data.raw["simple-entity"]["medium-ship-wreck"].minable = minable
 
 --log(serpent.block(data.raw["simple-entity"]["medium-ship-wreck"]))
-	
+
 
 fun.ingredient_replace("burner-mining-drill","iron-plate","pb-wrought-iron-plate")
 fun.ingredient_replace("burner-mining-drill","iron-gear-wheel","wrought-iron-gear-wheel")

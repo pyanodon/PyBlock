@@ -4,7 +4,8 @@ local fun = require("functions/functions")
 
 data.raw.item["landfill"].stack_size = 1000
 
-data.raw.recipe["landfill"].ingredients={{type="item", name="stone", amount=5}}
+data.raw.recipe["landfill"].ingredients={{type="item", name="stone", amount=1},{type="item", name="sand", amount=2}}
+data.raw.recipe["landfill"].results = {{type="item", name="landfill", amount=2}}
 
 data.raw.recipe["tailings-copper-iron"].ingredients[1].amount=50
 
@@ -15,19 +16,19 @@ for k, result in ipairs(data.raw.recipe["tailings-copper-iron"].results) do
 	--log(data.raw.recipe["tailings-copper-iron"].results[k].name)
 
 	if data.raw.recipe["tailings-copper-iron"].results[k].name == "copper-ore" then
-	
-		data.raw.recipe["tailings-copper-iron"].results[k].amount = 7.5
+
+		data.raw.recipe["tailings-copper-iron"].results[k].amount = 4
 		data.raw.recipe["tailings-copper-iron"].results[k].probability = .75
-		
+
 	end
-	
+
 	if data.raw.recipe["tailings-copper-iron"].results[k].name == "iron-ore" then
-	
-		data.raw.recipe["tailings-copper-iron"].results[k].amount = 10
+
+		data.raw.recipe["tailings-copper-iron"].results[k].amount = 4
 		data.raw.recipe["tailings-copper-iron"].results[k].probability = 1
-		
+
 	end
-	
+
 end
 
 for k, result in ipairs(data.raw.recipe["tailings-borax-niobium"].results) do
@@ -35,19 +36,19 @@ for k, result in ipairs(data.raw.recipe["tailings-borax-niobium"].results) do
 	--log(data.raw.recipe["tailings-copper-iron"].results[k].name)
 
 	if data.raw.recipe["tailings-borax-niobium"].results[k].name == "niobium-ore" then
-	
+
 		data.raw.recipe["tailings-borax-niobium"].results[k].amount = 10
 		data.raw.recipe["tailings-borax-niobium"].results[k].probability = 1
-		
+
 	end
-	
+
 	if data.raw.recipe["tailings-borax-niobium"].results[k].name == "raw-borax" then
-	
+
 		data.raw.recipe["tailings-borax-niobium"].results[k].amount = 10
 		data.raw.recipe["tailings-borax-niobium"].results[k].probability = 1
-		
+
 	end
-	
+
 end
 
 data:extend(
@@ -81,7 +82,7 @@ data:extend(
     subgroup = "py-quenching-ores",
     order = "tailings-a"
 	}
-	
+
 }
 )
 
@@ -118,7 +119,7 @@ data:extend
 			{type = "item", name = "soil", amount = 24},
 			{type = "fluid", name = "water", amount = 400}
 		},
-	results = 
+	results =
 		{
 			{type = "item", name = "stone", amount = 10},
 			{type = "fluid", name = "dirty-water", amount = 50}
@@ -135,13 +136,13 @@ data:extend
 	category = "hpf",
 	enabled = false,
 	energy_required = 10,
-	ingredients = 
+	ingredients =
 		{
 			{
 			type = "item", name = "coal-dust", amount = 20
 			}
 		},
-	results = 
+	results =
 		{
 			{
 			type = "item", name = "kimberlite-rock", amount = 1
@@ -152,7 +153,7 @@ data:extend
 	subgroup = "py-fusion-recipes",
     order = "h"
 	},
-	
+
 	{
 	type = "recipe",
 	name = "sand-quartz-sifting",
@@ -162,7 +163,7 @@ data:extend
 		{
 			{type = "item", name = "sand", amount = 10}
 		},
-	results = 
+	results =
 		{
 			{type = "item", name = "ore-quartz", amount = 2}
 		},
@@ -198,11 +199,11 @@ data:extend
 	name = "wrought-iron",
 	category = "smelting",
 	enabled = true,
-	ingredients = 
+	ingredients =
 		{
 			{type = "item", name = "iron-ore", amount = 2}
 		},
-	results = 
+	results =
 		{
 			{type = "item", name = "pb-wrought-iron-plate", amount = 1}
 		},
@@ -217,7 +218,7 @@ data:extend
 	name = "scrap-to-wrought-iron",
 	category = "smelting",
 	energy_required = 2,
-	ingredients = 
+	ingredients =
 		{
 			{"scrap-iron", 10}
 		},
@@ -229,7 +230,7 @@ data:extend
 		name = "scrap-to-wrought-iron",
 		category = "smelting",
 		energy_required = 2,
-		ingredients = 
+		ingredients =
 			{
 				{"scrap-iron", 1}
 			},
@@ -241,7 +242,7 @@ data:extend
 	name = "scrap-to-copper",
 	category = "smelting",
 	energy_required = 2,
-	ingredients = 
+	ingredients =
 		{
 			{name = "scrap-copper", amount = 5}
 		},
@@ -254,7 +255,7 @@ data:extend
 		name = "log-to-moss",
 		category = "wpu",
 		energy_required = 10,
-		ingredients = 
+		ingredients =
 			{
 				{name = "log", amount = 4}
 			},
@@ -267,7 +268,7 @@ data:extend
 		name = "sap-from-seamoss",
 		category = "distilator",
 		energy_required = 10,
-		ingredients = 
+		ingredients =
 			{
 				{name = "seaweed", amount = 10},
 				{name = "moss", amount = 8},
@@ -284,13 +285,13 @@ data:extend
 	category = "casting",
 	enabled = false,
 	energy_required = 5,
-	ingredients = 
+	ingredients =
 		{
 			{type = "fluid", name = "molten-nickel", amount = 50},
 			{type = "fluid", name = "molten-chromium", amount = 40},
 			{type = "item", name = "sand-casting", amount = 1}
 		},
-	results = 
+	results =
 		{
 			{type = "item", name = "nichrome", amount = 2}
 		},
@@ -300,19 +301,19 @@ data:extend
 	},
 	]]--
 	--nickel from clay
-	
+
 	{
 	type = "recipe",
 	name = "nickel-alum-from-clay",
 	category = "hpf",
 	enabled = true,
 	energy_required = 6,
-	ingredients = 
+	ingredients =
 		{
 			{type = "item", name = "clay", amount = 6},
 			{type = "fluid", name = "sulfuric-acid", amount = 20}
 		},
-	results = 
+	results =
 		{
 			{type = "item", name = "ore-nickel", amount = 2},
 			{type = "item", name = "ore-aluminium", amount = 1, probability = 0.2}
@@ -432,18 +433,18 @@ data:extend
         {"burner-wpu", 1}
     }
 	},
-	
+
 	--new item recipes:
 	{
 	type = "recipe",
 	name = "wrought-iron-pipe",
 	energy_required = 1,
 	enabled = true,
-	ingredients = 
+	ingredients =
 		{
 			{"pb-wrought-iron-plate", 1}
 		},
-	results = 
+	results =
 		{
 			{"wrought-iron-pipe", 1}
 		},
@@ -455,13 +456,13 @@ data:extend
     ingredients = {{"pb-wrought-iron-plate", 2}},
     result = "wrought-iron-gear-wheel"
 	},
-	
+
 	--Wrought iron to regulear
 	{
 	type = "recipe",
 	name = "wrought-to-iron",
 	category = "smelting",
-	ingredients = 
+	ingredients =
 		{
 			{"pb-wrought-iron-plate", 5}
 		},
@@ -592,7 +593,7 @@ RECIPE {
     subgroup = "py-items",
     order = "c6"
 }
-	
+
 data.raw.recipe["iron-plate"].enabled = false
 
 RECIPE("bio-reactor"):replace_ingredient('super-alloy','boron')
@@ -640,7 +641,7 @@ RECIPE {
     subgroup = 'py-alienlife-fish',
     order = 'a',
 	}
-	
+
 RECIPE {
     type = "recipe",
     name = "coal-gas-from-seaweed",
