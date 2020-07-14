@@ -629,13 +629,13 @@ RECIPE {
     name = 'fish-start-01',
     category = 'fish-farm',
     enabled = true,
-    energy_required = 20,
+    energy_required = 100,
     ingredients = {
-        {type = 'item', name = 'seaweed', amount = 20},
+        {type = 'item', name = 'seaweed', amount = 5},
         {type = 'fluid', name = 'water', amount = 50},
     },
     results = {
-        {type = 'item', name = 'fish', amount = 2},
+        {type = 'item', name = 'fish', amount = 5},
     },
     main_product = "fish",
     subgroup = 'py-alienlife-fish',

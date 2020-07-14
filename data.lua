@@ -7,6 +7,7 @@ require('prototypes/buildings/automated-screener-mk00')
 require('prototypes/buildings/seaweed-crop-mk00')
 require('prototypes/buildings/fwf-mk00')
 require('prototypes/buildings/early-copper-mine')
+require('prototypes/buildings/compost-plant-mk00')
 
 --fix the goddamn ore numbers
 require("functions/functions")
@@ -19,4 +20,3 @@ require("prototypes/recipes")
 --require("autoplace-controls")
 --require("prototypes/overrides/angel-recipe-overrides")
 --require("prototypes/overrides/angel-tech-overrides")
-
