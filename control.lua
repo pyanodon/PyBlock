@@ -222,6 +222,42 @@ local Rocks =
 
 --local firstrock = true
 
+local loot_table_fuelrod =
+	{
+		'fuelrod-mk01',
+		'fuelrod-mk02',
+		'fuelrod-mk03',
+		'fuelrod-mk04',
+		'fuelrod-mk05'
+	}
+
+local loot_table_plates =
+	{
+		'iron-plate',
+		'copper-plate',
+		'duralumin',
+		'steel-plate',
+		'pb-wrought-iron-plate',
+		'chromium',
+		'super-steel',
+		'landfill'
+	}
+
+local loot_table_basic_mats =
+	{
+		'stone',
+		'wood',
+		'stone-brick',
+		'iron-ore',
+		'ore-aluminium',
+		'ore-nickel',
+		'ore-quartz',
+		'ore-zinc',
+		'ore-titanium',
+		'ore-chromium',
+		'raw-coal'
+	}
+
 script.on_event(defines.events.on_chunk_generated, function(event)
 
 --getting chunk bounds
@@ -344,70 +380,51 @@ local b=0
 
 local RandChance
 
-if global.firstrock == true then
-
-	SelectedRock = 1
-
-	RandChance = math.random(0,30)
-
-elseif global.secondrock == true and global.firstrock == false then
-
-	SelectedRock = 2
-
-	RandChance = math.random(0,30)
-
-else
-
-	RandChance = math.random(0,240)
-
-end
-
-if RandChance == 5 then
-
-for i = 0,169 do
-
-	table.insert(tiles,{name="landfill", position={x,y}})
-
-	x = x+1
-
-	a=a+1
-
-		if a==13 then
-
-		x = x-13
-
-		y = y+1
-
-		b = b+1
-
-		a=0
-
-			if b==13 then
-
-			y=y-13
-
-			b=0
-
-			end
-
+	if global.firstrock == true then
+		SelectedRock = 1
+		RandChance = math.random(0,30)
+	elseif global.secondrock == true and global.firstrock == false then
+		SelectedRock = 2
+		RandChance = math.random(0,30)
+	else
+		RandChance = math.random(0,240)
+	end
+	if RandChance == 5 then
+		for i = 0,169 do
+			table.insert(tiles,{name="landfill", position={x,y}})
+			x = x+1
+			a=a+1
+				if a==13 then
+					x = x-13
+					y = y+1
+					b = b+1
+					a=0
+					if b==13 then
+					y=y-13
+					b=0
+					end
+				end
 		end
-
-end
-
-game.surfaces["nauvis"].set_tiles(tiles)
-
-game.surfaces["nauvis"].create_entity{name=Rocks[SelectedRock],position={Randx,Randy},amount=math.random(1000000,15000000)}
-
-if global.firstrock == true then
-
-	global.firstrock = false
-
-elseif global.firstrock == false and global.secondrock == true then
-
-	global.secondrock = false
-
-end
-
-end
-
+		game.surfaces["nauvis"].set_tiles(tiles)
+		game.surfaces["nauvis"].create_entity{name=Rocks[SelectedRock],position={Randx,Randy},amount=math.random(250000,1000000)}
+		if global.firstrock == true then
+			global.firstrock = false
+		elseif global.firstrock == false and global.secondrock == true then
+			global.secondrock = false
+		end
+	end
+	if RandChance == 6 then
+		local ship = game.surfaces['nauvis'].create_entity{name = crashedshipparts[math.random(1,3)], position={math.random(tx+3,bx-3),math.random(ty+3,by-3)}, force=game.players[1].force}
+		local loot_rand_pick = math.random(1,25) 
+		if loot_rand_pick > 20 and loot_rand_pick <= 25 then
+			local rand = math.random(1,5)
+			ship.insert({name = loot_table_fuelrod[rand], count = math.random(1,6)})
+		elseif loot_rand_pick > 10 and loot_rand_pick < 20 then
+			local rand = math.random(1,8)
+			ship.insert({name = loot_table_plates[rand], count = math.random(25,100)})
+		elseif loot_rand_pick > 0 and loot_rand_pick < 10 then
+			local rand = math.random(1,11)
+			ship.insert({name = loot_table_basic_mats[rand], count = math.random(100,500)})
+		end
+	end
 end)

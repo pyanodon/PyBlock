@@ -42,12 +42,12 @@ ENTITY {
     selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
     draw_entity_info_icon_background = false,
     match_animation_speed_to_activity = false,
-    fixed_recipe = 'log0',
+    --fixed_recipe = 'log0',
     module_specification = {
         module_slots = 0
     },
     allowed_effects = {},
-    crafting_categories = {"fwf-basic"},
+    crafting_categories = {"fwf-basic","fwf"},
     crafting_speed = 0.5,
     energy_source =
     {
@@ -70,7 +70,7 @@ ENTITY {
         },
 		scale_fluid_usage = true,
     },
-    energy_usage = "500kW",
+    energy_usage = "350kW",
     ingredient_count = 10,
     animation = {
         layers = {

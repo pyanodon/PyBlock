@@ -24,3 +24,9 @@ require("prototypes/recipes")
 
 --formula to calulate steam consumption
 --flowrate (in units/s) * heat capacity (J/unit/C) * (T - 15 C) = wattage
+
+--x * 200 * (165 - 15) = 500,000
+
+-- x = 500kw / ( 200 * (165 - 15))
+--x = 16.67/s steam
+

@@ -662,3 +662,28 @@ RECIPE {
     subgroup = "py-syngas",
     order = "f"
 }
+
+RECIPE {
+    type = "recipe",
+    name = "biosample",
+    category = "biofactory",
+    enabled = false,
+    energy_required = 5,
+    ingredients = {
+		{type = "item", name = "bio-container", amount = 10},
+		{type = "item", name = "seaweed", amount = 4},
+		{type = "item", name = "moss", amount = 2},
+		{type = 'fluid', name = 'waste-water', amount = 20},
+		{type = 'fluid', name = 'phytoplankton', amount = 25},
+		{type = 'fluid', name = 'zogna-bacteria', amount = 5},
+    },
+    results = {
+        {type = "item", name = "bio-sample", amount = 10},
+        
+    },
+    main_product = "bio-sample",
+    icon = "__pyalienlifegraphics__/graphics/icons/biosample.png",
+    icon_size = 64,
+    subgroup = "py-alienlife-genetics",
+    order = "a"
+}:add_unlock('xenobiology')
