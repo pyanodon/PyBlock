@@ -635,12 +635,31 @@ RECIPE {
         {type = 'fluid', name = 'water', amount = 50},
     },
     results = {
-        {type = 'item', name = 'fish', amount = 5},
+        {type = 'item', name = 'fish', amount = 3},
     },
     main_product = "fish",
     subgroup = 'py-alienlife-fish',
     order = 'a',
 	}
+
+RECIPE {
+		type = 'recipe',
+		name = 'fish-start-02',
+		category = 'fish-farm',
+		enabled = true,
+		energy_required = 85,
+		ingredients = {
+			{type = 'item', name = 'seaweed', amount = 5},
+			{type = 'fluid', name = 'water-saline', amount = 50},
+		},
+		results = {
+			{type = 'item', name = 'fish', amount = 5},
+			{type = 'fluid', name = 'waste-water', amount = 50},
+		},
+		main_product = "fish",
+		subgroup = 'py-alienlife-fish',
+		order = 'a',
+		}
 
 RECIPE {
     type = "recipe",
@@ -679,7 +698,7 @@ RECIPE {
     },
     results = {
         {type = "item", name = "bio-sample", amount = 10},
-        
+
     },
     main_product = "bio-sample",
     icon = "__pyalienlifegraphics__/graphics/icons/biosample.png",

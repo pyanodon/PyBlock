@@ -12,3 +12,4 @@ RECIPE('log-wood'):remove_unlock('botany-1'):set_fields {enabled = true}
 
 --fish modules
 table.insert(data.raw.module['fish'].limitation, 'fish-start-01')
+table.insert(data.raw.module['fish'].limitation, 'fish-start-02')

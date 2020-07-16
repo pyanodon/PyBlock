@@ -16,6 +16,21 @@ data.raw.recipe['botanical-nursery'].ingredients = {
 
 --TODO:make early copper plate for begining buildings. //idk if im make cheaper copper as copper is low use and proably be ok with the basic 10:1 to start after scrap supply is used up
 
+--adjust landfill cost for landfill painter
+if mods['LandfillPainting'] then
+	local recipe_list = {
+		'landfill-dry-dirt',
+		'landfill-dirt-4',
+		'landfill-grass-1',
+		'landfill-red-desert-1',
+		'landfill-sand-3',
+		}
+		for _, recipe in pairs(recipe_list) do
+			RECIPE(recipe):remove_ingredient('stone'):add_ingredient({type = "item", name = 'stone', amount = 1}):add_ingredient({type = "item", name ='sand', amount = 2})
+		end
+end
+
+
 --change nichrome to be availble earlier
 
 for i,ing in pairs(data.raw.recipe["nichrome"].ingredients) do
