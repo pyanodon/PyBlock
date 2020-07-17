@@ -4,7 +4,7 @@ RECIPE {
     energy_required = 0.5,
     enabled = true,
     ingredients = {
-        {"chromium", 80},
+        {"chromium", 50},
         {"boiler", 10},
         {"steel-plate", 50},
         {"electronic-circuit", 20},
@@ -18,10 +18,10 @@ RECIPE {
 ITEM {
     type = "item",
     name = "compost-plant-mk00",
-    icon = "__pyalienlifegraphics__/graphics/icons/compost-plant-mk01.png",
+    icon = "__pyblock__/graphics/icons/compost-plant-mk00.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-buildings-mk01",
+    subgroup = "py-alienlife-buildings-mk00",
     order = "d",
     place_result = "compost-plant-mk00",
     stack_size = 10
@@ -30,7 +30,7 @@ ITEM {
 ENTITY {
     type = "furnace",
     name = "compost-plant-mk00",
-    icon = "__pyalienlifegraphics__/graphics/icons/compost-plant-mk01.png",
+    icon = "__pyblock__/graphics/icons/compost-plant-mk00.png",
     icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "compost-plant-mk00"},

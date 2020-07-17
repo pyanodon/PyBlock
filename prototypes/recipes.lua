@@ -322,118 +322,7 @@ data:extend
 	subgroup = "py-quenching-ores",
 	order = "tailings-e"
 	},
-	--new building recipes:
-	{
-    type = "recipe",
-    name = "cheap-iron-mine",
-    energy_required = 10,
-    enabled = true,
-    ingredients = {
-        {"automated-factory-mk01", 1},
-        {"burner-mining-drill", 2},
-		{"wrought-iron-gear-wheel", 25},
-		{"wrought-iron-pipe", 10},
-        {"pb-wrought-iron-plate", 50},
-        {"electronic-circuit", 20}
-    },
-    results = {
-        {"cheap-iron-mine", 1}
-    }
-	},
-	{
-	type = "recipe",
-	name = "basic-ddc",
-	energy_required = 8,
-	enabled = true,
-	ingredients = {
-			{name = "pb-wrought-iron-plate", amount = 15},
-			{name = "stone-furnace", amount = 1},
-			{name = "wrought-iron-pipe", amount = 5}
-	},
-	results = {
-		{name = "basic-ddc", amount = 1}
-	}
-	},
-	--[[
-	{
-		type = "recipe",
-		name = "starter-botanical-nursery",
-		energy_required = 15,
-		enabled = true,
-		ingredients =
-			{
-				{"burner-soil-extractor", 1},
-				{"pb-wrought-iron-plate", 15},
-				{"wood", 5},
-				{"wrought-iron-pipe", 10}
-			},
-		results =
-			{
-				{"starter-botanical-nursery", 1}
-			}
-	},
-	]]--
-	{
-    type = "recipe",
-    name = "burner-soil-extractor",
-    energy_required = 6,
-    enabled = true,
-    ingredients = {
-        {"burner-mining-drill", 2},
-        {"pb-wrought-iron-plate", 15},
-        {"copper-cable", 5},
-        {"wrought-iron-gear-wheel", 15}
-    },
-    results = {
-        {"burner-soil-extractor", 1}
-    }
-	},
-	{
-    type = "recipe",
-    name = "burner-quenching-tower",
-    energy_required = 5,
-    enabled = true,
-    ingredients = {
-        {"landfill", 25},
-        {"pb-wrought-iron-plate", 25},
-        {"wrought-iron-pipe", 10},
-        {"copper-plate", 15}
-    },
-    results = {
-        {"burner-quenching-tower", 1}
-    }
-	},
-	{
-    type = "recipe",
-    name = "burner-washer",
-    energy_required = 4,
-    enabled = true,
-    ingredients = {
-        {"pb-wrought-iron-plate", 10},
-        {"wrought-iron-pipe", 25},
-        {"stone-brick", 30}
-    },
-    results = {
-        {"burner-washer", 1}
-    }
-	},
-	{
-    type = "recipe",
-    name = "burner-wpu",
-    energy_required = 5,
-    enabled = true,
-    ingredients = {
-        --{"wood", 20},
-        {"pb-wrought-iron-plate", 20},
-        {"wrought-iron-gear-wheel", 15},
-        {"burner-mining-drill", 2},
-        {"copper-cable", 50}
-    },
-    results = {
-        {"burner-wpu", 1}
-    }
-	},
-
+	
 	--new item recipes:
 	{
 	type = "recipe",
@@ -604,7 +493,6 @@ RECIPE("bio-reactor"):replace_ingredient('gasturbinemk02','gasturbinemk01')
 --copper gives moly
 fun.results_replacer(data.raw.recipe["grade-1-copper-crush"],"stone","molybdenum-ore")
 fun.results_replacer(data.raw.recipe["copper-rejects-recrush"],"gravel","molybdenum-ore")
-
 
 RECIPE {
     type = 'recipe',

@@ -31,89 +31,6 @@ data:extend(
     order = "a[iron-plate]",
     stack_size = 500
 	},
-	
-	--new buildings
-	{
-    type = "item",
-    name = "cheap-iron-mine",
-    icon = "__pyraworesgraphics__/graphics/icons/mega-iron.png",
-	icon_size = 32,
-    flags = {},
-    subgroup = "py-rawores-mines",
-    order = "a",
-    place_result = "cheap-iron-mine",
-    stack_size = 10
-	},
-	{
-	type = "item",
-	name = "basic-ddc",
-	icon = "__PyBlock__/graphics/icons/hr-basic-ddc-icon.png",
-	icon_size = 32,
-    flags = {},
-    subgroup = "coal-processing",
-    order = "k",
-    place_result = "basic-ddc",
-    stack_size = 20
-	},
-    --[[
-    {
-    type = "item",
-    name = "starter-botanical-nursery",
-    icon = "__pycoalprocessinggraphics__/graphics/icons/botanical-nursery.png",
-    icon_size = 32,
-    flags = {},
-    subgroup = "py-extraction",
-    order = "f",
-    place_result = "starter-botanical-nursery",
-    stack_size = 10
-    },
-    ]]--
-	{
-    type = "item",
-    name = "burner-soil-extractor",
-    icon = "__pycoalprocessinggraphics__/graphics/icons/soil-extractormk01.png",
-    icon_size = 64,
-    flags = {},
-    subgroup = "py-extraction",
-    order = "g",
-    place_result = "burner-soil-extractor",
-    stack_size = 10
-	},
-	{
-    type = "item",
-    name = "burner-quenching-tower",
-    icon = "__pycoalprocessinggraphics__/graphics/icons/quenching-tower.png",
-    icon_size = 64,
-    flags = {},
-    subgroup = "coal-processing",
-    order = "u",
-    place_result = "burner-quenching-tower",
-    stack_size = 10
-	},
-	{
-    type = "item",
-    name = "burner-washer",
-    icon = "__pycoalprocessinggraphics__/graphics/icons/washer.png",
-    icon_size = 64,
-    flags = {},
-    subgroup = "coal-processing",
-    order = "z2",
-    place_result = "burner-washer",
-    stack_size = 10
-	},
-	{
-    type = "item",
-    name = "burner-wpu",
-    icon = "__pycoalprocessinggraphics__/graphics/icons/wpu.png",
-    icon_size = 64,
-    flags = {},
-    subgroup = "coal-processing",
-    order = "c",
-    place_result = "burner-wpu",
-    stack_size = 10
-	},
-	
-	--new items
 	{
 	type = "item",
 	name = "wrought-iron-pipe",
@@ -135,15 +52,5 @@ data:extend(
     order = "c[iron-gear-wheel]",
     stack_size = 100
 	},
-	{
-    type = "item",
-    name = "electronic-circuit-0",
-    icon = "__pyhightechgraphics__/graphics/icons/circuit-board-1.png",
-	icon_size = 32,
-    flags = {},
-    subgroup = "py-hightech-tier-1",
-    order = "a",
-    stack_size = 100
-	}
 }
 )

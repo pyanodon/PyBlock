@@ -17,10 +17,10 @@ RECIPE {
 ITEM {
     type = "item",
     name = "fish-farm-mk00",
-    icon = "__pyalienlifegraphics__/graphics/icons/fish-farm-mk01.png",
+    icon = "__pyblock__/graphics/icons/fish-farm-mk00.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-buildings-mk01",
+    subgroup = "py-alienlife-buildings-mk00",
     order = "d",
     place_result = "fish-farm-mk00",
     stack_size = 10
@@ -29,7 +29,7 @@ ITEM {
 ENTITY {
     type = "assembling-machine",
     name = "fish-farm-mk00",
-    icon = "__pyalienlifegraphics__/graphics/icons/fish-farm-mk01.png",
+    icon = "__pyblock__/graphics/icons/fish-farm-mk00.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "fish-farm-mk00"},

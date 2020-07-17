@@ -1,0 +1,195 @@
+
+RECIPE {
+	type = "recipe",
+	name = "basic-ddc",
+	energy_required = 8,
+	enabled = true,
+    ingredients =
+    {
+		{name = "pb-wrought-iron-plate", amount = 15},
+		{name = "stone-furnace", amount = 1},
+		{name = "wrought-iron-pipe", amount = 5}
+	},
+	results = {
+		{name = "basic-ddc", amount = 1}
+	}
+}
+
+ITEM {
+	type = "item",
+	name = "basic-ddc",
+	icon = "__PyBlock__/graphics/icons/hr-basic-ddc-icon.png",
+	icon_size = 32,
+    flags = {},
+    subgroup = "coal-processing",
+    order = "k",
+    place_result = "basic-ddc",
+    stack_size = 20
+}
+
+ENTITY {
+    type = "assembling-machine",
+    name = "basic-ddc",
+    icon = "__PyBlock__/graphics/icons/distilator-mk00.png",
+    icon_size = 64,
+    flags = {"placeable-neutral", "placeable-player", "player-creation"},
+    --ingredient_count = 20,
+    minable = {mining_time = 1, result = "basic-ddc"},
+      max_health = 200,
+      corpse = "medium-remnants",
+      repair_sound = { filename = "__base__/sound/manual-repair-simple.ogg" },
+      mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg" },
+      open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
+      close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
+      vehicle_impact_sound =  { filename = "__base__/sound/car-stone-impact.ogg", volume = 1.0 },
+      working_sound =
+      {
+        sound = { filename = "__base__/sound/furnace.ogg", }
+      },
+      resistances =
+      {
+        {
+          type = "fire",
+          percent = 90
+        },
+        {
+          type = "explosion",
+          percent = 30
+        },
+        {
+          type = "impact",
+          percent = 30
+        }
+      },
+      collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
+      selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
+      fluid_boxes =
+      {
+        {
+        production_type = "output",
+        --base_area = 10,
+        base_level = 1,
+        pipe_covers = pipecoverspictures(),
+        pipe_connections =
+          {
+            {type = "output", position = {-1, -2} },
+            --{ position = {2, 1} },
+          }
+        },
+        {
+        production_type = "output",
+        --base_area = 10,
+        base_level = 1,
+        pipe_covers = pipecoverspictures(),
+        pipe_connections =
+          {
+            {type = "output", position = {1, 2} },
+            --{ position = {-2, -1} }
+          }
+        },
+          off_when_no_fluid_recipe = true
+      },
+      crafting_categories = {"distilator"},
+      crafting_speed = 0.5,
+      result_inventory_size = 2,
+      energy_usage = "300kW",
+      source_inventory_size = 1,
+      energy_source =
+      {
+        type = "burner",
+        fuel_category = "chemical",
+        effectivity = 1,
+        fuel_inventory_size = 1,
+        emissions = 0.01,
+        smoke =
+        {
+          {
+            name = "smoke",
+            deviation = {0.1, 0.1},
+            frequency = 5,
+            position = {0.0, -0.8},
+            starting_vertical_speed = 0.08,
+            starting_frame_deviation = 60
+          }
+        }
+      },
+      animation = make_2way_animation_from_spritesheet({ layers =
+        {
+          {
+            filename = "__PyBlock__/graphics/hr-basic-ddc.png",
+            priority = "extra-high",
+            width = 219,
+            height = 215,
+            frame_count = 1,
+            shift = util.by_pixel(0, 4),
+            scale = 0.5,
+            hr_version =
+            {
+              filename = "__PyBlock__/graphics/hr-basic-ddc.png",
+              priority = "extra-high",
+              width = 219,
+              height = 215,
+              frame_count = 1,
+              shift = util.by_pixel(-0.25, 3.75),
+              scale = 0.5
+            }
+          },
+          {
+            filename = "__base__/graphics/entity/storage-tank/storage-tank-shadow.png",
+            priority = "extra-high",
+            width = 146,
+            height = 77,
+            frame_count = 1,
+            shift = util.by_pixel(30, 22.5),
+            draw_as_shadow = true,
+            hr_version =
+            {
+              filename = "__base__/graphics/entity/storage-tank/hr-storage-tank-shadow.png",
+              priority = "extra-high",
+              width = 291,
+              height = 153,
+              frame_count = 1,
+              draw_as_shadow = true,
+              shift = util.by_pixel(29.75, 22.25),
+              scale = 0.5,
+              draw_as_shadow = true
+            }
+          }
+        }}),
+      working_visualisations =
+        {
+          {
+            north_position = {0.0, 0.0},
+            east_position = {0.0, 0.0},
+            south_position = {0.0, 0.0},
+            west_position = {0.0, 0.0},
+            animation =
+            {
+              filename = "__base__/graphics/entity/stone-furnace/stone-furnace-fire.png",
+              priority = "extra-high",
+              line_length = 8,
+              width = 20,
+              height = 49,
+              frame_count = 48,
+              axially_symmetrical = false,
+              direction_count = 1,
+              shift = util.by_pixel(2, 21.5),
+              hr_version =
+          {
+                filename = "__base__/graphics/entity/stone-furnace/hr-stone-furnace-fire.png",
+                priority = "extra-high",
+                line_length = 8,
+                width = 41,
+                height = 100,
+                frame_count = 48,
+                axially_symmetrical = false,
+                direction_count = 1,
+                shift = util.by_pixel(-0.75, 21.5),
+                scale = 0.5
+              }
+            },
+          light = {intensity = 1, size = 1, color = {r=1.0, g=1.0, b=1.0}}
+          }
+        },
+      --fast_replaceable_group = "furnace"
+}

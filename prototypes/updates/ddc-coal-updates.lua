@@ -1,12 +1,12 @@
 --update the ddc recipes to give flat iron oxide output amounts. no probability crap
-
+--[[
 data.raw.recipe['coal-gas-from-wood'].results = {
     {type = "fluid", name = "coal-gas", amount = 10},
     {type = "fluid", name = "tar", amount = 30},
     {type = "item", name = "iron-oxide", amount = 3},
     {type = "item", name = "raw-coal", amount = 5}
 }
-
+]]--
 data.raw.recipe['distilled-raw-coal'].results =
 {
     {type = "fluid", name = "coal-gas", amount = 60},

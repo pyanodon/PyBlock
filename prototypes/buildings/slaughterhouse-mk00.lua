@@ -18,10 +18,10 @@ RECIPE {
 ITEM {
     type = "item",
     name = "slaughterhouse-mk00",
-    icon = "__pyalienlifegraphics__/graphics/icons/slaughterhouse-mk01.png",
+    icon = "__pyblock__/graphics/icons/slaughterhouse-mk00.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-buildings-mk01",
+    subgroup = "py-alienlife-buildings-mk00",
     order = "a",
     place_result = "slaughterhouse-mk00",
     stack_size = 10
@@ -30,7 +30,7 @@ ITEM {
 ENTITY {
     type = 'assembling-machine',
     name = "slaughterhouse-mk00",
-    icon = "__pyalienlifegraphics__/graphics/icons/slaughterhouse-mk01.png",
+    icon = "__pyblock__/graphics/icons/slaughterhouse-mk00.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "slaughterhouse-mk00"},
@@ -48,12 +48,28 @@ ENTITY {
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
     crafting_categories = {"slaughterhouse","slaughterhouse-auog","slaughterhouse-ulric","slaughterhouse-mukmoux","slaughterhouse-arthurian","slaughterhouse-dhilmos","slaughterhouse-scrondrix","slaughterhouse-phadai","slaughterhouse-fish","slaughterhouse-phagnot","slaughterhouse-kmauts","slaughterhouse-dingrits","slaughterhouse-xeno","slaughterhouse-cridren","slaughterhouse-antelope","slaughterhouse-zipir","slaughterhouse-trits","slaughterhouse-vonix","slaughterhouse-vrauks","slaughterhouse-xyhiphoe","slaughterhouse-korlex"},
     crafting_speed = 0.5,
-    energy_source = {
-        type = "electric",
-        usage_priority = "secondary-input",
-        emissions_per_minute = 10,
+    energy_source =
+    {
+      type = "fluid",
+      effectivity = 1,
+      emissions = 1,
+      fluid_box =
+        {
+          base_area = 1,
+          height = 2,
+          base_level = -1,
+          pipe_covers = pipecoverspictures(),
+          pipe_connections =
+            {
+            {type = "input-output", position = {-6,0}},
+            {type = "input-output", position = {6, 0} },
+            },
+          filter = "steam",
+          production_type = "input-output",
+        },
+		scale_fluid_usage = true,
     },
-    energy_usage = "300kW",
+    energy_usage = "150kW",
     ingredient_count = 10,
     animation = {
         layers = {

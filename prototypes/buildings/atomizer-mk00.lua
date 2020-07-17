@@ -16,10 +16,10 @@ RECIPE {
 ITEM {
     type = "item",
     name = "atomizer-mk00",
-    icon = "__pyalienlifegraphics__/graphics/icons/atomizer-mk01.png",
+    icon = "__pyblock__/graphics/icons/atomizer-mk00.png",
     icon_size = 64,
     flags = {},
-    subgroup = "py-alienlife-buildings-mk01",
+    subgroup = "py-alienlife-buildings-mk00",
     order = "a",
     place_result = "atomizer-mk00",
     stack_size = 10
@@ -28,7 +28,7 @@ ITEM {
 ENTITY {
     type = "assembling-machine",
     name = "atomizer-mk00",
-    icon = "__pyalienlifegraphics__/graphics/icons/atomizer-mk01.png",
+    icon = "__pyblock__/graphics/icons/atomizer-mk00.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "atomizer-mk00"},
@@ -44,7 +44,7 @@ ENTITY {
     },
     allowed_effects = {"speed","pollution"},
     crafting_categories = {"atomizer"},
-    crafting_speed = 1,
+    crafting_speed = 0.5,
     energy_source =
     {
       type = "burner",
@@ -53,7 +53,7 @@ ENTITY {
       fuel_inventory_size = 1,
       emissions_per_minute = 0.06,
     },
-    energy_usage = "800kW",
+    energy_usage = "600kW",
     ingredient_count = 10,
     animation = {
         layers = {
