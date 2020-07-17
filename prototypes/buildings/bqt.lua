@@ -18,7 +18,7 @@ RECIPE {
 ITEM {
     type = "item",
     name = "burner-quenching-tower",
-    icon = "__pyblock__/graphics/icons/quenching-tower-mk00.png",
+    icon = "__PyBlock__/graphics/icons/quenching-tower-mk00.png",
     icon_size = 64,
     flags = {},
     subgroup = "coal-processing",
@@ -30,7 +30,7 @@ ITEM {
 ENTITY {
     type = "assembling-machine",
     name = "burner-quenching-tower",
-    icon = "__pyblock__/graphics/icons/quenching-tower-mk00.png",
+    icon = "__PyBlock__/graphics/icons/quenching-tower-mk00.png",
     icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1, result = "burner-quenching-tower"},

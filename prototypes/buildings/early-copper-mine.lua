@@ -19,8 +19,8 @@ RECIPE {
 ITEM {
     type = "item",
     name = "early-copper-mine",
-    icon = "__pyblock__/graphics/icons/mega-copper-00.png",
-	icon_size = 32,
+    icon = "__PyBlock__/graphics/icons/mega-copper-00.png",
+	icon_size = 64,
     flags = {},
     subgroup = "py-rawores-mines",
     order = "a",
@@ -31,8 +31,8 @@ ITEM {
 ENTITY {
     type = "mining-drill",
     name = "early-copper-mine",
-    icon = "__pyblock__/graphics/icons/mega-copper-00.png",
-	icon_size = 32,
+    icon = "__PyBlock__/graphics/icons/mega-copper-00.png",
+	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1, result = "early-copper-mine"},
     fast_replaceable_group = "copper-mine",

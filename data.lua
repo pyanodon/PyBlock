@@ -17,7 +17,7 @@ require('prototypes/buildings/seaweed-crop-mk00')
 
 --fix the goddamn ore numbers
 require("functions/functions")
-require("prototypes/item-groups")
+require("prototypes/itemgroups")
 require("prototypes/recipe-categories")
 require("prototypes/technology")
 require("prototypes/item")
@@ -36,4 +36,3 @@ require("prototypes/recipes")
 
 -- x = 500kw / ( 200 * (165 - 15))
 --x = 16.67/s steam
-

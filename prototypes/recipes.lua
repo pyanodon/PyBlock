@@ -18,14 +18,14 @@ for k, result in ipairs(data.raw.recipe["tailings-copper-iron"].results) do
 	if data.raw.recipe["tailings-copper-iron"].results[k].name == "copper-ore" then
 
 		data.raw.recipe["tailings-copper-iron"].results[k].amount = 4
-		data.raw.recipe["tailings-copper-iron"].results[k].probability = .75
+		data.raw.recipe["tailings-copper-iron"].results[k].probability = 1
 
 	end
 
 	if data.raw.recipe["tailings-copper-iron"].results[k].name == "iron-ore" then
 
 		data.raw.recipe["tailings-copper-iron"].results[k].amount = 4
-		data.raw.recipe["tailings-copper-iron"].results[k].probability = 1
+		data.raw.recipe["tailings-copper-iron"].results[k].probability = .75
 
 	end
 
@@ -76,9 +76,11 @@ data:extend(
 		{type = "item", name = "ore-aluminium", amount = 10}
     },
     icons = {
-        {icon = "__pycoalprocessinggraphics__/graphics/icons/dirty-water.png", icon_size = 32}
+		{icon = "__pycoalprocessinggraphics__/graphics/icons/dirty-water.png", icon_size = 32, scale = 2},
+		{icon = '__pyraworesgraphics__/graphics/icons/mip/ore-aluminium.png', icon_size = 64, size = 0.25, shift = {-15,15}},
+		{icon = '__pyraworesgraphics__/graphics/icons/mip/ore-tin.png', icon_size = 64, size = 0.25, shift = {15,15}}
     },
-    icon_size = 32,
+    icon_size = 64,
     subgroup = "py-quenching-ores",
     order = "tailings-a"
 	}
@@ -96,6 +98,12 @@ Recipe["tailings-lead-chromium"].name = "tailings-lead-chromium"
 Recipe["tailings-lead-chromium"].results[4].name = "ore-lead"
 Recipe["tailings-lead-chromium"].results[5].name = "ore-chromium"
 Recipe["tailings-lead-chromium"].localised_name = "Lead and Chromium from Tar"
+Recipe['tailings-lead-chromium'].icons = {
+	{icon = "__pycoalprocessinggraphics__/graphics/icons/dirty-water.png", icon_size = 32, scale = 2},
+	{icon = '__pyraworesgraphics__/graphics/icons/mip/ore-lead.png', icon_size = 64, size = 0.25, shift = {-15,15}},
+	{icon = '__pyraworesgraphics__/graphics/icons/mip/ore-chromium.png', icon_size = 64, size = 0.25, shift = {15,15}}
+}
+Recipe['tailings-lead-chromium'].icon_size = 64
 
 data.raw.recipe["quenching-tower"].ingredients[4] = nil
 
@@ -322,7 +330,7 @@ data:extend
 	subgroup = "py-quenching-ores",
 	order = "tailings-e"
 	},
-	
+
 	--new item recipes:
 	{
 	type = "recipe",

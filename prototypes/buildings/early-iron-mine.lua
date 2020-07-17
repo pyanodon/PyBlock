@@ -19,8 +19,8 @@ RECIPE {
 ITEM {
     type = "item",
     name = "cheap-iron-mine",
-    icon = "__pyblock__/graphics/icons/mega-iron-00.png",
-	icon_size = 32,
+    icon = "__PyBlock__/graphics/icons/mega-iron-00.png",
+	icon_size = 64,
     flags = {},
     subgroup = "py-rawores-mines",
     order = "a",
@@ -31,7 +31,7 @@ ITEM {
 ENTITY {
     type = "mining-drill",
     name = "cheap-iron-mine",
-    icon = "__pyblock__/graphics/icons/mega-iron-00.png",
+    icon = "__PyBlock__/graphics/icons/mega-iron-00.png",
 	  icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1, result = "cheap-iron-mine"},

@@ -16,7 +16,7 @@ RECIPE {
 ITEM {
     type = "item",
     name = "automated-screener-mk00",
-    icon = "__pyblock__/graphics/icons/automated-screener-mk00.png",
+    icon = "__PyBlock__/graphics/icons/automated-screener-mk00.png",
 	icon_size = 64,
     flags = {},
     subgroup = "py-fusion-buildings-mk01",
@@ -28,7 +28,7 @@ ITEM {
 ENTITY {
     type = "assembling-machine",
     name = "automated-screener-mk00",
-    icon = "__pyblock__/graphics/icons/automated-screener-mk00.png",
+    icon = "__PyBlock__/graphics/icons/automated-screener-mk00.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "automated-screener-mk00"},

@@ -18,7 +18,7 @@ RECIPE {
 ITEM {
     type = "item",
     name = "seaweed-crop-mk00",
-    icon = "__pyblock__/graphics/icons/seaweed-crop-mk00.png",
+    icon = "__PyBlock__/graphics/icons/seaweed-crop-mk00.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-alienlife-buildings-mk00",
@@ -30,7 +30,7 @@ ITEM {
 ENTITY {
     type = "assembling-machine",
     name = "seaweed-crop-mk00",
-    icon = "__pyblock__/graphics/icons/seaweed-crop-mk00.png",
+    icon = "__PyBlock__/graphics/icons/seaweed-crop-mk00.png",
 	icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "seaweed-crop-mk00"},

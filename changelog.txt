@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.0
+Date: 2020-07-17
+  Changes:
+	- Updated to factorio version 0.18+.
+	- Updated to include pyalienlife.
+	- Added new icons for starting machine. icons made by pyanodon.
+	- Added more shipwrecks to spawn in new chunks.
+	- Overhauled game start with new pyal stuff.
+	- Removed several outdated recipes due to changes in pymods.
+---------------------------------------------------------------------------------------------------
 Version: 0.0.14
   Changes:
 	- updated code to new pyfusion building levels
