@@ -4,10 +4,10 @@ RECIPE {
     energy_required = 1,
     enabled = true,
     ingredients = {
-        {"glass", 50},
+        {"glass", 10},
 		{"pb-wrought-iron-plate", 25},
 		{"wrought-iron-pipe", 10},
-		{"electronic-circuit", 5},
+		{"electronic-circuit", 1},
     },
     results = {
         {"fish-farm-mk00", 1}

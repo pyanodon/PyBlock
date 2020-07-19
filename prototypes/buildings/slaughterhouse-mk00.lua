@@ -6,9 +6,9 @@ RECIPE {
     ingredients = {
         {"stone-brick", 50},
         {"wrought-iron-pipe", 20},
-        {"electronic-circuit", 12},
+        {"electronic-circuit", 2},
         {"wrought-iron-gear-wheel", 40},
-        {"glass", 25},
+        {"glass", 5},
     },
     results = {
         {"slaughterhouse-mk00", 1}
