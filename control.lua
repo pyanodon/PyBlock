@@ -406,7 +406,13 @@ local RandChance
 				end
 		end
 		game.surfaces["nauvis"].set_tiles(tiles)
-		game.surfaces["nauvis"].create_entity{name=Rocks[SelectedRock],position={Randx,Randy},amount=math.random(250000,1000000)}
+		local rock = Rocks[SelectedRock]
+		if rock == 'oil-mk01' or rock == 'oil-mk02' or rock == 'oil-mk03' or rock == 'oil-mk04' or rock == 'tar-patch' then
+			amount = math.random(1000000,5000000)
+		else
+			amount = math.random(250000,1000000)
+		end
+		game.surfaces["nauvis"].create_entity{name=rock,position={Randx,Randy},amount=amount}
 		if global.firstrock == true then
 			global.firstrock = false
 		elseif global.firstrock == false and global.secondrock == true then

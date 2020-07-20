@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.1
+Date: 2020-07-19
+  Changes:
+	- Adjustements to slowwood forestry to make it slightly energy positive.
+	- Reduced cost of starter fish farm and slaughterhouses to make getting copper from fish a bit easier to start.
+---------------------------------------------------------------------------------------------------
 Version: 0.1.0
 Date: 2020-07-17
   Changes:
