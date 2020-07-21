@@ -19,7 +19,7 @@ RECIPE {
 ITEM {
     type = "item",
     name = "burner-wpu",
-    icon = "__pycoalprocessinggraphics__/graphics/icons/wpu.png",
+    icon = "__PyBlock__/graphics/icons/wpu-mk00.png",
     icon_size = 64,
     flags = {},
     subgroup = "coal-processing",
@@ -31,7 +31,7 @@ ITEM {
 ENTITY {
     type = "assembling-machine",
     name = "burner-wpu",
-    icon = "__pycoalprocessinggraphics__/graphics/icons/wpu.png",
+    icon = "__PyBlock__/graphics/icons/wpu-mk00.png",
     icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1, result = "burner-wpu"},

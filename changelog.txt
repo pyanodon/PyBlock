@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.2
+Date: 2020-07-21
+  Changes:
+	- Tweaked oil and tar patches to have higher values to work better with infinite fluids.
+	- Added wpu-mk00 icon to fit with rest of pyblocks icons. thank you pyanodon.
+---------------------------------------------------------------------------------------------------
 Version: 0.1.1
 Date: 2020-07-19
   Changes:
