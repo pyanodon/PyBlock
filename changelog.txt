@@ -2,88 +2,88 @@
 Version: 0.1.2
 Date: 2020-07-21
   Changes:
-	- Tweaked oil and tar patches to have higher values to work better with infinite fluids.
-	- Added wpu-mk00 icon to fit with rest of pyblocks icons. thank you pyanodon.
+    - Tweaked oil and tar patches to have higher values to work better with infinite fluids.
+    - Added wpu-mk00 icon to fit with rest of pyblocks icons. thank you pyanodon.
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.1
 Date: 2020-07-19
   Changes:
-	- Adjustements to slowwood forestry to make it slightly energy positive.
-	- Reduced cost of starter fish farm and slaughterhouses to make getting copper from fish a bit easier to start.
+    - Adjustements to slowwood forestry to make it slightly energy positive.
+    - Reduced cost of starter fish farm and slaughterhouses to make getting copper from fish a bit easier to start.
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.0
 Date: 2020-07-17
   Changes:
-	- Updated to factorio version 0.18+.
-	- Updated to include pyalienlife.
-	- Added new icons for starting machine. icons made by pyanodon.
-	- Added more shipwrecks to spawn in new chunks.
-	- Overhauled game start with new pyal stuff.
-	- Removed several outdated recipes due to changes in pymods.
+    - Updated to factorio version 0.18+.
+    - Updated to include pyalienlife.
+    - Added new icons for starting machine. icons made by pyanodon.
+    - Added more shipwrecks to spawn in new chunks.
+    - Overhauled game start with new pyal stuff.
+    - Removed several outdated recipes due to changes in pymods.
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.14
   Changes:
-	- updated code to new pyfusion building levels
+    - updated code to new pyfusion building levels
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.12
   Changes:
-	- updated to v.17
-	- added steam power requirements to most starter buildings
-	- added method to get ree without needing a mine
-	- added method for moly ore that doesnt require a mine
-	- added pypetroleumhandling as a requirement
+    - updated to v.17
+    - added steam power requirements to most starter buildings
+    - added method to get ree without needing a mine
+    - added method for moly ore that doesnt require a mine
+    - added pypetroleumhandling as a requirement
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.10
   Changes:
-	- added recipe to get titanium ore from rich dust
-	- corrected error not properly adjusted ingrediants on automated screener
+    - added recipe to get titanium ore from rich dust
+    - corrected error not properly adjusted ingrediants on automated screener
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.9
   Changes:
-	- updated migration file to update tech changes
+    - updated migration file to update tech changes
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.8
   Changes:
-	- moved several recipes around in the tech tree
-	- fixed localization on techs
-	- fixed bottleneck created by ground bore needing lube needing ores from ground bore to get lube or a very long path to basic oil processing
-	- add missing check for angels mods on a recipe
+    - moved several recipes around in the tech tree
+    - fixed localization on techs
+    - fixed bottleneck created by ground bore needing lube needing ores from ground bore to get lube or a very long path to basic oil processing
+    - add missing check for angels mods on a recipe
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.7
   Changes:
-	- upped gas vent crafting speed to 10 same as sinkhole
-	- reduced automated screener ingredients to needing 5 steel plate and 20 iron plate
-	- fixed issue in control.lua with a local variable desyncing mutiplayer. i hope
-	- changed burner iron mine from needing drill heads as fuel to using standard fuel items
-	- added missing minable rocks from the rest of pymods
+    - upped gas vent crafting speed to 10 same as sinkhole
+    - reduced automated screener ingredients to needing 5 steel plate and 20 iron plate
+    - fixed issue in control.lua with a local variable desyncing mutiplayer. i hope
+    - changed burner iron mine from needing drill heads as fuel to using standard fuel items
+    - added missing minable rocks from the rest of pymods
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.5
   Changes:
-	- added pyro as required modif
-	- added pyro ore recipes to create ores from tar at game start for the first two science packs
-	- added several new building with recipes for early game and removed several old pymod buildings from start/ added techs to unlock them
-	- added pyro rocks to rarely spawn on the map
+    - added pyro as required modif
+    - added pyro ore recipes to create ores from tar at game start for the first two science packs
+    - added several new building with recipes for early game and removed several old pymod buildings from start/ added techs to unlock them
+    - added pyro rocks to rarely spawn on the map
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.4
   Changes:
-	- Fixed that bio-reactor wasnt unlocked with the recipe it was needed for
+    - Fixed that bio-reactor wasnt unlocked with the recipe it was needed for
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.3
   Changes:
-	- Removed pump from quenching tower recipe.
-	- adjusted sinkhole to have crafting speed of 10 to increase void speed
-	- added 1 extra sinkhole to inventory on spawn
+    - Removed pump from quenching tower recipe.
+    - adjusted sinkhole to have crafting speed of 10 to increase void speed
+    - added 1 extra sinkhole to inventory on spawn
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.2
   Changes:
-	- added a small 3x3 island to spawn player on to hopefully stop the player from instatly dying in some starts
-	- changed game spawn to modify defualt nauvis surface instead of generating a new one
+    - added a small 3x3 island to spawn player on to hopefully stop the player from instatly dying in some starts
+    - changed game spawn to modify defualt nauvis surface instead of generating a new one
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.1
   Changes:
-	- Moved several building and recipes to being unlocked on game start
-	- changed tar to iron and copper to output more ore per cycle
-	- changed tar to borax and niobium to output more ore per cycle
-	- reduced landfill cost from 20 stone to 5
-	- added recipe to wash stone from soil
-	- Created early concreate tech to give access to basic concreate in the red science only period to allow crafting of more quenching towers
+    - Moved several building and recipes to being unlocked on game start
+    - changed tar to iron and copper to output more ore per cycle
+    - changed tar to borax and niobium to output more ore per cycle
+    - reduced landfill cost from 20 stone to 5
+    - added recipe to wash stone from soil
+    - Created early concreate tech to give access to basic concreate in the red science only period to allow crafting of more quenching towers
