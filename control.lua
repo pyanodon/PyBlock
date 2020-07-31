@@ -1,5 +1,7 @@
 --require("functions/autobuilder")
 
+require "util"
+
 --rare earth and moly need to show up around sci 2
 
 local startchunk = false
@@ -36,66 +38,12 @@ local by = 32
 local fx = tx
 local fy = ty
 
-for i = 0,4096 do
-
-	table.insert(oldtiles,{name=waters[math.random(1,2)],position={fx,fy}})
-
-	fx = fx + 1
-
-	if fx == tx + 64 then
-
-		fx = tx
-		fy = fy + 1
-
-	end
-
-end
-
-game.surfaces["nauvis"].set_tiles(oldtiles)
-
-local crap = game.surfaces["nauvis"].find_entities({{tx,ty},{bx,by}})
-
-for _,c in pairs(crap) do
-
---log(serpent.block(c))
-if c ~= game.player and c.name ~= 'seaweed' and c.name ~= 'fish' then
-
-c.destroy()
-
-end
-
-end
-
 --setup spawn area
 
 global.firstrock = true
 global.secondrock = true
 
 local t
-
-for x = 0,10 do
-
-	table.insert(Tiles,{name="landfill", position={X,Y}})
-
-	X = X + 1
-
-		if X == 2 then
-
-			X = -1
-
-			Y = Y + 1
-
-			if Y == 2 then
-
-				Y = -1
-
-			end
-
-		end
-
-end
-
-game.surfaces["nauvis"].set_tiles(Tiles)
 
 end)
 
@@ -315,54 +263,6 @@ else
 		local fx = tx
 		local fy = ty
 
-		for i = 0,1024 do
-
-		--check for landfill from another chunk and dont replace
-			if game.surfaces["nauvis"].get_tile(fx,fy).name == "landfill" then
-
-
-
-			else
-
-				--local ent = game.surfaces["nauvis"].find_entities({{fx,fy},{fx,fy}})
-
-				--for _, e in pairs(ent) do
-
-				--log(e.name)
-
-					--if e.name == "iron-rock" then
-
-					--else
-						table.insert(oldtiles,{name=waters[math.random(1,2)],position={fx,fy}})
-
-					--end
-
-				--end
-
-			end
-
-			fx = fx + 1
-
-			if fx == tx + 32 then
-
-				fx = tx
-				fy = fy + 1
-
-			end
-
-		end
-
-		game.surfaces["nauvis"].set_tiles(oldtiles)
-
-		local crap = game.surfaces["nauvis"].find_entities({{tx,ty},{bx,by}})
-
-		for _,c in pairs(crap) do
-			--log(serpent.block(c.name))
-			if c.name ~= 'fish' and c.name ~= 'seaweed' then
-				c.destroy()
-			end
-		end
-	--end
 end
 --setting stuff in chunk
 local SelectedRock = math.random(1,25)
@@ -405,6 +305,7 @@ local RandChance
 					end
 				end
 		end
+		
 		game.surfaces["nauvis"].set_tiles(tiles)
 		local rock = Rocks[SelectedRock]
 		if rock == 'oil-mk01' or rock == 'oil-mk02' or rock == 'oil-mk03' or rock == 'oil-mk04' or rock == 'tar-patch' then
@@ -412,7 +313,9 @@ local RandChance
 		else
 			amount = math.random(250000,1000000)
 		end
+		
 		game.surfaces["nauvis"].create_entity{name=rock,position={Randx,Randy},amount=amount}
+		
 		if global.firstrock == true then
 			global.firstrock = false
 		elseif global.firstrock == false and global.secondrock == true then
