@@ -216,8 +216,6 @@ data:extend
 			{type = "item", name = "pb-wrought-iron-plate", amount = 1}
 		},
 	main_product = "pb-wrought-iron-plate",
-	icon = "__base__/graphics/icons/iron-plate.png",
-	icon_size = 32,
 	energy_required = 3,
 	--order = "a[smelting]",
 	},
