@@ -1,13 +1,3 @@
---[[
-
-NEEDS DONE
-make slower cheaper mines for early game resources: iron mine done. idk if want to do rest. possibly adjust spawn to add few other starter ores
-
-continue testing process for merging resources for bobs, angels + madclown, omni, yuki, 5dim?
-
-DONE/NEED TO TEST
-
-]]--
 
 --recipes unlocked at start:
 --data.raw.recipe["log1"].enabled = true
@@ -55,8 +45,8 @@ table.insert(data.raw.technology["oil-processing"].effects,{type="unlock-recipe"
 
 --metals adjustments
 table.insert(data.raw.technology["iron-mk01"].effects,{type="unlock-recipe", recipe ="iron-plate"})
-table.insert(data.raw.technology["chromium-mk02"].effects, {type = "unlock-recipe", recipe = "molten-chromium-01"})
-data.raw.technology["nexelit-mk01"].prerequisites = {"machines-mk01"}
+--table.insert(data.raw.technology["chromium-mk02"].effects, {type = "unlock-recipe", recipe = "molten-chromium-01"})
+--data.raw.technology["nexelit-mk01"].prerequisites = {"machines-mk01"}
 table.insert(data.raw.technology["separation"].effects,{type="unlock-recipe", recipe = "titanium-from-rich-dust"})
 
 --adding new recipes for ree
@@ -90,62 +80,6 @@ data:extend({
     },
 	order = "c-c-a"
 	},
-
-	--alloy recipes
-	{
-	type = "technology",
-	name = "alloying-mk01",
-	icon = "__pyraworesgraphics__/graphics/icons/casting-unit-mk01.png",
-	icon_size = 32,
-	order = "c-b",
-	prerequisites =
-		{"machines-mk01"},
-	effects =
-		{
-			{
-			type = "unlock-recipe",
-			recipe = "nichrome"
-			}
-		},
-	unit =
-		{
-			count = 25,
-			ingredients =
-				{
-					{"automation-science-pack", 4},
-					{"logistic-science-pack", 1}
-				},
-			time = 30
-		}
-	},
-	--[[
-	{
-	type = "technology",
-	name = "alloying-mk02",
-	icon = "__pyraworesgraphics__/graphics/icons/casting-unit-mk02.png",
-	icon_size = 32,
-	order = "c-b",
-	prerequisites =
-		{"machines-mk02"},
-	effects =
-		{
-			{
-			type = "unlock-recipe",
-			recipe = "liquid-alloy-to-nichrome"
-			}
-		},
-	unit =
-		{
-			count = 100,
-			ingredients =
-				{
-					{"automation-science-pack", 1},
-					{"logistic-science-pack", 1}
-				},
-			time = 30
-		}
-	},
-	]]--
 })
 
 --move crude oil, heavy oil, light oil and petrol from fuel production to oil processing

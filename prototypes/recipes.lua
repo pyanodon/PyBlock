@@ -284,28 +284,6 @@ data:extend
 			{name = "saps", amount = 2}
 		}
 	},
-	--[[
-	{
-	type = "recipe",
-	name = "liquid-alloy-to-nichrome",
-	category = "casting",
-	enabled = false,
-	energy_required = 5,
-	ingredients =
-		{
-			{type = "fluid", name = "molten-nickel", amount = 50},
-			{type = "fluid", name = "molten-chromium", amount = 40},
-			{type = "item", name = "sand-casting", amount = 1}
-		},
-	results =
-		{
-			{type = "item", name = "nichrome", amount = 2}
-		},
-	main_product = "nichrome",
-	subgroup = "py-rawores-plates",
-	order = "j2"
-	},
-	]]--
 	--nickel from clay
 
 	{
