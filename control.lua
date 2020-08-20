@@ -97,6 +97,13 @@ end
 
 game.surfaces["nauvis"].set_tiles(Tiles)
 
+local created_items = remote.call("freeplay", "get_created_items")
+	created_items["landfill"] = 1000
+	created_items["stone"] = 400
+	created_items["wood"] = 100
+	
+	remote.call("freeplay", "set_created_items", created_items)
+
 end)
 
 local crashedshipparts =
@@ -114,25 +121,10 @@ script.on_event(defines.events.on_player_created, function(event)
 
   --game.show_message_dialog{text = {"intro"}}
 
-  player.insert({name="landfill", count=1000})
-  player.insert({name="stone", count=400})
-  player.insert({name="wood", count=100})
-  --player.insert({name="iron-axe", count=1})
-  --[[
-  player.insert({name="quenching-tower", count=1})
-  player.insert({name="botanical-nursery", count=1})
-  player.insert({name="distilator", count=1})
-  player.insert({name="offshore-pump", count=1})
-  player.insert({name="iron-plate", count=92})
-  player.insert({name="copper-plate", count=50})
-  player.insert({name="copper-plate", count=50})
-  player.insert({name="washer", count=1})
-  player.insert({name="wpu", count=1})
-  player.insert({name="stone-furnace", count=2})
-  player.insert({name="py-sinkhole", count=2})
-  player.insert({name="py-gas-vent", count=2})
-  ]]--
-
+  --player.insert({name="landfill", count=1000})
+  --player.insert({name="stone", count=400})
+  --player.insert({name="wood", count=100})
+  
   player.remove_item("iron-plate")
   player.remove_item("stone-furnace")
   player.remove_item("burner-mining-drill")
