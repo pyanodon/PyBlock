@@ -352,8 +352,10 @@ data:extend
 	main_product = "pb-wrought-iron-plate",
 	result_count = 5
 	},
+}
+)
 	--new fluids for ree from ash
-	{
+RECIPE{
 	type = "recipe",
 	name = "propene-to-butanol",
 	ingredients =
@@ -368,8 +370,9 @@ data:extend
 		},
 	main_product = "butanol",
 	category = "electrolyzer"
-	},
-	{
+	}:add_unlock('uranium-mk01')
+
+RECIPE{
 	type = "recipe",
 	name = "phosphorus-tricloride",
 	ingredients =
@@ -383,7 +386,8 @@ data:extend
 		},
 	main_product = "phosphorus-tricloride",
 	category = "electrolyzer"
-	},
+	}:add_unlock('uranium-mk01')
+
 	--make phosphorous acid: not used atm
 	--[[
 	{
@@ -402,7 +406,8 @@ data:extend
 	main_product = "phosphorus-acid"
 	},
 	]]--
-	{
+
+RECIPE{
 	type = "recipe",
 	name = "phosphoryl-chloride",
 	ingredients =
@@ -416,8 +421,9 @@ data:extend
 		},
 	main_product = "phosphoryl-chloride",
 	category = "electrolyzer"
-	},
-	{
+	}:add_unlock('uranium-mk01')
+
+RECIPE{
 	type = "recipe",
 	name = "tributyl-phosphate",
 	ingredients =
@@ -432,8 +438,9 @@ data:extend
 		},
 	main_product = "tributyl-phosphate",
 	category = "electrolyzer"
-	},
-	{
+	}:add_unlock('uranium-mk01')
+
+RECIPE{
 	type = "recipe",
 	name = "ree-from-ash",
 	ingredients =
@@ -447,9 +454,7 @@ data:extend
 		},
 	main_product = "rare-earth-ore",
 	category = "electrolyzer"
-	},
-}
-)
+	}:add_unlock('rare-earth-tech')
 
 RECIPE {
     type = "recipe",

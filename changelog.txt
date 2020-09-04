@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.3
+Date: 2020-09-4
+  Changes:
+    - Added processing chain to get uranium ore from sea water.
+    - moved ree processing stuff to ree tech. no long have them unlocked before they are needed.
+    - Fixed issues with 1.0 start not giving landfill like it should.
+---------------------------------------------------------------------------------------------------
 Version: 0.1.2
 Date: 2020-07-21
   Changes:
