@@ -9,11 +9,11 @@ RECIPE {
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = "item", name = "sodium-carbonate", amount = 10},
-        {type = 'fluid', name = 'acetic-acid', amount = 25},
+        {type = "item", name = "sodium-carbonate", amount = 4},
+        {type = 'fluid', name = 'acetic-acid', amount = 50},
     },
     results = {
-        {type = "item", name = "sodium-acetate", amount = 10},
+        {type = "item", name = "sodium-acetate", amount = 15},
 
     },
     main_product = "sodium-acetate",
@@ -30,14 +30,14 @@ RECIPE {
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = "item", name = "sodium-acetate", amount = 20},
-        {type = 'fluid', name = 'water', amount = 50},
+        {type = "item", name = "sodium-acetate", amount = 10},
+        {type = 'fluid', name = 'water', amount = 200},
     },
     results = {
-        {type = "fluid", name = "ethane", amount = 20},
-        {type = "fluid", name = "carbon-dioxide", amount = 30},
-        {type = "fluid", name = "hydrogen", amount = 10},
-        {type = "item", name = "sodium-hydroxide", amount = 5},
+        {type = "fluid", name = "ethane", amount = 40},
+        {type = "fluid", name = "carbon-dioxide", amount = 50},
+        {type = "fluid", name = "hydrogen", amount = 25},
+        {type = "item", name = "sodium-hydroxide", amount = 15},
     },
     main_product = "ethane",
     --icon = "__pyalienlifegraphics__/graphics/icons/biosample.png",
@@ -113,17 +113,17 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "ethylenediamine",
-    category = "chemistry",
+    category = "fbreactor",
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = 'fluid', name = 'dichloroethane', amount = 25},
-        {type = 'fluid', name = 'ammonia', amount = 50},
+        {type = 'fluid', name = 'dichloroethane', amount = 50},
+        {type = 'fluid', name = 'ammonia', amount = 100},
         {type = 'fluid', name = 'water', amount = 200},
     },
     results = {
-        {type = "fluid", name = "ethylenediamine", amount = 20},
-        {type = "fluid", name = "hydrogen-chloride", amount = 25},
+        {type = "fluid", name = "ethylenediamine", amount = 50},
+        {type = "fluid", name = "hydrogen-chloride", amount = 60},
     },
     main_product = "ethylenediamine",
     --icon = "__pyalienlifegraphics__/graphics/icons/biosample.png",
@@ -140,7 +140,7 @@ RECIPE {
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = 'item', name = 'nylon', amount = 10},
+        {type = 'item', name = 'nylon', amount = 6},
     },
     results = {
         {type = "item", name = "nylon-rope", amount = 3},
@@ -159,11 +159,11 @@ RECIPE {
     enabled = false,
     energy_required = 5,
     ingredients = {
-        {type = 'item', name = 'nylon-rope', amount = 2},
-        {type = "fluid", name = "ethylenediamine", amount = 30},
+        {type = 'item', name = 'nylon-rope', amount = 5},
+        {type = "fluid", name = "ethylenediamine", amount = 100},
     },
     results = {
-        {type = "item", name = "nylon-rope-coated", amount = 2},
+        {type = "item", name = "nylon-rope-coated", amount = 5},
     },
     main_product = "nylon-rope-coated",
     --icon = "__pyalienlifegraphics__/graphics/icons/biosample.png",
@@ -177,13 +177,13 @@ RECIPE {
     name = "nylon-rope-uranyl-soaked",
     category = "hydroclassifier",
     enabled = false,
-    energy_required = 100,
+    energy_required = 60,
     ingredients = {
-        {type = 'item', name = 'nylon-rope-coated', amount = 10},
+        {type = 'item', name = 'nylon-rope-coated', amount = 30},
         {type = "fluid", name = "water", amount = 300},
     },
     results = {
-        {type = "item", name = "nylon-rope-uranyl-soaked", amount = 10},
+        {type = "item", name = "nylon-rope-uranyl-soaked", amount = 30},
     },
     main_product = "nylon-rope-uranyl-soaked",
     --icon = "__pyalienlifegraphics__/graphics/icons/biosample.png",

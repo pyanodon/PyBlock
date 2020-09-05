@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.4
+Date: 2020-09-4
+  Changes:
+    - Fixed error with image name not matching the file.
+    - Adjusted uranium ore chain to use fewer machines.
+---------------------------------------------------------------------------------------------------
 Version: 0.1.3
 Date: 2020-09-4
   Changes:
