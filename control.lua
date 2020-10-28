@@ -97,12 +97,16 @@ end
 
 game.surfaces["nauvis"].set_tiles(Tiles)
 
+if remote.interfaces['freeplay'] then
+
 local created_items = remote.call("freeplay", "get_created_items")
 	created_items["landfill"] = 1000
 	created_items["stone"] = 400
 	created_items["wood"] = 100
 	
 	remote.call("freeplay", "set_created_items", created_items)
+
+end
 
 end)
 

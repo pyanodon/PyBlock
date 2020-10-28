@@ -81,7 +81,6 @@ ENTITY {
     icon = "__PyBlock__/graphics/icons/distilator-mk00.png",
     icon_size = 64,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
-    --ingredient_count = 20,
     minable = {mining_time = 1, result = "basic-ddc"},
       max_health = 200,
       corpse = "medium-remnants",

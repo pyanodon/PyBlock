@@ -71,7 +71,6 @@ ENTITY {
 		scale_fluid_usage = true,
     },
     energy_usage = "100kW",
-    ingredient_count = 10,
     animation = {
         layers = {
             {

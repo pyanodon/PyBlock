@@ -67,7 +67,6 @@ ENTITY {
 		scale_fluid_usage = true,
     },
     energy_usage = "100kW",
-    ingredient_count = 20,
     animation = {
         filename = "__pycoalprocessinggraphics__/graphics/entity/washer/washer.png",
         width = 204,

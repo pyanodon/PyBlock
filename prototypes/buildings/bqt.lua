@@ -67,7 +67,6 @@ ENTITY {
 		scale_fluid_usage = true,
     },
     energy_usage = "300kW",
-    ingredient_count = 20,
     animation = {
         filename = "__pycoalprocessinggraphics__/graphics/entity/quenching-tower/quenching-tower-anim.png",
         width = 232,
