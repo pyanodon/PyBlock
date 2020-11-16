@@ -2,6 +2,8 @@
 
 --rare earth and moly need to show up around sci 2
 
+if not script.active_mods['pylandblock'] then
+
 local startchunk = false
 
 local surface
@@ -103,7 +105,7 @@ local created_items = remote.call("freeplay", "get_created_items")
 	created_items["landfill"] = 1000
 	created_items["stone"] = 400
 	created_items["wood"] = 100
-	
+
 	remote.call("freeplay", "set_created_items", created_items)
 
 end
@@ -128,7 +130,7 @@ script.on_event(defines.events.on_player_created, function(event)
   --player.insert({name="landfill", count=1000})
   --player.insert({name="stone", count=400})
   --player.insert({name="wood", count=100})
-  
+
   player.remove_item("iron-plate")
   player.remove_item("stone-furnace")
   player.remove_item("burner-mining-drill")
@@ -417,7 +419,7 @@ local RandChance
 	end
 	if RandChance == 6 then
 		local ship = game.surfaces['nauvis'].create_entity{name = crashedshipparts[math.random(1,3)], position={math.random(tx+3,bx-3),math.random(ty+3,by-3)}, force=game.players[1].force}
-		local loot_rand_pick = math.random(1,25) 
+		local loot_rand_pick = math.random(1,25)
 		if loot_rand_pick > 20 and loot_rand_pick <= 25 then
 			local rand = math.random(1,5)
 			ship.insert({name = loot_table_fuelrod[rand], count = math.random(1,6)})
@@ -430,3 +432,5 @@ local RandChance
 		end
 	end
 end)
+
+end
