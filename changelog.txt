@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.5
-Date: 2020-09-12
+Date: 2020-11-24
   Changes:
     - massively rebalanced uranium chain as it needed far to many resources and entities at the needed scale for py.
     - Added productivity to most uranium ore from seawater chain.
