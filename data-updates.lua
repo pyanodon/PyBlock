@@ -4,6 +4,7 @@ require('prototypes/updates/pyalienlife-updates')
 require('prototypes/updates/ddc-coal-updates')
 
 RECIPE("bio-reactor"):replace_ingredient('advanced-circuit','electronic-circuit')
+RECIPE("stone-distilation"):add_unlock('coal-processing-1')
 
 --fun.ingredient_replace('botanical-nursery', 'soil-extractormk01', 'burner-soil-extractor')
 data.raw.recipe['botanical-nursery'].ingredients = {
@@ -44,12 +45,3 @@ for i,ing in pairs(data.raw.recipe["nichrome"].ingredients) do
 end
 
 data.raw.recipe["nichrome"].category = "smelting"
-
-if mods["angelsrefining"] then
-
-data.raw.recipe["angelsore5-crushed-smelting"].normal.results[1] = nil
-data.raw.recipe["angelsore5-crushed-smelting"].normal.results[1]= {type = "item", name = "aluminium-plate", amount = 1}
-
-end
-
---fix localization for crushed rubyte lead plate
