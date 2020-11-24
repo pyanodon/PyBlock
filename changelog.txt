@@ -1,10 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.6
-Date: ????
+Date: 2020-11-24
   Changes:
+    - Reactived stone to tar recipe for pyblock.
+    - Updated to factorio 1.1.
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.5
-Date: 2020-11-24
+Date: 2020-9-12
   Changes:
     - massively rebalanced uranium chain as it needed far to many resources and entities at the needed scale for py.
     - Added productivity to most uranium ore from seawater chain.
