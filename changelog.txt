@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.8
+Date: 2020-12-06
+  Changes:
+    - fixed crash caused by setting crashed ship force from player 1 when player 1 doesnt exist on a headless server at start for factorio v1.1.
+---------------------------------------------------------------------------------------------------
+Version: 0.1.7
+Date: 2020-12-06
+  Changes:
+    - fixed crash caused by setting crashed ship force from player 1 when player 1 doesnt exist on a headless server at start.
+---------------------------------------------------------------------------------------------------
 Version: 0.1.6
 Date: 2020-11-24
   Changes:

@@ -418,7 +418,7 @@ local RandChance
 		end
 	end
 	if RandChance == 6 then
-		local ship = game.surfaces['nauvis'].create_entity{name = crashedshipparts[math.random(1,3)], position={math.random(tx+3,bx-3),math.random(ty+3,by-3)}, force=game.players[1].force}
+		local ship = game.surfaces['nauvis'].create_entity{name = crashedshipparts[math.random(1,3)], position={math.random(tx+3,bx-3),math.random(ty+3,by-3)}, force=game.forces.player}
 		local loot_rand_pick = math.random(1,25)
 		if loot_rand_pick > 20 and loot_rand_pick <= 25 then
 			local rand = math.random(1,5)
