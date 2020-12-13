@@ -1,4 +1,12 @@
-local fun = require('functions/functions')
+
+--add fail safe raw coal to player and god character
+for _, player in DATA:pairs('character') do
+    player.crafting_categories = player.String_Array(player.crafting_categories or {}) + 'handcrafting-failsafe'
+end
+for _, controller in DATA:pairs('god-controller') do
+    controller.crafting_categories = controller.String_Array(controller.crafting_categories or {}) + 'handcrafting-failsafe'
+end
+
 require('prototypes/updates/pyhightech-updates')
 require('prototypes/updates/pyalienlife-updates')
 require('prototypes/updates/ddc-coal-updates')
@@ -7,6 +15,7 @@ RECIPE("bio-reactor"):replace_ingredient('advanced-circuit','electronic-circuit'
 RECIPE("stone-distilation"):add_unlock('coal-processing-1')
 
 --fun.ingredient_replace('botanical-nursery', 'soil-extractormk01', 'burner-soil-extractor')
+--[[
 data.raw.recipe['botanical-nursery'].ingredients = {
 	{"electric-mining-drill", 1},
 	{"burner-soil-extractor", 1},
@@ -14,6 +23,7 @@ data.raw.recipe['botanical-nursery'].ingredients = {
 	{"wood", 25},
 	{"iron-plate", 15}
 }
+]]--
 
 --TODO:make early copper plate for begining buildings. //idk if im make cheaper copper as copper is low use and proably be ok with the basic 10:1 to start after scrap supply is used up
 
@@ -33,7 +43,7 @@ end
 
 
 --change nichrome to be availble earlier
-
+--[[
 for i,ing in pairs(data.raw.recipe["nichrome"].ingredients) do
 
 	if ing.name == "nitrogen" then
@@ -45,3 +55,4 @@ for i,ing in pairs(data.raw.recipe["nichrome"].ingredients) do
 end
 
 data.raw.recipe["nichrome"].category = "smelting"
+]]--

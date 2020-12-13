@@ -6,7 +6,7 @@ RECIPE {
     ingredients = {
         {"burner-washer", 1},
         {"pb-wrought-iron-plate", 35},
-        {"electronic-circuit", 10},
+        {"electronic-circuit", 6},
     },
     results = {
         {"atomizer-mk00", 1}
@@ -53,7 +53,7 @@ ENTITY {
       fuel_inventory_size = 1,
       emissions_per_minute = 0.06,
     },
-    energy_usage = "600kW",
+    energy_usage = "300kW",
     animation = {
         layers = {
             {

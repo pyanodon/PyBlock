@@ -4,10 +4,10 @@ RECIPE {
     energy_required = 0.5,
     enabled = true,
     ingredients = {
-        {"chromium", 50},
+        {"chromium", 30},
         {"boiler", 10},
         {"steel-plate", 50},
-        {"electronic-circuit", 20},
+        {"electronic-circuit", 10},
         {"wrought-iron-gear-wheel", 50},
     },
     results = {

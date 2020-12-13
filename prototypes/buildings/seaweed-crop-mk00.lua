@@ -4,11 +4,11 @@ RECIPE {
     energy_required = 1,
     enabled = true,
     ingredients = {
-        {"stone-brick", 30},
+        {"stone-brick", 20},
         --{"limestone", 25},
         {"wrought-iron-pipe", 5},
         {"electronic-circuit", 1},
-        {"pb-wrought-iron-plate", 25},
+        {"pb-wrought-iron-plate", 15},
     },
     results = {
         {"seaweed-crop-mk00", 1}
@@ -42,8 +42,9 @@ ENTITY {
     selection_box = {{-6.5, -6.5}, {6.5, 6.5}},
     draw_entity_info_icon_background = false,
     match_animation_speed_to_activity = false,
+    fixed_recipe = 'seaweed',
     module_specification = {
-        module_slots = 5
+        module_slots = 10
     },
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
     crafting_categories = {"seaweed"},

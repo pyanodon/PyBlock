@@ -65,42 +65,37 @@ fun.ingredient_replace("burner-inserter","iron-plate","pb-wrought-iron-plate")
 fun.ingredient_replace("burner-inserter","iron-gear-wheel","wrought-iron-gear-wheel")
 fun.ingredient_replace("boiler","pipe","wrought-iron-pipe")
 
-data.raw["container"]["big-ship-wreck-1"].inventory_size = 10
-data.raw["container"]["big-ship-wreck-2"].inventory_size = 10
-data.raw["container"]["big-ship-wreck-3"].inventory_size = 10
-
 table.insert(data.raw["assembling-machine"]["botanical-nursery"].crafting_categories,"nursery")
-local burner = {type = "void"}
+--local burner = {type = "void"}
 
-data.raw["furnace"]["py-sinkhole"].energy_source = burner
-data.raw["furnace"]["py-gas-vent"].energy_source = burner
-
-
---Add minablity to crashed ship parts
-table.insert(data.raw["container"]["big-ship-wreck-1"],minable)
-table.insert(data.raw["container"]["big-ship-wreck-2"],minable)
-table.insert(data.raw["container"]["big-ship-wreck-3"],minable)
-table.insert(data.raw["simple-entity"]["medium-ship-wreck"],minable)
-table.insert(data.raw["simple-entity"]["small-ship-wreck"],minable)
+--data.raw["furnace"]["py-sinkhole"].energy_source = burner
+--data.raw["furnace"]["py-gas-vent"].energy_source = burner
 
 
 local minableinfo =
 		{
 		mining_particle = "stone-particle",
-		mining_time = 1,
+		mining_time = 0.5,
     results =
       {
         {name = "scrap-iron", amount_min = 600, amount_max = 800},
         {name = "scrap-copper", amount_min = 150, amount_max = 300}
       },
-		}
+    }
 
-data.raw["container"]["big-ship-wreck-1"].minable = minableinfo
+local crashedshipparts = {
+	'crash-site-spaceship', 'crash-site-spaceship-wreck-big-1',
+	'crash-site-spaceship-wreck-big-2', 'crash-site-spaceship-wreck-medium-1', 'crash-site-spaceship-wreck-medium-2',
+	'crash-site-spaceship-wreck-medium-3', 'crash-site-chest-1', 'crash-site-chest-2'
+}
 
---log(serpent.block(data.raw["container"]["big-ship-wreck-1"]))
+for c, crashed in pairs(crashedshipparts) do
 
---table.insert(data.raw["container"]["big-ship-wreck-1"].minable,minableinfo)
-data.raw["container"]["big-ship-wreck-2"].minable=minableinfo
-data.raw["container"]["big-ship-wreck-3"].minable=minableinfo
-data.raw["simple-entity"]["medium-ship-wreck"].minable=minableinfo
-data.raw["simple-entity"]["small-ship-wreck"].minable=minableinfo
+  data.raw.container[crashed].inventory_size = 10
+  data.raw.container[crashed].minable = minableinfo
+
+end
+
+local add_to_crash_ass = {'assembling-machine-1'}
+
+table.insert(data.raw['assembling-machine']['crash-site-assembling-machine-1-repaired'].minable.results, add_to_crash_ass)

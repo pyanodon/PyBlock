@@ -7,7 +7,7 @@ RECIPE {
         {"stone-brick", 50},
         {"pb-wrought-iron-plate", 25},
         {"wrought-iron-pipe", 5},
-        {"electronic-circuit", 10},
+        {"electronic-circuit", 2},
         {"wrought-iron-gear-wheel", 20},
     },
     results = {

@@ -8,7 +8,7 @@ RECIPE {
         {"landfill", 25},
         {"pb-wrought-iron-plate", 25},
         {"wrought-iron-pipe", 10},
-        {"copper-plate", 15}
+        {"copper-plate", 10}
     },
     results = {
         {"burner-quenching-tower", 1}

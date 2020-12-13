@@ -4,8 +4,8 @@ RECIPE {
     energy_required = 1,
     enabled = true,
     ingredients = {
-        {"glass", 10},
-		{"pb-wrought-iron-plate", 25},
+        {"glass", 6},
+		{"pb-wrought-iron-plate", 15},
 		{"wrought-iron-pipe", 10},
 		{"electronic-circuit", 1},
     },

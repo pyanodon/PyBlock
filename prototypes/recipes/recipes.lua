@@ -1,5 +1,21 @@
 local fun = require("functions/functions")
 
+--handcraft seaweed to raw coal
+RECIPE{
+	type = "recipe",
+	name = "handpressed-coal",
+	ingredients =
+		{
+			{type = "item", name = "seaweed", amount = 5},
+		},
+	results =
+		{
+			{type = "item", name = "raw-coal", amount = 1}
+		},
+	main_product = "raw-coal",
+	category = "handcrafting-failsafe"
+	}
+
 --tailings recipes
 
 data.raw.item["landfill"].stack_size = 1000
@@ -17,15 +33,15 @@ for k, result in ipairs(data.raw.recipe["tailings-copper-iron"].results) do
 
 	if data.raw.recipe["tailings-copper-iron"].results[k].name == "copper-ore" then
 
-		data.raw.recipe["tailings-copper-iron"].results[k].amount = 4
+		data.raw.recipe["tailings-copper-iron"].results[k].amount = 5
 		data.raw.recipe["tailings-copper-iron"].results[k].probability = 1
 
 	end
 
 	if data.raw.recipe["tailings-copper-iron"].results[k].name == "iron-ore" then
 
-		data.raw.recipe["tailings-copper-iron"].results[k].amount = 4
-		data.raw.recipe["tailings-copper-iron"].results[k].probability = .75
+		data.raw.recipe["tailings-copper-iron"].results[k].amount = 2
+		data.raw.recipe["tailings-copper-iron"].results[k].probability = 1
 
 	end
 
@@ -226,23 +242,10 @@ data:extend
 	energy_required = 2,
 	ingredients =
 		{
-			{"scrap-iron", 10}
+			{"scrap-iron", 8}
 		},
 	result = "pb-wrought-iron-plate"
 	},
-	--[[
-	{
-		type = "recipe",
-		name = "scrap-to-wrought-iron",
-		category = "smelting",
-		energy_required = 2,
-		ingredients =
-			{
-				{"scrap-iron", 1}
-			},
-		result = "iron-oxide"
-	},
-	]]--
 	{
 	type = "recipe",
 	name = "scrap-to-copper",
@@ -490,8 +493,8 @@ RECIPE {
     enabled = true,
     energy_required = 2,
     ingredients = {
-        {type = 'item', name = 'copper-plate', amount = 10},
-        {type = 'item', name = 'copper-cable', amount = 10},
+        {type = 'item', name = 'copper-plate', amount = 5},
+        {type = 'item', name = 'copper-cable', amount = 6},
         {type = 'item', name = 'seaweed', amount = 5},
     },
     results = {
