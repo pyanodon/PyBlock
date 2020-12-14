@@ -96,6 +96,6 @@ for c, crashed in pairs(crashedshipparts) do
 
 end
 
-local add_to_crash_ass = {'assembling-machine-1'}
+local add_to_crash_ass = {name = 'assembling-machine-1', amount = 1}
 
 table.insert(data.raw['assembling-machine']['crash-site-assembling-machine-1-repaired'].minable.results, add_to_crash_ass)

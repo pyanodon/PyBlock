@@ -1,4 +1,18 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.0
+Date: 2020-12-14
+  Changes:
+    - Added an extra steam connection to the sil extractor mk00. it now has one on each side.
+---------------------------------------------------------------------------------------------------
+Version: 0.1.9
+Date: 2020-12-13
+  Changes:
+    - Reduced costs and copper usage in early game.
+    - Changed early mines to use assembly machine 1 instead of autofactory.
+    - Increased seaweed mk00 module slots from 5 to 10. its equal to the mk01 now but locked to the water only seaweed recipe.
+    - Reduced energy usage of atomizer mk00 and crude ddc.
+    - Added handcrafting recipe to make seaweed into a single bit of raw coal to add extra protection against game deadlock.
+---------------------------------------------------------------------------------------------------
 Version: 0.1.8
 Date: 2020-12-06
   Changes:

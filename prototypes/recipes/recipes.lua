@@ -471,9 +471,11 @@ RECIPE {
     },
     icon = "__pycoalprocessinggraphics__/graphics/icons/log.png",
     icon_size = 32,
-    subgroup = "py-items",
-    order = "c6"
+    subgroup = "py-alienlife-plants",
+    order = "a1"
 }
+
+RECIPE('log1'):subgroup_order("py-alienlife-plants", "a2")
 
 data.raw.recipe["iron-plate"].enabled = false
 

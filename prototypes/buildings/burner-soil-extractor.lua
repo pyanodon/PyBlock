@@ -60,8 +60,9 @@ ENTITY {
 		pipe_connections =
 			{
 			{type = "input-output", position = {-4,0}},
-			{type = "input-output", position = {4, 2} },
-			{type = "input-output", position = {0, 4} },
+			{type = "input-output", position = {4, 2}},
+            {type = "input-output", position = {0, 4}},
+            {type = "input-output", position = {0, -4}},
 			},
 		production_type = "input-output",
 		filter = "steam",
