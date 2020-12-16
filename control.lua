@@ -270,7 +270,7 @@ if not script.active_mods['pylandblock'] then
             -- end
         end
         -- setting stuff in chunk
-        local SelectedRock = math.random(1, 25)
+        local SelectedRock = math.random(1, 21)
 
         local Randx = math.random(tx + 7, bx - 7)
         local Randy = math.random(ty + 7, by - 7)
