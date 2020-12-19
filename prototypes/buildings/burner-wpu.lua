@@ -9,7 +9,7 @@ RECIPE {
         {"pb-wrought-iron-plate", 20},
         {"wrought-iron-gear-wheel", 15},
         {"burner-mining-drill", 2},
-        {"copper-cable", 25}
+        {"copper-cable", 5}
     },
     results = {
         {"burner-wpu", 1}
