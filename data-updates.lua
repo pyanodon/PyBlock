@@ -14,8 +14,8 @@ require('prototypes/updates/ddc-coal-updates')
 RECIPE("bio-reactor"):replace_ingredient('advanced-circuit','electronic-circuit')
 RECIPE("stone-distilation"):add_unlock('coal-processing-1')
 
---fun.ingredient_replace('botanical-nursery', 'soil-extractormk01', 'burner-soil-extractor')
---[[
+fun.ingredient_replace('botanical-nursery', 'soil-extractormk01', 'burner-soil-extractor')
+
 data.raw.recipe['botanical-nursery'].ingredients = {
 	{"electric-mining-drill", 1},
 	{"burner-soil-extractor", 1},
@@ -23,7 +23,6 @@ data.raw.recipe['botanical-nursery'].ingredients = {
 	{"wood", 25},
 	{"iron-plate", 15}
 }
-]]--
 
 --TODO:make early copper plate for begining buildings. //idk if im make cheaper copper as copper is low use and proably be ok with the basic 10:1 to start after scrap supply is used up
 
