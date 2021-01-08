@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.2
+Date: 2020-01-08
+  Changes:
+    - Moved niobium from guar from phytomining mk02 to phytomining mk01.
+    - Signifigantly reduce output of niobium from tar quenching as its not used a lot before phytomining is available.
+    - Readded burner soil extractor to nursery.
+    - Unlocked all composting recipes at start so that items can be composted as they are unlocked without needing to have the composter mk01.
+---------------------------------------------------------------------------------------------------
 Version: 0.2.1
 Date: 2020-12-15
   Changes:
@@ -7,7 +15,7 @@ Date: 2020-12-15
 Version: 0.2.0
 Date: 2020-12-14
   Changes:
-    - Added an extra steam connection to the sil extractor mk00. it now has one on each side.
+    - Added an extra steam connection to the silo extractor mk00. it now has one on each side.
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.9
 Date: 2020-12-13

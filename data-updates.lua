@@ -14,7 +14,7 @@ require('prototypes/updates/ddc-coal-updates')
 RECIPE("bio-reactor"):replace_ingredient('advanced-circuit','electronic-circuit')
 RECIPE("stone-distilation"):add_unlock('coal-processing-1')
 
-fun.ingredient_replace('botanical-nursery', 'soil-extractormk01', 'burner-soil-extractor')
+--fun.ingredient_replace('botanical-nursery', 'soil-extractormk01', 'burner-soil-extractor')
 
 data.raw.recipe['botanical-nursery'].ingredients = {
 	{"electric-mining-drill", 1},

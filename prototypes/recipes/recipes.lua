@@ -53,14 +53,14 @@ for k, result in ipairs(data.raw.recipe["tailings-borax-niobium"].results) do
 
 	if data.raw.recipe["tailings-borax-niobium"].results[k].name == "niobium-ore" then
 
-		data.raw.recipe["tailings-borax-niobium"].results[k].amount = 10
+		data.raw.recipe["tailings-borax-niobium"].results[k].amount = 2
 		data.raw.recipe["tailings-borax-niobium"].results[k].probability = 1
 
 	end
 
 	if data.raw.recipe["tailings-borax-niobium"].results[k].name == "raw-borax" then
 
-		data.raw.recipe["tailings-borax-niobium"].results[k].amount = 10
+		data.raw.recipe["tailings-borax-niobium"].results[k].amount = 7
 		data.raw.recipe["tailings-borax-niobium"].results[k].probability = 1
 
 	end

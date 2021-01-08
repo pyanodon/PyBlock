@@ -5,7 +5,7 @@ function overrides.add_ingredient(recipe, ingredient)
 	if data.raw.recipe[recipe] ~= nil then
 		--check if ingredient is item or fluid and that it exists
 		if data.raw.item[ingredient] ~= nil or data.raw.fluid[ingredient] ~= nil then
-		
+
 		end
 	end
 
@@ -481,10 +481,10 @@ end
 --[[
 for _, r in pairs(data.raw.recipe) do
 	if r.name == "iron-plate" then
-	log(serpent.block(r))
+	--log(serpent.block(r))
 	end
 	if r.category == "hot-air-advanced-foundry" then
-	log(serpent.block(r))
+	--log(serpent.block(r))
 	end
 end
 ]]--

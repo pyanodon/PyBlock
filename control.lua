@@ -139,7 +139,7 @@ if not script.active_mods['pylandblock'] then
 			local x = math.random(-25, 25)
 			local y = math.random(-25, 25)
 
-			log(serpent.block(pos))
+			--log(serpent.block(pos))
 
             local cs = game.surfaces['nauvis'].create_entity{
                 name = pickedpiece,
