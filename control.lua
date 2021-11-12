@@ -187,8 +187,13 @@ if not script.active_mods['pylandblock'] then
     }
 
     script.on_event(defines.events.on_chunk_generated, function(event)
-
-        -- getting chunk bounds
+       --ignore extra surfaces
+        local surface = event.surface
+        if surface.name ~= "nauvis" and surface.name:sub(1, 14) ~= "battle_surface" then
+            return
+        end
+			
+       -- getting chunk bounds
 
         local tx = event.area.left_top.x
         local ty = event.area.left_top.y
