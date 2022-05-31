@@ -344,12 +344,12 @@ if not script.active_mods['pylandblock'] then
         end
     end)
 
-script.on_configuration_changed(function()
-
-if game.players[1].name == 'kingarthur' then
-	game.print('i see you')
-end
-
-end)
+    script.on_configuration_changed(function()
+        if pcall(game.players[1].name == 'kingarthur') then
+            game.print('i see you')
+        else
+            -- game is running without players
+        end
+    end)
 
 end
