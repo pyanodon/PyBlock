@@ -13,7 +13,7 @@ RECIPE{
 			{type = "item", name = "raw-coal", amount = 1}
 		},
 	main_product = "raw-coal",
-	category = "handcrafting-failsafe"
+	category = "handcrafting"
 	}
 
 --tailings recipes
@@ -82,10 +82,10 @@ data:extend(
     energy_required = 2,
     ingredients = {
         {type = "fluid", name = "tar", amount = 200},
-        {type = "fluid", name = "dirty-water", amount = 500}
+        {type = "fluid", name = "dirty-water-heavy", amount = 500}
     },
     results = {
-        {type = "fluid", name = "dirty-water", amount = 100},
+        {type = "fluid", name = "dirty-water-heavy", amount = 100},
         {type = "fluid", name = "flue-gas", amount = 300},
         {type = "fluid", name = "water-saline", amount = 200},
 		{type = "item", name = "ore-tin", amount = 10},
@@ -146,7 +146,7 @@ data:extend
 	results =
 		{
 			{type = "item", name = "stone", amount = 10},
-			{type = "fluid", name = "dirty-water", amount = 50}
+			{type = "fluid", name = "dirty-water-light", amount = 50}
 		},
 	main_product = "stone",
 	icon = "__pycoalprocessinggraphics__/graphics/icons/soil-washer.png",
@@ -497,7 +497,7 @@ RECIPE {
     ingredients = {
         {type = 'item', name = 'copper-plate', amount = 5},
         {type = 'item', name = 'copper-cable', amount = 6},
-        {type = 'item', name = 'seaweed', amount = 5},
+        {type = 'item', name = "seaweed", amount = 5},
     },
     results = {
         {type = 'item', name = 'electronic-circuit', amount = 2}
@@ -513,7 +513,7 @@ RECIPE {
     enabled = true,
     energy_required = 100,
     ingredients = {
-        {type = 'item', name = 'seaweed', amount = 5},
+        {type = 'item', name = "seaweed", amount = 5},
         {type = 'fluid', name = 'water', amount = 50},
     },
     results = {
@@ -531,7 +531,7 @@ RECIPE {
 		enabled = true,
 		energy_required = 85,
 		ingredients = {
-			{type = 'item', name = 'seaweed', amount = 5},
+			{type = 'item', name = "seaweed", amount = 5},
 			{type = 'fluid', name = 'water-saline', amount = 50},
 		},
 		results = {

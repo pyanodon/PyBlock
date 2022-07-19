@@ -8,8 +8,4 @@ data:extend
 		type = "recipe-category",
 		name = "fwf-basic",
 	},
-	{
-		type = "recipe-category",
-		name = "handcrafting-failsafe",
-	}
 }

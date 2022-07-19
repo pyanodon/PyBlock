@@ -219,7 +219,7 @@ if not script.active_mods['pylandblock'] then
                 -- log(serpent.block(c.name))
                 -- log(serpent.block(c.position))
 
-                if c.name ~= 'iron-rock' and c.name ~= 'seaweed' and c.name ~= 'fish' then
+                if c.valid == true and c.name ~= 'iron-rock' and c.name ~= 'seaweed' and c.name ~= 'fish' then
                     -- log('destroying')
                     c.destroy()
 
@@ -343,13 +343,5 @@ if not script.active_mods['pylandblock'] then
             end
         end
     end)
-
-script.on_configuration_changed(function()
-
-if game.players[1].name == 'kingarthur' then
-	game.print('i see you')
-end
-
-end)
 
 end
