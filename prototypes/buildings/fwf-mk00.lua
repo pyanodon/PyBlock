@@ -5,10 +5,10 @@ RECIPE {
     enabled = true,
     ingredients = {
         {"stone-brick", 50},
-        {"pb-wrought-iron-plate", 25},
-        {"wrought-iron-pipe", 5},
+        {"iron-plate", 25},
+        {"pipe", 5},
         {"electronic-circuit", 2},
-        {"wrought-iron-gear-wheel", 20},
+        {"iron-gear-wheel", 20},
     },
     results = {
         {"fwf-mk00", 1}

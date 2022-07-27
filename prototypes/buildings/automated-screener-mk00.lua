@@ -4,9 +4,9 @@ RECIPE {
     energy_required = 10,
     enabled = true,
     ingredients = {
-        {"pb-wrought-iron-plate", 40},
-		{"wrought-iron-gear-wheel", 10},
-        {"electronic-circuit", 6}
+        {"iron-plate", 40},
+		--{"iron-gear-wheel", 10},
+        --{"electronic-circuit", 6}
     },
     results = {
         {"automated-screener-mk00", 1}

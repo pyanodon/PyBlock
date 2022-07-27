@@ -5,8 +5,8 @@ RECIPE {
     enabled = true,
     ingredients = {
         {"glass", 6},
-		{"pb-wrought-iron-plate", 15},
-		{"wrought-iron-pipe", 10},
+		{"iron-plate", 15},
+		{"pipe", 10},
 		{"electronic-circuit", 1},
     },
     results = {

@@ -5,7 +5,7 @@ RECIPE {
     enabled = true,
     ingredients = {
         {"burner-washer", 1},
-        {"pb-wrought-iron-plate", 35},
+        {"iron-plate", 35},
         {"electronic-circuit", 6},
     },
     results = {

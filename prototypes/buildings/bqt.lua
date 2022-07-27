@@ -5,10 +5,10 @@ RECIPE {
     energy_required = 5,
     enabled = true,
     ingredients = {
-        {"landfill", 25},
-        {"pb-wrought-iron-plate", 25},
-        {"wrought-iron-pipe", 10},
-        {"copper-plate", 10}
+        --{"landfill", 25},
+        {"iron-plate", 25},
+        --{"pipe", 10},
+        --{"copper-plate", 10}
     },
     results = {
         {"burner-quenching-tower", 1}

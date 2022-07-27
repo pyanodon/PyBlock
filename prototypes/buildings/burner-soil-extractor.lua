@@ -6,9 +6,9 @@ RECIPE {
     enabled = true,
     ingredients = {
         {"burner-mining-drill", 2},
-        {"pb-wrought-iron-plate", 15},
+        {"iron-plate", 15},
         {"copper-cable", 5},
-        {"wrought-iron-gear-wheel", 15}
+        {"iron-gear-wheel", 15}
     },
     results = {
         {"burner-soil-extractor", 1}

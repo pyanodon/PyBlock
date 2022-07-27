@@ -5,9 +5,9 @@ RECIPE {
     enabled = true,
     ingredients = {
         {"stone-brick", 30},
-        {"wrought-iron-pipe", 20},
+        {"pipe", 20},
         {"electronic-circuit", 1},
-        {"wrought-iron-gear-wheel", 30},
+        {"iron-gear-wheel", 30},
         {"glass", 5},
     },
     results = {

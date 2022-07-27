@@ -6,9 +6,9 @@ RECIPE {
     ingredients = {
         {"assembling-machine-1", 2},
         {"burner-mining-drill", 2},
-		{"wrought-iron-gear-wheel", 25},
-		{"wrought-iron-pipe", 10},
-        {"pb-wrought-iron-plate", 50},
+		{"iron-gear-wheel", 25},
+		{"pipe", 10},
+        {"iron-plate", 50},
         {"electronic-circuit", 20}
     },
     results = {

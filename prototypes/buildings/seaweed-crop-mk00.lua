@@ -4,11 +4,11 @@ RECIPE {
     energy_required = 1,
     enabled = true,
     ingredients = {
-        {"stone-brick", 20},
+        --{"stone-brick", 20},
         --{"limestone", 25},
-        {"wrought-iron-pipe", 5},
-        {"electronic-circuit", 1},
-        {"pb-wrought-iron-plate", 15},
+        --{"pipe", 5},
+        --{"electronic-circuit", 1},
+        {"iron-plate", 15},
     },
     results = {
         {"seaweed-crop-mk00", 1}

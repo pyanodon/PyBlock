@@ -5,9 +5,9 @@ RECIPE {
     energy_required = 4,
     enabled = true,
     ingredients = {
-        {"pb-wrought-iron-plate", 10},
-        {"wrought-iron-pipe", 25},
-        {"stone-brick", 30}
+        {"iron-plate", 10},
+        --{"pipe", 25},
+        --{"stone-brick", 30}
     },
     results = {
         {"burner-washer", 1}

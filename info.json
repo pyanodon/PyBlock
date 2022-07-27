@@ -1,6 +1,6 @@
 {
 	"name": "PyBlock",
-	"version": "0.2.2",
+	"version": "1.0.0",
 	"factorio_version": "1.1",
 	"title": "PyBlock",
 	"author": "KingArthur",
@@ -15,6 +15,7 @@
 	"pyindustry >= 1.0.10",
 	"pyrawores >= 1.1.2",
 	"pypetroleumhandling >= 1.2.2",
-	"pyalienlife >= 1.0.0"
+	"pyalienlife >= 1.0.0",
+	"pyalternativeenergy >= 1.0.0"
 	]
 }

@@ -1,5 +1,6 @@
 -- require("functions/autobuilder")
 -- rare earth and moly need to show up around sci 2
+--[[
 if not script.active_mods['pylandblock'] then
 
     local startchunk = false
@@ -345,3 +346,4 @@ if not script.active_mods['pylandblock'] then
     end)
 
 end
+]]

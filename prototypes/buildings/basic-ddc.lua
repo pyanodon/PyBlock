@@ -54,9 +54,9 @@ RECIPE {
 	enabled = true,
     ingredients =
     {
-		{name = "pb-wrought-iron-plate", amount = 15},
-		{name = "stone-furnace", amount = 1},
-		{name = "wrought-iron-pipe", amount = 5}
+		{name = "iron-plate", amount = 15},
+		--{name = "stone-furnace", amount = 1},
+		--{name = "pipe", amount = 5}
 	},
 	results = {
 		{name = "basic-ddc", amount = 1}
