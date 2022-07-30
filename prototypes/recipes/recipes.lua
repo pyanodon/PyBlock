@@ -37,10 +37,6 @@ RECIPE {
 	order = "f"
 }
 
-data.raw.recipe["landfill"].ingredients = { { type = "item", name = "stone", amount = 1 },
-	{ type = "item", name = "sand", amount = 2 } }
-data.raw.recipe["landfill"].results = { { type = "item", name = "landfill", amount = 2 } }
-
 --new recipes
 RECIPE {
 	type = "recipe",

@@ -7,7 +7,7 @@ RECIPE {
         {"stone-brick", 50},
         {"iron-plate", 25},
         {"pipe", 5},
-        {"electronic-circuit", 2},
+        {"copper-cable", 2},
         {"iron-gear-wheel", 20},
     },
     results = {
@@ -44,11 +44,11 @@ ENTITY {
     match_animation_speed_to_activity = false,
     --fixed_recipe = 'log0',
     module_specification = {
-        module_slots = 0
+        module_slots = 12
     },
     allowed_effects = {},
     crafting_categories = {"fwf-basic","fwf"},
-    crafting_speed = 0.5,
+    crafting_speed = 0.1,
     energy_source =
     {
       type = "fluid",

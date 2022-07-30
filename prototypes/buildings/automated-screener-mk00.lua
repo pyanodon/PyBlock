@@ -5,8 +5,7 @@ RECIPE {
     enabled = true,
     ingredients = {
         {"iron-plate", 40},
-		--{"iron-gear-wheel", 10},
-        --{"electronic-circuit", 6}
+		{"iron-gear-wheel", 10},
     },
     results = {
         {"automated-screener-mk00", 1}

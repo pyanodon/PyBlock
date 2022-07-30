@@ -6,8 +6,8 @@ RECIPE {
     enabled = true,
     ingredients = {
         {"iron-plate", 10},
-        --{"pipe", 25},
-        --{"stone-brick", 30}
+        {"pipe", 25},
+        {"stone-brick", 30}
     },
     results = {
         {"burner-washer", 1}

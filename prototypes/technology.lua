@@ -1,19 +1,13 @@
 
 --recipes unlocked at start:
---data.raw.recipe["log1"].enabled = true
-data.raw.recipe["tailings-copper-iron"].enabled = true
-data.raw.recipe["log-wood"].enabled = true
-data.raw.recipe["landfill"].enabled = true
 data.raw.recipe["py-sinkhole"].enabled = true
-data.raw.recipe["steel-plate"].normal.enabled = true
-data.raw.recipe["steel-plate"].expensive.enabled = true
 
 --building unlocked at start:
 --data.raw.recipe["botanical-nursery"].enabled = true
 --data.raw.recipe["quenching-tower"].enabled = true
 
 --buildings removed from start:
-data.raw.recipe["distilator"].enabled=true
+RECIPE("distilator"):set_fields{enabled=false}
 table.insert(data.raw.technology["coal-processing-1"].effects,{type="unlock-recipe",recipe="distilator"})
 data.raw.recipe["wpu"].enabled=false
 table.insert(data.raw.technology["coal-processing-1"].effects,{type="unlock-recipe",recipe="wpu"})

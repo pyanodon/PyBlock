@@ -7,8 +7,8 @@ RECIPE {
     ingredients = {
         --{"landfill", 25},
         {"iron-plate", 25},
-        --{"pipe", 10},
-        --{"copper-plate", 10}
+        {"pipe", 10},
+        {"copper-plate", 10}
     },
     results = {
         {"burner-quenching-tower", 1}

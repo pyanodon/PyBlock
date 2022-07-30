@@ -1,171 +1,32 @@
--- require("functions/autobuilder")
--- rare earth and moly need to show up around sci 2
---[[
 if not script.active_mods['pylandblock'] then
 
-    local startchunk = false
-
-    local surface
-
-    local X = -1
-    local Y = -1
-
-    local Tiles = {}
-
     script.on_init(function(event)
-
-        -- do first delete everything in the chunk + set it to water only
-
-        local oldtiles = {}
-
-        local waters = {
-            'water', 'deepwater'
-            -- "deepwater-green",
-            -- "water-green",
-            -- "water-shallow",
-            -- "water-mud",
-        }
-
-        local tx = -32
-        local ty = -32
-
-        local bx = 32
-        local by = 32
-
-        local fx = tx
-        local fy = ty
-
-        for i = 0, 4096 do
-
-            table.insert(oldtiles, {name = waters[math.random(1, 2)], position = {fx, fy}})
-
-            fx = fx + 1
-
-            if fx == tx + 64 then
-
-                fx = tx
-                fy = fy + 1
-
-            end
-
-        end
-
-        game.surfaces['nauvis'].set_tiles(oldtiles)
-
-        local crap = game.surfaces['nauvis'].find_entities({{tx, ty}, {bx, by}})
-
-        for _, c in pairs(crap) do
-
-            -- log(serpent.block(c))
-            if c ~= game.player and c.name ~= 'seaweed' and c.name ~= 'fish' then c.destroy() end
-
-        end
-
-        -- setup spawn area
-
-        global.firstrock = true
-        global.secondrock = true
-
-        local t
-
-        for x = 0, 10 do
-
-            table.insert(Tiles, {name = 'landfill', position = {X, Y}})
-
-            X = X + 1
-
-            if X == 2 then
-
-                X = -1
-
-                Y = Y + 1
-
-                if Y == 2 then Y = -1 end
-
-            end
-
-        end
-
-        game.surfaces['nauvis'].set_tiles(Tiles)
 
         if remote.interfaces['freeplay'] then
 
             local created_items = remote.call('freeplay', 'get_created_items')
             created_items['landfill'] = 1000
             created_items['stone'] = 400
-            created_items['wood'] = 100
+            created_items['wood'] = 1000
             created_items['py-tank-1000'] = 1
             created_items['py-tank-3000'] = 1
             created_items['py-tank-5000'] = 1
             created_items['py-tank-8000'] = 1
-
-            if not script.active_mods['py-quick-start'] then
-                created_items['splitter'] = 5
-                created_items['underground-belt'] = 20
-
-            end
-
             remote.call('freeplay', 'set_created_items', created_items)
 
-        end
+            local debris_items = remote.call("freeplay", "get_debris_items")
+            debris_items["stone-furnace"] = 1
+            debris_items["py-sinkhole"] = 2
+            debris_items["py-gas-vent"] = 2
+            debris_items["scrap-iron"] = 400
+            remote.call("freeplay", "set_debris_items", debris_items)
 
-    end)
-
-    local crashedshipparts = {
-        'crash-site-spaceship-wreck-big-1', 'crash-site-spaceship-wreck-big-2',
-        'crash-site-spaceship-wreck-medium-1', 'crash-site-spaceship-wreck-medium-2',
-        'crash-site-spaceship-wreck-medium-3', 'crash-site-chest-1', 'crash-site-chest-2'
-    }
-
-    script.on_event(defines.events.on_player_created, function(event)
-
-        local player = game.players[event.player_index]
-
-        player.remove_item('iron-plate')
-        player.remove_item('stone-furnace')
-        player.remove_item('burner-mining-drill')
-
-        local shippieces = math.random(8, 14)
-
-        --local cs
-
-        local firstcon = true
-
-        for a = 1, shippieces do
-
-            local pickedpiece = crashedshipparts[math.random(1, 7)]
-
-			--local pos = player.surface.find_non_colliding_position(pickedpiece, player.position, 10, 1, true)
-
-			local x = math.random(-25, 25)
-			local y = math.random(-25, 25)
-
-			--log(serpent.block(pos))
-
-            local cs = game.surfaces['nauvis'].create_entity{
-                name = pickedpiece,
-                position = {x,y},
-                force = player.force
-            }
-
-            -- cs.insert({name = "scrap-iron", count = 400})
-            -- cs.insert({name = "scrap-copper", count = 50})
-
-            if cs.type == 'container' and firstcon == true then
-
-                cs.insert({name = 'stone-furnace', count = 1})
-                cs.insert({name = 'py-sinkhole', count = 2})
-                cs.insert({name = 'py-gas-vent', count = 2})
-                cs.insert({name = 'scrap-iron', count = 400})
-
-                firstcon = false
-
-            end
 
         end
 
     end)
 
+--[[
     local Rocks = {
         'iron-rock', 'copper-rock', 'uranium-rock', 'zinc-rock', 'aluminium-rock', 'chromium-rock', 'coal-rock',
         'lead-rock', 'nexelit-rock', 'nickel-rock', 'phosphate-rock-02', 'quartz-rock', 'salt-rock', 'tin-rock',
@@ -186,7 +47,8 @@ if not script.active_mods['pylandblock'] then
         'stone', 'wood', 'stone-brick', 'iron-ore', 'ore-aluminium', 'ore-nickel', 'ore-quartz', 'ore-zinc',
         'ore-titanium', 'ore-chromium', 'raw-coal'
     }
-
+    ]]--
+--[[
     script.on_event(defines.events.on_chunk_generated, function(event)
 
         -- getting chunk bounds
@@ -344,6 +206,5 @@ if not script.active_mods['pylandblock'] then
             end
         end
     end)
-
+]]--
 end
-]]

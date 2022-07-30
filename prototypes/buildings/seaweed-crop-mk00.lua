@@ -4,10 +4,9 @@ RECIPE {
     energy_required = 1,
     enabled = true,
     ingredients = {
-        --{"stone-brick", 20},
-        --{"limestone", 25},
-        --{"pipe", 5},
-        --{"electronic-circuit", 1},
+        {"stone-brick", 20},
+        {"pipe", 5},
+        {"small-parts-01", 5},
         {"iron-plate", 15},
     },
     results = {
