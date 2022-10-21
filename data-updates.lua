@@ -8,8 +8,8 @@ for _, controller in DATA:pairs('god-controller') do
 end
 ]]--
 
-require("prototypes/updates/pycoalprocessing-updates")
-require("prototypes/updates/pypetroleumhandling-updates")
+--require("prototypes/updates/pycoalprocessing-updates")
+--require("prototypes/updates/pypetroleumhandling-updates")
 --require('prototypes/updates/pyhightech-updates')
 --require('prototypes/updates/pyalienlife-updates')
 --require('prototypes/updates/ddc-coal-updates')
