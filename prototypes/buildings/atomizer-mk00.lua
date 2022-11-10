@@ -4,9 +4,10 @@ RECIPE {
     energy_required = 0.5,
     enabled = true,
     ingredients = {
-        {"burner-washer", 1},
-        {"iron-plate", 35},
-        {"electronic-circuit", 6},
+        --{"burner-washer", 1},
+        {"iron-plate", 15},
+        {"copper-plate", 20},
+        {"pipe", 10}
     },
     results = {
         {"atomizer-mk00", 1}

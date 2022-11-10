@@ -1,32 +1,34 @@
---RECIPE('Full Render Fish'):set_fields {enabled = true}
---RECIPE('guts-to-copper'):set_fields {enabled = true}
---RECIPE('blood-to-iron'):set_fields {enabled = true}
---RECIPE('meat-to-tin'):set_fields {enabled = true}
+RECIPE("spore-collector-mk01"):remove_ingredient("gasifier"):remove_ingredient("electronic-circuit"):remove_ingredient("steel-plate"):remove_ingredient("intermetallics"):set_fields{enabled = true}:remove_unlock("mycology-mk01")
 
---[[
-RECIPE('biomass-bones'):set_fields {enabled = true}
-RECIPE('biomass-skin'):set_fields {enabled = true}
-RECIPE('biomass-guts'):set_fields {enabled = true}
-RECIPE('biomass-blood'):set_fields {enabled = true}
-RECIPE('biomass-meat'):set_fields {enabled = true}
-]]--
+RECIPE("fawogae-plantation-mk01"):remove_ingredient("electronic-circuit"):remove_ingredient("tinned-cable"):remove_ingredient("intermetallics"):set_fields{enabled = true}:remove_unlock("fawogae-mk01")
 
---Unlock all biomass compost recipes
---[[
-for r, recipe in pairs(data.raw.recipe) do
-    if recipe.category == 'compost' then
-        recipe.enabled = true
-    end
-end
-]]
+RECIPE("fawogae-spore"):set_fields{enabled = true}:remove_unlock("fawogae-mk01")
 
---RECIPE('log-wood'):remove_unlock('botany-mk01'):set_fields {enabled = true}
+RECIPE("fawogae-1"):set_fields{enabled = true}:remove_unlock("fawogae-mk01")
 
---fish modules
---table.insert(data.raw.module['fish'].limitation, 'fish-start-01')
---table.insert(data.raw.module['fish'].limitation, 'fish-start-02')
+RECIPE {
+    type = "recipe",
+    name = "fawogae-start",
+    category = "handcrafting",
+    enabled = true,
+    energy_required = 5,
+    ingredients = {
+        {type = "item", name = "fawogae-spore", amount = 5},
+        {type = "item", name = "planter-box", amount = 1}
+    },
+    results = {
+        {type = "item", name = "fawogae", amount = 1}
+    }
+}
 
---RECIPE('seaweed-crop-mk01'):add_unlock('botany-mk01'):set_fields {enabled = false}
+--remove unused materials from fawogae mk01
+RECIPE("fawogae-sample"):remove_unlock("fawogae-mk01")
 
---RECIPE('guar-nb'):remove_unlock('phytomining-mk02'):add_unlock('phytomining')
---RECIPE('nb-biomass-extraction'):remove_unlock('phytomining-mk02'):add_unlock('phytomining')
+RECIPE("fawogae-codex"):remove_unlock("fawogae-mk01")
+
+RECIPE("earth-shroom-sample"):remove_unlock("fawogae-mk01")
+
+RECIPE("fawogae-to-iron"):set_fields{enabled = true}:remove_unlock("molecular-decohesion")
+
+data.raw["assembling-machine"]["fawogae-plantation-mk01"].energy_source = {type = "void"}
+

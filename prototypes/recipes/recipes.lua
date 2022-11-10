@@ -1,5 +1,6 @@
-local fun = require("functions/functions")
+--local fun = require("functions/functions")
 
+--[[
 --handcraft seaweed to raw coal
 RECIPE {
 	type = "recipe",
@@ -36,8 +37,10 @@ RECIPE {
 	subgroup = "py-syngas",
 	order = "f"
 }
+]]--
 
 --new recipes
+
 RECIPE {
 	type = "recipe",
 	name = "soil-to-stone",

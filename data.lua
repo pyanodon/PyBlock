@@ -7,12 +7,12 @@ end
 require('prototypes/tiles/tiles')
 
 --buildings--
---require('prototypes/buildings/atomizer-mk00')
+require('prototypes/buildings/atomizer-mk00')
 --require('prototypes/buildings/automated-screener-mk00')
---require('prototypes/buildings/basic-ddc')
+require('prototypes/buildings/basic-ddc')
 --require('prototypes/buildings/bqt')
 --require('prototypes/buildings/burner-soil-extractor')
---require('prototypes/buildings/burner-washer')
+require('prototypes/buildings/burner-washer')
 --require('prototypes/buildings/burner-wpu')
 --require('prototypes/buildings/compost-plant-mk00')
 --require('prototypes/buildings/fish-farm-mk00')
@@ -21,7 +21,7 @@ require('prototypes/tiles/tiles')
 --require('prototypes/buildings/seaweed-crop-mk00')
 
 --require("functions/functions")
---require("prototypes/itemgroups")
+require("prototypes/itemgroups")
 --require("prototypes/recipe-categories")
 --require("prototypes/technology")
 --require("prototypes/item")
@@ -29,7 +29,7 @@ require('prototypes/tiles/tiles')
 --require("prototypes/entity")
 
 --Recipes
---require("prototypes/recipes/recipes")
+require("prototypes/recipes/recipes")
 --require("prototypes/recipes/recipes-uranium")
 
 --formula to calulate steam consumption

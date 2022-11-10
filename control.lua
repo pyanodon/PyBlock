@@ -7,19 +7,24 @@ if not script.active_mods['pylandblock'] then
             local created_items = remote.call('freeplay', 'get_created_items')
             created_items['landfill'] = 1000
             created_items['stone'] = 400
-            created_items['wood'] = 1000
+            created_items['wood'] = 500
+            created_items["iron-plate"] = 500
+            created_items["copper-plate"] = 500
             created_items['py-tank-1000'] = 1
             created_items['py-tank-3000'] = 1
             created_items['py-tank-5000'] = 1
             created_items['py-tank-8000'] = 1
+            created_items["stone-furnace"] = 1
+            created_items["py-sinkhole"] = 2
+            created_items["py-gas-vent"] = 2
             remote.call('freeplay', 'set_created_items', created_items)
 
-            local debris_items = remote.call("freeplay", "get_debris_items")
-            debris_items["stone-furnace"] = 1
-            debris_items["py-sinkhole"] = 2
-            debris_items["py-gas-vent"] = 2
-            debris_items["scrap-iron"] = 400
-            remote.call("freeplay", "set_debris_items", debris_items)
+            --local debris_items = remote.call("freeplay", "get_debris_items")
+            --debris_items["stone-furnace"] = 1
+            --debris_items["py-sinkhole"] = 2
+            --debris_items["py-gas-vent"] = 2
+            --debris_items["scrap-iron"] = 400
+            --remote.call("freeplay", "set_debris_items", debris_items)
 
 
         end
