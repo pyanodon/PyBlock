@@ -2,7 +2,7 @@ RECIPE("spore-collector-mk01"):remove_ingredient("gasifier"):remove_ingredient("
 
 RECIPE("fawogae-plantation-mk01"):remove_ingredient("electronic-circuit"):remove_ingredient("tinned-cable"):remove_ingredient("intermetallics"):set_fields{enabled = true}:remove_unlock("fawogae-mk01")
 
-RECIPE("fawogae-spore"):set_fields{enabled = true}:remove_unlock("fawogae-mk01")
+RECIPE("fawogae-spore"):set_fields{enabled = true}:remove_unlock("fawogae-mk01"):set_fields{energy_required = 1}
 
 RECIPE("fawogae-1"):set_fields{enabled = true}:remove_unlock("fawogae-mk01")
 
@@ -32,3 +32,8 @@ RECIPE("fawogae-to-iron"):set_fields{enabled = true}:remove_unlock("molecular-de
 
 data.raw["assembling-machine"]["fawogae-plantation-mk01"].energy_source = {type = "void"}
 
+data.raw["assembling-machine"]["spore-collector-mk01"].energy_source = {type = "void"}
+
+RECIPE("seaweed-crop-mk01"):remove_ingredient("tin-plate"):remove_ingredient("limestone")
+
+RECIPE("automation-science-pack"):replace_ingredient("native-flora", "seaweed")

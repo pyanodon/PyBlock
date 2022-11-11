@@ -17,3 +17,4 @@ RECIPE("landfill"):remove_unlock("landfill"):set_fields{enabled = true}
 
 TECHNOLOGY("landfill"):set_fields{enabled = false}
 
+RECIPE("coal-gas-from-wood"):set_fields{enabled = true}:remove_unlock("coal-processing-1")

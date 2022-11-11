@@ -89,12 +89,12 @@ RECIPE {
 	order = "h"
 }
 ]]--
---[[
+
 RECIPE {
 	type = "recipe",
 	name = "sand-quartz-sifting",
 	category = "screener",
-	enabled = true,
+	enabled = false,
 	ingredients =
 	{
 		{ type = "item", name = "sand", amount = 10 }
@@ -109,8 +109,7 @@ RECIPE {
 	subgroup = "py-washer",
 	order = "c",
 	energy_required = 4
-}
-]]--
+}:add_unlock("glass")
 
 --tit ore from rich dust in classifer
 --[[

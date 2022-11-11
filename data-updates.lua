@@ -9,6 +9,7 @@ end
 ]]--
 
 require("prototypes/updates/pycoalprocessing-updates")
+require("prototypes/updates/pyfusionenergy-updates")
 require("prototypes/updates/pypetroleumhandling-updates")
 --require('prototypes/updates/pyhightech-updates')
 require('prototypes/updates/pyalienlife-updates')
