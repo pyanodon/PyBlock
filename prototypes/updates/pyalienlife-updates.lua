@@ -101,3 +101,19 @@ RECIPE("fish-to-tin"):remove_unlock("molecular-decohesion-mk02"):add_unlock("mol
 --Lead
 
 RECIPE("soot-to-lead"):remove_unlock("oil-sands"):add_unlock("tar-processing")
+
+--Circuit Tweaks
+
+--Zinc
+
+TECHNOLOGY("kicalk"):remove_pack("py-science-pack-1"):remove_pack("logistic-science-pack")
+
+RECIPE("kicalk-sample"):remove_ingredient("alien-sample01"):remove_ingredient("cdna")
+
+RECIPE("kicalk-codex"):remove_ingredient("electronic-circuit")
+
+RECIPE("kicalk-plantation-mk01"):remove_ingredient("intermetallics")
+
+RECIPE("kicalk-zn"):remove_unlock("phytomining-mk02"):add_unlock("phytomining")
+
+RECIPE("zn-biomass-extraction"):remove_ingredient("steam"):add_ingredient({type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 250}):remove_unlock("phytomining-mk02"):add_unlock("phytomining")
