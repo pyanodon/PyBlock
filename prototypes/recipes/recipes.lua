@@ -367,7 +367,6 @@ RECIPE {
 }
 ]]
 
---[[
 RECIPE {
 	type = "recipe",
 	name = "biosample",
@@ -392,6 +391,5 @@ RECIPE {
 	subgroup = "py-alienlife-genetics",
 	order = "a"
 }:add_unlock('xenobiology')
-]]--
 
 --RECIPE('blood-to-zinc'):remove_unlock('molecular-decohesion-mk02'):add_unlock('molecular-decohesion')

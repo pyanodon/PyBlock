@@ -117,3 +117,6 @@ RECIPE("kicalk-plantation-mk01"):remove_ingredient("intermetallics")
 RECIPE("kicalk-zn"):remove_unlock("phytomining-mk02"):add_unlock("phytomining")
 
 RECIPE("zn-biomass-extraction"):remove_ingredient("steam"):add_ingredient({type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 250}):remove_unlock("phytomining-mk02"):add_unlock("phytomining")
+
+--Vrauks
+RECIPE("vrauks"):remove_ingredient("native-flora")
