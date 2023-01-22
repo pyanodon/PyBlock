@@ -393,3 +393,19 @@ RECIPE {
 }:add_unlock('xenobiology')
 
 --RECIPE('blood-to-zinc'):remove_unlock('molecular-decohesion-mk02'):add_unlock('molecular-decohesion')
+
+RECIPE {
+	type = "recipe",
+	name = "geothermal-water",
+	category = "geowater",
+	enabled = false,
+	energy_required = 1,
+	ingredients = {
+		{ type = "fluid", name = "pressured-water", amount = 100},
+	},
+	results = {
+		{ type = "fluid", name = "geothermal-water", amount = 100, temperature = 3000},
+
+	},
+	main_product = "geothermal-water",
+}:add_unlock('geothermal-power-mk01')

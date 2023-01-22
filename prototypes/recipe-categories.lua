@@ -1,5 +1,6 @@
 data:extend
 {
+	--[[
 	{
 		type = "recipe-category",
 		name = "starter-nursery",
@@ -7,5 +8,10 @@ data:extend
 	{
 		type = "recipe-category",
 		name = "fwf-basic",
+	},
+	]]--
+	{
+		type = "recipe-category",
+		name = "geowater",
 	},
 }
