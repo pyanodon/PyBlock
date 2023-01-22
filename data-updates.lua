@@ -8,10 +8,11 @@ for _, controller in DATA:pairs('god-controller') do
 end
 ]]--
 
+--[[
 for r, resource in pairs(data.raw.resource) do
 	resource.autoplace = nil
 end
-
+]]--
 require("prototypes/updates/pycoalprocessing-updates")
 require("prototypes/updates/pyfusionenergy-updates")
 require("prototypes/updates/pypetroleumhandling-updates")
