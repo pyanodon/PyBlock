@@ -1,5 +1,93 @@
 --local fun = require("functions/functions")
 
+RECIPE {
+	type = "recipe",
+	name = "soil-to-stone",
+	category = "washer",
+	enabled = true,
+	energy_required = 4,
+	ingredients =
+	{
+		{ type = "item", name = "soil", amount = 24 },
+		{ type = "fluid", name = "water", amount = 400 }
+	},
+	results =
+	{
+		{ type = "item", name = "stone", amount = 10 },
+		{ type = "fluid", name = "dirty-water-light", amount = 50 }
+	},
+	main_product = "stone",
+	icon = "__pycoalprocessinggraphics__/graphics/icons/soil-washer.png",
+	icon_size = 32,
+	subgroup = "py-washer",
+	order = "c"
+}
+
+RECIPE {
+	type = "recipe",
+	name = "sand-quartz-sifting",
+	category = "screener",
+	enabled = false,
+	ingredients =
+	{
+		{ type = "item", name = "sand", amount = 10 }
+	},
+	results =
+	{
+		{ type = "item", name = "ore-quartz", amount = 2 }
+	},
+	main_product = "ore-quartz",
+	icon = "__pyraworesgraphics__/graphics/icons/ores/ore-quartz.png",
+	icon_size = 32,
+	subgroup = "py-washer",
+	order = "c",
+	energy_required = 4
+}:add_unlock("glass")
+
+
+RECIPE {
+	type = "recipe",
+	name = "biosample",
+	category = "biofactory",
+	enabled = false,
+	energy_required = 5,
+	ingredients = {
+		{ type = "item", name = "bio-container", amount = 10 },
+		{ type = "item", name = "seaweed", amount = 4 },
+		{ type = "item", name = "moss", amount = 2 },
+		--{ type = 'fluid', name = 'waste-water', amount = 20 },
+		--{ type = 'fluid', name = 'phytoplankton', amount = 25 },
+		--{ type = 'fluid', name = 'zogna-bacteria', amount = 5 },
+	},
+	results = {
+		{ type = "item", name = "bio-sample", amount = 10 },
+
+	},
+	main_product = "bio-sample",
+	icon = "__pyalienlifegraphics__/graphics/icons/biosample.png",
+	icon_size = 64,
+	subgroup = "py-alienlife-genetics",
+	order = "a"
+}:add_unlock('xenobiology')
+
+RECIPE {
+	type = "recipe",
+	name = "geothermal-water",
+	category = "geowater",
+	enabled = false,
+	energy_required = 1,
+	ingredients = {
+		{ type = "fluid", name = "pressured-water", amount = 100},
+	},
+	results = {
+		{ type = "fluid", name = "geothermal-water", amount = 100, temperature = 3000},
+
+	},
+	main_product = "geothermal-water",
+}:add_unlock('geothermal-power-mk01')
+
+--UNUSED
+
 --[[
 --handcraft seaweed to raw coal
 RECIPE {
@@ -41,29 +129,6 @@ RECIPE {
 
 --new recipes
 
-RECIPE {
-	type = "recipe",
-	name = "soil-to-stone",
-	category = "washer",
-	enabled = true,
-	energy_required = 4,
-	ingredients =
-	{
-		{ type = "item", name = "soil", amount = 24 },
-		{ type = "fluid", name = "water", amount = 400 }
-	},
-	results =
-	{
-		{ type = "item", name = "stone", amount = 10 },
-		{ type = "fluid", name = "dirty-water-light", amount = 50 }
-	},
-	main_product = "stone",
-	icon = "__pycoalprocessinggraphics__/graphics/icons/soil-washer.png",
-	icon_size = 32,
-	subgroup = "py-washer",
-	order = "c"
-}
-
 --[[
 RECIPE {
 	type = "recipe",
@@ -89,27 +154,6 @@ RECIPE {
 	order = "h"
 }
 ]]--
-
-RECIPE {
-	type = "recipe",
-	name = "sand-quartz-sifting",
-	category = "screener",
-	enabled = false,
-	ingredients =
-	{
-		{ type = "item", name = "sand", amount = 10 }
-	},
-	results =
-	{
-		{ type = "item", name = "ore-quartz", amount = 2 }
-	},
-	main_product = "ore-quartz",
-	icon = "__pyraworesgraphics__/graphics/icons/ores/ore-quartz.png",
-	icon_size = 32,
-	subgroup = "py-washer",
-	order = "c",
-	energy_required = 4
-}:add_unlock("glass")
 
 --tit ore from rich dust in classifer
 --[[
@@ -367,45 +411,4 @@ RECIPE {
 }
 ]]
 
-RECIPE {
-	type = "recipe",
-	name = "biosample",
-	category = "biofactory",
-	enabled = false,
-	energy_required = 5,
-	ingredients = {
-		{ type = "item", name = "bio-container", amount = 10 },
-		{ type = "item", name = "seaweed", amount = 4 },
-		{ type = "item", name = "moss", amount = 2 },
-		{ type = 'fluid', name = 'waste-water', amount = 20 },
-		{ type = 'fluid', name = 'phytoplankton', amount = 25 },
-		{ type = 'fluid', name = 'zogna-bacteria', amount = 5 },
-	},
-	results = {
-		{ type = "item", name = "bio-sample", amount = 10 },
-
-	},
-	main_product = "bio-sample",
-	icon = "__pyalienlifegraphics__/graphics/icons/biosample.png",
-	icon_size = 64,
-	subgroup = "py-alienlife-genetics",
-	order = "a"
-}:add_unlock('xenobiology')
-
 --RECIPE('blood-to-zinc'):remove_unlock('molecular-decohesion-mk02'):add_unlock('molecular-decohesion')
-
-RECIPE {
-	type = "recipe",
-	name = "geothermal-water",
-	category = "geowater",
-	enabled = false,
-	energy_required = 1,
-	ingredients = {
-		{ type = "fluid", name = "pressured-water", amount = 100},
-	},
-	results = {
-		{ type = "fluid", name = "geothermal-water", amount = 100, temperature = 3000},
-
-	},
-	main_product = "geothermal-water",
-}:add_unlock('geothermal-power-mk01')

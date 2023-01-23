@@ -2,7 +2,7 @@ RECIPE {
     type = "recipe",
     name = "automated-screener-mk00",
     energy_required = 10,
-    enabled = true,
+    enabled = false,
     ingredients = {
         {"iron-plate", 40},
 		{"iron-gear-wheel", 10},
@@ -10,7 +10,7 @@ RECIPE {
     results = {
         {"automated-screener-mk00", 1}
     }
-}
+}:add_unlock("glass")
 
 ITEM {
     type = "item",

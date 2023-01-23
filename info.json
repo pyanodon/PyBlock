@@ -9,7 +9,6 @@
 	"description": "Pymod edition of a Sea Block style game",
 	"dependencies": [
 	"base >= 1.1.0",
-	"pyalternativeenergy >= 1.1.7",
-	"pypostprocessing"
+	"pyalternativeenergy >= 1.1.7"
 	]
 }

@@ -38,6 +38,7 @@ RECIPE("seaweed-crop-mk01"):remove_ingredient("tin-plate"):remove_ingredient("li
 
 RECIPE("automation-science-pack"):remove_ingredient("native-flora"):add_ingredient({name = "seaweed", amount = 1})
 
+RECIPE("coal-fawogae"):set_fields{enabled = true}:remove_unlock("fawogae-mk01"):set_fields{category = "distilator"}
 
 --PY SCI 1 TWEAKS
 

@@ -8,18 +8,20 @@ require('prototypes/tiles/tiles')
 
 --buildings--
 require('prototypes/buildings/atomizer-mk00')
---require('prototypes/buildings/automated-screener-mk00')
 require('prototypes/buildings/basic-ddc')
---require('prototypes/buildings/bqt')
---require('prototypes/buildings/burner-soil-extractor')
 require('prototypes/buildings/burner-washer')
+require('prototypes/buildings/automated-screener-mk00')
+require("prototypes/buildings/geothermal-plant-mk01")
+
+--UNUSED
 --require('prototypes/buildings/burner-wpu')
 --require('prototypes/buildings/compost-plant-mk00')
 --require('prototypes/buildings/fish-farm-mk00')
 --require('prototypes/buildings/fwf-mk00')
 --require('prototypes/buildings/slaughterhouse-mk00')
 --require('prototypes/buildings/seaweed-crop-mk00')
-require("prototypes/buildings/geothermal-plant-mk01")
+--require('prototypes/buildings/bqt')
+--require('prototypes/buildings/burner-soil-extractor')
 
 --require("functions/functions")
 require("prototypes/itemgroups")
