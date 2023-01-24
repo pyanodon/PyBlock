@@ -8,14 +8,31 @@ for _, controller in DATA:pairs('god-controller') do
 end
 ]]--
 
+local ores = {
+	--antimonium = true,
+	--borax = true,
+	--["copper-ore"] = true,
+	--["molybdenum-ore"] = true,
+	--niobium = true,
+	--["ore-aluminium"] = true,
+	--["ore-bioreserve"] = true,
+	--["ore-chromium"] = true,
+	--["ore-lead"] = true,
+	--["ore-nickel"] = true,
+	--["ore-tin"] = true,
+	--["ore-titanium"] = true,
+	--["ore-zinc"] = true,
+	--["phosphate-rock"] = true,
+	--ree = true,
+	--stone = true,
+}
 
 for r, resource in pairs(data.raw.resource) do
-	--resource.autoplace = nil
-	log(resource.name)
+	if ores[resource.name] ~= true then
+		resource.autoplace = nil
+	end
+	--log(resource.name)
 end
-
-data.raw.resource['iron-ore'].autoplace = nil
---data.raw.resource['copper-ore'].autoplace = nil
 
 require("prototypes/updates/pycoalprocessing-updates")
 require("prototypes/updates/pypetroleumhandling-updates")
@@ -70,3 +87,209 @@ RECIPE("arqad-hive-mk01"):remove_ingredient("intermetallics")
 TECHNOLOGY("arqad"):remove_pack("logistic-science-pack")
 
 table.insert(RECIPE("soot-separation").results, {type = "item", name = "ore-nickel", amount = 1, probability = 0.1})
+
+--fake recipes to make ores from nothing to fake tech tree with pypp
+
+RECIPE {
+    type = "recipe",
+    name = "fake-anti-ore",
+    category = "crafting",
+    enabled = false,
+    energy_required = 1,
+    ingredients = {},
+    results = {
+        {type = "item", name = "antimonium-ore", amount = 1}
+    }
+}
+
+RECIPE {
+    type = "recipe",
+    name = "fake-borax-ore",
+    category = "crafting",
+    enabled = false,
+    energy_required = 1,
+    ingredients = {},
+    results = {
+        {type = "item", name = "raw-borax", amount = 1}
+    }
+}
+
+RECIPE {
+    type = "recipe",
+    name = "fake-copper-ore",
+    category = "crafting",
+    enabled = false,
+    energy_required = 1,
+    ingredients = {},
+    results = {
+        {type = "item", name = "copper-ore", amount = 1}
+    }
+}
+
+RECIPE {
+    type = "recipe",
+    name = "fake-moly-ore",
+    category = "crafting",
+    enabled = false,
+    energy_required = 1,
+    ingredients = {},
+    results = {
+        {type = "item", name = "molybdenum-ore", amount = 1}
+    }
+}
+
+RECIPE {
+    type = "recipe",
+    name = "fake-nio-ore",
+    category = "crafting",
+    enabled = false,
+    energy_required = 1,
+    ingredients = {},
+    results = {
+        {type = "item", name = "niobium-ore", amount = 1}
+    }
+}
+
+RECIPE {
+    type = "recipe",
+    name = "fake-aluminium-ore",
+    category = "crafting",
+    enabled = false,
+    energy_required = 1,
+    ingredients = {},
+    results = {
+        {type = "item", name = "ore-aluminium", amount = 1}
+    }
+}
+
+RECIPE {
+    type = "recipe",
+    name = "fake-bioreserve-ore",
+    category = "crafting",
+    enabled = false,
+    energy_required = 1,
+    ingredients = {},
+    results = {
+        {type = "item", name = "native-flora", amount = 1}
+    }
+}
+
+RECIPE {
+    type = "recipe",
+    name = "fake-chrome-ore",
+    category = "crafting",
+    enabled = false,
+    energy_required = 1,
+    ingredients = {},
+    results = {
+        {type = "item", name = "ore-chromium", amount = 1}
+    }
+}
+
+RECIPE {
+    type = "recipe",
+    name = "fake-lead-ore",
+    category = "crafting",
+    enabled = false,
+    energy_required = 1,
+    ingredients = {},
+    results = {
+        {type = "item", name = "ore-lead", amount = 1}
+    }
+}
+
+RECIPE {
+    type = "recipe",
+    name = "fake-nickel-ore",
+    category = "crafting",
+    enabled = false,
+    energy_required = 1,
+    ingredients = {},
+    results = {
+        {type = "item", name = "ore-nickel", amount = 1}
+    }
+}
+
+RECIPE {
+    type = "recipe",
+    name = "fake-tin-ore",
+    category = "crafting",
+    enabled = false,
+    energy_required = 1,
+    ingredients = {},
+    results = {
+        {type = "item", name = "ore-tin", amount = 1}
+    }
+}
+
+RECIPE {
+    type = "recipe",
+    name = "fake-titanium-ore",
+    category = "crafting",
+    enabled = false,
+    energy_required = 1,
+    ingredients = {},
+    results = {
+        {type = "item", name = "ore-titanium", amount = 1}
+    }
+}
+
+RECIPE {
+    type = "recipe",
+    name = "fake-zinc-ore",
+    category = "crafting",
+    enabled = false,
+    energy_required = 1,
+    ingredients = {},
+    results = {
+        {type = "item", name = "ore-zinc", amount = 1}
+    }
+}
+
+RECIPE {
+    type = "recipe",
+    name = "fake-phosphate-ore",
+    category = "crafting",
+    enabled = false,
+    energy_required = 1,
+    ingredients = {},
+    results = {
+        {type = "item", name = "phosphate-rock", amount = 1}
+    }
+}
+
+RECIPE {
+    type = "recipe",
+    name = "fake-ree-ore",
+    category = "crafting",
+    enabled = false,
+    energy_required = 1,
+    ingredients = {},
+    results = {
+        {type = "item", name = "rare-earth-ore", amount = 1}
+    }
+}
+
+RECIPE {
+    type = "recipe",
+    name = "fake-stone-ore",
+    category = "crafting",
+    enabled = false,
+    energy_required = 1,
+    ingredients = {},
+    results = {
+        {type = "item", name = "stone", amount = 1}
+    }
+}
+
+RECIPE {
+    type = "recipe",
+    name = "fake-kerogen-ore",
+    category = "crafting",
+    enabled = false,
+    energy_required = 1,
+    ingredients = {},
+    results = {
+        {type = "item", name = "kerogen", amount = 1}
+    }
+}
