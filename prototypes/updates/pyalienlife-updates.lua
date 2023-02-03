@@ -40,6 +40,11 @@ RECIPE("automation-science-pack"):remove_ingredient("native-flora"):add_ingredie
 
 RECIPE("coal-fawogae"):set_fields{enabled = true}:remove_unlock("fawogae-mk01"):set_fields{category = "distilator"}
 
+RECIPE("botanical-nursery"):remove_ingredient("fluid-drill-mk01")
+
+RECIPE("moss-farm-mk01"):remove_ingredient("aluminium-plate")
+TECHNOLOGY("moss-mk01"):remove_prereq("botany-mk01")
+
 --PY SCI 1 TWEAKS
 
 --Titanium from yaedols
