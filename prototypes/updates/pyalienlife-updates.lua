@@ -45,6 +45,19 @@ RECIPE("botanical-nursery"):remove_ingredient("fluid-drill-mk01")
 RECIPE("moss-farm-mk01"):remove_ingredient("aluminium-plate")
 TECHNOLOGY("moss-mk01"):remove_prereq("botany-mk01")
 
+--cadaveric for copper
+RECIPE("cadaveric-to-copper"):remove_unlock("molecular-decohesion-mk03"):add_unlock("cadaveric-arum")
+
+RECIPE("cadaveric-arum-sample"):remove_ingredient("alien-sample-02"):remove_ingredient("cdna"):remove_ingredient("earth-tropical-tree-sample"):remove_ingredient("earth-flower-sample"):remove_ingredient("bio-sample")
+
+RECIPE("cadaveric-arum-codex"):remove_ingredient("electronic-circuit")
+
+TECHNOLOGY("cadaveric-arum"):remove_prereq("botany-mk02"):remove_pack("py-science-pack-1"):remove_pack("logistic-science-pack"):remove_pack("py-science-pack-2")
+
+RECIPE("stone-wool"):remove_unlock("zipir"):add_unlock("cadaveric-arum")
+
+RECIPE("cadaveric-arum-mk01"):remove_ingredient("hydrocyclone-mk01"):remove_ingredient("electronic-circuit"):remove_ingredient("plastic-bar"):remove_ingredient("intermetallics")
+
 --PY SCI 1 TWEAKS
 
 --Titanium from yaedols
