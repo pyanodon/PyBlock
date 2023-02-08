@@ -36,6 +36,7 @@ end
 
 require("prototypes/updates/pycoalprocessing-updates")
 require("prototypes/updates/pypetroleumhandling-updates")
+require("prototypes/updates/pyrawores-updates")
 require('prototypes/updates/pyalienlife-updates')
 
 --UNUSED
@@ -178,6 +179,7 @@ RECIPE {
     }
 }
 
+--[[
 RECIPE {
     type = "recipe",
     name = "fake-chrome-ore",
@@ -189,6 +191,7 @@ RECIPE {
         {type = "item", name = "ore-chromium", amount = 1}
     }
 }
+]]--
 
 RECIPE {
     type = "recipe",
