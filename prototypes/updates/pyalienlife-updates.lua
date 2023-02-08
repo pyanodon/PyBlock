@@ -113,9 +113,15 @@ TECHNOLOGY("tin-mk01"):remove_pack("py-science-pack-1")
 
 TECHNOLOGY("microbiology-mk01"):remove_pack("py-science-pack-1"):set_fields{prerequisites = {}}
 
-RECIPE("fish-farm-mk01"):remove_unlock("water-animals-mk01"):add_unlock("fish-mk01"):remove_ingredient("intermetallics")
+RECIPE("fish-farm-mk01"):set_fields{ingredients = {}}:add_ingredient({type = "item", name = "steel-plate", amount = 25}):add_ingredient({type = "item", name = "glass", amount = 20}):add_ingredient("seaweed-crop-mk01")
 
-RECIPE("fish-to-tin"):remove_unlock("molecular-decohesion-mk02"):add_unlock("molecular-decohesion")
+RECIPE("fish-to-tin"):remove_unlock("molecular-decohesion-mk02"):add_unlock("fish-mk01")
+
+RECIPE("fish-food-01"):remove_unlock("fish-mk01"):add_unlock("fish-mk02")
+
+RECIPE("breed-fish-egg-1"):remove_ingredient("phytoplankton"):add_ingredient({type = "item", name = "seaweed", amount = 2})
+
+RECIPE("breed-fish-1"):remove_ingredient("biomass"):remove_ingredient("oxygen")
 
 --Lead
 

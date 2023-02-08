@@ -88,6 +88,8 @@ TECHNOLOGY("arqad"):remove_pack("logistic-science-pack")
 
 table.insert(RECIPE("soot-separation").results, {type = "item", name = "ore-nickel", amount = 1, probability = 0.1})
 
+RECIPE("soot-separation"):set_fields{unlock_results = true}
+
 --fake recipes to make ores from nothing to fake tech tree with pypp
 
 RECIPE {
@@ -150,6 +152,7 @@ RECIPE {
     }
 }
 
+--[[
 RECIPE {
     type = "recipe",
     name = "fake-aluminium-ore",
@@ -161,6 +164,7 @@ RECIPE {
         {type = "item", name = "ore-aluminium", amount = 1}
     }
 }
+]]--
 
 RECIPE {
     type = "recipe",
@@ -210,6 +214,7 @@ RECIPE {
     }
 }
 
+--[[
 RECIPE {
     type = "recipe",
     name = "fake-tin-ore",
@@ -221,6 +226,7 @@ RECIPE {
         {type = "item", name = "ore-tin", amount = 1}
     }
 }
+]]--
 
 RECIPE {
     type = "recipe",
