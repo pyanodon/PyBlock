@@ -38,6 +38,7 @@ require("prototypes/updates/pycoalprocessing-updates")
 require("prototypes/updates/pypetroleumhandling-updates")
 require("prototypes/updates/pyrawores-updates")
 require('prototypes/updates/pyalienlife-updates')
+require("prototypes/updates/pyalternativeenergy-updates")
 
 --UNUSED
 --require('prototypes/updates/ddc-coal-updates')
@@ -93,6 +94,7 @@ RECIPE("soot-separation"):set_fields{unlock_results = true}
 
 --fake recipes to make ores from nothing to fake tech tree with pypp
 
+--[[
 RECIPE {
     type = "recipe",
     name = "fake-anti-ore",
@@ -104,6 +106,7 @@ RECIPE {
         {type = "item", name = "antimonium-ore", amount = 1}
     }
 }
+]]--
 
 RECIPE {
     type = "recipe",
