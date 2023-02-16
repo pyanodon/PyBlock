@@ -65,11 +65,13 @@ TECHNOLOGY("yaedols"):remove_pack("logistic-science-pack"):remove_pack("py-scien
 
 TECHNOLOGY("phytomining"):remove_pack("py-science-pack-1"):remove_pack("logistic-science-pack"):remove_pack("py-science-pack-2"):set_fields{prerequisites = {}}
 
-TECHNOLOGY("compost"):remove_pack("py-science-pack-1")
+TECHNOLOGY("compost"):remove_pack("py-science-pack-1"):set_fields{prerequisites = {}}
 
-TECHNOLOGY("composting"):remove_pack("py-science-pack-1")
+RECIPE("compost-plant-mk01"):remove_ingredient("duralumin")
 
-RECIPE("yaedols-culture-mk01"):remove_ingredient("intermetallics"):remove_ingredient("titanium-plate")
+RECIPE("yaedols-culture-mk01"):remove_ingredient("intermetallics"):remove_ingredient("titanium-plate"):remove_ingredient("storage-tank"):remove_ingredient("duralumin")
+
+RECIPE("biofactory-mk01"):remove_unlock("plastics"):add_unlock("yaedols")
 
 RECIPE("fungal-substrate"):remove_unlock("mycology-mk02"):add_unlock("yaedols")
 
@@ -100,9 +102,12 @@ RECIPE("fe-biomass-extraction"):remove_unlock("phytomining"):add_unlock("phytomi
 RECIPE("cadaveric-pb"):remove_unlock("phytomining"):add_unlock("phytomining-mk02")
 RECIPE("s-biomass-extraction"):remove_unlock("phytomining"):add_unlock("phytomining-mk02")
 
-RECIPE("ti-biomass-extraction"):remove_ingredient("steam"):add_ingredient({type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 250}):remove_unlock("phytomining-mk02"):add_unlock("phytomining")
+--TITANIUM
+RECIPE("ti-biomass-extraction"):remove_ingredient("steam"):add_ingredient({type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 250}):remove_unlock("phytomining-mk02"):add_unlock("yaedols")
 
-RECIPE("yaedols-ti"):remove_unlock("phytomining-mk02"):add_unlock("phytomining")
+RECIPE("yaedols-ti"):remove_unlock("phytomining-mk02"):add_unlock("yaedols")
+
+RECIPE("flavonoids")
 
 --Tin from fish
 TECHNOLOGY("molecular-decohesion"):set_fields{prerequisites = {}}:remove_pack("py-science-pack-1")
@@ -145,3 +150,46 @@ RECIPE("zn-biomass-extraction"):remove_ingredient("steam"):add_ingredient({type 
 
 --Vrauks
 RECIPE("vrauks"):remove_ingredient("native-flora")
+
+--moly ore
+TECHNOLOGY("molecular-decohesion-mk02"):remove_pack("py-science-pack-2")
+
+RECIPE("yaedols-to-copper"):remove_unlock("molecular-decohesion-mk02"):add_unlock("molecular-decohesion-mk03")
+
+RECIPE("navens-to-tin"):remove_unlock("molecular-decohesion-mk02"):add_unlock("molecular-decohesion-mk03")
+
+RECIPE("bhoddos-to-ti"):remove_unlock("molecular-decohesion-mk02"):add_unlock("molecular-decohesion-mk03")
+
+RECIPE("grod-to-zinc"):remove_unlock("molecular-decohesion-mk02"):add_unlock("molecular-decohesion-mk03")
+
+RECIPE("yotoi-leaves-to-chromium"):remove_unlock("molecular-decohesion-mk02"):add_unlock("molecular-decohesion-mk03")
+
+RECIPE("yotoi-seed-to-chromium"):remove_unlock("molecular-decohesion-mk02"):add_unlock("molecular-decohesion-mk03")
+
+--NIOBIUM
+--TECHNOLOGY("phytomining-mk02"):remove_pack("chemical-science-pack"):remove_pack("py-science-pack-2"):remove_prereq("botany-mk02")
+RECIPE("nb-biomass-extraction"):remove_unlock("phytomining-mk02"):add_unlock("guar")
+RECIPE("guar-nb"):remove_unlock("phytomining-mk02"):add_unlock("guar")
+
+--RARE EARTH ORE
+TECHNOLOGY("phadai"):remove_pack("py-science-pack-2"):remove_pack("chemical-science-pack"):remove_pack("py-science-pack-3"):set_fields{prerequisites = {}}
+
+RECIPE("phadai-enclosure-mk01"):remove_ingredient("nbti-alloy"):replace_ingredient("super-steel", "steel-plate"):replace_ingredient("advanced-circuit", "electronic-circuit")
+
+RECIPE("phadai"):replace_ingredient("alien-sample-03", "alien-sample01"):remove_ingredient("cytostatics"):remove_ingredient("fetal-serum"):remove_ingredient("artificial-blood")
+
+RECIPE("phadai-codex"):replace_ingredient("advanced-circuit", "electronic-circuit")
+
+RECIPE("earth-tiger-sample"):replace_ingredient("py-science-pack-2", "py-science-pack-1")
+
+TECHNOLOGY("ethanol"):remove_pack("py-science-pack-2")
+
+TECHNOLOGY("sugar"):remove_pack("py-science-pack-2")
+
+RECIPE("phadai-food-01"):remove_ingredient("rennea-seeds"):remove_ingredient("casein")
+
+RECIPE("phadai-pup-1"):remove_ingredient("bedding")
+
+RECIPE("phadai-pup-2"):remove_ingredient("bedding")
+
+RECIPE("carapace-to-re"):remove_unlock("molecular-decohesion-mk03"):add_unlock("rare-earth-tech")
