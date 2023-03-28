@@ -26,13 +26,14 @@ local ores = {
 	--ree = true,
 	--stone = true,
 }
-
+--[[
 for r, resource in pairs(data.raw.resource) do
 	if ores[resource.name] ~= true then
 		resource.autoplace = nil
 	end
 	--log(resource.name)
 end
+]]--
 
 require("prototypes/updates/pycoalprocessing-updates")
 require("prototypes/updates/pypetroleumhandling-updates")

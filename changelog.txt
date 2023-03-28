@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: 2023-3-28
+  Changes:
+    - Completely reworked pyblock for py 2.0. new map gen and ore gen methods based on updated mods
+    - Now requires pyalternativeenergy
+---------------------------------------------------------------------------------------------------
 Version: 0.2.2
 Date: 2020-01-08
   Changes:
