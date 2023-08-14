@@ -58,7 +58,51 @@ RECIPE("stone-wool"):remove_unlock("zipir"):add_unlock("cadaveric-arum")
 
 RECIPE("cadaveric-arum-mk01"):remove_ingredient("hydrocyclone-mk01"):remove_ingredient("electronic-circuit"):remove_ingredient("plastic-bar"):remove_ingredient("intermetallics")
 
+--move foodless auogs to auog zero
+
+RECIPE("auog-paddock-mk01"):remove_unlock("auog"):add_unlock("auog-mk00"):remove_ingredient("intermetallics")
+
+RECIPE("auog"):remove_unlock("auog"):add_unlock("auog-mk00"):remove_ingredient("cdna")
+
+RECIPE("earth-bear-sample"):remove_unlock("auog"):add_unlock("auog-mk00")
+
+RECIPE("auog-codex"):remove_unlock("auog"):add_unlock("auog-mk00")
+
+RECIPE("auog-pup-breeding-1"):remove_unlock("auog"):add_unlock("auog-mk00")
+
+RECIPE("auog-maturing-1"):remove_unlock("auog"):add_unlock("auog-mk00")
+
+RECIPE("auog-pooping-1"):remove_unlock("auog"):add_unlock("auog-mk00")
+
+--move fawogae with manure up
+
+TECHNOLOGY("fawogae-mk01"):remove_pack("py-science-pack-1"):set_fields{prerequisites = {}}
+
+RECIPE("fawogae with manure"):remove_unlock("fawogae-mk02"):add_unlock("fawogae-mk01")
+
+RECIPE("fungal-substrate"):remove_unlock("mycology-mk02"):add_unlock("fawogae-mk01")
+
+--moss to kerogen
+
+RECIPE {
+    type = "recipe",
+    name = "mossogen",
+    category = "hpf",
+    enabled = false,
+    energy_required = 1,
+    ingredients = {
+        {type = "item", name = "moss", amount = 3}
+    },
+    results = {
+        {type = "item", name = "kerogen", amount = 1}
+    }
+}:add_unlock("moss-mk01")
+
 --PY SCI 1 TWEAKS
+
+RECIPE("biofactory-mk01"):remove_unlock("plastics"):add_unlock("biotech-mk01")
+
+RECIPE("flavonoids"):remove_unlock("yaedols"):add_unlock("biotech-mk01")
 
 --Titanium from yaedols
 TECHNOLOGY("yaedols"):remove_pack("logistic-science-pack"):remove_pack("py-science-pack-1"):remove_prereq("mycology-mk02")
@@ -70,8 +114,6 @@ TECHNOLOGY("compost"):remove_pack("py-science-pack-1"):set_fields{prerequisites 
 RECIPE("compost-plant-mk01"):remove_ingredient("duralumin")
 
 RECIPE("yaedols-culture-mk01"):remove_ingredient("intermetallics"):remove_ingredient("titanium-plate"):remove_ingredient("storage-tank"):remove_ingredient("duralumin")
-
-RECIPE("biofactory-mk01"):remove_unlock("plastics"):add_unlock("yaedols")
 
 RECIPE("fungal-substrate"):remove_unlock("mycology-mk02"):add_unlock("yaedols")
 
@@ -106,8 +148,6 @@ RECIPE("s-biomass-extraction"):remove_unlock("phytomining"):add_unlock("phytomin
 RECIPE("ti-biomass-extraction"):remove_ingredient("steam"):add_ingredient({type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 250}):remove_unlock("phytomining-mk02"):add_unlock("yaedols")
 
 RECIPE("yaedols-ti"):remove_unlock("phytomining-mk02"):add_unlock("yaedols")
-
-RECIPE("flavonoids")
 
 --Tin from fish
 TECHNOLOGY("molecular-decohesion"):set_fields{prerequisites = {}}:remove_pack("py-science-pack-1")

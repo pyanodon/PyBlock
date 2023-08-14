@@ -8,32 +8,34 @@ for _, controller in DATA:pairs('god-controller') do
 end
 ]]--
 
-local ores = {
-	--antimonium = true,
-	--borax = true,
-	--["copper-ore"] = true,
-	--["molybdenum-ore"] = true,
-	--niobium = true,
-	--["ore-aluminium"] = true,
-	--["ore-bioreserve"] = true,
-	--["ore-chromium"] = true,
-	--["ore-lead"] = true,
-	--["ore-nickel"] = true,
-	--["ore-tin"] = true,
-	--["ore-titanium"] = true,
-	--["ore-zinc"] = true,
-	--["phosphate-rock"] = true,
-	--ree = true,
-	--stone = true,
-}
 --[[
+local ores = {
+	antimonium = true,
+	borax = true,
+	["copper-ore"] = true,
+	["molybdenum-ore"] = true,
+	niobium = true,
+	["ore-aluminium"] = true,
+	["ore-bioreserve"] = true,
+	["ore-chromium"] = true,
+	["ore-lead"] = true,
+	["ore-nickel"] = true,
+	["ore-tin"] = true,
+	["ore-titanium"] = true,
+	["ore-zinc"] = true,
+	["phosphate-rock"] = true,
+	ree = true,
+	stone = true,
+}
+]]--
+
 for r, resource in pairs(data.raw.resource) do
-	if ores[resource.name] ~= true then
-		resource.autoplace = nil
-	end
+	resource.autoplace = nil
+	--if ores[resource.name] ~= true then
+		--resource.autoplace = nil
+	--end
 	--log(resource.name)
 end
-]]--
 
 require("prototypes/updates/pycoalprocessing-updates")
 require("prototypes/updates/pypetroleumhandling-updates")
