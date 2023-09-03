@@ -1,6 +1,12 @@
 RECIPE("solid-separator"):remove_unlock("ash-separation"):set_fields{enabled = true}:remove_ingredient("steel-plate")
 
-RECIPE("ash-separation"):remove_unlock("ash-separation"):set_fields{enabled = true}
+RECIPE("ash-separation"):remove_unlock("ash-separation"):set_fields{enabled = true}:set_fields{results = {
+	{type = "item", name = "coal-dust", amount = 1, probability = 0.5},
+	{type = "item", name = "iron-oxide", amount = 1, probability = 0.05},
+	{type = "item", name = "soot", amount = 1, probability = 1}
+}}
+
+
 
 data.raw.recipe["landfill"].ingredients = { { type = "item", name = "stone", amount = 1 },
 	{ type = "item", name = "sand", amount = 2 } }
