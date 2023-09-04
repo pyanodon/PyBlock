@@ -51,7 +51,7 @@ require("prototypes/updates/pyalternativeenergy-updates")
 --require("prototypes/updates/pyfusionenergy-updates")
 --require('prototypes/updates/pyhightech-updates')
 
---[[
+
 --adjust landfill cost for landfill painter
 if mods['LandfillPainting'] then
 	local recipe_list = {
@@ -65,8 +65,6 @@ if mods['LandfillPainting'] then
 			RECIPE(recipe):remove_ingredient('stone'):add_ingredient({type = "item", name = 'stone', amount = 1}):add_ingredient({type = "item", name ='sand', amount = 2})
 		end
 end
-]]--
-
 
 data.raw.technology["excavation-1"].unit.ingredients = {{"automation-science-pack", 1},{"py-science-pack-1",1}}
 data.raw.technology["excavation-1"].prerequisites = nil

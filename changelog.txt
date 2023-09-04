@@ -4,6 +4,7 @@ Date: 2023-9-4
   Changes:
     - Removed free kerogen
     - Fixed that resource autoplace was disabled on all ores from testing
+    - Reactive landfill painting adjustments
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.1
 Date: 2023-9-3
