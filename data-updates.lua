@@ -29,15 +29,16 @@ local ores = {
 }
 ]]--
 
---[[
-for r, resource in pairs(data.raw.resource) do
-	resource.autoplace = nil
-	--if ores[resource.name] ~= true then
-		--resource.autoplace = nil
-	--end
-	--log(resource.name)
+if settings.startup["pypp-dev-mode"].value == true and settings.startup["pypp-create-cache"].value == true then
+	for r, resource in pairs(data.raw.resource) do
+		resource.autoplace = nil
+		--if ores[resource.name] ~= true then
+			--resource.autoplace = nil
+		--end
+		--log(resource.name)
+	end
 end
-]]--
+
 
 require("prototypes/updates/pycoalprocessing-updates")
 require("prototypes/updates/pypetroleumhandling-updates")
