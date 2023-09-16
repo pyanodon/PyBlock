@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.3
+Date: 2023-9-15
+  Changes:
+    - Fixed that molten salt and therefore powerplants were all locked behind logi science due to salt mining not being avalible
+    - Moved saline to salt evap to evaporation tech
+    - Added thumbnail. credit: Burr on discord
+  Cadavaric arum:
+      - Removed botanical nursury from recipe
+      - Reduced steel plate requirement from 60 to 5
+      - added pipes(4), iron plates(5), and soil(20) as ingredients
+---------------------------------------------------------------------------------------------------
 Version: 2.0.2
 Date: 2023-9-4
   Changes:
@@ -33,7 +44,7 @@ Date: 2020-12-15
 Version: 0.2.0
 Date: 2020-12-14
   Changes:
-    - Added an extra steam connection to the silo extractor mk00. it now has one on each side.
+    - Added an extra steam connection to the soil extractor mk00. it now has one on each side.
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.9
 Date: 2020-12-13

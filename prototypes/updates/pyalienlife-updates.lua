@@ -56,7 +56,7 @@ TECHNOLOGY("cadaveric-arum"):remove_prereq("botany-mk02"):remove_pack("py-scienc
 
 RECIPE("stone-wool"):remove_unlock("zipir"):add_unlock("cadaveric-arum")
 
-RECIPE("cadaveric-arum-mk01"):remove_ingredient("hydrocyclone-mk01"):remove_ingredient("electronic-circuit"):remove_ingredient("plastic-bar"):remove_ingredient("intermetallics")
+RECIPE("cadaveric-arum-mk01"):remove_ingredient("hydrocyclone-mk01"):remove_ingredient("electronic-circuit"):remove_ingredient("plastic-bar"):remove_ingredient("intermetallics"):remove_ingredient("steel-plate"):add_ingredient({name = "steel-plate", amount = 5}):add_ingredient({name = "pipe", amount = 4}):add_ingredient({name = "soil", amount = 20}):remove_ingredient("botanical-nursery")
 
 --move foodless auogs to auog zero
 
