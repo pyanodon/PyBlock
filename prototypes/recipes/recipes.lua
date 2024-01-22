@@ -1,4 +1,3 @@
---local fun = require("functions/functions")
 
 RECIPE {
 	type = "recipe",

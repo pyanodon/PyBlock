@@ -23,7 +23,6 @@ require("prototypes/buildings/geothermal-plant-mk01")
 --require('prototypes/buildings/bqt')
 --require('prototypes/buildings/burner-soil-extractor')
 
---require("functions/functions")
 require("prototypes/itemgroups")
 require("prototypes/recipe-categories")
 --require("prototypes/technology")
