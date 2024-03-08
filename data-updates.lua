@@ -157,3 +157,7 @@ RECIPE {
     }
 }
 ]]--
+
+if register_cache_file ~= nil then
+    register_cache_file({"pyblock"}, "__PyBlock__/cached-configs/pyblock.lua")
+end
