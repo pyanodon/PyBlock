@@ -159,5 +159,5 @@ RECIPE {
 ]]--
 
 if register_cache_file ~= nil then
-    register_cache_file({"pyblock"}, "__PyBlock__/cached-configs/pyblock.lua")
+    register_cache_file({'pycoalprocessing', 'pyfusionenergy', 'pyindustry', 'pyrawores', 'pypetroleumhandling', 'pyalienlife', 'pyhightech', 'pyalternativeenergy', 'PyBlock'}, "__PyBlock__/cached-configs/PyBlock+pyalienlife+pyalternativeenergy+pycoalprocessing+pyfusionenergy+pyhightech+pyindustry+pypetroleumhandling+pyrawores.lua")
 end
