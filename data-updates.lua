@@ -158,6 +158,15 @@ RECIPE {
 }
 ]]--
 
+-- make sure very early techs are not effected by the tech cost multiplier
+local function prevent_cost_multiplier(name)
+    local tech = data.raw.technology[name]
+    if not tech then return end
+    tech.ignore_tech_cost_multiplier = true
+end
+
+prevent_cost_multiplier('seaweed-mk01')
+
 if register_cache_file ~= nil then
     register_cache_file({'pycoalprocessing', 'pyfusionenergy', 'pyindustry', 'pyrawores', 'pypetroleumhandling', 'pyalienlife', 'pyhightech', 'pyalternativeenergy', 'PyBlock'}, "__PyBlock__/cached-configs/PyBlock+pyalienlife+pyalternativeenergy+pycoalprocessing+pyfusionenergy+pyhightech+pyindustry+pypetroleumhandling+pyrawores")
 end
