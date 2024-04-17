@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.4
+Date: 2024-4-17
+  Changes:
+    - Made sure very early techs are not effected by tech cost multiplier in line with Py Post Processing changes.
+---------------------------------------------------------------------------------------------------
 Version: 2.0.3
 Date: 2023-9-15
   Changes:
