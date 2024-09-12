@@ -53,38 +53,48 @@ require("prototypes/updates/pyalternativeenergy-updates")
 
 --add driftwood for closer logs and saps
 local noise = require("noise")
-
-local driftwood = table.deepcopy(data.raw.tree["seaweed"])
-driftwood.name = "driftwood"
-driftwood.icon = "__PyBlock__/graphics/icons/driftwood.png"
-driftwood.minable = {
-mining_time = driftwood.minable.mining_time,
-results =
-    {
-        {type = "item", name = "log", amount = 1},
-        {type = "item", name = "saps", amount = 1, probability = 0.1}
-    }
-}
-driftwood.pictures = {
-    {
+data:extend({
+  {
+    type = "tree",
+    name = "driftwood",
+    icon = "__PyBlock__/graphics/icons/driftwood.png",
+    icon_size = 64,
+    flags = {"placeable-neutral", "not-on-map"},
+    minable = {
+      mining_time = 0.4,
+      results = {
+        { type = "item", name = "log", amount = 1 },
+        { type = "item", name = "saps", amount = 1, probability = 0.1 }
+      }
+    },
+    max_health = 20,
+    subgroup = "creatures",
+    order = "b-a",
+    collision_box = {{-0.75, -0.75}, {0.75, 0.75}},
+    selection_box = {{-0.5, -0.3}, {0.5, 0.3}},
+    collision_mask = {"ground-tile", "colliding-with-tiles-only"},
+    pictures = {
+      {
         filename = '__PyBlock__/graphics/icons/driftwood.png',
         priority = 'extra-high',
         blend_mode = 'additive',
         width = 64,
         height = 64,
         scale = 0.5
-    }
-}
-driftwood.autoplace = {
-    probabiltity_expression = noise.define_noise_function( function(x, y, tile, map)
+      }
+  },
+    autoplace = {
+      probability_expression = noise.define_noise_function( function(x, y, tile, map)
         -- equiv to: limited_water < 0 and 0 or 1
         local limited_water = noise.clamp(noise.var("wlc_elevation_minimum"), 0, 1)
         -- 0.4% or 1.4%
         return 0.002 + (0.01 * limited_water)
-    end),
-    order = 'driftwood'
-}
-data:extend({driftwood})
+      end),
+    order = "driftwood"
+    }
+  }
+})
+
 
 --adjust landfill cost for landfill painter
 if mods['LandfillPainting'] then
