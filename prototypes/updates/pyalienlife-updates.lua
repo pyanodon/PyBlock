@@ -36,7 +36,7 @@ data.raw["assembling-machine"]["spore-collector-mk01"].energy_source = {type = "
 
 RECIPE("seaweed-crop-mk01"):remove_ingredient("tin-plate"):remove_ingredient("limestone")
 
-RECIPE("automation-science-pack"):remove_ingredient("native-flora"):add_ingredient({name = "seaweed", amount = 1})
+-- RECIPE("automation-science-pack"):remove_ingredient("native-flora"):add_ingredient({name = "seaweed", amount = 1})
 
 RECIPE("coal-fawogae"):set_fields{enabled = true}:remove_unlock("fawogae-mk01"):set_fields{category = "distilator"}
 
@@ -164,9 +164,9 @@ RECIPE("fish-to-tin"):remove_unlock("molecular-decohesion-mk02"):add_unlock("fis
 
 RECIPE("fish-food-01"):remove_unlock("fish-mk01"):add_unlock("fish-mk02")
 
-RECIPE("breed-fish-egg-1"):remove_ingredient("phytoplankton"):add_ingredient({type = "item", name = "seaweed", amount = 2})
+-- RECIPE("breed-fish-egg-1"):remove_ingredient("phytoplankton"):add_ingredient({type = "item", name = "seaweed", amount = 2})
 
-RECIPE("breed-fish-1"):remove_ingredient("biomass"):remove_ingredient("oxygen")
+-- RECIPE("breed-fish-1"):remove_ingredient("biomass"):remove_ingredient("oxygen")
 
 --Lead
 
