@@ -8,6 +8,9 @@ Date: ????
   Bugfixes:
     - Re-added the geothermal plant animation
     - Changed geothermal plant to a fixed recipe
+  Alienlife:
+    - Added a moss bootstrapping recipe
+    - Added a sap bootstrapping recipe
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.3
 Date: 2023-9-15

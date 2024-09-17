@@ -60,7 +60,6 @@ RECIPE {
 	},
 	results = {
 		{ type = "item", name = "bio-sample", amount = 10 },
-
 	},
 	main_product = "bio-sample",
 	icon = "__pyalienlifegraphics__/graphics/icons/biosample.png",
@@ -84,6 +83,42 @@ RECIPE {
 	},
 	main_product = "geothermal-water",
 }:add_unlock('geothermal-power-mk01')
+
+-- bootstrapping stone to moss
+RECIPE {
+  type = "recipe",
+  name = "moss-cultivation",
+  category = "nursery",
+  enabled = true,
+  energy_required = 160,
+  ingredients = {
+    { type = "item", name = "stone", amount = 24 },
+    { type = "fluid", name = "water", amount = 1200 },
+  },
+  results = {
+    { type = "item", name = "stone", amount_min = 6, amount_max = 12, probability = 0.5 },
+    { type = "fluid", name = "dirty-water-light", amount = 1200 },
+    { type = "item", name = "moss", amount = 1, probability = 0.08 },
+  },
+  main_product = "moss"
+}
+
+-- bootstrapping wood to sap
+RECIPE {
+  type = "recipe",
+  name = "sap-cultivation",
+  category = "fwf",
+  enabled = true,
+  energy_required = 160,
+  ingredients = {
+    { type = "item", name = "wood-seedling", amount = 12 },
+    { type = "fluid", name = "water", amount = 800 },
+  },
+  results = {
+    { type = "item", name = "saps", amount = 1, probability = 0.1 }
+  },
+  main_product = "saps"
+}
 
 --UNUSED
 
