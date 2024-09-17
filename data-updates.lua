@@ -55,7 +55,7 @@ require("prototypes/updates/pyalternativeenergy-updates")
 local noise = require("noise")
 data:extend({
   {
-    type = "tree",
+    type = "fish",
     name = "driftwood",
     icon = "__PyBlock__/graphics/icons/driftwood.png",
     icon_size = 64,
@@ -63,8 +63,7 @@ data:extend({
     minable = {
       mining_time = 0.4,
       results = {
-        { type = "item", name = "log", amount = 1 },
-        { type = "item", name = "saps", amount = 1, probability = 0.1 }
+        { type = "item", name = "log", amount = 1 }
       }
     },
     max_health = 20,
@@ -95,6 +94,24 @@ data:extend({
   }
 })
 
+-- create "floating" seaweed that moves
+local seaweed = table.deepcopy(data.raw.tree.seaweed)
+data.raw.tree.seaweed = nil
+seaweed.type = "fish"
+seaweed.autoplace = {
+  probability_expression = noise.define_noise_function( function(x, y, tile, map)
+    -- equiv to: limited_water < 0 and 0 or 1
+    local limited_water = noise.clamp(noise.var("wlc_elevation_minimum"), 0, 1)
+    -- 0.2% or 1.2%
+    return 0.001 + (0.01 * limited_water)
+  end)
+}
+data.raw.fish.seaweed = seaweed
+
+-- allow all inserters to fish
+for i, inserter in pairs(data.raw.inserter) do
+  inserter.use_easter_egg = true
+end
 
 --adjust landfill cost for landfill painter
 if mods['LandfillPainting'] then
