@@ -5,6 +5,9 @@ Date: ????
     - Added driftwood for simpler and easier collection of wood and sap
     - Make seaweed float around
     - Allow inserters to pick up seaweed and fish
+  Bugfixes:
+    - Re-added the geothermal plant animation
+    - Changed geothermal plant to a fixed recipe
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.3
 Date: 2023-9-15
