@@ -2,7 +2,7 @@
 Version: 2.0.4
 Date: ????
   Changes:
-    - Added driftwood for simpler and easier collection of wood and sap
+    - Added driftwood for simpler and easier collection of wood
     - Make seaweed float around
     - Allow inserters to pick up seaweed and fish
     - Changed geothermal plant to a fixed recipe
