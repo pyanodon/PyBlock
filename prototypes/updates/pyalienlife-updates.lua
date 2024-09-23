@@ -1,3 +1,5 @@
+-- fawogae for iron
+-- reduce cost of buildings
 RECIPE("spore-collector-mk01"):remove_ingredient("gasifier"):remove_ingredient("electronic-circuit"):remove_ingredient("steel-plate"):remove_ingredient("intermetallics"):set_fields{enabled = true}:remove_unlock("mycology-mk01")
 
 RECIPE("fawogae-plantation-mk01"):remove_ingredient("electronic-circuit"):remove_ingredient("tinned-cable"):remove_ingredient("intermetallics"):set_fields{enabled = true}:remove_unlock("fawogae-mk01"):remove_ingredient("wood"):add_ingredient({type= "item", name = "wood", amount = 10}):remove_ingredient("iron-plate"):add_ingredient({type= "item", name = "iron-plate", amount = 5}):remove_ingredient("pipe"):add_ingredient({type= "item", name = "pipe", amount = 2}):add_ingredient({type= "item", name = "copper-plate", amount = 4})
@@ -6,6 +8,7 @@ RECIPE("fawogae-spore"):set_fields{enabled = true}:remove_unlock("fawogae-mk01")
 
 RECIPE("fawogae-1"):set_fields{enabled = true}:remove_unlock("fawogae-mk01")
 
+-- early fawogae recipe
 RECIPE {
     type = "recipe",
     name = "fawogae-start",
@@ -30,15 +33,18 @@ RECIPE("earth-shroom-sample"):remove_unlock("fawogae-mk01"):add_unlock("navens")
 
 RECIPE("fawogae-to-iron"):set_fields{enabled = true}:remove_unlock("molecular-decohesion")
 
-data.raw["assembling-machine"]["fawogae-plantation-mk01"].energy_source = {type = "void"}
+-- reduce power cost
+data.raw["assembling-machine"]["fawogae-plantation-mk01"].energy_usage = "330kW"
 
-data.raw["assembling-machine"]["spore-collector-mk01"].energy_source = {type = "void"}
+data.raw["assembling-machine"]["spore-collector-mk01"].energy_usage = "72kW"
+
+-- fawogae to raw coal
+RECIPE("coal-fawogae"):set_fields{enabled = true}:remove_unlock("fawogae-mk01"):set_fields{category = "distilator"}
+
 
 RECIPE("seaweed-crop-mk01"):remove_ingredient("tin-plate"):remove_ingredient("limestone")
 
 RECIPE("automation-science-pack"):remove_ingredient("native-flora"):add_ingredient({name = "seaweed", amount = 1})
-
-RECIPE("coal-fawogae"):set_fields{enabled = true}:remove_unlock("fawogae-mk01"):set_fields{category = "distilator"}
 
 RECIPE("botanical-nursery"):remove_ingredient("fluid-drill-mk01")
 
