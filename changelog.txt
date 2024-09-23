@@ -8,6 +8,7 @@ Date: ????
     - Changed geothermal plant to a fixed recipe
   Bugfixes:
     - Re-added the geothermal plant animation
+    - Allow steampowered washers to be placed adjacent
   Alienlife:
     - Added a moss bootstrapping recipe
     - Added a sap bootstrapping recipe
