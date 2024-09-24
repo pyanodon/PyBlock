@@ -41,13 +41,18 @@ data.raw["assembling-machine"]["spore-collector-mk01"].energy_usage = "12kW"
 -- fawogae to raw coal
 RECIPE("coal-fawogae"):set_fields{enabled = true}:remove_unlock("fawogae-mk01"):set_fields{category = "distilator"}:remove_ingredient("fawogae"):add_ingredient({name = "fawogae", amount = 3}):set_fields{results = {{type = "item", name = "raw-coal", amount = 5}}}
 
+-- seaweed
 RECIPE("seaweed-crop-mk01"):remove_ingredient("tin-plate"):remove_ingredient("limestone")
 
-RECIPE("automation-science-pack"):remove_ingredient("native-flora"):add_ingredient({name = "seaweed", amount = 1})
+-- auto science
+-- RECIPE("automation-science-pack"):remove_ingredient("native-flora"):add_ingredient({name = "seaweed", amount = 1})
 
+-- botanical nursery
 RECIPE("botanical-nursery"):remove_ingredient("fluid-drill-mk01")
 
+-- moss farm
 RECIPE("moss-farm-mk01"):remove_ingredient("aluminium-plate")
+
 TECHNOLOGY("moss-mk01"):remove_prereq("botany-mk01")
 
 --cadaveric for copper
@@ -64,7 +69,6 @@ RECIPE("stone-wool"):remove_unlock("zipir"):add_unlock("cadaveric-arum")
 RECIPE("cadaveric-arum-mk01"):remove_ingredient("hydrocyclone-mk01"):remove_ingredient("electronic-circuit"):remove_ingredient("plastic-bar"):remove_ingredient("intermetallics"):remove_ingredient("steel-plate"):add_ingredient({name = "steel-plate", amount = 5}):add_ingredient({name = "pipe", amount = 4}):add_ingredient({name = "soil", amount = 20}):remove_ingredient("botanical-nursery")
 
 --move foodless auogs to auog zero
-
 RECIPE("auog-paddock-mk01"):remove_unlock("auog"):add_unlock("auog-mk00"):remove_ingredient("intermetallics")
 
 RECIPE("auog"):remove_unlock("auog"):add_unlock("auog-mk00"):remove_ingredient("cdna")
@@ -80,7 +84,6 @@ RECIPE("auog-maturing-1"):remove_unlock("auog"):add_unlock("auog-mk00")
 RECIPE("auog-pooping-1"):remove_unlock("auog"):add_unlock("auog-mk00")
 
 --move fawogae with manure up
-
 TECHNOLOGY("fawogae-mk01"):remove_pack("py-science-pack-1"):set_fields{prerequisites = {}}
 
 RECIPE("fawogae with manure"):remove_unlock("fawogae-mk02"):add_unlock("fawogae-mk01")
@@ -88,7 +91,6 @@ RECIPE("fawogae with manure"):remove_unlock("fawogae-mk02"):add_unlock("fawogae-
 RECIPE("fungal-substrate"):remove_unlock("mycology-mk02"):add_unlock("fawogae-mk01")
 
 --moss to kerogen
-
 RECIPE {
     type = "recipe",
     name = "mossogen",
@@ -104,7 +106,6 @@ RECIPE {
 }:add_unlock("moss-mk01")
 
 --PY SCI 1 TWEAKS
-
 RECIPE("biofactory-mk01"):remove_unlock("plastics"):add_unlock("biotech-mk01")
 
 RECIPE("flavonoids"):remove_unlock("yaedols"):add_unlock("biotech-mk01")
