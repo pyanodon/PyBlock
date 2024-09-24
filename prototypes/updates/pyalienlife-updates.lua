@@ -34,12 +34,12 @@ RECIPE("earth-shroom-sample"):remove_unlock("fawogae-mk01"):add_unlock("navens")
 RECIPE("fawogae-to-iron"):set_fields{enabled = true}:remove_unlock("molecular-decohesion")
 
 -- reduce power cost
-data.raw["assembling-machine"]["fawogae-plantation-mk01"].energy_usage = "60kW"
+data.raw["assembling-machine"]["fawogae-plantation-mk01"].energy_usage = "30kW"
 
 data.raw["assembling-machine"]["spore-collector-mk01"].energy_usage = "12kW"
 
 -- fawogae to raw coal
-RECIPE("coal-fawogae"):set_fields{enabled = true}:remove_unlock("fawogae-mk01"):set_fields{category = "distilator"}
+RECIPE("coal-fawogae"):set_fields{enabled = true}:remove_unlock("fawogae-mk01"):set_fields{category = "distilator"}:remove_ingredient("fawogae"):add_ingredient({name = "fawogae", amount = 3}):set_fields{results = {{type = "item", name = "raw-coal", amount = 5}}}
 
 RECIPE("seaweed-crop-mk01"):remove_ingredient("tin-plate"):remove_ingredient("limestone")
 
