@@ -9,6 +9,10 @@ Date: ????
   Bugfixes:
     - Re-added the geothermal plant animation
     - Allow steampowered washers to be placed adjacent
+  Native Flora:
+    - Added cultivator, a copy of the collector with the express purpose of creating native flora from nothing
+    - Added recipe to get the first native flora
+    - Added recipe to duplicate native flora
   Alienlife:
     - Added a moss bootstrapping recipe
     - Added a sap bootstrapping recipe

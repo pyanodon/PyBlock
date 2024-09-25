@@ -1,4 +1,5 @@
 
+-- soil to stone
 RECIPE {
 	type = "recipe",
 	name = "soil-to-stone",
@@ -22,6 +23,7 @@ RECIPE {
 	order = "c"
 }
 
+-- early quartz
 RECIPE {
 	type = "recipe",
 	name = "sand-quartz-sifting",
@@ -43,7 +45,7 @@ RECIPE {
 	energy_required = 4
 }:add_unlock("glass")
 
-
+-- biosample recipe
 RECIPE {
 	type = "recipe",
 	name = "biosample",
@@ -68,6 +70,7 @@ RECIPE {
 	order = "a"
 }:add_unlock('xenobiology')
 
+-- geothermal water fake mining recipe
 RECIPE {
 	type = "recipe",
 	name = "geothermal-water",
@@ -89,6 +92,7 @@ RECIPE {
   type = "recipe",
   name = "moss-cultivation",
   category = "nursery",
+	subgroup = "py-alienlife-moss",
   enabled = true,
   energy_required = 160,
   ingredients = {
@@ -108,6 +112,7 @@ RECIPE {
   type = "recipe",
   name = "sap-cultivation",
   category = "fwf",
+	subgroup = "py-alienlife-sap",
   enabled = true,
   energy_required = 160,
   ingredients = {
@@ -118,6 +123,44 @@ RECIPE {
     { type = "item", name = "saps", amount = 1, probability = 0.1 }
   },
   main_product = "saps"
+}
+
+-- native flora recipes
+RECIPE {
+  type = "recipe",
+  name = "synthesize-flora",
+  category = "cultivation",
+	subgroup = "py-alienlife-genetics",
+  enabled = true,
+  energy_required = 12,
+  ingredients = {
+    { type = "item", name = "soil", amount = 8 },
+    { type = "fluid", name = "water", amount = 500 },
+    { type = "item", name = "seaweed", amount = 4 },
+    { type = "item", name = "fawogae", amount = 4 }
+  },
+  results = {
+    { type = "item", name = "native-flora", amount = 1, probability = 0.02 }
+  },
+}
+
+RECIPE {
+  type = "recipe",
+  name = "flora-cultivation",
+  category = "cultivation",
+	subgroup = "py-alienlife-genetics",
+  enabled = true,
+  energy_required = 15,
+  ingredients = {
+    { type = "item", name = "soil", amount = 20 },
+    { type = "fluid", name = "water", amount = 1800 },
+    { type = "item", name = "native-flora", amount = 5 },
+  },
+  results = {
+    { type = "item", name = "native-flora", amount = 20 },
+    { type = "item", name = "soil", amount_min = 0, amount_max = 8, probability = 0.5 }
+  },
+  main_product = "native-flora"
 }
 
 --UNUSED
