@@ -1,3 +1,5 @@
+-- unused, any changes here will not affect the game
+
 --update the ddc recipes to give flat iron oxide output amounts. no probability crap
 --[[
 data.raw.recipe['coal-gas-from-wood'].results = {
