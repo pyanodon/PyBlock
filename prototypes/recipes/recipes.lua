@@ -120,7 +120,8 @@ RECIPE {
     { type = "fluid", name = "water", amount = 800 },
   },
   results = {
-    { type = "item", name = "saps", amount = 1, probability = 0.1 }
+    { type = "item", name = "saps", amount = 1, probability = 0.1 },
+    { type = "item", name = "log", amount = 8 }
   },
   main_product = "saps"
 }
