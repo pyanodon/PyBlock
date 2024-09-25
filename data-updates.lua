@@ -159,17 +159,17 @@ RECIPE("soot-separation"):set_fields{unlock_results = true}
 
 --fake recipes to make ores from nothing to fake tech tree with pypp
 
-RECIPE {
-    type = "recipe",
-    name = "fake-bioreserve-ore",
-    category = "crafting",
-    enabled = false,
-    energy_required = 1,
-    ingredients = {},
-    results = {
-        {type = "item", name = "native-flora", amount = 1}
-    }
-}
+-- RECIPE {
+--     type = "recipe",
+--     name = "fake-bioreserve-ore",
+--     category = "crafting",
+--     enabled = false,
+--     energy_required = 1,
+--     ingredients = {},
+--     results = {
+--         {type = "item", name = "native-flora", amount = 1}
+--     }
+-- }
 
 --[[
 RECIPE {

@@ -7,6 +7,7 @@ Date: ????
     - Allow inserters to pick up seaweed and fish
     - Changed geothermal plant to a fixed recipe
     - Removed biosample from seaweed recipe
+    - Removed fake bioreserve recipe
   Bugfixes:
     - Re-added the geothermal plant animation
     - Allow steampowered washers to be placed adjacent
