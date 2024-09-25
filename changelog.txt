@@ -17,6 +17,7 @@ Date: ????
   Alienlife:
     - Added a moss bootstrapping recipe
     - Added a sap bootstrapping recipe
+    - Reintroduce native flora to vrauk bootstrapping recipe
   Fish:
     - Added phytoplankton back to fish egg mk01 recipe
     - Added biomass back to fish mk01 recipe
