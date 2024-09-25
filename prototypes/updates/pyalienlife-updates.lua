@@ -27,9 +27,9 @@ RECIPE {
 --remove unused materials from fawogae mk01
 RECIPE("fawogae-sample"):remove_unlock("fawogae-mk01")--:add_unlock("navens")
 
-RECIPE("fawogae-codex"):remove_unlock("fawogae-mk01"):add_unlock("navens")
+-- RECIPE("fawogae-codex"):remove_unlock("fawogae-mk01"):add_unlock("navens")
 
-RECIPE("earth-shroom-sample"):remove_unlock("fawogae-mk01"):add_unlock("navens")
+-- RECIPE("earth-shroom-sample"):remove_unlock("fawogae-mk01"):add_unlock("navens")
 
 RECIPE("fawogae-to-iron"):set_fields{enabled = true}:remove_unlock("molecular-decohesion")
 
@@ -119,7 +119,7 @@ TECHNOLOGY("compost"):remove_pack("py-science-pack-1"):set_fields{prerequisites 
 
 RECIPE("compost-plant-mk01"):remove_ingredient("duralumin")
 
-RECIPE("yaedols-culture-mk01"):remove_ingredient("intermetallics"):remove_ingredient("titanium-plate"):remove_ingredient("storage-tank"):remove_ingredient("duralumin")
+RECIPE("yaedols-culture-mk01"):remove_ingredient("intermetallics"):remove_ingredient("titanium-plate")
 
 RECIPE("fungal-substrate"):remove_unlock("mycology-mk02"):add_unlock("yaedols")
 
@@ -127,7 +127,7 @@ RECIPE("yaedols-codex"):remove_ingredient("red-wire")
 
 RECIPE("smelter-mk01"):remove_ingredient("titanium-plate")
 
-RECIPE("yaedols-sample"):set_fields{ingredients = {}}
+RECIPE("yaedols-sample"):remove_ingredient("cdna"):remove_ingredient("alien-sample01"):remove_ingredient("bio-sample"):remove_ingredient("moss-gen")
 
 RECIPE("yaedols-1"):remove_ingredient("fertilizer")
 
