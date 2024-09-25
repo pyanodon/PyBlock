@@ -17,6 +17,7 @@ Date: ????
     - Added biomass back to fish mk01 recipe
   Fawogae:
     - Re-added power cost to fawogae plantation and spore collector, but it is less than half of the normal amount
+    - Increased productivity of fawogae -> coal from 2 to 3 -> 3 to 5
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.3
 Date: 2023-9-15
