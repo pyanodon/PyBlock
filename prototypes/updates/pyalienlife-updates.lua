@@ -170,6 +170,17 @@ RECIPE("fish-to-tin"):remove_unlock("molecular-decohesion-mk02"):add_unlock("fis
 
 RECIPE("fish-food-01"):remove_unlock("fish-mk01"):add_unlock("fish-mk02")
 
+local breed_fish = table.deepcopy(data.raw["recipe"]["breed-fish-1"])
+breed_fish.name = "breed-fish-simple"
+breed_fish.energy_required = 270
+breed_fish.results = {
+  {type = "item", name = "fish", amount = 10},
+  {type = "fluid", name = "waste-water", amount = 100}
+}
+data.raw.recipe["breed-fish-simple"] = breed_fish
+
+RECIPE("breed-fish-simple"):remove_ingredient("small-lamp")
+
 -- RECIPE("breed-fish-egg-1"):remove_ingredient("phytoplankton"):add_ingredient({type = "item", name = "seaweed", amount = 2})
 
 -- RECIPE("breed-fish-1"):remove_ingredient("biomass"):remove_ingredient("oxygen")

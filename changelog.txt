@@ -19,6 +19,7 @@ Date: ????
   Fish:
     - Added phytoplankton back to fish egg mk01 recipe
     - Added biomass back to fish mk01 recipe
+    - Added fish breeding recipe that does not take lamps, but is slower
   Fawogae:
     - Re-added power cost to fawogae plantation and spore collector, but it is less than half of the normal amount
     - Increased productivity of fawogae -> coal from 2 to 3 -> 3 to 5
