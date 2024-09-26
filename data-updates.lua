@@ -157,6 +157,14 @@ table.insert(RECIPE("soot-separation").results, {type = "item", name = "ore-nick
 
 RECIPE("soot-separation"):set_fields{unlock_results = true}
 
+RECIPE("titanium-plate-1"):remove_unlock("alloys-mk01"):add_unlock("yaedols")
+
+RECIPE("earth-generic-sample"):remove_unlock("xenobiology"):add_unlock("biotech-mk01")
+
+RECIPE("data-array"):remove_ingredient("titanium-plate")
+
+TECHNOLOGY("xenobiology"):set_fields{prerequisites = {"yaedols"}}
+
 --fake recipes to make ores from nothing to fake tech tree with pypp
 
 RECIPE {

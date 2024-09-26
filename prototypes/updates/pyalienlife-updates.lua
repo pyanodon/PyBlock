@@ -181,6 +181,8 @@ data.raw.recipe["breed-fish-simple"] = breed_fish
 
 RECIPE("breed-fish-simple"):remove_ingredient("small-lamp")
 
+RECIPE("tin-plate-1"):add_unlock("fish-mk01")
+
 -- RECIPE("breed-fish-egg-1"):remove_ingredient("phytoplankton"):add_ingredient({type = "item", name = "seaweed", amount = 2})
 
 -- RECIPE("breed-fish-1"):remove_ingredient("biomass"):remove_ingredient("oxygen")

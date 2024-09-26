@@ -91,7 +91,7 @@ RECIPE {
 RECIPE {
   type = "recipe",
   name = "moss-cultivation",
-  category = "nursery",
+  category = "washer",
 	subgroup = "py-alienlife-moss",
   enabled = true,
   energy_required = 160,
@@ -105,7 +105,7 @@ RECIPE {
     { type = "item", name = "moss", amount = 1, probability = 0.08 },
   },
   main_product = "moss"
-}
+}:add_unlock("moss-mk01")
 
 -- bootstrapping wood to sap
 RECIPE {
@@ -124,7 +124,7 @@ RECIPE {
     { type = "item", name = "log", amount = 8 }
   },
   main_product = "saps"
-}
+}:add_unlock("wood-processing")
 
 -- native flora recipes
 RECIPE {
@@ -289,29 +289,6 @@ RECIPE {
 }
 ]]--
 --nickel from clay
-
---[[
-RECIPE {
-	type = "recipe",
-	name = "nickel-alum-from-clay",
-	category = "hpf",
-	enabled = true,
-	energy_required = 6,
-	ingredients =
-	{
-		{ type = "item", name = "clay", amount = 6 },
-		{ type = "fluid", name = "sulfuric-acid", amount = 20 }
-	},
-	results =
-	{
-		{ type = "item", name = "ore-nickel", amount = 2 },
-		{ type = "item", name = "ore-aluminium", amount = 1, probability = 0.2 }
-	},
-	main_product = "ore-nickel",
-	subgroup = "py-quenching-ores",
-	order = "tailings-e"
-}
-]]
 
 --new fluids for ree from ash
 --[[

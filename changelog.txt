@@ -11,6 +11,7 @@ Date: ????
   Bugfixes:
     - Re-added the geothermal plant animation
     - Allow steampowered washers to be placed adjacent
+    - Shift xenobiology and biotech recipes around for continuity and ordering
   Native Flora:
     - Added cultivator, a copy of the collector with the express purpose of creating native flora from nothing
     - Added recipe to get the first native flora
