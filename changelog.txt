@@ -10,6 +10,7 @@ Date: 2024-10-03
     - Removed fake bioreserve recipe
     - Rebuilt tech tree from the ground up
     - Moved phytomining 2 to Py2
+    - Re-added native flora to automation science pack
   Bugfixes:
     - Re-added the geothermal plant animation
     - Allow steampowered washers to be placed adjacent
