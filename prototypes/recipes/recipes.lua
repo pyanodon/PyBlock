@@ -82,7 +82,6 @@ RECIPE {
 	},
 	results = {
 		{ type = "fluid", name = "geothermal-water", amount = 100, temperature = 3000},
-
 	},
 	main_product = "geothermal-water",
 }:add_unlock('geothermal-power-mk01')
@@ -137,7 +136,6 @@ RECIPE {
   ingredients = {
     { type = "item", name = "soil", amount = 8 },
     { type = "fluid", name = "water", amount = 500 },
-    { type = "item", name = "seaweed", amount = 4 },
     { type = "item", name = "fawogae", amount = 4 }
   },
   results = {
@@ -165,45 +163,6 @@ RECIPE {
 }
 
 --UNUSED
-
---[[
---handcraft seaweed to raw coal
-RECIPE {
-	type = "recipe",
-	name = "handpressed-coal",
-	ingredients =
-	{
-		{ type = "item", name = "seaweed", amount = 5 },
-	},
-	results =
-	{
-		{ type = "item", name = "raw-coal", amount = 1 }
-	},
-	main_product = "raw-coal",
-	category = "handcrafting"
-}
-
-RECIPE {
-	type = "recipe",
-	name = "coal-gas-from-seaweed",
-	category = "distilator",
-	enabled = true,
-	energy_required = 3,
-	ingredients = {
-		{ type = "item", name = "seaweed", amount = 10 }
-	},
-	results = {
-		{ type = "fluid", name = "coal-gas", amount = 5 },
-		{ type = "fluid", name = "tar", amount = 5 },
-		{ type = "item", name = "raw-coal", amount = 4 }
-	},
-	main_product = "coal-gas",
-	icon = "__PyBlock__/graphics/icons/coalgas-from-seaweed.png",
-	icon_size = 64,
-	subgroup = "py-syngas",
-	order = "f"
-}
-]]--
 
 --new recipes
 
@@ -233,61 +192,6 @@ RECIPE {
 }
 ]]--
 
---tit ore from rich dust in classifer
---[[
-RECIPE {
-	type = "recipe",
-	name = "titanium-from-rich-dust",
-	category = "classifier",
-	enabled = false,
-	ingredients =
-	{
-		{ type = "item", name = "rich-dust", amount = 10 }
-	},
-	results =
-	{
-		{ type = "item", name = "ore-titanium", amount = 2 }
-	},
-	main_product = "ore-titanium",
-	icon = "__pyraworesgraphics__/graphics/icons/ores/ore-titanium.png",
-	icon_size = 32,
-	subgroup = "py-items-class",
-	order = "b"
-}
-]]--
-
---[[
-RECIPE {
-	type = "recipe",
-	name = "log-to-moss",
-	category = "wpu",
-	energy_required = 10,
-	ingredients =
-	{
-		{ name = "log", amount = 4 }
-	},
-	results = {
-		{ name = "moss", amount = 1 }
-	}
-}
-]]--
---[[
-RECIPE {
-	type = "recipe",
-	name = "sap-from-seamoss",
-	category = "distilator",
-	energy_required = 10,
-	ingredients =
-	{
-		{ name = "seaweed", amount = 10 },
-		{ name = "moss", amount = 8 },
-		{ name = "wood", amount = 5 }
-	},
-	results = {
-		{ name = "saps", amount = 2 }
-	}
-}
-]]--
 --nickel from clay
 
 --new fluids for ree from ash
@@ -401,69 +305,3 @@ RECIPE {
 	category = "electrolyzer"
 }:add_unlock('rare-earth-tech')
 ]]
-
---[[
-RECIPE {
-	type = "recipe",
-	name = "log0",
-	category = "fwf-basic",
-	enabled = true,
-	energy_required = 60,
-	ingredients = {},
-	results = {
-		{ type = "item", name = "log", amount = 3 }
-	},
-	icon = "__pycoalprocessinggraphics__/graphics/icons/log.png",
-	icon_size = 32,
-	subgroup = "py-alienlife-plants",
-	order = "a1"
-}
-]]--
-
---RECIPE('log1'):subgroup_order("py-alienlife-plants", "a2")
-
---modify pyro recipes to give byproduct ores
---copper gives moly
---fun.results_replacer(data.raw.recipe["grade-1-copper-crush"], "stone", "molybdenum-ore")
---fun.results_replacer(data.raw.recipe["copper-rejects-recrush"], "gravel", "molybdenum-ore")
---[[
-RECIPE {
-	type = 'recipe',
-	name = 'fish-start-01',
-	category = 'fish-farm',
-	enabled = true,
-	energy_required = 100,
-	ingredients = {
-		{ type = 'item', name = "seaweed", amount = 5 },
-		{ type = 'fluid', name = 'water', amount = 50 },
-	},
-	results = {
-		{ type = 'item', name = 'fish', amount = 3 },
-	},
-	main_product = "fish",
-	subgroup = 'py-alienlife-fish',
-	order = 'a',
-}
-]]
---[[
-RECIPE {
-	type = 'recipe',
-	name = 'fish-start-02',
-	category = 'fish-farm',
-	enabled = true,
-	energy_required = 85,
-	ingredients = {
-		{ type = 'item', name = "seaweed", amount = 5 },
-		{ type = 'fluid', name = 'water-saline', amount = 50 },
-	},
-	results = {
-		{ type = 'item', name = 'fish', amount = 5 },
-		{ type = 'fluid', name = 'waste-water', amount = 50 },
-	},
-	main_product = "fish",
-	subgroup = 'py-alienlife-fish',
-	order = 'a',
-}
-]]
-
---RECIPE('blood-to-zinc'):remove_unlock('molecular-decohesion-mk02'):add_unlock('molecular-decohesion')

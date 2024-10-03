@@ -8,34 +8,80 @@ for _, controller in DATA:pairs('god-controller') do
 end
 ]]--
 
---[[
-local ores = {
-	antimonium = true,
-	borax = true,
-	["copper-ore"] = true,
-	["molybdenum-ore"] = true,
-	niobium = true,
-	["ore-aluminium"] = true,
-	["ore-bioreserve"] = true,
-	["ore-chromium"] = true,
-	["ore-lead"] = true,
-	["ore-nickel"] = true,
-	["ore-tin"] = true,
-	["ore-titanium"] = true,
-	["ore-zinc"] = true,
-	["phosphate-rock"] = true,
-	ree = true,
-	stone = true,
+
+local ores_from_nothing = {
+  ["iron-ore"] = true,
+  ["copper-ore"] = true,
+  ["coal"] = true,
+  ["stone"] = true,
+  -- ["uranium-ore"] = true,
+  -- ["crude-oil"] = true,
+  ["borax"] = true,
+  ["niobium"] = true,
+  ["molybdenum-ore"] = true,
+  ["volcanic-pipe"] = true,
+  -- ["regolites"] = true,
+  ["ore-quartz"] = true,
+  ["raw-coal"] = true,
+  ["ore-aluminium"] = true,
+  ["ore-chromium"] = true,
+  ["ore-lead"] = true,
+  ["ore-nickel"] = true,
+  ["ore-tin"] = true,
+  ["ore-titanium"] = true,
+  ["ore-zinc"] = true,
+  ["quartz-rock"] = true,
+  ["chromium-rock"] = true,
+  ["aluminium-rock"] = true,
+  ["copper-rock"] = true,
+  ["salt-rock"] = true,
+  ["iron-rock"] = true,
+  ["coal-rock"] = true,
+  ["lead-rock"] = true,
+  ["nexelit-rock"] = true,
+  ["nickel-rock"] = true,
+  ["tin-rock"] = true,
+  ["titanium-rock"] = true,
+  ["uranium-rock"] = true,
+  ["zinc-rock"] = true,
+  -- ["phosphate-rock-02"] = true,
+  -- ["phosphate-rock"] = true,
+  -- ["rare-earth-bolide"] = true,
+  -- ["oil-sand"] = true,
+  -- ["tar-patch"] = true,
+  -- ["oil-mk01"] = true,
+  -- ["oil-mk02"] = true,
+  -- ["oil-mk03"] = true,
+  -- ["oil-mk04"] = true,
+  -- ["sulfur-patch"] = true,
+  -- ["natural-gas-mk01"] = true,
+  -- ["natural-gas-mk02"] = true,
+  -- ["natural-gas-mk03"] = true,
+  -- ["natural-gas-mk04"] = true,
+  -- ["bitumen-seep"] = true,
+  ["ralesia-flowers"] = true,
+  ["rennea-flowers"] = true,
+  ["tuuphra-tuber"] = true,
+  ["grod-flower"] = true,
+  ["yotoi-tree"] = true,
+  ["yotoi-tree-fruit"] = true,
+  ["ore-bioreserve"] = true,
+  ["ore-nexelit"] = true,
+  ["geothermal-crack"] = true,
+  ["ree"] = true,
+  ["antimonium"] = true,
+  ["mova"] = true,
+  ["kicalk-tree"] = true,
+  ["arum"] = true,
 }
-]]--
+
 
 if settings.startup["pypp-dev-mode"].value == true and settings.startup["pypp-create-cache"].value == true then
 	for r, resource in pairs(data.raw.resource) do
-		resource.autoplace = nil
-		--if ores[resource.name] ~= true then
-			--resource.autoplace = nil
-		--end
-		--log(resource.name)
+		-- resource.autoplace = nil
+		if ores_from_nothing[resource.name] == true then
+			resource.autoplace = nil
+		end
 	end
 end
 
@@ -130,68 +176,28 @@ end
 data.raw.technology["excavation-1"].unit.ingredients = {{"automation-science-pack", 1},{"py-science-pack-1",1}}
 data.raw.technology["excavation-1"].prerequisites = nil
 
---TECHNOLOGY("guar"):remove_pack("logistic-science-pack")
+table.insert(RECIPE("soot-separation").results, {type = "item", name = "ore-nickel", amount = 1, probability = 0.1})
+
+RECIPE("soot-separation"):set_fields{unlock_results = true, ignore_in_pypp = false}
 
 RECIPE("mining-antimony"):remove_unlock("excavation-2"):add_unlock("excavation-1")
 
 RECIPE("ground-borer"):remove_ingredient("intermetallics")
 
-RECIPE("guar-gum-plantation"):remove_ingredient("intermetallics")
-
 RECIPE("mining-borax"):replace_ingredient("drilling-fluid-1", "lubricant")
 
-data.raw.technology["mega-farm"].unit.ingredients = {{"automation-science-pack", 1},{"py-science-pack-1",1}}
-TECHNOLOGY("mega-farm"):set_fields{prerequisites = {}}
+-- data.raw.technology["mega-farm"].unit.ingredients = {{"automation-science-pack", 1},{"py-science-pack-1",1}}
+-- TECHNOLOGY("mega-farm"):set_fields{prerequisites = {}}
 
-RECIPE("mega-farm"):set_fields{ingredients = {}}:add_ingredient({"concrete", 200}):add_ingredient({"treated-wood", 50})
+-- RECIPE("mega-farm"):set_fields{ingredients = {}}:add_ingredient({"concrete", 200}):add_ingredient({"treated-wood", 50})
 
-RECIPE("replicator-bioreserve"):set_fields{ingredients = {}}
+-- RECIPE("replicator-bioreserve"):set_fields{ingredients = {}}
 
-data.raw.technology["mega-farm-bioreserve"].unit.ingredients = {{"automation-science-pack", 1},{"py-science-pack-1",1}}
-
-RECIPE("arqad-hive-mk01"):remove_ingredient("intermetallics")
-
-TECHNOLOGY("arqad"):remove_pack("logistic-science-pack")
-
-table.insert(RECIPE("soot-separation").results, {type = "item", name = "ore-nickel", amount = 1, probability = 0.1})
-
-RECIPE("soot-separation"):set_fields{unlock_results = true}
-
-RECIPE("titanium-plate-1"):remove_unlock("alloys-mk01"):add_unlock("yaedols")
+-- data.raw.technology["mega-farm-bioreserve"].unit.ingredients = {{"automation-science-pack", 1},{"py-science-pack-1",1}}
 
 RECIPE("earth-generic-sample"):remove_unlock("xenobiology"):add_unlock("biotech-mk01")
 
 RECIPE("data-array"):remove_ingredient("titanium-plate")
-
-TECHNOLOGY("xenobiology"):set_fields{prerequisites = {"yaedols"}}
-
---fake recipes to make ores from nothing to fake tech tree with pypp
-
-RECIPE {
-    type = "recipe",
-    name = "fake-bioreserve-ore",
-    category = "crafting",
-    enabled = false,
-    energy_required = 1,
-    ingredients = {},
-    results = {
-        {type = "item", name = "native-flora", amount = 1}
-    }
-}
-
---[[
-RECIPE {
-    type = "recipe",
-    name = "fake-kerogen-ore",
-    category = "crafting",
-    enabled = false,
-    energy_required = 1,
-    ingredients = {},
-    results = {
-        {type = "item", name = "kerogen", amount = 1}
-    }
-}
-]]--
 
 if register_cache_file ~= nil then
     register_cache_file({'pycoalprocessing', 'pyfusionenergy', 'pyindustry', 'pyrawores', 'pypetroleumhandling', 'pyalienlife', 'pyhightech', 'pyalternativeenergy', 'PyBlock'}, "__PyBlock__/cached-configs/PyBlock+pyalienlife+pyalternativeenergy+pycoalprocessing+pyfusionenergy+pyhightech+pyindustry+pypetroleumhandling+pyrawores")
