@@ -27,9 +27,9 @@ RECIPE {
 --remove unused materials from fawogae mk01
 RECIPE("fawogae-sample"):remove_unlock("fawogae-mk01")--:add_unlock("navens")
 
--- RECIPE("fawogae-codex"):remove_unlock("fawogae-mk01"):add_unlock("navens")
+RECIPE("fawogae-codex"):remove_unlock("fawogae-mk01"):add_unlock("yaedols-mk01")
 
--- RECIPE("earth-shroom-sample"):remove_unlock("fawogae-mk01"):add_unlock("navens")
+RECIPE("earth-shroom-sample"):remove_unlock("fawogae-mk01"):add_unlock("yaedols-mk01")
 
 RECIPE("fawogae-to-iron"):set_fields{enabled = true}:remove_unlock("molecular-decohesion")
 
@@ -43,9 +43,6 @@ RECIPE("coal-fawogae"):set_fields{enabled = true}:remove_unlock("fawogae-mk01"):
 
 -- seaweed
 RECIPE("seaweed-crop-mk01"):remove_ingredient("tin-plate"):remove_ingredient("limestone")
-
--- auto science
--- RECIPE("automation-science-pack"):remove_ingredient("native-flora"):add_ingredient({name = "seaweed", amount = 1})
 
 -- botanical nursery
 RECIPE("botanical-nursery"):remove_ingredient("fluid-drill-mk01")
@@ -105,6 +102,53 @@ RECIPE {
     }
 }:add_unlock("moss-mk01")
 
+--Tin from fish
+TECHNOLOGY("molecular-decohesion"):set_fields{prerequisites = {}}:remove_pack("py-science-pack-1")
+
+TECHNOLOGY("fish-mk01"):remove_pack("py-science-pack-1"):set_fields{prerequisites = {}}
+
+TECHNOLOGY("tin-mk01"):remove_pack("py-science-pack-1")
+
+TECHNOLOGY("microbiology-mk01"):remove_pack("py-science-pack-1"):set_fields{prerequisites = {}}
+
+RECIPE("fish-farm-mk01"):set_fields{ingredients = {}}:add_ingredient({type = "item", name = "steel-plate", amount = 25}):add_ingredient({type = "item", name = "glass", amount = 20}):add_ingredient("seaweed-crop-mk01")
+
+RECIPE("fish-to-tin"):remove_unlock("molecular-decohesion-mk02"):add_unlock("mining-with-fluid"):set_fields{ignore_in_pypp = false}
+
+RECIPE("fish-food-01"):remove_unlock("fish-mk01"):add_unlock("fish-mk02")
+
+RECIPE("saline-water"):remove_unlock("vacuum-tube-electronics"):add_unlock("fish-mk01")
+
+RECIPE("breed-fish-1"):remove_ingredient("biomass"):remove_ingredient("oxygen"):set_fields{results = {{type = "item", name = "fish", amount = 15}, {type = "fluid", name = "waste-water", amount = 100}}}
+
+local breed_fish = table.deepcopy(data.raw["recipe"]["breed-fish-1"])
+breed_fish.name = "breed-fish-simple"
+data.raw.recipe["breed-fish-simple"] = breed_fish
+
+RECIPE("breed-fish-simple"):remove_ingredient("small-lamp"):add_unlock("fish-mk01"):set_fields{energy_required = 270, results = {{type = "item", name = "fish", amount = 12}, {type = "fluid", name = "waste-water", amount = 100}}}
+
+RECIPE("plankton-farm"):remove_ingredient("storage-tank"):remove_ingredient("electronic-circuit")
+
+RECIPE("zogna-bacteria"):remove_unlock("microbiology-mk01"):add_unlock("biotech-mk01")
+
+--Lead
+
+RECIPE("soot-to-lead"):remove_unlock("oil-sands"):add_unlock("solder-mk01")
+
+--Zinc
+
+TECHNOLOGY("kicalk"):remove_pack("py-science-pack-1"):remove_pack("logistic-science-pack")
+
+RECIPE("kicalk-sample"):remove_ingredient("alien-sample01"):remove_ingredient("cdna")
+
+RECIPE("kicalk-codex"):remove_ingredient("electronic-circuit")
+
+RECIPE("kicalk-plantation-mk01"):remove_ingredient("intermetallics")
+
+RECIPE("kicalk-zn"):remove_unlock("phytomining-mk02"):add_unlock("phytomining")
+
+RECIPE("zn-biomass-extraction"):remove_ingredient("steam"):add_ingredient({type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 250}):remove_unlock("phytomining-mk02"):add_unlock("phytomining")
+
 --PY SCI 1 TWEAKS
 RECIPE("biofactory-mk01"):remove_unlock("plastics"):add_unlock("biotech-mk01")
 
@@ -121,7 +165,7 @@ RECIPE("compost-plant-mk01"):remove_ingredient("duralumin")
 
 RECIPE("yaedols-culture-mk01"):remove_ingredient("intermetallics"):remove_ingredient("titanium-plate")
 
-RECIPE("fungal-substrate"):remove_unlock("mycology-mk02"):add_unlock("yaedols")
+RECIPE("fungal-substrate"):remove_unlock("fawogae-mk01"):add_unlock("yaedols")
 
 RECIPE("yaedols-codex"):remove_ingredient("red-wire")
 
@@ -131,6 +175,13 @@ RECIPE("yaedols-sample"):remove_ingredient("cdna"):remove_ingredient("alien-samp
 
 RECIPE("yaedols-1"):remove_ingredient("fertilizer")
 
+RECIPE("ti-biomass-extraction"):remove_ingredient("steam"):add_ingredient({type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 250}):remove_unlock("phytomining-mk02"):add_unlock("yaedols")
+
+RECIPE("yaedols-ti"):remove_unlock("phytomining-mk02"):add_unlock("yaedols")
+
+RECIPE("titanium-plate-1"):remove_unlock("alloys-mk01"):add_unlock("yaedols")
+
+-- remove titanium and intermetallics from compost
 RECIPE("compost-plant-mk01"):remove_ingredient("intermetallics"):remove_ingredient("titanium-plate")
 
 RECIPE("flue-gas-1"):set_fields{category = 'gasifier'}
@@ -149,63 +200,6 @@ RECIPE("nacl-biomass-extraction"):remove_unlock("phytomining"):add_unlock("phyto
 RECIPE("fe-biomass-extraction"):remove_unlock("phytomining"):add_unlock("phytomining-mk02")
 RECIPE("cadaveric-pb"):remove_unlock("phytomining"):add_unlock("phytomining-mk02")
 RECIPE("s-biomass-extraction"):remove_unlock("phytomining"):add_unlock("phytomining-mk02")
-
---TITANIUM
-RECIPE("ti-biomass-extraction"):remove_ingredient("steam"):add_ingredient({type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 250}):remove_unlock("phytomining-mk02"):add_unlock("yaedols")
-
-RECIPE("yaedols-ti"):remove_unlock("phytomining-mk02"):add_unlock("yaedols")
-
---Tin from fish
-TECHNOLOGY("molecular-decohesion"):set_fields{prerequisites = {}}:remove_pack("py-science-pack-1")
-
-TECHNOLOGY("fish-mk01"):remove_pack("py-science-pack-1"):set_fields{prerequisites = {}}
-
-TECHNOLOGY("tin-mk01"):remove_pack("py-science-pack-1")
-
-TECHNOLOGY("microbiology-mk01"):remove_pack("py-science-pack-1"):set_fields{prerequisites = {}}
-
-RECIPE("fish-farm-mk01"):set_fields{ingredients = {}}:add_ingredient({type = "item", name = "steel-plate", amount = 25}):add_ingredient({type = "item", name = "glass", amount = 20}):add_ingredient("seaweed-crop-mk01")
-
-RECIPE("fish-to-tin"):remove_unlock("molecular-decohesion-mk02"):add_unlock("fish-mk01")
-
-RECIPE("fish-food-01"):remove_unlock("fish-mk01"):add_unlock("fish-mk02")
-
-local breed_fish = table.deepcopy(data.raw["recipe"]["breed-fish-1"])
-breed_fish.name = "breed-fish-simple"
-breed_fish.energy_required = 270
-breed_fish.results = {
-  {type = "item", name = "fish", amount = 10},
-  {type = "fluid", name = "waste-water", amount = 100}
-}
-data.raw.recipe["breed-fish-simple"] = breed_fish
-
-RECIPE("breed-fish-simple"):remove_ingredient("small-lamp")
-
-RECIPE("tin-plate-1"):add_unlock("fish-mk01")
-
--- RECIPE("breed-fish-egg-1"):remove_ingredient("phytoplankton"):add_ingredient({type = "item", name = "seaweed", amount = 2})
-
--- RECIPE("breed-fish-1"):remove_ingredient("biomass"):remove_ingredient("oxygen")
-
---Lead
-
-RECIPE("soot-to-lead"):remove_unlock("oil-sands"):add_unlock("tar-processing")
-
---Circuit Tweaks
-
---Zinc
-
-TECHNOLOGY("kicalk"):remove_pack("py-science-pack-1"):remove_pack("logistic-science-pack")
-
-RECIPE("kicalk-sample"):remove_ingredient("alien-sample01"):remove_ingredient("cdna")
-
-RECIPE("kicalk-codex"):remove_ingredient("electronic-circuit")
-
-RECIPE("kicalk-plantation-mk01"):remove_ingredient("intermetallics")
-
-RECIPE("kicalk-zn"):remove_unlock("phytomining-mk02"):add_unlock("phytomining")
-
-RECIPE("zn-biomass-extraction"):remove_ingredient("steam"):add_ingredient({type = 'fluid', name = 'steam', amount = 100, minimum_temperature = 250}):remove_unlock("phytomining-mk02"):add_unlock("phytomining")
 
 --Vrauks
 -- RECIPE("vrauks"):remove_ingredient("native-flora")
@@ -226,7 +220,7 @@ RECIPE("yotoi-leaves-to-chromium"):remove_unlock("molecular-decohesion-mk02"):ad
 RECIPE("yotoi-seed-to-chromium"):remove_unlock("molecular-decohesion-mk02"):add_unlock("molecular-decohesion-mk03")
 
 --NIOBIUM
---TECHNOLOGY("phytomining-mk02"):remove_pack("chemical-science-pack"):remove_pack("py-science-pack-2"):remove_prereq("botany-mk02")
+TECHNOLOGY("phytomining-mk02"):remove_pack("chemical-science-pack")
 RECIPE("nb-biomass-extraction"):remove_unlock("phytomining-mk02"):add_unlock("guar")
 RECIPE("guar-nb"):remove_unlock("phytomining-mk02"):add_unlock("guar")
 

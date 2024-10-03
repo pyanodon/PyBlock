@@ -8,6 +8,8 @@ Date: ????
     - Changed geothermal plant to a fixed recipe
     - Removed biosample from seaweed recipe
     - Removed fake bioreserve recipe
+    - Rebuilt tech tree from the ground up
+    - Moved phytomining 2 to Py2
   Bugfixes:
     - Re-added the geothermal plant animation
     - Allow steampowered washers to be placed adjacent
