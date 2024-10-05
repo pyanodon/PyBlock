@@ -69,7 +69,7 @@ ITEM {
 	icon = "__PyBlock__/graphics/icons/distilator-mk00.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "coal-processing",
+    subgroup = "py-cp-buildings-mk00",
     order = "k",
     place_result = "basic-ddc",
     stack_size = 20

@@ -20,7 +20,7 @@ ITEM {
     icon = "__PyBlock__/graphics/icons/washer-mk00.png",
     icon_size = 64,
     flags = {},
-    subgroup = "coal-processing",
+    subgroup = "py-cp-buildings-mk00",
     order = "z2",
     place_result = "burner-washer",
     stack_size = 10
