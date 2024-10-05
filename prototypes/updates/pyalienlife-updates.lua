@@ -27,9 +27,9 @@ RECIPE {
 --remove unused materials from fawogae mk01
 RECIPE("fawogae-sample"):remove_unlock("fawogae-mk01")--:add_unlock("navens")
 
-RECIPE("fawogae-codex"):remove_unlock("fawogae-mk01"):add_unlock("yaedols-mk01")
+RECIPE("fawogae-codex"):remove_unlock("fawogae-mk01"):add_unlock("yaedols")
 
-RECIPE("earth-shroom-sample"):remove_unlock("fawogae-mk01"):add_unlock("yaedols-mk01")
+RECIPE("earth-shroom-sample"):remove_unlock("fawogae-mk01"):add_unlock("yaedols")
 
 RECIPE("fawogae-to-iron"):set_fields{enabled = true}:remove_unlock("molecular-decohesion")
 
