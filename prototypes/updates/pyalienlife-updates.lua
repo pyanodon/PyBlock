@@ -103,7 +103,7 @@ RECIPE {
 }:add_unlock("moss-mk01")
 
 --Tin from fish
-TECHNOLOGY("molecular-decohesion"):set_fields{prerequisites = {}}:remove_pack("py-science-pack-1")
+TECHNOLOGY("molecular-decohesion"):set_fields{prerequisites = {}}
 
 TECHNOLOGY("fish-mk01"):remove_pack("py-science-pack-1"):set_fields{prerequisites = {}}
 

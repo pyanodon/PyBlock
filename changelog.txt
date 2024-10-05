@@ -1,10 +1,13 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.5
 Date: ????
+  Bugfixes:
+    - Added py1 back to the molecular decohesion technology
   Changes:
     - Moved automated screener mk0 to it's own crafting subcategory
     - Moved atomizer mk0 to the mk0 crafting category
     - Moved burner destructive distillation column to the mk0 crafting category
+    - Added recipes for kimberlite rock
   Locale:
     - Added localization to the cultivator
 ---------------------------------------------------------------------------------------------------
