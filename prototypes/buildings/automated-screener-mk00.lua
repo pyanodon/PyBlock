@@ -18,7 +18,7 @@ ITEM {
     icon = "__PyBlock__/graphics/icons/automated-screener-mk00.png",
 	icon_size = 64,
     flags = {},
-    subgroup = "py-fusion-buildings-mk01",
+    subgroup = "py-fusion-buildings-mk00",
     order = "d",
     place_result = "automated-screener-mk00",
     stack_size = 10
