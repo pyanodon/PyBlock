@@ -200,8 +200,7 @@ ENTITY {
               frame_count = 1,
               draw_as_shadow = true,
               shift = util.by_pixel(29.75, 22.25),
-              scale = 0.5,
-              draw_as_shadow = true
+              scale = 0.5
             }
           }
         }}),
