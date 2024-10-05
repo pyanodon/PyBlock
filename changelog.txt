@@ -5,6 +5,8 @@ Date: ????
     - Moved automated screener mk0 to it's own crafting subcategory
     - Moved atomizer mk0 to the mk0 crafting category
     - Moved burner destructive distillation column to the mk0 crafting category
+  Locale:
+    - Added localization to the cultivator
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.4
 Date: 2024-10-03
