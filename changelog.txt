@@ -3,6 +3,7 @@ Version: 2.0.5
 Date: ????
   Bugfixes:
     - Added py1 back to the molecular decohesion technology
+    - Fixed simple fish breeding recipe not having fish as allowed modules
   Changes:
     - Moved automated screener mk0 to it's own crafting subcategory
     - Moved atomizer mk0 to the mk0 crafting category

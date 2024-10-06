@@ -124,7 +124,16 @@ RECIPE("breed-fish-1"):remove_ingredient("biomass"):remove_ingredient("oxygen"):
 local breed_fish = table.deepcopy(data.raw["recipe"]["breed-fish-1"])
 breed_fish.name = "breed-fish-simple"
 data.raw.recipe["breed-fish-simple"] = breed_fish
-
+table.insert(data.raw.module["fish"].limitation, "breed-fish-simple")
+table.insert(data.raw.module["fish-mk02"].limitation, "breed-fish-simple")
+table.insert(data.raw.module["fish-mk03"].limitation, "breed-fish-simple")
+table.insert(data.raw.module["fish-mk04"].limitation, "breed-fish-simple")
+table.insert(data.raw.module["effectivity-module"].limitation_blacklist, "breed-fish-simple")
+table.insert(data.raw.module["effectivity-module-2"].limitation_blacklist, "breed-fish-simple")
+table.insert(data.raw.module["effectivity-module-3"].limitation_blacklist, "breed-fish-simple")
+table.insert(data.raw.module["speed-module"].limitation_blacklist, "breed-fish-simple")
+table.insert(data.raw.module["speed-module-2"].limitation_blacklist, "breed-fish-simple")
+table.insert(data.raw.module["speed-module-3"].limitation_blacklist, "breed-fish-simple")
 RECIPE("breed-fish-simple"):remove_ingredient("small-lamp"):add_unlock("fish-mk01"):set_fields{energy_required = 270, results = {{type = "item", name = "fish", amount = 12}, {type = "fluid", name = "waste-water", amount = 100}}}
 
 RECIPE("plankton-farm"):remove_ingredient("storage-tank"):remove_ingredient("electronic-circuit")
