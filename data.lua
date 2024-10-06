@@ -33,6 +33,7 @@ require("prototypes/recipe-categories")
 
 --Recipes
 require("prototypes/recipes/recipes")
+require("prototypes/recipes/recipes-kimberlite")
 --require("prototypes/recipes/recipes-uranium")
 
 --formula to calulate steam consumption
