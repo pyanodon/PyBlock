@@ -52,7 +52,7 @@ burner_washer.energy_source = {
   scale_fluid_usage = true
 }
 burner_washer.energy_usage = "100kW"
-burner_washer.next_upgrade = "washer-mk01"
+burner_washer.next_upgrade = "washer"
 data.raw["assembling-machine"]["burner-washer"] = burner_washer
 
 -- ENTITY {
