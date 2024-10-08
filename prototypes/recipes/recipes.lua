@@ -45,31 +45,6 @@ RECIPE {
 	energy_required = 4
 }:add_unlock("glass")
 
--- biosample recipe
--- RECIPE {
--- 	type = "recipe",
--- 	name = "biosample",
--- 	category = "biofactory",
--- 	enabled = false,
--- 	energy_required = 5,
--- 	ingredients = {
--- 		{ type = "item", name = "bio-container", amount = 10 },
--- 		{ type = "item", name = "seaweed", amount = 4 },
--- 		{ type = "item", name = "moss", amount = 2 },
--- 		--{ type = 'fluid', name = 'waste-water', amount = 20 },
--- 		--{ type = 'fluid', name = 'phytoplankton', amount = 25 },
--- 		--{ type = 'fluid', name = 'zogna-bacteria', amount = 5 },
--- 	},
--- 	results = {
--- 		{ type = "item", name = "bio-sample", amount = 10 },
--- 	},
--- 	main_product = "bio-sample",
--- 	icon = "__pyalienlifegraphics__/graphics/icons/biosample.png",
--- 	icon_size = 64,
--- 	subgroup = "py-alienlife-genetics",
--- 	order = "a"
--- }:add_unlock('xenobiology')
-
 -- geothermal water fake mining recipe
 RECIPE {
 	type = "recipe",
@@ -163,34 +138,6 @@ RECIPE {
 }
 
 --UNUSED
-
---new recipes
-
---[[
-RECIPE {
-	type = "recipe",
-	name = "coaldust-to-diamond",
-	category = "hpf",
-	enabled = false,
-	energy_required = 10,
-	ingredients =
-	{
-		{
-			type = "item", name = "coal-dust", amount = 20
-		}
-	},
-	results =
-	{
-		{
-			type = "item", name = "kimberlite-rock", amount = 1
-		}
-	},
-	icon = "__pyfusionenergygraphics__/graphics/icons/ores/kimberlite-rock.png",
-	icon_size = 32,
-	subgroup = "py-fusion-recipes",
-	order = "h"
-}
-]]--
 
 --nickel from clay
 

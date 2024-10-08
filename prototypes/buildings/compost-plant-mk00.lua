@@ -1,18 +1,16 @@
 RECIPE {
-    type = "recipe",
-    name = "compost-plant-mk00",
-    energy_required = 0.5,
-    enabled = true,
-    ingredients = {
-        {"chromium", 30},
-        {"boiler", 10},
-        {"steel-plate", 50},
-        {"electronic-circuit", 10},
-        {"iron-gear-wheel", 50},
-    },
-    results = {
-        {"compost-plant-mk00", 1}
-    }
+  type = "recipe",
+  name = "compost-plant-mk00",
+  energy_required = 0.5,
+  enabled = true,
+  ingredients = {
+    {"boiler", 10},
+    {"steel-plate", 50},
+    {"iron-gear-wheel", 50},
+  },
+  results = {
+    {"compost-plant-mk00", 1}
+  }
 }
 
 ITEM {

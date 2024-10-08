@@ -39,7 +39,7 @@ data.raw["assembling-machine"]["fawogae-plantation-mk01"].energy_usage = "30kW"
 data.raw["assembling-machine"]["spore-collector-mk01"].energy_usage = "12kW"
 
 -- fawogae to raw coal
-RECIPE("coal-fawogae"):set_fields{enabled = true}:remove_unlock("fawogae-mk01"):set_fields{category = "distilator"}:set_fields{results = {{type = "item", name = "raw-coal", amount = 7}}}
+RECIPE("coal-fawogae"):set_fields{enabled = true}:remove_unlock("fawogae-mk01"):set_fields{category = "distilator"}:set_fields{results = {{type = "item", name = "raw-coal", amount = 5}}}
 
 -- seaweed
 RECIPE("seaweed-crop-mk01"):remove_ingredient("tin-plate"):remove_ingredient("limestone")
@@ -120,6 +120,26 @@ RECIPE("fish-food-01"):remove_unlock("fish-mk01"):add_unlock("fish-mk02")
 RECIPE("saline-water"):remove_unlock("vacuum-tube-electronics"):add_unlock("fish-mk01")
 
 RECIPE("breed-fish-1"):remove_ingredient("biomass"):remove_ingredient("oxygen"):set_fields{results = {{type = "item", name = "fish", amount = 15}, {type = "fluid", name = "waste-water", amount = 100}}}
+
+-- RECIPE{
+--   name = "breed-fish-simple",
+--   type = "recipe",
+--   category = "fish-farm",
+--   enabled = false,
+--   energy_required = 270,
+--   ingredients = {
+--     { type = "item", name = "fish-egg", amount = 10 },
+--     { type = "fluid", name = "water-saline", amount = 100 },
+--   },
+--   results = {
+--     { type = "item", name = "fish", amount = 12 },
+--     { type = "fluid", name = "waste-water", amount = 100 },
+--   },
+--   main_product = "fish",
+--   subgroup = "py-alienlife-fish",
+--   order = "b",
+--   allowed_module_categories = { "fish" }
+-- }:add_unlock("fish-mk01")
 
 local breed_fish = table.deepcopy(data.raw["recipe"]["breed-fish-1"])
 breed_fish.name = "breed-fish-simple"

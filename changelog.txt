@@ -4,6 +4,7 @@ Date: ????
   Changes:
     - Updated cultivator locale
     - Added cultivator mk02-mk04, unlocked alongside the respective collector and with the same recipe
+    - Debuffed fawogae to coal for the upcoming burner stage
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.5
 Date: 2024-10-08
