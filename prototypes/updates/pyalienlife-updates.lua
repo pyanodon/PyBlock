@@ -39,7 +39,7 @@ data.raw["assembling-machine"]["fawogae-plantation-mk01"].energy_usage = "30kW"
 data.raw["assembling-machine"]["spore-collector-mk01"].energy_usage = "12kW"
 
 -- fawogae to raw coal
-RECIPE("coal-fawogae"):set_fields{enabled = true}:remove_unlock("fawogae-mk01"):set_fields{category = "distilator"}:remove_ingredient("fawogae"):add_ingredient({name = "fawogae", amount = 3}):set_fields{results = {{type = "item", name = "raw-coal", amount = 5}}}
+RECIPE("coal-fawogae"):set_fields{enabled = true}:remove_unlock("fawogae-mk01"):set_fields{category = "distilator"}:set_fields{results = {{type = "item", name = "raw-coal", amount = 7}}}
 
 -- seaweed
 RECIPE("seaweed-crop-mk01"):remove_ingredient("tin-plate"):remove_ingredient("limestone")

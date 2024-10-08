@@ -9,6 +9,7 @@ Date: ????
     - Moved atomizer mk0 to the mk0 crafting category
     - Moved burner destructive distillation column to the mk0 crafting category
     - Added recipes for kimberlite rock
+    - Buffed fawogae to coal
   Locale:
     - Added localization to the cultivator
 ---------------------------------------------------------------------------------------------------
