@@ -1,25 +1,27 @@
 RECIPE {
   type = "recipe",
-  name = "cultivator-mk01",
+  name = "cultivator-mk03",
   energy_required = 0.5,
-  enabled = true,
   ingredients = {
-    {type = "item", name = "burner-mining-drill", amount = 2},
-    {type = "item", name = "iron-gear-wheel", amount = 10},
-    {type = "item", name = "iron-plate", amount = 20},
-    {type = "item", name = "steam-engine", amount = 1}
+      {"cultivator-mk02", 1},
+      {"ticocr-alloy", 20},
+      {"low-density-structure", 20},
+      {"stainless-steel", 30},
+      {"processing-unit", 30},
+      {"electric-engine-unit", 15},
+      {"super-alloy", 30},
   },
   results = {
-    {"cultivator-mk01", 1}
+      {"cultivator-mk03", 1}
   }
-}
+}:add_unlock("biotech-machines-mk03"):add_ingredient({type = "item", name = "small-parts-03", amount = 50})
 
 ITEM {
   type = "item",
-  name = "cultivator-mk01",
+  name = "cultivator-mk03",
   icons = {
     {
-      icon = "__pyalienlifegraphics__/graphics/icons/collector.png",
+      icon = "__pyalienlifegraphics3__/graphics/icons/collector-mk03.png",
       icon_size = 64,
     },
     {
@@ -30,18 +32,18 @@ ITEM {
     }
   },
   flags = {},
-  subgroup = "py-alienlife-buildings-mk01",
+  subgroup = "py-alienlife-buildings-mk03",
   order = "x",
-  place_result = "cultivator-mk01",
+  place_result = "cultivator-mk03",
   stack_size = 10
 }
 
 ENTITY {
   type = "assembling-machine",
-  name = "cultivator-mk01",
+  name = "cultivator-mk03",
   icons = {
     {
-      icon = "__pyalienlifegraphics__/graphics/icons/collector.png",
+      icon = "__pyalienlifegraphics3__/graphics/icons/collector-mk03.png",
       icon_size = 64,
     },
     {
@@ -52,9 +54,9 @@ ENTITY {
     }
   },
   icon_size = 64,
-  crafting_speed = 1,
+  crafting_speed = 3,
   flags = {"placeable-neutral", "player-creation"},
-  minable = {mining_time = 0.5, result = "cultivator-mk01"},
+  minable = {mining_time = 0.5, result = "cultivator-mk03"},
   fast_replaceable_group = "cultivator",
   max_health = 200,
   crafting_categories = {"cultivation"},
@@ -104,7 +106,7 @@ ENTITY {
     usage_priority = "secondary-input",
     emissions_per_minute = 1,
   },
-  energy_usage = "80kW",
+  energy_usage = "400kW",
   collision_mask = {"item-layer", "object-layer", "water-tile"},
   vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
   working_sound = {
@@ -112,7 +114,7 @@ ENTITY {
     idle_sound = {filename = "__pyalienlifegraphics__/sounds/collector.ogg", volume = 0.3},
     apparent_volume = 2.5
   },
-  next_upgrade = "cultivator-mk02",
+  next_upgrade = "cultivator-mk04",
   animation = {
     north = {
       layers = {
@@ -824,7 +826,7 @@ ENTITY {
           line_length = 64,
           frame_count = 255,
           animation_speed = 0.4,
-          tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+          tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
           shift = util.by_pixel(-96, 0)
         },
         {
@@ -834,7 +836,7 @@ ENTITY {
           line_length = 64,
           frame_count = 255,
           animation_speed = 0.4,
-          tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+          tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
           shift = util.by_pixel(-64, 0)
         },
         {
@@ -844,7 +846,7 @@ ENTITY {
           line_length = 64,
           frame_count = 255,
           animation_speed = 0.4,
-          tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+          tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
           shift = util.by_pixel(-32, 0)
         },
         {
@@ -854,7 +856,7 @@ ENTITY {
           line_length = 64,
           frame_count = 255,
           animation_speed = 0.4,
-          tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+          tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
           shift = util.by_pixel(0, 0)
         },
         {
@@ -864,7 +866,7 @@ ENTITY {
           line_length = 64,
           frame_count = 255,
           animation_speed = 0.4,
-          tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+          tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
           shift = util.by_pixel(32, 0)
         },
         {
@@ -874,7 +876,7 @@ ENTITY {
           line_length = 64,
           frame_count = 255,
           animation_speed = 0.4,
-          tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+          tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
           shift = util.by_pixel(64, 0)
         },
         {
@@ -884,7 +886,7 @@ ENTITY {
           line_length = 64,
           frame_count = 255,
           animation_speed = 0.4,
-          tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+          tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
           shift = util.by_pixel(96, 0)
         },
       }
@@ -1013,7 +1015,7 @@ ENTITY {
           line_length = 64,
           frame_count = 255,
           animation_speed = 0.4,
-          tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+          tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
           shift = util.by_pixel(-96, 0)
         },
         {
@@ -1023,7 +1025,7 @@ ENTITY {
           line_length = 64,
           frame_count = 255,
           animation_speed = 0.4,
-          tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+          tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
           shift = util.by_pixel(-64, 0)
         },
         {
@@ -1033,7 +1035,7 @@ ENTITY {
           line_length = 64,
           frame_count = 255,
           animation_speed = 0.4,
-          tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+          tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
           shift = util.by_pixel(-32, 0)
         },
         {
@@ -1043,7 +1045,7 @@ ENTITY {
           line_length = 64,
           frame_count = 255,
           animation_speed = 0.4,
-          tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+          tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
           shift = util.by_pixel(0, 0)
         },
         {
@@ -1053,7 +1055,7 @@ ENTITY {
           line_length = 64,
           frame_count = 255,
           animation_speed = 0.4,
-          tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+          tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
           shift = util.by_pixel(32, 0)
         },
         {
@@ -1063,7 +1065,7 @@ ENTITY {
           line_length = 64,
           frame_count = 255,
           animation_speed = 0.4,
-          tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+          tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
           shift = util.by_pixel(64, 0)
         },
         {
@@ -1073,7 +1075,7 @@ ENTITY {
           line_length = 64,
           frame_count = 255,
           animation_speed = 0.4,
-          tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0},
+          tint = {r = 0.223, g = 0.490, b = 0.858, a = 1.0},
           shift = util.by_pixel(96, 0)
         },
       }

@@ -13,6 +13,9 @@ require('prototypes/buildings/burner-washer')
 require('prototypes/buildings/automated-screener-mk00')
 require("prototypes/buildings/geothermal-plant-mk01")
 require("prototypes/buildings/cultivator-mk01")
+require("prototypes/buildings/cultivator-mk02")
+require("prototypes/buildings/cultivator-mk03")
+require("prototypes/buildings/cultivator-mk04")
 
 --UNUSED
 --require('prototypes/buildings/burner-wpu')
