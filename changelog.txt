@@ -10,6 +10,7 @@ Date: ????
     - Moved burner destructive distillation column to the mk0 crafting category
     - Added recipes for kimberlite rock
     - Buffed fawogae to coal
+    - Modified soot separation recipes, making them produce other ores as byproducts
   Locale:
     - Added localization to the cultivator
 ---------------------------------------------------------------------------------------------------

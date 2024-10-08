@@ -187,6 +187,89 @@ RECIPE("ground-borer"):remove_ingredient("intermetallics")
 
 RECIPE("mining-borax"):replace_ingredient("drilling-fluid-1", "lubricant")
 
+-- create new soot to ore recipes that generalize byproducts
+local ores = {
+  ["iron-ore"] = {
+    recipe_extension = "iron",
+    amount = 8,
+    technology = "oil-sands",
+    byproduct_probability = 0.2
+  },
+  ["copper-ore"] = {
+    recipe_extension = "copper",
+    amount = 8,
+    technology = "",
+    byproduct_probability = 0.2
+  },
+  ["ore-aluminium"] = {
+    recipe_extension = "aluminium",
+    amount = 6,
+    technology = "mining-with-fluid",
+    byproduct_probability = 0.1
+  },
+  ["ore-zinc"] = {
+    recipe_extension = "zinc",
+    amount = 6,
+    technology = "oil-sands",
+    byproduct_probability = 0.1
+  },
+  ["ore-lead"] = {
+    recipe_extension = "lead",
+    amount = 8,
+    technology = "solder-mk01",
+    byproduct_probability = 0.1
+  },
+  ["ore-nickel"] = {
+    recipe_extension = "nickel",
+    amount = 0,
+    technology = "",
+    byproduct_probability = 0.1
+  }
+}
+for o, ore in pairs(ores) do
+  if ore.amount ~= 0 then
+    RECIPE("soot-to-" .. ore.recipe_extension):set_fields {
+      energy_required = 15,
+      ingredients = {
+        { type = "item", name = "soot", amount = 10 }
+      },
+      results = {
+        { type = "item", name = o, amount = ore.amount },
+        { type = "item", name = "ash", amount = 1, probability = 0.3 }
+      },
+      result = nil,
+      main_product = o,
+      ignore_in_pypp = false
+    }
+    -- RECIPE("soot-to-" .. ore.recipe_extension):set_fields {
+    --   type = "recipe",
+    --   name = "soot-to-" .. ore.recipe_extension,
+    --   category = "solid-separator",
+    --   subgroup = "py-items-class",
+    --   enabled = ore.technology ~= nil and false or true,
+    --   energy_required = 15,
+    --   ingredients = {
+    --     { type = "item", name = "soot", amount = 10 }
+    --   },
+    --   results = {
+    --     { type = "item", name = o, amount = ore.amount },
+    --     { type = "item", name = "ash", amount = 1, probability = 0.3 }
+    --   },
+    --   result = nil,
+    --   main_product = o,
+    --   ignore_in_pypp = false
+    -- }:add_unlock(ore.technology)
+    for s, secondary_ore in pairs(ores) do
+      if s ~= o then
+        table.insert(data.raw.recipe["soot-to-" .. ore.recipe_extension].results, { type = "item", name = s, amount = 1, probability = secondary_ore.byproduct_probability })
+      end
+    end
+  end
+end
+
+-- soot separation recipes
+RECIPE("soot-to-aluminium"):remove_unlock("oil-sands"):add_unlock("mining-with-fluid")
+
 -- data.raw.technology["mega-farm"].unit.ingredients = {{"automation-science-pack", 1},{"py-science-pack-1",1}}
 -- TECHNOLOGY("mega-farm"):set_fields{prerequisites = {}}
 
