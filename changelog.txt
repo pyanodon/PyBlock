@@ -2,6 +2,7 @@
 Version: 2.0.7
 Date: ????
   Bugfixes:
+    - Crude DDC shows pipes when no fluid recipe is selected
     - Fixed the game not loading because of stupid naming conventions
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.6

@@ -134,7 +134,7 @@ ENTITY {
             --{ position = {-2, -1} }
           }
         },
-          off_when_no_fluid_recipe = true
+          off_when_no_fluid_recipe = false
       },
       crafting_categories = {"distilator"},
       crafting_speed = 0.5,
