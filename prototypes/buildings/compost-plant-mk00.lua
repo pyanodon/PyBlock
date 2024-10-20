@@ -2,7 +2,7 @@ RECIPE {
   type = "recipe",
   name = "compost-plant-mk00",
   energy_required = 0.5,
-  enabled = true,
+  enabled = false,
   ingredients = {
     {"boiler", 10},
     {"steel-plate", 50},
@@ -11,7 +11,7 @@ RECIPE {
   results = {
     {"compost-plant-mk00", 1}
   }
-}
+}:add_unlock("compost")
 
 ITEM {
     type = "item",
@@ -69,7 +69,7 @@ ENTITY {
             },
             scale_fluid_usage = true,
         },
-    energy_usage = "400kW",
+    energy_usage = "300kW",
     animation = {
         layers = {
         {

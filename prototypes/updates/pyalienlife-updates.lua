@@ -10,18 +10,18 @@ RECIPE("fawogae-1"):set_fields{enabled = true}:remove_unlock("fawogae-mk01")
 
 -- early fawogae recipe
 RECIPE {
-    type = "recipe",
-    name = "fawogae-start",
-    category = "handcrafting",
-    enabled = true,
-    energy_required = 5,
-    ingredients = {
-        {type = "item", name = "fawogae-spore", amount = 5},
-        {type = "item", name = "planter-box", amount = 1}
-    },
-    results = {
-        {type = "item", name = "fawogae", amount = 1}
-    }
+  type = "recipe",
+  name = "fawogae-start",
+  category = "handcrafting",
+  enabled = true,
+  energy_required = 5,
+  ingredients = {
+    {type = "item", name = "fawogae-spore", amount = 5},
+    {type = "item", name = "planter-box", amount = 1}
+  },
+  results = {
+    {type = "item", name = "fawogae", amount = 1}
+  }
 }
 
 --remove unused materials from fawogae mk01
@@ -37,6 +37,24 @@ RECIPE("fawogae-to-iron"):set_fields{enabled = true}:remove_unlock("molecular-de
 data.raw["assembling-machine"]["fawogae-plantation-mk01"].energy_usage = "30kW"
 
 data.raw["assembling-machine"]["spore-collector-mk01"].energy_usage = "12kW"
+data.raw["assembling-machine"]["spore-collector-mk01"].energy_source = {
+  type = "fluid",
+  effectivity = 1,
+  emissions = 1,
+  fluid_box = {
+    base_area = 1,
+    height = 2,
+    base_level = -1,
+    pipe_covers = pipecoverspictures(),
+    pipe_connections = {
+      { type = "input-output", position = {-4, 0} },
+      { type = "input-output", position = {4, 0} },
+    },
+    filter = "steam",
+    production_type = "input-output",
+  },
+  scale_fluid_usage = true
+}
 
 -- fawogae to raw coal
 RECIPE("coal-fawogae"):set_fields{enabled = true}:remove_unlock("fawogae-mk01"):set_fields{category = "distilator"}:set_fields{results = {{type = "item", name = "raw-coal", amount = 5}}}
@@ -190,8 +208,6 @@ TECHNOLOGY("phytomining"):remove_pack("py-science-pack-1"):remove_pack("logistic
 
 TECHNOLOGY("compost"):remove_pack("py-science-pack-1"):set_fields{prerequisites = {}}
 
-RECIPE("compost-plant-mk01"):remove_ingredient("duralumin")
-
 RECIPE("yaedols-culture-mk01"):remove_ingredient("intermetallics"):remove_ingredient("titanium-plate")
 
 RECIPE("fungal-substrate"):remove_unlock("fawogae-mk01"):add_unlock("yaedols")
@@ -209,9 +225,6 @@ RECIPE("ti-biomass-extraction"):remove_ingredient("steam"):add_ingredient({type 
 RECIPE("yaedols-ti"):remove_unlock("phytomining-mk02"):add_unlock("yaedols")
 
 RECIPE("titanium-plate-1"):remove_unlock("alloys-mk01"):add_unlock("yaedols")
-
--- remove titanium and intermetallics from compost
-RECIPE("compost-plant-mk01"):remove_ingredient("intermetallics"):remove_ingredient("titanium-plate")
 
 RECIPE("flue-gas-1"):set_fields{category = 'gasifier'}
 

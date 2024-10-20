@@ -21,7 +21,7 @@ ITEM {
     icon = "__PyBlock__/graphics/icons/soil-extractormk00.png",
     icon_size = 64,
     flags = {},
-    subgroup = "coal-processing",
+    subgroup = "py-cp-buildings-mk00",
     order = "g",
     place_result = "burner-soil-extractor",
     stack_size = 10
@@ -45,7 +45,7 @@ ENTITY {
   },
   allowed_effects = {"consumption", "speed", "productivity", "pollution"},
   crafting_categories = {"soil-extraction"},
-  crafting_speed = 0.3,
+  crafting_speed = 0.5,
   energy_source = {
     type = "fluid",
     effectivity = 1,
@@ -54,7 +54,21 @@ ENTITY {
       base_area = 1,
       height = 2,
       base_level = -1,
-      pipe_covers = pipecoverspictures(),
+      pipe_covers = DATA.Pipes.covers(true, true, true, true),
+      pipe_picture = DATA.Pipes.pictures("assembling-machine-3", {0, 1}, {0, -1}, nil, nil, {
+        north = {
+          filename = "__pycoalprocessinggraphics__/graphics/entity/soil-extractormk01/long-pipe-north.png",
+          priority = "low",
+          width = 30,
+          height = 44
+        },
+        south = {
+          filename = "__pycoalprocessinggraphics__/graphics/entity/soil-extractormk01/pipe-south.png",
+          priority = "extra-high",
+          width = 40,
+          height = 45
+        }
+      }),
       pipe_connections = {
         {type = "input-output", position = {0, 4}},
         {type = "input-output", position = {0, -4}},

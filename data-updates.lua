@@ -267,8 +267,19 @@ for o, ore in pairs(ores) do
   end
 end
 
--- soot separation recipes
-RECIPE("soot-to-aluminium"):remove_unlock("oil-sands"):add_unlock("mining-with-fluid")
+-- burner/steam mk00 recipe adjustments
+RECIPE("wpu"):add_ingredient("inductor1", 12):add_ingredient("burner-wpu", 1):add_unlock("wood-processing"):set_fields{enabled = false}
+
+RECIPE("soil-extractormk01"):remove_ingredient("burner-mining-drill"):add_ingredient("burner-soil-extractor", 1):add_unlock("soil-washing"):set_fields{enabled = false}
+
+RECIPE("washer"):remove_ingredient("steam-engine"):add_ingredient("burner-washer", 1):add_ingredient("electronic-circuit"):add_unlock("latex"):remove_unlock("soil-washing")
+
+RECIPE("distilator"):add_ingredient("basic-ddc"):remove_unlock("coal-processing-1"):add_unlock("tar-processing")
+
+RECIPE("collector"):remove_ingredient("soil-extractormk01"):add_ingredient("burner-soil-extractor", 1)
+RECIPE("cultivator-mk01"):remove_ingredient("soil-extractormk01"):add_ingredient("burner-soil-extractor", 1)
+
+RECIPE("compost-plant-mk01"):add_ingredient("compost-plant-mk00", 1):remove_unlock("compost"):add_unlock("fertilizer-mk01")
 
 -- data.raw.technology["mega-farm"].unit.ingredients = {{"automation-science-pack", 1},{"py-science-pack-1",1}}
 -- TECHNOLOGY("mega-farm"):set_fields{prerequisites = {}}

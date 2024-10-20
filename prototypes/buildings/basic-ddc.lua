@@ -120,6 +120,7 @@ ENTITY {
         pipe_connections =
           {
             {type = "output", position = {-1, -2} },
+            {type = "output", position = {-2, -1} },
             --{ position = {2, 1} },
           }
         },
@@ -131,6 +132,7 @@ ENTITY {
         pipe_connections =
           {
             {type = "output", position = {1, 2} },
+            {type = "output", position = {2, 1} },
             --{ position = {-2, -1} }
           }
         },

@@ -4,6 +4,24 @@ Date: ????
   Bugfixes:
     - Crude DDC shows pipes when no fluid recipe is selected
     - Fixed the game not loading because of stupid naming conventions
+  Features:
+    - Added steampowered compost plant to composting
+    - Added steampowered soil extractor
+    - Added steampowered wood processing unit to soil washing
+  Changes:
+    - Added new fluid connections to crude DDC
+    - Moved wood processing unit mk01 to wood processing
+    - Moved soil extractor mk01 to soil washing
+    - Moved washer mk01 from soil washing to latex
+    - Moved compost plant mk01 from composting to fertilizer mk01
+    - Reverted compost plant mk01 to original recipe
+    - Added air core inductor (12) and steampowered wood processing unit (1) to wood processing unit mk01 recipe
+    - Changed burner mining drill to steampowered soil extractor in soil extractor mk01 recipe
+    - Changed steam engine to steampowered washer in washer mk01 recipe
+    - Added simple circuit board (3) to washer mk01 recipe
+    - Moved ddc mk01 from coal processing 1 to tar processing
+    - Added crude ddc to ddc mk01 recipe
+    - Changed spore collector from electrical to steam powered
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.6
 Date: 2024-10-08

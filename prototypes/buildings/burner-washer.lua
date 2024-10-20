@@ -1,17 +1,19 @@
 
 RECIPE {
-    type = "recipe",
-    name = "burner-washer",
-    energy_required = 4,
-    enabled = true,
-    ingredients = {
-        {"iron-plate", 10},
-        {"pipe", 25},
-        {"stone-brick", 30}
-    },
-    results = {
-        {"burner-washer", 1}
-    }
+  type = "recipe",
+  name = "burner-washer",
+  energy_required = 4,
+  enabled = true,
+  ingredients = {
+    {"steam-engine", 2},
+    {"iron-plate", 10},
+    {"pipe", 25},
+    {"iron-gear-wheel", 10},
+    {"stone-brick", 20}
+  },
+  results = {
+    {"burner-washer", 1}
+  }
 }
 
 ITEM {
