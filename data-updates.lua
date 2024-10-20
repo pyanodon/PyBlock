@@ -86,12 +86,14 @@ if settings.startup["pypp-dev-mode"].value == true and settings.startup["pypp-cr
 	end
 end
 
-
 require("prototypes/updates/pycoalprocessing-updates")
 require("prototypes/updates/pypetroleumhandling-updates")
 require("prototypes/updates/pyrawores-updates")
 require('prototypes/updates/pyalienlife-updates')
 require("prototypes/updates/pyalternativeenergy-updates")
+
+--mapgen--
+require("prototypes/mapgen")
 
 --UNUSED
 --require('prototypes/updates/ddc-coal-updates')

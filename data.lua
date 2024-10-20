@@ -1,8 +1,3 @@
-
-for _, t in pairs(data.raw.tile) do
-    t.autoplace = nil
-end
-
 --tiles
 require('prototypes/tiles/tiles')
 

@@ -8,6 +8,8 @@ Date: ????
     - Added steampowered compost plant to composting
     - Added steampowered soil extractor
     - Added steampowered wood processing unit to soil washing
+    - New map generation, all normal land is replaced with landfill
+    - New world preset with no resources, rocks, or trees, only fish, seaweed, driftwood, and landfill.
   Changes:
     - Added new fluid connections to crude DDC
     - Moved wood processing unit mk01 to wood processing
