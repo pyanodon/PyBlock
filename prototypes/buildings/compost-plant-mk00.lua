@@ -4,9 +4,10 @@ RECIPE {
   energy_required = 0.5,
   enabled = false,
   ingredients = {
-    {"boiler", 10},
-    {"steel-plate", 50},
-    {"iron-gear-wheel", 50},
+    {"boiler", 2},
+    {"steel-plate", 20},
+    {"iron-gear-wheel", 10},
+    {"steam-engine", 2},
   },
   results = {
     {"compost-plant-mk00", 1}
