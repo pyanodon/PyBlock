@@ -8,6 +8,8 @@ RECIPE("fawogae-spore"):set_fields{enabled = true}:remove_unlock("fawogae-mk01")
 
 RECIPE("fawogae-1"):set_fields{enabled = true}:remove_unlock("fawogae-mk01")
 
+RECIPE("fawogae-with-manure"):remove_unlock("fawogae-mk02"):add_unlock("fawogae-mk01")
+
 -- early fawogae recipe
 RECIPE {
   type = "recipe",
