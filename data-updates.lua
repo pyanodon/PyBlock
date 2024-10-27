@@ -286,7 +286,7 @@ RECIPE("copper-plate"):add_unlock("ash-separation"):set_fields{enabled = false}
 RECIPE("inductor1"):add_unlock("ash-separation"):set_fields{enabled = false}
 
 -- set automation science pack to require 50 copper plates cause you gonna need them
-TECHNOLOGY("automation-science-pack"):set_fields{research_trigger = { type = "craft-item", item = "copper-plate", count = 50 }}:set_fields{prerequisites = {"ash-separation"}}
+TECHNOLOGY("automation-science-pack"):set_fields{research_trigger = { type = "craft-item", item = "copper-plate", count = 10 }}:set_fields{prerequisites = {"ash-separation"}}
 
 -- burner/steam mk00 recipe adjustments
 RECIPE("wpu"):add_ingredient("inductor1", 12):add_ingredient("burner-wpu", 1):add_unlock("wood-processing"):set_fields{enabled = false}

@@ -5,6 +5,7 @@ Date: ????
     - Moved fawogae with manure recipe from fawogae mk02 to fawogae mk01
   Changes:
     - Reduced construction cost of steampowered compost plant
+    - Reduced cost of automation science pack technology
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.0
 Date: 2024-10-27
