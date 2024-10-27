@@ -18,7 +18,7 @@ RECIPE {
 ITEM {
     type = "item",
     name = "burner-soil-extractor",
-    icon = "__PyBlock__/graphics/icons/soil-extractormk00.png",
+    icon = "__PyBlock__/graphics/icons/soil-extractor-mk00.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-cp-buildings-mk00",
@@ -30,15 +30,15 @@ ITEM {
 ENTITY {
   type = "assembling-machine",
   name = "burner-soil-extractor",
-  icon = "__PyBlock__/graphics/icons/soil-extractormk00.png",
+  icon = "__PyBlock__/graphics/icons/soil-extractor-mk00.png",
   icon_size = 64,
   flags = {"placeable-neutral", "player-creation"},
   minable = {mining_time = 1, result = "burner-soil-extractor"},
-  fast_replaceable_group = "soil-extractormk01",
+  fast_replaceable_group = "soil-extractor",
   max_health = 300,
   corpse = "big-remnants",
   dying_explosion = "medium-explosion",
-  collision_box = {{-3.48, -3.48}, {3.48, 3.48}},
+  collision_box = data.raw["assembling-machine"]["soil-extractor-mk01"].collision_box,
   selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
   module_specification = {
     module_slots = 0
@@ -51,27 +51,25 @@ ENTITY {
     effectivity = 1,
     emissions = 1,
     fluid_box = {
-      base_area = 1,
-      height = 2,
-      base_level = -1,
-      pipe_covers = DATA.Pipes.covers(true, true, true, true),
-      pipe_picture = DATA.Pipes.pictures("assembling-machine-3", {0, 1}, {0, -1}, nil, nil, {
+      volume = 2,
+      pipe_covers = py.pipe_covers(true, true, true, true),
+      pipe_picture = py.pipe_pictures("assembling-machine-3", {0, 1}, {0, -1}, nil, nil, {
         north = {
-          filename = "__pycoalprocessinggraphics__/graphics/entity/soil-extractormk01/long-pipe-north.png",
+          filename = "__pycoalprocessinggraphics__/graphics/entity/soil-extractor/long-pipe-north.png",
           priority = "low",
           width = 30,
           height = 44
         },
         south = {
-          filename = "__pycoalprocessinggraphics__/graphics/entity/soil-extractormk01/pipe-south.png",
+          filename = "__pycoalprocessinggraphics__/graphics/entity/soil-extractor/pipe-south.png",
           priority = "extra-high",
           width = 40,
           height = 45
         }
       }),
       pipe_connections = {
-        {type = "input-output", position = {0, 4}},
-        {type = "input-output", position = {0, -4}},
+        { flow_direction = "input-output", position = {0, 3.398}, direction = 8 },
+        { flow_direction = "input-output", position = {0, -3.398}, direction = 0 },
       },
       production_type = "input-output",
       filter = "steam",
@@ -79,47 +77,47 @@ ENTITY {
     scale_fluid_usage = true,
   },
   energy_usage = "200kW",
-  animation = {
-    filename = "__pycoalprocessinggraphics__/graphics/entity/soil-extractormk01/soil-extractormk01.png",
-    width = 235,
-    height = 266,
-    frame_count = 30,
-    line_length = 6,
-    animation_speed = 0.8,
-    shift = {0.16, -0.609}
+  graphics_set = {
+      animation = {
+        filename = "__pycoalprocessinggraphics__/graphics/entity/soil-extractor/soil-extractor.png",
+        width = 235,
+        height = 266,
+        frame_count = 30,
+        line_length = 6,
+        animation_speed = 0.8,
+        shift = {0.16, -0.609}
+      },
   },
   fluid_boxes = {
     {
       production_type = "input",
-      pipe_covers = DATA.Pipes.covers(true, true, true, true),
-      pipe_picture = DATA.Pipes.pictures("assembling-machine-3", {0, 1}, {0, -1}, nil, nil, {
+      pipe_covers = py.pipe_covers(true, true, true, true),
+      pipe_picture = py.pipe_pictures("assembling-machine-3", {0, 1}, {0, -1}, nil, nil, {
         north = {
-          filename = "__pycoalprocessinggraphics__/graphics/entity/soil-extractormk01/long-pipe-north.png",
+          filename = "__pycoalprocessinggraphics__/graphics/entity/soil-extractor/long-pipe-north.png",
           priority = "low",
           width = 30,
           height = 44
         },
         south = {
-          filename = "__pycoalprocessinggraphics__/graphics/entity/soil-extractormk01/pipe-south.png",
+          filename = "__pycoalprocessinggraphics__/graphics/entity/soil-extractor/pipe-south.png",
           priority = "extra-high",
           width = 40,
           height = 45
         }
       }),
-      base_area = 10,
-      base_level = -1,
-      height = 2,
+      volume = 20,
       pipe_connections = {
-        {type = "input-output", position = {4, 0}},
-        {type = "input-output", position = {-4, 0}},
+        { flow_direction = "input-output", position = {3.398, 0}, direction = 4 },
+        { flow_direction = "input-output", position = {-3.398, 0}, direction = 12 },
       }
     }
   },
   vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
   working_sound = {
-    sound = {filename = "__pycoalprocessinggraphics__/sounds/soil-extractormk01.ogg"},
-    idle_sound = {filename = "__pycoalprocessinggraphics__/sounds/soil-extractormk01.ogg", volume = 0.45},
+    sound = {filename = "__pycoalprocessinggraphics__/sounds/soil-extractor.ogg"},
+    idle_sound = {filename = "__pycoalprocessinggraphics__/sounds/soil-extractor.ogg", volume = 0.45},
     apparent_volume = 2.5
   },
-  next_upgrade = "soil-extractormk01"
+  next_upgrade = "soil-extractor-mk01"
 }

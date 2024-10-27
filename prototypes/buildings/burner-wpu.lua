@@ -15,7 +15,7 @@ RECIPE {
   results = {
     {"burner-wpu", 1}
   }
-}
+}:add_unlock("automation-science-pack")
 
 ITEM {
   type = "item",
@@ -53,13 +53,11 @@ ENTITY {
     effectivity = 1,
     emissions = 1,
     fluid_box = {
-      base_area = 1,
-      height = 2,
-      base_level = -1,
+      volume = 2,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
-        {type = "input-output", position = {-3.5,0.5}},
-        {type = "input-output", position = {3.5, 0.5}}
+        { flow_direction = "input-output", position = {-2.8, 0.5}, direction = 12 },
+        { flow_direction = "input-output", position = {2.8, 0.5}, direction = 4 }
       },
       filter = "steam",
       production_type = "input-output",
@@ -67,25 +65,27 @@ ENTITY {
     scale_fluid_usage = true,
   },
   energy_usage = "150kW",
-  animation = {
-    layers = {
-      {
-        filename = "__pycoalprocessinggraphics__/graphics/entity/wpu/left.png",
-        width = 96,
-        height = 277,
-        line_length = 21,
-        frame_count = 130,
-        shift = {-1.5, -1.328},
-        animation_speed = 0.4
-      },
-      {
-        filename = "__pycoalprocessinggraphics__/graphics/entity/wpu/right.png",
-        width = 96,
-        height = 277,
-        line_length = 21,
-        frame_count = 130,
-        shift = {1.5, -1.328},
-        animation_speed = 0.4
+  graphics_set = {
+    animation = {
+      layers = {
+        {
+          filename = "__pycoalprocessinggraphics__/graphics/entity/wpu/left.png",
+          width = 96,
+          height = 277,
+          line_length = 21,
+          frame_count = 130,
+          shift = {-1.5, -1.328},
+          animation_speed = 0.4
+        },
+        {
+          filename = "__pycoalprocessinggraphics__/graphics/entity/wpu/right.png",
+          width = 96,
+          height = 277,
+          line_length = 21,
+          frame_count = 130,
+          shift = {1.5, -1.328},
+          animation_speed = 0.4
+        }
       }
     }
   },

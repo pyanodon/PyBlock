@@ -19,18 +19,17 @@ ENTITY {
   fluid_boxes = {
     {
       production_type = "input",
-      pipe_picture = DATA.Pipes.pictures("assembling-machine-2", {1.17, 2.78}, {-0.05, -0.8}, nil, nil, pipes2),
-      pipe_covers = DATA.Pipes.covers(true, true, true, true),
-      base_area = 10,
-      base_level = -1,
-      pipe_connections = {{ type = "input", position = {-6, 0} }},
+      pipe_picture = py.pipe_pictures("assembling-machine-2", {1.17, 2.78}, {-0.05, -0.8}, nil, nil, pipes2),
+      pipe_covers = py.pipe_covers(true, true, true, true),
+      volume = 10,
+      pipe_connections = {{ flow_direction = "input", position = {-5.2, 0}, direction = 12 }}
     },
     {
       production_type = "output",
-      pipe_covers = DATA.Pipes.covers(true, true, true, true),
-      pipe_picture = DATA.Pipes.pictures("assembling-machine-2", nil, {-0.05, -0.8}, nil, nil, pipes),
-      base_level = 1,
-      pipe_connections = {{ position = {0, -6}, type = 'output' }},
+      pipe_covers = py.pipe_covers(true, true, true, true),
+      pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {-0.05, -0.8}, nil, nil, pipes),
+      volume = 1,
+      pipe_connections = {{ flow_direction = 'output', position = {0, -5.2}, direction = 0 }}
     },
   },
   fixed_recipe = "geothermal-water",
@@ -42,78 +41,80 @@ ENTITY {
     module_slots = 4
   },
   --base_render_layer = "lower-object-above-shadow",
-  animation = {
-    north = {
-      layers = {
-        {
-          filename = "__pyalternativeenergygraphics__/graphics/entity/geothermal-plant/left-raw.png",
-          width = 128,
-          height = 512,
-          repeat_count = 50,
-          line_length = 1,
-          frame_count = 1,
-          animation_speed = 0.25,
-          shift = util.by_pixel(-112, -80)
-        },
-        {
-          filename = "__pyalternativeenergygraphics__/graphics/entity/geothermal-plant/left-l.png",
-          width = 128,
-          height = 512,
-          repeat_count = 50,
-          line_length = 1,
-          frame_count = 1,
-          animation_speed = 0.25,
-          draw_as_glow = true,
-          shift = util.by_pixel(-112, -80)
-        },
-        {
-          filename = "__pyalternativeenergygraphics__/graphics/entity/geothermal-plant/mid-raw.png",
-          width = 128,
-          height = 512,
-          line_length = 16,
-          frame_count = 50,
-          animation_speed = 0.25,
-          shift = util.by_pixel(16, -80)
-        },
-        {
-          filename = "__pyalternativeenergygraphics__/graphics/entity/geothermal-plant/mid-l.png",
-          width = 128,
-          height = 512,
-          line_length = 16,
-          frame_count = 50,
-          animation_speed = 0.25,
-          draw_as_glow = true,
-          shift = util.by_pixel(16, -80)
-        },
-        {
-          filename = "__pyalternativeenergygraphics__/graphics/entity/geothermal-plant/right-raw.png",
-          width = 96,
-          height = 512,
-          line_length = 16,
-          frame_count = 50,
-          animation_speed = 0.25,
-          shift = util.by_pixel(128, -80)
-        },
-        {
-          filename = "__pyalternativeenergygraphics__/graphics/entity/geothermal-plant/right-l.png",
-          width = 96,
-          height = 512,
-          line_length = 16,
-          frame_count = 50,
-          animation_speed = 0.25,
-          draw_as_glow = true,
-          shift = util.by_pixel(128, -80)
-        },
-        {
-          filename = "__pyalternativeenergygraphics__/graphics/entity/geothermal-plant/sh.png",
-          width = 416,
-          height = 320,
-          repeat_count = 50,
-          line_length = 1,
-          frame_count = 1,
-          animation_speed = 0.25,
-          draw_as_shadow = true,
-          shift = util.by_pixel(32, 16)
+  graphics_set = {
+    animation = {
+      north = {
+        layers = {
+          {
+            filename = "__pyalternativeenergygraphics__/graphics/entity/geothermal-plant/left-raw.png",
+            width = 128,
+            height = 512,
+            repeat_count = 50,
+            line_length = 1,
+            frame_count = 1,
+            animation_speed = 0.25,
+            shift = util.by_pixel(-112, -80)
+          },
+          {
+            filename = "__pyalternativeenergygraphics__/graphics/entity/geothermal-plant/left-l.png",
+            width = 128,
+            height = 512,
+            repeat_count = 50,
+            line_length = 1,
+            frame_count = 1,
+            animation_speed = 0.25,
+            draw_as_glow = true,
+            shift = util.by_pixel(-112, -80)
+          },
+          {
+            filename = "__pyalternativeenergygraphics__/graphics/entity/geothermal-plant/mid-raw.png",
+            width = 128,
+            height = 512,
+            line_length = 16,
+            frame_count = 50,
+            animation_speed = 0.25,
+            shift = util.by_pixel(16, -80)
+          },
+          {
+            filename = "__pyalternativeenergygraphics__/graphics/entity/geothermal-plant/mid-l.png",
+            width = 128,
+            height = 512,
+            line_length = 16,
+            frame_count = 50,
+            animation_speed = 0.25,
+            draw_as_glow = true,
+            shift = util.by_pixel(16, -80)
+          },
+          {
+            filename = "__pyalternativeenergygraphics__/graphics/entity/geothermal-plant/right-raw.png",
+            width = 96,
+            height = 512,
+            line_length = 16,
+            frame_count = 50,
+            animation_speed = 0.25,
+            shift = util.by_pixel(128, -80)
+          },
+          {
+            filename = "__pyalternativeenergygraphics__/graphics/entity/geothermal-plant/right-l.png",
+            width = 96,
+            height = 512,
+            line_length = 16,
+            frame_count = 50,
+            animation_speed = 0.25,
+            draw_as_glow = true,
+            shift = util.by_pixel(128, -80)
+          },
+          {
+            filename = "__pyalternativeenergygraphics__/graphics/entity/geothermal-plant/sh.png",
+            width = 416,
+            height = 320,
+            repeat_count = 50,
+            line_length = 1,
+            frame_count = 1,
+            animation_speed = 0.25,
+            draw_as_shadow = true,
+            shift = util.by_pixel(32, 16)
+          }
         }
       }
     }

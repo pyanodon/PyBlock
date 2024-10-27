@@ -17,7 +17,8 @@ RECIPE {
   energy_required = 5,
   ingredients = {
     {type = "item", name = "fawogae-spore", amount = 5},
-    {type = "item", name = "planter-box", amount = 1}
+    {type = "item", name = "empty-planter-box", amount = 1},
+    {type = "item", name = "soil", amount = 5}
   },
   results = {
     {type = "item", name = "fawogae", amount = 1}
@@ -37,24 +38,24 @@ RECIPE("fawogae-to-iron"):set_fields{enabled = true}:remove_unlock("molecular-de
 data.raw["assembling-machine"]["fawogae-plantation-mk01"].energy_usage = "30kW"
 
 data.raw["assembling-machine"]["spore-collector-mk01"].energy_usage = "12kW"
-data.raw["assembling-machine"]["spore-collector-mk01"].energy_source = {
-  type = "fluid",
-  effectivity = 1,
-  emissions = 1,
-  fluid_box = {
-    base_area = 1,
-    height = 2,
-    base_level = -1,
-    pipe_covers = pipecoverspictures(),
-    pipe_connections = {
-      { type = "input-output", position = {-4, 0} },
-      { type = "input-output", position = {4, 0} },
-    },
-    filter = "steam",
-    production_type = "input-output",
-  },
-  scale_fluid_usage = true
-}
+-- data.raw["assembling-machine"]["spore-collector-mk01"].energy_source = {
+--   type = "fluid",
+--   effectivity = 1,
+--   emissions = 1,
+--   fluid_box = {
+--     base_area = 1,
+--     height = 2,
+--     base_level = -1,
+--     pipe_covers = pipecoverspictures(),
+--     pipe_connections = {
+--       { type = "input-output", position = {-4, 0}, direction = 0 },
+--       { type = "input-output", position = {4, 0}, direction = 0 },
+--     },
+--     filter = "steam",
+--     flow_direction = "input-output",
+--   },
+--   scale_fluid_usage = true
+-- }
 
 -- fawogae to raw coal
 RECIPE("coal-fawogae"):set_fields{enabled = true}:remove_unlock("fawogae-mk01"):set_fields{category = "distilator"}:set_fields{results = {{type = "item", name = "raw-coal", amount = 5}}}
@@ -162,16 +163,16 @@ RECIPE("breed-fish-1"):remove_ingredient("biomass"):remove_ingredient("oxygen"):
 local breed_fish = table.deepcopy(data.raw["recipe"]["breed-fish-1"])
 breed_fish.name = "breed-fish-simple"
 data.raw.recipe["breed-fish-simple"] = breed_fish
-table.insert(data.raw.module["fish"].limitation, "breed-fish-simple")
-table.insert(data.raw.module["fish-mk02"].limitation, "breed-fish-simple")
-table.insert(data.raw.module["fish-mk03"].limitation, "breed-fish-simple")
-table.insert(data.raw.module["fish-mk04"].limitation, "breed-fish-simple")
-table.insert(data.raw.module["effectivity-module"].limitation_blacklist, "breed-fish-simple")
-table.insert(data.raw.module["effectivity-module-2"].limitation_blacklist, "breed-fish-simple")
-table.insert(data.raw.module["effectivity-module-3"].limitation_blacklist, "breed-fish-simple")
-table.insert(data.raw.module["speed-module"].limitation_blacklist, "breed-fish-simple")
-table.insert(data.raw.module["speed-module-2"].limitation_blacklist, "breed-fish-simple")
-table.insert(data.raw.module["speed-module-3"].limitation_blacklist, "breed-fish-simple")
+-- table.insert(data.raw.module["fish"].limitation, "breed-fish-simple")
+-- table.insert(data.raw.module["fish-mk02"].limitation, "breed-fish-simple")
+-- table.insert(data.raw.module["fish-mk03"].limitation, "breed-fish-simple")
+-- table.insert(data.raw.module["fish-mk04"].limitation, "breed-fish-simple")
+-- table.insert(data.raw.module["effectivity-module"].limitation_blacklist, "breed-fish-simple")
+-- table.insert(data.raw.module["effectivity-module-2"].limitation_blacklist, "breed-fish-simple")
+-- table.insert(data.raw.module["effectivity-module-3"].limitation_blacklist, "breed-fish-simple")
+-- table.insert(data.raw.module["speed-module"].limitation_blacklist, "breed-fish-simple")
+-- table.insert(data.raw.module["speed-module-2"].limitation_blacklist, "breed-fish-simple")
+-- table.insert(data.raw.module["speed-module-3"].limitation_blacklist, "breed-fish-simple")
 RECIPE("breed-fish-simple"):remove_ingredient("small-lamp"):add_unlock("fish-mk01"):set_fields{energy_required = 270, results = {{type = "item", name = "fish", amount = 12}, {type = "fluid", name = "waste-water", amount = 100}}}
 
 RECIPE("plankton-farm"):remove_ingredient("storage-tank"):remove_ingredient("electronic-circuit")

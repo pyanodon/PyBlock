@@ -116,7 +116,7 @@ RECIPE {
   results = {
     { type = "item", name = "native-flora", amount = 1, probability = 0.02 }
   },
-}
+}:add_unlock("automation-science-pack")
 
 RECIPE {
   type = "recipe",
@@ -135,7 +135,7 @@ RECIPE {
     { type = "item", name = "soil", amount_min = 0, amount_max = 8, probability = 0.5 }
   },
   main_product = "native-flora"
-}
+}:add_unlock("automation-science-pack")
 
 --UNUSED
 

@@ -100,8 +100,7 @@ require("prototypes/mapgen")
 --require("prototypes/updates/pyfusionenergy-updates")
 --require('prototypes/updates/pyhightech-updates')
 
---add driftwood for closer logs and saps
-local noise = require("noise")
+--add driftwood for closer logs
 data:extend({
   {
     type = "fish",
@@ -120,7 +119,7 @@ data:extend({
     order = "b-a",
     collision_box = {{-0.75, -0.75}, {0.75, 0.75}},
     selection_box = {{-0.5, -0.3}, {0.5, 0.3}},
-    collision_mask = {"ground-tile", "colliding-with-tiles-only"},
+    collision_mask = { layers = { ground_tile = true }, colliding_with_tiles_only = true },
     pictures = {
       {
         filename = '__PyBlock__/graphics/icons/driftwood.png',
@@ -130,15 +129,10 @@ data:extend({
         height = 64,
         scale = 0.5
       }
-  },
+    },
     autoplace = {
-      probability_expression = noise.define_noise_function( function(x, y, tile, map)
-        -- equiv to: limited_water < 0 and 0 or 1
-        local limited_water = noise.clamp(noise.var("wlc_elevation_minimum"), 0, 1)
-        -- 0.4% or 1.4%
-        return 0.002 + (0.01 * limited_water)
-      end),
-    order = "driftwood"
+      probability_expression = data.raw.tree.seaweed.autoplace.probability_expression,
+      order = "driftwood"
     }
   }
 })
@@ -147,14 +141,14 @@ data:extend({
 local seaweed = table.deepcopy(data.raw.tree.seaweed)
 data.raw.tree.seaweed = nil
 seaweed.type = "fish"
-seaweed.autoplace = {
-  probability_expression = noise.define_noise_function( function(x, y, tile, map)
-    -- equiv to: limited_water < 0 and 0 or 1
-    local limited_water = noise.clamp(noise.var("wlc_elevation_minimum"), 0, 1)
-    -- 0.2% or 1.2%
-    return 0.001 + (0.01 * limited_water)
-  end)
-}
+-- seaweed.autoplace = {
+--   probability_expression = noise.define_noise_function( function(x, y, tile, map)
+--     -- equiv to: limited_water < 0 and 0 or 1
+--     local limited_water = noise.clamp(noise.var("wlc_elevation_minimum"), 0, 1)
+--     -- 0.2% or 1.2%
+--     return 0.001 + (0.01 * limited_water)
+--   end)
+-- }
 data.raw.fish.seaweed = seaweed
 
 -- allow all inserters to fish
@@ -200,7 +194,7 @@ local ores = {
   ["copper-ore"] = {
     recipe_extension = "copper",
     amount = 8,
-    technology = "",
+    technology = "ash-separation",
     byproduct_probability = 0.2
   },
   ["ore-aluminium"] = {
@@ -269,19 +263,48 @@ for o, ore in pairs(ores) do
   end
 end
 
+-- get rid of the steam power tech
+TECHNOLOGY("steam-power"):set_fields{hidden = true}
+for e, effect in pairs(data.raw["technology"]["steam-power"].effects) do
+  if effect.type == "unlock-recipe" then
+    RECIPE(effect.recipe):remove_unlock("steam-power"):set_fields{enabled = true}
+  end
+end
+
+-- remove required recipes from automation science pack
+RECIPE("empty-planter-box"):remove_unlock("automation-science-pack"):set_fields{enabled = true}
+RECIPE("soil"):remove_unlock("automation-science-pack"):set_fields{enabled = true}
+
+-- remove wpu mk01 from auto sci
+RECIPE("wpu"):remove_unlock("automation-science-pack")
+
+-- move starter ash separation recipes to ash-separation and set trigger tech
+RECIPE("ash-separation"):add_unlock("ash-separation"):set_fields{enabled = false}
+RECIPE("solid-separator"):add_unlock("ash-separation"):set_fields{enabled = false}
+TECHNOLOGY("ash-separation"):set_fields{unit = nil, research_trigger = { type = "craft-item", item = "ash", count = 200 }}:set_fields{prerequisites = {"atomizer-mk00"}}
+RECIPE("copper-plate"):add_unlock("ash-separation"):set_fields{enabled = false}
+RECIPE("inductor1"):add_unlock("ash-separation"):set_fields{enabled = false}
+
+-- set automation science pack to require 50 copper plates cause you gonna need them
+TECHNOLOGY("automation-science-pack"):set_fields{research_trigger = { type = "craft-item", item = "copper-plate", count = 50 }}:set_fields{prerequisites = {"ash-separation"}}
+
 -- burner/steam mk00 recipe adjustments
 RECIPE("wpu"):add_ingredient("inductor1", 12):add_ingredient("burner-wpu", 1):add_unlock("wood-processing"):set_fields{enabled = false}
 
-RECIPE("soil-extractormk01"):remove_ingredient("burner-mining-drill"):add_ingredient("burner-soil-extractor", 1):add_unlock("soil-washing"):set_fields{enabled = false}
+RECIPE("soil-extractor-mk01"):remove_ingredient("burner-mining-drill"):add_ingredient("burner-soil-extractor", 1)
 
-RECIPE("washer"):remove_ingredient("steam-engine"):add_ingredient("burner-washer", 1):add_ingredient("electronic-circuit"):add_unlock("latex"):remove_unlock("soil-washing")
+RECIPE("washer"):remove_ingredient("steam-engine"):add_ingredient("burner-washer", 1)
 
-RECIPE("distilator"):add_ingredient("basic-ddc"):remove_unlock("coal-processing-1"):add_unlock("tar-processing")
-
-RECIPE("collector"):remove_ingredient("soil-extractormk01"):add_ingredient("burner-soil-extractor", 1)
-RECIPE("cultivator-mk01"):remove_ingredient("soil-extractormk01"):add_ingredient("burner-soil-extractor", 1)
+RECIPE("flora-collector-mk01"):remove_ingredient("soil-extractor-mk01"):add_ingredient("burner-soil-extractor", 1)
 
 RECIPE("compost-plant-mk01"):add_ingredient("compost-plant-mk00", 1):remove_unlock("compost"):add_unlock("fertilizer-mk01")
+
+-- move atomizer recipes to new trigger tech
+RECIPE("fawogae-to-iron"):add_unlock("atomizer-mk00"):set_fields{enabled = false}
+RECIPE("iron-plate"):add_unlock("atomizer-mk00"):set_fields{enabled = false}
+
+-- add burner atomizer to atomizer mk01 recipe
+RECIPE("atomizer-mk01"):remove_ingredient("washer"):add_ingredient("atomizer-mk00")
 
 -- data.raw.technology["mega-farm"].unit.ingredients = {{"automation-science-pack", 1},{"py-science-pack-1",1}}
 -- TECHNOLOGY("mega-farm"):set_fields{prerequisites = {}}

@@ -67,19 +67,19 @@ ENTITY {
   match_animation_speed_to_activity = false,
   fluid_boxes = {
     {
-      production_type = "input",
+      flow_direction = "input",
       -- pipe_picture = {
         -- north = {
-        --   filename = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.up.filename,
-        --   width = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.up.width,
-        --   height = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.up.height,
-        --   shift = {-data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.up.width, -data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.up.height}
+        --   filename = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.north.filename,
+        --   width = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.north.width,
+        --   height = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.north.height,
+        --   shift = {-data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.north.width, -data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.north.height}
         -- },
-        -- east = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.right,
-        -- south = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.down,
-        -- west = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.left
+        -- east = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.east,
+        -- south = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.south,
+        -- west = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.west
       -- },
-      pipe_covers = DATA.Pipes.covers(true, true, true, true),
+      pipe_covers = py.pipe_covers(true, true, true, true),
       base_area = 10,
       base_level = -1,
       pipe_connections = {
@@ -90,9 +90,9 @@ ENTITY {
       },
     },
     -- {
-    --   production_type = "output",
-    --   pipe_covers = DATA.Pipes.covers(true, true, true, true),
-    --   pipe_picture = DATA.Pipes.pictures("pipe-to-ground", nil, {-0.05, -0.8}, nil, nil, pipes),
+    --   flow_direction = "output",
+    --   pipe_covers = py.pipe_covers(true, true, true, true),
+    --   pipe_picture = py.pipe_pictures("pipe-to-ground", nil, {-0.05, -0.8}, nil, nil, pipes),
     --   base_level = 1,
     --   pipe_connections = {{ position = {0, -4}, type = 'output' }},
     -- },
@@ -107,7 +107,7 @@ ENTITY {
     emissions_per_minute = 1,
   },
   energy_usage = "650kW",
-  collision_mask = {"item-layer", "object-layer", "water-tile"},
+  collision_mask = {layers = {item = true, object = true, water_tile = true}},
   vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
   working_sound = {
     sound = {filename = "__pyalienlifegraphics__/sounds/collector.ogg", volume = 0.9},
@@ -706,43 +706,43 @@ ENTITY {
           position = {3584, 800}
         },
         {
-          filename = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.up.filename,
-          width = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.up.width,
-          height = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.up.height,
+          filename = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.north.filename,
+          width = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.north.width,
+          height = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.north.height,
           frame_count = 1,
           repeat_count = 255,
           amimation_speed = 0.4,
-          shift = {-data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.up.width, -256-data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.up.height},
+          shift = {-data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.north.width, -256-data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.north.height},
           -- position = {0, -256}
         },
         {
-          filename = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.right.filename,
-          width = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.right.width,
-          height = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.right.height,
+          filename = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.east.filename,
+          width = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.east.width,
+          height = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.east.height,
           frame_count = 1,
           repeat_count = 255,
           amimation_speed = 0.4,
-          shift = {256-data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.right.width, -data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.right.height},
+          shift = {256-data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.east.width, -data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.east.height},
           -- position = {256, 0}
         },
         {
-          filename = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.down.filename,
-          width = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.down.width,
-          height = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.down.height,
+          filename = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.south.filename,
+          width = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.south.width,
+          height = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.south.height,
           frame_count = 1,
           repeat_count = 255,
           amimation_speed = 0.4,
-          shift = {-data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.down.width, 256-data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.down.height},
+          shift = {-data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.south.width, 256-data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.south.height},
           -- position = {0, 256}
         },
         {
-          filename = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.left.filename,
-          width = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.left.width,
-          height = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.left.height,
+          filename = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.west.filename,
+          width = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.west.width,
+          height = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.west.height,
           frame_count = 1,
           repeat_count = 255,
           amimation_speed = 0.4,
-          shift = {-256-data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.left.width, -data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.left.height},
+          shift = {-256-data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.west.width, -data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.west.height},
           -- position = {-256, 0}
         },
         {
@@ -895,43 +895,43 @@ ENTITY {
     north = {
       layers = {
         {
-          filename = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.up.filename,
-          width = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.up.width,
-          height = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.up.height,
+          filename = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.north.filename,
+          width = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.north.width,
+          height = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.north.height,
           frame_count = 1,
           repeat_count = 255,
           amimation_speed = 0.4,
-          shift = {-data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.up.width, -256-data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.up.height},
+          shift = {-data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.north.width, -256-data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.north.height},
           -- position = {0, -256}
         },
         {
-          filename = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.right.filename,
-          width = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.right.width,
-          height = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.right.height,
+          filename = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.east.filename,
+          width = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.east.width,
+          height = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.east.height,
           frame_count = 1,
           repeat_count = 255,
           amimation_speed = 0.4,
-          shift = {256-data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.right.width, -data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.right.height},
+          shift = {256-data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.east.width, -data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.east.height},
           -- position = {256, 0}
         },
         {
-          filename = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.down.filename,
-          width = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.down.width,
-          height = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.down.height,
+          filename = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.south.filename,
+          width = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.south.width,
+          height = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.south.height,
           frame_count = 1,
           repeat_count = 255,
           amimation_speed = 0.4,
-          shift = {-data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.down.width, 256-data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.down.height},
+          shift = {-data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.south.width, 256-data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.south.height},
           -- position = {0, 256}
         },
         {
-          filename = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.left.filename,
-          width = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.left.width,
-          height = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.left.height,
+          filename = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.west.filename,
+          width = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.west.width,
+          height = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.west.height,
           frame_count = 1,
           repeat_count = 255,
           amimation_speed = 0.4,
-          shift = {-256-data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.left.width, -data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.left.height},
+          shift = {-256-data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.west.width, -data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.west.height},
           -- position = {-256, 0}
         },
         {

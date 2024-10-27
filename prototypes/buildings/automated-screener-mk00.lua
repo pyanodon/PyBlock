@@ -48,74 +48,75 @@ ENTITY {
   energy_source =
   {
     type = "burner",
-    --fuel_category = "chemical",
     fuel_categories = {"chemical", "biomass"},
     effectivity = 1,
     fuel_inventory_size = 1,
     burnt_inventory_size = 1,
-    emissions_per_minute = 0.06,
+    emissions_per_minute = { pollution = 0.06 }
   },
   energy_usage = "80kW",
-  animation = {
-    layers = {
-      {
-        filename = "__pyfusionenergygraphics__/graphics/entity/automated-screener/left.png",
-        width = 96,
-        height = 256,
-        line_length = 21,
-        frame_count = 150,
-        animation_speed = 0.4,
-        shift = {-2.032, -0.5}
-      },
-      {
-        filename = "__pyfusionenergygraphics__/graphics/entity/automated-screener/left-mask.png",
-        width = 96,
-        height = 256,
-        line_length = 21,
-        frame_count = 150,
-        animation_speed = 0.4,
-        shift = {-2.032, -0.5},
-        tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
-      },
-      {
-        filename = "__pyfusionenergygraphics__/graphics/entity/automated-screener/mid.png",
-        width = 96,
-        height = 256,
-        line_length = 21,
-        frame_count = 150,
-        animation_speed = 0.4,
-        shift = {0.968, -0.5}
-      },
-      {
-        filename = "__pyfusionenergygraphics__/graphics/entity/automated-screener/mid-mask.png",
-        width = 96,
-        height = 256,
-        line_length = 21,
-        frame_count = 150,
-        animation_speed = 0.4,
-        shift = {0.968, -0.5},
-        tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
-      },
-      {
-        filename = "__pyfusionenergygraphics__/graphics/entity/automated-screener/right.png",
-        width = 38,
-        height = 256,
-        line_length = 21,
-        frame_count = 150,
-        animation_speed = 0.4,
-        shift = {3.032, -0.5}
-      },
-      {
-        filename = "__pyfusionenergygraphics__/graphics/entity/automated-screener/right-mask.png",
-        width = 38,
-        height = 256,
-        line_length = 21,
-        frame_count = 150,
-        animation_speed = 0.4,
-        shift = {3.032, -0.5},
-        tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+  graphics_set = {
+    animation = {
+      layers = {
+        {
+          filename = "__pyfusionenergygraphics__/graphics/entity/automated-screener/left.png",
+          width = 96,
+          height = 256,
+          line_length = 21,
+          frame_count = 150,
+          animation_speed = 0.4,
+          shift = {-2.032, -0.5}
+        },
+        {
+          filename = "__pyfusionenergygraphics__/graphics/entity/automated-screener/left-mask.png",
+          width = 96,
+          height = 256,
+          line_length = 21,
+          frame_count = 150,
+          animation_speed = 0.4,
+          shift = {-2.032, -0.5},
+          tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+        },
+        {
+          filename = "__pyfusionenergygraphics__/graphics/entity/automated-screener/mid.png",
+          width = 96,
+          height = 256,
+          line_length = 21,
+          frame_count = 150,
+          animation_speed = 0.4,
+          shift = {0.968, -0.5}
+        },
+        {
+          filename = "__pyfusionenergygraphics__/graphics/entity/automated-screener/mid-mask.png",
+          width = 96,
+          height = 256,
+          line_length = 21,
+          frame_count = 150,
+          animation_speed = 0.4,
+          shift = {0.968, -0.5},
+          tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+        },
+        {
+          filename = "__pyfusionenergygraphics__/graphics/entity/automated-screener/right.png",
+          width = 38,
+          height = 256,
+          line_length = 21,
+          frame_count = 150,
+          animation_speed = 0.4,
+          shift = {3.032, -0.5}
+        },
+        {
+          filename = "__pyfusionenergygraphics__/graphics/entity/automated-screener/right-mask.png",
+          width = 38,
+          height = 256,
+          line_length = 21,
+          frame_count = 150,
+          animation_speed = 0.4,
+          shift = {3.032, -0.5},
+          tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+        }
       }
-    }
+    },
   },
   vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
   working_sound = {
