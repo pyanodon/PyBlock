@@ -6,6 +6,7 @@ Date: ????
   Changes:
     - Reduced construction cost of steampowered compost plant
     - Reduced cost of automation science pack technology
+    - Increased construction cost of fish farm mk01
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.0
 Date: 2024-10-27

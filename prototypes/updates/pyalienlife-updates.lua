@@ -132,7 +132,7 @@ TECHNOLOGY("tin-mk01"):remove_pack("py-science-pack-1")
 
 TECHNOLOGY("microbiology-mk01"):remove_pack("py-science-pack-1"):set_fields{prerequisites = {}}
 
-RECIPE("fish-farm-mk01"):set_fields{ingredients = {}}:add_ingredient({type = "item", name = "steel-plate", amount = 25}):add_ingredient({type = "item", name = "glass", amount = 20}):add_ingredient("seaweed-crop-mk01")
+RECIPE("fish-farm-mk01"):set_fields{ingredients = {}}:add_ingredient({type = "item", name = "steel-plate", amount = 25}):add_ingredient({type = "item", name = "glass", amount = 20}):add_ingredient("seaweed-crop-mk01"):add_ingredient("pump")
 
 RECIPE("fish-to-tin"):remove_unlock("molecular-decohesion-mk02"):add_unlock("mining-with-fluid"):set_fields{ignore_in_pypp = false}
 
@@ -142,39 +142,10 @@ RECIPE("saline-water"):remove_unlock("vacuum-tube-electronics"):add_unlock("fish
 
 RECIPE("breed-fish-1"):remove_ingredient("biomass"):remove_ingredient("oxygen"):set_fields{results = {{type = "item", name = "fish", amount = 15}, {type = "fluid", name = "waste-water", amount = 100}}}
 
--- RECIPE{
---   name = "breed-fish-simple",
---   type = "recipe",
---   category = "fish-farm",
---   enabled = false,
---   energy_required = 270,
---   ingredients = {
---     { type = "item", name = "fish-egg", amount = 10 },
---     { type = "fluid", name = "water-saline", amount = 100 },
---   },
---   results = {
---     { type = "item", name = "fish", amount = 12 },
---     { type = "fluid", name = "waste-water", amount = 100 },
---   },
---   main_product = "fish",
---   subgroup = "py-alienlife-fish",
---   order = "b",
---   allowed_module_categories = { "fish" }
--- }:add_unlock("fish-mk01")
-
 local breed_fish = table.deepcopy(data.raw["recipe"]["breed-fish-1"])
 breed_fish.name = "breed-fish-simple"
 data.raw.recipe["breed-fish-simple"] = breed_fish
--- table.insert(data.raw.module["fish"].limitation, "breed-fish-simple")
--- table.insert(data.raw.module["fish-mk02"].limitation, "breed-fish-simple")
--- table.insert(data.raw.module["fish-mk03"].limitation, "breed-fish-simple")
--- table.insert(data.raw.module["fish-mk04"].limitation, "breed-fish-simple")
--- table.insert(data.raw.module["effectivity-module"].limitation_blacklist, "breed-fish-simple")
--- table.insert(data.raw.module["effectivity-module-2"].limitation_blacklist, "breed-fish-simple")
--- table.insert(data.raw.module["effectivity-module-3"].limitation_blacklist, "breed-fish-simple")
--- table.insert(data.raw.module["speed-module"].limitation_blacklist, "breed-fish-simple")
--- table.insert(data.raw.module["speed-module-2"].limitation_blacklist, "breed-fish-simple")
--- table.insert(data.raw.module["speed-module-3"].limitation_blacklist, "breed-fish-simple")
+
 RECIPE("breed-fish-simple"):remove_ingredient("small-lamp"):add_unlock("fish-mk01"):set_fields{energy_required = 270, results = {{type = "item", name = "fish", amount = 12}, {type = "fluid", name = "waste-water", amount = 100}}}
 
 RECIPE("plankton-farm"):remove_ingredient("storage-tank"):remove_ingredient("electronic-circuit")
