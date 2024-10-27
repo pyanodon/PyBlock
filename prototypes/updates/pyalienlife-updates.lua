@@ -63,7 +63,7 @@ data.raw["assembling-machine"]["spore-collector-mk01"].energy_usage = "12kW"
 RECIPE("coal-fawogae"):set_fields{enabled = true}:remove_unlock("fawogae-mk01"):set_fields{category = "distilator"}:set_fields{results = {{type = "item", name = "raw-coal", amount = 5}}}
 
 -- seaweed
-RECIPE("seaweed-crop-mk01"):remove_ingredient("tin-plate"):remove_ingredient("limestone")
+RECIPE("seaweed-crop-mk01"):remove_ingredient("tin-plate")
 
 -- botanical nursery
 RECIPE("botanical-nursery"):remove_ingredient("fluid-drill-mk01")
