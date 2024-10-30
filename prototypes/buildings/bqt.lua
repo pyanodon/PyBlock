@@ -43,7 +43,7 @@ ENTITY {
     module_specification = {
         module_slots = 0
     },
-    allowed_effects = {"consumption", "speed", "productivity", "pollution"},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
     crafting_categories = {"quenching-tower"},
     crafting_speed = 1,
     energy_source =

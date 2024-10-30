@@ -45,7 +45,7 @@ ENTITY {
     module_specification = {
         module_slots = 1
     },
-    allowed_effects = {"consumption", "speed", "productivity", "pollution"},
+    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
     crafting_categories = {"slaughterhouse","slaughterhouse-auog","slaughterhouse-ulric","slaughterhouse-mukmoux","slaughterhouse-arthurian","slaughterhouse-dhilmos","slaughterhouse-scrondrix","slaughterhouse-phadai","slaughterhouse-fish","slaughterhouse-phagnot","slaughterhouse-kmauts","slaughterhouse-dingrits","slaughterhouse-xeno","slaughterhouse-cridren","slaughterhouse-antelope","slaughterhouse-zipir","slaughterhouse-trits","slaughterhouse-vonix","slaughterhouse-vrauks","slaughterhouse-xyhiphoe","slaughterhouse-korlex"},
     crafting_speed = 0.5,
     energy_source =
