@@ -14,4 +14,8 @@ data:extend
 		type = "recipe-category",
 		name = "geowater",
 	},
+  {
+    type = "recipe-category",
+    name = "cultivation"
+  },
 }

@@ -1,4 +1,105 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.0.1
+Date: ????
+  Bugfixes:
+    - Moved fawogae with manure recipe from fawogae mk02 to fawogae mk01
+  Changes:
+    - Reduced construction cost of steampowered compost plant
+    - Reduced cost of automation science pack technology
+    - Increased construction cost of fish farm mk01
+    - Increased construction cost of seaweed crop facility mk01
+---------------------------------------------------------------------------------------------------
+Version: 3.0.0
+Date: 2024-10-27
+  Bugfixes:
+    - Crude DDC shows pipes when no fluid recipe is selected
+    - Fixed the game not loading because of stupid naming conventions
+    - Removed the steam power technology, as it completely breaks progression
+    - Reworked trigger technologies to rebalance progression
+  Features:
+    - Added steampowered compost plant to composting
+    - Added steampowered soil extractor
+    - Added steampowered wood processing unit to automation science pack
+    - Moved ash separation to a trigger tech
+    - Moved early molecular decohesion to trigger tech
+    - Added belts and mechanical inserters to starter items
+  Changes:
+    - Reduced count of some starter items
+    - Added new fluid connections to crude DDC
+    - Moved wood processing unit mk01 to wood processing
+    - Moved soil extractor mk01 to soil washing
+    - Moved washer mk01 from soil washing to latex
+    - Moved compost plant mk01 from composting to fertilizer mk01
+    - Reverted compost plant mk01 to original recipe
+    - Added air core inductor (12) and steampowered wood processing unit (1) to wood processing unit mk01 recipe
+    - Changed burner mining drill to steampowered soil extractor in soil extractor mk01 recipe
+    - Changed steam engine to steampowered washer in washer mk01 recipe
+    - Added simple circuit board (3) to washer mk01 recipe
+    - Moved ddc mk01 from coal processing 1 to tar processing
+    - Added crude ddc to ddc mk01 recipe
+    - Changed spore collector from electrical to steam powered
+    - Reduced copper plate, log, and stone count in starting inventory
+    - Moved native flora recipes to new automation science pack recipe
+    - Changed cultivator to be consistent with the changes to the flora collector
+---------------------------------------------------------------------------------------------------
+Version: 2.0.6
+Date: 2024-10-08
+  Changes:
+    - Updated cultivator locale
+    - Added cultivator mk02-mk04, unlocked alongside the respective collector and with the same recipe
+    - Debuffed fawogae to coal for the upcoming burner stage
+---------------------------------------------------------------------------------------------------
+Version: 2.0.5
+Date: 2024-10-08
+  Bugfixes:
+    - Added py1 back to the molecular decohesion technology
+    - Fixed simple fish breeding recipe not having fish as allowed modules
+  Changes:
+    - Moved automated screener mk0 to it's own crafting subcategory
+    - Moved atomizer mk0 to the mk0 crafting category
+    - Moved burner destructive distillation column to the mk0 crafting category
+    - Added recipes for kimberlite rock
+    - Buffed fawogae to coal
+    - Modified soot separation recipes, making them produce other ores as byproducts
+  Locale:
+    - Added localization to the cultivator
+---------------------------------------------------------------------------------------------------
+Version: 2.0.4
+Date: 2024-10-03
+  Changes:
+    - Added driftwood for simpler and easier collection of wood
+    - Make seaweed float around
+    - Allow inserters to pick up seaweed and fish
+    - Changed geothermal plant to a fixed recipe
+    - Removed biosample from seaweed recipe
+    - Removed fake bioreserve recipe
+    - Rebuilt tech tree from the ground up
+    - Moved phytomining 2 to Py2
+    - Re-added native flora to automation science pack
+  Bugfixes:
+    - Re-added the geothermal plant animation
+    - Allow steampowered washers to be placed adjacent
+    - Shift xenobiology and biotech recipes around for continuity and ordering
+  Native Flora:
+    - Added cultivator, a copy of the collector with the express purpose of creating native flora from nothing
+    - Added recipe to get the first native flora
+    - Added recipe to duplicate native flora
+  Alienlife:
+    - Added a moss bootstrapping recipe
+    - Added a sap bootstrapping recipe
+    - Reintroduce native flora to vrauk bootstrapping recipe
+  Fish:
+    - Added phytoplankton back to fish egg mk01 recipe
+    - Added biomass back to fish mk01 recipe
+    - Added fish breeding recipe that does not take lamps, but is slower
+  Fawogae:
+    - Re-added power cost to fawogae plantation and spore collector, but it is less than half of the normal amount
+    - Increased productivity of fawogae -> coal from 2 to 3 -> 3 to 5
+    - Moved fawogae codex from navens mk01 to fawogae mk01 for yaedols
+  Yaedols:
+    - Added storage tank and duralumin to yaedols culture mk01
+    - Yaedols sample now takes some ingredients from the normal recipe
+---------------------------------------------------------------------------------------------------
 Version: 2.0.3
 Date: 2023-9-15
   Changes:
