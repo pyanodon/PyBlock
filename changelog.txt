@@ -3,6 +3,7 @@ Version: 3.0.1
 Date: ????
   Bugfixes:
     - Moved fawogae with manure recipe from fawogae mk02 to fawogae mk01
+    - Increased log count in starting inventory
   Changes:
     - Added locale names for sap extraction, moss cultivation, and native flora cultivation
     - Decreased sap extraction time from 160s to 80s
