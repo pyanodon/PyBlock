@@ -128,10 +128,10 @@ for i = 1, 4 do
         pipe_covers = py.pipe_covers(true, true, true, true),
         volume = 10,
         pipe_connections = {
-          { position = {0, -3.398}, flow_direction = "input", direction = 0 },
-          { position = {3.398, 0}, flow_direction = "input", direction = 4 },
-          { position = {0, 3.398}, flow_direction = "input", direction = 8 },
-          { position = {-3.398, 0}, flow_direction = "input", direction = 12 },
+          { position = {0, -3}, flow_direction = "input", direction = 0 },
+          { position = {3, 0}, flow_direction = "input", direction = 4 },
+          { position = {0, 3}, flow_direction = "input", direction = 8 },
+          { position = {-3, 0}, flow_direction = "input", direction = 12 },
         }
       }
     },
@@ -154,7 +154,7 @@ for i = 1, 4 do
               height = 80,
               frame_count = 1,
               repeat_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(-93, -112),
               position = {3840, 800}
             },
@@ -166,7 +166,7 @@ for i = 1, 4 do
               height = 80,
               frame_count = 1,
               repeat_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(-61, -112),
               position = {1408, 800}
             },
@@ -178,7 +178,7 @@ for i = 1, 4 do
               height = 80,
               frame_count = 1,
               repeat_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(-29, -112),
               position = {3008, 800}
             },
@@ -190,7 +190,7 @@ for i = 1, 4 do
               height = 80,
               frame_count = 1,
               repeat_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(3, -112),
               position = {896, 800}
             },
@@ -202,7 +202,7 @@ for i = 1, 4 do
               height = 80,
               frame_count = 1,
               repeat_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(35, -112),
               position = {3584, 800}
             },
@@ -214,7 +214,7 @@ for i = 1, 4 do
               height = 80,
               frame_count = 1,
               repeat_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(67, -112),
               position = {2624, 800}
             },
@@ -226,7 +226,7 @@ for i = 1, 4 do
               height = 80,
               frame_count = 1,
               repeat_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(99, -112),
               position = {1344, 800}
             },
@@ -238,7 +238,7 @@ for i = 1, 4 do
               height = 80,
               frame_count = 1,
               repeat_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(-93, -80),
               position = {1536, 800}
             },
@@ -250,7 +250,7 @@ for i = 1, 4 do
               height = 80,
               frame_count = 1,
               repeat_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(-61, -80),
               position = {2944, 640}
             },
@@ -262,7 +262,7 @@ for i = 1, 4 do
               height = 80,
               frame_count = 1,
               repeat_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(-29, -80),
               position = {1536, 640}
             },
@@ -274,7 +274,7 @@ for i = 1, 4 do
               height = 80,
               frame_count = 1,
               repeat_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(3, -80),
               position = {2688, 560}
             },
@@ -286,7 +286,7 @@ for i = 1, 4 do
               height = 80,
               frame_count = 1,
               repeat_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(35, -80),
               position = {896, 640}
             },
@@ -298,7 +298,7 @@ for i = 1, 4 do
               height = 80,
               frame_count = 1,
               repeat_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(67, -80),
               position = {2432, 560}
             },
@@ -310,7 +310,7 @@ for i = 1, 4 do
               height = 80,
               frame_count = 1,
               repeat_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(99, -80),
               position = {256, 800}
             },
@@ -322,7 +322,7 @@ for i = 1, 4 do
               height = 80,
               frame_count = 1,
               repeat_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(-93, -48),
               position = {2240, 800}
             },
@@ -334,7 +334,7 @@ for i = 1, 4 do
               height = 80,
               frame_count = 1,
               repeat_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(-61, -48),
               position = {3776, 640}
             },
@@ -346,7 +346,7 @@ for i = 1, 4 do
               height = 80,
               frame_count = 1,
               repeat_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(-29, -48),
               position = {1408, 400}
             },
@@ -358,7 +358,7 @@ for i = 1, 4 do
               height = 80,
               frame_count = 1,
               repeat_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(3, -48),
               position = {1600, 480}
             },
@@ -370,7 +370,7 @@ for i = 1, 4 do
               height = 80,
               frame_count = 1,
               repeat_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(35, -48),
               position = {1152, 320}
             },
@@ -382,7 +382,7 @@ for i = 1, 4 do
               height = 80,
               frame_count = 1,
               repeat_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(67, -48),
               position = {0, 640}
             },
@@ -394,7 +394,7 @@ for i = 1, 4 do
               height = 80,
               frame_count = 1,
               repeat_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(99, -48),
               position = {3264, 800}
             },
@@ -406,7 +406,7 @@ for i = 1, 4 do
               height = 80,
               frame_count = 1,
               repeat_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(-93, -16),
               position = {640, 720}
             },
@@ -418,7 +418,7 @@ for i = 1, 4 do
               height = 80,
               frame_count = 1,
               repeat_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(-61, -16),
               position = {1664, 560}
             },
@@ -430,7 +430,7 @@ for i = 1, 4 do
               height = 80,
               frame_count = 1,
               repeat_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(-29, -16),
               position = {3328, 320}
             },
@@ -442,7 +442,7 @@ for i = 1, 4 do
               height = 80,
               frame_count = 1,
               repeat_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(3, -16),
               position = {3712, 480}
             },
@@ -454,7 +454,7 @@ for i = 1, 4 do
               height = 80,
               frame_count = 1,
               repeat_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(35, -16),
               position = {3968, 400}
             },
@@ -466,7 +466,7 @@ for i = 1, 4 do
               height = 80,
               frame_count = 1,
               repeat_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(67, -16),
               position = {2944, 480}
             },
@@ -478,7 +478,7 @@ for i = 1, 4 do
               height = 80,
               frame_count = 1,
               repeat_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(99, -16),
               position = {1472, 800}
             },
@@ -490,7 +490,7 @@ for i = 1, 4 do
               height = 80,
               frame_count = 1,
               repeat_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(-93, 16),
               position = {896, 720}
             },
@@ -502,7 +502,7 @@ for i = 1, 4 do
               height = 80,
               frame_count = 1,
               repeat_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(-61, 16),
               position = {576, 640}
             },
@@ -514,7 +514,7 @@ for i = 1, 4 do
               height = 80,
               frame_count = 1,
               repeat_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(-29, 16),
               position = {3840, 480}
             },
@@ -526,7 +526,7 @@ for i = 1, 4 do
               height = 80,
               frame_count = 1,
               repeat_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(3, 16),
               position = {2880, 480}
             },
@@ -538,7 +538,7 @@ for i = 1, 4 do
               height = 80,
               frame_count = 1,
               repeat_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(35, 16),
               position = {3328, 400}
             },
@@ -550,7 +550,7 @@ for i = 1, 4 do
               height = 80,
               frame_count = 1,
               repeat_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(67, 16),
               position = {3584, 560}
             },
@@ -562,7 +562,7 @@ for i = 1, 4 do
               height = 80,
               frame_count = 1,
               repeat_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(99, 16),
               position = {3456, 800}
             },
@@ -574,7 +574,7 @@ for i = 1, 4 do
               height = 80,
               frame_count = 1,
               repeat_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(-93, 48),
               position = {2176, 800}
             },
@@ -586,7 +586,7 @@ for i = 1, 4 do
               height = 80,
               frame_count = 1,
               repeat_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(-61, 48),
               position = {1024, 640}
             },
@@ -598,7 +598,7 @@ for i = 1, 4 do
               height = 80,
               frame_count = 1,
               repeat_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(-29, 48),
               position = {1856, 640}
             },
@@ -610,7 +610,7 @@ for i = 1, 4 do
               height = 80,
               frame_count = 1,
               repeat_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(3, 48),
               position = {2496, 640}
             },
@@ -622,7 +622,7 @@ for i = 1, 4 do
               height = 80,
               frame_count = 1,
               repeat_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(35, 48),
               position = {3328, 480}
             },
@@ -634,7 +634,7 @@ for i = 1, 4 do
               height = 80,
               frame_count = 1,
               repeat_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(67, 48),
               position = {2752, 560}
             },
@@ -646,7 +646,7 @@ for i = 1, 4 do
               height = 80,
               frame_count = 1,
               repeat_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(99, 48),
               position = {768, 800}
             },
@@ -658,7 +658,7 @@ for i = 1, 4 do
               height = 80,
               frame_count = 1,
               repeat_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(-93, 80),
               position = {2304, 800}
             },
@@ -670,7 +670,7 @@ for i = 1, 4 do
               height = 80,
               frame_count = 1,
               repeat_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(-61, 80),
               position = {1344, 800}
             },
@@ -682,7 +682,7 @@ for i = 1, 4 do
               height = 80,
               frame_count = 1,
               repeat_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(-29, 80),
               position = {2112, 800}
             },
@@ -694,7 +694,7 @@ for i = 1, 4 do
               height = 80,
               frame_count = 1,
               repeat_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(3, 80),
               position = {2432, 800}
             },
@@ -706,7 +706,7 @@ for i = 1, 4 do
               height = 80,
               frame_count = 1,
               repeat_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(35, 80),
               position = {1600, 800}
             },
@@ -718,7 +718,7 @@ for i = 1, 4 do
               height = 80,
               frame_count = 1,
               repeat_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(67, 80),
               position = {128, 800}
             },
@@ -730,7 +730,7 @@ for i = 1, 4 do
               height = 80,
               frame_count = 1,
               repeat_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(99, 80),
               position = {3584, 800}
             },
@@ -780,7 +780,7 @@ for i = 1, 4 do
               height = 288,
               line_length = 64,
               frame_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(-96, 0)
             },
             {
@@ -789,7 +789,7 @@ for i = 1, 4 do
               height = 288,
               line_length = 64,
               frame_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(-64, 0)
             },
             {
@@ -798,7 +798,7 @@ for i = 1, 4 do
               height = 288,
               line_length = 64,
               frame_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(-32, 0)
             },
             {
@@ -807,7 +807,7 @@ for i = 1, 4 do
               height = 288,
               line_length = 64,
               frame_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(0, 0)
             },
             {
@@ -816,7 +816,7 @@ for i = 1, 4 do
               height = 288,
               line_length = 64,
               frame_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(32, 0)
             },
             {
@@ -825,7 +825,7 @@ for i = 1, 4 do
               height = 288,
               line_length = 64,
               frame_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(64, 0)
             },
             {
@@ -834,7 +834,7 @@ for i = 1, 4 do
               height = 288,
               line_length = 64,
               frame_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(96, 0)
             },
             {
@@ -843,7 +843,7 @@ for i = 1, 4 do
               height = 288,
               line_length = 64,
               frame_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(128, 0)
             },
     --MASKS
@@ -853,7 +853,7 @@ for i = 1, 4 do
               height = 288,
               line_length = 64,
               frame_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               tint = py.tints[i],
               shift = util.by_pixel(-96, 0)
             },
@@ -863,7 +863,7 @@ for i = 1, 4 do
               height = 288,
               line_length = 64,
               frame_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               tint = py.tints[i],
               shift = util.by_pixel(-64, 0)
             },
@@ -873,7 +873,7 @@ for i = 1, 4 do
               height = 288,
               line_length = 64,
               frame_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               tint = py.tints[i],
               shift = util.by_pixel(-32, 0)
             },
@@ -883,7 +883,7 @@ for i = 1, 4 do
               height = 288,
               line_length = 64,
               frame_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               tint = py.tints[i],
               shift = util.by_pixel(0, 0)
             },
@@ -893,7 +893,7 @@ for i = 1, 4 do
               height = 288,
               line_length = 64,
               frame_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               tint = py.tints[i],
               shift = util.by_pixel(32, 0)
             },
@@ -903,7 +903,7 @@ for i = 1, 4 do
               height = 288,
               line_length = 64,
               frame_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               tint = py.tints[i],
               shift = util.by_pixel(64, 0)
             },
@@ -913,7 +913,7 @@ for i = 1, 4 do
               height = 288,
               line_length = 64,
               frame_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               tint = py.tints[i],
               shift = util.by_pixel(96, 0)
             },
@@ -969,7 +969,7 @@ for i = 1, 4 do
               height = 288,
               line_length = 64,
               frame_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(-96, 0)
             },
             {
@@ -978,7 +978,7 @@ for i = 1, 4 do
               height = 288,
               line_length = 64,
               frame_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(-64, 0)
             },
             {
@@ -987,7 +987,7 @@ for i = 1, 4 do
               height = 288,
               line_length = 64,
               frame_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(-32, 0)
             },
             {
@@ -996,7 +996,7 @@ for i = 1, 4 do
               height = 288,
               line_length = 64,
               frame_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(0, 0)
             },
             {
@@ -1005,7 +1005,7 @@ for i = 1, 4 do
               height = 288,
               line_length = 64,
               frame_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(32, 0)
             },
             {
@@ -1014,7 +1014,7 @@ for i = 1, 4 do
               height = 288,
               line_length = 64,
               frame_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(64, 0)
             },
             {
@@ -1023,7 +1023,7 @@ for i = 1, 4 do
               height = 288,
               line_length = 64,
               frame_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(96, 0)
             },
             {
@@ -1032,7 +1032,7 @@ for i = 1, 4 do
               height = 288,
               line_length = 64,
               frame_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               shift = util.by_pixel(128, 0)
             },
     --MASKS
@@ -1042,7 +1042,7 @@ for i = 1, 4 do
               height = 288,
               line_length = 64,
               frame_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               tint = py.tints[i],
               shift = util.by_pixel(-96, 0)
             },
@@ -1052,7 +1052,7 @@ for i = 1, 4 do
               height = 288,
               line_length = 64,
               frame_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               tint = py.tints[i],
               shift = util.by_pixel(-64, 0)
             },
@@ -1062,7 +1062,7 @@ for i = 1, 4 do
               height = 288,
               line_length = 64,
               frame_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               tint = py.tints[i],
               shift = util.by_pixel(-32, 0)
             },
@@ -1072,7 +1072,7 @@ for i = 1, 4 do
               height = 288,
               line_length = 64,
               frame_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               tint = py.tints[i],
               shift = util.by_pixel(0, 0)
             },
@@ -1082,7 +1082,7 @@ for i = 1, 4 do
               height = 288,
               line_length = 64,
               frame_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               tint = py.tints[i],
               shift = util.by_pixel(32, 0)
             },
@@ -1092,7 +1092,7 @@ for i = 1, 4 do
               height = 288,
               line_length = 64,
               frame_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               tint = py.tints[i],
               shift = util.by_pixel(64, 0)
             },
@@ -1102,7 +1102,7 @@ for i = 1, 4 do
               height = 288,
               line_length = 64,
               frame_count = 255,
-              animation_speed = 0.2,
+              animation_speed = 0.4,
               tint = py.tints[i],
               shift = util.by_pixel(96, 0)
             }

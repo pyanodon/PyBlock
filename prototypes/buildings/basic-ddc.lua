@@ -103,8 +103,8 @@ ENTITY {
       volume = 1,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
-        { flow_direction = "output", position = {-1, -1.2}, direction = 0 },
-        { flow_direction = "output", position = {-1.2, -1}, direction = 12 }
+        { flow_direction = "output", position = {-1, -1}, direction = 0 },
+        { flow_direction = "output", position = {-1, -1}, direction = 12 }
       }
     },
     {
@@ -112,8 +112,8 @@ ENTITY {
       volume = 1,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
-        { flow_direction = "output", position = {1.2, 1}, direction = 4 },
-        { flow_direction = "output", position = {1, 1.2}, direction = 8 }
+        { flow_direction = "output", position = {1, 1}, direction = 4 },
+        { flow_direction = "output", position = {1, 1}, direction = 8 }
       }
     }
   },

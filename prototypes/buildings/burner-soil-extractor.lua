@@ -68,8 +68,8 @@ ENTITY {
         }
       }),
       pipe_connections = {
-        { flow_direction = "input-output", position = {0, 3.398}, direction = 8 },
-        { flow_direction = "input-output", position = {0, -3.398}, direction = 0 },
+        { flow_direction = "input-output", position = {0, 3}, direction = 8 },
+        { flow_direction = "input-output", position = {0, -3}, direction = 0 },
       },
       production_type = "input-output",
       filter = "steam",
@@ -108,8 +108,8 @@ ENTITY {
       }),
       volume = 20,
       pipe_connections = {
-        { flow_direction = "input-output", position = {3.398, 0}, direction = 4 },
-        { flow_direction = "input-output", position = {-3.398, 0}, direction = 12 },
+        { flow_direction = "input-output", position = {3, 0}, direction = 4 },
+        { flow_direction = "input-output", position = {-3, 0}, direction = 12 },
       }
     }
   },

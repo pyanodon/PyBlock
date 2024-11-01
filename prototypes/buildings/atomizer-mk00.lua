@@ -106,28 +106,28 @@ ENTITY {
       pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
       pipe_covers = py.pipe_covers(false, true, true, true),
       volume = 10,
-      pipe_connections = {{ flow_direction = "input", position = {1.0, -3.3}, direction = 0 }}
+      pipe_connections = {{ flow_direction = "input", position = {1, -3}, direction = 0 }}
     },
     {
       production_type = "input",
       pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
       pipe_covers = py.pipe_covers(false, true, true, true),
       volume = 10,
-      pipe_connections = {{ flow_direction = "input", position = {-1.0, 3.3}, direction = 8 }}
+      pipe_connections = {{ flow_direction = "input", position = {-1, 3}, direction = 8 }}
     },
     {
       production_type = "output",
       pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
       pipe_covers = py.pipe_covers(false, true, true, true),
       volume = 1,
-      pipe_connections = {{ flow_direction = "input", position = {1.0, 3.3}, direction = 8 }}
+      pipe_connections = {{ flow_direction = "input", position = {1, 3}, direction = 8 }}
     },
     {
       production_type = "output",
       pipe_picture = py.pipe_pictures("assembling-machine-2", nil, {0.0, -0.96}, nil, nil),
       pipe_covers = py.pipe_covers(false, true, true, true),
       volume = 1,
-      pipe_connections = {{ flow_direction = "input", position = {-1.0, -3.3}, direction = 0 }}
+      pipe_connections = {{ flow_direction = "input", position = {-1, -3}, direction = 0 }}
     }
   },
   fluid_boxes_off_when_no_fluid_recipe = true,
