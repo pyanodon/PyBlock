@@ -5,7 +5,9 @@ Date: ????
     - Moved fawogae with manure recipe from fawogae mk02 to fawogae mk01
     - Fixed pipe connections on multiple entites not being properly aligned
     - Increased log count in starting inventory
+    - Removed intermetallics from pyhtoplankton farm
   Changes:
+    - Moved waste-water voiding recipe to electrolysis
     - Added locale names for sap extraction, moss cultivation, and native flora cultivation
     - Decreased sap extraction time from 160s to 80s
     - Reduced construction cost of steampowered compost plant

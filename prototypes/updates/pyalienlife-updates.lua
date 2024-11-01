@@ -131,6 +131,8 @@ TECHNOLOGY("fish-mk01"):remove_pack("py-science-pack-1"):set_fields{prerequisite
 TECHNOLOGY("tin-mk01"):remove_pack("py-science-pack-1")
 
 TECHNOLOGY("microbiology-mk01"):remove_pack("py-science-pack-1"):set_fields{prerequisites = {}}
+RECIPE("plankton-farm"):remove_ingredient("intermetallics")
+RECIPE("waste-water-void"):remove_unlock("fish-mk01"):add_unlock("electrolysis")
 
 RECIPE("fish-farm-mk01"):set_fields{ingredients = {}}:add_ingredient({type = "item", name = "steel-plate", amount = 25}):add_ingredient({type = "item", name = "glass", amount = 20}):add_ingredient("seaweed-crop-mk01"):add_ingredient("pump")
 
