@@ -4,6 +4,8 @@ Date: ????
   Bugfixes:
     - Moved fawogae with manure recipe from fawogae mk02 to fawogae mk01
   Changes:
+    - Added locale names for sap extraction, moss cultivation, and native flora cultivation
+    - Decreased sap extraction time from 160s to 80s
     - Reduced construction cost of steampowered compost plant
     - Reduced cost of automation science pack technology
     - Increased construction cost of fish farm mk01

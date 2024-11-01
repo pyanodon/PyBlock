@@ -78,7 +78,7 @@ RECIPE {
     { type = "fluid", name = "dirty-water-light", amount = 1200 },
     { type = "item", name = "moss", amount = 1, probability = 0.08 },
   },
-  main_product = "moss"
+  main_product = ""
 }:add_unlock("moss-mk01")
 
 -- bootstrapping wood to sap
@@ -88,7 +88,7 @@ RECIPE {
   category = "fwf",
 	subgroup = "py-alienlife-sap",
   enabled = true,
-  energy_required = 160,
+  energy_required = 80,
   ingredients = {
     { type = "item", name = "wood-seedling", amount = 12 },
     { type = "fluid", name = "water", amount = 800 },
@@ -97,7 +97,7 @@ RECIPE {
     { type = "item", name = "saps", amount = 1, probability = 0.1 },
     { type = "item", name = "log", amount = 8 }
   },
-  main_product = "saps"
+  main_product = ""
 }:add_unlock("wood-processing")
 
 -- native flora recipes
@@ -116,6 +116,7 @@ RECIPE {
   results = {
     { type = "item", name = "native-flora", amount = 1, probability = 0.02 }
   },
+  main_product = ""
 }:add_unlock("automation-science-pack")
 
 RECIPE {
