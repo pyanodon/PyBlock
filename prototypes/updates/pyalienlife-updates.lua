@@ -40,24 +40,22 @@ RECIPE("fawogae-to-iron"):set_fields{enabled = true}:remove_unlock("molecular-de
 data.raw["assembling-machine"]["fawogae-plantation-mk01"].energy_usage = "30kW"
 
 data.raw["assembling-machine"]["spore-collector-mk01"].energy_usage = "12kW"
--- data.raw["assembling-machine"]["spore-collector-mk01"].energy_source = {
---   type = "fluid",
---   effectivity = 1,
---   emissions = 1,
---   fluid_box = {
---     base_area = 1,
---     height = 2,
---     base_level = -1,
---     pipe_covers = pipecoverspictures(),
---     pipe_connections = {
---       { type = "input-output", position = {-4, 0}, direction = 0 },
---       { type = "input-output", position = {4, 0}, direction = 0 },
---     },
---     filter = "steam",
---     flow_direction = "input-output",
---   },
---   scale_fluid_usage = true
--- }
+data.raw["assembling-machine"]["spore-collector-mk01"].energy_source = {
+  type = "fluid",
+  effectivity = 1,
+  emissions = 1,
+  fluid_box = {
+    volume = 2,
+    pipe_covers = pipecoverspictures(),
+    pipe_connections = {
+      { flow_direction = "input-output", position = {-3.199, 0}, direction = 12 },
+      { pipe_connections = "input-output", position = {3.199, 0}, direction = 4 },
+    },
+    filter = "steam",
+    -- flow_direction = "input-output",
+  },
+  scale_fluid_usage = true
+}
 
 -- fawogae to raw coal
 RECIPE("coal-fawogae"):set_fields{enabled = true}:remove_unlock("fawogae-mk01"):set_fields{category = "distilator"}:set_fields{results = {{type = "item", name = "raw-coal", amount = 5}}}

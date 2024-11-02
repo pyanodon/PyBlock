@@ -16,6 +16,7 @@ Date: ????
     - Increased construction cost of seaweed crop facility mk01
     - Increased fluidbox sizes
     - Correct entity color masks
+    - Reverted spore collector mk01 to steampowered
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.0
 Date: 2024-10-27
