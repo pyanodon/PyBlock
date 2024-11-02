@@ -54,7 +54,7 @@ ENTITY {
     effectivity = 1,
     emissions = 1,
     fluid_box = {
-      volume = 2,
+      volume = 200,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
         { flow_direction = "input-output", position = {-5.2,1}, direction = 12 },
@@ -93,7 +93,7 @@ ENTITY {
           frame_count = 1,
           line_length = 1,
           shift = util.by_pixel(16, -112),
-          tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+          tint = {r = 0.5, g = 0.5, b = 0.5, a = 1.0}
         },
       },
     },
@@ -124,7 +124,7 @@ ENTITY {
           width = 64,
           height = 512,
           animation_speed = 0.4,
-          tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+          tint = {r = 0.5, g = 0.5, b = 0.5, a = 1.0}
         }
       },
       {
@@ -153,7 +153,7 @@ ENTITY {
           width = 64,
           height = 512,
           animation_speed = 0.4,
-          tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+          tint = {r = 0.5, g = 0.5, b = 0.5, a = 1.0}
         }
       },
       {
@@ -182,7 +182,7 @@ ENTITY {
           width = 64,
           height = 512,
           animation_speed = 0.4,
-          tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+          tint = {r = 0.5, g = 0.5, b = 0.5, a = 1.0}
         }
       },
       {
@@ -211,7 +211,7 @@ ENTITY {
           width = 64,
           height = 512,
           animation_speed = 0.4,
-          tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+          tint = {r = 0.5, g = 0.5, b = 0.5, a = 1.0}
         }
       },
       {
@@ -240,7 +240,7 @@ ENTITY {
           width = 64,
           height = 512,
           animation_speed = 0.4,
-          tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+          tint = {r = 0.5, g = 0.5, b = 0.5, a = 1.0}
         }
       },
     }

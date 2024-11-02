@@ -40,7 +40,7 @@ burner_washer.energy_source = {
   effectivity = 1,
   emissions = 1,
   fluid_box = {
-    volume = 2,
+    volume = 200,
     pipe_covers = pipecoverspictures(),
     pipe_connections = {
       { flow_direction = "input-output", position = {-2.797, 0.5}, direction = 12 },
@@ -53,6 +53,7 @@ burner_washer.energy_source = {
 }
 burner_washer.energy_usage = "100kW"
 burner_washer.next_upgrade = "washer"
+burner_washer.graphics_set.animation.layers[2].tint = {r = 0.5, g = 0.5, b = 0.5, a = 1.0}
 data.raw["assembling-machine"]["burner-washer"] = burner_washer
 
 -- ENTITY {

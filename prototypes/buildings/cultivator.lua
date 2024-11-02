@@ -126,7 +126,7 @@ for i = 1, 4 do
       {
         production_type = "input",
         pipe_covers = py.pipe_covers(true, true, true, true),
-        volume = 10,
+        volume = 100,
         pipe_connections = {
           { position = {0, -3}, flow_direction = "input", direction = 0 },
           { position = {3, 0}, flow_direction = "input", direction = 4 },

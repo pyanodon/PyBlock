@@ -53,7 +53,7 @@ ENTITY {
     effectivity = 1,
     emissions = 1,
     fluid_box = {
-      volume = 2,
+      volume = 200,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
         { flow_direction = "input-output", position = {-2.8, 0.5}, direction = 12 },
@@ -75,7 +75,7 @@ ENTITY {
           line_length = 21,
           frame_count = 130,
           shift = {-1.5, -1.328},
-          animation_speed = 0.4
+          animation_speed = 0.42
         },
         {
           filename = "__pycoalprocessinggraphics__/graphics/entity/wpu/right.png",
@@ -84,8 +84,28 @@ ENTITY {
           line_length = 21,
           frame_count = 130,
           shift = {1.5, -1.328},
-          animation_speed = 0.4
-        }
+          animation_speed = 0.42
+        },
+        {
+          filename = "__pycoalprocessinggraphics__/graphics/entity/wpu/left-mask.png",
+          width = 96,
+          height = 277,
+          line_length = 21,
+          frame_count = 130,
+          shift = {-1.5, -1.328},
+          animation_speed = 0.42,
+          tint = {r = 0.5, g = 0.5, b = 0.5, a = 1.0}
+        },
+        {
+          filename = "__pycoalprocessinggraphics__/graphics/entity/wpu/right-mask.png",
+          width = 96,
+          height = 277,
+          line_length = 21,
+          frame_count = 130,
+          shift = {1.5, -1.328},
+          animation_speed = 0.42,
+          tint = {r = 0.5, g = 0.5, b = 0.5, a = 1.0}
+        },
       }
     }
   },

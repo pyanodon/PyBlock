@@ -100,7 +100,7 @@ ENTITY {
   fluid_boxes = {
     {
       production_type = "output",
-      volume = 1,
+      volume = 100,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
         { flow_direction = "output", position = {-1, -1}, direction = 0 },
@@ -109,7 +109,7 @@ ENTITY {
     },
     {
       production_type = "output",
-      volume = 1,
+      volume = 100,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
         { flow_direction = "output", position = {1, 1}, direction = 4 },

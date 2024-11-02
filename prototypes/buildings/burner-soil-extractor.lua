@@ -51,7 +51,7 @@ ENTITY {
     effectivity = 1,
     emissions = 1,
     fluid_box = {
-      volume = 2,
+      volume = 200,
       pipe_covers = py.pipe_covers(true, true, true, true),
       pipe_picture = py.pipe_pictures("assembling-machine-3", {0, 1}, {0, -1}, nil, nil, {
         north = {
@@ -79,13 +79,27 @@ ENTITY {
   energy_usage = "200kW",
   graphics_set = {
       animation = {
-        filename = "__pycoalprocessinggraphics__/graphics/entity/soil-extractor/soil-extractor.png",
-        width = 235,
-        height = 266,
-        frame_count = 30,
-        line_length = 6,
-        animation_speed = 0.8,
-        shift = {0.16, -0.609}
+        layers = {
+          {
+            filename = "__pycoalprocessinggraphics__/graphics/entity/soil-extractor/soil-extractor.png",
+            width = 235,
+            height = 266,
+            frame_count = 30,
+            line_length = 6,
+            animation_speed = 0.8,
+            shift = {0.16, -0.609}
+          },
+          {
+            filename = "__pycoalprocessinggraphics__/graphics/entity/soil-extractor/soil-extractor-mask.png",
+            width = 235,
+            height = 266,
+            frame_count = 30,
+            line_length = 6,
+            animation_speed = 0.8,
+            shift = {0.16, -0.609},
+            tint = {r = 0.5, g = 0.5, b = 0.5, a = 1.0}
+          }
+        }
       },
   },
   fluid_boxes = {
@@ -106,7 +120,7 @@ ENTITY {
           height = 45
         }
       }),
-      volume = 20,
+      volume = 100,
       pipe_connections = {
         { flow_direction = "input-output", position = {3, 0}, direction = 4 },
         { flow_direction = "input-output", position = {-3, 0}, direction = 12 },

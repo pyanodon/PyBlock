@@ -75,7 +75,7 @@ ENTITY {
           frame_count = 150,
           animation_speed = 0.4,
           shift = {-2.032, -0.5},
-          tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+          tint = {r = 0.5, g = 0.5, b = 0.5, a = 1.0}
         },
         {
           filename = "__pyfusionenergygraphics__/graphics/entity/automated-screener/mid.png",
@@ -94,7 +94,7 @@ ENTITY {
           frame_count = 150,
           animation_speed = 0.4,
           shift = {0.968, -0.5},
-          tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+          tint = {r = 0.5, g = 0.5, b = 0.5, a = 1.0}
         },
         {
           filename = "__pyfusionenergygraphics__/graphics/entity/automated-screener/right.png",
@@ -113,7 +113,7 @@ ENTITY {
           frame_count = 150,
           animation_speed = 0.4,
           shift = {3.032, -0.5},
-          tint = {r = 1.0, g = 1.0, b = 0.0, a = 1.0}
+          tint = {r = 0.5, g = 0.5, b = 0.5, a = 1.0}
         }
       }
     },

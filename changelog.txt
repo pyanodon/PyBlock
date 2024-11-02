@@ -14,6 +14,8 @@ Date: ????
     - Reduced cost of automation science pack technology
     - Increased construction cost of fish farm mk01
     - Increased construction cost of seaweed crop facility mk01
+    - Increased fluidbox sizes
+    - Correct entity color masks
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.0
 Date: 2024-10-27
