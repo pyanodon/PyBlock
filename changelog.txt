@@ -7,6 +7,7 @@ Date: ????
     - Increased log count in starting inventory
     - Removed intermetallics from pyhtoplankton farm
   Changes:
+    - Re-added biomass to fish recipes
     - Moved waste-water voiding recipe to electrolysis
     - Added locale names for sap extraction, moss cultivation, and native flora cultivation
     - Decreased sap extraction time from 160s to 80s
