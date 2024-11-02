@@ -7,6 +7,8 @@ Date: ????
     - Increased log count in starting inventory
     - Removed intermetallics from pyhtoplankton farm
   Changes:
+    - Moved Water Animals - Stage 1 to automation science
+    - Move Tin Processing 1 back to py science 1
     - Re-added biomass to fish recipes
     - Moved waste-water voiding recipe to electrolysis
     - Added locale names for sap extraction, moss cultivation, and native flora cultivation
