@@ -78,7 +78,7 @@ RECIPE {
     { type = "fluid", name = "dirty-water-light", amount = 1200 },
     { type = "item", name = "moss", amount = 1, probability = 0.08 },
   },
-  main_product = ""
+  main_product = "moss"
 }:add_unlock("moss-mk01")
 
 -- bootstrapping wood to sap
@@ -97,7 +97,7 @@ RECIPE {
     { type = "item", name = "saps", amount = 1, probability = 0.1 },
     { type = "item", name = "log", amount = 8 }
   },
-  main_product = ""
+  main_product = "saps"
 }:add_unlock("wood-processing")
 
 -- native flora recipes
@@ -116,7 +116,7 @@ RECIPE {
   results = {
     { type = "item", name = "native-flora", amount = 1, probability = 0.02 }
   },
-  main_product = ""
+  show_amount_in_title = false
 }:add_unlock("automation-science-pack")
 
 RECIPE {
