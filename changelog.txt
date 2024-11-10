@@ -2,6 +2,7 @@
 Version: 3.0.1
 Date: ????
   Bugfixes:
+    - Fixed a crash introduced in recent Pymods updates
     - Moved fawogae with manure recipe from fawogae mk02 to fawogae mk01
     - Fixed pipe connections on multiple entites not being properly aligned
     - Increased log count in starting inventory
