@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.0
-Date: ????
+Date: 2024-11-11
   Bugfixes:
     - Fixed a crash introduced in recent Pymods updates
     - Moved fawogae with manure recipe from fawogae mk02 to fawogae mk01
@@ -10,6 +10,7 @@ Date: ????
     - Fixed terrain generation
     - Fixed efficiency modules, bulk inserter, and inserter hand size having no prerequesites
     - Fixed driftwood not spawning
+    - Fixed the first Auog technology not having a name
   Changes:
     - Added support for a modified Py Recommended map settings error message, courtesy of PyCoal (thanks melon)
     - Moved Water Animals - Stage 1 to automation science
