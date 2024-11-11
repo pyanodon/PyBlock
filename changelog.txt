@@ -10,7 +10,7 @@ Date: ????
     - Fixed terrain generation
     - Fixed driftwood not spawning
   Changes:
-    - Added support for a modified Py Recommended map settings error message
+    - Added support for a modified Py Recommended map settings error message, courtesy of PyCoal (thanks melon)
     - Moved Water Animals - Stage 1 to automation science
     - Move Tin Processing 1 back to py science 1
     - Re-added biomass to fish recipes
