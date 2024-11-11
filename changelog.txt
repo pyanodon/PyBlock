@@ -1,5 +1,5 @@
 ---------------------------------------------------------------------------------------------------
-Version: 3.0.1
+Version: 3.1.0
 Date: ????
   Bugfixes:
     - Fixed a crash introduced in recent Pymods updates
@@ -8,6 +8,7 @@ Date: ????
     - Increased log count in starting inventory
     - Removed intermetallics from pyhtoplankton farm
     - Fixed terrain generation
+    - Fixed efficiency modules, bulk inserter, and inserter hand size having no prerequesites
     - Fixed driftwood not spawning
   Changes:
     - Added support for a modified Py Recommended map settings error message, courtesy of PyCoal (thanks melon)
