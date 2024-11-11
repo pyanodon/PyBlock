@@ -118,8 +118,8 @@ data:extend {
     },
     autoplace = { probability_expression = 0.008 },
     protected_from_tile_building = false
-    }
   }
+}
 
 
 -- create "floating" seaweed that moves
@@ -154,11 +154,12 @@ table.insert(RECIPE("soot-separation").results, {type = "item", name = "ore-nick
 
 RECIPE("soot-separation"):set_fields{unlock_results = true, ignore_in_pypp = false}
 
-RECIPE("mining-antimony"):remove_unlock("excavation-2"):add_unlock("excavation-1")
+RECIPE("mining-antimony"):remove_unlock("excavation-2"):add_unlock("excavation-1")--:set_fields{results = {{type = "item", name = "antimonium-ore", amount = 20}}}
 
 RECIPE("ground-borer"):remove_ingredient("intermetallics")
 
 RECIPE("mining-borax"):replace_ingredient("drilling-fluid-1", "lubricant")
+RECIPE("fish-oil-to-lube"):replace_ingredient("fish-oil", "fish-oil", 50)
 
 -- create new soot to ore recipes that generalize byproducts
 local ores = {
@@ -214,24 +215,6 @@ for o, ore in pairs(ores) do
       main_product = o,
       ignore_in_pypp = false
     }
-    -- RECIPE("soot-to-" .. ore.recipe_extension):set_fields {
-    --   type = "recipe",
-    --   name = "soot-to-" .. ore.recipe_extension,
-    --   category = "solid-separator",
-    --   subgroup = "py-items-class",
-    --   enabled = ore.technology ~= nil and false or true,
-    --   energy_required = 15,
-    --   ingredients = {
-    --     { type = "item", name = "soot", amount = 10 }
-    --   },
-    --   results = {
-    --     { type = "item", name = o, amount = ore.amount },
-    --     { type = "item", name = "ash", amount = 1, probability = 0.3 }
-    --   },
-    --   result = nil,
-    --   main_product = o,
-    --   ignore_in_pypp = false
-    -- }:add_unlock(ore.technology)
     for s, secondary_ore in pairs(ores) do
       if s ~= o then
         table.insert(data.raw.recipe["soot-to-" .. ore.recipe_extension].results, { type = "item", name = s, amount = 1, probability = secondary_ore.byproduct_probability })
@@ -239,6 +222,9 @@ for o, ore in pairs(ores) do
     end
   end
 end
+
+RECIPE("soot-to-copper"):add_unlock("ash-separation")
+RECIPE("soot-to-aluminium"):add_unlock("mining-with-fluid")
 
 -- get rid of the steam power tech
 TECHNOLOGY("steam-power"):set_fields{hidden = true}
@@ -252,21 +238,18 @@ end
 RECIPE("empty-planter-box"):remove_unlock("automation-science-pack"):set_fields{enabled = true}
 RECIPE("soil"):remove_unlock("automation-science-pack"):set_fields{enabled = true}
 
--- remove wpu mk01 from auto sci
-RECIPE("wpu"):remove_unlock("automation-science-pack")
-
 -- move starter ash separation recipes to ash-separation and set trigger tech
 RECIPE("ash-separation"):add_unlock("ash-separation"):set_fields{enabled = false}
 RECIPE("solid-separator"):add_unlock("ash-separation"):set_fields{enabled = false}
 TECHNOLOGY("ash-separation"):set_fields{unit = nil, research_trigger = { type = "craft-item", item = "ash", count = 200 }}:set_fields{prerequisites = {"atomizer-mk00"}}
 RECIPE("copper-plate"):add_unlock("ash-separation"):set_fields{enabled = false}
-RECIPE("inductor1"):add_unlock("ash-separation"):set_fields{enabled = false}
+RECIPE("inductor1-2"):add_unlock("ash-separation"):set_fields{enabled = false}
 
 -- set automation science pack to require 50 copper plates cause you gonna need them
 TECHNOLOGY("automation-science-pack"):set_fields{research_trigger = { type = "craft-item", item = "copper-plate", count = 10 }}:set_fields{prerequisites = {"ash-separation"}}
 
 -- burner/steam mk00 recipe adjustments
-RECIPE("wpu"):add_ingredient("inductor1", 12):add_ingredient("burner-wpu", 1):add_unlock("wood-processing"):set_fields{enabled = false}
+RECIPE("wpu"):add_ingredient("inductor1", 12):add_ingredient("burner-wpu", 1):remove_unlock("automation-science-pack"):add_unlock("wood-processing"):set_fields{enabled = false}
 
 RECIPE("soil-extractor-mk01"):remove_ingredient("burner-mining-drill"):add_ingredient("burner-soil-extractor", 1)
 
@@ -275,6 +258,8 @@ RECIPE("washer"):remove_ingredient("steam-engine"):add_ingredient("burner-washer
 RECIPE("flora-collector-mk01"):remove_ingredient("soil-extractor-mk01"):add_ingredient("burner-soil-extractor", 1)
 
 RECIPE("compost-plant-mk01"):add_ingredient("compost-plant-mk00", 1):remove_unlock("compost"):add_unlock("fertilizer-mk01")
+
+RECIPE("slaughterhouse-mk01"):add_ingredient("slaughterhouse-mk00")
 
 -- move atomizer recipes to new trigger tech
 RECIPE("fawogae-to-iron"):add_unlock("atomizer-mk00"):set_fields{enabled = false}
