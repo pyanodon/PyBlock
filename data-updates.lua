@@ -1,14 +1,3 @@
---[[
---add fail safe raw coal to player and god character
-for _, player in DATA:pairs('character') do
-    player.crafting_categories = player.String_Array(player.crafting_categories or {}) + 'handcrafting-failsafe'
-end
-for _, controller in DATA:pairs('god-controller') do
-    controller.crafting_categories = controller.String_Array(controller.crafting_categories or {}) + 'handcrafting-failsafe'
-end
-]]--
-
-
 local ores_from_nothing = {
   ["iron-ore"] = true,
   ["copper-ore"] = true,
@@ -101,25 +90,22 @@ require("prototypes/mapgen")
 --require('prototypes/updates/pyhightech-updates')
 
 --add driftwood for closer logs
-data:extend({
+data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings.driftwood = {}
+
+data:extend {
   {
     type = "fish",
     name = "driftwood",
     icon = "__PyBlock__/graphics/icons/driftwood.png",
     icon_size = 64,
     flags = {"placeable-neutral", "not-on-map"},
-    minable = {
-      mining_time = 0.4,
-      results = {
-        { type = "item", name = "log", amount = 1 }
-      }
-    },
+    minable = {mining_time = 0.4, result = "log", count = 1},
     max_health = 20,
     subgroup = "creatures",
     order = "b-a",
     collision_box = {{-0.75, -0.75}, {0.75, 0.75}},
     selection_box = {{-0.5, -0.3}, {0.5, 0.3}},
-    collision_mask = { layers = { ground_tile = true }, colliding_with_tiles_only = true },
+    collision_mask = {layers = {ground_tile = true}, colliding_with_tiles_only = true},
     pictures = {
       {
         filename = '__PyBlock__/graphics/icons/driftwood.png',
@@ -130,25 +116,16 @@ data:extend({
         scale = 0.5
       }
     },
-    autoplace = {
-      probability_expression = data.raw.tree.seaweed.autoplace.probability_expression,
-      order = "driftwood"
+    autoplace = { probability_expression = 0.008 },
+    protected_from_tile_building = false
     }
   }
-})
+
 
 -- create "floating" seaweed that moves
 local seaweed = table.deepcopy(data.raw.tree.seaweed)
 data.raw.tree.seaweed = nil
 seaweed.type = "fish"
--- seaweed.autoplace = {
---   probability_expression = noise.define_noise_function( function(x, y, tile, map)
---     -- equiv to: limited_water < 0 and 0 or 1
---     local limited_water = noise.clamp(noise.var("wlc_elevation_minimum"), 0, 1)
---     -- 0.2% or 1.2%
---     return 0.001 + (0.01 * limited_water)
---   end)
--- }
 data.raw.fish.seaweed = seaweed
 
 -- allow all inserters to fish

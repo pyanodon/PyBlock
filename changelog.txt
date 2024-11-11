@@ -7,6 +7,8 @@ Date: ????
     - Fixed pipe connections on multiple entites not being properly aligned
     - Increased log count in starting inventory
     - Removed intermetallics from pyhtoplankton farm
+    - Fixed terrain generation
+    - Fixed driftwood not spawning
   Changes:
     - Moved Water Animals - Stage 1 to automation science
     - Move Tin Processing 1 back to py science 1
