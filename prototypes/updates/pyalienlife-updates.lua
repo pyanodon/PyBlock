@@ -106,6 +106,8 @@ RECIPE("fawogae with manure"):remove_unlock("fawogae-mk02"):add_unlock("fawogae-
 
 RECIPE("fungal-substrate"):remove_unlock("mycology-mk02"):add_unlock("fawogae-mk01")
 
+RECIPE("dried-meat"):remove_unlock(*"rendering"):add_unlock("water-animals-mk01")
+
 --moss to kerogen
 RECIPE {
     type = "recipe",
