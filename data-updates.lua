@@ -99,7 +99,7 @@ data:extend {
     icon = "__PyBlock__/graphics/icons/driftwood.png",
     icon_size = 64,
     flags = {"placeable-neutral", "not-on-map"},
-    minable = {mining_time = 0.4, result = "log", count = 1},
+    minable = {mining_time = 0.4, result = "log", count = 4},
     max_health = 20,
     subgroup = "creatures",
     order = "b-a",
@@ -116,7 +116,7 @@ data:extend {
         scale = 0.5
       }
     },
-    autoplace = { probability_expression = 0.008 },
+    autoplace = { probability_expression = 0.004 },
     protected_from_tile_building = false
   }
 }
@@ -127,11 +127,6 @@ local seaweed = table.deepcopy(data.raw.tree.seaweed)
 data.raw.tree.seaweed = nil
 seaweed.type = "fish"
 data.raw.fish.seaweed = seaweed
-
--- allow all inserters to fish
-for i, inserter in pairs(data.raw.inserter) do
-  inserter.use_easter_egg = true
-end
 
 --adjust landfill cost for landfill painter
 if mods['LandfillPainting'] then

@@ -3,6 +3,8 @@ Version: 3.1.1
 Date: ????
   Bugfixes:
     - Fixed an issue where jerky recipe was unlocked in Rendering instead of Water Animals Mk01
+  Changes:
+    - Increased logs collected from driftwood from 1 -> 4, but halved driftwood spawn chance
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.0
 Date: 2024-11-11
