@@ -257,7 +257,6 @@ RECIPE("compost-plant-mk01"):add_ingredient("compost-plant-mk00", 1):remove_unlo
 RECIPE("slaughterhouse-mk01"):add_ingredient("slaughterhouse-mk00")
 
 -- move atomizer recipes to new trigger tech
-RECIPE("fawogae-to-iron"):add_unlock("atomizer-mk00"):set_fields{enabled = false}
 RECIPE("iron-plate"):add_unlock("atomizer-mk00"):set_fields{enabled = false}
 
 -- add burner atomizer to atomizer mk01 recipe

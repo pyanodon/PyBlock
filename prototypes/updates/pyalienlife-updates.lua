@@ -34,7 +34,7 @@ RECIPE("fawogae-codex"):remove_unlock("fawogae-mk01"):add_unlock("yaedols")
 
 RECIPE("earth-shroom-sample"):remove_unlock("fawogae-mk01"):add_unlock("yaedols")
 
-RECIPE("fawogae-to-iron"):set_fields{enabled = true}:remove_unlock("molecular-decohesion")
+RECIPE("fawogae-to-iron"):add_unlock("atomizer-mk00"):remove_unlock("molecular-decohesion")
 
 -- reduce power cost
 data.raw["assembling-machine"]["fawogae-plantation-mk01"].energy_usage = "30kW"
@@ -183,8 +183,6 @@ TECHNOLOGY("phytomining"):remove_pack("py-science-pack-1"):remove_pack("logistic
 TECHNOLOGY("compost"):remove_pack("py-science-pack-1"):set_fields{prerequisites = {}}
 
 RECIPE("yaedols-culture-mk01"):remove_ingredient("intermetallics"):remove_ingredient("titanium-plate")
-
-RECIPE("fungal-substrate"):remove_unlock("fawogae-mk01"):add_unlock("yaedols")
 
 RECIPE("yaedols-codex"):remove_ingredient("red-wire")
 

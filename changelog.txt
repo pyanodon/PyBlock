@@ -5,6 +5,8 @@ Date: ????
     - Fixed an issue where jerky recipe was unlocked in Rendering instead of Water Animals Mk01
   Changes:
     - Increased logs collected from driftwood from 1 -> 4, but halved driftwood spawn chance
+    - Moved Fawogae Mk01 closer to the beginning of the tech tree, since manure is no longer required
+    - Moved fungal substrate from Yaedol Mk01 to Fawogae Mk01
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.0
 Date: 2024-11-11
