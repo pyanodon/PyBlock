@@ -244,13 +244,13 @@ RECIPE("inductor1-2"):add_unlock("ash-separation"):set_fields{enabled = false}
 TECHNOLOGY("automation-science-pack"):set_fields{research_trigger = { type = "craft-item", item = "copper-plate", count = 10 }}:set_fields{prerequisites = {"ash-separation"}}
 
 -- burner/steam mk00 recipe adjustments
-RECIPE("wpu"):add_ingredient("inductor1", 12):add_ingredient("burner-wpu", 1):remove_unlock("automation-science-pack"):add_unlock("wood-processing"):set_fields{enabled = false}
+RECIPE("wpu"):add_ingredient("inductor1", 12):add_ingredient("wpu-mk00", 1):remove_unlock("automation-science-pack"):add_unlock("wood-processing"):set_fields{enabled = false}
 
-RECIPE("soil-extractor-mk01"):remove_ingredient("burner-mining-drill"):add_ingredient("burner-soil-extractor", 1)
+RECIPE("soil-extractor-mk01"):remove_ingredient("burner-mining-drill"):add_ingredient("soil-extractor-mk00", 1)
 
-RECIPE("washer"):remove_ingredient("steam-engine"):add_ingredient("burner-washer", 1)
+RECIPE("washer"):remove_ingredient("steam-engine"):add_ingredient("washer-mk00", 1)
 
-RECIPE("flora-collector-mk01"):remove_ingredient("soil-extractor-mk01"):add_ingredient("burner-soil-extractor", 1)
+RECIPE("flora-collector-mk01"):remove_ingredient("soil-extractor-mk01"):add_ingredient("soil-extractor-mk00", 1)
 
 RECIPE("compost-plant-mk01"):add_ingredient("compost-plant-mk00", 1):remove_unlock("compost"):add_unlock("fertilizer-mk01")
 

@@ -1,7 +1,7 @@
 
 RECIPE {
     type = "recipe",
-    name = "burner-soil-extractor",
+    name = "soil-extractor-mk00",
     energy_required = 6,
     enabled = true,
     ingredients = {
@@ -11,29 +11,29 @@ RECIPE {
         {"iron-gear-wheel", 15}
     },
     results = {
-        {"burner-soil-extractor", 1}
+        {"soil-extractor-mk00", 1}
     }
 }
 
 ITEM {
     type = "item",
-    name = "burner-soil-extractor",
+    name = "soil-extractor-mk00",
     icon = "__PyBlock__/graphics/icons/soil-extractor-mk00.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-cp-buildings-mk00",
     order = "g",
-    place_result = "burner-soil-extractor",
+    place_result = "soil-extractor-mk00",
     stack_size = 10
 }
 
 ENTITY {
   type = "assembling-machine",
-  name = "burner-soil-extractor",
+  name = "soil-extractor-mk00",
   icon = "__PyBlock__/graphics/icons/soil-extractor-mk00.png",
   icon_size = 64,
   flags = {"placeable-neutral", "player-creation"},
-  minable = {mining_time = 1, result = "burner-soil-extractor"},
+  minable = {mining_time = 1, result = "soil-extractor-mk00"},
   fast_replaceable_group = "soil-extractor",
   max_health = 300,
   corpse = "big-remnants",

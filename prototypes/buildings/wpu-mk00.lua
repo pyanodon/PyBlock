@@ -1,7 +1,7 @@
 
 RECIPE {
   type = "recipe",
-  name = "burner-wpu",
+  name = "wpu-mk00",
   energy_required = 5,
   enabled = true,
   ingredients = {
@@ -13,29 +13,29 @@ RECIPE {
     {"copper-cable", 30}
   },
   results = {
-    {"burner-wpu", 1}
+    {"wpu-mk00", 1}
   }
 }:add_unlock("automation-science-pack")
 
 ITEM {
   type = "item",
-  name = "burner-wpu",
+  name = "wpu-mk00",
   icon = "__PyBlock__/graphics/icons/wpu-mk00.png",
   icon_size = 64,
   flags = {},
   subgroup = "py-cp-buildings-mk00",
   order = "c",
-  place_result = "burner-wpu",
+  place_result = "wpu-mk00",
   stack_size = 10
 }
 
 ENTITY {
   type = "assembling-machine",
-  name = "burner-wpu",
+  name = "wpu-mk00",
   icon = "__PyBlock__/graphics/icons/wpu-mk00.png",
   icon_size = 64,
   flags = {"placeable-neutral", "player-creation"},
-  minable = {mining_time = 1, result = "burner-wpu"},
+  minable = {mining_time = 1, result = "wpu-mk00"},
   fast_replaceable_group = "wpu",
   max_health = 800,
   corpse = "medium-remnants",

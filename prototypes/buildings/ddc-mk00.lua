@@ -49,7 +49,7 @@ end
 
 RECIPE {
 	type = "recipe",
-	name = "basic-ddc",
+	name = "ddc-mk00",
 	energy_required = 8,
 	enabled = true,
     ingredients =
@@ -59,29 +59,29 @@ RECIPE {
 		{name = "pipe", amount = 5}
 	},
 	results = {
-		{name = "basic-ddc", amount = 1}
+		{name = "ddc-mk00", amount = 1}
 	}
 }
 
 ITEM {
 	type = "item",
-	name = "basic-ddc",
+	name = "ddc-mk00",
 	icon = "__PyBlock__/graphics/icons/distilator-mk00.png",
 	icon_size = 64,
     flags = {},
     subgroup = "py-cp-buildings-mk00",
     order = "k",
-    place_result = "basic-ddc",
+    place_result = "ddc-mk00",
     stack_size = 20
 }
 
 ENTITY {
   type = "assembling-machine",
-  name = "basic-ddc",
+  name = "ddc-mk00",
   icon = "__PyBlock__/graphics/icons/distilator-mk00.png",
   icon_size = 64,
   flags = {"placeable-neutral", "placeable-player", "player-creation"},
-  minable = {mining_time = 1, result = "basic-ddc"},
+  minable = {mining_time = 1, result = "ddc-mk00"},
   max_health = 200,
   corpse = "medium-remnants",
   repair_sound = { filename = "__base__/sound/manual-repair-simple.ogg" },
@@ -144,7 +144,7 @@ ENTITY {
   graphics_set = {
     animation = make_2way_animation_from_spritesheet({ layers = {
       {
-        filename = "__PyBlock__/graphics/hr-basic-ddc.png",
+        filename = "__PyBlock__/graphics/hr-ddc-mk00.png",
         priority = "extra-high",
         width = 219,
         height = 215,
@@ -153,7 +153,7 @@ ENTITY {
         scale = 0.5,
         hr_version =
         {
-          filename = "__PyBlock__/graphics/hr-basic-ddc.png",
+          filename = "__PyBlock__/graphics/hr-ddc-mk00.png",
           priority = "extra-high",
           width = 219,
           height = 215,

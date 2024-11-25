@@ -1,7 +1,7 @@
 
 RECIPE {
   type = "recipe",
-  name = "burner-washer",
+  name = "washer-mk00",
   energy_required = 4,
   enabled = true,
   ingredients = {
@@ -12,27 +12,27 @@ RECIPE {
     {"stone-brick", 20}
   },
   results = {
-    {"burner-washer", 1}
+    {"washer-mk00", 1}
   }
 }
 
 ITEM {
     type = "item",
-    name = "burner-washer",
+    name = "washer-mk00",
     icon = "__PyBlock__/graphics/icons/washer-mk00.png",
     icon_size = 64,
     flags = {},
     subgroup = "py-cp-buildings-mk00",
     order = "z2",
-    place_result = "burner-washer",
+    place_result = "washer-mk00",
     stack_size = 10
 }
 
 burner_washer = table.deepcopy(data.raw["assembling-machine"].washer)
 
-burner_washer.name = "burner-washer"
+burner_washer.name = "washer-mk00"
 burner_washer.icon = "__PyBlock__/graphics/icons/washer-mk00.png"
-burner_washer.minable = {mining_time = 1, result = "burner-washer"}
+burner_washer.minable = {mining_time = 1, result = "washer-mk00"}
 burner_washer.module_specification = { module_slots = 0 }
 burner_washer.crafting_speed = 0.5
 burner_washer.energy_source = {
@@ -54,15 +54,15 @@ burner_washer.energy_source = {
 burner_washer.energy_usage = "100kW"
 burner_washer.next_upgrade = "washer"
 burner_washer.graphics_set.animation.layers[2].tint = {r = 0.5, g = 0.5, b = 0.5, a = 1.0}
-data.raw["assembling-machine"]["burner-washer"] = burner_washer
+data.raw["assembling-machine"]["washer-mk00"] = burner_washer
 
 -- ENTITY {
 --     type = "assembling-machine",
---     name = "burner-washer",
+--     name = "washer-mk00",
 --     icon = "__PyBlock__/graphics/icons/washer-mk00.png",
 --     icon_size = 64,
 --     flags = {"placeable-neutral", "player-creation"},
---     minable = {mining_time = 1, result = "burner-washer"},
+--     minable = {mining_time = 1, result = "washer-mk00"},
 --     fast_replaceable_group = "washer",
 --     max_health = 250,
 --     corpse = "big-remnants",

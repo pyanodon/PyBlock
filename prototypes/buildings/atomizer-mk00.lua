@@ -4,7 +4,7 @@ RECIPE {
   energy_required = 0.5,
   enabled = false,
   ingredients = {
-    {"burner-washer", 1},
+    {"washer-mk00", 1},
     {"iron-plate", 15},
     {"copper-plate", 20},
     {"pipe", 10}

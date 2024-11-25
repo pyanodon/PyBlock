@@ -1,0 +1,20 @@
+{
+  "entity":[
+    ["burner-wpu", "wpu-mk00"],
+    ["burner-washer", "washer-mk00"],
+    ["basic-ddc", "ddc-mk00"],
+    ["burner-soil-extractor", "soil-extractor-mk00"]
+  ],
+  "item":[
+    ["burner-wpu", "wpu-mk00"],
+    ["burner-washer", "washer-mk00"],
+    ["basic-ddc", "ddc-mk00"],
+    ["burner-soil-extractor", "soil-extractor-mk00"]
+  ],
+  "recipe":[
+    ["burner-wpu", "wpu-mk00"],
+    ["burner-washer", "washer-mk00"],
+    ["basic-ddc", "ddc-mk00"],
+    ["burner-soil-extractor", "soil-extractor-mk00"]
+  ]
+}
