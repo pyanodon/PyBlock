@@ -28,4 +28,5 @@ script.on_event(defines.events.on_player_created, function(event)
 	if elevation ~= "pyblock_classic" and elevation ~= "pyblock_island" and elevation ~= "pyblock_archipeligo" then
 		player.print {"messages.pyblock-warning-no-preset"}
   end
+  player.print {"messages.pyblock-intro"}
 end)

@@ -1,6 +1,20 @@
 ---------------------------------------------------------------------------------------------------
-Version: 3.1.1
+Version: 3.1.2
 Date: ????
+  Locale:
+    - Added localization to new noise expressions
+    - Fixed capitalization with some MK 00 entities
+    - Removed locale for unused prototypes
+    - Fixed slaughterhouse mk00 locale
+    - Fixed compost plant mk00 locale
+  Changes:
+    - Removed some old prototypes and code (finally)
+    - Re-added pyblock intro message
+  Bugfixes:
+    - Removed automation science pack from Ash Separation technology requirements on tech icon
+---------------------------------------------------------------------------------------------------
+Version: 3.1.1
+Date: 2024-11-26
   Features:
     - Added PyBlock Classic mapgen preset
     - Added PyBlock Archipeligo mapgen preset

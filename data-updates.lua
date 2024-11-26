@@ -153,6 +153,7 @@ RECIPE("mining-antimony"):remove_unlock("excavation-2"):add_unlock("excavation-1
 
 RECIPE("ground-borer"):remove_ingredient("intermetallics")
 
+-- reduce fish oil to lube cost to increase drilling yield relative to fish input
 RECIPE("mining-borax"):replace_ingredient("drilling-fluid-1", "lubricant")
 RECIPE("fish-oil-to-lube"):replace_ingredient("fish-oil", "fish-oil", 50)
 
@@ -236,9 +237,11 @@ RECIPE("soil"):remove_unlock("automation-science-pack"):set_fields{enabled = tru
 -- move starter ash separation recipes to ash-separation and set trigger tech
 RECIPE("ash-separation"):add_unlock("ash-separation"):set_fields{enabled = false}
 RECIPE("solid-separator"):add_unlock("ash-separation"):set_fields{enabled = false}
-TECHNOLOGY("ash-separation"):set_fields{unit = nil, research_trigger = { type = "craft-item", item = "ash", count = 200 }}:set_fields{prerequisites = {"atomizer-mk00"}}
+TECHNOLOGY("ash-separation"):set_fields{research_trigger = { type = "craft-item", item = "ash", count = 200 }, prerequisites = {"atomizer-mk00"}}
 RECIPE("copper-plate"):add_unlock("ash-separation"):set_fields{enabled = false}
 RECIPE("inductor1-2"):add_unlock("ash-separation"):set_fields{enabled = false}
+
+data.raw["technology"]["ash-separation"].unit = nil
 
 -- set automation science pack to require 50 copper plates cause you gonna need them
 TECHNOLOGY("automation-science-pack"):set_fields{research_trigger = { type = "craft-item", item = "copper-plate", count = 10 }}:set_fields{prerequisites = {"ash-separation"}}
