@@ -9,7 +9,7 @@ RECIPE {
     {type = "item", name = "iron-plate",       amount = 20},
     {type = "item", name = "steam-engine",     amount = 1},
     {type = "item", name = "inductor1",        amount = 5},
-    {type = "item", name = "burner-soil-extractor", amount = 1},
+    {type = "item", name = "soil-extractor-mk00", amount = 1},
   },
   results = {
     {type = "item", name = "flora-cultivator-mk01", amount = 1}

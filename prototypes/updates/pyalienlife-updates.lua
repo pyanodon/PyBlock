@@ -84,21 +84,6 @@ RECIPE("stone-wool"):remove_unlock("zipir"):add_unlock("cadaveric-arum")
 
 RECIPE("cadaveric-arum-mk01"):remove_ingredient("hydrocyclone-mk01"):remove_ingredient("electronic-circuit"):remove_ingredient("plastic-bar"):remove_ingredient("intermetallics"):remove_ingredient("steel-plate"):add_ingredient({name = "steel-plate", amount = 5}):add_ingredient({name = "pipe", amount = 4}):add_ingredient({name = "soil", amount = 20}):remove_ingredient("botanical-nursery")
 
---move foodless auogs to auog zero
-RECIPE("auog-paddock-mk01"):remove_unlock("auog"):add_unlock("auog-mk00"):remove_ingredient("intermetallics")
-
-RECIPE("auog"):remove_unlock("auog"):add_unlock("auog-mk00"):remove_ingredient("cdna")
-
-RECIPE("earth-bear-sample"):remove_unlock("auog"):add_unlock("auog-mk00")
-
-RECIPE("auog-codex"):remove_unlock("auog"):add_unlock("auog-mk00")
-
-RECIPE("auog-pup-breeding-1"):remove_unlock("auog"):add_unlock("auog-mk00")
-
-RECIPE("auog-maturing-1"):remove_unlock("auog"):add_unlock("auog-mk00")
-
-RECIPE("auog-pooping-1"):remove_unlock("auog"):add_unlock("auog-mk00")
-
 --move fawogae with manure up
 TECHNOLOGY("fawogae-mk01"):remove_pack("py-science-pack-1"):set_fields{prerequisites = {}}
 

@@ -1,23 +1,5 @@
 TECHNOLOGY {
   type = "technology",
-  name = "auog-mk00",
-  icon = "__pyalienlifegraphics__/graphics/technology/auog.png",
-  icon_size = 128,
-  order = "c-a",
-  prerequisites = {},
-  effects = {},
-  unit = {
-      count = 100,
-      ingredients = {
-          {"automation-science-pack", 1},
-      },
-      time = 50
-  }
-}
-
-
-TECHNOLOGY {
-  type = "technology",
   name = "atomizer-mk00",
   icon = "__PyBlock__/graphics/icons/atomizer-mk00.png",
   icon_size = 128,

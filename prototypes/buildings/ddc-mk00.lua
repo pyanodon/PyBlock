@@ -144,7 +144,7 @@ ENTITY {
   graphics_set = {
     animation = make_2way_animation_from_spritesheet({ layers = {
       {
-        filename = "__PyBlock__/graphics/hr-ddc-mk00.png",
+        filename = "__PyBlock__/graphics/ddc-mk00.png",
         priority = "extra-high",
         width = 219,
         height = 215,
@@ -153,7 +153,7 @@ ENTITY {
         scale = 0.5,
         hr_version =
         {
-          filename = "__PyBlock__/graphics/hr-ddc-mk00.png",
+          filename = "__PyBlock__/graphics/ddc-mk00.png",
           priority = "extra-high",
           width = 219,
           height = 215,

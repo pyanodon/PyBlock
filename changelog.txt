@@ -11,6 +11,8 @@ Date: ????
     - Increased logs collected from driftwood from 1 -> 4, but halved driftwood spawn chance
     - Moved Fawogae Mk01 closer to the beginning of the tech tree, since manure is no longer required
     - Moved fungal substrate from Yaedol Mk01 to Fawogae Mk01
+    - Changed "Burner" and "Steampowered" machines to Mk00
+    - Removed unneeded Auog technology, since Fawogae Mk01 doesn't use manure anymore
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.0
 Date: 2024-11-11
