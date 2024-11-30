@@ -17,6 +17,7 @@ if not script.active_mods['pylandblock'] then
             created_items["stone-furnace"] = 1
             created_items["py-sinkhole"] = 2
             created_items["py-gas-vent"] = 2
+            created_items["moss"] = 1
             remote.call('freeplay', 'set_created_items', created_items)
 
             --local debris_items = remote.call("freeplay", "get_debris_items")
