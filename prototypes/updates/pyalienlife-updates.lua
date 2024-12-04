@@ -8,8 +8,6 @@ RECIPE("fawogae-spore"):set_fields{enabled = true}:remove_unlock("fawogae-mk01")
 
 RECIPE("fawogae-1"):set_fields{enabled = true}:remove_unlock("fawogae-mk01")
 
-RECIPE("fawogae-with-manure"):remove_unlock("fawogae-mk02"):add_unlock("fawogae-mk01")
-
 -- early fawogae recipe
 RECIPE {
   type = "recipe",
@@ -73,25 +71,23 @@ TECHNOLOGY("moss-mk01"):remove_prereq("botany-mk01")
 
 --cadaveric for copper
 RECIPE("cadaveric-to-copper"):remove_unlock("molecular-decohesion-mk03"):add_unlock("cadaveric-arum")
-
 RECIPE("cadaveric-arum-sample"):remove_ingredient("alien-sample-02"):remove_ingredient("cdna"):remove_ingredient("earth-tropical-tree-sample"):remove_ingredient("earth-flower-sample"):remove_ingredient("bio-sample")
-
 RECIPE("cadaveric-arum-codex"):remove_ingredient("electronic-circuit")
-
 TECHNOLOGY("cadaveric-arum"):remove_prereq("botany-mk02"):remove_pack("py-science-pack-1"):remove_pack("logistic-science-pack"):remove_pack("py-science-pack-2")
-
 RECIPE("stone-wool"):remove_unlock("zipir"):add_unlock("cadaveric-arum")
-
 RECIPE("cadaveric-arum-mk01"):remove_ingredient("hydrocyclone-mk01"):remove_ingredient("electronic-circuit"):remove_ingredient("plastic-bar"):remove_ingredient("intermetallics"):remove_ingredient("steel-plate"):add_ingredient({name = "steel-plate", amount = 5}):add_ingredient({name = "pipe", amount = 4}):add_ingredient({name = "soil", amount = 20}):remove_ingredient("botanical-nursery")
 
---move fawogae with manure up
+--move fawogae with manure up (even though it doesnt use manure anymore)
 TECHNOLOGY("fawogae-mk01"):remove_pack("py-science-pack-1"):set_fields{prerequisites = {}}
-
-RECIPE("fawogae with manure"):remove_unlock("fawogae-mk02"):add_unlock("fawogae-mk01")
-
+RECIPE("fawogae-with-manure"):remove_unlock("fawogae-mk02"):add_unlock("fawogae-mk01")
 RECIPE("fungal-substrate"):remove_unlock("mycology-mk02"):add_unlock("fawogae-mk01")
-
 RECIPE("dried-meat-01"):remove_unlock("rendering"):add_unlock("water-animals-mk01")
+
+-- double faw speeds (you're welcome skosko)
+data.raw["assembling-machine"]["fawogae-plantation-mk01"].crafting_speed = 2*data.raw["assembling-machine"]["fawogae-plantation-mk01"].crafting_speed
+data.raw["assembling-machine"]["fawogae-plantation-mk02"].crafting_speed = 2*data.raw["assembling-machine"]["fawogae-plantation-mk02"].crafting_speed
+data.raw["assembling-machine"]["fawogae-plantation-mk03"].crafting_speed = 2*data.raw["assembling-machine"]["fawogae-plantation-mk03"].crafting_speed
+data.raw["assembling-machine"]["fawogae-plantation-mk04"].crafting_speed = 2*data.raw["assembling-machine"]["fawogae-plantation-mk04"].crafting_speed
 
 --moss to kerogen
 RECIPE {

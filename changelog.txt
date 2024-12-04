@@ -8,6 +8,7 @@ Date: ????
     - Fixed slaughterhouse mk00 locale
     - Fixed compost plant mk00 locale
   Changes:
+    - Double crafting speed of fawogae plantations
     - Removed some old prototypes and code (finally)
     - Re-added pyblock intro message
     - Removed bricks from Washer MK 00 recipe
