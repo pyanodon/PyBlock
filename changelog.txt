@@ -18,6 +18,7 @@ Date: ????
     - Reduced small parts in Soil Extractor MK 00 recipe from 15 -> 5
   Bugfixes:
     - Removed automation science pack from Ash Separation technology requirements on tech icon
+    - Fixed Melamine not requiring Auogs - Stage 1 to be researched
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.1
 Date: 2024-11-26
