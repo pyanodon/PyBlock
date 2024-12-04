@@ -8,7 +8,7 @@ RECIPE {
         {"burner-mining-drill", 2},
         {"iron-plate", 15},
         {"copper-cable", 5},
-        {"iron-gear-wheel", 15}
+        {"iron-gear-wheel", 5}
     },
     results = {
         {"soil-extractor-mk00", 1}

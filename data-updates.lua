@@ -240,7 +240,6 @@ RECIPE("solid-separator"):add_unlock("ash-separation"):set_fields{enabled = fals
 TECHNOLOGY("ash-separation"):set_fields{research_trigger = { type = "craft-item", item = "ash", count = 200 }, prerequisites = {"atomizer-mk00"}}
 RECIPE("copper-plate"):add_unlock("ash-separation"):set_fields{enabled = false}
 RECIPE("inductor1-2"):add_unlock("ash-separation"):set_fields{enabled = false}
-
 data.raw["technology"]["ash-separation"].unit = nil
 
 -- set automation science pack to require 50 copper plates cause you gonna need them

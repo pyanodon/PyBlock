@@ -5,11 +5,10 @@ RECIPE {
   energy_required = 4,
   enabled = true,
   ingredients = {
-    {"steam-engine", 2},
+    {"steam-engine", 1},
     {"iron-plate", 10},
-    {"pipe", 25},
-    {"iron-gear-wheel", 10},
-    {"stone-brick", 20}
+    {"pipe", 10},
+    {"iron-gear-wheel", 5}
   },
   results = {
     {"washer-mk00", 1}

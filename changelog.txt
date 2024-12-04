@@ -10,6 +10,11 @@ Date: ????
   Changes:
     - Removed some old prototypes and code (finally)
     - Re-added pyblock intro message
+    - Removed bricks from Washer MK 00 recipe
+    - Reduced steam engines in Washer MK 00 recipe from 2 -> 1
+    - Reduced pipes in Washer MK 00 recipe from 25 -> 10
+    - Reduced small parts in Washer MK 00 recipe from 10 -> 5
+    - Reduced small parts in Soil Extractor MK 00 recipe from 15 -> 5
   Bugfixes:
     - Removed automation science pack from Ash Separation technology requirements on tech icon
 ---------------------------------------------------------------------------------------------------
