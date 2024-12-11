@@ -19,6 +19,7 @@ Date: ????
   Bugfixes:
     - Removed automation science pack from Ash Separation technology requirements on tech icon
     - Fixed Melamine not requiring Auogs - Stage 1 to be researched
+    - Fixed "researching" Steam Power even though it is hidden
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.1
 Date: 2024-11-26
