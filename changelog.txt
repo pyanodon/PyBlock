@@ -1,6 +1,10 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.2
 Date: ????
+  Features:
+    - Added dependency on AAI Loaders
+    - Added shunt loader, powered by steam
+    - Added shunt inserter, powered by steam
   Locale:
     - Added localization to new noise expressions
     - Fixed capitalization with some MK 00 entities

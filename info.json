@@ -9,6 +9,7 @@
 	"description": "Pymod edition of a Sea Block style game",
 	"dependencies": [
 	"base >= 2.0",
-	"pyalternativeenergy >= 3.0.0"
+	"pyalternativeenergy >= 3.0.0",
+  "aai-loaders"
 	]
 }
