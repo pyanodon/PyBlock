@@ -33,6 +33,7 @@ Date: ????
     - Fixed Washer MK 00 fluidbox connections appearing in the wrong places
     - Fixed Compost Plant MK 00 fluidbox connections appearing in the wrong places
     - Fixed Spore Collector MK 01 fluidbox connections appearing in the wrong places
+    - Fixed Washer MK 00 having 1 module slot (should be 0)
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.1
 Date: 2024-11-26

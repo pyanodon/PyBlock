@@ -32,7 +32,7 @@ burner_washer = table.deepcopy(data.raw["assembling-machine"].washer)
 burner_washer.name = "washer-mk00"
 burner_washer.icon = "__PyBlock__/graphics/icons/washer-mk00.png"
 burner_washer.minable = {mining_time = 1, result = "washer-mk00"}
-burner_washer.module_specification = { module_slots = 0 }
+burner_washer.module_slots = 0
 burner_washer.crafting_speed = 0.5
 burner_washer.energy_source = {
   type = "fluid",
