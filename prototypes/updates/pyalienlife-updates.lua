@@ -46,11 +46,10 @@ data.raw["assembling-machine"]["spore-collector-mk01"].energy_source = {
     volume = 2,
     pipe_covers = pipecoverspictures(),
     pipe_connections = {
-      { flow_direction = "input-output", position = {-3.199, 0}, direction = 12 },
-      { pipe_connections = "input-output", position = {3.199, 0}, direction = 4 },
+      { flow_direction = "input-output", position = {-3, 0}, direction = 12 },
+      { pipe_connections = "input-output", position = {3, 0}, direction = 4 },
     },
     filter = "steam",
-    -- flow_direction = "input-output",
   },
   scale_fluid_usage = true
 }

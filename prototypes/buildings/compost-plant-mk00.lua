@@ -57,9 +57,8 @@ ENTITY {
       volume = 200,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
-        { flow_direction = "input-output", position = {-5.2,1}, direction = 12 },
-        { flow_direction = "input-output", position = {5.2, 1}, direction = 4 },
-        -- direction = 0,
+        { flow_direction = "input-output", position = {-5, 1}, direction = 12 },
+        { flow_direction = "input-output", position = {5, 1}, direction = 4 },
       },
       filter = "steam",
       production_type = "input-output",
