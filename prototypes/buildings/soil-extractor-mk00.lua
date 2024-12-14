@@ -40,6 +40,7 @@ ENTITY {
   dying_explosion = "medium-explosion",
   collision_box = data.raw["assembling-machine"]["soil-extractor-mk01"].collision_box,
   selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
+  vector_to_place_result = {0, 3.51},
   module_specification = {
     module_slots = 0
   },
@@ -67,10 +68,7 @@ ENTITY {
           height = 45
         }
       }),
-      pipe_connections = {
-        { flow_direction = "input-output", position = {0, 3}, direction = 8 },
-        { flow_direction = "input-output", position = {0, -3}, direction = 0 },
-      },
+      pipe_connections = {{ flow_direction = "input", position = {0, -3}, direction = 0 }},
       production_type = "input-output",
       filter = "steam",
     },
