@@ -20,6 +20,8 @@ Date: ????
     - Reduced pipes in Washer MK 00 recipe from 25 -> 10
     - Reduced small parts in Washer MK 00 recipe from 10 -> 5
     - Reduced small parts in Soil Extractor MK 00 recipe from 15 -> 5
+    - Removed 2 fluid connections from flora cultivators, so that those and vector_to_place_result don't collide
+    - Added recipes to swap between cultivator and collector variants
   Bugfixes:
     - Removed automation science pack from Ash Separation technology requirements on tech icon
     - Fixed Melamine not requiring Auogs - Stage 1 to be researched

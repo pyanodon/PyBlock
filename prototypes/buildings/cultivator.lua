@@ -18,6 +18,32 @@ RECIPE {
 
 RECIPE {
   type = "recipe",
+  name = "collector-to-cultivator-mk01",
+  energy_required = 5,
+  enabled = false,
+  ingredients = {
+    {type = "item", name = "flora-collector-mk01", amount = 1}
+  },
+  results = {
+    {type = "item", name = "flora-cultivator-mk01", amount = 1}
+  }
+}:add_unlock("automation-science-pack")
+
+RECIPE {
+  type = "recipe",
+  name = "cultivator-to-collector-mk01",
+  energy_required = 5,
+  enabled = false,
+  ingredients = {
+    {type = "item", name = "flora-cultivator-mk01", amount = 1}
+  },
+  results = {
+    {type = "item", name = "flora-collector-mk01", amount = 1}
+  }
+}:add_unlock("automation-science-pack")
+
+RECIPE {
+  type = "recipe",
   name = "flora-cultivator-mk02",
   energy_required = 5,
   enabled = false,
@@ -35,6 +61,32 @@ RECIPE {
     {type = "item", name = "flora-cultivator-mk02", amount = 1}
   }
 }:add_unlock("biotech-machines-mk02"):add_ingredient {type = "item", name = "small-parts-02", amount = 50}
+
+RECIPE {
+  type = "recipe",
+  name = "collector-to-cultivator-mk02",
+  energy_required = 5,
+  enabled = false,
+  ingredients = {
+    {type = "item", name = "flora-collector-mk02", amount = 1}
+  },
+  results = {
+    {type = "item", name = "flora-cultivator-mk02", amount = 1}
+  }
+}:add_unlock("biotech-machines-mk02")
+
+RECIPE {
+  type = "recipe",
+  name = "cultivator-to-collector-mk02",
+  energy_required = 5,
+  enabled = false,
+  ingredients = {
+    {type = "item", name = "flora-cultivator-mk02", amount = 1}
+  },
+  results = {
+    {type = "item", name = "flora-collector-mk02", amount = 1}
+  }
+}:add_unlock("biotech-machines-mk02")
 
 RECIPE {
   type = "recipe",
@@ -57,6 +109,32 @@ RECIPE {
 
 RECIPE {
   type = "recipe",
+  name = "collector-to-cultivator-mk03",
+  energy_required = 5,
+  enabled = false,
+  ingredients = {
+    {type = "item", name = "flora-collector-mk03", amount = 1}
+  },
+  results = {
+    {type = "item", name = "flora-cultivator-mk03", amount = 1}
+  }
+}:add_unlock("biotech-machines-mk03")
+
+RECIPE {
+  type = "recipe",
+  name = "cultivator-to-collector-mk03",
+  energy_required = 5,
+  enabled = false,
+  ingredients = {
+    {type = "item", name = "flora-cultivator-mk03", amount = 1}
+  },
+  results = {
+    {type = "item", name = "flora-collector-mk03", amount = 1}
+  }
+}:add_unlock("biotech-machines-mk03")
+
+RECIPE {
+  type = "recipe",
   name = "flora-cultivator-mk04",
   energy_required = 5,
   enabled = false,
@@ -70,6 +148,32 @@ RECIPE {
   },
   results = {
     {type = "item", name = "flora-cultivator-mk04", amount = 1}
+  }
+}:add_unlock("biotech-machines-mk04")
+
+RECIPE {
+  type = "recipe",
+  name = "collector-to-cultivator-mk04",
+  energy_required = 5,
+  enabled = false,
+  ingredients = {
+    {type = "item", name = "flora-collector-mk04", amount = 1}
+  },
+  results = {
+    {type = "item", name = "flora-cultivator-mk04", amount = 1}
+  }
+}:add_unlock("biotech-machines-mk04")
+
+RECIPE {
+  type = "recipe",
+  name = "cultivator-to-collector-mk04",
+  energy_required = 5,
+  enabled = false,
+  ingredients = {
+    {type = "item", name = "flora-cultivator-mk04", amount = 1}
+  },
+  results = {
+    {type = "item", name = "flora-collector-mk04", amount = 1}
   }
 }:add_unlock("biotech-machines-mk04")
 
@@ -128,10 +232,10 @@ for i = 1, 4 do
         pipe_covers = py.pipe_covers(true, true, true, true),
         volume = 100,
         pipe_connections = {
-          { position = {0, -3}, flow_direction = "input", direction = 0 },
-          { position = {3, 0}, flow_direction = "input", direction = 4 },
-          { position = {0, 3}, flow_direction = "input", direction = 8 },
-          { position = {-3, 0}, flow_direction = "input", direction = 12 },
+          -- { position = {0, -3}, flow_direction = "input-output", direction = 0 },
+          { position = {3, 0}, flow_direction = "input-output", direction = 4 },
+          -- { position = {0, 3}, flow_direction = "input-output", direction = 8 },
+          { position = {-3, 0}, flow_direction = "input-output", direction = 12 },
         }
       }
     },
