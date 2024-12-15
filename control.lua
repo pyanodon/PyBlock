@@ -14,7 +14,7 @@ script.on_init(function(event)
     created_items['py-tank-8000'] = 1
     created_items["stone-furnace"] = 1
     created_items["py-sinkhole"] = 2
-    created_items["py-gas-vent"] = 2
+    created_items["multiblade-turbine-mk01"] = 1
     remote.call('freeplay', 'set_created_items', created_items)
   end
 end)
