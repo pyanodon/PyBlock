@@ -1,6 +1,6 @@
-RECIPE("solid-separator"):remove_unlock("ash-separation"):set_fields{enabled = true}:remove_ingredient("steel-plate")
+RECIPE("solid-separator"):remove_unlock("ash-separation"):add_unlock("steel-processing"):add_ingredient("solid-separator-mk00"):add_ingredient_amount("small-parts-01", -20):add_ingredient_amount("steel-plate", -10):add_ingredient_amount("inductor1", -5)
 
-RECIPE("ash-separation"):remove_unlock("ash-separation"):set_fields{enabled = true}:set_fields{results = {
+RECIPE("ash-separation"):set_fields{results = {
 	{type = "item", name = "coal-dust", amount = 1, probability = 0.5},
 	{type = "item", name = "iron-oxide", amount = 1, probability = 0.05},
 	{type = "item", name = "soot", amount = 1, probability = 1}

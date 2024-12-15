@@ -237,14 +237,12 @@ RECIPE("empty-planter-box"):remove_unlock("automation-science-pack"):set_fields{
 RECIPE("soil"):remove_unlock("automation-science-pack"):set_fields{enabled = true}
 
 -- move starter ash separation recipes to ash-separation and set trigger tech
-RECIPE("ash-separation"):add_unlock("ash-separation"):set_fields{enabled = false}
-RECIPE("solid-separator"):add_unlock("ash-separation"):set_fields{enabled = false}
 TECHNOLOGY("ash-separation"):set_fields{research_trigger = { type = "craft-item", item = "ash", count = 200 }, prerequisites = {"atomizer-mk00"}}
 RECIPE("copper-plate"):add_unlock("ash-separation"):set_fields{enabled = false}
 RECIPE("inductor1-2"):add_unlock("ash-separation"):set_fields{enabled = false}
 data.raw["technology"]["ash-separation"].unit = nil
 
--- set automation science pack to require 50 copper plates cause you gonna need them
+-- set automation science pack to require 10 copper plates
 TECHNOLOGY("automation-science-pack"):set_fields{research_trigger = { type = "craft-item", item = "copper-plate", count = 10 }}:set_fields{prerequisites = {"ash-separation"}}
 
 -- burner/steam mk00 recipe adjustments

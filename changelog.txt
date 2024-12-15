@@ -5,6 +5,8 @@ Date: ????
     - Added dependency on AAI Loaders
     - Added shunt loader, powered by steam
     - Added shunt inserter, powered by steam
+    - Added Solid Separator MK 00, powered by steam, to replace the earlygame solid separator.
+        Solid Separator MK 01 has been moved to Steel Processing and it's construction cost has been increased, but is still lower than it normally is.
   Locale:
     - Added localization to new noise expressions
     - Fixed capitalization with some MK 00 entities
