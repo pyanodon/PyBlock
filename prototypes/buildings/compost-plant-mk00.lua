@@ -41,10 +41,7 @@ ENTITY {
   selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
   draw_entity_info_icon_background = false,
   match_animation_speed_to_activity = false,
-  module_specification = {
-    module_slots = 1
-  },
-  allowed_effects = {"speed","consumption"},
+  module_slots = 0,
   crafting_categories = {"compost"},
   crafting_speed = 0.5,
   source_inventory_size = 1,

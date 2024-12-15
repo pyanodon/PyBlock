@@ -43,10 +43,7 @@ ENTITY {
   collision_box = {{-2.8, -2.8}, {2.8, 2.8}},
   selection_box = {{-3.0, -3.0}, {3.0, 3.0}},
   vector_to_place_result = {0, -3.01},
-  module_specification = {
-    module_slots = 0
-  },
-  allowed_effects = {"consumption", "speed", "productivity", "pollution"},
+  module_slots = 0,
   crafting_categories = {"wpu", "wpu-handcrafting"},
   crafting_speed = 0.5,
   energy_source = {

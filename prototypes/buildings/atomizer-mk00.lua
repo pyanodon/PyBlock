@@ -40,10 +40,7 @@ ENTITY {
   collision_box = {{-3.3, -3.3}, {3.3, 3.3}},
   selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
   match_animation_speed_to_activity = false,
-  module_specification = {
-    module_slots = 1
-  },
-  allowed_effects = {"speed","pollution"},
+  module_slots = 0,
   crafting_categories = {"atomizer"},
   crafting_speed = 0.5,
   energy_source =

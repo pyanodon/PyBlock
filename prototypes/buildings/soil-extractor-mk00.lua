@@ -41,10 +41,7 @@ ENTITY {
   collision_box = data.raw["assembling-machine"]["soil-extractor-mk01"].collision_box,
   selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
   vector_to_place_result = {0, 3.51},
-  module_specification = {
-    module_slots = 0
-  },
-  allowed_effects = {"consumption", "speed", "productivity", "pollution"},
+  module_slots = 0,
   crafting_categories = {"soil-extraction"},
   crafting_speed = 0.5,
   energy_source = {
