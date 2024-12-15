@@ -32,7 +32,7 @@ RECIPE("fawogae-codex"):remove_unlock("fawogae-mk01"):add_unlock("yaedols")
 
 RECIPE("earth-shroom-sample"):remove_unlock("fawogae-mk01"):add_unlock("yaedols")
 
-RECIPE("fawogae-to-iron"):add_unlock("atomizer-mk00"):remove_unlock("molecular-decohesion")
+RECIPE("fawogae-to-iron"):add_unlock("atomizer-mk00"):remove_unlock("molecular-decohesion"):replace_ingredient("fawogae", "fawogae", 20):replace_result("iron-ore", "iron-ore", 18):set_fields{energy_required = 15}
 
 -- reduce power cost
 data.raw["assembling-machine"]["fawogae-plantation-mk01"].energy_usage = "30kW"
