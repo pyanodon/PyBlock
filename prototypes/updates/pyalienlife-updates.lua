@@ -55,7 +55,7 @@ data.raw["assembling-machine"]["spore-collector-mk01"].energy_source = {
 }
 
 -- fawogae to raw coal
-RECIPE("coal-fawogae"):set_fields{enabled = true}:remove_unlock("fawogae-mk01"):set_fields{category = "distilator"}:set_fields{results = {{type = "item", name = "raw-coal", amount = 5}}}
+RECIPE("coal-fawogae"):set_fields{enabled = true}:remove_unlock("fawogae-mk01"):set_fields{category = "distilator"}:replace_result("raw-coal", "raw-coal", 5)
 
 -- seaweed
 RECIPE("seaweed-crop-mk01"):remove_ingredient("tin-plate")
@@ -78,7 +78,7 @@ RECIPE("cadaveric-arum-mk01"):remove_ingredient("hydrocyclone-mk01"):remove_ingr
 
 --move fawogae with manure up (even though it doesnt use manure anymore)
 TECHNOLOGY("fawogae-mk01"):remove_pack("py-science-pack-1"):set_fields{prerequisites = {}}
-RECIPE("fawogae-with-manure"):remove_unlock("fawogae-mk02"):add_unlock("fawogae-mk01")
+RECIPE("fawogae-with-manure"):remove_unlock("fawogae-mk02"):add_unlock("fawogae-mk01"):replace_result("fawogae", "fawogae", 18)
 RECIPE("fungal-substrate"):remove_unlock("mycology-mk02"):add_unlock("fawogae-mk01")
 RECIPE("dried-meat-01"):remove_unlock("rendering"):add_unlock("water-animals-mk01")
 

@@ -28,6 +28,7 @@ Date: ????
     - Added vector_to_place_result to Soild Extractor MK 00. Removed one steam connection to balance.
     - Forced Destructive Distillation Column MK 00 to show fluid connections even when no recipe is selected
     - Buffed fawogae to iron to a slower, bulk recipe with a better transfer ratio
+    - Buffed fawogae with fungal substrate recipe from 15 -> 18
   Bugfixes:
     - Removed automation science pack from Ash Separation technology requirements on tech icon
     - Fixed Melamine not requiring Auogs - Stage 1 to be researched
