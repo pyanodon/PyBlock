@@ -80,7 +80,22 @@ RECIPE("cadaveric-arum-mk01"):remove_ingredient("hydrocyclone-mk01"):remove_ingr
 TECHNOLOGY("fawogae-mk01"):remove_pack("py-science-pack-1"):set_fields{prerequisites = {}}
 RECIPE("fawogae-with-manure"):remove_unlock("fawogae-mk02"):add_unlock("fawogae-mk01"):replace_result("fawogae", "fawogae", 18)
 RECIPE("fungal-substrate"):remove_unlock("mycology-mk02"):add_unlock("fawogae-mk01")
-RECIPE("dried-meat-01"):remove_unlock("rendering"):add_unlock("water-animals-mk01")
+RECIPE("dried-meat-01"):remove_unlock("rendering"):add_unlock("water-animals-mk01"):replace_result("dried-meat", "dried-meat", 8)
+
+-- if decay is on, re-add a less efficient meat recipe for simple but less efficient dried meat
+if settings.startup["py-enable-decay"] then
+  RECIPE{
+    type = "recipe",
+    name = "dried-meat-01",
+    category = "smelting",
+    enabled = false,
+    energy_required = 45,
+    ingredients = {
+      { type = "item", name = "meat", amount = 20 }
+    },
+    results = {{ type = "item", name = "dried-meat", amount = 12 }}
+  }:add_unlock("water-animals-mk01")
+end
 
 -- double faw speeds (you're welcome skosko)
 data.raw["assembling-machine"]["fawogae-plantation-mk01"].crafting_speed = 2*data.raw["assembling-machine"]["fawogae-plantation-mk01"].crafting_speed
@@ -110,10 +125,11 @@ TECHNOLOGY("fish-mk01"):remove_pack("py-science-pack-1"):set_fields{prerequisite
 
 TECHNOLOGY("microbiology-mk01"):remove_pack("py-science-pack-1"):set_fields{prerequisites = {}}
 RECIPE("plankton-farm"):remove_ingredient("intermetallics"):remove_ingredient("storage-tank"):remove_ingredient("electronic-circuit")
+RECIPE("jerky-to-phytoplankton"):replace_ingredient("dried-meat", "dried-meat", 2):replace_result("phytoplankton", "phytoplankton", 20)
 RECIPE("waste-water-void"):remove_unlock("fish-mk01"):add_unlock("electrolysis")
 
 RECIPE("fish-farm-mk01"):set_fields{ingredients = {}}:add_ingredient({type = "item", name = "steel-plate", amount = 25}):add_ingredient({type = "item", name = "glass", amount = 20}):add_ingredient("seaweed-crop-mk01"):add_ingredient("pump")
-
+RECIPE("breed-fish-egg-1"):replace_ingredient("fish", "fish", 8):replace_ingredient("phytoplankton", "phytoplankton", 30)
 RECIPE("fish-to-tin"):remove_unlock("molecular-decohesion-mk02"):add_unlock("mining-with-fluid"):set_fields{ignore_in_pypp = false}
 
 RECIPE("fish-food-01"):remove_unlock("fish-mk01"):add_unlock("fish-mk02")

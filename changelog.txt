@@ -29,6 +29,10 @@ Date: ????
     - Forced Destructive Distillation Column MK 00 to show fluid connections even when no recipe is selected
     - Buffed fawogae to iron to a slower, bulk recipe with a better transfer ratio
     - Buffed fawogae with fungal substrate recipe from 15 -> 18
+    - Buffed basic fish egg recipe
+    - Buffed jerky to phytoplankton recipe
+    - Buffed meat to dried jerky recipe
+    - Added an inneficient meat to jerky recipe for when spoilage is enabled
   Bugfixes:
     - Removed automation science pack from Ash Separation technology requirements on tech icon
     - Fixed Melamine not requiring Auogs - Stage 1 to be researched
