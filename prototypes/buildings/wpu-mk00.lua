@@ -42,7 +42,7 @@ ENTITY {
   dying_explosion = "medium-explosion",
   collision_box = {{-2.8, -2.8}, {2.8, 2.8}},
   selection_box = {{-3.0, -3.0}, {3.0, 3.0}},
-  vector_to_place_result = {0, -3.01},
+  vector_to_place_result = {0.5, -3.1},
   module_slots = 0,
   crafting_categories = {"wpu", "wpu-handcrafting"},
   crafting_speed = 0.5,
