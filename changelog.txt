@@ -1,6 +1,9 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.3
 Date: ????
+  Features:
+    - Added valves to the starting inventory when playing with pyhardmode and either valves or configurable valves
+    - Geothermal balancing pass, see below
   Changes:
     - Updated WPU MK 00 to match the placement vector of WPU MK 01+
     - Increased construction costs of Geothermal plants, adding 80 pipe and 150 concrete
