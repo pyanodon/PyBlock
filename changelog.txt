@@ -3,6 +3,7 @@ Version: 3.1.3
 Date: ????
   Changes:
     - Updated WPU MK 00 to match the placement vector of WPU MK 01+
+    - Fixed WPU MK 01 costing 1 inductor instead of 12
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.2
 Date: 2024-12-15

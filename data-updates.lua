@@ -3,7 +3,7 @@ local ores_from_nothing = {
   ["copper-ore"] = true,
   ["coal"] = true,
   ["stone"] = true,
-  -- ["uranium-ore"] = true,
+  ["uranium-ore"] = true,
   ["crude-oil"] = true,
   ["borax"] = true,
   ["niobium"] = true,
@@ -36,7 +36,7 @@ local ores_from_nothing = {
   ["phosphate-rock-02"] = true,
   ["phosphate-rock"] = true,
   ["rare-earth-bolide"] = true,
-  -- ["oil-sand"] = true,
+  ["oil-sand"] = true,
   ["tar-patch"] = true,
   ["oil-mk01"] = true,
   ["oil-mk02"] = true,
@@ -246,7 +246,7 @@ data.raw["technology"]["ash-separation"].unit = nil
 TECHNOLOGY("automation-science-pack"):set_fields{research_trigger = { type = "craft-item", item = "copper-plate", count = 10 }}:set_fields{prerequisites = {"ash-separation"}}
 
 -- burner/steam mk00 recipe adjustments
-RECIPE("wpu"):add_ingredient("inductor1", 12):add_ingredient("wpu-mk00", 1):remove_unlock("automation-science-pack"):add_unlock("wood-processing"):set_fields{enabled = false}
+RECIPE("wpu"):add_ingredient{"inductor1", 12}:add_ingredient("wpu-mk00", 1):remove_unlock("automation-science-pack"):add_unlock("wood-processing"):set_fields{enabled = false}
 
 RECIPE("soil-extractor-mk01"):remove_ingredient("burner-mining-drill"):add_ingredient("soil-extractor-mk00", 1)
 
