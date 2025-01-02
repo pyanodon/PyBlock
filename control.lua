@@ -15,6 +15,15 @@ script.on_init(function(event)
     created_items["stone-furnace"] = 1
     created_items["py-sinkhole"] = 2
     created_items["multiblade-turbine-mk01"] = 1
+    if script.active_mods["pyhardmode"] then
+        if script.active_mods["configurable-valves"] then
+            created_items["configurable-valve"] = 6
+        end
+        if script.active_mods["valves"] then
+                created_items["valves-overflow"] = 3
+                created_items["valves-top_up"] = 3
+        end
+    end
     remote.call('freeplay', 'set_created_items', created_items)
   end
 end)
