@@ -53,7 +53,7 @@ RECIPE {
 	enabled = false,
 	energy_required = 4,
 	ingredients = {
-		{ type = "fluid", name = "pressured-water", amount = 3000 },
+		{ type = "fluid", name = "pressured-water", amount = 3750 },
     { type = "item", name = "pipe", amount = 20 }
 	},
 	results = {

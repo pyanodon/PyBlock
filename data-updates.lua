@@ -262,10 +262,17 @@ RECIPE("slaughterhouse-mk01"):add_ingredient("slaughterhouse-mk00")
 RECIPE("geothermal-plant-mk01"):add_ingredient{"pipe", 80}:add_ingredient{"concrete", 150}
 
 -- slow down geowater->steam recipe, and add more ingredients
-RECIPE("geo-he-00"):add_ingredient{type = "fluid", name = "water", amount = 400}:set_fields{energy_required = 5}:set_fields{results = {
-  {type = "fluid", name = "steam", amount = 300},
-  {type = "fluid", name = "dirty-water-light", amount = 100}
-}}
+RECIPE("geo-he-00"):set_fields{
+  energy_required = 10,
+  ingredients = {
+    { type = "fluid", name = "geothermal-water", amount = 180, minimum_temperature = 950 },
+    { type = "fluid", name = "water", amount = 400 }
+  },
+  results = {
+    { type = "fluid", name = "steam", amount = 320, temperature = 500 },
+    { type = "fluid", name = "dirty-water-light", amount = 80 }
+  }
+}
 
 -- move atomizer recipes to new trigger tech
 RECIPE("iron-plate"):add_unlock("atomizer-mk00"):set_fields{enabled = false}
