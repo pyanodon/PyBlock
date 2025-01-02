@@ -33,7 +33,7 @@ ENTITY {
     },
   },
   fixed_recipe = "geothermal-water",
-  energy_usage = "1MW",
+  energy_usage = "2.5MW",
   crafting_speed = 1,
   crafting_categories = {"geowater"},
   allowed_effects = {"consumption", "speed", "productivity"},
@@ -125,4 +125,32 @@ ENTITY {
     apparent_volume = 0.5
   },
   fast_replaceable_group = "geothermal-plant",
+}
+
+-- add extra fluidboxes to regenrative heat exchanger
+data.raw["assembling-machine"].rhe.fluid_boxes = {
+  {
+    production_type = "input",
+    pipe_covers = py.pipe_covers(false, true, true, true),
+    volume = 1000,
+    pipe_connections = {{flow_direction = "input", position = {0.0, -1.95}, direction = defines.direction.north}}
+  },
+  {
+    production_type = "input",
+    pipe_covers = py.pipe_covers(false, true, true, true),
+    volume = 1000,
+    pipe_connections = {{flow_direction = "input", position = {1.95, 0.0}, direction = defines.direction.east}}
+  },
+  {
+    production_type = "output",
+    pipe_covers = py.pipe_covers(false, true, true, true),
+    volume = 100,
+    pipe_connections = {{flow_direction = "output", position = {0.0, 1.95}, direction = defines.direction.south}}
+  },
+  {
+    production_type = "output",
+    pipe_covers = py.pipe_covers(false, true, true, true),
+    volume = 100,
+    pipe_connections = {{flow_direction = "output", position = {-1.95, 0.0}, direction = defines.direction.west}}
+  },
 }

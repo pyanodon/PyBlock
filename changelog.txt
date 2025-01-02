@@ -3,6 +3,14 @@ Version: 3.1.3
 Date: ????
   Changes:
     - Updated WPU MK 00 to match the placement vector of WPU MK 01+
+    - Increased construction costs of Geothermal plants, adding 80 pipe and 150 concrete
+    - Increased power draw of Geothermal plants
+    - Extracting geothermal water now requires a constant supply of pipes,
+        perhaps new recipes will be later added to consume better pipes at a lower cost
+    - Slowed down and increased water consumption of geothermal water extraction
+    - Added water ingredient to geothermal water -> steam recipe
+    - Added muddy sludge output to geothermal water -> steam recipe
+  Bugfixes:
     - Fixed WPU MK 01 costing 1 inductor instead of 12
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.2

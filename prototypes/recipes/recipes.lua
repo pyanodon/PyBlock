@@ -51,15 +51,17 @@ RECIPE {
 	name = "geothermal-water",
 	category = "geowater",
 	enabled = false,
-	energy_required = 1,
+	energy_required = 4,
 	ingredients = {
-		{ type = "fluid", name = "pressured-water", amount = 100},
+		{ type = "fluid", name = "pressured-water", amount = 3000 },
+    { type = "item", name = "pipe", amount = 20 }
 	},
 	results = {
-		{ type = "fluid", name = "geothermal-water", amount = 100, temperature = 3000},
+		{ type = "fluid", name = "geothermal-water", amount = 400, temperature = 3000 },
+    { type = "item", name = "pipe", amount_min = 0, amount_max = 20, probability = 0.9 }
 	},
 	main_product = "geothermal-water",
-}:add_unlock('geothermal-power-mk01')
+}:add_unlock("geothermal-power-mk01")
 
 -- bootstrapping stone to moss
 RECIPE {
@@ -67,7 +69,7 @@ RECIPE {
   name = "moss-cultivation",
   category = "washer",
 	subgroup = "py-alienlife-moss",
-  enabled = true,
+  enabled = false,
   energy_required = 160,
   ingredients = {
     { type = "item", name = "stone", amount = 24 },
@@ -87,7 +89,7 @@ RECIPE {
   name = "sap-cultivation",
   category = "fwf",
 	subgroup = "py-alienlife-sap",
-  enabled = true,
+  enabled = false,
   energy_required = 80,
   ingredients = {
     { type = "item", name = "wood-seedling", amount = 12 },
@@ -106,7 +108,7 @@ RECIPE {
   name = "synthesize-flora",
   category = "cultivation",
 	subgroup = "py-alienlife-genetics",
-  enabled = true,
+  enabled = false,
   energy_required = 12,
   ingredients = {
     { type = "item", name = "soil", amount = 8 },
@@ -124,7 +126,7 @@ RECIPE {
   name = "flora-cultivation",
   category = "cultivation",
 	subgroup = "py-alienlife-genetics",
-  enabled = true,
+  enabled = false,
   energy_required = 15,
   ingredients = {
     { type = "item", name = "soil", amount = 20 },
@@ -159,7 +161,7 @@ RECIPE {
 	},
 	main_product = "butanol",
 	category = "electrolyzer"
-}:add_unlock('uranium-mk01')
+}:add_unlock("uranium-mk01")
 ]]--
 
 --[[
@@ -177,7 +179,7 @@ RECIPE {
 	},
 	main_product = "phosphorus-tricloride",
 	category = "electrolyzer"
-}:add_unlock('uranium-mk01')
+}:add_unlock("uranium-mk01")
 ]]--
 
 --make phosphorous acid: not used atm
@@ -214,7 +216,7 @@ RECIPE {
 	},
 	main_product = "phosphoryl-chloride",
 	category = "electrolyzer"
-}:add_unlock('uranium-mk01')
+}:add_unlock("uranium-mk01")
 ]]--
 
 --[[
@@ -233,7 +235,7 @@ RECIPE {
 	},
 	main_product = "tributyl-phosphate",
 	category = "electrolyzer"
-}:add_unlock('uranium-mk01')
+}:add_unlock("uranium-mk01")
 ]]
 
 --[[
@@ -251,5 +253,5 @@ RECIPE {
 	},
 	main_product = "rare-earth-ore",
 	category = "electrolyzer"
-}:add_unlock('rare-earth-tech')
+}:add_unlock("rare-earth-tech")
 ]]
