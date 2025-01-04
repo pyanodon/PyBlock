@@ -223,7 +223,8 @@ RECIPE("soot-to-copper"):add_unlock("ash-separation")
 RECIPE("soot-to-aluminium"):add_unlock("mining-with-fluid")
 
 -- get rid of the steam power tech
-TECHNOLOGY("steam-power"):set_fields{hidden = true, research_trigger = nil, unit = data.raw["technology"]["mining-productivity-4"].unit}
+TECHNOLOGY("steam-power"):set_fields{hidden = true, unit = data.raw["technology"]["mining-productivity-4"].unit}
+data.raw.technology["steam-power"].research_trigger = nil
 for e, effect in pairs(data.raw["technology"]["steam-power"].effects) do
   if effect.type == "unlock-recipe" then
     RECIPE(effect.recipe):remove_unlock("steam-power"):set_fields{enabled = true}
