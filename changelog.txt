@@ -4,6 +4,7 @@ Date: ????
   Locale:
     - Fixed solid separator mk00 locale
   Features:
+    - Correcting the canon
     - Added valves to the starting inventory when playing with pyhardmode and either valves or configurable valves
     - Geothermal balancing pass, see below
   Changes:
