@@ -9,6 +9,7 @@ Date: ????
     - Geothermal balancing pass, see below
   Changes:
     - Buffed the basic fish breeding recipe from 270s -> 200s
+    - Buffed tin extraction from fish from 25 tin -> 30 tin
     - Updated WPU MK 00 to match the placement vector of WPU MK 01+
     - Increased construction costs of Geothermal plants, adding 80 pipe and 150 concrete
     - Increased power draw of Geothermal plants

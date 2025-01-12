@@ -130,7 +130,7 @@ RECIPE("waste-water-void"):remove_unlock("fish-mk01"):add_unlock("electrolysis")
 
 RECIPE("fish-farm-mk01"):set_fields{ingredients = {}}:add_ingredient({type = "item", name = "steel-plate", amount = 25}):add_ingredient({type = "item", name = "glass", amount = 20}):add_ingredient("seaweed-crop-mk01"):add_ingredient("pump")
 RECIPE("breed-fish-egg-1"):replace_ingredient("fish", "fish", 8):replace_ingredient("phytoplankton", "phytoplankton", 30)
-RECIPE("fish-to-tin"):remove_unlock("molecular-decohesion-mk02"):add_unlock("mining-with-fluid"):set_fields{ignore_in_pypp = false}
+RECIPE("fish-to-tin"):remove_unlock("molecular-decohesion-mk02"):add_unlock("mining-with-fluid"):set_fields{ignore_in_pypp = false}:replace_result("ore-tin", "ore-tin", 30)
 
 RECIPE("fish-food-01"):remove_unlock("fish-mk01"):add_unlock("fish-mk02")
 
