@@ -10,9 +10,12 @@ Date: ????
   Changes:
     - Decreased icon scale of shunt inserter filters and shifted it so that it's visible behind the steam icon
     - Decreased shunt inserter mining time to be the same as all other inserters
+    - Buffed the meat -> jerky recipe when spoilage is enabled
+    - Moved Tin Processing - Stage 1 to automation science, behind Microbiology - Stage 1
+    - Buffed jerky -> phytoplankton from 2 jerky -> 1 jerky
+    - Nerfed tin -> phytoplankton and moved to Tin Processing - Stage 1
     - Buffed the basic fish breeding recipe from 270s -> 200s
     - Doubled the meat extracted from fish rendering
-    - Buffed tin extraction from fish from 25 tin -> 30 tin
     - Updated WPU MK 00 to match the placement vector of WPU MK 01+
     - Increased construction costs of Geothermal plants, adding 80 pipe and 150 concrete
     - Increased power draw of Geothermal plants

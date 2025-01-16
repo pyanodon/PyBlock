@@ -93,7 +93,7 @@ if settings.startup["py-enable-decay"] and mods["enable-all-feature-flags"] then
     ingredients = {
       { type = "item", name = "meat", amount = 20 }
     },
-    results = {{ type = "item", name = "dried-meat", amount = 12 }}
+    results = {{ type = "item", name = "dried-meat", amount = 15 }}
   }:add_unlock("water-animals-mk01")
 end
 
@@ -123,14 +123,17 @@ TECHNOLOGY("molecular-decohesion"):set_fields{prerequisites = {}}
 
 TECHNOLOGY("fish-mk01"):remove_pack("py-science-pack-1"):set_fields{prerequisites = {}}
 
+TECHNOLOGY("tin-mk01"):remove_pack("py-science-pack-1")
+
 TECHNOLOGY("microbiology-mk01"):remove_pack("py-science-pack-1"):set_fields{prerequisites = {}}
 RECIPE("plankton-farm"):remove_ingredient("intermetallics"):remove_ingredient("storage-tank"):remove_ingredient("electronic-circuit")
-RECIPE("jerky-to-phytoplankton"):replace_ingredient("dried-meat", "dried-meat", 2):replace_result("phytoplankton", "phytoplankton", 20)
+RECIPE("jerky-to-phytoplankton"):replace_ingredient("dried-meat", "dried-meat", 1):replace_result("phytoplankton", "phytoplankton", 20)
+RECIPE("phytoplankton"):remove_unlock("microbiology-mk01"):add_unlock("tin-mk01")
 RECIPE("waste-water-void"):remove_unlock("fish-mk01"):add_unlock("electrolysis")
 
 RECIPE("fish-farm-mk01"):set_fields{ingredients = {}}:add_ingredient({type = "item", name = "steel-plate", amount = 25}):add_ingredient({type = "item", name = "glass", amount = 20}):add_ingredient("seaweed-crop-mk01"):add_ingredient("pump")
 RECIPE("breed-fish-egg-1"):replace_ingredient("fish", "fish", 8):replace_ingredient("phytoplankton", "phytoplankton", 30)
-RECIPE("fish-to-tin"):remove_unlock("molecular-decohesion-mk02"):add_unlock("mining-with-fluid"):set_fields{ignore_in_pypp = false}:replace_result("ore-tin", "ore-tin", 30)
+RECIPE("fish-to-tin"):remove_unlock("molecular-decohesion-mk02"):add_unlock("mining-with-fluid"):set_fields{ignore_in_pypp = false}
 
 RECIPE("fish-food-01"):remove_unlock("fish-mk01"):add_unlock("fish-mk02")
 
