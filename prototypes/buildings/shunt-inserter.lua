@@ -53,7 +53,7 @@ ENTITY {
     }
   },
   flags = {"placeable-neutral", "player-creation"},
-  minable = {mining_time = 0.5, result = "shunt-inserter"},
+  minable = {mining_time = 0.1, result = "shunt-inserter"},
   fast_replaceable_group = "inserter",
   max_health = 100,
   corpse = "burner-inserter-remnants",

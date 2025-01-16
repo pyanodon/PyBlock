@@ -8,6 +8,7 @@ Date: ????
     - Added valves to the starting inventory when playing with pyhardmode and either valves or configurable valves
     - Geothermal balancing pass, see below
   Changes:
+    - Decreased shunt inserter mining time to be the same as all other inserters
     - Buffed the basic fish breeding recipe from 270s -> 200s
     - Doubled the meat extracted from fish rendering
     - Buffed tin extraction from fish from 25 tin -> 30 tin
