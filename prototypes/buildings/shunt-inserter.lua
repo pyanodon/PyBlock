@@ -82,8 +82,8 @@ ENTITY {
   pickup_position = {0, -1},
   energy_per_movement = "10kW",
   energy_per_rotation = "10kW",
-  filter_count = 1,
   hide_connection_info = true,
+  filter_count = 1,
   platform_picture = {
     north = table.deepcopy(data.raw["pipe"]["pipe"].pictures.straight_horizontal),
     south = table.deepcopy(data.raw["pipe"]["pipe"].pictures.straight_horizontal),
@@ -92,9 +92,11 @@ ENTITY {
   },
   hand_base_picture = table.deepcopy(data.raw["inserter"]["burner-inserter"].hand_base_picture),
   hand_open_picture = table.deepcopy(data.raw["inserter"]["burner-inserter"].hand_open_picture),
-  hand_closed_picture = table.deepcopy(data.raw["inserter"]["burner-inserter"].hand_closed_picture)
+  hand_closed_picture = table.deepcopy(data.raw["inserter"]["burner-inserter"].hand_closed_picture),
+  icon_draw_specification = table.deepcopy(data.raw["inserter"]["burner-inserter"].icon_draw_specification)
 }
 
+data.raw["inserter"]["shunt-inserter"].icon_draw_specification.shift = {0.25, -0.25}
 data.raw["inserter"]["shunt-inserter"].hand_base_picture.tint = { 0.75, 0.75, 0.75, 1 }
 data.raw["inserter"]["shunt-inserter"].hand_open_picture.tint = { 0.75, 0.75, 0.75, 1 }
 data.raw["inserter"]["shunt-inserter"].hand_closed_picture.tint = { 0.75, 0.75, 0.75, 1 }
