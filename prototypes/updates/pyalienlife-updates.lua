@@ -83,7 +83,7 @@ RECIPE("fungal-substrate"):remove_unlock("mycology-mk02"):add_unlock("fawogae-mk
 RECIPE("dried-meat-01"):remove_unlock("rendering"):add_unlock("water-animals-mk01"):replace_result("dried-meat", "dried-meat", 8)
 
 -- if decay is on, re-add a less efficient meat recipe for simple but less efficient dried meat
-if settings.startup["py-enable-decay"] then
+if settings.startup["py-enable-decay"] and mods["enable-all-feature-flags"] then
   RECIPE{
     type = "recipe",
     name = "dried-meat-01",
