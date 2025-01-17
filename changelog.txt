@@ -2,12 +2,14 @@
 Version: 3.1.3
 Date: ????
   Locale:
-    - Fixed solid separator mk00 locale
+    - Minor changes to the names of mk00 buildings to reinforce their crude nature
   Features:
     - Correcting the canon
     - Added valves to the starting inventory when playing with pyhardmode and either valves or configurable valves
     - Geothermal balancing pass, see below
   Changes:
+    - Increased the crafting speed and yield of the basic cadaveric arum recipe
+    - Increased the yield of cadaveric arum -> copper
     - Decreased icon scale of shunt inserter filters and shifted it so that it's visible behind the steam icon
     - Decreased shunt inserter mining time to be the same as all other inserters
     - Buffed the meat -> jerky recipe when spoilage is enabled
