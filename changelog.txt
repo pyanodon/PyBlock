@@ -21,6 +21,7 @@ Date: ????
     - Slowed down and increased water consumption of geothermal water extraction
     - Added water ingredient to geothermal water -> steam recipe
     - Added muddy sludge output to geothermal water -> steam recipe
+    - Added Ukrainian Translation
   Bugfixes:
     - Fixed an issue where the jerky recipe would be replaced when the mod setting was ON but enable-all-feature-flags was not installed
     - Fixed WPU MK 01 costing 1 inductor instead of 12
