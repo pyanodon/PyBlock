@@ -69,7 +69,7 @@ RECIPE("moss-farm-mk01"):remove_ingredient("aluminium-plate")
 TECHNOLOGY("moss-mk01"):remove_prereq("botany-mk01")
 
 --cadaveric for copper
-RECIPE("cadaveric-to-copper"):remove_unlock("molecular-decohesion-mk03"):add_unlock("cadaveric-arum")
+RECIPE("cadaveric-to-copper"):remove_unlock("molecular-decohesion-mk03"):add_unlock("cadaveric-arum"):replace_ingredient("cadaveric-arum", "cadaveric-arum", 3):replace_result("copper-ore", "copper-ore", 60):set_fields{energy_required = 20}
 RECIPE("cadaveric-arum-sample"):remove_ingredient("alien-sample-02"):remove_ingredient("cdna"):remove_ingredient("earth-tropical-tree-sample"):remove_ingredient("earth-flower-sample"):remove_ingredient("bio-sample")
 RECIPE("cadaveric-arum-codex"):remove_ingredient("electronic-circuit")
 TECHNOLOGY("cadaveric-arum"):remove_prereq("botany-mk02"):remove_pack("py-science-pack-1"):remove_pack("logistic-science-pack"):remove_pack("py-science-pack-2")
@@ -216,6 +216,33 @@ RECIPE("nacl-biomass-extraction"):remove_unlock("phytomining"):add_unlock("phyto
 RECIPE("fe-biomass-extraction"):remove_unlock("phytomining"):add_unlock("phytomining-mk02")
 RECIPE("cadaveric-pb"):remove_unlock("phytomining"):add_unlock("phytomining-mk02")
 RECIPE("s-biomass-extraction"):remove_unlock("phytomining"):add_unlock("phytomining-mk02")
+
+-- Bhoddos to uranium
+RECIPE("ur-biomass-extraction"):replace_result("uranium-ore", "uranium-ore", 40):replace_ingredient("ur-biomass", "ur-biomass", 5):set_fields{energy_required = 80}:remove_unlock("phytomining-mk03"):add_unlock("phytomining-mko2")
+RECIPE("bhodos-ur"):set_fields{
+  ingredients = {
+    {type = "fluid", name = "pressured-steam", amount = 500, minimum_temperature = 2000},
+    {type = "item", name = "bhoddos", amount = 8}
+  },
+  energy_required = 180
+}:remove_unlock("phytomining-mk03"):add_unlock("phytomining-mko2")
+RECIPE("bhodos-ur-2"):set_fields{
+  ingredients = {
+    {type = "fluid", name = "pressured-steam", amount = 500, minimum_temperature = 2000},
+    {type = "fluid", name = "chelator", amount = 50},
+    {type = "item", name = "bhoddos", amount = 8}
+  },
+  energy_required = 120
+}:remove_unlock("phytomining-mk03"):add_unlock("phytomining-mko2")
+RECIPE("bhodos-ur-3"):set_fields{
+  ingredients = {
+    {type = "fluid", name = "pressured-steam", amount = 500, minimum_temperature = 2000},
+    {type = "fluid", name = "chelator", amount = 50},
+    {type = "item", name = "bhoddos", amount = 8},
+    {type = "item", name = "hmas", amount = 1}
+  },
+  -- energy_required = 160
+}:remove_unlock("phytomining-mk03"):add_unlock("phytomining-mko2")
 
 --Vrauks
 -- RECIPE("vrauks"):remove_ingredient("native-flora")

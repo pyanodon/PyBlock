@@ -7,6 +7,7 @@ Date: ????
     - Correcting the canon
     - Added valves to the starting inventory when playing with pyhardmode and either valves or configurable valves
     - Geothermal balancing pass, see below
+    - (re?)added uranium production recipes for bootstrapping the bhoddos - uranium loop in py2, see below
   Changes:
     - Increased the crafting speed and yield of the basic cadaveric arum recipe
     - Increased the yield of cadaveric arum -> copper
@@ -26,6 +27,10 @@ Date: ????
     - Slowed down and increased water consumption of geothermal water extraction
     - Added water ingredient to geothermal water -> steam recipe
     - Added muddy sludge output to geothermal water -> steam recipe
+    - Moved acrolein recipes from Microfibers to TBP
+    - Moved TBP to Py science pack 2
+    - Added TBP prerequesite to Nuclear research
+    - Decreased fuel cell consumption in depleted fuel cell reprocessing to enhance bhoddos phytomining
   Bugfixes:
     - Fixed an issue where the jerky recipe would be replaced when the mod setting was ON but enable-all-feature-flags was not installed
     - Fixed WPU MK 01 costing 1 inductor instead of 12

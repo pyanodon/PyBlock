@@ -15,7 +15,7 @@ TECHNOLOGY {
 
 
 --tiles
-require("prototypes/tiles/tiles")
+-- require("prototypes/tiles/tiles")
 
 --buildings--
 require("prototypes/buildings/atomizer-mk00")
@@ -41,14 +41,14 @@ require("prototypes/buildings/shunt-inserter")
 require("prototypes/itemgroups")
 require("prototypes/recipe-categories")
 --require("prototypes/technology")
---require("prototypes/item")
---require("prototypes/fluids")
+require("prototypes/item")
+require("prototypes/fluids")
 --require("prototypes/entity")
 
 --Recipes
 require("prototypes/recipes/recipes")
 require("prototypes/recipes/recipes-kimberlite")
---require("prototypes/recipes/recipes-uranium")
+require("prototypes/recipes/recipes-uranium")
 
 --formula to calulate steam consumption
 --flowrate (in units/s) * heat capacity (J/unit/C) * (T - 15 C) = wattage
