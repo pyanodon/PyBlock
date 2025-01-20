@@ -58,9 +58,6 @@ data.raw["map-gen-presets"].default["pyblock-recommended"] = {
       ["copper-ore"] = {
         frequency = 0
       },
-      ["coal"] = {
-        frequency = 0
-      },
       ["crude-oil"] = {
         frequency = 0
       },
@@ -237,9 +234,6 @@ data.raw["map-gen-presets"].default["pyblock-classic"] = {
         frequency = 0
       },
       ["copper-ore"] = {
-        frequency = 0
-      },
-      ["coal"] = {
         frequency = 0
       },
       ["crude-oil"] = {

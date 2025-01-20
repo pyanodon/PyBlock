@@ -244,7 +244,10 @@ RECIPE("inductor1-2"):add_unlock("ash-separation"):set_fields{enabled = false}
 data.raw["technology"]["ash-separation"].unit = nil
 
 -- set automation science pack to require 10 copper plates
-TECHNOLOGY("automation-science-pack"):set_fields{research_trigger = { type = "craft-item", item = "copper-plate", count = 10 }}:set_fields{prerequisites = {"ash-separation"}}
+TECHNOLOGY("automation-science-pack"):set_fields{research_trigger = { type = "craft-item", item = "copper-plate", count = 10 }}
+data.raw["technology"]["automation-science-pack"].prerequisites = {"ash-separation"}
+data.raw["technology"]["automation-science-pack"].unit = nil
+data.raw["technology"]["atomizer-mk00"].unit = nil
 
 -- burner/steam mk00 recipe adjustments
 RECIPE("wpu"):add_ingredient{"inductor1", 12}:add_ingredient("wpu-mk00", 1):remove_unlock("automation-science-pack"):add_unlock("wood-processing"):set_fields{enabled = false}
