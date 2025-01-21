@@ -2,6 +2,9 @@
 Version: 3.1.4
 Date: ????
   Changes:
+    - Reduced wood produced from the sap extraction recipe to make it less appealing as a normal recipe for new players
+    - Buffed the sap received from sap extraction
+    - Slowed down sap extraction by 50%
   Bugfixes:
     - Reduced science cost of Fawogae Stage 1 to be in line with its placement in the tech tree
     - Fixed a crash where coal is an invalid autoplace setting

@@ -90,14 +90,14 @@ RECIPE {
   category = "fwf",
 	subgroup = "py-alienlife-sap",
   enabled = false,
-  energy_required = 80,
+  energy_required = 120,
   ingredients = {
     { type = "item", name = "wood-seedling", amount = 12 },
     { type = "fluid", name = "water", amount = 800 },
   },
   results = {
-    { type = "item", name = "saps", amount = 1, probability = 0.1 },
-    { type = "item", name = "log", amount = 8 }
+    { type = "item", name = "saps", amount_min = 0, amount_max = 2, probability = 0.1 },
+    { type = "item", name = "log", amount = 4 }
   },
   main_product = "saps"
 }:add_unlock("wood-processing")
