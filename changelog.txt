@@ -6,6 +6,7 @@ Date: ????
     - Buffed the sap received from sap extraction
     - Slowed down sap extraction by 50%
     - Reduced circuit cost of Yaedol Culture MK 01 from 100 -> 25
+    - Halved circuit cost of Yaedol Codex
   Bugfixes:
     - Reduced science cost of Fawogae Stage 1 to be in line with its placement in the tech tree
     - Fixed a crash where coal is an invalid autoplace setting
