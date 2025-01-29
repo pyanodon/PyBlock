@@ -8,6 +8,7 @@ Date: ????
     - Reduced circuit cost of Yaedol Culture MK 01 from 100 -> 25
     - Halved circuit cost of Yaedol Codex
     - Reduced tinned cable cost of Cadaveric Arum Codex from 20 -> 5
+    - Reduced lamp cost of Cadaveric Arum Codex from 5 -> 2
   Bugfixes:
     - Reduced science cost of Fawogae Stage 1 to be in line with its placement in the tech tree
     - Fixed an issue where multiple techs did not require Lamp

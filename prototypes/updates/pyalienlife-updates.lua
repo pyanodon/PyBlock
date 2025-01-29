@@ -71,7 +71,7 @@ TECHNOLOGY("moss-mk01"):remove_prereq("botany-mk01")
 --cadaveric for copper
 RECIPE("cadaveric-to-copper"):remove_unlock("molecular-decohesion-mk03"):add_unlock("cadaveric-arum"):replace_ingredient("cadaveric-arum", "cadaveric-arum", 3):replace_result("copper-ore", "copper-ore", 60):set_fields{energy_required = 20}
 RECIPE("cadaveric-arum-sample"):remove_ingredient("alien-sample-02"):remove_ingredient("cdna"):remove_ingredient("earth-tropical-tree-sample"):remove_ingredient("earth-flower-sample"):remove_ingredient("bio-sample")
-RECIPE("cadaveric-arum-codex"):remove_ingredient("electronic-circuit"):replace_ingredient("tinned-cable", "tinned-cable", 5)
+RECIPE("cadaveric-arum-codex"):remove_ingredient("electronic-circuit"):replace_ingredient("tinned-cable", "tinned-cable", 5):replace_ingredient("lamp", "lamp", 2)
 TECHNOLOGY("cadaveric-arum"):remove_prereq("botany-mk02"):remove_pack("py-science-pack-1"):remove_pack("logistic-science-pack"):remove_pack("py-science-pack-2")
 RECIPE("cadaveric-arum-1"):replace_result("cadaveric-arum", "cadaveric-arum", 7):set_fields{energy_required = 110}
 RECIPE("stone-wool"):remove_unlock("zipir"):add_unlock("cadaveric-arum")
