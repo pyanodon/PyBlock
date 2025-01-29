@@ -10,6 +10,7 @@ Date: ????
     - Reduced tinned cable cost of Cadaveric Arum Codex from 20 -> 5
   Bugfixes:
     - Reduced science cost of Fawogae Stage 1 to be in line with its placement in the tech tree
+    - Fixed an issue where multiple techs did not require Lamp
     - Fixed a crash where coal is an invalid autoplace setting
     - Fixed a crash where Automation Science Pack unit.time was nil (even though it was a trigger tech)
     - Fixed a crash where Early Molecular Decohesion unit.time was nil (even though it was a trigger tech)
