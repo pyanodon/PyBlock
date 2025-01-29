@@ -184,9 +184,9 @@ TECHNOLOGY("phytomining"):remove_pack("py-science-pack-1"):remove_pack("logistic
 
 TECHNOLOGY("compost"):remove_pack("py-science-pack-1"):set_fields{prerequisites = {}}
 
-RECIPE("yaedols-culture-mk01"):remove_ingredient("intermetallics"):remove_ingredient("titanium-plate")
+RECIPE("yaedols-culture-mk01"):remove_ingredient("intermetallics"):remove_ingredient("titanium-plate"):replace_ingredient("electronic-circuit", "electronic-circuit", 25))
 
-RECIPE("yaedols-codex"):remove_ingredient("red-wire")
+-- RECIPE("yaedols-codex"):remove_ingredient("red-wire")
 
 RECIPE("smelter-mk01"):remove_ingredient("titanium-plate")
 
