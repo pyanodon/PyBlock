@@ -262,8 +262,13 @@ RECIPE("compost-plant-mk01"):add_ingredient("compost-plant-mk00", 1):remove_unlo
 
 RECIPE("slaughterhouse-mk01"):add_ingredient("slaughterhouse-mk00")
 
+RECIPE("destructive-distillation-column-mk01"):add_ingredient("destructive-distillation-column-mk00")
+
 -- increase construction costs of geothermal plant
 RECIPE("geothermal-plant-mk01"):add_ingredient{"pipe", 80}:add_ingredient{"concrete", 150}
+
+-- move check valve from fluid handling to assembly
+RECIPE("py-check-valve"):remove_unlock("fluid-handling"):add_unlock("automation")
 
 -- slow down geowater->steam recipe, and add more ingredients
 RECIPE("geo-he-00"):set_fields{
