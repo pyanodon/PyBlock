@@ -10,9 +10,17 @@ Date: ????
     - Reduced tinned cable cost of Cadaveric Arum Codex from 20 -> 5
     - Reduced lamp cost of Cadaveric Arum Codex from 5 -> 2
     - Moved check valve from Fluid handling to Assembly
+    - Moved Fawogae - Stage 2 to early Logistic science
+    - Moved Cadaveric Arum - Stage 2 to Logistic science
+    - Moved Yaedols - Stage 2 to late Logistic science, behind cobalt processing
+    - Moved Yaedol upgrade to Logistic science
+    - Moved Fawogae upgrade to Logistic science
+    - Changed Special Fungal Substrate to Improved Fungal Substrate in Yaedol Mk02 uplifting and associated basic Yaedol recipe
   Bugfixes:
     - Fixed Atomizer MK 00 having fluidboxes that don't line up with MK01+ variants
     - Fixed Bhoddos Uranium Phytomining recipes not existing
+    - Fixed certain Fish TURD recipes having incorrect outputs compared to the base recipe
+    - Fixed certain Cadaveric Arum TURD recipes having incorrect outputs and timing compared to the base recipe
     - Reduced science cost of Fawogae Stage 1 to be in line with its placement in the tech tree
     - Fixed an issue where multiple techs did not require Lamp
     - Fixed a crash where coal is an invalid autoplace setting

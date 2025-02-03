@@ -74,14 +74,23 @@ RECIPE("cadaveric-arum-sample"):remove_ingredient("alien-sample-02"):remove_ingr
 RECIPE("cadaveric-arum-codex"):remove_ingredient("electronic-circuit"):replace_ingredient("tinned-cable", "tinned-cable", 5):replace_ingredient("lamp", "lamp", 2)
 TECHNOLOGY("cadaveric-arum"):remove_prereq("botany-mk02"):remove_pack("py-science-pack-1"):remove_pack("logistic-science-pack"):remove_pack("py-science-pack-2")
 RECIPE("cadaveric-arum-1"):replace_result("cadaveric-arum", "cadaveric-arum", 7):set_fields{energy_required = 110}
+RECIPE("cadaveric-arum-1-soil"):replace_result("cadaveric-arum", "cadaveric-arum", 7):set_fields{energy_required = 126} -- TURD
+RECIPE("cadaveric-arum-1-msa"):replace_result("cadaveric-arum", "cadaveric-arum", 7):set_fields{energy_required = 110} -- TURD
 RECIPE("stone-wool"):remove_unlock("zipir"):add_unlock("cadaveric-arum")
 RECIPE("cadaveric-arum-mk01"):remove_ingredient("hydrocyclone-mk01"):remove_ingredient("electronic-circuit"):remove_ingredient("plastic-bar"):remove_ingredient("intermetallics"):remove_ingredient("steel-plate"):add_ingredient({name = "steel-plate", amount = 5}):add_ingredient({name = "pipe", amount = 4}):add_ingredient({name = "soil", amount = 20}):remove_ingredient("botanical-nursery")
 
---move fawogae with manure up (even though it doesnt use manure anymore)
+-- move cadaveric 2 up to logi
+RECIPE("blood-meal"):remove_unlock("nylon"):add_unlock("cadaveric-arum-mk02")
+TECHNOLOGY("cadaveric-arum-mk02"):remove_pack("chemical-science-pack")
+
+-- move fawogae with manure up (even though it doesnt use manure anymore)
 TECHNOLOGY("fawogae-mk01"):remove_pack("py-science-pack-1"):set_fields{prerequisites = {}}
 RECIPE("fawogae-with-manure"):remove_unlock("fawogae-mk02"):add_unlock("fawogae-mk01"):replace_result("fawogae", "fawogae", 18)
 RECIPE("fungal-substrate"):remove_unlock("mycology-mk02"):add_unlock("fawogae-mk01")
 RECIPE("dried-meat-01"):remove_unlock("rendering"):add_unlock("water-animals-mk01"):replace_result("dried-meat", "dried-meat", 8)
+
+-- move faw 2 up to logi
+TECHNOLOGY("fawogae-mk01"):remove_pack("py-science-pack-2"):add_pack("logistic-science-pack")
 
 -- if decay is on, re-add a less efficient meat recipe for simple but less efficient dried meat
 if settings.startup["py-enable-decay"] and mods["enable-all-feature-flags"] then
@@ -143,6 +152,7 @@ RECIPE("saline-water"):remove_unlock("vacuum-tube-electronics"):add_unlock("fish
 RECIPE("full-render-fish"):replace_result("meat", "meat", 4)
 
 RECIPE("breed-fish-1"):remove_ingredient("oxygen"):set_fields{results = {{type = "item", name = "fish", amount = 15}, {type = "fluid", name = "waste-water", amount = 100}}}
+RECIPE("breed-fish-1-agressive-selection"):replace_result("fish", "fish", 13)
 
 local breed_fish = table.deepcopy(data.raw["recipe"]["breed-fish-1"])
 breed_fish.name = "breed-fish-simple"
@@ -179,6 +189,8 @@ RECIPE("flavonoids"):remove_unlock("yaedols"):add_unlock("biotech-mk01")
 
 --Titanium from yaedols
 TECHNOLOGY("yaedols"):remove_pack("logistic-science-pack"):remove_pack("py-science-pack-1"):remove_prereq("mycology-mk02")
+RECIPE("yaedols-2"):replace_ingredient("fungal-substrate-03", "fungal-substrate-02", 2) -- replace special fungal substrate with improved fungal substrate
+RECIPE("yaedols-mk02"):replace_ingredient("fungal-substrate-03", "fungal-substrate-02", 5)
 
 TECHNOLOGY("phytomining"):remove_pack("py-science-pack-1"):remove_pack("logistic-science-pack"):remove_pack("py-science-pack-2"):set_fields{prerequisites = {}}
 
