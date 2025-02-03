@@ -225,7 +225,7 @@ RECIPE("bhodos-ur"):set_fields{
     {type = "item", name = "bhoddos", amount = 8}
   },
   energy_required = 180
-}:remove_unlock("phytomining-mk03"):add_unlock("phytomining-mko2")
+}:remove_unlock("phytomining-mk03"):add_unlock("phytomining-mk02")
 RECIPE("bhodos-ur-2"):set_fields{
   ingredients = {
     {type = "fluid", name = "pressured-steam", amount = 500, minimum_temperature = 2000},
@@ -233,7 +233,7 @@ RECIPE("bhodos-ur-2"):set_fields{
     {type = "item", name = "bhoddos", amount = 8}
   },
   energy_required = 120
-}:remove_unlock("phytomining-mk03"):add_unlock("phytomining-mko2")
+}:remove_unlock("phytomining-mk03"):add_unlock("phytomining-mk02")
 RECIPE("bhodos-ur-3"):set_fields{
   ingredients = {
     {type = "fluid", name = "pressured-steam", amount = 500, minimum_temperature = 2000},
@@ -242,7 +242,7 @@ RECIPE("bhodos-ur-3"):set_fields{
     {type = "item", name = "hmas", amount = 1}
   },
   -- energy_required = 160
-}:remove_unlock("phytomining-mk03"):add_unlock("phytomining-mko2")
+}:remove_unlock("phytomining-mk03"):add_unlock("phytomining-mk02")
 
 --Vrauks
 -- RECIPE("vrauks"):remove_ingredient("native-flora")
