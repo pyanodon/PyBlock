@@ -218,7 +218,7 @@ RECIPE("cadaveric-pb"):remove_unlock("phytomining"):add_unlock("phytomining-mk02
 RECIPE("s-biomass-extraction"):remove_unlock("phytomining"):add_unlock("phytomining-mk02")
 
 -- Bhoddos to uranium
-RECIPE("ur-biomass-extraction"):replace_result("uranium-ore", "uranium-ore", 40):replace_ingredient("ur-biomass", "ur-biomass", 5):set_fields{energy_required = 80}:remove_unlock("phytomining-mk03"):add_unlock("phytomining-mko2")
+RECIPE("ur-biomass-extraction"):replace_result("uranium-ore", "uranium-ore", 40):replace_ingredient("ur-biomass", "ur-biomass", 5):set_fields{energy_required = 80}:remove_unlock("phytomining-mk03"):add_unlock("phytomining-mk02")
 RECIPE("bhodos-ur"):set_fields{
   ingredients = {
     {type = "fluid", name = "pressured-steam", amount = 500, minimum_temperature = 2000},
