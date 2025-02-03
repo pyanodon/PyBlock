@@ -11,6 +11,7 @@ Date: ????
     - Reduced lamp cost of Cadaveric Arum Codex from 5 -> 2
     - Moved check valve from Fluid handling to Assembly
   Bugfixes:
+    - Fixed Atomizer MK 00 having fluidboxes that don't line up with MK01+ variants
     - Reduced science cost of Fawogae Stage 1 to be in line with its placement in the tech tree
     - Fixed an issue where multiple techs did not require Lamp
     - Fixed a crash where coal is an invalid autoplace setting
