@@ -39,3 +39,27 @@ script.on_event(defines.events.on_player_created, function(event)
   end
   player.print {"messages.pyblock-intro"}
 end)
+
+-- landfill generation script
+script.on_event(defines.events.on_chunk_generated, function (event)
+  local tiles = event.surface.find_tiles_filtered{
+    area = event.area,
+    collision_mask = "water_tile",
+    invert = true
+  }
+  local to_replace = {}
+  for _, tile in pairs(tiles) do
+    to_replace[#to_replace+1] = {
+      position = tile.position,
+      name = "landfill"
+    }
+  end
+  -- set as landfill
+  event.surface.set_tiles(
+    to_replace
+  )
+  -- set water as hidden tile
+  for _, tile in pairs(to_replace) do
+    event.surface.set_hidden_tile(tile.position, "water")
+  end
+end)

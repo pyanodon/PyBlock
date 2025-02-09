@@ -1,6 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.2.0
+Date: ???
+  Features:
+    - All non-water generated tiles will be converted to landfill. Includes previously generated tiles when migrating saves.
+---------------------------------------------------------------------------------------------------
 Version: 3.1.4
-Date: ????
+Date: 2025-02-03
   Changes:
     - Reduced wood produced from the sap extraction recipe to make it less appealing as a normal recipe for new players
     - Buffed the sap received from sap extraction
