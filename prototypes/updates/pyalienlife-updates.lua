@@ -254,7 +254,7 @@ RECIPE("bhodos-ur-3"):set_fields{
     {type = "item", name = "hmas", amount = 1}
   },
   -- energy_required = 160
-}:remove_unlock("phytomining-mk03"):add_unlock("phytomining-mk02")
+}
 
 --Vrauks
 -- RECIPE("vrauks"):remove_ingredient("native-flora")

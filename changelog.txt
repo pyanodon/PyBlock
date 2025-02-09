@@ -3,6 +3,8 @@ Version: 3.2.0
 Date: ???
   Features:
     - All non-water generated tiles will be converted to landfill. Includes previously generated tiles when migrating saves.
+  Bugfixes:
+    - Moved uranium phytomining with HMAs back to phytomining stage 3 where HMAs are unlocked
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.4
 Date: 2025-02-03
