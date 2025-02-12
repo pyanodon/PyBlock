@@ -1,7 +1,7 @@
 AAILoaders.make_tier{
   name = "shunt",
   transport_belt 	= "transport-belt",
-  speed = 0.010416666666666666667,
+  speed = 0.0078125,
   color	= {0.5, 0.5, 0.5},
   fluid = "steam",
   fluid_per_minute = 0.05,

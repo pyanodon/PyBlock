@@ -3,6 +3,8 @@ Version: 3.2.0
 Date: ???
   Features:
     - All non-water generated tiles will be converted to landfill. Includes previously generated tiles when migrating saves.
+  Changes:
+    - Nerfed loaders to 3.75 items per second (their previous speed was unknown, not actually 5 items per second)
   Bugfixes:
     - Moved uranium phytomining with HMAs back to phytomining stage 3 where HMAs are unlocked
 ---------------------------------------------------------------------------------------------------
