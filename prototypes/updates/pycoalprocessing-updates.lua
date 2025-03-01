@@ -6,7 +6,8 @@ RECIPE("ash-separation"):set_fields{results = {
 	{type = "item", name = "soot", amount = 1, probability = 1}
 }}
 
-
+-- move oxide smelting to ash processing
+RECIPE("iron-oxide-smelting"):remove_unlock("coal-processing-1"):add_unlock("ash-separation")
 
 data.raw.recipe["landfill"].ingredients = { { type = "item", name = "stone", amount = 1 },
 	{ type = "item", name = "sand", amount = 2 } }

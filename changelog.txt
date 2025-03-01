@@ -6,6 +6,7 @@ Date: ???
     - Mining productivity research now improves productivity on ground borers by 5% per research
   Changes:
     - Nerfed loaders to 3.75 items per second (their previous speed was unknown, not actually 5 items per second)
+    - Moved iron oxide smelting from Coal Processing 1 to Ash Separation
   Bugfixes:
     - Moved uranium phytomining with HMAs back to phytomining stage 3 where HMAs are unlocked
     - Renamed vacuum-tube-electronics to electronics
