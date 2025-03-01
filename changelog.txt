@@ -7,6 +7,8 @@ Date: ???
     - Nerfed loaders to 3.75 items per second (their previous speed was unknown, not actually 5 items per second)
   Bugfixes:
     - Moved uranium phytomining with HMAs back to phytomining stage 3 where HMAs are unlocked
+    - Renamed vacuum-tube-electronics to electronics
+    - Renamed railway-mk01 to railway
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.4
 Date: 2025-02-03
