@@ -302,6 +302,38 @@ RECIPE("earth-generic-sample"):remove_unlock("xenobiology"):add_unlock("biotech-
 
 RECIPE("data-array"):remove_ingredient("titanium-plate")
 
+-- add recipe productivity to mining productivity research
+bore_recipes = {
+  "mining-aluminium",
+  "mining-chromium",
+  "mining-copper",
+  "mining-iron",
+  "mining-lead",
+  "mining-nexelit",
+  "mining-nickel",
+  "mining-quartz",
+  "mining-tin",
+  "mining-titanium",
+  "mining-zinc",
+  "mining-borax",
+  "mining-niobium",
+  "mining-stone",
+  "mining-antimony",
+  "mining-kerogen",
+  "mining-limestone",
+  "mining-molybdenum"
+}
+
+for i=1, 12 do
+  for _, recipe in pairs(bore_recipes) do
+    data.raw.technology["mining-productivity-" .. i].effects[#data.raw.technology["mining-productivity-" .. i].effects+1] = {
+      type = "change-recipe-productivity",
+      recipe = recipe,
+      change = 0.1
+    }
+  end
+end
+
 if register_cache_file ~= nil then
     register_cache_file({'pycoalprocessing', 'pyfusionenergy', 'pyindustry', 'pyrawores', 'pypetroleumhandling', 'pyalienlife', 'pyhightech', 'pyalternativeenergy', 'PyBlock'}, "__PyBlock__/cached-configs/PyBlock+pyalienlife+pyalternativeenergy+pycoalprocessing+pyfusionenergy+pyhightech+pyindustry+pypetroleumhandling+pyrawores")
 end
