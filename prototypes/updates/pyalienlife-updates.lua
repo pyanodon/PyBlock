@@ -147,7 +147,7 @@ RECIPE("fish-to-tin"):remove_unlock("molecular-decohesion-mk02"):add_unlock("min
 
 RECIPE("fish-food-01"):remove_unlock("fish-mk01"):add_unlock("fish-mk02")
 
-RECIPE("saline-water"):remove_unlock("vacuum-tube-electronics"):add_unlock("fish-mk01")
+RECIPE("saline-water"):remove_unlock("electronics"):add_unlock("fish-mk01")
 
 RECIPE("full-render-fish"):replace_result("meat", "meat", 4)
 
