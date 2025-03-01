@@ -9,6 +9,7 @@ Date: ???
     - Moved uranium phytomining with HMAs back to phytomining stage 3 where HMAs are unlocked
     - Renamed vacuum-tube-electronics to electronics
     - Renamed railway-mk01 to railway
+    - Removed crude oil from autoplace mapgen settings
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.4
 Date: 2025-02-03
