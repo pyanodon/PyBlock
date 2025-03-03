@@ -21,6 +21,9 @@ TECHNOLOGY("landfill"):set_fields{enabled = false}
 
 RECIPE("coal-gas-from-wood"):set_fields{enabled = true}:remove_unlock("coal-processing-1")
 
+-- buff tailings -> nexelit
+RECIPE("nexelit-ore-1"):replace_result("nexelit-ore", "nexelit-ore", 3)
+
 --UNUSED
 
 --RECIPE("tailings-dust"):remove_unlock("fluid-separation"):set_fields{enabled = true, category = "quenching-tower"}
