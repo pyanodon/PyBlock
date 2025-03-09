@@ -76,6 +76,8 @@ ENTITY {
       maximum_temperature = 2000
     }
   },
+  circuit_wire_max_distance = data.raw.inserter["burner-inserter"].circuit_wire_max_distance,
+  circuit_connector = data.raw.inserter["burner-inserter"].circuit_connector,
   extension_speed = 0.035,
   rotation_speed = 0.0175,
   insert_position = {0, 1.2},

@@ -9,6 +9,7 @@ Date: ???
     - Moved iron oxide smelting from Coal Processing 1 to Ash Separation
     - Buffed nexelit ore from tailings from 1 -> 3
   Bugfixes:
+    - Fixed shunt inserter not having circuit connections
     - Moved uranium phytomining with HMAs back to phytomining stage 3 where HMAs are unlocked
     - Renamed vacuum-tube-electronics to electronics
     - Renamed railway-mk01 to railway
