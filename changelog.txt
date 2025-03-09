@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.0
-Date: ???
+Date: 2025-03-09
   Features:
     - All non-water generated tiles will be converted to landfill. Includes previously generated tiles when migrating saves.
     - Mining productivity research now improves productivity on ground borers by 5% per research
