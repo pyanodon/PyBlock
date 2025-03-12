@@ -29,28 +29,30 @@ ENTITY {
   type = "assembling-machine",
   name = "automated-screener-mk00",
   icon = "__PyBlock__/graphics/icons/automated-screener-mk00.png",
-	icon_size = 64,
-    flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.5, result = "automated-screener-mk00"},
-    fast_replaceable_group = "automated-screener",
-    max_health = 700,
-    corpse = "big-remnants",
-    dying_explosion = "big-explosion",
-    collision_box = {{-3.4, -3.4}, {3.4, 3.4}},
-    selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
-    match_animation_speed_to_activity = false,
-    module_specification = {
-        module_slots = 1
-    },
-    allowed_effects = {"speed", "productivity", "consumption", "pollution", "quality"},
-    crafting_categories = {"screener"},
-    crafting_speed = 0.5,
-    energy_source = {
-        type = "electric",
-        usage_priority = "secondary-input",
-        emissions_per_minute = 0.06,
-    },
-    energy_usage = "300kW",
+  icon_size = 64,
+  flags = {"placeable-neutral", "player-creation"},
+  minable = {mining_time = 0.5, result = "automated-screener-mk00"},
+  fast_replaceable_group = "automated-screener",
+  max_health = 700,
+  corpse = "big-remnants",
+  dying_explosion = "big-explosion",
+  collision_box = {{-3.4, -3.4}, {3.4, 3.4}},
+  selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
+  match_animation_speed_to_activity = false,
+  module_slots = 0,
+  crafting_categories = {"screener"},
+  crafting_speed = 0.5,
+  energy_source =
+  {
+    type = "burner",
+    fuel_categories = {"chemical", "biomass"},
+    effectivity = 1,
+    fuel_inventory_size = 1,
+    burnt_inventory_size = 1,
+    emissions_per_minute = { pollution = 0.06 }
+  },
+  energy_usage = "80kW",
+  graphics_set = {
     animation = {
       layers = {
         {
