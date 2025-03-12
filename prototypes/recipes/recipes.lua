@@ -1,4 +1,5 @@
 
+-- soil to stone
 RECIPE {
 	type = "recipe",
 	name = "soil-to-stone",
@@ -22,6 +23,7 @@ RECIPE {
 	order = "c"
 }
 
+-- early quartz
 RECIPE {
 	type = "recipe",
 	name = "sand-quartz-sifting",
@@ -43,196 +45,104 @@ RECIPE {
 	energy_required = 4
 }:add_unlock("glass")
 
-
-RECIPE {
-	type = "recipe",
-	name = "biosample",
-	category = "biofactory",
-	enabled = false,
-	energy_required = 5,
-	ingredients = {
-		{ type = "item", name = "bio-container", amount = 10 },
-		{ type = "item", name = "seaweed", amount = 4 },
-		{ type = "item", name = "moss", amount = 2 },
-		--{ type = 'fluid', name = 'waste-water', amount = 20 },
-		--{ type = 'fluid', name = 'phytoplankton', amount = 25 },
-		--{ type = 'fluid', name = 'zogna-bacteria', amount = 5 },
-	},
-	results = {
-		{ type = "item", name = "bio-sample", amount = 10 },
-
-	},
-	main_product = "bio-sample",
-	icon = "__pyalienlifegraphics__/graphics/icons/biosample.png",
-	icon_size = 64,
-	subgroup = "py-alienlife-genetics",
-	order = "a"
-}:add_unlock('xenobiology')
-
+-- geothermal water fake mining recipe
 RECIPE {
 	type = "recipe",
 	name = "geothermal-water",
 	category = "geowater",
 	enabled = false,
-	energy_required = 1,
+	energy_required = 4,
 	ingredients = {
-		{ type = "fluid", name = "pressured-water", amount = 100},
+		{ type = "fluid", name = "pressured-water", amount = 3750 },
+    { type = "item", name = "pipe", amount = 20 }
 	},
 	results = {
-		{ type = "fluid", name = "geothermal-water", amount = 100, temperature = 3000},
-
+		{ type = "fluid", name = "geothermal-water", amount = 400, temperature = 3000 },
+    { type = "item", name = "pipe", amount_min = 0, amount_max = 20, probability = 0.9 }
 	},
 	main_product = "geothermal-water",
-}:add_unlock('geothermal-power-mk01')
+}:add_unlock("geothermal-power-mk01")
+
+-- bootstrapping stone to moss
+RECIPE {
+  type = "recipe",
+  name = "moss-cultivation",
+  category = "washer",
+	subgroup = "py-alienlife-moss",
+  enabled = false,
+  energy_required = 160,
+  ingredients = {
+    { type = "item", name = "stone", amount = 24 },
+    { type = "fluid", name = "water", amount = 1200 },
+  },
+  results = {
+    { type = "item", name = "stone", amount_min = 6, amount_max = 12, probability = 0.5 },
+    { type = "fluid", name = "dirty-water-light", amount = 1200 },
+    { type = "item", name = "moss", amount = 1, probability = 0.08 },
+  },
+  main_product = "moss"
+}:add_unlock("moss-mk01")
+
+-- bootstrapping wood to sap
+RECIPE {
+  type = "recipe",
+  name = "sap-cultivation",
+  category = "fwf",
+	subgroup = "py-alienlife-sap",
+  enabled = false,
+  energy_required = 120,
+  ingredients = {
+    { type = "item", name = "wood-seedling", amount = 12 },
+    { type = "fluid", name = "water", amount = 800 },
+  },
+  results = {
+    { type = "item", name = "saps", amount_min = 0, amount_max = 2, probability = 0.1 },
+    { type = "item", name = "log", amount = 4 }
+  },
+  main_product = "saps"
+}:add_unlock("wood-processing")
+
+-- native flora recipes
+RECIPE {
+  type = "recipe",
+  name = "synthesize-flora",
+  category = "cultivation",
+	subgroup = "py-alienlife-genetics",
+  enabled = false,
+  energy_required = 12,
+  ingredients = {
+    { type = "item", name = "soil", amount = 8 },
+    { type = "fluid", name = "water", amount = 500 },
+    { type = "item", name = "fawogae", amount = 4 }
+  },
+  results = {
+    { type = "item", name = "native-flora", amount = 1, probability = 0.02 }
+  },
+  show_amount_in_title = false
+}:add_unlock("automation-science-pack")
+
+RECIPE {
+  type = "recipe",
+  name = "flora-cultivation",
+  category = "cultivation",
+	subgroup = "py-alienlife-genetics",
+  enabled = false,
+  energy_required = 15,
+  ingredients = {
+    { type = "item", name = "soil", amount = 20 },
+    { type = "fluid", name = "water", amount = 1800 },
+    { type = "item", name = "native-flora", amount = 5 },
+  },
+  results = {
+    { type = "item", name = "native-flora", amount = 20 },
+    { type = "item", name = "soil", amount_min = 0, amount_max = 8, probability = 0.5 }
+  },
+  main_product = "native-flora"
+}:add_unlock("automation-science-pack")
 
 --UNUSED
 
---[[
---handcraft seaweed to raw coal
-RECIPE {
-	type = "recipe",
-	name = "handpressed-coal",
-	ingredients =
-	{
-		{ type = "item", name = "seaweed", amount = 5 },
-	},
-	results =
-	{
-		{ type = "item", name = "raw-coal", amount = 1 }
-	},
-	main_product = "raw-coal",
-	category = "handcrafting"
-}
-
-RECIPE {
-	type = "recipe",
-	name = "coal-gas-from-seaweed",
-	category = "distilator",
-	enabled = true,
-	energy_required = 3,
-	ingredients = {
-		{ type = "item", name = "seaweed", amount = 10 }
-	},
-	results = {
-		{ type = "fluid", name = "coal-gas", amount = 5 },
-		{ type = "fluid", name = "tar", amount = 5 },
-		{ type = "item", name = "raw-coal", amount = 4 }
-	},
-	main_product = "coal-gas",
-	icon = "__PyBlock__/graphics/icons/coalgas-from-seaweed.png",
-	icon_size = 64,
-	subgroup = "py-syngas",
-	order = "f"
-}
-]]--
-
---new recipes
-
---[[
-RECIPE {
-	type = "recipe",
-	name = "coaldust-to-diamond",
-	category = "hpf",
-	enabled = false,
-	energy_required = 10,
-	ingredients =
-	{
-		{
-			type = "item", name = "coal-dust", amount = 20
-		}
-	},
-	results =
-	{
-		{
-			type = "item", name = "kimberlite-rock", amount = 1
-		}
-	},
-	icon = "__pyfusionenergygraphics__/graphics/icons/ores/kimberlite-rock.png",
-	icon_size = 32,
-	subgroup = "py-fusion-recipes",
-	order = "h"
-}
-]]--
-
---tit ore from rich dust in classifer
---[[
-RECIPE {
-	type = "recipe",
-	name = "titanium-from-rich-dust",
-	category = "classifier",
-	enabled = false,
-	ingredients =
-	{
-		{ type = "item", name = "rich-dust", amount = 10 }
-	},
-	results =
-	{
-		{ type = "item", name = "ore-titanium", amount = 2 }
-	},
-	main_product = "ore-titanium",
-	icon = "__pyraworesgraphics__/graphics/icons/ores/ore-titanium.png",
-	icon_size = 32,
-	subgroup = "py-items-class",
-	order = "b"
-}
-]]--
-
---[[
-RECIPE {
-	type = "recipe",
-	name = "log-to-moss",
-	category = "wpu",
-	energy_required = 10,
-	ingredients =
-	{
-		{ name = "log", amount = 4 }
-	},
-	results = {
-		{ name = "moss", amount = 1 }
-	}
-}
-]]--
---[[
-RECIPE {
-	type = "recipe",
-	name = "sap-from-seamoss",
-	category = "distilator",
-	energy_required = 10,
-	ingredients =
-	{
-		{ name = "seaweed", amount = 10 },
-		{ name = "moss", amount = 8 },
-		{ name = "wood", amount = 5 }
-	},
-	results = {
-		{ name = "saps", amount = 2 }
-	}
-}
-]]--
 --nickel from clay
-
---[[
-RECIPE {
-	type = "recipe",
-	name = "nickel-alum-from-clay",
-	category = "hpf",
-	enabled = true,
-	energy_required = 6,
-	ingredients =
-	{
-		{ type = "item", name = "clay", amount = 6 },
-		{ type = "fluid", name = "sulfuric-acid", amount = 20 }
-	},
-	results =
-	{
-		{ type = "item", name = "ore-nickel", amount = 2 },
-		{ type = "item", name = "ore-aluminium", amount = 1, probability = 0.2 }
-	},
-	main_product = "ore-nickel",
-	subgroup = "py-quenching-ores",
-	order = "tailings-e"
-}
-]]
 
 --new fluids for ree from ash
 --[[
@@ -251,7 +161,7 @@ RECIPE {
 	},
 	main_product = "butanol",
 	category = "electrolyzer"
-}:add_unlock('uranium-mk01')
+}:add_unlock("uranium-mk01")
 ]]--
 
 --[[
@@ -269,7 +179,7 @@ RECIPE {
 	},
 	main_product = "phosphorus-tricloride",
 	category = "electrolyzer"
-}:add_unlock('uranium-mk01')
+}:add_unlock("uranium-mk01")
 ]]--
 
 --make phosphorous acid: not used atm
@@ -306,7 +216,7 @@ RECIPE {
 	},
 	main_product = "phosphoryl-chloride",
 	category = "electrolyzer"
-}:add_unlock('uranium-mk01')
+}:add_unlock("uranium-mk01")
 ]]--
 
 --[[
@@ -325,7 +235,7 @@ RECIPE {
 	},
 	main_product = "tributyl-phosphate",
 	category = "electrolyzer"
-}:add_unlock('uranium-mk01')
+}:add_unlock("uranium-mk01")
 ]]
 
 --[[
@@ -343,71 +253,5 @@ RECIPE {
 	},
 	main_product = "rare-earth-ore",
 	category = "electrolyzer"
-}:add_unlock('rare-earth-tech')
+}:add_unlock("rare-earth-tech")
 ]]
-
---[[
-RECIPE {
-	type = "recipe",
-	name = "log0",
-	category = "fwf-basic",
-	enabled = true,
-	energy_required = 60,
-	ingredients = {},
-	results = {
-		{ type = "item", name = "log", amount = 3 }
-	},
-	icon = "__pycoalprocessinggraphics__/graphics/icons/log.png",
-	icon_size = 32,
-	subgroup = "py-alienlife-plants",
-	order = "a1"
-}
-]]--
-
---RECIPE('log1'):subgroup_order("py-alienlife-plants", "a2")
-
---modify pyro recipes to give byproduct ores
---copper gives moly
---fun.results_replacer(data.raw.recipe["grade-1-copper-crush"], "stone", "molybdenum-ore")
---fun.results_replacer(data.raw.recipe["copper-rejects-recrush"], "gravel", "molybdenum-ore")
---[[
-RECIPE {
-	type = 'recipe',
-	name = 'fish-start-01',
-	category = 'fish-farm',
-	enabled = true,
-	energy_required = 100,
-	ingredients = {
-		{ type = 'item', name = "seaweed", amount = 5 },
-		{ type = 'fluid', name = 'water', amount = 50 },
-	},
-	results = {
-		{ type = 'item', name = 'fish', amount = 3 },
-	},
-	main_product = "fish",
-	subgroup = 'py-alienlife-fish',
-	order = 'a',
-}
-]]
---[[
-RECIPE {
-	type = 'recipe',
-	name = 'fish-start-02',
-	category = 'fish-farm',
-	enabled = true,
-	energy_required = 85,
-	ingredients = {
-		{ type = 'item', name = "seaweed", amount = 5 },
-		{ type = 'fluid', name = 'water-saline', amount = 50 },
-	},
-	results = {
-		{ type = 'item', name = 'fish', amount = 5 },
-		{ type = 'fluid', name = 'waste-water', amount = 50 },
-	},
-	main_product = "fish",
-	subgroup = 'py-alienlife-fish',
-	order = 'a',
-}
-]]
-
---RECIPE('blood-to-zinc'):remove_unlock('molecular-decohesion-mk02'):add_unlock('molecular-decohesion')

@@ -1,4 +1,268 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.2.0
+Date: 2025-03-09
+  Features:
+    - All non-water generated tiles will be converted to landfill. Includes previously generated tiles when migrating saves.
+    - Mining productivity research now improves productivity on ground borers by 5% per research
+  Changes:
+    - Nerfed loaders to 3.75 items per second (their previous speed was unknown, not actually 5 items per second)
+    - Moved iron oxide smelting from Coal Processing 1 to Ash Separation
+    - Buffed nexelit ore from tailings from 1 -> 3
+    - Removed flora cultivator flower sprites, for now
+  Bugfixes:
+    - Fixed shunt inserter not having circuit connections
+    - Moved uranium phytomining with HMAs back to phytomining stage 3 where HMAs are unlocked
+    - Renamed vacuum-tube-electronics to electronics
+    - Renamed railway-mk01 to railway
+    - Removed crude oil from autoplace mapgen settings
+---------------------------------------------------------------------------------------------------
+Version: 3.1.4
+Date: 2025-02-03
+  Changes:
+    - Reduced wood produced from the sap extraction recipe to make it less appealing as a normal recipe for new players
+    - Buffed the sap received from sap extraction
+    - Slowed down sap extraction by 50%
+    - Reduced circuit cost of Yaedol Culture MK 01 from 100 -> 25
+    - Halved circuit cost of Yaedol Codex
+    - Reduced tinned cable cost of Cadaveric Arum Codex from 20 -> 5
+    - Reduced lamp cost of Cadaveric Arum Codex from 5 -> 2
+    - Moved check valve from Fluid handling to Assembly
+    - Moved Fawogae - Stage 2 to early Logistic science
+    - Moved Cadaveric Arum - Stage 2 to Logistic science
+    - Moved Yaedols - Stage 2 to late Logistic science, behind cobalt processing
+    - Moved Yaedol upgrade to Logistic science
+    - Moved Fawogae upgrade to Logistic science
+    - Changed Special Fungal Substrate to Improved Fungal Substrate in Yaedol Mk02 uplifting and associated basic Yaedol recipe
+  Bugfixes:
+    - Fixed Atomizer MK 00 having fluidboxes that don't line up with MK01+ variants
+    - Fixed Bhoddos Uranium Phytomining recipes not existing
+    - Fixed certain Fish TURD recipes having incorrect outputs compared to the base recipe
+    - Fixed certain Cadaveric Arum TURD recipes having incorrect outputs and timing compared to the base recipe
+    - Reduced science cost of Fawogae Stage 1 to be in line with its placement in the tech tree
+    - Fixed an issue where multiple techs did not require Lamp
+    - Fixed a crash where coal is an invalid autoplace setting
+    - Fixed a crash where Automation Science Pack unit.time was nil (even though it was a trigger tech)
+    - Fixed a crash where Early Molecular Decohesion unit.time was nil (even though it was a trigger tech)
+---------------------------------------------------------------------------------------------------
+Version: 3.1.3
+Date: 2025-01-18
+  Locale:
+    - Minor changes to the names of mk00 buildings to reinforce their crude nature
+    - Added Ukrainian translation courtesy of @bootseller on github
+  Features:
+    - Correcting the canon
+    - Added valves to the starting inventory when playing with pyhardmode and either valves or configurable valves
+    - Geothermal balancing pass, see below
+    - (re?)added uranium production recipes for bootstrapping the bhoddos - uranium loop in py2, see below
+  Changes:
+    - Increased the crafting speed and yield of the basic cadaveric arum recipe
+    - Increased the yield of cadaveric arum -> copper
+    - Decreased icon scale of shunt inserter filters and shifted it so that it's visible behind the steam icon
+    - Decreased shunt inserter mining time to be the same as all other inserters
+    - Buffed the meat -> jerky recipe when spoilage is enabled
+    - Moved Tin Processing - Stage 1 to automation science, behind Microbiology - Stage 1
+    - Buffed jerky -> phytoplankton from 2 jerky -> 1 jerky
+    - Nerfed tin -> phytoplankton and moved to Tin Processing - Stage 1
+    - Buffed the basic fish breeding recipe from 270s -> 200s
+    - Doubled the meat extracted from fish rendering
+    - Updated WPU MK 00 to match the placement vector of WPU MK 01+
+    - Increased construction costs of Geothermal plants, adding 80 pipe and 150 concrete
+    - Increased power draw of Geothermal plants
+    - Extracting geothermal water now requires a constant supply of pipes,
+        perhaps new recipes will be later added to consume better pipes at a lower cost
+    - Slowed down and increased water consumption of geothermal water extraction
+    - Added water ingredient to geothermal water -> steam recipe
+    - Added muddy sludge output to geothermal water -> steam recipe
+    - Moved acrolein recipes from Microfibers to TBP
+    - Moved TBP to Py science pack 2
+    - Added TBP prerequesite to Nuclear research
+    - Decreased fuel cell consumption in depleted fuel cell reprocessing to enhance bhoddos phytomining
+  Bugfixes:
+    - Fixed an issue where the jerky recipe would be replaced when the mod setting was ON but enable-all-feature-flags was not installed
+    - Fixed WPU MK 01 costing 1 inductor instead of 12
+    - Fixed "researching" Steam Power even though it doesn't exist. Again.
+---------------------------------------------------------------------------------------------------
+Version: 3.1.2
+Date: 2024-12-15
+  Features:
+    - Added a single Multiblade "fish" turbine to the starting inventory
+    - Added dependency on AAI Loaders
+    - Added shunt loader, powered by steam
+    - Added shunt inserter, powered by steam
+    - Added Solid Separator MK 00, powered by steam, to replace the earlygame solid separator.
+        Solid Separator MK 01 has been moved to Steel Processing and it's construction cost has been increased, but is still lower than it normally is.
+  Locale:
+    - Added localization to new noise expressions
+    - Fixed capitalization with some MK 00 entities
+    - Removed locale for unused prototypes
+    - Fixed slaughterhouse mk00 locale
+    - Fixed compost plant mk00 locale
+  Changes:
+    - Double crafting speed of fawogae plantations
+    - Removed some old prototypes and code (finally)
+    - Re-added pyblock intro message
+    - Removed bricks from Washer MK 00 recipe
+    - Reduced steam engines in Washer MK 00 recipe from 2 -> 1
+    - Reduced pipes in Washer MK 00 recipe from 25 -> 10
+    - Reduced small parts in Washer MK 00 recipe from 10 -> 5
+    - Reduced small parts in Soil Extractor MK 00 recipe from 15 -> 5
+    - Removed 2 fluid connections from flora cultivators, so that those and vector_to_place_result don't collide
+    - Added recipes to swap between cultivator and collector variants
+    - Added vector_to_place_result to Wood Processing Unit MK 00
+    - Added vector_to_place_result to Soild Extractor MK 00. Removed one steam connection to balance.
+    - Forced Destructive Distillation Column MK 00 to show fluid connections even when no recipe is selected
+    - Buffed fawogae to iron to a slower, bulk recipe with a better transfer ratio
+    - Buffed fawogae with fungal substrate recipe from 15 -> 18
+    - Buffed basic fish egg recipe
+    - Buffed jerky to phytoplankton recipe
+    - Buffed meat to dried jerky recipe
+    - Added an inneficient meat to jerky recipe for when spoilage is enabled
+  Bugfixes:
+    - Removed automation science pack from Ash Separation technology requirements on tech icon
+    - Fixed Melamine not requiring Auogs - Stage 1 to be researched
+    - Fixed "researching" Steam Power even though it doesn't exist. Or does it?
+    - Fixed Wood Processing Unit MK 00 fluidbox connections appearing in the wrong places
+    - Fixed Washer MK 00 fluidbox connections appearing in the wrong places
+    - Fixed Compost Plant MK 00 fluidbox connections appearing in the wrong places
+    - Fixed Spore Collector MK 01 fluidbox connections appearing in the wrong places
+    - Fixed Washer MK 00 having module slots
+    - Fixed Slaughterhouse MK 00 having module slots
+    - Fixed MK 00 entities being affected by beacons
+---------------------------------------------------------------------------------------------------
+Version: 3.1.1
+Date: 2024-11-26
+  Features:
+    - Added PyBlock Classic mapgen preset
+    - Added PyBlock Archipeligo mapgen preset
+  Bugfixes:
+    - Fixed an issue where jerky recipe was unlocked in Rendering instead of Water Animals Mk01
+  Changes:
+    - Modified worldgen to increase usable land area
+    - Increased logs collected from driftwood from 1 -> 4, but halved driftwood spawn chance
+    - Moved Fawogae Mk01 closer to the beginning of the tech tree, since manure is no longer required
+    - Moved fungal substrate from Yaedol Mk01 to Fawogae Mk01
+    - Changed "Burner" and "Steampowered" machines to Mk00
+    - Removed unneeded Auog technology, since Fawogae Mk01 doesn't use manure anymore
+---------------------------------------------------------------------------------------------------
+Version: 3.1.0
+Date: 2024-11-11
+  Bugfixes:
+    - Fixed a crash introduced in recent Pymods updates
+    - Moved fawogae with manure recipe from fawogae mk02 to fawogae mk01
+    - Fixed pipe connections on multiple entites not being properly aligned
+    - Increased log count in starting inventory
+    - Removed intermetallics from pyhtoplankton farm
+    - Fixed terrain generation
+    - Fixed efficiency modules, bulk inserter, and inserter hand size having no prerequesites
+    - Fixed driftwood not spawning
+    - Fixed the first Auog technology not having a name
+  Changes:
+    - Added support for a modified Py Recommended map settings error message, courtesy of PyCoal (thanks melon)
+    - Moved Water Animals - Stage 1 to automation science
+    - Move Tin Processing 1 back to py science 1
+    - Re-added biomass to fish recipes
+    - Moved waste-water voiding recipe to electrolysis
+    - Added locale names for sap extraction, moss cultivation, and native flora cultivation
+    - Decreased sap extraction time from 160s to 80s
+    - Reduced construction cost of steampowered compost plant
+    - Reduced cost of automation science pack technology
+    - Increased construction cost of fish farm mk01
+    - Increased construction cost of seaweed crop facility mk01
+    - Increased fluidbox sizes
+    - Correct entity color masks
+    - Reverted spore collector mk01 to steampowered
+---------------------------------------------------------------------------------------------------
+Version: 3.0.0
+Date: 2024-10-27
+  Bugfixes:
+    - Crude DDC shows pipes when no fluid recipe is selected
+    - Fixed the game not loading because of stupid naming conventions
+    - Removed the steam power technology, as it completely breaks progression
+    - Reworked trigger technologies to rebalance progression
+  Features:
+    - Added steampowered compost plant to composting
+    - Added steampowered soil extractor
+    - Added steampowered wood processing unit to automation science pack
+    - Moved ash separation to a trigger tech
+    - Moved early molecular decohesion to trigger tech
+    - Added belts and mechanical inserters to starter items
+  Changes:
+    - Reduced count of some starter items
+    - Added new fluid connections to crude DDC
+    - Moved wood processing unit mk01 to wood processing
+    - Moved soil extractor mk01 to soil washing
+    - Moved washer mk01 from soil washing to latex
+    - Moved compost plant mk01 from composting to fertilizer mk01
+    - Reverted compost plant mk01 to original recipe
+    - Added air core inductor (12) and steampowered wood processing unit (1) to wood processing unit mk01 recipe
+    - Changed burner mining drill to steampowered soil extractor in soil extractor mk01 recipe
+    - Changed steam engine to steampowered washer in washer mk01 recipe
+    - Added simple circuit board (3) to washer mk01 recipe
+    - Moved ddc mk01 from coal processing 1 to tar processing
+    - Added crude ddc to ddc mk01 recipe
+    - Changed spore collector from electrical to steam powered
+    - Reduced copper plate, log, and stone count in starting inventory
+    - Moved native flora recipes to new automation science pack recipe
+    - Changed cultivator to be consistent with the changes to the flora collector
+---------------------------------------------------------------------------------------------------
+Version: 2.0.6
+Date: 2024-10-08
+  Changes:
+    - Updated cultivator locale
+    - Added cultivator mk02-mk04, unlocked alongside the respective collector and with the same recipe
+    - Debuffed fawogae to coal for the upcoming burner stage
+---------------------------------------------------------------------------------------------------
+Version: 2.0.5
+Date: 2024-10-08
+  Bugfixes:
+    - Added py1 back to the molecular decohesion technology
+    - Fixed simple fish breeding recipe not having fish as allowed modules
+  Changes:
+    - Moved automated screener mk0 to it's own crafting subcategory
+    - Moved atomizer mk0 to the mk0 crafting category
+    - Moved burner destructive distillation column to the mk0 crafting category
+    - Added recipes for kimberlite rock
+    - Buffed fawogae to coal
+    - Modified soot separation recipes, making them produce other ores as byproducts
+  Locale:
+    - Added localization to the cultivator
+---------------------------------------------------------------------------------------------------
+Version: 2.0.4
+Date: 2024-10-03
+  Changes:
+    - Added driftwood for simpler and easier collection of wood
+    - Make seaweed float around
+    - Allow inserters to pick up seaweed and fish
+    - Changed geothermal plant to a fixed recipe
+    - Removed biosample from seaweed recipe
+    - Removed fake bioreserve recipe
+    - Rebuilt tech tree from the ground up
+    - Moved phytomining 2 to Py2
+    - Re-added native flora to automation science pack
+  Bugfixes:
+    - Re-added the geothermal plant animation
+    - Allow steampowered washers to be placed adjacent
+    - Shift xenobiology and biotech recipes around for continuity and ordering
+  Native Flora:
+    - Added cultivator, a copy of the collector with the express purpose of creating native flora from nothing
+    - Added recipe to get the first native flora
+    - Added recipe to duplicate native flora
+  Alienlife:
+    - Added a moss bootstrapping recipe
+    - Added a sap bootstrapping recipe
+    - Reintroduce native flora to vrauk bootstrapping recipe
+  Fish:
+    - Added phytoplankton back to fish egg mk01 recipe
+    - Added biomass back to fish mk01 recipe
+    - Added fish breeding recipe that does not take lamps, but is slower
+  Fawogae:
+    - Re-added power cost to fawogae plantation and spore collector, but it is less than half of the normal amount
+    - Increased productivity of fawogae -> coal from 2 to 3 -> 3 to 5
+    - Moved fawogae codex from navens mk01 to fawogae mk01 for yaedols
+  Yaedols:
+    - Added storage tank and duralumin to yaedols culture mk01
+    - Yaedols sample now takes some ingredients from the normal recipe
+---------------------------------------------------------------------------------------------------
 Version: 2.0.3
 Date: 2023-9-15
   Changes:

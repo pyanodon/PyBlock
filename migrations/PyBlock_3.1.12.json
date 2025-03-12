@@ -1,0 +1,7 @@
+{
+  "noise-expression":[
+    ["pyblock_recommended", "pyblock-recommended"],
+    ["pyblock_classic", "pyblock-classic"],
+    ["pyblock_archipeligo", "pyblock-archipeligo"]
+  ]
+}
