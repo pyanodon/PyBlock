@@ -77,6 +77,7 @@ RECIPE("cadaveric-arum-1"):replace_result("cadaveric-arum", "cadaveric-arum", 7)
 RECIPE("cadaveric-arum-1-soil"):replace_result("cadaveric-arum", "cadaveric-arum", 7):set_fields{energy_required = 126} -- TURD
 RECIPE("cadaveric-arum-1-msa"):replace_result("cadaveric-arum", "cadaveric-arum", 7):set_fields{energy_required = 110} -- TURD
 RECIPE("stone-wool"):remove_unlock("zipir"):add_unlock("cadaveric-arum")
+RECIPE("stone-wool2"):remove_unlock("zipir"):add_unlock("cadaveric-arum")
 RECIPE("cadaveric-arum-mk01"):remove_ingredient("hydrocyclone-mk01"):remove_ingredient("electronic-circuit"):remove_ingredient("plastic-bar"):remove_ingredient("intermetallics"):remove_ingredient("steel-plate"):add_ingredient({name = "steel-plate", amount = 5}):add_ingredient({name = "pipe", amount = 4}):add_ingredient({name = "soil", amount = 20}):remove_ingredient("botanical-nursery")
 
 -- move cadaveric 2 up to logi

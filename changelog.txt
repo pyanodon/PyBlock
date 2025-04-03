@@ -1,9 +1,11 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.1
 Date: ????
+  Changes:
+    - Moved alternative stone wool recipe from Zipirs - Stage 1 to Cadaveric Arums - Stage 1
   Bugfixes:
     - Added Engine as a required research for Fish Farm Mk01 because the farm requires pumps to craft
-    - Fixed Auog Stage 1 not being required for Melamine
+    - Fixed Auogs - Stage 1 not being required for Melamine
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.0
 Date: 2025-03-09
