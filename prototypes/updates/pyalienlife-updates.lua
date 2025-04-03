@@ -140,6 +140,8 @@ TECHNOLOGY("microbiology-mk01"):remove_pack("py-science-pack-1"):set_fields{prer
 RECIPE("plankton-farm"):remove_ingredient("intermetallics"):remove_ingredient("storage-tank"):remove_ingredient("electronic-circuit")
 RECIPE("jerky-to-phytoplankton"):replace_ingredient("dried-meat", "dried-meat", 1):replace_result("phytoplankton", "phytoplankton", 20)
 RECIPE("phytoplankton"):remove_unlock("microbiology-mk01"):add_unlock("tin-mk01")
+RECIPE("phytoplankton-3"):remove_unlock("microbiology-mk03"):add_unlock("microbiology-mk01")
+RECIPE("phytoplankton-2"):remove_unlock("microbiology-mk04"):add_unlock("microbiology-mk02")
 RECIPE("waste-water-void"):remove_unlock("fish-mk01"):add_unlock("electrolysis")
 
 RECIPE("fish-farm-mk01"):set_fields{ingredients = {}}:add_ingredient({type = "item", name = "steel-plate", amount = 25}):add_ingredient({type = "item", name = "glass", amount = 20}):add_ingredient("seaweed-crop-mk01"):add_ingredient("pump")

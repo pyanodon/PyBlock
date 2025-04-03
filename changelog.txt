@@ -3,6 +3,8 @@ Version: 3.2.1
 Date: ????
   Changes:
     - Moved alternative stone wool recipe from Zipirs - Stage 1 to Cadaveric Arums - Stage 1
+    - Moved Phytoplankton from flue gas from Microbiology - Stage 3 to Microbiology - Stage 1
+    - Moved Phytoplankton from flue gas and fertelizer from Microbiology - Stage 4 to Microbiology - Stage 2
   Bugfixes:
     - Added Engine as a required research for Fish Farm Mk01 because the farm requires pumps to craft
     - Fixed Auogs - Stage 1 not being required for Melamine
