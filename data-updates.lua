@@ -302,6 +302,8 @@ RECIPE("earth-generic-sample"):remove_unlock("xenobiology"):add_unlock("biotech-
 
 RECIPE("data-array"):remove_ingredient("titanium-plate")
 
+RECIPE("molten-zinc-01"):replace_ingredient("heavy-oil", "heavy-oil", 40)
+
 -- add recipe productivity to mining productivity research
 bore_recipes = {
   "mining-aluminium",
