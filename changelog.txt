@@ -3,6 +3,7 @@ Version: 3.2.1
 Date: ????
   Bugfixes:
     - Added Engine as a required research for Fish Farm Mk01 because the farm requires pumps to craft
+    - Fixed Auog Stage 1 not being required for Melamine
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.0
 Date: 2025-03-09
