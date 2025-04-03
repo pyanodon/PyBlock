@@ -4,6 +4,9 @@ Date: ????
   Features:
     - Two new Native Flora recipes that produce 1.5 and 2.5 Flora per second, unlocked at Vrauks and Auogs respectively
   Changes:
+    - Reduced Saline Water output of tar quenching from 250 -> 80
+    - Increased tar output of sulfur/kerogen recipe from 50 -> 150
+    - Buffed mossogen recipe ratio from 3:1 -> 4:5 and slowed it down from 1 -> 5 seconds
     - Renamed Native Flora Cultivation to Flora Cultivation
     - Reduced soil i/o of Flora Cultivation (i think)
     - Reduced the heavy oil cost of molten zinc from 100 -> 40

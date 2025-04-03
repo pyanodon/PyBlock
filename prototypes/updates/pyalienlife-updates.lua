@@ -120,14 +120,18 @@ RECIPE {
     name = "mossogen",
     category = "hpf",
     enabled = false,
-    energy_required = 1,
+    energy_required = 6,
     ingredients = {
-        {type = "item", name = "moss", amount = 3}
+        {type = "item", name = "moss", amount = 4}
     },
     results = {
-        {type = "item", name = "kerogen", amount = 1}
+        {type = "item", name = "kerogen", amount = 5}
     }
 }:add_unlock("moss-mk01")
+
+-- some changes to flue gas/tailings/acid gas/mossogen
+RECIPE("tar-quenching"):replace_result("water-saline", "water-saline", 80)
+RECIPE("sulfur-void-tar"):replace_result("tar", "tar", 150)
 
 --Tin from fish
 TECHNOLOGY("molecular-decohesion"):set_fields{prerequisites = {}}
