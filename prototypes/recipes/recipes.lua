@@ -129,13 +129,54 @@ RECIPE {
   enabled = false,
   energy_required = 15,
   ingredients = {
-    { type = "item", name = "soil", amount = 20 },
+    { type = "item", name = "soil", amount = 12 },
     { type = "fluid", name = "water", amount = 1800 },
     { type = "item", name = "native-flora", amount = 5 },
   },
   results = {
     { type = "item", name = "native-flora", amount = 20 },
-    { type = "item", name = "soil", amount_min = 0, amount_max = 8, probability = 0.5 }
+    { type = "item", name = "soil", amount_min = 0, amount_max = 6, allow_productivity = false }
+  },
+  main_product = "native-flora"
+}:add_unlock("automation-science-pack")
+
+RECIPE {
+  type = "recipe",
+  name = "flora-cultivation-2",
+  category = "cultivation",
+	subgroup = "py-alienlife-genetics",
+  enabled = false,
+  energy_required = 20,
+  ingredients = {
+    { type = "item", name = "soil", amount = 15 },
+    { type = "item", name = "fertilizer", amount = 4 },
+    { type = "fluid", name = "water", amount = 2400 },
+    { type = "item", name = "native-flora", amount = 10 },
+  },
+  results = {
+    { type = "item", name = "native-flora", amount_min = 30, amount_max = 50 },
+    { type = "item", name = "soil", amount_min = 0, amount_max = 8, allow_productivity = false }
+  },
+  main_product = "native-flora"
+}:add_unlock("automation-science-pack")
+
+RECIPE {
+  type = "recipe",
+  name = "flora-cultivation-3",
+  category = "cultivation",
+	subgroup = "py-alienlife-genetics",
+  enabled = false,
+  energy_required = 30,
+  ingredients = {
+    { type = "item", name = "soil", amount = 18 },
+    { type = "item", name = "fertilizer", amount = 3 },
+    { type = "item", name = "manure", amount = 3 },
+    { type = "fluid", name = "water", amount = 3300 },
+    { type = "item", name = "native-flora", amount = 15 },
+  },
+  results = {
+    { type = "item", name = "native-flora", amount_min = 60, amount_max = 90 },
+    { type = "item", name = "soil", amount_min = 0, amount_max = 6, allow_productivity = false }
   },
   main_product = "native-flora"
 }:add_unlock("automation-science-pack")

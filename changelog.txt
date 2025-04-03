@@ -1,7 +1,11 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.1
 Date: ????
+  Features:
+    - Two new Native Flora recipes that produce 1.5 and 2.5 Flora per second, unlocked at Vrauks and Auogs respectively
   Changes:
+    - Renamed Native Flora Cultivation to Flora Cultivation
+    - Reduced soil i/o of Flora Cultivation (i think)
     - Reduced the heavy oil cost of molten zinc from 100 -> 40
     - Moved alternative stone wool recipe from Zipirs - Stage 1 to Cadaveric Arums - Stage 1
     - Moved Phytoplankton from flue gas from Microbiology - Stage 3 to Microbiology - Stage 1
