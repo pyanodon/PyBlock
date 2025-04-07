@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.1
-Date: ????
+Date: 2025-04-07
   Features:
     - Two new Native Flora recipes that produce 1.5 and 2.5 Flora per second, unlocked at Vrauks and Auogs respectively
   Changes:
