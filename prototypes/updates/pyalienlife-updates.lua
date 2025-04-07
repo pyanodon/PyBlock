@@ -295,6 +295,8 @@ RECIPE("phadai"):replace_ingredient("alien-sample-03", "alien-sample01"):remove_
 
 RECIPE("phadai-codex"):replace_ingredient("advanced-circuit", "electronic-circuit")
 
+RECIPE("phadai-earth-sample-turd"):remove_ingredient("artificial-blood")
+
 RECIPE("earth-tiger-sample"):replace_ingredient("py-science-pack-2", "py-science-pack-1")
 
 TECHNOLOGY("ethanol"):remove_pack("py-science-pack-2")
