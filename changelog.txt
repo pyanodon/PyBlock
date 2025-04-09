@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.2
 Date: ????
+  Locale:
+    - Added Ukrainian translation courtesy of @Astorin on github
   Bugfixes:
     - Re-added flora cultivator flower pictures
 ---------------------------------------------------------------------------------------------------
