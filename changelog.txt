@@ -5,6 +5,7 @@ Date: ????
     - Added Ukrainian translation courtesy of @Astorin on github
   Bugfixes:
     - Re-added flora cultivator flower pictures
+    - Fixed terrain gen presets having mislabeled locale strings
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.1
 Date: 2025-04-07
