@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.2
-Date: ????
+Date: 2025-04-12
   Locale:
     - Added Ukrainian translation courtesy of @Astorin on github
   Changes:
