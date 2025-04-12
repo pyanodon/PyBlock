@@ -177,7 +177,7 @@ RECIPE {
   }
 }:add_unlock("biotech-machines-mk04")
 
-local animation = {}
+local animation_north = {}
 local sets = {
   {08, 5},
   {26, 1},
@@ -233,7 +233,7 @@ local sets = {
 -- generate main animation
 for i=1, 7 do
   for j=1, 7 do
-    animation[#animation+1] = {
+    animation_north[#animation_north+1] = {
       -- count: 0, variation: 60, richness: 1
       -- max_x = 3811 max_y = 768
       filename = "__pyalienlifegraphics__/graphics/entity/bioreserve/rich-1.png",
@@ -253,46 +253,6 @@ for i=1, 7 do
 end
 
 local additionals = {
-  {
-    filename = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.north.filename,
-    width = 128,
-    height = 128,
-    scale = 0.5,
-    frame_count = 1,
-    repeat_count = 255,
-    animation_speed = 0.4,
-    shift = util.by_pixel(0, -96)
-  },
-  {
-    filename = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.east.filename,
-    width = 128,
-    height = 128,
-    scale = 0.5,
-    frame_count = 1,
-    repeat_count = 255,
-    animation_speed = 0.4,
-    shift = util.by_pixel(96, 0)
-  },
-  {
-    filename = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.south.filename,
-    width = 128,
-    height = 128,
-    scale = 0.5,
-    frame_count = 1,
-    repeat_count = 255,
-    animation_speed = 0.4,
-    shift = util.by_pixel(0, 96)
-  },
-  {
-    filename = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.west.filename,
-    width = 128,
-    height = 128,
-    scale = 0.5,
-    frame_count = 1,
-    repeat_count = 255,
-    animation_speed = 0.4,
-    shift = util.by_pixel(-96, 0)
-  },
   {
     filename = "__pyalienlifegraphics__/graphics/entity/flora-collector/f1.png",
     width = 32,
@@ -430,14 +390,65 @@ local additionals = {
   }
 }
 
+local pipes = {
+  {
+    filename = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.north.filename,
+    width = 128,
+    height = 128,
+    scale = 0.5,
+    frame_count = 1,
+    repeat_count = 255,
+    animation_speed = 0.4,
+    shift = util.by_pixel(0, -96)
+  },
+  {
+    filename = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.east.filename,
+    width = 128,
+    height = 128,
+    scale = 0.5,
+    frame_count = 1,
+    repeat_count = 255,
+    animation_speed = 0.4,
+    shift = util.by_pixel(96, 0)
+  },
+  {
+    filename = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.south.filename,
+    width = 128,
+    height = 128,
+    scale = 0.5,
+    frame_count = 1,
+    repeat_count = 255,
+    animation_speed = 0.4,
+    shift = util.by_pixel(0, 96)
+  },
+  {
+    filename = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.west.filename,
+    width = 128,
+    height = 128,
+    scale = 0.5,
+    frame_count = 1,
+    repeat_count = 255,
+    animation_speed = 0.4,
+    shift = util.by_pixel(-96, 0)
+  }
+}
+local animation_east = table.deepcopy(animation_north)
+
+animation_north[#animation_north+1] = pipes[2]
+animation_north[#animation_north+1] = pipes[4]
+animation_east[#animation_east+1] = pipes[1]
+animation_east[#animation_east+1] = pipes[3]
+
 -- add additional frames
 for _, sprite in pairs(additionals) do
-  animation[#animation+1] = sprite
+  animation_north[#animation_north+1] = sprite
+  animation_east[#animation_east+1] = sprite
 end
 
 for i = 1, 4 do
-  for j=1,7 do
-    animation[#animation - j].tint = py.tints[i]
+  for j=0,6 do
+    animation_north[#animation_north - j].tint = py.tints[i]
+    animation_east[#animation_east - j].tint = py.tints[i]
   end
 
   local name = "flora-cultivator-mk0" .. i
@@ -511,12 +522,372 @@ for i = 1, 4 do
     graphics_set = {
       animation = {
         north = {
-          layers = table.deepcopy(animation)
+          layers = table.deepcopy(animation_north)
+        },
+        east = {
+          layers = table.deepcopy(animation_east)
+        },
+        west = {
+          layers = table.deepcopy(animation_east)
         }
       },
       idle_animation = {
         north = {
           layers = {
+            {
+              filename = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.east.filename,
+              width = 128,
+              height = 128,
+              scale = 0.5,
+              frame_count = 1,
+              repeat_count = 255,
+              animation_speed = 0.4,
+              shift = util.by_pixel(96, 0)
+            },
+            {
+              filename = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.west.filename,
+              width = 128,
+              height = 128,
+              scale = 0.5,
+              frame_count = 1,
+              repeat_count = 255,
+              animation_speed = 0.4,
+              shift = util.by_pixel(-96, 0)
+            },
+            {
+              filename = "__pyalienlifegraphics__/graphics/entity/flora-collector/f1.png",
+              width = 32,
+              height = 288,
+              line_length = 64,
+              frame_count = 255,
+              animation_speed = 0.4,
+              shift = util.by_pixel(-96, 0)
+            },
+            {
+              filename = "__pyalienlifegraphics__/graphics/entity/flora-collector/f2.png",
+              width = 32,
+              height = 288,
+              line_length = 64,
+              frame_count = 255,
+              animation_speed = 0.4,
+              shift = util.by_pixel(-64, 0)
+            },
+            {
+              filename = "__pyalienlifegraphics__/graphics/entity/flora-collector/f3.png",
+              width = 32,
+              height = 288,
+              line_length = 64,
+              frame_count = 255,
+              animation_speed = 0.4,
+              shift = util.by_pixel(-32, 0)
+            },
+            {
+              filename = "__pyalienlifegraphics__/graphics/entity/flora-collector/f4.png",
+              width = 32,
+              height = 288,
+              line_length = 64,
+              frame_count = 255,
+              animation_speed = 0.4,
+              shift = util.by_pixel(0, 0)
+            },
+            {
+              filename = "__pyalienlifegraphics__/graphics/entity/flora-collector/f5.png",
+              width = 32,
+              height = 288,
+              line_length = 64,
+              frame_count = 255,
+              animation_speed = 0.4,
+              shift = util.by_pixel(32, 0)
+            },
+            {
+              filename = "__pyalienlifegraphics__/graphics/entity/flora-collector/f6.png",
+              width = 32,
+              height = 288,
+              line_length = 64,
+              frame_count = 255,
+              animation_speed = 0.4,
+              shift = util.by_pixel(64, 0)
+            },
+            {
+              filename = "__pyalienlifegraphics__/graphics/entity/flora-collector/f7.png",
+              width = 32,
+              height = 288,
+              line_length = 64,
+              frame_count = 255,
+              animation_speed = 0.4,
+              shift = util.by_pixel(96, 0)
+            },
+            {
+              filename = "__pyalienlifegraphics__/graphics/entity/flora-collector/f8.png",
+              width = 32,
+              height = 288,
+              line_length = 64,
+              frame_count = 255,
+              animation_speed = 0.4,
+              shift = util.by_pixel(128, 0)
+            },
+    --MASKS
+            {
+              filename = "__pyalienlifegraphics__/graphics/entity/flora-collector/f1-mask.png",
+              width = 32,
+              height = 288,
+              line_length = 64,
+              frame_count = 255,
+              animation_speed = 0.4,
+              tint = py.tints[i],
+              shift = util.by_pixel(-96, 0)
+            },
+            {
+              filename = "__pyalienlifegraphics__/graphics/entity/flora-collector/f2-mask.png",
+              width = 32,
+              height = 288,
+              line_length = 64,
+              frame_count = 255,
+              animation_speed = 0.4,
+              tint = py.tints[i],
+              shift = util.by_pixel(-64, 0)
+            },
+            {
+              filename = "__pyalienlifegraphics__/graphics/entity/flora-collector/f3-mask.png",
+              width = 32,
+              height = 288,
+              line_length = 64,
+              frame_count = 255,
+              animation_speed = 0.4,
+              tint = py.tints[i],
+              shift = util.by_pixel(-32, 0)
+            },
+            {
+              filename = "__pyalienlifegraphics__/graphics/entity/flora-collector/f4-mask.png",
+              width = 32,
+              height = 288,
+              line_length = 64,
+              frame_count = 255,
+              animation_speed = 0.4,
+              tint = py.tints[i],
+              shift = util.by_pixel(0, 0)
+            },
+            {
+              filename = "__pyalienlifegraphics__/graphics/entity/flora-collector/f5-mask.png",
+              width = 32,
+              height = 288,
+              line_length = 64,
+              frame_count = 255,
+              animation_speed = 0.4,
+              tint = py.tints[i],
+              shift = util.by_pixel(32, 0)
+            },
+            {
+              filename = "__pyalienlifegraphics__/graphics/entity/flora-collector/f6-mask.png",
+              width = 32,
+              height = 288,
+              line_length = 64,
+              frame_count = 255,
+              animation_speed = 0.4,
+              tint = py.tints[i],
+              shift = util.by_pixel(64, 0)
+            },
+            {
+              filename = "__pyalienlifegraphics__/graphics/entity/flora-collector/f7-mask.png",
+              width = 32,
+              height = 288,
+              line_length = 64,
+              frame_count = 255,
+              animation_speed = 0.4,
+              tint = py.tints[i],
+              shift = util.by_pixel(96, 0)
+            }
+          }
+        },
+        east = {
+          layers = {
+            {
+              filename = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.north.filename,
+              width = 128,
+              height = 128,
+              scale = 0.5,
+              frame_count = 1,
+              repeat_count = 255,
+              animation_speed = 0.4,
+              shift = util.by_pixel(0, -96)
+            },
+            {
+              filename = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.south.filename,
+              width = 128,
+              height = 128,
+              scale = 0.5,
+              frame_count = 1,
+              repeat_count = 255,
+              animation_speed = 0.4,
+              shift = util.by_pixel(0, 96)
+            },
+            {
+              filename = "__pyalienlifegraphics__/graphics/entity/flora-collector/f1.png",
+              width = 32,
+              height = 288,
+              line_length = 64,
+              frame_count = 255,
+              animation_speed = 0.4,
+              shift = util.by_pixel(-96, 0)
+            },
+            {
+              filename = "__pyalienlifegraphics__/graphics/entity/flora-collector/f2.png",
+              width = 32,
+              height = 288,
+              line_length = 64,
+              frame_count = 255,
+              animation_speed = 0.4,
+              shift = util.by_pixel(-64, 0)
+            },
+            {
+              filename = "__pyalienlifegraphics__/graphics/entity/flora-collector/f3.png",
+              width = 32,
+              height = 288,
+              line_length = 64,
+              frame_count = 255,
+              animation_speed = 0.4,
+              shift = util.by_pixel(-32, 0)
+            },
+            {
+              filename = "__pyalienlifegraphics__/graphics/entity/flora-collector/f4.png",
+              width = 32,
+              height = 288,
+              line_length = 64,
+              frame_count = 255,
+              animation_speed = 0.4,
+              shift = util.by_pixel(0, 0)
+            },
+            {
+              filename = "__pyalienlifegraphics__/graphics/entity/flora-collector/f5.png",
+              width = 32,
+              height = 288,
+              line_length = 64,
+              frame_count = 255,
+              animation_speed = 0.4,
+              shift = util.by_pixel(32, 0)
+            },
+            {
+              filename = "__pyalienlifegraphics__/graphics/entity/flora-collector/f6.png",
+              width = 32,
+              height = 288,
+              line_length = 64,
+              frame_count = 255,
+              animation_speed = 0.4,
+              shift = util.by_pixel(64, 0)
+            },
+            {
+              filename = "__pyalienlifegraphics__/graphics/entity/flora-collector/f7.png",
+              width = 32,
+              height = 288,
+              line_length = 64,
+              frame_count = 255,
+              animation_speed = 0.4,
+              shift = util.by_pixel(96, 0)
+            },
+            {
+              filename = "__pyalienlifegraphics__/graphics/entity/flora-collector/f8.png",
+              width = 32,
+              height = 288,
+              line_length = 64,
+              frame_count = 255,
+              animation_speed = 0.4,
+              shift = util.by_pixel(128, 0)
+            },
+    --MASKS
+            {
+              filename = "__pyalienlifegraphics__/graphics/entity/flora-collector/f1-mask.png",
+              width = 32,
+              height = 288,
+              line_length = 64,
+              frame_count = 255,
+              animation_speed = 0.4,
+              tint = py.tints[i],
+              shift = util.by_pixel(-96, 0)
+            },
+            {
+              filename = "__pyalienlifegraphics__/graphics/entity/flora-collector/f2-mask.png",
+              width = 32,
+              height = 288,
+              line_length = 64,
+              frame_count = 255,
+              animation_speed = 0.4,
+              tint = py.tints[i],
+              shift = util.by_pixel(-64, 0)
+            },
+            {
+              filename = "__pyalienlifegraphics__/graphics/entity/flora-collector/f3-mask.png",
+              width = 32,
+              height = 288,
+              line_length = 64,
+              frame_count = 255,
+              animation_speed = 0.4,
+              tint = py.tints[i],
+              shift = util.by_pixel(-32, 0)
+            },
+            {
+              filename = "__pyalienlifegraphics__/graphics/entity/flora-collector/f4-mask.png",
+              width = 32,
+              height = 288,
+              line_length = 64,
+              frame_count = 255,
+              animation_speed = 0.4,
+              tint = py.tints[i],
+              shift = util.by_pixel(0, 0)
+            },
+            {
+              filename = "__pyalienlifegraphics__/graphics/entity/flora-collector/f5-mask.png",
+              width = 32,
+              height = 288,
+              line_length = 64,
+              frame_count = 255,
+              animation_speed = 0.4,
+              tint = py.tints[i],
+              shift = util.by_pixel(32, 0)
+            },
+            {
+              filename = "__pyalienlifegraphics__/graphics/entity/flora-collector/f6-mask.png",
+              width = 32,
+              height = 288,
+              line_length = 64,
+              frame_count = 255,
+              animation_speed = 0.4,
+              tint = py.tints[i],
+              shift = util.by_pixel(64, 0)
+            },
+            {
+              filename = "__pyalienlifegraphics__/graphics/entity/flora-collector/f7-mask.png",
+              width = 32,
+              height = 288,
+              line_length = 64,
+              frame_count = 255,
+              animation_speed = 0.4,
+              tint = py.tints[i],
+              shift = util.by_pixel(96, 0)
+            }
+          }
+        },
+        west = {
+          layers = {
+            {
+              filename = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.north.filename,
+              width = 128,
+              height = 128,
+              scale = 0.5,
+              frame_count = 1,
+              repeat_count = 255,
+              animation_speed = 0.4,
+              shift = util.by_pixel(0, -96)
+            },
+            {
+              filename = data.raw["pipe-to-ground"]["pipe-to-ground"].pictures.south.filename,
+              width = 128,
+              height = 128,
+              scale = 0.5,
+              frame_count = 1,
+              repeat_count = 255,
+              animation_speed = 0.4,
+              shift = util.by_pixel(0, 96)
+            },
             {
               filename = "__pyalienlifegraphics__/graphics/entity/flora-collector/f1.png",
               width = 32,
