@@ -3,6 +3,7 @@ Version: 3.2.3
 Date: ????
   Changes:
     - Fixed Flora Cultivator having 4 pipes visible even though only two connections exist
+    - Make Flora Cultivator always show flowers
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.2
 Date: 2025-04-12
