@@ -149,7 +149,7 @@ RECIPE {
   energy_required = 20,
   ingredients = {
     { type = "item", name = "soil", amount = 15 },
-    { type = "item", name = "fertilizer", amount = 4 },
+    { type = "item", name = "manure", amount = 4 },
     { type = "fluid", name = "water", amount = 2400 },
     { type = "item", name = "native-flora", amount = 10 },
   },
@@ -158,7 +158,7 @@ RECIPE {
     { type = "item", name = "soil", amount_min = 0, amount_max = 8, allow_productivity = false }
   },
   main_product = "native-flora"
-}:add_unlock("automation-science-pack")
+}:add_unlock("auog")
 
 RECIPE {
   type = "recipe",
@@ -169,8 +169,7 @@ RECIPE {
   energy_required = 30,
   ingredients = {
     { type = "item", name = "soil", amount = 18 },
-    { type = "item", name = "fertilizer", amount = 3 },
-    { type = "item", name = "manure", amount = 3 },
+    { type = "item", name = "fertilizer", amount = 4 },
     { type = "fluid", name = "water", amount = 3300 },
     { type = "item", name = "native-flora", amount = 15 },
   },
@@ -179,7 +178,7 @@ RECIPE {
     { type = "item", name = "soil", amount_min = 0, amount_max = 6, allow_productivity = false }
   },
   main_product = "native-flora"
-}:add_unlock("automation-science-pack")
+}:add_unlock("fertilizer-mk02")
 
 --UNUSED
 

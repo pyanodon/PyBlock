@@ -3,9 +3,14 @@ Version: 3.2.2
 Date: ????
   Locale:
     - Added Ukrainian translation courtesy of @Astorin on github
+  Changes:
+    - Changed Fertilized Flora Cultivation to take manure instead of fertilizer
+    - Moved Fertilized Flora Cultivation to Auog - Stage 1
+    - Moved Agressive Flora Cultivation to Fertilizer - Stage 2
   Bugfixes:
     - Re-added flora cultivator flower pictures
     - Fixed terrain gen presets having mislabeled locale strings
+    - Fixed all flora cultivation recipes unlocking simultaneously
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.1
 Date: 2025-04-07
