@@ -4,6 +4,8 @@ Date: ????
   Changes:
     - Fixed Flora Cultivator having 4 pipes visible even though only two connections exist
     - Make Flora Cultivator always show flowers
+  Bugfixes:
+    - Changed great alien sample to poor alien sample from the Creature Chamber TURD path 1 phadai recipe so it matches the basic one
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.2
 Date: 2025-04-12
