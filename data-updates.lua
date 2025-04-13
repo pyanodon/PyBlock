@@ -252,7 +252,15 @@ bore_recipes = {
   "mining-antimony",
   "mining-kerogen",
   "mining-limestone",
-  "mining-molybdenum"
+  "mining-molybdenum",
+  "soil",
+  "extract-limestone-01",
+  "clay",
+  "extract-sand",
+  "extract-gravel",
+  "extract-stone",
+  "extract-coarse",
+  "extract-richdust"
 }
 
 for i=1, 12 do
