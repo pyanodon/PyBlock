@@ -10,7 +10,7 @@ Date: ????
 Version: 3.2.2
 Date: 2025-04-12
   Locale:
-    - Added Ukrainian translation courtesy of @Astorin on github
+    - Added Russian translation courtesy of @Astorin on github
   Changes:
     - Changed Fertilized Flora Cultivation to take manure instead of fertilizer
     - Moved Fertilized Flora Cultivation to Auog - Stage 1
