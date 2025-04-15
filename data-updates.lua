@@ -233,43 +233,57 @@ RECIPE("data-array"):remove_ingredient("titanium-plate")
 
 RECIPE("molten-zinc-01"):replace_ingredient("heavy-oil", "heavy-oil", 40)
 
--- add recipe productivity to mining productivity research
-bore_recipes = {
-  "mining-aluminium",
-  "mining-chromium",
-  "mining-copper",
-  "mining-iron",
-  "mining-lead",
-  "mining-nexelit",
-  "mining-nickel",
-  "mining-quartz",
-  "mining-tin",
-  "mining-titanium",
-  "mining-zinc",
-  "mining-borax",
-  "mining-niobium",
-  "mining-stone",
-  "mining-antimony",
-  "mining-kerogen",
-  "mining-limestone",
-  "mining-molybdenum",
-  "soil",
-  "extract-limestone-01",
-  "clay",
-  "extract-sand",
-  "extract-gravel",
-  "extract-stone",
-  "extract-coarse",
-  "extract-richdust"
+-- create pumping productivity techs
+for i=1, 12 do
+  local tech = table.deepcopy(data.raw.technology["mining-productivity-" .. i])
+  tech.name = "pumping-productivity-" .. i
+  tech.icons = {
+    {
+      icon = "__PyBlock__/graphics/icons/pumping-productivity.png",
+      icon_size = 128
+    },
+    {
+      icon = "__core__/graphics/icons/technology/constants/constant-mining-productivity.png",
+      icon_size = 128,
+      scale = 0.5,
+      shift = {50, 50},
+      floating = true
+    }
+  }
+  data.raw.technology["pumping-productivity-" .. i] = tech
+  tech.effects = {}
+end
+
+drilling_categories = {
+  clay = true,
+  ["soil-extraction"] = true,
+  ["ground-borer"] = true,
+  ["sand-extractor"] = true
 }
 
-for i=1, 12 do
-  for _, recipe in pairs(bore_recipes) do
-    data.raw.technology["mining-productivity-" .. i].effects[#data.raw.technology["mining-productivity-" .. i].effects+1] = {
-      type = "change-recipe-productivity",
-      recipe = recipe,
-      change = 0.1
-    }
+pumping_categories = {
+  coalbed = true,
+  fracking = true,
+  pumpjack = true
+}
+
+for r, recipe in pairs(data.raw.recipe) do
+  if drilling_categories[recipe.category] then
+    for i=1, 12 do
+      data.raw.technology["mining-productivity-" .. i].effects[#data.raw.technology["mining-productivity-" .. i].effects+1] = {
+        type = "change-recipe-productivity",
+        recipe = r,
+        change = 0.1
+      }
+    end
+  elseif pumping_categories[recipe.category] then
+    for i=1, 12 do
+      data.raw.technology["pumping-productivity-" .. i].effects[#data.raw.technology["pumping-productivity-" .. i].effects+1] = {
+        type = "change-recipe-productivity",
+        recipe = r,
+        change = 0.1
+      }
+    end
   end
 end
 

@@ -1,6 +1,9 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.3
 Date: ????
+  Features:
+    - Added more recipes to mining productivity
+    - Added pumping productivity, unlocked alongside mining productivity, to relevant fluid-based recipes
   Changes:
     - Fixed Flora Cultivator having 4 pipes visible even though only two connections exist
     - Make Flora Cultivator always show flowers
