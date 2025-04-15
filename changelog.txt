@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.3
-Date: ????
+Date: 2025-04-15
   Features:
     - Added more recipes to mining productivity
     - Added pumping productivity, unlocked alongside mining productivity, to relevant fluid-based recipes
