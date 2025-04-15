@@ -182,7 +182,7 @@ local sets = {
   {08, 5},
   {26, 1},
   {24, 4},
-  {42, 2},
+  {45, 1},
   {50, 3},
   {56, 2},
   {47, 5},
@@ -243,7 +243,7 @@ for i=1, 7 do
       repeat_count = 255,
       animation_speed = 0.4,
       scale = 0.65,
-      shift = util.by_pixel((i - 4) * 32, (j - 4) * 32 - 16),
+      shift = util.by_pixel((j - 4) * 32, (i - 4) * 32 - 16),
       position = {
         (sets[(i - 1) * 7 + j][1] - 1) * 128,
         1600 - (sets[(i - 1) * 7 + j][2] - 1) * 160   -- inverted cause we want 1 to be sparse, 7 to be fully grown

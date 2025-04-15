@@ -9,6 +9,7 @@ Date: ????
     - Make Flora Cultivator always show flowers
     - Added soil extractor, clay pit, and sand extractor recipes to mining productivity research
   Bugfixes:
+    - Fixed flora cultivator pipe conenctions clipping
     - Changed great alien sample to poor alien sample from the Creature Chamber TURD path 1 phadai recipe so it matches the basic one. Resolves https://github.com/issues/assigned?issue=pyanodon%7CPyBlock%7C33.
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.2
