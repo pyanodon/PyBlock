@@ -4,12 +4,12 @@ RECIPE {
   energy_required = 10,
   enabled = false,
   ingredients = {
-    {"iron-plate", 40},
-    {"iron-gear-wheel", 10},
-    {"stone-brick", 16}
+    {type = "item", name = "iron-plate",      amount = 40},
+    {type = "item", name = "iron-gear-wheel", amount = 10},
+    {type = "item", name = "stone-brick",     amount = 16}
   },
   results = {
-    {"automated-screener-mk00", 1}
+    {type = "item", name = "automated-screener-mk00", amount = 1}
   }
 }:add_unlock("glass")
 
@@ -17,7 +17,7 @@ ITEM {
   type = "item",
   name = "automated-screener-mk00",
   icon = "__PyBlock__/graphics/icons/automated-screener-mk00.png",
-	icon_size = 64,
+  icon_size = 64,
   flags = {},
   subgroup = "py-fusion-buildings-mk00",
   order = "d",
@@ -49,7 +49,7 @@ ENTITY {
     effectivity = 1,
     fuel_inventory_size = 1,
     burnt_inventory_size = 1,
-    emissions_per_minute = { pollution = 0.06 }
+    emissions_per_minute = {pollution = 0.06}
   },
   energy_usage = "80kW",
   graphics_set = {

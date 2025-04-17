@@ -4,13 +4,13 @@ RECIPE {
   energy_required = 0.5,
   enabled = false,
   ingredients = {
-    {"washer-mk00", 1},
-    {"iron-plate", 15},
-    {"copper-plate", 20},
-    {"pipe", 10}
+    {type = "item", name = "washer-mk00",  amount = 1},
+    {type = "item", name = "iron-plate",   amount = 15},
+    {type = "item", name = "copper-plate", amount = 20},
+    {type = "item", name = "pipe",         amount = 10}
   },
   results = {
-    {"atomizer-mk00", 1}
+    {type = "item", name = "atomizer-mk00", amount = 1}
   }
 }:add_unlock("atomizer-mk00")
 
@@ -50,7 +50,7 @@ ENTITY {
     effectivity = 1,
     fuel_inventory_size = 1,
     burnt_inventory_size = 1,
-    emissions_per_minute = { pollution = 0.06 }
+    emissions_per_minute = {pollution = 0.06}
   },
   energy_usage = "300kW",
   graphics_set = {

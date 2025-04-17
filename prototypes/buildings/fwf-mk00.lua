@@ -4,14 +4,14 @@ RECIPE {
     energy_required = 1,
     enabled = true,
     ingredients = {
-        {"stone-brick", 50},
-        {"iron-plate", 25},
-        {"pipe", 5},
-        {"copper-cable", 2},
-        {"iron-gear-wheel", 20},
+        {type = "item", name = "stone-brick",     amount = 50},
+        {type = "item", name = "iron-plate",      amount = 25},
+        {type = "item", name = "pipe",            amount = 5},
+        {type = "item", name = "copper-cable",    amount = 2},
+        {type = "item", name = "iron-gear-wheel", amount = 20},
     },
     results = {
-        {"fwf-mk00", 1}
+        {type = "item", name = "fwf-mk00", amount = 1}
     }
 }
 
@@ -31,7 +31,7 @@ ENTITY {
     type = "assembling-machine",
     name = "fwf-mk00",
     icon = "__PyBlock__/graphics/icons/fwf-mk00.png",
-	icon_size = 32,
+    icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "fwf-mk00"},
     fast_replaceable_group = "fwf",
@@ -47,28 +47,28 @@ ENTITY {
         module_slots = 12
     },
     allowed_effects = {},
-    crafting_categories = {"fwf-basic","fwf"},
+    crafting_categories = {"fwf-basic", "fwf"},
     crafting_speed = 0.1,
     energy_source =
     {
-      type = "fluid",
-      effectivity = 1,
-      emissions = 1,
-      fluid_box =
+        type = "fluid",
+        effectivity = 1,
+        emissions = 1,
+        fluid_box =
         {
-          base_area = 1,
-          height = 2,
-          base_level = -1,
-          pipe_covers = pipecoverspictures(),
-          pipe_connections =
+            base_area = 1,
+            height = 2,
+            base_level = -1,
+            pipe_covers = pipecoverspictures(),
+            pipe_connections =
             {
-            {type = "input-output", position = {-6,1}},
-            {type = "input-output", position = {6, 1} },
+                {type = "input-output", position = {-6, 1}},
+                {type = "input-output", position = {6, 1}},
             },
-          filter = "steam",
-          production_type = "input-output",
+            filter = "steam",
+            production_type = "input-output",
         },
-		scale_fluid_usage = true,
+        scale_fluid_usage = true,
     },
     energy_usage = "100kW",
     animation = {

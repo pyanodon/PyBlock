@@ -4,12 +4,12 @@ RECIPE {
   energy_required = 0.5,
   enabled = false,
   ingredients = {
-    {"pipe", 2 },
-    {"iron-gear-wheel", 1 },
-    {"iron-plate", 2 },
+    {type = "item", name = "pipe",            amount = 2},
+    {type = "item", name = "iron-gear-wheel", amount = 1},
+    {type = "item", name = "iron-plate",      amount = 2},
   },
   results = {
-    {"shunt-inserter", 1}
+    {type = "item", name = "shunt-inserter", amount = 1}
   }
 }:add_unlock("atomizer-mk00")
 
@@ -20,12 +20,12 @@ ITEM {
     {
       icon = table.deepcopy(data.raw.item["burner-inserter"].icon),
       icon_size = 64,
-      tint = { 0.75, 0.75, 0.75, 1 }
+      tint = {0.75, 0.75, 0.75, 1}
     },
     {
       icon = data.raw.fluid["steam"].icon,
       icon_size = 64,
-      shift = { -8, 8 },
+      shift = {-8, 8},
       scale = 0.25
     }
   },
@@ -43,12 +43,12 @@ ENTITY {
     {
       icon = table.deepcopy(data.raw.item["burner-inserter"].icon),
       icon_size = 64,
-      tint = { 0.75, 0.75, 0.75, 1 }
+      tint = {0.75, 0.75, 0.75, 1}
     },
     {
       icon = data.raw.fluid["steam"].icon,
       icon_size = 64,
-      shift = { -8, 8 },
+      shift = {-8, 8},
       scale = 0.25
     }
   },
@@ -68,8 +68,8 @@ ENTITY {
       volume = 20,
       pipe_covers = py.pipe_covers(true, true, true, true),
       pipe_connections = {
-        { flow_direction = "input-output", position = {0, 0}, direction = 4 },
-        { flow_direction = "input-output", position = {0, 0}, direction = 12 },
+        {flow_direction = "input-output", position = {0, 0}, direction = 4},
+        {flow_direction = "input-output", position = {0, 0}, direction = 12},
       },
       production_type = "input-output",
       filter = "steam",
@@ -99,6 +99,6 @@ ENTITY {
 }
 
 data.raw["inserter"]["shunt-inserter"].icon_draw_specification.shift = {0.25, -0.25}
-data.raw["inserter"]["shunt-inserter"].hand_base_picture.tint = { 0.75, 0.75, 0.75, 1 }
-data.raw["inserter"]["shunt-inserter"].hand_open_picture.tint = { 0.75, 0.75, 0.75, 1 }
-data.raw["inserter"]["shunt-inserter"].hand_closed_picture.tint = { 0.75, 0.75, 0.75, 1 }
+data.raw["inserter"]["shunt-inserter"].hand_base_picture.tint = {0.75, 0.75, 0.75, 1}
+data.raw["inserter"]["shunt-inserter"].hand_open_picture.tint = {0.75, 0.75, 0.75, 1}
+data.raw["inserter"]["shunt-inserter"].hand_closed_picture.tint = {0.75, 0.75, 0.75, 1}

@@ -4,13 +4,13 @@ RECIPE {
   energy_required = 0.5,
   enabled = false,
   ingredients = {
-    {"boiler", 2},
-    {"steel-plate", 20},
-    {"iron-gear-wheel", 10},
-    {"steam-engine", 2},
+    {type = "item", name = "boiler",          amount = 2},
+    {type = "item", name = "steel-plate",     amount = 20},
+    {type = "item", name = "iron-gear-wheel", amount = 10},
+    {type = "item", name = "steam-engine",    amount = 2},
   },
   results = {
-    {"compost-plant-mk00", 1}
+    {type = "item", name = "compost-plant-mk00", amount = 1}
   }
 }:add_unlock("compost")
 
@@ -54,8 +54,8 @@ ENTITY {
       volume = 200,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
-        { flow_direction = "input-output", position = {-5, 1}, direction = 12 },
-        { flow_direction = "input-output", position = {5, 1}, direction = 4 },
+        {flow_direction = "input-output", position = {-5, 1}, direction = 12},
+        {flow_direction = "input-output", position = {5, 1},  direction = 4},
       },
       filter = "steam",
       production_type = "input-output",
