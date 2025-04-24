@@ -3,6 +3,8 @@ Version: 3.2.4
 Date: tba
   Internal:
     - removed shorthand recipe declarations
+  Changes:
+    - Changed the internal name of the intelligent unit technology from "nano-tech" to "quantum-processor".
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.3
 Date: 2025-04-15
