@@ -5,6 +5,9 @@ Date: tba
     - removed shorthand recipe declarations
   Changes:
     - Changed the internal name of the intelligent unit technology from "nano-tech" to "quantum-processor".
+    - Removed muddy water output from geothermal water processing
+  Bugfixes:
+    - Fixed regenerative heat exchanger being non-usable when hardmode is installed
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.3
 Date: 2025-04-15

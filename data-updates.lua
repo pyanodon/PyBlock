@@ -207,8 +207,7 @@ RECIPE("geo-he-00"):set_fields {
     {type = "fluid", name = "water",            amount = 400}
   },
   results = {
-    {type = "fluid", name = "steam",             amount = 320, temperature = 500},
-    {type = "fluid", name = "dirty-water-light", amount = 80}
+    {type = "fluid", name = "steam",             amount = 320, temperature = 500}
   }
 }
 
