@@ -1,9 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.4
-Date: tba
-  Internal:
-    - removed shorthand recipe declarations
+Date: ???
   Changes:
+    - Removed shorthand recipe declarations
     - Changed the internal name of the intelligent unit technology from "nano-tech" to "quantum-processor".
     - Removed muddy water output from geothermal water processing
   Bugfixes:
