@@ -1,30 +1,29 @@
-
 RECIPE {
-    type = "recipe",
-    name = "soil-extractor-mk00",
-    energy_required = 6,
-    enabled = true,
-    ingredients = {
-        {"burner-mining-drill", 2},
-        {"iron-plate", 15},
-        {"copper-cable", 5},
-        {"iron-gear-wheel", 5}
-    },
-    results = {
-        {"soil-extractor-mk00", 1}
-    }
+  type = "recipe",
+  name = "soil-extractor-mk00",
+  energy_required = 6,
+  enabled = true,
+  ingredients = {
+    {type = "item", name = "burner-mining-drill", amount = 2},
+    {type = "item", name = "iron-plate",          amount = 15},
+    {type = "item", name = "copper-cable",        amount = 5},
+    {type = "item", name = "iron-gear-wheel",     amount = 5}
+  },
+  results = {
+    {type = "item", name = "soil-extractor-mk00", amount = 1}
+  }
 }
 
 ITEM {
-    type = "item",
-    name = "soil-extractor-mk00",
-    icon = "__PyBlock__/graphics/icons/soil-extractor-mk00.png",
-    icon_size = 64,
-    flags = {},
-    subgroup = "py-cp-buildings-mk00",
-    order = "g",
-    place_result = "soil-extractor-mk00",
-    stack_size = 10
+  type = "item",
+  name = "soil-extractor-mk00",
+  icon = "__PyBlock__/graphics/icons/soil-extractor-mk00.png",
+  icon_size = 64,
+  flags = {},
+  subgroup = "py-cp-buildings-mk00",
+  order = "g",
+  place_result = "soil-extractor-mk00",
+  stack_size = 10
 }
 
 ENTITY {
@@ -65,7 +64,7 @@ ENTITY {
           height = 45
         }
       }),
-      pipe_connections = {{ flow_direction = "input", position = {0, -3}, direction = 0 }},
+      pipe_connections = {{flow_direction = "input", position = {0, -3}, direction = 0}},
       production_type = "input-output",
       filter = "steam",
     },
@@ -73,29 +72,29 @@ ENTITY {
   },
   energy_usage = "200kW",
   graphics_set = {
-      animation = {
-        layers = {
-          {
-            filename = "__pycoalprocessinggraphics__/graphics/entity/soil-extractor/soil-extractor.png",
-            width = 235,
-            height = 266,
-            frame_count = 30,
-            line_length = 6,
-            animation_speed = 0.8,
-            shift = {0.16, -0.609}
-          },
-          {
-            filename = "__pycoalprocessinggraphics__/graphics/entity/soil-extractor/soil-extractor-mask.png",
-            width = 235,
-            height = 266,
-            frame_count = 30,
-            line_length = 6,
-            animation_speed = 0.8,
-            shift = {0.16, -0.609},
-            tint = {r = 0.5, g = 0.5, b = 0.5, a = 1.0}
-          }
+    animation = {
+      layers = {
+        {
+          filename = "__pycoalprocessinggraphics__/graphics/entity/soil-extractor/soil-extractor.png",
+          width = 235,
+          height = 266,
+          frame_count = 30,
+          line_length = 6,
+          animation_speed = 0.8,
+          shift = {0.16, -0.609}
+        },
+        {
+          filename = "__pycoalprocessinggraphics__/graphics/entity/soil-extractor/soil-extractor-mask.png",
+          width = 235,
+          height = 266,
+          frame_count = 30,
+          line_length = 6,
+          animation_speed = 0.8,
+          shift = {0.16, -0.609},
+          tint = {r = 0.5, g = 0.5, b = 0.5, a = 1.0}
         }
-      },
+      }
+    },
   },
   fluid_boxes = {
     {
@@ -117,8 +116,8 @@ ENTITY {
       }),
       volume = 100,
       pipe_connections = {
-        { flow_direction = "input-output", position = {3, 0}, direction = 4 },
-        { flow_direction = "input-output", position = {-3, 0}, direction = 12 },
+        {flow_direction = "input-output", position = {3, 0},  direction = 4},
+        {flow_direction = "input-output", position = {-3, 0}, direction = 12},
       }
     }
   },

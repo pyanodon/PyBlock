@@ -1,19 +1,18 @@
-
 RECIPE {
   type = "recipe",
   name = "wpu-mk00",
   energy_required = 5,
   enabled = true,
   ingredients = {
-    {"log", 12},
-    {"iron-plate", 20},
-    {"iron-gear-wheel", 15},
-    {"steam-engine", 1},
-    {"stone-furnace", 1},
-    {"copper-cable", 30}
+    {type = "item", name = "log",             amount = 12},
+    {type = "item", name = "iron-plate",      amount = 20},
+    {type = "item", name = "iron-gear-wheel", amount = 15},
+    {type = "item", name = "steam-engine",    amount = 1},
+    {type = "item", name = "stone-furnace",   amount = 1},
+    {type = "item", name = "copper-cable",    amount = 30}
   },
   results = {
-    {"wpu-mk00", 1}
+    {type = "item", name = "wpu-mk00", amount = 1}
   }
 }:add_unlock("automation-science-pack")
 
@@ -54,8 +53,8 @@ ENTITY {
       volume = 200,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
-        { flow_direction = "input-output", direction = 12, position = { -2.5, 0.5 } },
-        { flow_direction = "input-output", direction = 4, position = { 2.5, 0.5 } },
+        {flow_direction = "input-output", direction = 12, position = {-2.5, 0.5}},
+        {flow_direction = "input-output", direction = 4,  position = {2.5, 0.5}},
       },
       filter = "steam",
       production_type = "input-output",

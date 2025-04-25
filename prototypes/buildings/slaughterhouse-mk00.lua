@@ -4,16 +4,16 @@ RECIPE {
   energy_required = 1,
   enabled = false,
   ingredients = {
-    {"stone-brick", 30 },
-    {"pipe", 20 },
-    {"inductor1", 1 },
-    {"iron-gear-wheel", 30 },
-    {"iron-plate", 30 },
-    {"steel-plate", 10 },
-    {"glass", 10},
+    {type = "item", name = "stone-brick",     amount = 30},
+    {type = "item", name = "pipe",            amount = 20},
+    {type = "item", name = "inductor1",       amount = 1},
+    {type = "item", name = "iron-gear-wheel", amount = 30},
+    {type = "item", name = "iron-plate",      amount = 30},
+    {type = "item", name = "steel-plate",     amount = 10},
+    {type = "item", name = "glass",           amount = 10},
   },
   results = {
-    {"slaughterhouse-mk00", 1}
+    {type = "item", name = "slaughterhouse-mk00", amount = 1}
   }
 }:add_unlock("water-animals-mk01")
 
@@ -54,8 +54,8 @@ ENTITY {
       volume = 200,
       pipe_covers = py.pipe_covers(true, true, true, true),
       pipe_connections = {
-        { flow_direction = "input-output", position = {5, 2}, direction = 4 },
-        { flow_direction = "input-output", position = {-5, 2}, direction = 12 },
+        {flow_direction = "input-output", position = {5, 2},  direction = 4},
+        {flow_direction = "input-output", position = {-5, 2}, direction = 12},
       },
       production_type = "input-output",
       filter = "steam",

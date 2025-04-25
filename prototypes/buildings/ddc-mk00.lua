@@ -1,4 +1,3 @@
-
 function make_2way_animation_from_spritesheet(animation)
   local function make_animation_layer(idx, anim)
     return
@@ -28,8 +27,8 @@ function make_2way_animation_from_spritesheet(animation)
 
   local function make_animation(idx)
     if animation.layers then
-      local tab = { layers = {} }
-      for k,v in ipairs(animation.layers) do
+      local tab = {layers = {}}
+      for k, v in ipairs(animation.layers) do
         table.insert(tab.layers, make_animation_layer_with_hr_version(idx, v))
       end
       return tab
@@ -48,31 +47,31 @@ function make_2way_animation_from_spritesheet(animation)
 end
 
 RECIPE {
-	type = "recipe",
-	name = "ddc-mk00",
-	energy_required = 8,
-	enabled = true,
-    ingredients =
-    {
-		{name = "iron-plate", amount = 15},
-		{name = "stone-furnace", amount = 1},
-		{name = "pipe", amount = 5}
-	},
-	results = {
-		{name = "ddc-mk00", amount = 1}
-	}
+  type = "recipe",
+  name = "ddc-mk00",
+  energy_required = 8,
+  enabled = true,
+  ingredients =
+  {
+    {type = "item", name = "iron-plate",    amount = 15},
+    {type = "item", name = "stone-furnace", amount = 1},
+    {type = "item", name = "pipe",          amount = 5}
+  },
+  results = {
+    {type = "item", name = "ddc-mk00", amount = 1}
+  }
 }
 
 ITEM {
-	type = "item",
-	name = "ddc-mk00",
-	icon = "__PyBlock__/graphics/icons/distilator-mk00.png",
-	icon_size = 64,
-    flags = {},
-    subgroup = "py-cp-buildings-mk00",
-    order = "k",
-    place_result = "ddc-mk00",
-    stack_size = 20
+  type = "item",
+  name = "ddc-mk00",
+  icon = "__PyBlock__/graphics/icons/distilator-mk00.png",
+  icon_size = 64,
+  flags = {},
+  subgroup = "py-cp-buildings-mk00",
+  order = "k",
+  place_result = "ddc-mk00",
+  stack_size = 20
 }
 
 ENTITY {
@@ -84,16 +83,16 @@ ENTITY {
   minable = {mining_time = 1, result = "ddc-mk00"},
   max_health = 200,
   corpse = "medium-remnants",
-  repair_sound = { filename = "__base__/sound/manual-repair-simple.ogg" },
-  mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg" },
-  open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
-  close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
-  vehicle_impact_sound =  { filename = "__base__/sound/car-stone-impact.ogg", volume = 1.0 },
-  working_sound = { sound = { filename = "__base__/sound/furnace.ogg" }},
+  repair_sound = {filename = "__base__/sound/manual-repair-simple.ogg"},
+  mined_sound = {filename = "__base__/sound/deconstruct-bricks.ogg"},
+  open_sound = {filename = "__base__/sound/machine-open.ogg", volume = 0.85},
+  close_sound = {filename = "__base__/sound/machine-close.ogg", volume = 0.75},
+  vehicle_impact_sound = {filename = "__base__/sound/car-stone-impact.ogg", volume = 1.0},
+  working_sound = {sound = {filename = "__base__/sound/furnace.ogg"}},
   resistances = {
-    { type = "fire", percent = 90 },
-    { type = "explosion", percent = 30 },
-    { type = "impact", percent = 30 }
+    {type = "fire",      percent = 90},
+    {type = "explosion", percent = 30},
+    {type = "impact",    percent = 30}
   },
   collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
   selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
@@ -103,8 +102,8 @@ ENTITY {
       volume = 100,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
-        { flow_direction = "output", position = {-1, -1}, direction = 0 },
-        { flow_direction = "output", position = {-1, -1}, direction = 12 }
+        {flow_direction = "output", position = {-1, -1}, direction = 0},
+        {flow_direction = "output", position = {-1, -1}, direction = 12}
       }
     },
     {
@@ -112,8 +111,8 @@ ENTITY {
       volume = 100,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
-        { flow_direction = "output", position = {1, 1}, direction = 4 },
-        { flow_direction = "output", position = {1, 1}, direction = 8 }
+        {flow_direction = "output", position = {1, 1}, direction = 4},
+        {flow_direction = "output", position = {1, 1}, direction = 8}
       }
     }
   },
@@ -142,7 +141,7 @@ ENTITY {
     }
   },
   graphics_set = {
-    animation = make_2way_animation_from_spritesheet({ layers = {
+    animation = make_2way_animation_from_spritesheet {layers = {
       {
         filename = "__PyBlock__/graphics/ddc-mk00.png",
         priority = "extra-high",
@@ -182,7 +181,7 @@ ENTITY {
           scale = 0.5
         }
       }
-    }}),
+    }},
     working_visualisations = {
       {
         north_position = {0.0, 0.0},
@@ -212,7 +211,7 @@ ENTITY {
             scale = 0.5
           }
         },
-        light = {intensity = 1, size = 1, color = {r=1.0, g=1.0, b=1.0}}
+        light = {intensity = 1, size = 1, color = {r = 1.0, g = 1.0, b = 1.0}}
       }
     }
   }

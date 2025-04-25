@@ -1,30 +1,29 @@
-
 RECIPE {
   type = "recipe",
   name = "washer-mk00",
   energy_required = 4,
   enabled = true,
   ingredients = {
-    {"steam-engine", 1},
-    {"iron-plate", 10},
-    {"pipe", 10},
-    {"iron-gear-wheel", 5}
+    {type = "item", name = "steam-engine",    amount = 1},
+    {type = "item", name = "iron-plate",      amount = 10},
+    {type = "item", name = "pipe",            amount = 10},
+    {type = "item", name = "iron-gear-wheel", amount = 5}
   },
   results = {
-    {"washer-mk00", 1}
+    {type = "item", name = "washer-mk00", amount = 1}
   }
 }
 
 ITEM {
-    type = "item",
-    name = "washer-mk00",
-    icon = "__PyBlock__/graphics/icons/washer-mk00.png",
-    icon_size = 64,
-    flags = {},
-    subgroup = "py-cp-buildings-mk00",
-    order = "z2",
-    place_result = "washer-mk00",
-    stack_size = 10
+  type = "item",
+  name = "washer-mk00",
+  icon = "__PyBlock__/graphics/icons/washer-mk00.png",
+  icon_size = 64,
+  flags = {},
+  subgroup = "py-cp-buildings-mk00",
+  order = "z2",
+  place_result = "washer-mk00",
+  stack_size = 10
 }
 
 burner_washer = table.deepcopy(data.raw["assembling-machine"].washer)
@@ -42,8 +41,8 @@ burner_washer.energy_source = {
     volume = 200,
     pipe_covers = pipecoverspictures(),
     pipe_connections = {
-      { flow_direction = "input-output", direction = 12, position = { -2.5, 0.5 } },
-      { flow_direction = "input-output", direction = 4, position = { 2.5, 0.5 } },
+      {flow_direction = "input-output", direction = 12, position = {-2.5, 0.5}},
+      {flow_direction = "input-output", direction = 4,  position = {2.5, 0.5}},
     },
     filter = "steam",
     production_type = "input-output"

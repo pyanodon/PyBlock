@@ -146,11 +146,5 @@ data.raw["assembling-machine"].rhe.fluid_boxes = {
     pipe_covers = py.pipe_covers(false, true, true, true),
     volume = 100,
     pipe_connections = {{flow_direction = "output", position = {0.0, 1.95}, direction = defines.direction.south}}
-  },
-  {
-    production_type = "output",
-    pipe_covers = py.pipe_covers(false, true, true, true),
-    volume = 100,
-    pipe_connections = {{flow_direction = "output", position = {-1.95, 0.0}, direction = defines.direction.west}}
-  },
+  }
 }
