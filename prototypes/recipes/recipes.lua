@@ -149,7 +149,7 @@ RECIPE {
   energy_required = 20,
   ingredients = {
     { type = "item", name = "soil", amount = 15 },
-    { type = "item", name = "manure", amount = 4 },
+    { type = "item", name = "manure", amount = 2 },
     { type = "fluid", name = "water", amount = 2400 },
     { type = "item", name = "native-flora", amount = 10 },
   },
@@ -169,7 +169,7 @@ RECIPE {
   energy_required = 30,
   ingredients = {
     { type = "item", name = "soil", amount = 18 },
-    { type = "item", name = "fertilizer", amount = 4 },
+    { type = "item", name = "fertilizer", amount = 2 },
     { type = "fluid", name = "water", amount = 3300 },
     { type = "item", name = "native-flora", amount = 15 },
   },

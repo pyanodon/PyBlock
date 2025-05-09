@@ -2,6 +2,7 @@
 Version: 3.2.4
 Date: ???
   Changes:
+    - Buffed fertilized and agressive flora cultivation to be better than the previous recipe when considering the flora cost of manure
     - Removed shorthand recipe declarations
     - Changed the internal name of the intelligent unit technology from "nano-tech" to "quantum-processor".
     - Removed muddy water output from geothermal water processing
