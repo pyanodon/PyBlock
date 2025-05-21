@@ -3,6 +3,8 @@ Version: 3.2.4
 Date: ???
   Changes:
     - Buffed fertilized and agressive flora cultivation to be better than the previous recipe when considering the flora cost of manure
+    - Buffed Thickened Coal Fines to Carbon Dust ratio from 1000:12 to 200:8. Resolves https://github.com/pyanodon/pybugreports/issues/976
+    - Buffed Carbon Dust to Kimberlite Rock ratio from 30:1 to 9:2.5. Resolves https://github.com/pyanodon/pybugreports/issues/976
     - Removed shorthand recipe declarations
     - Changed the internal name of the intelligent unit technology from "nano-tech" to "quantum-processor".
     - Removed muddy water output from geothermal water processing
