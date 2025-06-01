@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.4
-Date: ???
+Date: 2025-06-01
   Changes:
     - Buffed fertilized and agressive flora cultivation to be better than the previous recipe when considering the flora cost of manure
     - Buffed Thickened Coal Fines to Carbon Dust ratio from 1000:12 to 200:8. Resolves https://github.com/pyanodon/pybugreports/issues/976
