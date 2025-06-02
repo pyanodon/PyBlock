@@ -327,9 +327,9 @@ Date: 2023-9-15
     - Moved saline to salt evap to evaporation tech
     - Added thumbnail. credit: Burr on discord
   Cadavaric arum:
-      - Removed botanical nursury from recipe
-      - Reduced steel plate requirement from 60 to 5
-      - added pipes(4), iron plates(5), and soil(20) as ingredients
+    - Removed botanical nursury from recipe
+    - Reduced steel plate requirement from 60 to 5
+    - added pipes(4), iron plates(5), and soil(20) as ingredients
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.2
 Date: 2023-9-4
