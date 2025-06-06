@@ -219,7 +219,7 @@ RECIPE("atomizer-mk01"):remove_ingredient("washer"):add_ingredient {type = "item
 
 RECIPE("automated-screener-mk01"):add_ingredient {type = "item", name = "automated-screener-mk00", amount = 1}
 
-RECIPE("distilator"):add_ingredient {type = "item", name = "automated-screener-mk00", amount = 1}
+RECIPE("distilator"):add_ingredient {type = "item", name = "ddc-mk00", amount = 1}
 
 -- data.raw.technology["mega-farm"].unit.ingredients = {{"automation-science-pack", 1},{"py-science-pack-1",1}}
 -- TECHNOLOGY("mega-farm"):set_fields{prerequisites = {}}
