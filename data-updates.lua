@@ -300,7 +300,6 @@ if settings.startup["disable-pyblock-fun-names"].value then
     "washer-mk00",
     "wpu-mk00"
   }) do
-    log(entity)
     data.raw["assembling-machine"][entity].localised_name = { "entity-name-alt." .. entity }
   end
   data.raw["furnace"]["compost-plant-mk00"].localised_name = { "entity-name-alt.compost-plant-mk00" }
