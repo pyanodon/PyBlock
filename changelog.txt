@@ -5,6 +5,7 @@ Date: ???
     - Fix indentation so the changelog loads in the in-game mod manager
     - Added DDC MK 00 to the DDC MK 01 recipe
     - Added Automated Screamer MK 00 to the Automated Screener MK 01 recipe
+    - Added a mod setting to get rid of the fun MK 00 entity names DON'T YOU DARE USE IT
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.4
 Date: 2025-06-01

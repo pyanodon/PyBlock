@@ -290,6 +290,22 @@ for r, recipe in pairs(data.raw.recipe) do
   end
 end
 
+if settings.startup["disable-pyblock-fun-names"].value then
+  for _, entity in pairs({
+    "atomizer-mk00",
+    "automated-screener-mk00",
+    "ddc-mk00",
+    "slaughterhouse-mk00",
+    "soil-extractor-mk00",
+    "washer-mk00",
+    "wpu-mk00"
+  }) do
+    log(entity)
+    data.raw["assembling-machine"][entity].localised_name = { "entity-name-alt." .. entity }
+  end
+  data.raw["furnace"]["compost-plant-mk00"].localised_name = { "entity-name-alt.compost-plant-mk00" }
+end
+
 if register_cache_file ~= nil then
   register_cache_file({"pycoalprocessing", "pyfusionenergy", "pyindustry", "pyrawores", "pypetroleumhandling", "pyalienlife", "pyhightech", "pyalternativeenergy", "PyBlock"}, "__PyBlock__/cached-configs/PyBlock+pyalienlife+pyalternativeenergy+pycoalprocessing+pyfusionenergy+pyhightech+pyindustry+pypetroleumhandling+pyrawores")
 end
