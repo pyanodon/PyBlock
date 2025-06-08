@@ -86,7 +86,7 @@ TECHNOLOGY("cadaveric-arum-mk02"):remove_pack("chemical-science-pack")
 
 -- move fawogae with manure up (even though it doesnt use manure anymore)
 TECHNOLOGY("fawogae-mk01"):remove_pack("py-science-pack-1"):set_fields {prerequisites = {}}
-RECIPE("fawogae-with-manure"):remove_unlock("fawogae-mk02"):add_unlock("fawogae-mk01"):replace_result("fawogae", "fawogae", 18)
+RECIPE("fawogae-2"):remove_unlock("fawogae-mk02"):add_unlock("fawogae-mk01"):replace_result("fawogae", "fawogae", 18)
 RECIPE("fungal-substrate"):remove_unlock("mycology-mk02"):add_unlock("fawogae-mk01")
 RECIPE("dried-meat-01"):remove_unlock("rendering"):add_unlock("water-animals-mk01"):replace_result("dried-meat", "dried-meat", 8)
 
