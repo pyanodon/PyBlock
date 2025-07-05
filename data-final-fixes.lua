@@ -1,5 +1,3 @@
--- call after hardmode runs
-
 -- modify hardmode RHEs to only have one heat input
 if mods["pyhardmode"] then
   data.raw["assembling-machine"].rhe.energy_source.connections = {{
@@ -7,3 +5,6 @@ if mods["pyhardmode"] then
     direction = defines.direction.west
   }}
 end
+
+-- zerostart
+require "prototypes.zerostart"

@@ -38,6 +38,11 @@ script.on_event(defines.events.on_player_created, function(event)
 		player.print {"messages.pyblock-warning-no-preset"}
   end
   player.print {"messages.pyblock-intro"}
+
+  -- if spoilage is enabled and module-inserter isn't installed, let the player know
+  if script.feature_flags.spoiling and not script.active_mods["module-inserter"] then
+    player.print {"messages.pyblock-spoilage-warning"}
+  end
 end)
 
 -- landfill generation script
@@ -61,5 +66,12 @@ script.on_event(defines.events.on_chunk_generated, function (event)
   -- set water as hidden tile
   for _, tile in pairs(to_replace) do
     event.surface.set_hidden_tile(tile.position, "water")
+  end
+end)
+
+script.on_configuration_changed(function (event)
+  -- if spoilage is enabled and module-inserter isn't installed, let the player know
+  if script.feature_flags.spoiling and not script.active_mods["module-inserter"] then
+    game.print {"messages.pyblock-spoilage-warning"}
   end
 end)

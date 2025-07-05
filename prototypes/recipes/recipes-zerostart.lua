@@ -1,7 +1,6 @@
+-- basic handcrafting recipes
 RECIPE{
-  name = "handcraft-seaweed",
-  -- category = "cultivation",
-	-- subgroup = "py-alienlife-genetics",
+  name = "forage-seaweed",
   enabled = true,
   energy_required = 5,
   results = {
@@ -10,9 +9,16 @@ RECIPE{
   main_product = "seaweed"
 }
 RECIPE{
-  name = "handcraft-soil",
-  -- category = "cultivation",
-	-- subgroup = "py-alienlife-genetics",
+  name = "forage-wood",
+  enabled = true,
+  energy_required = 5,
+  results = {
+    { type = "item", name = "log", amount_min = 0, amount_max = 2 }
+  },
+  main_product = "log"
+}
+RECIPE{
+  name = "forage-soil",
   enabled = true,
   energy_required = 2,
   results = {
@@ -20,46 +26,43 @@ RECIPE{
   },
   main_product = "soil"
 }
-
--- make seaweed spoil into dried seaweed
-ITEM("seaweed"):spoil("dried-seaweed", 648000)
-ITEM{
-  name = "dried-seaweed",
-  icon = "__pyalienlifegraphics__/graphics/icons/seaweed.png",
-  icon_size = 64,
-  stack_size = 50
+RECIPE{
+  name = "forage-spores",
+  enabled = true,
+  energy_required = 2,
+  ingredients = {
+    { type = "item", name = "soil", amount = 1 }
+  },
+  results = {
+    { type = "item", name = "fawogae-spore", amount = 1, probability = 0.3 }
+  },
+  main_product = "fawogae-spore"
 }
 
 -- quicker dehydration
-
+RECIPE{
+  name = "dry-seaweed",
+  enabled = true,
+  energy_required = 2,
+  ingredients = {
+    { type = "item", name = "seaweed", amount = 1 },
+  },
+  results = {
+    { type = "item", name = "dry-seaweed", amount = 1 },
+  },
+  main_product = "dry-seaweed"
+}
 
 -- quicker rehydration
-
--- change stone furnace to take bricks, and more of them
-RECIPE("furnace"):replace_ingredient("stone", "stone-brick", 8)
-
-
 RECIPE{
-  name = "handcraft-wet-brick",
+  name = "wet-seaweed",
   enabled = true,
-  energy_required = 4,
+  energy_required = 0.5,
   ingredients = {
-    { type = "item", name = "soil", amount = 4 },
+    { type = "item", name = "dry-seaweed", amount = 1 },
   },
   results = {
-
+    { type = "item", name = "seaweed", amount = 1 },
   },
-  main_product = "wet-brick"
-}
-RECIPE{
-  name = "wet-brick",
-  enabled = true,
-  energy_required = 8,
-  ingredients = {
-
-  },
-  results = {
-
-  },
-  main_product = "wet-brick"
+  main_product = "seaweed"
 }

@@ -94,7 +94,7 @@ RECIPE("dried-meat-01"):remove_unlock("rendering"):add_unlock("water-animals-mk0
 TECHNOLOGY("fawogae-mk01"):remove_pack("py-science-pack-2"):add_pack("logistic-science-pack")
 
 -- if decay is on, re-add a less efficient meat recipe for simple but less efficient dried meat
-if settings.startup["py-enable-decay"] and mods["enable-all-feature-flags"] then
+if settings.startup["py-enable-decay"] and feature_flags.spoiling then
   RECIPE {
     type = "recipe",
     name = "dried-meat-01",

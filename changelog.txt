@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.3.0
+Date: ???
+  Features:
+    - Added foraging (handcrafting) recipes for soil, seaweed, logs, and faw spores
+    - 
+  Changes:
+    - If spoilage is enabled, seaweed spoils into dry seaweed after two hours. This includes when in module slots of seaweed crop farms. Use the "Module Inserter" mod to interact with the module slots
+    - Added optional (recommended) dependency on Module Inserter for when spoilage is enabled.
+    - Changed the stone furnace recipe to take 8 stone bricks instead of 5 stone
+---------------------------------------------------------------------------------------------------
 Version: 3.2.4
 Date: ???
   Changes:
