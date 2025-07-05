@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.5
 Date: 2025-06-08
+  Locale:
+    - Updated Russian translation courtesy of @Astorin on github
   Changes:
     - Added DDC MK 00 to the DDC MK 01 recipe
     - Added Automated Screamer MK 00 to the Automated Screener MK 01 recipe
