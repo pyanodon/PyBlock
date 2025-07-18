@@ -31,11 +31,11 @@ require("prototypes/buildings/cultivator")
 require("prototypes/buildings/slaughterhouse-mk00")
 require("prototypes/buildings/shunt-loader")
 require("prototypes/buildings/shunt-inserter")
+require("prototypes/buildings/seaweed-crop-mk00")
+require("prototypes/buildings/fwf-mk00")
 
 --UNUSED
 --require("prototypes/buildings/fish-farm-mk00")
---require("prototypes/buildings/fwf-mk00")
---require("prototypes/buildings/seaweed-crop-mk00")
 --require("prototypes/buildings/bqt")
 
 require("prototypes/itemgroups")
