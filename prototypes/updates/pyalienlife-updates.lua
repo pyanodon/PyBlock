@@ -16,9 +16,9 @@ RECIPE {
   enabled = true,
   energy_required = 5,
   ingredients = {
-    {type = "item", name = "fawogae-spore",     amount = 5},
-    {type = "item", name = "empty-planter-box", amount = 1},
-    {type = "item", name = "soil",              amount = 5}
+    {type = "item", name = "fawogae-spore", amount = 5},
+    {type = "item", name = "wood",          amount = 2},
+    {type = "item", name = "soil",          amount = 5}
   },
   results = {
     {type = "item", name = "fawogae", amount = 1}
