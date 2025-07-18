@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.2.6
+Date: ????
+  Bugfixes:
+    - Fixed disabling fun entity names mod setting not applying to atomizer and solid separator
+    - Fixed disabling fun entity names mod setting breaking when using non-english locale
+---------------------------------------------------------------------------------------------------
 Version: 3.2.5
 Date: 2025-06-08
   Locale:

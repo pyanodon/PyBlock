@@ -298,11 +298,12 @@ if settings.startup["disable-pyblock-fun-names"].value then
     "slaughterhouse-mk00",
     "soil-extractor-mk00",
     "washer-mk00",
-    "wpu-mk00"
+    "wpu-mk00",
+    "solid-separator-mk00"
   }) do
-    data.raw["assembling-machine"][entity].localised_name = { "entity-name-alt." .. entity }
+    data.raw["assembling-machine"][entity].localised_name = { "", "entity-name-alt." .. entity, "entity-name." .. entity }
   end
-  data.raw["furnace"]["compost-plant-mk00"].localised_name = { "entity-name-alt.compost-plant-mk00" }
+  data.raw["furnace"]["compost-plant-mk00"].localised_name = { "", "entity-name-alt.compost-plant-mk00", "entity-name-alt.compost-plant-mk00" }
 end
 
 if register_cache_file ~= nil then
