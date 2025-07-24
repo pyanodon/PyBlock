@@ -1,6 +1,9 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.6
 Date: ????
+  Changes:
+    - Changed internal name of "dirty-water-light" to "muddy-sludge".
+    - Changed internal name of "dirty-water-heavy" to "tailings".
   Bugfixes:
     - Fixed disabling fun entity names mod setting not applying to atomizer and solid separator
     - Fixed disabling fun entity names mod setting breaking when using non-english locale
