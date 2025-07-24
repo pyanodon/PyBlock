@@ -4,15 +4,15 @@ RECIPE {
   energy_required = 1,
   enabled = true,
   ingredients = {
-      {"stone-brick", 20},
-      {"pipe", 5},
-      {"small-parts-01", 5},
-      {"iron-plate", 15},
+    {type = "item", name = "stone-brick", amount = 20},
+    {type = "item", name = "pipe", amount = 5},
+    {type = "item", name = "iron-gear-wheel", amount = 5},
+    {type = "item", name = "iron-plate", amount = 15}
   },
   results = {
-      {"seaweed-crop-mk00", 1}
+    {type = "item", name = "seaweed-crop-mk00", amount = 1}
   }
-}
+}:add_unlock("seaweed")
 
 ITEM {
   type = "item",
@@ -26,13 +26,14 @@ ITEM {
   stack_size = 10
 }
 
-require "make_copy" ("seaweed", "seaweed-crop-mk00"):add_unlock("seaweed"):set_fields{
+require "make_copy" ("seaweed-crop-mk01", "seaweed-crop-mk00"):set_fields{
   icon = "__PyBlock__/graphics/icons/seaweed-crop-mk00.png",
-  crafting_speed = data.raw["assembling-machine"]["seaweed-crop"].crafting_speed * 0.2,
+  icon_size = 64,
+  crafting_speed = data.raw["assembling-machine"]["seaweed-crop-mk01"].crafting_speed * 0.2,
   energy_usage = "150kW",
   energy_source = {
     type = "void",
     usage_priority = "secondary-input",
-    emissions_per_minute = -25,
+    emissions_per_minute = {pollution = -5},
   }
 }

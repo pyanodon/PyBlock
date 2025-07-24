@@ -21,6 +21,8 @@ for _, inserter in pairs(data.raw.inserter) do
   inserter.use_easter_egg = true
 end
 
+-- wood burns into charcoal
+ITEM("wood"):set_fields{burnt_result = "charcoal"}
 ITEM{
   type = "item",
   name = "charcoal",
@@ -34,7 +36,18 @@ ITEM{
 
 
 -- change stone furnace to take bricks, and more of them
-RECIPE("furnace"):replace_ingredient("stone", "stone-brick", 8)
+RECIPE("stone-furnace"):replace_ingredient("stone", "stone-brick", 8)
+
+-- update sand-brick recipe
+RECIPE("sand-brick"):set_fields{
+  ingredients = {
+    { type = "item", name = "charcoal", amount = 3 },
+    { type = "item", name = "rich-clay", amount = 4 },
+    { type = "item", name = "sand", amount = 4 }
+  },
+  results = {{type = "item", name = "stone-brick", amount = 3}},
+  crafting_category = "hpf"
+}
 
 -- update seaweed to spoil if spoilage is enabled
 if feature_flags.spoiling then

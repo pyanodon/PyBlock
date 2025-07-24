@@ -13,27 +13,28 @@ RECIPE {
     results = {
         {type = "item", name = "fwf-mk00", amount = 1}
     }
-}
+}:add_unlock("fwf")
 
 ITEM {
-    type = "item",
-    name = "fwf-mk00",
-    icon = "__PyBlock__/graphics/icons/fwf-mk00.png",
-    icon_size = 32,
-    flags = {},
-    subgroup = "py-alienlife-buildings-mk00",
-    order = "e",
-    place_result = "fwf-mk00",
-    stack_size = 10
+  type = "item",
+  name = "fwf-mk00",
+  icon = "__PyBlock__/graphics/icons/fwf-mk00.png",
+  icon_size = 32,
+  flags = {},
+  subgroup = "py-alienlife-buildings-mk00",
+  order = "e",
+  place_result = "fwf-mk00",
+  stack_size = 10
 }
 
-require "make_copy" ("fwf", "fwf-mk00"):add_unlock("fwf"):set_fields{
+require "make_copy" ("fwf-mk01", "fwf-mk00"):set_fields{
   icon = "__PyBlock__/graphics/icons/fwf-mk00.png",
-  crafting_speed = data.raw["assembling-machine"]["fwf"].crafting_speed * 0.2,
-  -- energy_usage = "150kW",
-  -- energy_source = {
-  --   type = "void",
-  --   usage_priority = "secondary-input",
-  --   emissions_per_minute = -25,
-  -- }
+  icon_size = 32,
+  crafting_speed = data.raw["assembling-machine"]["fwf-mk01"].crafting_speed * 0.2,
+  energy_usage = "80kW",
+  energy_source = {
+    type = "void",
+    usage_priority = "secondary-input",
+    emissions_per_minute = {pollution = -10},
+  }
 }

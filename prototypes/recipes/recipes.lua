@@ -1,28 +1,3 @@
-
--- soil to stone
-RECIPE {
-	type = "recipe",
-	name = "soil-to-stone",
-	category = "washer",
-	enabled = true,
-	energy_required = 4,
-	ingredients =
-	{
-		{ type = "item", name = "soil", amount = 24 },
-		{ type = "fluid", name = "water", amount = 400 }
-	},
-	results =
-	{
-		{ type = "item", name = "stone", amount = 10 },
-		{ type = "fluid", name = "dirty-water-light", amount = 50 }
-	},
-	main_product = "stone",
-	icon = "__pycoalprocessinggraphics__/graphics/icons/soil-washer.png",
-	icon_size = 32,
-	subgroup = "py-washer",
-	order = "c"
-}
-
 -- early quartz
 RECIPE {
 	type = "recipe",

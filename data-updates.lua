@@ -162,9 +162,13 @@ for e, effect in pairs(data.raw["technology"]["steam-power"].effects) do
   end
 end
 
--- remove required recipes from automation science pack
-RECIPE("empty-planter-box"):remove_unlock("automation-science-pack"):set_fields {enabled = true}
-RECIPE("soil"):remove_unlock("automation-science-pack"):set_fields {enabled = true}
+-- move faw and things to atomizer tech
+RECIPE("spore-collector-mk01"):add_unlock("atomizer-mk00"):set_fields {enabled = false}
+RECIPE("fawogae-plantation-mk01"):add_unlock("atomizer-mk00"):set_fields {enabled = false}
+RECIPE("coal-fawogae"):add_unlock("atomizer-mk00"):set_fields {enabled = false}
+RECIPE("boiler"):add_unlock("atomizer-mk00"):set_fields {enabled = false}
+RECIPE("steam-engine"):add_unlock("atomizer-mk00"):set_fields {enabled = false}
+RECIPE("offshore-pump"):add_unlock("atomizer-mk00"):set_fields {enabled = false}
 
 -- move starter ash separation recipes to ash-separation and set trigger tech
 TECHNOLOGY("ash-separation"):set_fields {research_trigger = {type = "craft-item", item = "ash", count = 200}, prerequisites = {"atomizer-mk00"}}
@@ -212,7 +216,7 @@ RECIPE("geo-he-00"):set_fields {
 }
 
 -- move atomizer recipes to new trigger tech
-RECIPE("iron-plate"):add_unlock("atomizer-mk00"):set_fields {enabled = false}
+-- RECIPE("iron-plate"):add_unlock("atomizer-mk00"):set_fields {enabled = false}
 
 -- add burner atomizer to atomizer mk01 recipe
 RECIPE("atomizer-mk01"):remove_ingredient("washer"):add_ingredient {type = "item", name = "atomizer-mk00", amount = 1}

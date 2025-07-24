@@ -2,7 +2,7 @@
 -- reduce cost of buildings
 RECIPE("spore-collector-mk01"):remove_ingredient("gasifier"):remove_ingredient("electronic-circuit"):remove_ingredient("steel-plate"):remove_ingredient("intermetallics"):set_fields {enabled = true}:remove_unlock("mycology-mk01")
 
-RECIPE("fawogae-plantation-mk01"):remove_ingredient("electronic-circuit"):remove_ingredient("tinned-cable"):remove_ingredient("intermetallics"):set_fields {enabled = true}:remove_unlock("fawogae-mk01"):remove_ingredient("wood"):add_ingredient {type = "item", name = "wood", amount = 10}:remove_ingredient("iron-plate"):add_ingredient {type = "item", name = "iron-plate", amount = 5}:remove_ingredient("pipe"):add_ingredient {type = "item", name = "pipe", amount = 2}:add_ingredient {type = "item", name = "copper-plate", amount = 4}
+RECIPE("fawogae-plantation-mk01"):remove_ingredient("electronic-circuit"):remove_ingredient("tinned-cable"):remove_ingredient("intermetallics"):set_fields {enabled = true}:remove_unlock("fawogae-mk01"):set_ingredient_amount("wood", 10):set_ingredient_amount("iron-plate", 5):set_ingredient_amount("pipe", 2):set_ingredient_amount("copper-plate", 5)
 
 RECIPE("fawogae-spore"):set_fields {enabled = true}:remove_unlock("fawogae-mk01"):set_fields {energy_required = 1}
 
@@ -35,23 +35,40 @@ RECIPE("earth-shroom-sample"):remove_unlock("fawogae-mk01"):add_unlock("yaedols"
 RECIPE("fawogae-to-iron"):add_unlock("atomizer-mk00"):remove_unlock("molecular-decohesion"):replace_ingredient("fawogae", "fawogae", 20):replace_result("iron-ore", "iron-ore", 18):set_fields {energy_required = 15}
 
 -- reduce power cost
-data.raw["assembling-machine"]["fawogae-plantation-mk01"].energy_usage = "30kW"
-
-data.raw["assembling-machine"]["spore-collector-mk01"].energy_usage = "12kW"
-data.raw["assembling-machine"]["spore-collector-mk01"].energy_source = {
-  type = "fluid",
-  effectivity = 1,
-  emissions = 1,
-  fluid_box = {
-    volume = 2,
-    pipe_covers = pipecoverspictures(),
-    pipe_connections = {
-      {flow_direction = "input-output",   position = {-3, 0}, direction = 12},
-      {pipe_connections = "input-output", position = {3, 0},  direction = 4},
+ENTITY("fawogae-plantation-mk01"):set_fields{
+  energy_usage = "30kW",
+  energy_source = {
+    type = "fluid",
+    fluid_box = {
+      volume = 10,
+      pipe_covers = py.pipe_covers(false, true, true, true),
+      pipe_picture = py.pipe_pictures("assembling-machine-3", {0, 0.22}, {0.02, -1}, nil, nil, pipes),
+      pipe_connections = {
+        {flow_direction = "input-output", position = {-2.5, -0.5}, direction = defines.direction.west},
+        {flow_direction = "input-output", position = {2.5, 0.5}, direction = defines.direction.east}
+      },
+      filter = "steam"
     },
-    filter = "steam",
-  },
-  scale_fluid_usage = true
+    minimum_temperature = 250,
+    scale_fluid_usage = true
+  }
+}
+ENTITY("spore-collector-mk01"):set_fields{
+  energy_usage = "12kW",
+  energy_source = {
+    type = "fluid",
+    fluid_box = {
+      volume = 10,
+      pipe_covers = pipecoverspictures(),
+      pipe_connections = {
+        {flow_direction = "input-output",   position = {-3, 0}, direction = 12},
+        {flow_direction = "input-output", position = {3, 0},  direction = 4},
+      },
+      filter = "steam",
+    },
+    minimum_temperature = 250,
+    scale_fluid_usage = true
+  }
 }
 
 -- fawogae to raw coal

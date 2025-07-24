@@ -2,13 +2,21 @@
 Version: 3.3.0
 Date: ???
   Features:
-    - Added foraging (handcrafting) recipes for soil, seaweed, logs, and faw spores
-    - 
+    - Added foraging (handcrafting) recipes for soil, seaweed, logs, and fawoage spores
+    - Wood (not logs) burns into charcoal
+    - Seaweed spoils into dry seaweed if spoilage is enabled, or can be cooked in a furnace to speed up the process (or if spoilage is disabled)
+    - Dry seaweed can be rehydrated by hand or in an assembling machine
+    - Dry seaweed, soil, and charcoal can be combined into stone bricks
+    - Slowwood Forestry Mk 00 (yes, the classic name can be disabled you heathen)
+    - Sawweed Crop Mk 00 (this name too)
   Changes:
     - If spoilage is enabled, seaweed spoils into dry seaweed after two hours. This includes when in module slots of seaweed crop farms. Use the "Module Inserter" mod to interact with the module slots
     - Added optional (recommended) dependency on Module Inserter for when spoilage is enabled.
     - Changed the stone furnace recipe to take 8 stone bricks instead of 5 stone
     - Changed bootstrapping fawogae recipe to only require 2 wood instead of an empty planter box
+    - Nerfed rich clay to bricks, but reduced the stone useage per brick (assuming crushing stone -> gravel -> sand) and added a charcoal component to the recipe. And moved it to the HPF
+    - Disabled 
+    - Changed stone furnaces to take bricks, not stone
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.4
 Date: ???
