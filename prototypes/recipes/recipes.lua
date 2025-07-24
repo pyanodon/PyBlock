@@ -14,7 +14,7 @@ RECIPE {
 	results =
 	{
 		{ type = "item", name = "stone", amount = 10 },
-		{ type = "fluid", name = "dirty-water-light", amount = 50 }
+		{ type = "fluid", name = "muddy-sludge", amount = 50 }
 	},
 	main_product = "stone",
 	icon = "__pycoalprocessinggraphics__/graphics/icons/soil-washer.png",
@@ -77,7 +77,7 @@ RECIPE {
   },
   results = {
     { type = "item", name = "stone", amount_min = 6, amount_max = 12, probability = 0.5 },
-    { type = "fluid", name = "dirty-water-light", amount = 1200 },
+    { type = "fluid", name = "muddy-sludge", amount = 1200 },
     { type = "item", name = "moss", amount = 1, probability = 0.08 },
   },
   main_product = "moss"
