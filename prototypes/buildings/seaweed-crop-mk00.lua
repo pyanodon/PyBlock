@@ -12,7 +12,7 @@ RECIPE {
   results = {
     {type = "item", name = "seaweed-crop-mk00", amount = 1}
   }
-}:add_unlock("seaweed")
+}:add_unlock("seaweed-mk00")
 
 ITEM {
   type = "item",
@@ -35,5 +35,7 @@ require "make_copy" ("seaweed-crop-mk01", "seaweed-crop-mk00"):set_fields{
     type = "void",
     usage_priority = "secondary-input",
     emissions_per_minute = {pollution = -5},
-  }
+  },
+  allowed_module_categories = {"seaweed"},
+  fixed_recipe = "seaweed-1"
 }

@@ -50,7 +50,6 @@ data:extend {
   }
 }
 
-
 -- create "floating" seaweed that moves
 local seaweed = table.deepcopy(data.raw.tree.seaweed)
 data.raw.tree.seaweed = nil
@@ -167,7 +166,7 @@ RECIPE("spore-collector-mk01"):add_unlock("atomizer-mk00"):set_fields {enabled =
 RECIPE("fawogae-plantation-mk01"):add_unlock("atomizer-mk00"):set_fields {enabled = false}
 RECIPE("coal-fawogae"):add_unlock("atomizer-mk00"):set_fields {enabled = false}
 RECIPE("boiler"):add_unlock("atomizer-mk00"):set_fields {enabled = false}
-RECIPE("steam-engine"):add_unlock("atomizer-mk00"):set_fields {enabled = false}
+RECIPE("steam-engine"):add_unlock("automation-science-pack"):set_fields {enabled = false}
 RECIPE("offshore-pump"):add_unlock("atomizer-mk00"):set_fields {enabled = false}
 
 -- move starter ash separation recipes to ash-separation and set trigger tech

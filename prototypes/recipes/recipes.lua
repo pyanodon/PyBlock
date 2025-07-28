@@ -52,7 +52,7 @@ RECIPE {
   },
   results = {
     { type = "item", name = "stone", amount_min = 6, amount_max = 12, probability = 0.5 },
-    { type = "fluid", name = "dirty-water-light", amount = 1200 },
+    { type = "fluid", name = "muddy-sludge", amount = 1200 },
     { type = "item", name = "moss", amount = 1, probability = 0.08 },
   },
   main_product = "moss"

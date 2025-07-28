@@ -75,14 +75,13 @@ ENTITY("spore-collector-mk01"):set_fields{
 RECIPE("coal-fawogae"):set_fields {enabled = true}:remove_unlock("fawogae-mk01"):set_fields {category = "distilator"}:replace_result("raw-coal", "raw-coal", 5)
 
 -- seaweed
-RECIPE("seaweed-crop-mk01"):remove_ingredient("tin-plate")
+RECIPE("seaweed-crop-mk01"):remove_ingredient("pipe"):remove_ingredient("stone-brick"):remove_ingredient("steam-engine"):add_ingredient({type = "item", name = "seaweed-crop-mk00", amount = 1})
 
 -- botanical nursery
 RECIPE("botanical-nursery"):remove_ingredient("fluid-drill-mk01")
 
 -- moss farm
 RECIPE("moss-farm-mk01"):remove_ingredient("aluminium-plate")
-
 TECHNOLOGY("moss-mk01"):remove_prereq("botany-mk01")
 
 --cadaveric for copper
@@ -108,7 +107,7 @@ RECIPE("fungal-substrate"):remove_unlock("mycology-mk02"):add_unlock("fawogae-mk
 RECIPE("dried-meat-01"):remove_unlock("rendering"):add_unlock("water-animals-mk01"):replace_result("dried-meat", "dried-meat", 8)
 
 -- move faw 2 up to logi
-TECHNOLOGY("fawogae-mk01"):remove_pack("py-science-pack-2"):add_pack("logistic-science-pack")
+TECHNOLOGY("fawogae-mk01"):remove_pack("py-science-pack-2"):add_pack("automation-science-pack")
 
 -- if decay is on, re-add a less efficient meat recipe for simple but less efficient dried meat
 if settings.startup["py-enable-decay"] and feature_flags.spoiling then
@@ -165,7 +164,12 @@ RECIPE("phytoplankton-3"):remove_unlock("microbiology-mk03"):add_unlock("microbi
 RECIPE("phytoplankton-2"):remove_unlock("microbiology-mk04"):add_unlock("microbiology-mk02")
 RECIPE("waste-water-void"):remove_unlock("fish-mk01"):add_unlock("electrolysis")
 
-RECIPE("fish-farm-mk01"):set_fields {ingredients = {}}:add_ingredient {type = "item", name = "steel-plate", amount = 25}:add_ingredient {type = "item", name = "glass", amount = 20}:add_ingredient {type = "item", name = "seaweed-crop-mk01", amount = 1}:add_ingredient {type = "item", name = "pump", amount = 1}
+RECIPE("fish-farm-mk01"):set_fields {ingredients = {
+  {type = "item", name = "steel-plate", amount = 25},
+  {type = "item", name = "glass", amount = 20},
+  {type = "item", name = "seaweed-crop-mk01", amount = 1},
+  {type = "item", name = "pump", amount = 1}
+}}
 RECIPE("breed-fish-egg-1"):replace_ingredient("fish", "fish", 8):replace_ingredient("phytoplankton", "phytoplankton", 30)
 RECIPE("fish-to-tin"):remove_unlock("molecular-decohesion-mk02"):add_unlock("mining-with-fluid"):set_fields {ignore_in_pypp = false}
 
@@ -175,14 +179,23 @@ RECIPE("saline-water"):remove_unlock("electronics"):add_unlock("fish-mk01")
 
 RECIPE("full-render-fish"):replace_result("meat", "meat", 4)
 
-RECIPE("breed-fish-1"):remove_ingredient("oxygen"):set_fields {results = {{type = "item", name = "fish", amount = 15}, {type = "fluid", name = "waste-water", amount = 100}}}
+RECIPE("breed-fish-1"):remove_ingredient("oxygen"):set_fields {results = {
+  {type = "item", name = "fish", amount = 15},
+  {type = "fluid", name = "waste-water", amount = 100}
+}}
 RECIPE("breed-fish-1-agressive-selection"):replace_result("fish", {type = "item", name = "fish", amount = 13})
 
 local breed_fish = table.deepcopy(data.raw["recipe"]["breed-fish-1"])
 breed_fish.name = "breed-fish-simple"
 data.raw.recipe["breed-fish-simple"] = breed_fish
 
-RECIPE("breed-fish-simple"):remove_ingredient("small-lamp"):add_unlock("fish-mk01"):set_fields {energy_required = 200, results = {{type = "item", name = "fish", amount = 12}, {type = "fluid", name = "waste-water", amount = 100}}}
+RECIPE("breed-fish-simple"):remove_ingredient("small-lamp"):add_unlock("fish-mk01"):set_fields {
+  energy_required = 200,
+  results = {
+    {type = "item", name = "fish", amount = 12},
+    {type = "fluid", name = "waste-water", amount = 100}
+  }
+}
 
 TECHNOLOGY("water-animals-mk01"):remove_pack("py-science-pack-1"):set_fields {prerequisites = {}}
 

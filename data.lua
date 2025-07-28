@@ -4,13 +4,46 @@ TECHNOLOGY {
   icon = "__PyBlock__/graphics/icons/atomizer-mk00.png",
   icon_size = 128,
   order = "c-a",
-  prerequisites = {},
+  prerequisites = {"fawogae-mk00"},
   effects = {},
   research_trigger = {
     type = "craft-item",
     item = "raw-coal",
     count = 50
   }
+}
+
+TECHNOLOGY {
+  type = "technology",
+  name = "fawogae-mk00",
+  icon = "__PyBlock__/graphics/icons/atomizer-mk00.png",
+  icon_size = 128,
+  order = "c-a",
+  prerequisites = {},
+  effects = {},
+  research_trigger = {
+    type = "craft-item",
+    item = "stone-brick",
+    count = 10
+  }
+}
+
+TECHNOLOGY {
+  type = "technology",
+  name = "wood-processing-0",
+  icon = "__PyBlock__/graphics/icons/atomizer-mk00.png",
+  icon_size = 128,
+  order = "c-a",
+  ignore_tech_cost_multiplier = true
+}
+
+TECHNOLOGY {
+  type = "technology",
+  name = "seaweed-mk00",
+  icon = "__PyBlock__/graphics/icons/atomizer-mk00.png",
+  icon_size = 128,
+  order = "c-a",
+  ignore_tech_cost_multiplier = true
 }
 
 

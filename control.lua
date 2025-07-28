@@ -70,6 +70,10 @@ script.on_event(defines.events.on_chunk_generated, function (event)
 end)
 
 script.on_configuration_changed(function (event)
+  -- if just updated an old save, recommend starting a new one
+  if event.mod_changes.PyBlock and event.mod_changes.PyBlock.old_version and helpers.compare_versions(event.mod_changes.PyBlock.old_version, "3.3.0") == -1 and helpers.compare_versions(event.mod_changes.PyBlock.new_version, "3.3.0") >= 0 then
+    game.show_message_dialog {text = {"messages.pyblock-new-save-warning"}}
+  end
   -- if spoilage is enabled and module-inserter isn't installed, let the player know
   if script.feature_flags.spoiling and not script.active_mods["module-inserter"] then
     game.print {"messages.pyblock-spoilage-warning"}
