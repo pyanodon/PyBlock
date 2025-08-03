@@ -2,7 +2,7 @@ RECIPE {
   type = "recipe",
   name = "soil-extractor-mk00",
   energy_required = 6,
-  enabled = true,
+  enabled = false,
   ingredients = {
     {type = "item", name = "burner-mining-drill", amount = 2},
     {type = "item", name = "iron-plate",          amount = 15},
@@ -12,7 +12,7 @@ RECIPE {
   results = {
     {type = "item", name = "soil-extractor-mk00", amount = 1}
   }
-}
+}:add_unlock("automation-science-pack")
 
 ITEM {
   type = "item",

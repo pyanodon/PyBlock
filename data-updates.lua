@@ -45,7 +45,7 @@ data:extend {
         scale = 0.5
       }
     },
-    autoplace = {probability_expression = 0.004},
+    autoplace = {probability_expression = 0.001},
     protected_from_tile_building = false
   }
 }
@@ -55,6 +55,7 @@ local seaweed = table.deepcopy(data.raw.tree.seaweed)
 data.raw.tree.seaweed = nil
 seaweed.type = "fish"
 data.raw.fish.seaweed = seaweed
+data.raw.fish.seaweed.autoplace.probability_expression = 0.0005
 
 --adjust landfill cost for landfill painter
 if mods["LandfillPainting"] then
@@ -161,30 +162,32 @@ for e, effect in pairs(data.raw["technology"]["steam-power"].effects) do
   end
 end
 
--- move faw and things to atomizer tech
-RECIPE("spore-collector-mk01"):add_unlock("atomizer-mk00"):set_fields {enabled = false}
-RECIPE("fawogae-plantation-mk01"):add_unlock("atomizer-mk00"):set_fields {enabled = false}
-RECIPE("coal-fawogae"):add_unlock("atomizer-mk00"):set_fields {enabled = false}
-RECIPE("boiler"):add_unlock("atomizer-mk00"):set_fields {enabled = false}
-RECIPE("steam-engine"):add_unlock("automation-science-pack"):set_fields {enabled = false}
-RECIPE("offshore-pump"):add_unlock("atomizer-mk00"):set_fields {enabled = false}
+-- move faw and things to faw tech
+RECIPE("fawogae-plantation-mk01"):add_unlock("fawogae-mk00"):set_fields {enabled = false}
+RECIPE("spore-collector-mk01"):add_unlock("fawogae-mk00"):set_fields {enabled = false}
+RECIPE("coal-fawogae"):add_unlock("fawogae-mk00"):set_fields {enabled = false}
+RECIPE("offshore-pump"):add_unlock("fawogae-mk00"):set_fields {enabled = false}
+RECIPE("boiler"):add_unlock("fawogae-mk00"):set_fields {enabled = false}
+RECIPE("steam-engine"):add_unlock("fawogae-mk00"):set_fields {enabled = false}
+
+-- atomizer adjustments
+data.raw["technology"]["atomizer-mk00"].unit = nil
 
 -- move starter ash separation recipes to ash-separation and set trigger tech
 TECHNOLOGY("ash-separation"):set_fields {research_trigger = {type = "craft-item", item = "ash", count = 200}, prerequisites = {"atomizer-mk00"}}
 RECIPE("copper-plate"):add_unlock("ash-separation"):set_fields {enabled = false}
-RECIPE("inductor1-2"):add_unlock("ash-separation"):set_fields {enabled = false}
 data.raw["technology"]["ash-separation"].unit = nil
 
 -- set automation science pack to require 10 copper plates
 TECHNOLOGY("automation-science-pack"):set_fields {research_trigger = {type = "craft-item", item = "copper-plate", count = 10}}
+RECIPE("inductor1-2"):add_unlock("automation-science-pack"):set_fields {enabled = false}
 data.raw["technology"]["automation-science-pack"].prerequisites = {"ash-separation"}
 data.raw["technology"]["automation-science-pack"].unit = nil
-data.raw["technology"]["atomizer-mk00"].unit = nil
 
 -- burner/steam mk00 recipe adjustments
 RECIPE("wpu"):add_ingredient {type = "item", name = "inductor1", amount = 12}:add_ingredient {type = "item", name = "wpu-mk00", amount = 1}:remove_unlock("automation-science-pack"):add_unlock("wood-processing"):set_fields {enabled = false}
 
-RECIPE("soil-extractor-mk01"):remove_ingredient("burner-mining-drill"):add_ingredient {type = "item", name = "soil-extractor-mk00", amount = 1}
+RECIPE("soil-extractor-mk01"):remove_ingredient("burner-mining-drill"):add_ingredient {type = "item", name = "soil-extractor-mk00", amount = 1}:replace_unlock("automation-science-pack", "soil-washing")
 
 RECIPE("washer"):remove_ingredient("steam-engine"):add_ingredient {type = "item", name = "washer-mk00", amount = 1}
 
@@ -219,15 +222,6 @@ RECIPE("geo-he-00"):set_fields {
 
 -- add burner atomizer to atomizer mk01 recipe
 RECIPE("atomizer-mk01"):remove_ingredient("washer"):add_ingredient {type = "item", name = "atomizer-mk00", amount = 1}
-
--- data.raw.technology["mega-farm"].unit.ingredients = {{"automation-science-pack", 1},{"py-science-pack-1",1}}
--- TECHNOLOGY("mega-farm"):set_fields{prerequisites = {}}
-
--- RECIPE("mega-farm"):set_fields{ingredients = {}}:add_ingredient({"concrete", 200}):add_ingredient({"treated-wood", 50})
-
--- RECIPE("replicator-bioreserve"):set_fields{ingredients = {}}
-
--- data.raw.technology["mega-farm-bioreserve"].unit.ingredients = {{"automation-science-pack", 1},{"py-science-pack-1",1}}
 
 RECIPE("earth-generic-sample"):remove_unlock("xenobiology"):add_unlock("biotech-mk01")
 

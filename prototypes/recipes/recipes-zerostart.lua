@@ -20,9 +20,9 @@ RECIPE{
 RECIPE{
   name = "forage-soil",
   enabled = true,
-  energy_required = 2,
+  energy_required = 1,
   category = "handcrafting",
-  results = {{type = "item", name = "soil", amount_min = 0, amount_max = 8}},
+  results = {{type = "item", name = "soil", amount_min = 0, amount_max = 5}},
   allow_as_intermediate = false,
   main_product = "soil"
 }
@@ -35,18 +35,19 @@ RECIPE{
   category = "handcrafting",
   ingredients = {{type = "item", name = "seaweed", amount = 1}},
   results = {{type = "item", name = "dry-seaweed", amount = 1}},
+  allow_as_intermediate = false,
   main_product = "dry-seaweed"
 }
 RECIPE{
   name = "bulk-dry-seaweed",
-  enabled = false,
+  enabled = true,
   energy_required = 5,
   category = "smelting",
   ingredients = {{type = "item", name = "seaweed", amount = 4}},
   results = {{type = "item", name = "dry-seaweed", amount_min = 0, amount_max = 4, probability = 0.9}},
   allow_as_intermediate = false,
   main_product = "dry-seaweed"
-}:add_unlock("fawogae-mk00")
+}
 -- rehydration and bulk rehydration
 RECIPE{
   name = "wet-seaweed",
@@ -70,7 +71,7 @@ RECIPE{
   results = {{type = "item", name = "seaweed", amount = 2}},
   allow_as_intermediate = false,
   main_product = "seaweed"
-}:add_unlock("fawogae-mk00")
+}:add_unlock("seaweed-mk00")
 
 -- charcoal recipes
 RECIPE{
@@ -85,14 +86,14 @@ RECIPE{
 }
 RECIPE{
   name = "bulk-charcoal",
-  enabled = false,
+  enabled = true,
   energy_required = 5,
   category = "smelting",
   ingredients = {{type = "item", name = "wood", amount = 2}},
   results = {{type = "item", name = "charcoal", amount_min = 0, amount_max = 5}},
   allow_as_intermediate = false,
   main_product = "charcoal"
-}:add_unlock("fawogae-mk00")
+}
 
 -- handcraft bricks
 RECIPE{
@@ -127,6 +128,20 @@ RECIPE{
   name = "sort-charcoal",
   enabled = false,
   energy_required = 2.5,
+  icons = {
+    {
+      icon = "__pycoalprocessinggraphics__/graphics/icons/ash-separation.png",
+      icon_size = 32
+    },
+    {
+      icon = "__PyBlock__/graphics/icons/charcoal.png",
+      icon_size = 64,
+      scale = 0.2,
+      shift = {
+        8, -8
+      }
+    }
+  },
   category = "solid-separator",
   ingredients = {{type = "item", name = "charcoal", amount = 4}},
   results = {
@@ -138,19 +153,36 @@ RECIPE{
   main_product = "ash"
 }:add_unlock("ash-separation")
 
--- handsort ash for copper and iron
+-- handsort ash for soot and oxide
 RECIPE{
   name = "ash-sorting-manual",
   enabled = false,
-  energy_required = 5,
+  energy_required = 2,
+  icon = "__pycoalprocessinggraphics__/graphics/icons/ash-separation.png",
+  icon_size = 32,
   category = "handcrafting",
-  ingredients = {{type = "item", name = "ash", amount = 2}},
+  ingredients = {{type = "item", name = "ash", amount = 5}},
+  results = {
+    { type = "item", name = "coal-dust", amount = 1, probability = 0.5 },
+    { type = "item", name = "iron-oxide", amount = 1, probability = 0.2 },
+    { type = "item", name = "soot", amount = 1, probability = 0.75 }
+  },
+  allow_as_intermediate = false
+}:add_unlock("fawogae-mk00")
+
+-- handsort soot for copper and iron
+RECIPE{
+  name = "soot-sorting-manual",
+  enabled = false,
+  energy_required = 2,
+  icon = "__pypetroleumhandlinggraphics__/graphics/icons/class-s.png",
+  category = "handcrafting",
+  ingredients = {{type = "item", name = "soot", amount = 1}},
   results = {
     { type = "item", name = "iron-ore", amount = 1, probability = 0.4 },
     { type = "item", name = "copper-ore", amount = 1, probability = 0.4 }
   },
-  allow_as_intermediate = false,
-  main_product = "iron-ore"
+  allow_as_intermediate = false
 }:add_unlock("fawogae-mk00")
 
 -- basic fwf recipe

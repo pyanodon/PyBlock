@@ -50,7 +50,7 @@ RECIPE {
   type = "recipe",
   name = "ddc-mk00",
   energy_required = 8,
-  enabled = true,
+  enabled = false,
   ingredients =
   {
     {type = "item", name = "iron-plate",    amount = 15},
@@ -60,7 +60,7 @@ RECIPE {
   results = {
     {type = "item", name = "ddc-mk00", amount = 1}
   }
-}
+}:add_unlock("fawogae-mk00")
 
 ITEM {
   type = "item",

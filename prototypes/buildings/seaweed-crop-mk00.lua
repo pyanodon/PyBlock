@@ -2,7 +2,7 @@ RECIPE {
   type = "recipe",
   name = "seaweed-crop-mk00",
   energy_required = 1,
-  enabled = true,
+  enabled = false,
   ingredients = {
     {type = "item", name = "stone-brick", amount = 20},
     {type = "item", name = "pipe", amount = 5},

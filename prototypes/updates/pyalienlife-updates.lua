@@ -15,6 +15,7 @@ RECIPE {
   category = "handcrafting",
   enabled = true,
   energy_required = 5,
+  allow_as_intermediate = false,
   ingredients = {
     {type = "item", name = "fawogae-spore", amount = 5},
     {type = "item", name = "wood",          amount = 2},

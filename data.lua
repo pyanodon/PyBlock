@@ -1,7 +1,7 @@
 TECHNOLOGY {
   type = "technology",
   name = "atomizer-mk00",
-  icon = "__PyBlock__/graphics/icons/atomizer-mk00.png",
+  icon = "__PyBlock__/graphics/technology/molecular-decohesion-mk00.png",
   icon_size = 128,
   order = "c-a",
   prerequisites = {"fawogae-mk00"},
@@ -16,7 +16,7 @@ TECHNOLOGY {
 TECHNOLOGY {
   type = "technology",
   name = "fawogae-mk00",
-  icon = "__PyBlock__/graphics/icons/atomizer-mk00.png",
+  icon = "__PyBlock__/graphics/technology/fawogae-mk00.png",
   icon_size = 128,
   order = "c-a",
   prerequisites = {},
@@ -31,7 +31,7 @@ TECHNOLOGY {
 TECHNOLOGY {
   type = "technology",
   name = "wood-processing-0",
-  icon = "__PyBlock__/graphics/icons/atomizer-mk00.png",
+  icon = "__PyBlock__/graphics/technology/wood-processing-0.png",
   icon_size = 128,
   order = "c-a",
   ignore_tech_cost_multiplier = true
@@ -40,7 +40,7 @@ TECHNOLOGY {
 TECHNOLOGY {
   type = "technology",
   name = "seaweed-mk00",
-  icon = "__PyBlock__/graphics/icons/atomizer-mk00.png",
+  icon = "__PyBlock__/graphics/technology/seaweed-crop-mk00.png",
   icon_size = 128,
   order = "c-a",
   ignore_tech_cost_multiplier = true

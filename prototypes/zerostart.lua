@@ -26,9 +26,9 @@ ITEM("wood"):set_fields{burnt_result = "charcoal"}
 ITEM{
   type = "item",
   name = "charcoal",
-  icon = "__PyBlock__/graphics/icons/sodium-acetate.png",
-  -- subgroup = 'py-rawores-uranium',
-  -- order = 'uaa',
+  icon = "__PyBlock__/graphics/icons/charcoal.png",
+  subgroup = 'py-items',
+  order = 'a3',
   stack_size = 100
 }
 

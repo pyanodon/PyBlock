@@ -218,7 +218,7 @@ fix_tech("fluid-processing-machines-2", {order = "000041", prerequisites = {"nio
 fix_tech("ralesia", {order = "000030", prerequisites = {"genetics-mk02"}, unit = {count = 200, ingredients = {{"automation-science-pack", 2}, {"py-science-pack-1", 1}}, time = 45}})
 fix_tech("ulric", {order = "000036", prerequisites = {"logistic-science-pack"}, unit = {count = 160, ingredients = {{"automation-science-pack", 3}, {"logistic-science-pack", 1}, {"py-science-pack-1", 2}}, time = 60}})
 fix_tech("wood-processing-0", {order = "000002", prerequisites = {"automation-science-pack"}, unit = {count = 20, ingredients = {{"automation-science-pack", 1}}, time = 30}})
-fix_tech("wood-processing", {order = "000007", prerequisites = {"moss-mk01", "botany-mk01"}, unit = {count = 36, ingredients = {{"automation-science-pack", 1}}, time = 30}})
+fix_tech("wood-processing", {order = "000007", prerequisites = {"moss-mk01", "botany-mk01", "wood-processing-0"}, unit = {count = 36, ingredients = {{"automation-science-pack", 1}}, time = 30}})
 fix_tech("wood-processing-2", {order = "000036", prerequisites = {"logistic-science-pack"}, unit = {count = 160, ingredients = {{"automation-science-pack", 3}, {"logistic-science-pack", 1}, {"py-science-pack-1", 2}}, time = 60}})
 fix_tech("lab-instrument", {order = "000028", prerequisites = {"rubber", "boron", "hot-air-mk01"}, unit = {count = 150, ingredients = {{"automation-science-pack", 2}, {"py-science-pack-1", 1}}, time = 45}})
 fix_tech("niobium", {order = "000040", prerequisites = {"guar", "organic-solvent"}, unit = {count = 250, ingredients = {{"automation-science-pack", 3}, {"logistic-science-pack", 1}, {"py-science-pack-1", 2}}, time = 60}})
