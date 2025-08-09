@@ -102,8 +102,8 @@ RECIPE{
   energy_required = 2,
   category = "handcrafting",
   ingredients = {
-    { type = "item", name = "dry-seaweed", amount = 6 },
-    { type = "item", name = "charcoal", amount = 2 },
+    { type = "item", name = "dry-seaweed", amount = 1 },
+    { type = "item", name = "charcoal", amount = 3 },
     { type = "item", name = "soil", amount = 4 }
   },
   results = {{type = "item", name = "stone-brick", amount = 3}},
@@ -113,14 +113,14 @@ RECIPE{
 RECIPE{
   name = "seaweed-bricks",
   enabled = false,
-  energy_required = 8,
+  energy_required = 5,
   category = "hpf",
   ingredients = {
-    { type = "item", name = "dry-seaweed", amount = 8 },
-    { type = "item", name = "charcoal", amount = 5 },
+    { type = "item", name = "dry-seaweed", amount = 3 },
+    { type = "item", name = "charcoal", amount = 6 },
     { type = "item", name = "soil", amount = 4 }
   },
-  results = {{type = "item", name = "stone-brick", amount = 6}},
+  results = {{type = "item", name = "stone-brick", amount = 8}},
   main_product = "stone-brick"
 }:add_unlock("coal-processing-1")
 

@@ -43,8 +43,8 @@ RECIPE("sand-brick"):set_fields{
   energy_required = 10,
   ingredients = {
     { type = "item", name = "sand", amount = 4 },
-    { type = "item", name = "charcoal", amount = 6 },
-    { type = "item", name = "rich-clay", amount = 6 },
+    { type = "item", name = "charcoal", amount = 8 },
+    { type = "item", name = "rich-clay", amount = 4 },
   },
   results = {{type = "item", name = "stone-brick", amount = 8}},
   crafting_category = "hpf"
