@@ -78,9 +78,11 @@ table.insert(RECIPE("soot-separation").results, {type = "item", name = "ore-nick
 
 RECIPE("soot-separation"):set_fields {unlock_results = true, ignore_in_pypp = false}
 
-RECIPE("mining-antimony"):remove_unlock("excavation-2"):add_unlock("excavation-1") --:set_fields{results = {{type = "item", name = "antimonium-ore", amount = 20}}}
+RECIPE("mining-antimony"):replace_unlock("excavation-2", "excavation-1")
 
 RECIPE("ground-borer"):remove_ingredient("intermetallics")
+
+TECHNOLOGY("coal-processing-1"):add_prereq("seaweed-mk00")
 
 -- reduce fish oil to lube cost to increase drilling yield relative to fish input
 RECIPE("mining-borax"):replace_ingredient("drilling-fluid-1", "lubricant")
@@ -170,9 +172,6 @@ RECIPE("offshore-pump"):add_unlock("fawogae-mk00"):set_fields {enabled = false}
 RECIPE("boiler"):add_unlock("fawogae-mk00"):set_fields {enabled = false}
 RECIPE("steam-engine"):add_unlock("fawogae-mk00"):set_fields {enabled = false}
 
--- atomizer adjustments
-data.raw["technology"]["atomizer-mk00"].unit = nil
-
 -- move starter ash separation recipes to ash-separation and set trigger tech
 TECHNOLOGY("ash-separation"):set_fields {research_trigger = {type = "craft-item", item = "ash", count = 200}, prerequisites = {"atomizer-mk00"}}
 RECIPE("copper-plate"):add_unlock("ash-separation"):set_fields {enabled = false}
@@ -184,44 +183,8 @@ RECIPE("inductor1-2"):add_unlock("automation-science-pack"):set_fields {enabled 
 data.raw["technology"]["automation-science-pack"].prerequisites = {"ash-separation"}
 data.raw["technology"]["automation-science-pack"].unit = nil
 
--- burner/steam mk00 recipe adjustments
-RECIPE("wpu"):add_ingredient {type = "item", name = "inductor1", amount = 12}:add_ingredient {type = "item", name = "wpu-mk00", amount = 1}:remove_unlock("automation-science-pack"):add_unlock("wood-processing"):set_fields {enabled = false}
-
-RECIPE("soil-extractor-mk01"):remove_ingredient("burner-mining-drill"):add_ingredient {type = "item", name = "soil-extractor-mk00", amount = 1}:replace_unlock("automation-science-pack", "soil-washing")
-
-RECIPE("washer"):remove_ingredient("steam-engine"):add_ingredient {type = "item", name = "washer-mk00", amount = 1}
-
-RECIPE("flora-collector-mk01"):remove_ingredient("soil-extractor-mk01"):add_ingredient {type = "item", name = "soil-extractor-mk00", amount = 1}
-
-RECIPE("compost-plant-mk01"):add_ingredient {type = "item", name = "compost-plant-mk00", amount = 1}:remove_unlock("compost"):add_unlock("fertilizer-mk01")
-
-RECIPE("slaughterhouse-mk01"):add_ingredient {type = "item", name = "slaughterhouse-mk00", amount = 1}
-
-RECIPE("destructive-distillation-column-mk01"):add_ingredient {type = "item", name = "destructive-distillation-column-mk00", amount = 1}
-
--- increase construction costs of geothermal plant
-RECIPE("geothermal-plant-mk01"):add_ingredient {type = "item", name = "pipe", amount = 80}:add_ingredient {type = "item", name = "concrete", amount = 150}
-
 -- move check valve from fluid handling to assembly
 RECIPE("py-check-valve"):remove_unlock("fluid-handling"):add_unlock("automation")
-
--- slow down geowater->steam recipe, and add more ingredients
-RECIPE("geo-he-00"):set_fields {
-  energy_required = 10,
-  ingredients = {
-    {type = "fluid", name = "geothermal-water", amount = 180, minimum_temperature = 950},
-    {type = "fluid", name = "water",            amount = 400}
-  },
-  results = {
-    {type = "fluid", name = "steam",             amount = 320, temperature = 500}
-  }
-}
-
--- move atomizer recipes to new trigger tech
--- RECIPE("iron-plate"):add_unlock("atomizer-mk00"):set_fields {enabled = false}
-
--- add burner atomizer to atomizer mk01 recipe
-RECIPE("atomizer-mk01"):remove_ingredient("washer"):add_ingredient {type = "item", name = "atomizer-mk00", amount = 1}
 
 RECIPE("earth-generic-sample"):remove_unlock("xenobiology"):add_unlock("biotech-mk01")
 

@@ -19,7 +19,6 @@ ITEM {
   type = "item",
   name = "fwf-mk00",
   icon = "__PyBlock__/graphics/icons/fwf-mk00.png",
-  icon_size = 32,
   flags = {},
   subgroup = "py-alienlife-buildings-mk00",
   order = "e",
@@ -28,8 +27,6 @@ ITEM {
 }
 
 require "make_copy" ("fwf-mk01", "fwf-mk00"):set_fields{
-  -- icon = "__PyBlock__/graphics/icons/fwf-mk00.png",
-  -- icon_size = 32,
   crafting_speed = data.raw["assembling-machine"]["fwf-mk01"].crafting_speed * 0.2,
   energy_usage = "80kW",
   energy_source = {

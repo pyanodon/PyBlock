@@ -97,18 +97,32 @@ RECIPE{
 
 -- handcraft bricks
 RECIPE{
-  name = "seaweed-bricks",
+  name = "seaweed-bricks-handcraft",
   enabled = true,
   energy_required = 2,
-  category = "crafting",
+  category = "handcrafting",
   ingredients = {
-    { type = "item", name = "dry-seaweed", amount = 1 },
-    { type = "item", name = "charcoal", amount = 1 },
-    { type = "item", name = "soil", amount = 2 }
+    { type = "item", name = "dry-seaweed", amount = 6 },
+    { type = "item", name = "charcoal", amount = 2 },
+    { type = "item", name = "soil", amount = 4 }
   },
-  results = {{type = "item", name = "stone-brick", amount = 2}},
+  results = {{type = "item", name = "stone-brick", amount = 3}},
   main_product = "stone-brick"
 }
+-- proper smelt bricks
+RECIPE{
+  name = "seaweed-bricks",
+  enabled = false,
+  energy_required = 8,
+  category = "hpf",
+  ingredients = {
+    { type = "item", name = "dry-seaweed", amount = 8 },
+    { type = "item", name = "charcoal", amount = 5 },
+    { type = "item", name = "soil", amount = 4 }
+  },
+  results = {{type = "item", name = "stone-brick", amount = 6}},
+  main_product = "stone-brick"
+}:add_unlock("coal-processing-1")
 
 -- crush charcoal into ash and dust
 RECIPE{

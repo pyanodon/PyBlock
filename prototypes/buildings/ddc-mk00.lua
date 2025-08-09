@@ -74,6 +74,8 @@ ITEM {
   stack_size = 20
 }
 
+RECIPE("destructive-distillation-column-mk01"):add_ingredient {type = "item", name = "destructive-distillation-column-mk00", amount = 1}
+
 ENTITY {
   type = "assembling-machine",
   name = "ddc-mk00",

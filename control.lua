@@ -2,7 +2,8 @@ script.on_init(function(event)
   if remote.interfaces['freeplay'] then
     local created_items = remote.call('freeplay', 'get_created_items')
     created_items['landfill'] = 1000
-    created_items['stone'] = 0
+    created_items["stone-furnace"] = nil
+    created_items['stone'] = nil
     created_items['log'] = 100
     created_items["iron-plate"] = 1000
     created_items["copper-plate"] = 500
@@ -12,7 +13,6 @@ script.on_init(function(event)
     created_items['py-tank-3000'] = 1
     created_items['py-tank-5000'] = 1
     created_items['py-tank-8000'] = 1
-    created_items["stone-furnace"] = 0
     created_items["py-sinkhole"] = 2
     created_items["multiblade-turbine-mk01"] = 1
     if script.active_mods["pyhardmode"] then

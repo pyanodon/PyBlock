@@ -26,6 +26,8 @@ ITEM {
   stack_size = 10
 }
 
+RECIPE("soil-extractor-mk01"):remove_ingredient("burner-mining-drill"):add_ingredient {type = "item", name = "soil-extractor-mk00", amount = 1}:replace_unlock("automation-science-pack", "soil-washing")
+
 ENTITY {
   type = "assembling-machine",
   name = "soil-extractor-mk00",

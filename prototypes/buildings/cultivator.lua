@@ -16,6 +16,8 @@ RECIPE {
   }
 }:add_unlock("automation-science-pack")
 
+RECIPE("flora-collector-mk01"):remove_ingredient("soil-extractor-mk01"):add_ingredient {type = "item", name = "soil-extractor-mk00", amount = 1}
+
 RECIPE {
   type = "recipe",
   name = "collector-to-cultivator-mk01",

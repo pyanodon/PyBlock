@@ -15,8 +15,6 @@ Date: ???
     - Changed the stone furnace recipe to take 8 stone bricks instead of 5 stone
     - Changed bootstrapping fawogae recipe to only require 2 wood instead of an empty planter box
     - Nerfed rich clay to bricks, but reduced the stone useage per brick (assuming crushing stone -> gravel -> sand) and added a charcoal component to the recipe. And moved it to the HPF
-    - Disabled 
-    - Changed stone furnaces to take bricks, not stone
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.4
 Date: ???

@@ -26,6 +26,8 @@ ITEM {
   stack_size = 10
 }
 
+RECIPE("compost-plant-mk01"):add_ingredient {type = "item", name = "compost-plant-mk00", amount = 1}:remove_unlock("compost"):add_unlock("fertilizer-mk01")
+
 ENTITY {
   type = "furnace",
   name = "compost-plant-mk00",

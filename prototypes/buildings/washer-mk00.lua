@@ -26,6 +26,8 @@ ITEM {
   stack_size = 10
 }
 
+RECIPE("washer"):remove_ingredient("steam-engine"):add_ingredient {type = "item", name = "washer-mk00", amount = 1}
+
 burner_washer = table.deepcopy(data.raw["assembling-machine"].washer)
 
 burner_washer.name = "washer-mk00"

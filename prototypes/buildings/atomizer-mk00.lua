@@ -26,6 +26,8 @@ ITEM {
   stack_size = 10
 }
 
+RECIPE("atomizer-mk01"):remove_ingredient("washer"):add_ingredient {type = "item", name = "atomizer-mk00", amount = 1}
+
 ENTITY {
   type = "assembling-machine",
   name = "atomizer-mk00",
