@@ -7,7 +7,12 @@ local dry_seaweed = table.deepcopy(data.raw.module.seaweed)
 dry_seaweed.name = "dry-seaweed"
 dry_seaweed.localised_name = nil
 -- TODO update icon and possibly description, as well as module properties
-data.raw.module["dry-seaweed"] = dry_seaweed
+if type(data.data_crawler) == "string" and string.sub(data.data_crawler, 1, 5) == "yafc " then
+  dry_seaweed.type = "item"
+  data.raw.item["dry-seaweed"] = dry_seaweed
+else
+  data.raw.module["dry-seaweed"] = dry_seaweed
+end
 
 -- reduce seaweed and driftwood density
 data.raw.fish.seaweed.autoplace.probability_expression = 0.025 -- approx 30% of previous
