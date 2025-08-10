@@ -10,6 +10,7 @@ Date: ???
     - Slowwood Forestry Mk 00 (yes, the classic name can be disabled you heathen)
     - Sawweed Crop Mk 00 (this name too)
   Changes:
+    - Reduced Laughterhouse Mk 00 crafting speed by 50%
     - If spoilage is enabled, seaweed spoils into dry seaweed after two hours. This includes when in module slots of seaweed crop farms. Use the "Module Inserter" mod to interact with the module slots
     - Added optional (recommended) dependency on Module Inserter for when spoilage is enabled.
     - Changed the stone furnace recipe to take 8 stone bricks instead of 5 stone

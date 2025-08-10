@@ -13,7 +13,7 @@ RECIPE {
     results = {
         {type = "item", name = "fwf-mk00", amount = 1}
     }
-}:add_unlock("fwf")
+}:add_unlock("wood-processing-0")
 
 ITEM {
   type = "item",
@@ -26,12 +26,14 @@ ITEM {
   stack_size = 10
 }
 
-require "make_copy" ("fwf-mk01", "fwf-mk00"):set_fields{
+require "make_copy" ("fwf"):set_fields{
   crafting_speed = data.raw["assembling-machine"]["fwf-mk01"].crafting_speed * 0.2,
+  module_slots = data.raw["assembling-machine"]["fwf-mk01"].module_slots,
   energy_usage = "80kW",
   energy_source = {
     type = "void",
     usage_priority = "secondary-input",
     emissions_per_minute = {pollution = -10},
-  }
+  },
+  allowed_module_categories = {"tree"}
 }

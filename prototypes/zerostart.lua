@@ -46,6 +46,7 @@ RECIPE("stone-furnace"):replace_ingredient("stone", "stone-brick", 8)
 -- update sand-brick recipe
 RECIPE("sand-brick"):set_fields{
   energy_required = 10,
+  category = "hpf",
   ingredients = {
     { type = "item", name = "sand", amount = 4 },
     { type = "item", name = "charcoal", amount = 8 },
