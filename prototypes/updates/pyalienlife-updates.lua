@@ -77,6 +77,7 @@ RECIPE("coal-fawogae"):set_fields {enabled = true}:remove_unlock("fawogae-mk01")
 
 -- seaweed
 RECIPE("seaweed-crop-mk01"):remove_ingredient("pipe"):remove_ingredient("stone-brick"):remove_ingredient("steam-engine"):add_ingredient({type = "item", name = "seaweed-crop-mk00", amount = 1})
+RECIPE("seaweed-1"):replace_unlock("seaweed-mk01", "seaweed-mk00")
 
 -- botanical nursery
 RECIPE("botanical-nursery"):remove_ingredient("fluid-drill-mk01")
