@@ -9,8 +9,8 @@ data.raw.recipe["py-sinkhole"].enabled = true
 --buildings removed from start:
 RECIPE("distilator"):set_fields{enabled=false}
 table.insert(data.raw.technology["coal-processing-1"].effects,{type="unlock-recipe",recipe="distilator"})
-data.raw.recipe["wpu"].enabled=false
-table.insert(data.raw.technology["coal-processing-1"].effects,{type="unlock-recipe",recipe="wpu"})
+data.raw.recipe["wpu-mk01"].enabled=false
+table.insert(data.raw.technology["coal-processing-1"].effects,{type="unlock-recipe",recipe="wpu-mk01"})
 data.raw.recipe["washer"].enabled=false
 table.insert(data.raw.technology["separation"].effects,{type="unlock-recipe",recipe="washer"})
 data.raw.recipe["soil-extractormk01"].enabled=false
