@@ -5,6 +5,7 @@ RECIPE {
     enabled = true,
     ingredients = {
         {type = "item", name = "iron-plate",      amount = 5},
+        {type = "item", name = "iron-gear-wheel", amount = 1},
         {type = "item", name = "pipe",            amount = 1}
     },
     results = {

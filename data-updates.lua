@@ -249,3 +249,5 @@ end
 if register_cache_file ~= nil then
   register_cache_file({"pycoalprocessing", "pyfusionenergy", "pyindustry", "pyrawores", "pypetroleumhandling", "pyalienlife", "pyhightech", "pyalternativeenergy", "PyBlock"}, "__PyBlock__/cached-configs/PyBlock+pyalienlife+pyalternativeenergy+pycoalprocessing+pyfusionenergy+pyhightech+pyindustry+pypetroleumhandling+pyrawores")
 end
+
+RECIPE("copper-plate"):add_unlock("fawogae-mk00")
