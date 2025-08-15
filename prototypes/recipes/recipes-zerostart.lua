@@ -5,7 +5,7 @@ RECIPE{
   energy_required = 2.5,
   category = "handcrafting",
   results = {{type = "item", name = "seaweed", amount_min = 0, amount_max = 4}},
-  allow_as_intermediate = false,
+  allow_as_intermediate = true,
   main_product = "seaweed"
 }
 RECIPE{
@@ -14,8 +14,18 @@ RECIPE{
   energy_required = 0.25,
   category = "handcrafting",
   results = {{type = "item", name = "log", amount_min = 0, amount_max = 2}},
-  allow_as_intermediate = false,
+  allow_as_intermediate = true,
   main_product = "log"
+}
+RECIPE{
+  name = "make-wood",
+  enabled = true,
+  energy_required = 0.25,
+  category = "handcrafting",
+  ingredients = {{type = "item", name = "log", amount = 4}},
+  results = {{type = "item", name = "wood", amount = 20}},
+  allow_as_intermediate = true,
+  main_product = "wood"
 }
 RECIPE{
   name = "forage-soil",
@@ -23,7 +33,7 @@ RECIPE{
   energy_required = 1,
   category = "handcrafting",
   results = {{type = "item", name = "soil", amount_min = 0, amount_max = 5}},
-  allow_as_intermediate = false,
+  allow_as_intermediate = true,
   main_product = "soil"
 }
 
@@ -35,7 +45,7 @@ RECIPE{
   category = "handcrafting",
   ingredients = {{type = "item", name = "seaweed", amount = 1}},
   results = {{type = "item", name = "dry-seaweed", amount = 1}},
-  allow_as_intermediate = false,
+  allow_as_intermediate = true,
   main_product = "dry-seaweed"
 }
 RECIPE{
@@ -45,7 +55,7 @@ RECIPE{
   category = "smelting",
   ingredients = {{type = "item", name = "seaweed", amount = 4}},
   results = {{type = "item", name = "dry-seaweed", amount_min = 0, amount_max = 4, probability = 0.9}},
-  allow_as_intermediate = false,
+  allow_as_intermediate = true,
   main_product = "dry-seaweed"
 }
 -- rehydration and bulk rehydration
@@ -56,7 +66,7 @@ RECIPE{
   category = "handcrafting",
   ingredients = {{type = "item", name = "dry-seaweed", amount = 1}},
   results = {{type = "item", name = "seaweed", amount = 1}},
-  allow_as_intermediate = false,
+  allow_as_intermediate = true,
   main_product = "seaweed"
 }
 RECIPE{
@@ -81,7 +91,7 @@ RECIPE{
   category = "handcrafting",
   ingredients = {{type = "item", name = "wood", amount = 1}},
   results = {{type = "item", name = "charcoal", amount = 1, probability = 0.5}},
-  allow_as_intermediate = false,
+  allow_as_intermediate = true,
   main_product = "charcoal"
 }
 RECIPE{
@@ -106,6 +116,7 @@ RECIPE{
     { type = "item", name = "charcoal", amount = 3 },
     { type = "item", name = "soil", amount = 4 }
   },
+  allow_as_intermediate = true,
   results = {{type = "item", name = "stone-brick", amount = 3}},
   main_product = "stone-brick"
 }
@@ -135,7 +146,7 @@ RECIPE{
     { type = "item", name = "ash", amount = 1, probability = 0.4 },
     { type = "item", name = "coal-dust", amount = 1, probability = 0.2 }
   },
-  allow_as_intermediate = false,
+  allow_as_intermediate = true,
   main_product = "ash"
 }:add_unlock("fawogae-mk00")
 RECIPE{
@@ -181,7 +192,7 @@ RECIPE{
     { type = "item", name = "iron-oxide", amount = 1, probability = 0.2 },
     { type = "item", name = "soot", amount = 1, probability = 0.75 }
   },
-  allow_as_intermediate = false
+  allow_as_intermediate = true,
 }:add_unlock("fawogae-mk00")
 
 -- handsort soot for copper and iron
@@ -196,7 +207,7 @@ RECIPE{
     { type = "item", name = "iron-ore", amount = 1, probability = 0.4 },
     { type = "item", name = "copper-ore", amount = 1, probability = 0.4 }
   },
-  allow_as_intermediate = false
+  allow_as_intermediate = true,
 }:add_unlock("fawogae-mk00")
 
 -- basic fwf recipe
