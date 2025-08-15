@@ -29,8 +29,6 @@ ITEM {
   stack_size = 10
 }
 
-RECIPE("slaughterhouse-mk01"):add_ingredient {type = "item", name = "slaughterhouse-mk00", amount = 1}
-
 require "make_copy" ("slaughterhouse"):set_fields{
   energy_source = {
     type = "fluid",

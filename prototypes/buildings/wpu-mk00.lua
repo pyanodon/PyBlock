@@ -28,8 +28,6 @@ ITEM {
   stack_size = 10
 }
 
-RECIPE("wpu-mk01"):add_ingredient {type = "item", name = "inductor1", amount = 12} :add_ingredient {type = "item", name = "wpu-mk00", amount = 1} :replace_unlock("automation-science-pack", "wood-processing"):set_fields {enabled = false}
-
 require "make_copy" ("wpu"):set_fields{
   energy_source = {
     type = "fluid",
