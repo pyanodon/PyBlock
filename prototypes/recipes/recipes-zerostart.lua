@@ -11,7 +11,7 @@ RECIPE{
 RECIPE{
   name = "forage-wood",
   enabled = true,
-  energy_required = 2.5,
+  energy_required = 0.25,
   category = "handcrafting",
   results = {{type = "item", name = "log", amount_min = 0, amount_max = 2}},
   allow_as_intermediate = false,
@@ -77,7 +77,7 @@ RECIPE{
 RECIPE{
   name = "handburn-charcoal",
   enabled = true,
-  energy_required = 1,
+  energy_required = 0.1,
   category = "handcrafting",
   ingredients = {{type = "item", name = "wood", amount = 1}},
   results = {{type = "item", name = "charcoal", amount = 1, probability = 0.5}},
@@ -128,7 +128,7 @@ RECIPE{
 RECIPE{
   name = "crush-charcoal",
   enabled = false,
-  energy_required = 1,
+  energy_required = 0.1,
   category = "handcrafting",
   ingredients = {{type = "item", name = "charcoal", amount = 1}},
   results = {
@@ -171,7 +171,7 @@ RECIPE{
 RECIPE{
   name = "ash-sorting-manual",
   enabled = false,
-  energy_required = 2,
+  energy_required = .5,
   icon = "__pycoalprocessinggraphics__/graphics/icons/ash-separation.png",
   icon_size = 32,
   category = "handcrafting",
