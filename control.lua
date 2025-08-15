@@ -47,7 +47,7 @@ script.on_event(defines.events.on_player_created, function(event)
   player.print {"messages.pyblock-intro"}
 
   -- if spoilage is enabled and module-inserter isn't installed, let the player know
-  if script.feature_flags.spoiling and not script.active_mods["module-inserter"] then
+  if script.feature_flags.spoiling and settings.startup["enable-pyblock-seaweed-spoiling"].value and not script.active_mods["module-inserter"] then
     player.print {"messages.pyblock-spoilage-warning"}
   end
 end)
