@@ -13,7 +13,7 @@ data:extend{
   },
   {
     type = "bool-setting",
-    name = "enable-pyblock-seaweed-spoils",
+    name = "enable-pyblock-seaweed-spoiling",
     setting_type = "startup",
     default_value = false
   },
