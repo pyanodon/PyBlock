@@ -199,7 +199,7 @@ RECIPE{
 RECIPE{
   name = "soot-sorting-manual",
   enabled = false,
-  energy_required = 2,
+  energy_required = 0.5,
   icon = "__pypetroleumhandlinggraphics__/graphics/icons/class-s.png",
   category = "handcrafting",
   ingredients = {{type = "item", name = "soot", amount = 1}},
