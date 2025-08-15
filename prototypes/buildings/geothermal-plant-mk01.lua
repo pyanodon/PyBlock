@@ -149,9 +149,6 @@ data.raw["assembling-machine"].rhe.fluid_boxes = {
   }
 }
 
--- increase construction costs of geothermal plant
-RECIPE("geothermal-plant-mk01"):add_ingredient {type = "item", name = "pipe", amount = 80}:add_ingredient {type = "item", name = "concrete", amount = 150}
-
 -- slow down geowater->steam recipe, and add more ingredients
 RECIPE("geo-he-00"):set_fields {
   energy_required = 10,

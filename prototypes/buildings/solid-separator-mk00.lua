@@ -26,8 +26,6 @@ ITEM {
   stack_size = 10
 }
 
-RECIPE("solid-separator"):replace_unlock("ash-separation", "steel-processing"):add_ingredient {type = "item", name = "solid-separator-mk00", amount = 1}:add_ingredient_amount("small-parts-01", -20):add_ingredient_amount("steel-plate", -10):add_ingredient_amount("inductor1", -5)
-
 -- require "make_copy" ("solid-separator"):set_fields{
 --   energy_source = {
 --     type = "fluid",
