@@ -251,3 +251,4 @@ if register_cache_file ~= nil then
 end
 
 RECIPE("copper-plate"):add_unlock("fawogae-mk00")
+RECIPE("iron-oxide-smelting"):add_unlock("fawogae-mk00")
