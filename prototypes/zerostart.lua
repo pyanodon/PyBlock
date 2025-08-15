@@ -5,7 +5,7 @@ require "recipes.recipes-zerostart"
 -- create new items
 local dry_seaweed = table.deepcopy(data.raw.module.seaweed)
 dry_seaweed.name = "dry-seaweed"
-dry_seaweed.icon = "__PyBlock__/graphics/icons/dry-seaweed.png"
+dry_seaweed.icons = {{icon = "__PyBlock__/graphics/icons/dry-seaweed.png"}}
 dry_seaweed.localised_name = nil
 -- TODO update icon and possibly description, as well as module properties
 if type(data.data_crawler) == "string" and string.sub(data.data_crawler, 1, 5) == "yafc " then
