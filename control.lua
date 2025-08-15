@@ -2,10 +2,11 @@ script.on_init(function(event)
   if remote.interfaces['freeplay'] then
     local created_items = remote.call('freeplay', 'get_created_items')
     if settings.startup["enable-pyblock-no-items"].value then
+      created_items = {}
+      created_items['landfill'] = 45 -- You can get softlocked if you don't have enough starting platform
       remote.call("freeplay", "set_respawn_items", {})
       remote.call("freeplay", "set_ship_items", {})
       remote.call("freeplay", "set_debris_items", {})
-      created_items = {}
     else
       created_items['landfill'] = 1000
       created_items["stone-furnace"] = nil
