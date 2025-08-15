@@ -18,4 +18,8 @@ data:extend
     type = "recipe-category",
     name = "cultivation"
   },
+  {
+  	type = "recipe-category",
+  	name = "vacuum-pump-mk00"
+  },
 }

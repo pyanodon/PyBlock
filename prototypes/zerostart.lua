@@ -60,3 +60,21 @@ RECIPE("sand-brick"):set_fields{
 if feature_flags.spoiling then
   ITEM("seaweed"):spoil("dry-seaweed", 60*60*60) -- spoil after an hour
 end
+
+RECIPE {
+  type = "recipe",
+  name = "moisture-collection",
+  enabled = true,
+  category = "vacuum",
+  additional_categories = {"vacuum-pump-mk00"},
+  energy_required = 1,
+  ingredients = {},
+  results = {
+    {
+      type = "fluid",
+      name = "water",
+      amount = 1
+    }
+  },
+  main_product = "water"
+}
