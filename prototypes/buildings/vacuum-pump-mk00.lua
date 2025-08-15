@@ -4,9 +4,9 @@ RECIPE {
     energy_required = 1,
     enabled = true,
     ingredients = {
-        {type = "item", name = "iron-plate",      amount = 20},
-        {type = "item", name = "iron-gear-wheel", amount = 10},
-        {type = "item", name = "pipe",            amount = 10}
+        {type = "item", name = "iron-plate",      amount = 5},
+        {type = "item", name = "iron-gear-wheel", amount = 1},
+        {type = "item", name = "pipe",            amount = 1}
     },
     results = {
         {type = "item", name = "vacuum-pump-mk00", amount = 1}
