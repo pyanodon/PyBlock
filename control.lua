@@ -1,27 +1,34 @@
 script.on_init(function(event)
   if remote.interfaces['freeplay'] then
     local created_items = remote.call('freeplay', 'get_created_items')
-    created_items['landfill'] = 1000
-    created_items["stone-furnace"] = nil
-    created_items['stone'] = nil
-    created_items['log'] = 100
-    created_items["iron-plate"] = 1000
-    created_items["copper-plate"] = 500
-    created_items["transport-belt"] = 100
-    created_items["burner-inserter"] = 50
-    created_items['py-tank-1000'] = 1
-    created_items['py-tank-3000'] = 1
-    created_items['py-tank-5000'] = 1
-    created_items['py-tank-8000'] = 1
-    created_items["py-sinkhole"] = 2
-    created_items["multiblade-turbine-mk01"] = 1
-    if script.active_mods["pyhardmode"] then
-      if script.active_mods["configurable-valves"] then
-        created_items["configurable-valve"] = 6
-      end
-      if script.active_mods["valves"] then
-        created_items["valves-overflow"] = 3
-        created_items["valves-top_up"] = 3
+    if settings.startup["enable-pyblock-no-items"].value then
+      remote.call("freeplay", "set_respawn_items", {})
+      remote.call("freeplay", "set_ship_items", {})
+      remote.call("freeplay", "set_debris_items", {})
+      created_items = {}
+    else
+      created_items['landfill'] = 1000
+      created_items["stone-furnace"] = nil
+      created_items['stone'] = nil
+      created_items['log'] = 100
+      created_items["iron-plate"] = 1000
+      created_items["copper-plate"] = 500
+      created_items["transport-belt"] = 100
+      created_items["burner-inserter"] = 50
+      created_items['py-tank-1000'] = 1
+      created_items['py-tank-3000'] = 1
+      created_items['py-tank-5000'] = 1
+      created_items['py-tank-8000'] = 1
+      created_items["py-sinkhole"] = 2
+      created_items["multiblade-turbine-mk01"] = 1
+      if script.active_mods["pyhardmode"] then
+        if script.active_mods["configurable-valves"] then
+          created_items["configurable-valve"] = 6
+        end
+        if script.active_mods["valves"] then
+          created_items["valves-overflow"] = 3
+          created_items["valves-top_up"] = 3
+        end
       end
     end
     remote.call('freeplay', 'set_created_items', created_items)
