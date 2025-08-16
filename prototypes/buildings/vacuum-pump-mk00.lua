@@ -45,6 +45,6 @@ require "make_copy" ("vacuum-pump"):set_fields{
       }
     }
   },
-  energy_usage = "150kW"
+  energy_usage = "50kW"
 }
 
