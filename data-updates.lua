@@ -178,6 +178,10 @@ for e, effect in pairs(data.raw["technology"]["steam-power"].effects) do
   end
 end
 
+-- balance offshore pump versus pumpjacks
+RECIPE("water-free"):set_result_amount("water", 450)
+ENTITY("offshore-pump"):set_fields{pumping_speed = 1.5}
+
 -- move faw and things to faw tech
 RECIPE("fawogae-plantation-mk01"):add_unlock("fawogae-mk00"):set_fields {enabled = false}
 RECIPE("spore-collector-mk01"):add_unlock("fawogae-mk00"):set_fields {enabled = false}
