@@ -48,12 +48,12 @@ RECIPE {
   energy_required = 160,
   ingredients = {
     { type = "item", name = "stone", amount = 24 },
-    { type = "fluid", name = "water", amount = 1200 },
+    { type = "fluid", name = "water", amount = 4200 },
   },
   results = {
     { type = "item", name = "stone", amount_min = 6, amount_max = 12, probability = 0.5 },
     { type = "fluid", name = "muddy-sludge", amount = 1200 },
-    { type = "item", name = "moss", amount = 1, probability = 0.08 },
+    { type = "item", name = "moss", amount = 1, probability = 0.4 },
   },
   main_product = "moss"
 }:add_unlock("moss-mk01")
@@ -67,12 +67,12 @@ RECIPE {
   enabled = false,
   energy_required = 120,
   ingredients = {
-    { type = "item", name = "wood-seedling", amount = 12 },
-    { type = "fluid", name = "water", amount = 800 },
+    { type = "item", name = "wood-seedling", amount = 30 },
+    { type = "fluid", name = "water", amount = 6500 },
   },
   results = {
-    { type = "item", name = "saps", amount_min = 0, amount_max = 2, probability = 0.1 },
-    { type = "item", name = "log", amount = 4 }
+    { type = "item", name = "saps", amount_min = 0, amount_max = 2, probability = 0.8 },
+    { type = "item", name = "log", amount = 10 }
   },
   main_product = "saps"
 }:add_unlock("sap-mk01")
@@ -86,12 +86,12 @@ RECIPE {
   enabled = false,
   energy_required = 12,
   ingredients = {
-    { type = "item", name = "soil", amount = 8 },
-    { type = "fluid", name = "water", amount = 500 },
-    { type = "item", name = "fawogae", amount = 4 }
+    { type = "item", name = "soil", amount = 140 },
+    { type = "fluid", name = "water", amount = 2700 },
+    { type = "item", name = "fawogae", amount = 20 }
   },
   results = {
-    { type = "item", name = "native-flora", amount = 1, probability = 0.02 }
+    { type = "item", name = "native-flora", amount = 1, probability = 0.6 }
   },
   show_amount_in_title = false
 }:add_unlock("automation-science-pack")
