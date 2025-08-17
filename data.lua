@@ -2,7 +2,7 @@ TECHNOLOGY {
   type = "technology",
   name = "atomizer-mk00",
   icon = "__PyBlock__/graphics/icons/atomizer-mk00.png",
-  icon_size = 128,
+  icon_size = 64,
   order = "c-a",
   prerequisites = {},
   effects = {},

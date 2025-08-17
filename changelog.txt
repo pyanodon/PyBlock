@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.2.8
+Date: 2025-08-17
+  Bugfixes:
+    - Fixed an occasional crash where the atomizer tech icon was the wrong size. Resolves https://github.com/pyanodon/pybugreports/issues/1157
+---------------------------------------------------------------------------------------------------
 Version: 3.2.7
 Date: 2025-08-13
   Changes:
