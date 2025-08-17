@@ -8,8 +8,15 @@ Date: ???
     - Dry seaweed can be rehydrated by hand or in an assembling machine
     - Dry seaweed, soil, and charcoal can be combined into stone bricks
     - Slowwood Forestry Mk 00 (yes, the classic name can be disabled you heathen)
+    - Moved certain wood processing recipes to new Wood Processing 0 tech to facilitate the Slowwood Forestry MK 00
     - Sawweed Crop Mk 00 (this name too)
+    - LandBlock preset (normal terrain gen, no resources)
   Changes:
+    - Changed native flora, sap, and moss cultivation recipes to be higher probability but more expensive
+    - Moved sap cultivation to sap tech
+    - Removed the 'ignore_tech_cost_multiplier' flag from unrelated technologies
+    - Removed stone and stone furnace from the starting inventory
+    - Reduced seaweed and driftwood generation probability
     - Updated landfill recipe to replace sand with soil
     - Moved solid separator mk01 to steel processing
     - Reduced Laughterhouse Mk 00 crafting speed by 50%
