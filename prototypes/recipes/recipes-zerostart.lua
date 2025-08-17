@@ -126,18 +126,20 @@ RECIPE{
 
 -- crush charcoal into ash and dust
 RECIPE{
-  name = "crush-charcoal",
+  name = "handsort-charcoal",
   enabled = false,
   energy_required = 1,
   category = "handcrafting",
   ingredients = {{type = "item", name = "charcoal", amount = 1}},
   results = {
     { type = "item", name = "ash", amount = 1, probability = 0.4 },
-    { type = "item", name = "coal-dust", amount = 1, probability = 0.2 }
+    { type = "item", name = "coal-dust", amount = 1, probability = 0.2 },
+    { type = "item", name = "soot", amount = 1, probability = 0.75 }
   },
   allow_as_intermediate = false,
   main_product = "ash"
 }:add_unlock("fawogae-mk00")
+-- sort charcoal, but automatic
 RECIPE{
   name = "sort-charcoal",
   enabled = false,
@@ -163,10 +165,8 @@ RECIPE{
     { type = "item", name = "coal-dust", amount = 1, probability = 0.4 },
     { type = "item", name = "soot", amount = 1, probability = 0.2 }
   },
-  allow_as_intermediate = false,
   main_product = "ash"
 }:add_unlock("ash-separation")
-
 -- handsort ash for soot and oxide
 RECIPE{
   name = "ash-sorting-manual",
@@ -183,7 +183,6 @@ RECIPE{
   },
   allow_as_intermediate = false
 }:add_unlock("fawogae-mk00")
-
 -- handsort soot for copper and iron
 RECIPE{
   name = "soot-sorting-manual",
