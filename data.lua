@@ -46,10 +46,6 @@ TECHNOLOGY {
   ignore_tech_cost_multiplier = true
 }
 
-
---tiles
--- require("prototypes/tiles/tiles")
-
 --buildings--
 require("prototypes/buildings/atomizer-mk00")
 require("prototypes/buildings/ddc-mk00")
