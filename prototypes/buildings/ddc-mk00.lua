@@ -120,7 +120,7 @@ ENTITY {
   crafting_categories = {"distilator"},
   crafting_speed = 0.5,
   result_inventory_size = 2,
-  energy_usage = "200kW",
+  energy_usage = "280kW",
   source_inventory_size = 1,
   energy_source = {
     type = "burner",

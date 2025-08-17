@@ -45,5 +45,5 @@ require "make_copy" ("wpu"):set_fields{
     },
     scale_fluid_usage = true,
   },
-  energy_usage = "150kW"
+  energy_usage = "350kW"
 }

@@ -12,6 +12,7 @@ Date: ???
     - Sawweed Crop Mk 00 (this name too)
     - LandBlock preset (normal terrain gen, no resources)
   Changes:
+    - Increased energy cost of most mk00 machines: atomizer, automated screener, compost plant, ddc, solid separator, washer, wpu, and shunt inserter
     - Changed native flora, sap, and moss cultivation recipes to be higher probability but more expensive
     - Moved sap cultivation to sap tech
     - Removed the 'ignore_tech_cost_multiplier' flag from unrelated technologies

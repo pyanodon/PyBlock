@@ -37,5 +37,5 @@ require "make_copy" ("atomizer"):set_fields{
     burnt_inventory_size = 1,
     emissions_per_minute = {pollution = 0.06}
   },
-  energy_usage = "300kW"
+  energy_usage = "500kW"
 }
