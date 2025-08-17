@@ -75,7 +75,7 @@ RECIPE {
     { type = "item", name = "log", amount = 4 }
   },
   main_product = "saps"
-}:add_unlock("wood-processing")
+}:add_unlock("sap-mk01")
 
 -- native flora recipes
 RECIPE {
