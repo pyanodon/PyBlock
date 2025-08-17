@@ -72,6 +72,9 @@ ENTITY("spore-collector-mk01"):set_fields{
   }
 }
 
+-- fwf updates
+RECIPE("wood-seeds"):replace_unlock("wood-processing", "wood-processing-0")
+
 -- fawogae to raw coal
 RECIPE("coal-fawogae"):set_fields {enabled = true}:remove_unlock("fawogae-mk01"):set_fields {category = "distilator"}:replace_result("raw-coal", "raw-coal", 5)
 
