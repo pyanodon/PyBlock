@@ -13,7 +13,7 @@ RECIPE {
   type = "recipe",
   name = "fawogae-start",
   category = "handcrafting",
-  enabled = true,
+  enabled = false,
   energy_required = 5,
   allow_as_intermediate = false,
   ingredients = {
@@ -24,7 +24,7 @@ RECIPE {
   results = {
     {type = "item", name = "fawogae", amount = 1}
   }
-}
+}:add_unlock("fawogae-mk00")
 
 --remove unused materials from fawogae mk01
 RECIPE("fawogae-sample"):remove_unlock("fawogae-mk01") --:add_unlock("navens")

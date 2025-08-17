@@ -172,6 +172,7 @@ ENTITY("offshore-pump"):set_fields{pumping_speed = 1.5}
 -- move faw and things to faw tech
 RECIPE("fawogae-plantation-mk01"):add_unlock("fawogae-mk00"):set_fields {enabled = false}
 RECIPE("spore-collector-mk01"):add_unlock("fawogae-mk00"):set_fields {enabled = false}
+RECIPE("fawogae-spore"):add_unlock("fawogae-mk00"):set_fields {enabled = false}
 RECIPE("coal-fawogae"):add_unlock("fawogae-mk00"):set_fields {enabled = false}
 RECIPE("offshore-pump"):add_unlock("fawogae-mk00"):set_fields {enabled = false}
 RECIPE("boiler"):add_unlock("fawogae-mk00"):set_fields {enabled = false}
@@ -184,6 +185,7 @@ data.raw["technology"]["ash-separation"].unit = nil
 -- set automation science pack to require 10 copper plates
 TECHNOLOGY("automation-science-pack"):set_fields {research_trigger = {type = "craft-item", item = "copper-plate", count = 10}}
 RECIPE("inductor1-2"):add_unlock("automation-science-pack"):set_fields {enabled = false}
+RECIPE("burner-mining-drill"):add_unlock("automation-science-pack"):set_fields {enabled = false}
 data.raw["technology"]["automation-science-pack"].prerequisites = {"ash-separation"}
 data.raw["technology"]["automation-science-pack"].unit = nil
 

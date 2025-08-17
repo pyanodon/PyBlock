@@ -11,13 +11,13 @@ data.raw.recipe["landfill"].ingredients = {{type = "item", name = "stone", amoun
 	{type = "item", name = "sand",  amount = 2}}
 data.raw.recipe["landfill"].results = {{type = "item", name = "landfill", amount = 2}}
 
-RECIPE("soil-washing"):remove_unlock("soil-washing"):set_fields {enabled = true}
+-- RECIPE("soil-washing"):remove_unlock("soil-washing"):set_fields {enabled = true}
 
 RECIPE("landfill"):remove_unlock("landfill"):set_fields {enabled = true}
 
 TECHNOLOGY("landfill"):set_fields {enabled = false}
 
-RECIPE("coal-gas-from-wood"):set_fields {enabled = true}:remove_unlock("coal-processing-1")
+RECIPE("coal-gas-from-wood"):replace_unlock("coal-processing-1", "fawogae-mk00")
 
 -- buff tailings -> nexelit
 RECIPE("nexelit-ore-1"):replace_result("nexelit-ore", "nexelit-ore", 3)
