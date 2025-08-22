@@ -14,8 +14,8 @@ else
 end
 
 -- reduce seaweed and driftwood density
-data.raw.fish.seaweed.autoplace.probability_expression = 0.025 -- approx 30% of previous
-data.raw.fish.driftwood.autoplace.probability_expression = 0.025
+data.raw.fish.seaweed.autoplace.probability_expression = 0.0025 -- approx 30% of previous
+data.raw.fish.driftwood.autoplace.probability_expression = 0.0025
 
 -- allow inserters to fish
 for _, inserter in pairs(data.raw.inserter) do
