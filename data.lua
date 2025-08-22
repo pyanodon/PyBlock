@@ -72,7 +72,7 @@ require("prototypes/recipe-categories")
 --require("prototypes/technology")
 require("prototypes/item")
 require("prototypes/fluids")
---require("prototypes/entity")
+require("prototypes/entity")
 
 --Recipes
 require("prototypes/recipes/recipes")
