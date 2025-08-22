@@ -50,13 +50,6 @@ data:extend {
   }
 }
 
--- create "floating" seaweed that moves
-local seaweed = table.deepcopy(data.raw.tree.seaweed)
-data.raw.tree.seaweed = nil
-seaweed.type = "fish"
-data.raw.fish.seaweed = seaweed
-data.raw.fish.seaweed.autoplace.probability_expression = 0.0005
-
 --adjust landfill cost for landfill painter
 for _, recipe in pairs{
   "landfill-dry-dirt",
