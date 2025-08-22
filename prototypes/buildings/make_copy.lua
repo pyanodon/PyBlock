@@ -12,7 +12,7 @@ return function (base_name)
     end
   end
   new_entity.icon = "__PyBlock__/graphics/icons/" .. base_name .. "-mk00.png"
-  new_entity.minable.result = base_name .. "-mk00"
+  new_entity.minable = {result = base_name .. "-mk00", mining_time = 0.5}
   new_entity.crafting_speed = new_entity.crafting_speed * 0.5
   new_entity.fast_replaceable_group = base_name
   new_entity.module_slots = 0
