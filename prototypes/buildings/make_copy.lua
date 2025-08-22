@@ -1,7 +1,7 @@
 return function (base_name)
   new_entity = table.deepcopy(data.raw["assembling-machine"][base_name .. "-mk01"] or data.raw.furnace[base_name .. "-mk01"])
   new_entity.name = base_name .. "-mk00"
-  new_entity.localised_name = {"?", settings.startup["disable-pyblock-fun-names"].value and {"entity-name-alt." .. base_name .. "-mk00"} or {"entity-name." .. base_name .. "-mk00"}, {"item-tier.mk00", {"entity-name." .. base_name}}}
+  new_entity.localised_name = settings.startup["disable-pyblock-fun-names"].value and {"entity-name-alt." .. base_name .. "-mk00"} or {"entity-name." .. base_name .. "-mk00"}
   new_entity.localised_description = {"?", {"entity-description." .. base_name .. "-mk00"}, {"entity-description." .. base_name}}
   for _, layers in pairs{
     new_entity.graphics_set.animation and new_entity.graphics_set.animation.layers or {},
