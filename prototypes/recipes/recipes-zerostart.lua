@@ -40,14 +40,14 @@ RECIPE{
 }
 RECIPE{
   name = "bulk-dry-seaweed",
-  enabled = true,
+  enabled = false,
   energy_required = 5,
   category = "smelting",
   ingredients = {{type = "item", name = "seaweed", amount = 4}},
   results = {{type = "item", name = "dry-seaweed", amount_min = 0, amount_max = 4, probability = 0.9}},
   allow_as_intermediate = false,
   main_product = "dry-seaweed"
-}
+}:add_unlock("seaweed-mk00")
 -- rehydration and bulk rehydration
 RECIPE{
   name = "wet-seaweed",
@@ -86,14 +86,14 @@ RECIPE{
 }
 RECIPE{
   name = "bulk-charcoal",
-  enabled = true,
+  enabled = false,
   energy_required = 5,
   category = "smelting",
   ingredients = {{type = "item", name = "wood", amount = 2}},
   results = {{type = "item", name = "charcoal", amount_min = 0, amount_max = 5}},
   allow_as_intermediate = false,
   main_product = "charcoal"
-}
+}:add_unlock("wood-processing-0")
 
 -- handcraft bricks
 RECIPE{
