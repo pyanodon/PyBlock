@@ -136,7 +136,7 @@ RECIPE{
 -- crush charcoal into ash and dust
 RECIPE{
   name = "handsort-charcoal",
-  enabled = false,
+  enabled = true,
   energy_required = 1,
   category = "handcrafting",
   ingredients = {{type = "item", name = "charcoal", amount = 1}},
@@ -147,7 +147,7 @@ RECIPE{
   },
   allow_as_intermediate = false,
   main_product = "ash"
-}:add_unlock("fawogae-mk00")
+}
 -- sort charcoal, but automatic
 RECIPE{
   name = "sort-charcoal",
@@ -179,7 +179,7 @@ RECIPE{
 -- handsort ash for soot and oxide
 RECIPE{
   name = "ash-sorting-manual",
-  enabled = false,
+  enabled = true,
   energy_required = 2,
   icon = "__pycoalprocessinggraphics__/graphics/icons/ash-separation.png",
   icon_size = 32,
@@ -191,11 +191,11 @@ RECIPE{
     { type = "item", name = "soot", amount = 1, probability = 0.75 }
   },
   allow_as_intermediate = false
-}:add_unlock("fawogae-mk00")
+}
 -- handsort soot for copper and iron
 RECIPE{
   name = "soot-sorting-manual",
-  enabled = false,
+  enabled = true,
   energy_required = 2,
   icon = "__pypetroleumhandlinggraphics__/graphics/icons/class-s.png",
   category = "handcrafting",
@@ -205,7 +205,7 @@ RECIPE{
     { type = "item", name = "copper-ore", amount = 1, probability = 0.4 }
   },
   allow_as_intermediate = false
-}:add_unlock("fawogae-mk00")
+}
 
 -- basic swf recipe
 RECIPE{
