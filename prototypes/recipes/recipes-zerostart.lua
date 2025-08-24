@@ -26,17 +26,15 @@ RECIPE{
   allow_as_intermediate = false,
   main_product = "soil"
 }
-if settings.startup["disable-pyblock-floaters"].value then
-  RECIPE{
-    name = "forage-fish",
-    enabled = true,
-    energy_required = 1,
-    category = "handcrafting",
-    results = {{type = "item", name = "fish", amount_min = 0, amount_max = 5}},
-    allow_as_intermediate = false,
-    main_product = "soil"
-  }
-end
+RECIPE{
+  name = "forage-fish",
+  enabled = true,
+  energy_required = 8,
+  category = "handcrafting",
+  results = {{type = "item", name = "fish", amount_min = 0, amount_max = 2}},
+  allow_as_intermediate = false,
+  main_product = "soil"
+}
 
 -- quicker dehydration
 RECIPE{
