@@ -14,6 +14,7 @@ Date: ???
   Changes:
     - Nerfed offshore pump from 1200/s -> 90/s
     - Buffed pumpjack water pumping from 300/s -> 450/s (increases with machine level)
+    - Moved washer mk01 to electrolysis and mk00 to soil washing
     - Increased energy cost of most mk00 machines: atomizer, automated screener, compost plant, ddc, solid separator, washer, wpu, and shunt inserter
     - Changed native flora, sap, and moss cultivation recipes to be higher probability but more expensive
     - Moved sap cultivation to sap tech

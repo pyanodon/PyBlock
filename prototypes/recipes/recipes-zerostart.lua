@@ -90,6 +90,8 @@ RECIPE{
   category = "handcrafting",
   ingredients = {{type = "item", name = "wood", amount = 1}},
   results = {{type = "item", name = "charcoal", amount = 1, probability = 0.5}},
+  subgroup = 'py-items',
+  order = 'charcoal',
   allow_as_intermediate = false,
   main_product = "charcoal"
 }
@@ -100,6 +102,8 @@ RECIPE{
   category = "smelting",
   ingredients = {{type = "item", name = "wood", amount = 2}},
   results = {{type = "item", name = "charcoal", amount_min = 0, amount_max = 5}},
+  subgroup = 'py-items',
+  order = 'charcoal',
   allow_as_intermediate = false,
   main_product = "charcoal"
 }:add_unlock("wood-processing-0")

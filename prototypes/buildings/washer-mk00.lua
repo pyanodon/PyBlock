@@ -2,7 +2,7 @@ RECIPE {
   type = "recipe",
   name = "washer-mk00",
   energy_required = 4,
-  enabled = true,
+  enabled = false,
   ingredients = {
     {type = "item", name = "steam-engine",    amount = 1},
     {type = "item", name = "iron-plate",      amount = 10},
@@ -12,7 +12,7 @@ RECIPE {
   results = {
     {type = "item", name = "washer-mk00", amount = 1}
   }
-}
+}:add_unlock("soil-washing")
 
 ITEM {
   type = "item",

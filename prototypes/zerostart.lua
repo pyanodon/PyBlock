@@ -29,7 +29,7 @@ ITEM{
   name = "charcoal",
   icon = "__PyBlock__/graphics/icons/charcoal.png",
   subgroup = 'py-items',
-  order = 'a3',
+  order = 'charcoal',
   stack_size = 100
 }
 
