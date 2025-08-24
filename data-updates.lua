@@ -50,13 +50,6 @@ data:extend {
   }
 }
 
-
--- create "floating" seaweed that moves
-local seaweed = table.deepcopy(data.raw.tree.seaweed)
-data.raw.tree.seaweed = nil
-seaweed.type = "fish"
-data.raw.fish.seaweed = seaweed
-
 --adjust landfill cost for landfill painter
 if mods["LandfillPainting"] then
   local recipe_list = {
