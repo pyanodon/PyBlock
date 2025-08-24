@@ -4,7 +4,7 @@ TECHNOLOGY {
   icon = "__PyBlock__/graphics/technology/molecular-decohesion-mk00.png",
   icon_size = 128,
   order = "c-a",
-  prerequisites = {"fawogae-mk00"},
+  prerequisites = {"coal-processing-0"},
   effects = {},
   research_trigger = {
     type = "craft-item",
@@ -24,6 +24,21 @@ TECHNOLOGY {
   research_trigger = {
     type = "craft-item",
     item = "stone-brick",
+    count = 10
+  }
+}
+
+TECHNOLOGY {
+  type = "technology",
+  name = "coal-processing-0",
+  icon = "__PyBlock__/graphics/technology/fawogae-mk00.png",
+  icon_size = 128,
+  order = "c-a",
+  prerequisites = {"fawogae-mk00"},
+  effects = {},
+  research_trigger = {
+    type = "craft-item",
+    item = "fawogae",
     count = 10
   }
 }

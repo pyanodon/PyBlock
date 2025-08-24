@@ -60,7 +60,7 @@ RECIPE {
   results = {
     {type = "item", name = "ddc-mk00", amount = 1}
   }
-}:add_unlock("fawogae-mk00")
+}:add_unlock("coal-processing-0")
 
 ITEM {
   type = "item",

@@ -1,12 +1,11 @@
 -- fawogae for iron
 -- reduce cost of buildings
-RECIPE("spore-collector-mk01"):remove_ingredient("gasifier"):remove_ingredient("electronic-circuit"):remove_ingredient("steel-plate"):remove_ingredient("intermetallics"):set_fields {enabled = true}:remove_unlock("mycology-mk01")
+RECIPE("spore-collector-mk01"):remove_ingredient("gasifier"):remove_ingredient("steam-engine"):remove_ingredient("electronic-circuit"):remove_ingredient("steel-plate"):remove_ingredient("intermetallics"):set_fields {enabled = true}:remove_unlock("mycology-mk01")
 
 RECIPE("fawogae-plantation-mk01"):remove_ingredient("electronic-circuit"):remove_ingredient("tinned-cable"):remove_ingredient("intermetallics"):set_fields {enabled = true}:remove_unlock("fawogae-mk01"):set_ingredient_amount("wood", 10):set_ingredient_amount("iron-plate", 5):set_ingredient_amount("pipe", 2):set_ingredient_amount("copper-plate", 5)
 
-RECIPE("fawogae-spore"):set_fields {enabled = true}:remove_unlock("fawogae-mk01"):set_fields {energy_required = 1}
-
-RECIPE("fawogae-1"):set_fields {enabled = true}:remove_unlock("fawogae-mk01")
+RECIPE("fawogae-spore"):replace_unlock("fawogae-mk01", "fawogae-mk00"):set_fields {energy_required = 1}
+RECIPE("fawogae-1"):replace_unlock("fawogae-mk01", "fawogae-mk00")
 
 -- early fawogae recipe
 RECIPE {
@@ -29,11 +28,11 @@ RECIPE {
 --remove unused materials from fawogae mk01
 RECIPE("fawogae-sample"):remove_unlock("fawogae-mk01") --:add_unlock("navens")
 
-RECIPE("fawogae-codex"):remove_unlock("fawogae-mk01"):add_unlock("yaedols")
+RECIPE("fawogae-codex"):replace_unlock("fawogae-mk01", "yaedols")
 
-RECIPE("earth-shroom-sample"):remove_unlock("fawogae-mk01"):add_unlock("yaedols")
+RECIPE("earth-shroom-sample"):replace_unlock("fawogae-mk01", "yaedols")
 
-RECIPE("fawogae-to-iron"):add_unlock("atomizer-mk00"):remove_unlock("molecular-decohesion"):replace_ingredient("fawogae", "fawogae", 20):replace_result("iron-ore", "iron-ore", 18):set_fields {energy_required = 15}
+RECIPE("fawogae-to-iron"):replace_unlock("molecular-decohesion", "atomizer-mk00"):replace_ingredient("fawogae", "fawogae", 20):replace_result("iron-ore", "iron-ore", 18):set_fields {energy_required = 15}
 
 -- reduce power cost
 ENTITY("fawogae-plantation-mk01"):set_fields{
@@ -97,19 +96,19 @@ TECHNOLOGY("cadaveric-arum"):remove_prereq("botany-mk02"):remove_pack("py-scienc
 RECIPE("cadaveric-arum-1"):replace_result("cadaveric-arum", "cadaveric-arum", 7):set_fields {energy_required = 110}
 RECIPE("cadaveric-arum-1-soil"):replace_result("cadaveric-arum", "cadaveric-arum", 7):set_fields {energy_required = 126} -- TURD
 RECIPE("cadaveric-arum-1-msa"):replace_result("cadaveric-arum", "cadaveric-arum", 7):set_fields {energy_required = 110}  -- TURD
-RECIPE("stone-wool"):remove_unlock("zipir"):add_unlock("cadaveric-arum")
-RECIPE("stone-wool2"):remove_unlock("zipir"):add_unlock("cadaveric-arum")
+RECIPE("stone-wool"):replace_unlock("zipir", "cadaveric-arum")
+RECIPE("stone-wool2"):replace_unlock("zipir", "cadaveric-arum")
 RECIPE("cadaveric-arum-mk01"):remove_ingredient("hydrocyclone-mk01"):remove_ingredient("electronic-circuit"):remove_ingredient("plastic-bar"):remove_ingredient("intermetallics"):remove_ingredient("steel-plate"):add_ingredient {type = "item", name = "steel-plate", amount = 5}:add_ingredient {type = "item", name = "pipe", amount = 4}:add_ingredient {type = "item", name = "soil", amount = 20}:remove_ingredient("botanical-nursery")
 
 -- move cadaveric 2 up to logi
-RECIPE("blood-meal"):remove_unlock("nylon"):add_unlock("cadaveric-arum-mk02")
+RECIPE("blood-meal"):replace_unlock("nylon", "cadaveric-arum-mk02")
 TECHNOLOGY("cadaveric-arum-mk02"):remove_pack("chemical-science-pack")
 
 -- move fawogae with manure up (even though it doesnt use manure anymore)
 TECHNOLOGY("fawogae-mk01"):remove_pack("py-science-pack-1"):set_fields {prerequisites = {}}
-RECIPE("fawogae-with-manure"):remove_unlock("fawogae-mk02"):add_unlock("fawogae-mk01"):replace_result("fawogae", "fawogae", 18)
-RECIPE("fungal-substrate"):remove_unlock("mycology-mk02"):add_unlock("fawogae-mk01")
-RECIPE("dried-meat-01"):remove_unlock("rendering"):add_unlock("water-animals-mk01"):replace_result("dried-meat", "dried-meat", 8)
+RECIPE("fawogae-with-manure"):replace_unlock("fawogae-mk02", "fawogae-mk01"):replace_result("fawogae", "fawogae", 18)
+RECIPE("fungal-substrate"):replace_unlock("mycology-mk02", "fawogae-mk01")
+RECIPE("dried-meat-01"):replace_unlock("rendering", "water-animals-mk01"):replace_result("dried-meat", "dried-meat", 8)
 
 -- move faw 2 up to logi
 TECHNOLOGY("fawogae-mk01"):remove_pack("py-science-pack-2"):add_pack("automation-science-pack")
@@ -164,10 +163,10 @@ TECHNOLOGY("tin-mk01"):remove_pack("py-science-pack-1")
 TECHNOLOGY("microbiology-mk01"):remove_pack("py-science-pack-1"):set_fields {prerequisites = {}}
 RECIPE("plankton-farm"):remove_ingredient("intermetallics"):remove_ingredient("storage-tank"):remove_ingredient("electronic-circuit")
 RECIPE("jerky-to-phytoplankton"):replace_ingredient("dried-meat", "dried-meat", 1):replace_result("phytoplankton", "phytoplankton", 20)
-RECIPE("phytoplankton"):remove_unlock("microbiology-mk01"):add_unlock("tin-mk01")
-RECIPE("phytoplankton-3"):remove_unlock("microbiology-mk03"):add_unlock("microbiology-mk01")
-RECIPE("phytoplankton-2"):remove_unlock("microbiology-mk04"):add_unlock("microbiology-mk02")
-RECIPE("waste-water-void"):remove_unlock("fish-mk01"):add_unlock("electrolysis")
+RECIPE("phytoplankton"):replace_unlock("microbiology-mk01", "tin-mk01")
+RECIPE("phytoplankton-3"):replace_unlock("microbiology-mk03", "microbiology-mk01")
+RECIPE("phytoplankton-2"):replace_unlock("microbiology-mk04", "microbiology-mk02")
+RECIPE("waste-water-void"):replace_unlock("fish-mk01", "electrolysis")
 
 RECIPE("fish-farm-mk01"):set_fields {ingredients = {
   {type = "item", name = "steel-plate", amount = 25},
@@ -176,11 +175,11 @@ RECIPE("fish-farm-mk01"):set_fields {ingredients = {
   {type = "item", name = "pump", amount = 1}
 }}
 RECIPE("breed-fish-egg-1"):replace_ingredient("fish", "fish", 8):replace_ingredient("phytoplankton", "phytoplankton", 30)
-RECIPE("fish-to-tin"):remove_unlock("molecular-decohesion-mk02"):add_unlock("mining-with-fluid"):set_fields {ignore_in_pypp = false}
+RECIPE("fish-to-tin"):replace_unlock("molecular-decohesion-mk02", "mining-with-fluid"):set_fields {ignore_in_pypp = false}
 
-RECIPE("fish-food-01"):remove_unlock("fish-mk01"):add_unlock("fish-mk02")
+RECIPE("fish-food-01"):replace_unlock("fish-mk01", "fish-mk02")
 
-RECIPE("saline-water"):remove_unlock("electronics"):add_unlock("fish-mk01")
+RECIPE("saline-water"):replace_unlock("electronics", "fish-mk01")
 
 RECIPE("full-render-fish"):replace_result("meat", "meat", 4)
 
@@ -204,11 +203,11 @@ RECIPE("breed-fish-simple"):remove_ingredient("small-lamp"):add_unlock("fish-mk0
 
 TECHNOLOGY("water-animals-mk01"):remove_pack("py-science-pack-1"):set_fields {prerequisites = {}}
 
-RECIPE("zogna-bacteria"):remove_unlock("microbiology-mk01"):add_unlock("biotech-mk01")
+RECIPE("zogna-bacteria"):replace_unlock("microbiology-mk01", "biotech-mk01")
 
 --Lead
 
-RECIPE("soot-to-lead"):remove_unlock("oil-sands"):add_unlock("solder-mk01")
+RECIPE("soot-to-lead"):replace_unlock("oil-sands", "solder-mk01")
 
 --Zinc
 
@@ -220,7 +219,7 @@ RECIPE("kicalk-codex"):remove_ingredient("electronic-circuit")
 
 RECIPE("kicalk-plantation-mk01"):remove_ingredient("intermetallics")
 
-RECIPE("kicalk-zn"):remove_unlock("phytomining-mk02"):add_unlock("phytomining")
+RECIPE("kicalk-zn"):replace_unlock("phytomining-mk02", "phytomining")
 
 RECIPE("zn-biomass-extraction"):remove_ingredient("steam"):add_ingredient {type = "fluid", name = "steam", amount = 100, minimum_temperature = 250}:remove_unlock("phytomining-mk02"):add_unlock("phytomining")
 

@@ -163,16 +163,26 @@ RECIPE("water-free"):set_result_amount("water", 450)
 ENTITY("offshore-pump"):set_fields{pumping_speed = 1.5}
 
 -- move faw and things to faw tech
-RECIPE("fawogae-plantation-mk01"):add_unlock("fawogae-mk00"):set_fields {enabled = false}
-RECIPE("spore-collector-mk01"):add_unlock("fawogae-mk00"):set_fields {enabled = false}
-RECIPE("fawogae-spore"):add_unlock("fawogae-mk00"):set_fields {enabled = false}
-RECIPE("coal-fawogae"):add_unlock("fawogae-mk00"):set_fields {enabled = false}
-RECIPE("offshore-pump"):add_unlock("fawogae-mk00"):set_fields {enabled = false}
-RECIPE("boiler"):add_unlock("fawogae-mk00"):set_fields {enabled = false}
-RECIPE("steam-engine"):add_unlock("fawogae-mk00"):set_fields {enabled = false}
+for _, recipe in pairs{
+  "fawogae-plantation-mk01",
+  "spore-collector-mk01",
+  "fawogae-spore",
+  "offshore-pump",
+  "stone-furnace",
+  "boiler",
+  "pipe",
+  "pipe-to-ground"
+} do
+  RECIPE(recipe):add_unlock("fawogae-mk00"):set_fields {enabled = false}
+end
+
+-- basic coal processing
+RECIPE("coal-fawogae"):add_unlock("coal-processing-0"):set_fields {enabled = false}
 
 -- move starter ash separation recipes to ash-separation and set trigger tech
 TECHNOLOGY("ash-separation"):set_fields {research_trigger = {type = "craft-item", item = "ash", count = 200}, prerequisites = {"atomizer-mk00"}}
+RECIPE("steam-engine"):add_unlock("ash-separation"):set_fields {enabled = false}
+RECIPE("small-electric-pole"):add_unlock("ash-separation"):set_fields {enabled = false}
 data.raw["technology"]["ash-separation"].unit = nil
 
 -- set automation science pack to require 10 copper plates
@@ -181,6 +191,9 @@ RECIPE("inductor1-2"):add_unlock("automation-science-pack"):set_fields {enabled 
 RECIPE("burner-mining-drill"):add_unlock("automation-science-pack"):set_fields {enabled = false}
 data.raw["technology"]["automation-science-pack"].prerequisites = {"ash-separation"}
 data.raw["technology"]["automation-science-pack"].unit = nil
+
+-- move mechanical inserter to automation
+RECIPE("mechanical-inserter"):add_unlock("automation"):set_fields {enabled = false}
 
 -- mk01 building updates
 RECIPE("flora-collector-mk01"):replace_ingredient("soil-extractor-mk01", "soil-extractor-mk00", 1)
