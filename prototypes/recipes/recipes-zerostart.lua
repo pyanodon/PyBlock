@@ -33,7 +33,7 @@ RECIPE{
   category = "handcrafting",
   results = {{type = "item", name = "fish", amount_min = 0, amount_max = 2}},
   allow_as_intermediate = false,
-  main_product = "soil"
+  main_product = "fish"
 }
 
 -- quicker dehydration
