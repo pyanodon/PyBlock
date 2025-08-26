@@ -31,7 +31,7 @@ TECHNOLOGY {
 TECHNOLOGY {
   type = "technology",
   name = "coal-processing-0",
-  icon = "__PyBlock__/graphics/technology/fawogae-mk00.png",
+  icon = "__PyBlock__/graphics/technology/coal-processing-0.png",
   icon_size = 128,
   order = "c-a",
   prerequisites = {"fawogae-mk00"},
