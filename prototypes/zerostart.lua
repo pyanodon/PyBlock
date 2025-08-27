@@ -30,7 +30,7 @@ ITEM{
   icon = "__PyBlock__/graphics/icons/charcoal.png",
   subgroup = 'py-items',
   order = 'charcoal',
-  stack_size = 100
+  stack_size = 200
 }
 
 -- change stone furnace to take bricks, and more of them
