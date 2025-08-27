@@ -35,6 +35,5 @@ require "make_copy" ("seaweed-crop"):set_fields{
     usage_priority = "secondary-input",
     emissions_per_minute = {pollution = -5},
   },
-  allowed_module_categories = {"seaweed"},
-  fixed_recipe = "seaweed-1"
+  allowed_module_categories = {"seaweed"}
 }
