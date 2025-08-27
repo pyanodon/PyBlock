@@ -29,6 +29,7 @@ ITEM {
 }
 
 require "make_copy" ("wpu"):set_fields{
+  crafting_categories = {"wpu", "wpu-handcrafting"},
   energy_source = {
     type = "fluid",
     effectivity = 1,
