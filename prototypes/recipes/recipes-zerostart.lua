@@ -71,13 +71,13 @@ RECIPE{
 RECIPE{
   name = "seaweed-rehydrate",
   enabled = false,
-  energy_required = 0.5,
-  category = "crafting-with-fluid",
+  energy_required = 5,
+  category = "seaweed",
   ingredients = {
-    { type = "item", name = "dry-seaweed", amount = 2 },
+    { type = "item", name = "dry-seaweed", amount = 8 },
     { type = "fluid", name = "water", amount = 100 }
   },
-  results = {{type = "item", name = "seaweed", amount = 2}},
+  results = {{type = "item", name = "seaweed", amount = 8}},
   allow_as_intermediate = false,
   main_product = "seaweed"
 }:add_unlock("seaweed-mk00")
