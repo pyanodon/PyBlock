@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.2.10
+Date: 2025-08-28
+  Changes:
+    - Marked Stellar Expedition as incompatible
+    - Reduced TBP cost of Uranyl Nitrate from 15 -> 10, increased crafting time from 15 -> 42
+---------------------------------------------------------------------------------------------------
 Version: 3.2.9
 Date: 2025-08-23
   Bugfixes:
