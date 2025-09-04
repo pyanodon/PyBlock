@@ -1,6 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.11
-Date: ?????
+Date: 2025-09-04
+  Changes:
+    - Buffed uranium phytomining to make MOX cells a viable option. I have no idea if MOX or uranium cells are better, but both are possible. Without candy shuffling at low science levels, uranium is far superior, but MOX is no longer a trap
+    - Buffed uranium enriched biomass to uranium ore recipe from 5:40 to 4:50
+    - Buffed uranium enriched biomass recipe times from 180:120:80, 120:100:80
+    - Buffed uranium enriched biomass recipe output from 10:20:80, 40:60:80
+    - Reduced bhoddos cost of urnaium enriched biomass from 8->5
   Locale:
     - Added Dutch locale courtesy of QatSquirrel on github
 ---------------------------------------------------------------------------------------------------
