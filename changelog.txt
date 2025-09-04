@@ -7,6 +7,8 @@ Date: 2025-09-04
     - Buffed uranium enriched biomass recipe times from 180:120:80, 120:100:80
     - Buffed uranium enriched biomass recipe output from 10:20:80, 40:60:80
     - Reduced bhoddos cost of urnaium enriched biomass from 8->5
+  Locale:
+    - Added Dutch locale courtesy of QatSquirrel on github
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.10
 Date: 2025-08-28
