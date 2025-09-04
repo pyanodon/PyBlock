@@ -50,6 +50,6 @@ RECIPE("sand-brick"):set_fields{
 }
 
 -- update seaweed to spoil if spoilage is enabled
-if feature_flags.spoiling then
+if feature_flags.spoiling and settings.startup["py-enable-decay"].value then
   ITEM("seaweed"):spoil("dry-seaweed", 60*60*60) -- spoil after an hour
 end
