@@ -4,7 +4,7 @@ RECIPE {
   energy_required = 0.5,
   enabled = false,
   ingredients = {
-    {type = "item", name = "washer-mk00",  amount = 1},
+    -- {type = "item", name = "washer-mk00",  amount = 1},
     {type = "item", name = "iron-plate",   amount = 15},
     {type = "item", name = "copper-plate", amount = 20},
     {type = "item", name = "pipe",         amount = 10}
