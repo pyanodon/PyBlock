@@ -14,8 +14,7 @@ for _, technology in pairs{
   "glass",
   "soil-washing",
   "mining-with-fluid",
-  "steel-processing",
-  "coal-processing-1"
+  "steel-processing"
 } do
   TECHNOLOGY(technology):set_fields{ignore_tech_cost_multiplier = false}
 end
