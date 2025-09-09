@@ -184,7 +184,7 @@ RECIPE("compost-plant-mk01"):add_ingredient {type = "item", name = "compost-plan
 
 RECIPE("slaughterhouse-mk01"):add_ingredient {type = "item", name = "slaughterhouse-mk00", amount = 1}
 
-RECIPE("destructive-distillation-column-mk01"):add_ingredient {type = "item", name = "destructive-distillation-column-mk00", amount = 1}
+RECIPE("ddc-mk01"):add_ingredient {type = "item", name = "ddc-mk00", amount = 1}
 
 -- increase construction costs of geothermal plant
 RECIPE("geothermal-plant-mk01"):add_ingredient {type = "item", name = "pipe", amount = 80}:add_ingredient {type = "item", name = "concrete", amount = 150}
