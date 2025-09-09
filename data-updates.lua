@@ -204,7 +204,7 @@ RECIPE("geothermal-plant-mk01"):add_ingredient{type = "item", name = "pipe", amo
 RECIPE("slaughterhouse-mk01"):add_ingredient{type = "item", name = "slaughterhouse-mk00", amount = 1}
 RECIPE("soil-extractor-mk01"):replace_unlock("automation-science-pack", "soil-washing"):replace_ingredient("burner-mining-drill", "soil-extractor-mk00", 1)
 RECIPE("solid-separator"):replace_unlock("ash-separation", "steel-processing"):add_ingredient{type = "item", name = "solid-separator-mk00", amount = 1}:add_ingredient_amount("small-parts-01", -20):add_ingredient_amount("steel-plate", -10):add_ingredient_amount("inductor1", -5)
-RECIPE("washer"):replace_ingredient("steam-engine", "washer-mk00", 1):replace_unlock("soil-washing", "electrolysis")
+-- RECIPE("washer"):replace_ingredient("steam-engine", "washer-mk00", 1):replace_unlock("soil-washing", "electrolysis")
 RECIPE("wpu-mk01"):replace_unlock("automation-science-pack", "wood-processing"):add_ingredient{type = "item", name = "inductor1", amount = 12} :add_ingredient{type = "item", name = "wpu-mk00", amount = 1}:set_fields {enabled = false}
 
 -- move check valve from fluid handling to assembly

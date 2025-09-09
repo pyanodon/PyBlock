@@ -64,7 +64,7 @@ TECHNOLOGY {
 --buildings--
 require("prototypes/buildings/atomizer-mk00")
 require("prototypes/buildings/ddc-mk00")
-require("prototypes/buildings/washer-mk00")
+-- require("prototypes/buildings/washer-mk00")
 require("prototypes/buildings/automated-screener-mk00")
 require("prototypes/buildings/compost-plant-mk00")
 require("prototypes/buildings/soil-extractor-mk00")
