@@ -1,5 +1,5 @@
-if settings.startup["pypp-dev-mode"].value == true and settings.startup["pypp-create-cache"].value == true then
-  for r, resource in pairs(data.raw.resource) do
+if settings.startup["pypp-tests"].value == true then
+  for _, resource in pairs(data.raw.resource) do
     resource.autoplace = nil
   end
 end
@@ -69,7 +69,7 @@ data.raw.technology["excavation-1"].prerequisites = nil
 
 table.insert(RECIPE("soot-separation").results, {type = "item", name = "ore-nickel", amount = 1, probability = 0.1})
 
-RECIPE("soot-separation"):set_fields {unlock_results = true, ignore_in_pypp = false}
+RECIPE("soot-separation").unlock_results = true
 
 RECIPE("mining-antimony"):remove_unlock("excavation-2"):add_unlock("excavation-1") --:set_fields{results = {{type = "item", name = "antimonium-ore", amount = 20}}}
 
@@ -161,7 +161,7 @@ RECIPE("soil"):remove_unlock("automation-science-pack"):set_fields {enabled = tr
 
 -- move starter ash separation recipes to ash-separation and set trigger tech
 TECHNOLOGY("ash-separation"):set_fields {research_trigger = {type = "craft-item", item = "ash", count = 200}, prerequisites = {"atomizer-mk00"}}
-RECIPE("copper-plate"):add_unlock("ash-separation"):set_fields {enabled = false}
+-- RECIPE("copper-plate"):add_unlock("ash-separation"):set_fields {enabled = false}
 RECIPE("inductor1-2"):add_unlock("ash-separation"):set_fields {enabled = false}
 data.raw["technology"]["ash-separation"].unit = nil
 
