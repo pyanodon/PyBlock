@@ -198,7 +198,7 @@ RECIPE("burner-inserter"):add_unlock("automation"):set_fields {enabled = false}
 -- mk01 building updates
 RECIPE("flora-collector-mk01"):replace_ingredient("soil-extractor-mk01", "soil-extractor-mk00", 1)
 RECIPE("compost-plant-mk01"):replace_unlock("compost", "fertilizer-mk01"):add_ingredient{type = "item", name = "compost-plant-mk00", amount = 1}
-RECIPE("ddc-mk01"):add_ingredient{type = "item", name = "ddc-mk00", amount = 1}
+RECIPE("distilator"):add_ingredient{type = "item", name = "ddc-mk00", amount = 1}
 RECIPE("fwf-mk01"):remove_ingredient("steam-engine"):add_ingredient{type = "item", name = "fwf-mk00", amount = 1}
 RECIPE("geothermal-plant-mk01"):add_ingredient{type = "item", name = "pipe", amount = 80}:add_ingredient{type = "item", name = "concrete", amount = 150}
 RECIPE("slaughterhouse-mk01"):add_ingredient{type = "item", name = "slaughterhouse-mk00", amount = 1}
