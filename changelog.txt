@@ -3,6 +3,8 @@ Version: 3.2.12
 Date: ????
   Changes:
     - Added DDC MK 00 to the DDC MK 01 recipe
+    - Autoteched the research tree. Things are definitely out of place.
+    - Moved Guar to logi sci to facilitate Phadai food production for rare earth ore
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.11
 Date: 2025-09-04
