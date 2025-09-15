@@ -91,7 +91,7 @@ RECIPE("fungal-substrate"):remove_unlock("mycology-mk02"):add_unlock("fawogae-mk
 RECIPE("dried-meat-01"):remove_unlock("rendering"):add_unlock("water-animals-mk01"):replace_result("dried-meat", "dried-meat", 8)
 
 -- move faw 2 up to logi
-TECHNOLOGY("fawogae-mk01"):remove_pack("py-science-pack-2"):add_pack("logistic-science-pack")
+TECHNOLOGY("fawogae-mk02"):remove_pack("py-science-pack-2"):add_pack("logistic-science-pack")
 
 -- if decay is on, re-add a less efficient meat recipe for simple but less efficient dried meat
 if settings.startup["py-enable-decay"] and mods["enable-all-feature-flags"] then
@@ -305,7 +305,7 @@ TECHNOLOGY("ethanol"):remove_pack("py-science-pack-2")
 
 TECHNOLOGY("sugar"):remove_pack("py-science-pack-2")
 
-RECIPE("phadai-food-01"):remove_ingredient("rennea-seeds"):remove_ingredient("casein")
+RECIPE("phadai-food-01"):remove_ingredient("rennea-seeds"):remove_ingredient("casein"):remove_ingredient("guar-gum")
 
 RECIPE("phadai-pup-1"):remove_ingredient("bedding")
 
