@@ -46,5 +46,56 @@ require "make_copy" ("wpu"):set_fields{
     },
     scale_fluid_usage = true,
   },
-  energy_usage = "350kW"
+  energy_usage = "150kW",
+  graphics_set = {
+    animation = {
+      layers = {
+        {
+          filename = "__pycoalprocessinggraphics__/graphics/entity/wpu/left.png",
+          width = 96,
+          height = 277,
+          line_length = 21,
+          frame_count = 130,
+          shift = {-1.5, -1.328},
+          animation_speed = 0.42
+        },
+        {
+          filename = "__pycoalprocessinggraphics__/graphics/entity/wpu/right.png",
+          width = 96,
+          height = 277,
+          line_length = 21,
+          frame_count = 130,
+          shift = {1.5, -1.328},
+          animation_speed = 0.42
+        },
+        {
+          filename = "__pycoalprocessinggraphics__/graphics/entity/wpu/left-mask.png",
+          width = 96,
+          height = 277,
+          line_length = 21,
+          frame_count = 130,
+          shift = {-1.5, -1.328},
+          animation_speed = 0.42,
+          tint = {r = 0.5, g = 0.5, b = 0.5, a = 1.0}
+        },
+        {
+          filename = "__pycoalprocessinggraphics__/graphics/entity/wpu/right-mask.png",
+          width = 96,
+          height = 277,
+          line_length = 21,
+          frame_count = 130,
+          shift = {1.5, -1.328},
+          animation_speed = 0.42,
+          tint = {r = 0.5, g = 0.5, b = 0.5, a = 1.0}
+        },
+      }
+    }
+  },
+  vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
+  working_sound = {
+    sound = {filename = "__pycoalprocessinggraphics__/sounds/wpu.ogg", volume = 1.0},
+    idle_sound = {filename = "__pycoalprocessinggraphics__/sounds/wpu.ogg", volume = 0.6},
+    apparent_volume = 2.5
+  },
+  next_upgrade = "wpu"
 }
