@@ -166,7 +166,7 @@ RECIPE("inductor1-2"):add_unlock("ash-separation"):set_fields {enabled = false}
 data.raw["technology"]["ash-separation"].unit = nil
 
 -- set automation science pack to require 10 copper plates
-TECHNOLOGY("automation-science-pack"):set_fields {research_trigger = {type = "craft-item", item = "copper-plate", count = 10}}
+TECHNOLOGY("automation-science-pack"):set_fields {research_trigger = {type = "craft-item", item = "copper-plate", count = 10}}:remove_prereq("steam-power")
 data.raw["technology"]["automation-science-pack"].prerequisites = {"ash-separation"}
 data.raw["technology"]["automation-science-pack"].unit = nil
 data.raw["technology"]["atomizer-mk00"].unit = nil
