@@ -26,6 +26,25 @@ ITEM {
   stack_size = 10
 }
 
+-- require "make_copy" ("solid-separator"):set_fields{
+--   energy_source = {
+--     type = "fluid",
+--     effectivity = 1,
+--     emissions = 1,
+--     fluid_box = {
+--       volume = 200,
+--       pipe_covers = pipecoverspictures(),
+--       pipe_connections = {
+--         { flow_direction = "input-output", direction = 12, position = { -2.95, 0 } },
+--         { flow_direction = "input-output", direction = 4, position = { 2.95, 0 } },
+--       },
+--       filter = "steam"
+--     },
+--     scale_fluid_usage = true
+--   },
+--   energy_usage = "800kW"
+-- }
+
 ENTITY {
   type = "assembling-machine",
   name = "solid-separator-mk00",
@@ -57,7 +76,7 @@ ENTITY {
     },
     scale_fluid_usage = true
   },
-  energy_usage = "800kW",
+  energy_usage = "1200kW",
   graphics_set = {
     animation = {
       layers = {
