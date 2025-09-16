@@ -323,6 +323,9 @@ TECHNOLOGY("phytomining-mk02"):remove_pack("chemical-science-pack")
 RECIPE("nb-biomass-extraction"):remove_unlock("phytomining-mk02"):add_unlock("guar")
 RECIPE("guar-nb"):remove_unlock("phytomining-mk02"):add_unlock("guar")
 
+-- move guar back to logi so they can be used for phadai
+TECHNOLOGY("guar"):remove_pack("py-science-pack-2"):remove_prereq("py-science-pack-2")
+
 --RARE EARTH ORE
 TECHNOLOGY("phadai"):remove_pack("py-science-pack-2"):remove_pack("chemical-science-pack"):remove_pack("py-science-pack-3"):set_fields {prerequisites = {}}
 
