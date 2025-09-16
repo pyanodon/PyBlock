@@ -1,12 +1,17 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.2.15
+Date: ????
+  Bugfixes:
+    - Fixed WPU MK 01 recipe not being adjusted
+---------------------------------------------------------------------------------------------------
 Version: 3.2.14
 Date: 2025-09-16
-  Changes:
+  Bugfixes:
     - Fixed game not loading because steam power is a required research for automation science pack
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.13
 Date: 2025-09-16
-  Changes:
+  Bugfixes:
     - Fixed some techs having a too-fast cycle time
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.12

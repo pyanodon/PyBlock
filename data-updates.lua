@@ -172,7 +172,7 @@ data.raw["technology"]["automation-science-pack"].unit = nil
 data.raw["technology"]["atomizer-mk00"].unit = nil
 
 -- burner/steam mk00 recipe adjustments
-RECIPE("wpu"):add_ingredient {type = "item", name = "inductor1", amount = 12}:add_ingredient {type = "item", name = "wpu-mk00", amount = 1}:remove_unlock("automation-science-pack"):add_unlock("wood-processing"):set_fields {enabled = false}
+RECIPE("wpu-mk01"):add_ingredient {type = "item", name = "inductor1", amount = 12}:add_ingredient {type = "item", name = "wpu-mk00", amount = 1}:remove_unlock("automation-science-pack"):add_unlock("wood-processing"):set_fields {enabled = false}
 
 RECIPE("soil-extractor-mk01"):remove_ingredient("burner-mining-drill"):add_ingredient {type = "item", name = "soil-extractor-mk00", amount = 1}
 
