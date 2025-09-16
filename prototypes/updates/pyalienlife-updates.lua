@@ -271,30 +271,33 @@ RECIPE("cadaveric-pb"):remove_unlock("phytomining"):add_unlock("phytomining-mk02
 RECIPE("s-biomass-extraction"):remove_unlock("phytomining"):add_unlock("phytomining-mk02")
 
 -- Bhoddos to uranium
-RECIPE("ur-biomass-extraction"):replace_result("uranium-ore", "uranium-ore", 40):replace_ingredient("ur-biomass", "ur-biomass", 5):set_fields {energy_required = 80}:remove_unlock("phytomining-mk03"):add_unlock("phytomining-mk02")
+TECHNOLOGY("chemical-science-pack"):add_prereq("bhoddos")
+RECIPE("ur-biomass-extraction"):replace_result("uranium-ore", "uranium-ore", 50):replace_ingredient("ur-biomass", "ur-biomass", 4):set_fields {energy_required = 80}:remove_unlock("phytomining-mk03"):add_unlock("phytomining-mk02")
 RECIPE("bhodos-ur"):set_fields {
   ingredients = {
     {type = "fluid", name = "pressured-steam", amount = 500, minimum_temperature = 2000},
-    {type = "item",  name = "bhoddos",         amount = 8}
+    {type = "item",  name = "bhoddos",         amount = 5}
   },
-  energy_required = 180
+  results = {{type = "item", name = "ur-biomass", amount = 40}},
+  energy_required = 120
 }:remove_unlock("phytomining-mk03"):add_unlock("phytomining-mk02")
 RECIPE("bhodos-ur-2"):set_fields {
   ingredients = {
     {type = "fluid", name = "pressured-steam", amount = 500, minimum_temperature = 2000},
     {type = "fluid", name = "chelator",        amount = 50},
-    {type = "item",  name = "bhoddos",         amount = 8}
+    {type = "item",  name = "bhoddos",         amount = 5}
   },
-  energy_required = 120
+  results = {{type = "item", name = "ur-biomass", amount = 60}},
+  energy_required = 100
 }:remove_unlock("phytomining-mk03"):add_unlock("phytomining-mk02")
 RECIPE("bhodos-ur-3"):set_fields {
   ingredients = {
     {type = "fluid", name = "pressured-steam", amount = 500, minimum_temperature = 2000},
     {type = "fluid", name = "chelator",        amount = 50},
-    {type = "item",  name = "bhoddos",         amount = 8},
+    {type = "item",  name = "bhoddos",         amount = 5},
     {type = "item",  name = "hmas",            amount = 1}
   },
-  -- energy_required = 160
+  energy_required = 80
 }
 
 --Vrauks
@@ -319,6 +322,9 @@ RECIPE("yotoi-seed-to-chromium"):remove_unlock("molecular-decohesion-mk02"):add_
 TECHNOLOGY("phytomining-mk02"):remove_pack("chemical-science-pack")
 RECIPE("nb-biomass-extraction"):remove_unlock("phytomining-mk02"):add_unlock("guar")
 RECIPE("guar-nb"):remove_unlock("phytomining-mk02"):add_unlock("guar")
+
+-- move guar back to logi so they can be used for phadai
+TECHNOLOGY("guar"):remove_pack("py-science-pack-2"):remove_prereq("py-science-pack-2")
 
 --RARE EARTH ORE
 TECHNOLOGY("phadai"):remove_pack("py-science-pack-2"):remove_pack("chemical-science-pack"):remove_pack("py-science-pack-3"):set_fields {prerequisites = {}}

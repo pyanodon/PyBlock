@@ -1,37 +1,6 @@
 ---------------------------------------------------------------------------------------------------
-Version: 3.3.0
-Date: ???
-  Features:
-    - Added foraging (handcrafting) recipes for soil, seaweed, logs, and fawoage spores
-    - Wood (not logs) burns into charcoal
-    - Seaweed spoils into dry seaweed if spoilage is enabled, or can be cooked in a furnace to speed up the process (or if spoilage is disabled)
-    - Dry seaweed can be rehydrated by hand or in an assembling machine
-    - Dry seaweed, soil, and charcoal can be combined into stone bricks
-    - Slowwood Forestry Mk 00 (yes, the classic name can be disabled you heathen)
-    - Moved certain wood processing recipes to new Wood Processing 0 tech to facilitate the Slowwood Forestry MK 00
-    - Sawweed Crop Mk 00 (this name too)
-    - LandBlock preset (normal terrain gen, no resources)
-  Changes:
-    - Nerfed offshore pump from 1200/s -> 90/s
-    - Buffed pumpjack water pumping from 300/s -> 450/s (increases with machine level)
-    - Moved washer mk01 to electrolysis and mk00 to soil washing
-    - Increased energy cost of most mk00 machines: atomizer, automated screener, compost plant, ddc, solid separator, washer, wpu, and shunt inserter
-    - Changed native flora, sap, and moss cultivation recipes to be higher probability but more expensive
-    - Moved sap cultivation to sap tech
-    - Removed the 'ignore_tech_cost_multiplier' flag from unrelated technologies
-    - Removed stone and stone furnace from the starting inventory
-    - Reduced seaweed and driftwood generation probability
-    - Updated landfill recipe to replace sand with soil
-    - Moved solid separator mk01 to steel processing
-    - Reduced Laughterhouse Mk 00 crafting speed by 50%
-    - If spoilage is enabled, seaweed spoils into dry seaweed after two hours. This includes when in module slots of seaweed crop farms. Use the "Module Inserter" mod to interact with the module slots
-    - Added optional (recommended) dependency on Module Inserter for when spoilage is enabled.
-    - Changed the stone furnace recipe to take 8 stone bricks instead of 5 stone
-    - Changed bootstrapping fawogae recipe to only require 2 wood instead of an empty planter box
-    - Nerfed rich clay to bricks, but reduced the stone useage per brick (assuming crushing stone -> gravel -> sand) and added a charcoal component to the recipe. And moved it to the HPF
----------------------------------------------------------------------------------------------------
 Version: 3.2.4
-Date: ???
+Date: 2025-06-01
   Changes:
     - Buffed fertilized and agressive flora cultivation to be better than the previous recipe when considering the flora cost of manure
     - Buffed Thickened Coal Fines to Carbon Dust ratio from 1000:12 to 200:8. Resolves https://github.com/pyanodon/pybugreports/issues/976
@@ -358,9 +327,9 @@ Date: 2023-9-15
     - Moved saline to salt evap to evaporation tech
     - Added thumbnail. credit: Burr on discord
   Cadavaric arum:
-      - Removed botanical nursury from recipe
-      - Reduced steel plate requirement from 60 to 5
-      - added pipes(4), iron plates(5), and soil(20) as ingredients
+    - Removed botanical nursury from recipe
+    - Reduced steel plate requirement from 60 to 5
+    - added pipes(4), iron plates(5), and soil(20) as ingredients
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.2
 Date: 2023-9-4
