@@ -106,12 +106,12 @@ TECHNOLOGY("cadaveric-arum-mk02"):remove_pack("chemical-science-pack")
 
 -- move fawogae with manure up (even though it doesnt use manure anymore)
 TECHNOLOGY("fawogae-mk01"):remove_pack("py-science-pack-1"):set_fields {prerequisites = {}}
-RECIPE("fawogae-with-manure"):replace_unlock("fawogae-mk02", "fawogae-mk01"):replace_result("fawogae", "fawogae", 18)
+RECIPE("fawogae-2"):replace_unlock("fawogae-mk02", "fawogae-mk01"):replace_result("fawogae", "fawogae", 18)
 RECIPE("fungal-substrate"):replace_unlock("mycology-mk02", "fawogae-mk01")
 RECIPE("dried-meat-01"):replace_unlock("rendering", "water-animals-mk01"):replace_result("dried-meat", "dried-meat", 8)
 
 -- move faw 2 up to logi
-TECHNOLOGY("fawogae-mk01"):remove_pack("py-science-pack-2"):add_pack("automation-science-pack")
+TECHNOLOGY("fawogae-mk02"):remove_pack("py-science-pack-2"):add_pack("logistic-science-pack")
 
 -- if decay is on, re-add a less efficient meat recipe for simple but less efficient dried meat
 if settings.startup["py-enable-decay"] and feature_flags.spoiling then

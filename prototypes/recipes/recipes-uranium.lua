@@ -178,10 +178,10 @@ RECIPE {
     name = "uranyl-nitrate",
     category = "scrubber",
     enabled = false,
-    energy_required = 15,
+    energy_required = 42,
     ingredients = {
         {type = "item", name = "nylon-rope-uranyl-soaked", amount = 4},
-        {type = "item", name = "tbp", amount = 15},
+        {type = "item", name = "tbp", amount = 10},
     },
     results = {
         {type = "item", name = "uranyl-nitrate", amount = 10, probability = .6},
