@@ -1,5 +1,5 @@
-if settings.startup["pypp-dev-mode"].value == true and settings.startup["pypp-create-cache"].value == true then
-  for r, resource in pairs(data.raw.resource) do
+if settings.startup["pypp-tests"].value == true then
+  for _, resource in pairs(data.raw.resource) do
     resource.autoplace = nil
   end
 end
