@@ -1,8 +1,8 @@
 TECHNOLOGY {
   type = "technology",
   name = "atomizer-mk00",
-  icon = "__PyBlock__/graphics/icons/atomizer-mk00.png",
-  icon_size = 64,
+  icon = "__PyBlock__/graphics/technology/molecular-decohesion-mk00.png",
+  icon_size = 128,
   order = "c-a",
   prerequisites = {"coal-processing-0"},
   effects = {},
