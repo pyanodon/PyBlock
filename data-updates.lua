@@ -144,6 +144,7 @@ for o, ore in pairs(ores) do
   end
 end
 
+
 RECIPE("soot-to-copper"):add_unlock("ash-separation")
 RECIPE("soot-to-aluminium"):add_unlock("mining-with-fluid")
 
