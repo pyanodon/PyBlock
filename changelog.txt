@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.2.14
+Date: 2025-09-16
+  Changes:
+    - Fixed game not loading because steam power is a required research for automation science pack
+---------------------------------------------------------------------------------------------------
 Version: 3.2.13
 Date: 2025-09-16
   Changes:
