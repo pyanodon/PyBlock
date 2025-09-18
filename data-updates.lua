@@ -209,13 +209,16 @@ RECIPE("solid-separator"):replace_unlock("ash-separation", "steel-processing"):a
 RECIPE("wpu-mk01"):replace_unlock("automation-science-pack", "wood-processing"):add_ingredient{type = "item", name = "inductor1", amount = 12} :add_ingredient{type = "item", name = "wpu-mk00", amount = 1}:set_fields {enabled = false}
 
 -- move check valve from fluid handling to assembly
-RECIPE("py-check-valve"):remove_unlock("fluid-handling"):add_unlock("automation")
+RECIPE("py-check-valve"):remove_unlock("fluid-handling"):add_unlock("steel-processing")
 
 RECIPE("earth-generic-sample"):remove_unlock("xenobiology"):add_unlock("biotech-mk01")
 
 RECIPE("data-array"):remove_ingredient("titanium-plate")
 
 RECIPE("molten-zinc-01"):replace_ingredient("heavy-oil", "heavy-oil", 40)
+
+-- make kerogen processing actually require kerogen
+TECHNOLOGY("kerogen"):set_fields {prerequisites = {"moss-mk01"}}
 
 -- create pumping productivity techs
 for i = 1, 12 do
