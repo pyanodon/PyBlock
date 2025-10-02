@@ -63,7 +63,10 @@ for _, recipe in pairs{
   "landfill-sand-3",
   "landfill"
 } do
-  RECIPE(recipe).ingredients = {{type = "item", name = "soil", amount = 180}}
+  RECIPE(recipe):set_fields{
+    ingredients = {{type = "item", name = "soil", amount = 180}},
+    energy_required = 15,
+  }
 end
 
 data.raw.technology["excavation-1"].unit.ingredients = {{"automation-science-pack", 1}, {"py-science-pack-1", 1}}
