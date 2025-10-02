@@ -102,7 +102,7 @@ RECIPE{
   energy_required = 5,
   category = "smelting",
   ingredients = {{type = "item", name = "wood", amount = 3}},
-  results = {{type = "item", name = "charcoal", amount_min = 0, amount_max = 5, probability = 0.75}},
+  results = {{type = "item", name = "charcoal", amount_min = 0, amount_max = 6}},
   subgroup = 'py-items',
   order = 'charcoal',
   allow_as_intermediate = false,

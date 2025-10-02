@@ -49,14 +49,19 @@ RECIPE("sand-brick"):set_fields{
   crafting_category = "hpf"
 }
 
--- update seaweed to spoil if spoilage is enabled
-if feature_flags.spoiling and settings.startup["py-enable-decay"].value then
-  ITEM("seaweed"):spoil("dry-seaweed", 60*60*60) -- spoil after an hour
-end
-
 -- copy handcrafting recipes with a bit of prod
 for recipe_name, modifications in pairs{
   ["ash-separation"] = {ingredients = {"iron-ore", "copper-ore"}, boost = 1.5}
 } do
   RECIPE(recipe_name)
+end
+
+-- update seaweed to spoil if spoilage is enabled
+if feature_flags.spoiling and settings.startup["py-enable-decay"].value then
+  ITEM("seaweed"):spoil("dry-seaweed", 60*60*60) -- spoil after an hour
+  for _, recipe in pairs{
+    ""
+  } do
+    -- replace charcoal with hot coals in certain recipes
+  end
 end
