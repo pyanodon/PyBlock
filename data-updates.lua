@@ -1,4 +1,4 @@
-if settings.startup["pypp-tests"].value == true then
+if settings.startup["pypp-tests"].value == true or mods["autotech"] then
   for _, resource in pairs(data.raw.resource) do
     resource.autoplace = nil
   end
