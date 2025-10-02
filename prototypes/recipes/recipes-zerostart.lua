@@ -106,6 +106,7 @@ RECIPE{
   subgroup = 'py-items',
   order = 'charcoal',
   allow_as_intermediate = false,
+  allow_productivity = true,
   main_product = "charcoal"
 }:add_unlock("wood-processing-0")
 
