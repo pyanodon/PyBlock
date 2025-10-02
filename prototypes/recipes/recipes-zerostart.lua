@@ -38,7 +38,7 @@ RECIPE{
 
 -- quicker dehydration
 RECIPE{
-  name = "dry-seaweed",
+  name = "manual-dry-seaweed",
   enabled = true,
   energy_required = 0.5,
   category = "handcrafting",
@@ -48,13 +48,14 @@ RECIPE{
   main_product = "dry-seaweed"
 }
 RECIPE{
-  name = "bulk-dry-seaweed",
+  name = "dry-seaweed",
   enabled = false,
   energy_required = 5,
   category = "smelting",
   ingredients = {{type = "item", name = "seaweed", amount = 4}},
   results = {{type = "item", name = "dry-seaweed", amount_min = 0, amount_max = 4, probability = 0.9}},
   allow_as_intermediate = false,
+  allow_productivity = true,
   main_product = "dry-seaweed"
 }:add_unlock("seaweed-mk00")
 -- rehydration and bulk rehydration
@@ -96,12 +97,12 @@ RECIPE{
   main_product = "charcoal"
 }
 RECIPE{
-  name = "bulk-charcoal",
+  name = "charcoal",
   enabled = false,
   energy_required = 5,
   category = "smelting",
   ingredients = {{type = "item", name = "wood", amount = 3}},
-  results = {{type = "item", name = "charcoal", amount_min = 0, amount_max = 5}},
+  results = {{type = "item", name = "charcoal", amount_min = 0, amount_max = 5, probability = 0.75}},
   subgroup = 'py-items',
   order = 'charcoal',
   allow_as_intermediate = false,
