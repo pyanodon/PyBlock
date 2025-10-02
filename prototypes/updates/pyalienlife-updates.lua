@@ -158,13 +158,11 @@ TECHNOLOGY("molecular-decohesion"):set_fields {prerequisites = {}}
 
 TECHNOLOGY("fish-mk01"):remove_pack("py-science-pack-1"):set_fields {prerequisites = {}}
 
-TECHNOLOGY("tin-mk01"):remove_pack("py-science-pack-1")
-
 TECHNOLOGY("microbiology-mk01"):remove_pack("py-science-pack-1"):set_fields {prerequisites = {}}
 RECIPE("plankton-farm"):remove_ingredient("intermetallics"):remove_ingredient("storage-tank"):remove_ingredient("electronic-circuit")
 RECIPE("jerky-to-phytoplankton"):replace_ingredient("dried-meat", "dried-meat", 1):replace_result("phytoplankton", "phytoplankton", 20)
 RECIPE("phytoplankton"):replace_unlock("microbiology-mk01", "tin-mk01")
-RECIPE("phytoplankton-3"):replace_unlock("microbiology-mk03", "microbiology-mk01")
+RECIPE("phytoplankton-3"):replace_unlock("microbiology-mk03", "microbiology-mk01"):multiply_ingredient_amount("flue-gas", 3)
 RECIPE("phytoplankton-2"):replace_unlock("microbiology-mk04", "microbiology-mk02")
 RECIPE("waste-water-void"):replace_unlock("fish-mk01", "electrolysis")
 

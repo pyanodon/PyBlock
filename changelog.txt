@@ -12,6 +12,8 @@ Date: ???
     - Sawweed Crop Mk 00 (this name too)
     - LandBlock preset (normal terrain gen, no resources)
   Changes:
+    - Increased phytoplankton from flue gas cost
+    - Moved tin mk01 back to py1, now you need to use jerky or flue gas
     - Nerfed offshore pump from 1200/s -> 90/s
     - Buffed pumpjack water pumping from 300/s -> 450/s (increases with machine level)
     - Moved washer mk01 to electrolysis and mk00 to soil washing
