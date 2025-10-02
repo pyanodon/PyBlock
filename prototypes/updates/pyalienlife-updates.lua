@@ -235,7 +235,7 @@ RECIPE("yaedols-mk02"):replace_ingredient("fungal-substrate-03", "fungal-substra
 
 TECHNOLOGY("phytomining"):remove_pack("py-science-pack-1"):remove_pack("logistic-science-pack"):remove_pack("py-science-pack-2"):set_fields {prerequisites = {}}
 
-TECHNOLOGY("compost"):remove_pack("py-science-pack-1"):set_fields {prerequisites = {}}
+TECHNOLOGY("compost"):remove_pack("py-science-pack-1"):set_fields {prerequisites = {"steel-processing"}}
 
 RECIPE("yaedols-culture-mk01"):remove_ingredient("intermetallics"):remove_ingredient("titanium-plate"):replace_ingredient("electronic-circuit", "electronic-circuit", 25)
 
