@@ -158,7 +158,7 @@ TECHNOLOGY("molecular-decohesion"):set_fields {prerequisites = {}}
 
 TECHNOLOGY("fish-mk01"):remove_pack("py-science-pack-1"):set_fields {prerequisites = {}}
 
-TECHNOLOGY("tin-mk01"):remove_pack("py-science-pack-1"):set_fields {prerequisites = {"copper-mk01"}}
+TECHNOLOGY("tin-mk01"):remove_pack("py-science-pack-1")
 
 TECHNOLOGY("microbiology-mk01"):remove_pack("py-science-pack-1"):set_fields {prerequisites = {}}
 RECIPE("plankton-farm"):remove_ingredient("intermetallics"):remove_ingredient("storage-tank"):remove_ingredient("electronic-circuit")
