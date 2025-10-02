@@ -2,6 +2,10 @@ if settings.startup["pypp-tests"].value == true or mods["autotech"] then
   for _, resource in pairs(data.raw.resource) do
     resource.autoplace = nil
   end
+  -- so the game loads
+  for _, planet in pairs(data.raw.planet) do
+    planet.map_gen_settings.autoplace_settings.entity.settings = {}
+  end
 end
 
 require("prototypes/updates/pycoalprocessing-updates")
