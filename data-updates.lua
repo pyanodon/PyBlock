@@ -217,9 +217,6 @@ RECIPE("data-array"):remove_ingredient("titanium-plate")
 
 RECIPE("molten-zinc-01"):replace_ingredient("heavy-oil", "heavy-oil", 40)
 
--- make kerogen processing actually require kerogen
-TECHNOLOGY("kerogen"):set_fields {prerequisites = {"moss-mk01"}}
-
 -- create pumping productivity techs
 for i = 1, 12 do
   local tech = table.deepcopy(data.raw.technology["mining-productivity-" .. i])
