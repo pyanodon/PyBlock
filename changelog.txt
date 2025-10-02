@@ -2,6 +2,7 @@
 Version: 3.2.15
 Date: ????
   Bugfixes:
+    - Added Polish locale courtesy of @S3BA-pl on Github
     - Fixed WPU MK 01 recipe not being adjusted
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.14
