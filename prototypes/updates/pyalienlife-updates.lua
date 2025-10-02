@@ -97,7 +97,7 @@ RECIPE("cadaveric-arum-1"):replace_result("cadaveric-arum", "cadaveric-arum", 7)
 RECIPE("cadaveric-arum-1-soil"):replace_result("cadaveric-arum", "cadaveric-arum", 7):set_fields {energy_required = 126} -- TURD
 RECIPE("cadaveric-arum-1-msa"):replace_result("cadaveric-arum", "cadaveric-arum", 7):set_fields {energy_required = 110}  -- TURD
 RECIPE("stone-wool"):replace_unlock("zipir", "cadaveric-arum")
-RECIPE("stone-wool2"):replace_unlock("zipir", "cadaveric-arum").autotech_ignore = true
+RECIPE("stone-wool2"):replace_unlock("zipir", "cadaveric-arum")
 RECIPE("cadaveric-arum-mk01"):remove_ingredient("hydrocyclone-mk01"):remove_ingredient("electronic-circuit"):remove_ingredient("plastic-bar"):remove_ingredient("intermetallics"):remove_ingredient("steel-plate"):add_ingredient {type = "item", name = "steel-plate", amount = 5}:add_ingredient {type = "item", name = "pipe", amount = 4}:add_ingredient {type = "item", name = "soil", amount = 20}:remove_ingredient("botanical-nursery")
 
 -- move cadaveric 2 up to logi
@@ -163,7 +163,7 @@ TECHNOLOGY("tin-mk01"):remove_pack("py-science-pack-1")
 TECHNOLOGY("microbiology-mk01"):remove_pack("py-science-pack-1"):set_fields {prerequisites = {}}
 RECIPE("plankton-farm"):remove_ingredient("intermetallics"):remove_ingredient("storage-tank"):remove_ingredient("electronic-circuit")
 RECIPE("jerky-to-phytoplankton"):replace_ingredient("dried-meat", "dried-meat", 1):replace_result("phytoplankton", "phytoplankton", 20)
-RECIPE("phytoplankton"):replace_unlock("microbiology-mk01", "tin-mk01").autotech_ignore = true
+RECIPE("phytoplankton"):replace_unlock("microbiology-mk01", "tin-mk01")
 RECIPE("phytoplankton-3"):replace_unlock("microbiology-mk03", "microbiology-mk01")
 RECIPE("phytoplankton-2"):replace_unlock("microbiology-mk04", "microbiology-mk02")
 RECIPE("waste-water-void"):replace_unlock("fish-mk01", "electrolysis")
