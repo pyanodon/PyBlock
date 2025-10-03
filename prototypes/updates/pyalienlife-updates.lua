@@ -1,8 +1,19 @@
 -- fawogae for iron
--- reduce cost of buildings
-RECIPE("spore-collector-mk01"):remove_ingredient("gasifier"):remove_ingredient("steam-engine"):remove_ingredient("electronic-circuit"):remove_ingredient("steel-plate"):remove_ingredient("intermetallics"):set_fields {enabled = true}:remove_unlock("mycology-mk01")
-
-RECIPE("fawogae-plantation-mk01"):remove_ingredient("electronic-circuit"):remove_ingredient("tinned-cable"):remove_ingredient("intermetallics"):set_fields {enabled = true}:remove_unlock("fawogae-mk01"):set_ingredient_amount("wood", 10):set_ingredient_amount("iron-plate", 5):set_ingredient_amount("pipe", 2):set_ingredient_amount("copper-plate", 5)
+-- adjust mk01 recipes
+RECIPE("spore-collector-mk01"):replace_unlock("mycology-mk01", "fawogae-mk01").ingredients = {
+  {type = "item", name = "stone-brick", amount = 50},
+  {type = "item", name = "steam-engine", amount = 2},
+  {type = "item", name = "iron-gear-wheel", amount = 10},
+  {type = "item", name = "steel-plate", amount = 20},
+  {type = "item", name = "iron-plate", amount = 40}
+}
+RECIPE("fawogae-plantation-mk01").ingredients = {
+  {type = "item", name = "pipe", amount = 10},
+  {type = "item", name = "wood", amount = 50},
+  {type = "item", name = "soil", amount = 100},
+  {type = "item", name = "iron-plate", amount = 20},
+  {type = "item", name = "stone-brick", amount = 10}
+}
 
 RECIPE("fawogae-spore"):replace_unlock("fawogae-mk01", "fawogae-mk00"):set_fields {energy_required = 1}
 RECIPE("fawogae-1"):replace_unlock("fawogae-mk01", "fawogae-mk00")
@@ -32,50 +43,13 @@ RECIPE("fawogae-codex"):replace_unlock("fawogae-mk01", "yaedols")
 
 RECIPE("earth-shroom-sample"):replace_unlock("fawogae-mk01", "yaedols")
 
-RECIPE("fawogae-to-iron"):replace_unlock("molecular-decohesion", "atomizer-mk00"):replace_ingredient("fawogae", "fawogae", 20):replace_result("iron-ore", "iron-ore", 18):set_fields {energy_required = 15}
-
--- reduce power cost
-ENTITY("fawogae-plantation-mk01"):set_fields{
-  energy_usage = "30kW",
-  energy_source = {
-    type = "fluid",
-    fluid_box = {
-      volume = 10,
-      pipe_covers = py.pipe_covers(false, true, true, true),
-      pipe_picture = py.pipe_pictures("assembling-machine-3", {0, 0.22}, {0.02, -1}, nil, nil, pipes),
-      pipe_connections = {
-        {flow_direction = "input-output", position = {-2.5, -0.5}, direction = defines.direction.west},
-        {flow_direction = "input-output", position = {2.5, 0.5}, direction = defines.direction.east}
-      },
-      filter = "steam"
-    },
-    minimum_temperature = 250,
-    scale_fluid_usage = true
-  }
-}
-ENTITY("spore-collector-mk01"):set_fields{
-  energy_usage = "12kW",
-  energy_source = {
-    type = "fluid",
-    fluid_box = {
-      volume = 10,
-      pipe_covers = pipecoverspictures(),
-      pipe_connections = {
-        {flow_direction = "input-output",   position = {-3, 0}, direction = 12},
-        {flow_direction = "input-output", position = {3, 0},  direction = 4},
-      },
-      filter = "steam",
-    },
-    minimum_temperature = 250,
-    scale_fluid_usage = true
-  }
-}
+RECIPE("fawogae-to-iron"):replace_unlock("molecular-decohesion", "atomizer-mk00"):set_ingredient_amount("fawogae", 20):set_result_amount("iron-ore", 18):set_fields {energy_required = 15}
 
 -- fwf updates
 RECIPE("wood-seeds"):replace_unlock("wood-processing", "wood-processing-0")
 
 -- fawogae to raw coal
-RECIPE("coal-fawogae"):set_fields {enabled = true}:remove_unlock("fawogae-mk01"):set_fields {category = "distilator"}:replace_result("raw-coal", "raw-coal", 5)
+RECIPE("coal-fawogae"):replace_unlock("fawogae-mk01", "coal-processing-mk00"):set_fields {category = "distilator"}:set_result_amount("raw-coal", 5)
 
 -- seaweed
 RECIPE("seaweed-crop-mk01"):remove_ingredient("pipe"):remove_ingredient("stone-brick"):remove_ingredient("steam-engine"):add_ingredient({type = "item", name = "seaweed-crop-mk00", amount = 1})

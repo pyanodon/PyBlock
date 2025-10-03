@@ -169,8 +169,6 @@ ENTITY("offshore-pump"):set_fields{pumping_speed = 1.5}
 
 -- move faw and things to faw tech
 for _, recipe in pairs{
-  "fawogae-plantation-mk01",
-  "spore-collector-mk01",
   "fawogae-spore",
   "offshore-pump",
   "stone-furnace",
@@ -180,9 +178,6 @@ for _, recipe in pairs{
 } do
   RECIPE(recipe):add_unlock("fawogae-mk00"):set_fields {enabled = false}
 end
-
--- basic coal processing
-RECIPE("coal-fawogae"):add_unlock("coal-processing-0"):set_fields {enabled = false}
 
 -- move starter ash separation recipes to ash-separation and set trigger tech
 TECHNOLOGY("ash-separation"):set_fields {research_trigger = {type = "craft-item", item = "ash", count = 200}, prerequisites = {"atomizer-mk00"}}
@@ -205,6 +200,8 @@ RECIPE("flora-collector-mk01"):replace_ingredient("soil-extractor-mk01", "soil-e
 RECIPE("compost-plant-mk01"):replace_unlock("compost", "fertilizer-mk01"):add_ingredient{type = "item", name = "compost-plant-mk00", amount = 1}
 RECIPE("distilator"):add_ingredient{type = "item", name = "ddc-mk00", amount = 1}
 RECIPE("fwf-mk01"):remove_ingredient("steam-engine"):add_ingredient{type = "item", name = "fwf-mk00", amount = 1}
+-- RECIPE("fawogae-plantation-mk01"):remove_ingredient("steam-engine"):add_ingredient{type = "item", name = "fawogae-plantation-mk00", amount = 1}
+-- RECIPE("spore-collector-mk01"):remove_ingredient("steam-engine"):add_ingredient{type = "item", name = "spore-collector-mk00", amount = 1}
 RECIPE("geothermal-plant-mk01"):add_ingredient{type = "item", name = "pipe", amount = 80}:add_ingredient{type = "item", name = "concrete", amount = 150}
 RECIPE("slaughterhouse-mk01"):add_ingredient{type = "item", name = "slaughterhouse-mk00", amount = 1}
 RECIPE("soil-extractor-mk01"):replace_unlock("automation-science-pack", "soil-washing"):replace_ingredient("burner-mining-drill", "soil-extractor-mk00", 1)

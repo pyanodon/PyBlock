@@ -77,6 +77,8 @@ require("prototypes/buildings/shunt-loader")
 require("prototypes/buildings/shunt-inserter")
 require("prototypes/buildings/seaweed-crop-mk00")
 require("prototypes/buildings/fwf-mk00")
+require("prototypes/buildings/fawogae-plantation-mk00")
+require("prototypes/buildings/spore-collector-mk00")
 
 --UNUSED
 --require("prototypes/buildings/fish-farm-mk00")
