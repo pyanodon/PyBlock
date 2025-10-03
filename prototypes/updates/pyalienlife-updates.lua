@@ -129,10 +129,10 @@ TECHNOLOGY("fawogae-mk02"):remove_pack("py-science-pack-2"):add_pack("logistic-s
 -- end
 
 -- double faw speeds (you're welcome skosko)
-data.raw["assembling-machine"]["fawogae-plantation-mk01"].crafting_speed = 2 * data.raw["assembling-machine"]["fawogae-plantation-mk01"].crafting_speed
-data.raw["assembling-machine"]["fawogae-plantation-mk02"].crafting_speed = 2 * data.raw["assembling-machine"]["fawogae-plantation-mk02"].crafting_speed
-data.raw["assembling-machine"]["fawogae-plantation-mk03"].crafting_speed = 2 * data.raw["assembling-machine"]["fawogae-plantation-mk03"].crafting_speed
-data.raw["assembling-machine"]["fawogae-plantation-mk04"].crafting_speed = 2 * data.raw["assembling-machine"]["fawogae-plantation-mk04"].crafting_speed
+data.raw["assembling-machine"]["fawogae-plantation-mk01"].crafting_speed = 4 * data.raw["assembling-machine"]["fawogae-plantation-mk01"].crafting_speed
+data.raw["assembling-machine"]["fawogae-plantation-mk02"].crafting_speed = 4 * data.raw["assembling-machine"]["fawogae-plantation-mk02"].crafting_speed
+data.raw["assembling-machine"]["fawogae-plantation-mk03"].crafting_speed = 4 * data.raw["assembling-machine"]["fawogae-plantation-mk03"].crafting_speed
+data.raw["assembling-machine"]["fawogae-plantation-mk04"].crafting_speed = 4 * data.raw["assembling-machine"]["fawogae-plantation-mk04"].crafting_speed
 
 --moss to kerogen
 RECIPE {
