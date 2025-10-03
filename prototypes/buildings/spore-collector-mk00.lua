@@ -26,7 +26,7 @@ ITEM {
 }
 
 require "make_copy" ("spore-collector"):set_fields{
-  energy_usage = "12kW",
+  energy_usage = "65kW",
   energy_source = {
     type = "fluid",
     fluid_box = {
