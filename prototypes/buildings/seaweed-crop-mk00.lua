@@ -28,7 +28,6 @@ ITEM {
 
 require "make_copy" ("seaweed-crop"):set_fields{
   crafting_speed = data.raw["assembling-machine"]["seaweed-crop-mk01"].crafting_speed * 0.2,
-  module_slots = data.raw["assembling-machine"]["seaweed-crop-mk01"].module_slots,
   energy_usage = "150kW",
   energy_source = {
     type = "void",

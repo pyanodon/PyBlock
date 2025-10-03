@@ -113,21 +113,6 @@ RECIPE("dried-meat-01"):replace_unlock("rendering", "water-animals-mk01"):replac
 -- move faw 2 up to logi
 TECHNOLOGY("fawogae-mk02"):remove_pack("py-science-pack-2"):add_pack("logistic-science-pack")
 
--- if decay is on, re-add a less efficient meat recipe for simple but less efficient dried meat
--- if settings.startup["py-enable-decay"] and feature_flags.spoiling then
---   RECIPE {
---     type = "recipe",
---     name = "dried-meat-01",
---     category = "smelting",
---     enabled = false,
---     energy_required = 45,
---     ingredients = {
---       {type = "item", name = "meat", amount = 20}
---     },
---     results = {{type = "item", name = "dried-meat", amount = 15}}
---   }:add_unlock("water-animals-mk01")
--- end
-
 -- double faw speeds (you're welcome skosko)
 data.raw["assembling-machine"]["fawogae-plantation-mk01"].crafting_speed = 4 * data.raw["assembling-machine"]["fawogae-plantation-mk01"].crafting_speed
 data.raw["assembling-machine"]["fawogae-plantation-mk02"].crafting_speed = 4 * data.raw["assembling-machine"]["fawogae-plantation-mk02"].crafting_speed
