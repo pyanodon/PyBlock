@@ -12,6 +12,11 @@ Date: ???
     - Sawweed Crop Mk 00 (this name too)
     - LandBlock preset (normal terrain gen, no resources)
   Changes:
+    - Moved fish to tin back to molecular decohesion stage 2
+    - Moved fish oil to tin to molecular decohesion stage 1
+    - Moved meat to tin to water animals stage 1
+    - Moved tin plate smelting to water animals stage 1
+    - Moved tinned cable to solder stage 1
     - Increased phytoplankton from flue gas cost
     - Moved tin mk01 back to py1, now you need to use jerky or flue gas
     - Nerfed offshore pump from 1200/s -> 90/s

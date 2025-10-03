@@ -114,19 +114,19 @@ RECIPE("dried-meat-01"):replace_unlock("rendering", "water-animals-mk01"):replac
 TECHNOLOGY("fawogae-mk02"):remove_pack("py-science-pack-2"):add_pack("logistic-science-pack")
 
 -- if decay is on, re-add a less efficient meat recipe for simple but less efficient dried meat
-if settings.startup["py-enable-decay"] and feature_flags.spoiling then
-  RECIPE {
-    type = "recipe",
-    name = "dried-meat-01",
-    category = "smelting",
-    enabled = false,
-    energy_required = 45,
-    ingredients = {
-      {type = "item", name = "meat", amount = 20}
-    },
-    results = {{type = "item", name = "dried-meat", amount = 15}}
-  }:add_unlock("water-animals-mk01")
-end
+-- if settings.startup["py-enable-decay"] and feature_flags.spoiling then
+--   RECIPE {
+--     type = "recipe",
+--     name = "dried-meat-01",
+--     category = "smelting",
+--     enabled = false,
+--     energy_required = 45,
+--     ingredients = {
+--       {type = "item", name = "meat", amount = 20}
+--     },
+--     results = {{type = "item", name = "dried-meat", amount = 15}}
+--   }:add_unlock("water-animals-mk01")
+-- end
 
 -- double faw speeds (you're welcome skosko)
 data.raw["assembling-machine"]["fawogae-plantation-mk01"].crafting_speed = 2 * data.raw["assembling-machine"]["fawogae-plantation-mk01"].crafting_speed
@@ -162,7 +162,7 @@ TECHNOLOGY("microbiology-mk01"):remove_pack("py-science-pack-1"):set_fields {pre
 RECIPE("plankton-farm"):remove_ingredient("intermetallics"):remove_ingredient("storage-tank"):remove_ingredient("electronic-circuit")
 RECIPE("jerky-to-phytoplankton"):replace_ingredient("dried-meat", "dried-meat", 1):replace_result("phytoplankton", "phytoplankton", 20)
 RECIPE("phytoplankton"):replace_unlock("microbiology-mk01", "tin-mk01")
-RECIPE("phytoplankton-3"):replace_unlock("microbiology-mk03", "microbiology-mk01"):multiply_ingredient_amount("flue-gas", 3)
+RECIPE("phytoplankton-3"):replace_unlock("microbiology-mk03", "microbiology-mk01"):multiply_ingredient_amount("flue-gas", 3).autotech_ignore = true
 RECIPE("phytoplankton-2"):replace_unlock("microbiology-mk04", "microbiology-mk02")
 RECIPE("waste-water-void"):replace_unlock("fish-mk01", "electrolysis")
 
@@ -173,11 +173,11 @@ RECIPE("fish-farm-mk01"):set_fields {ingredients = {
   {type = "item", name = "pump", amount = 1}
 }}
 RECIPE("breed-fish-egg-1"):replace_ingredient("fish", "fish", 8):replace_ingredient("phytoplankton", "phytoplankton", 30)
-RECIPE("fish-to-tin"):replace_unlock("molecular-decohesion-mk02", "mining-with-fluid"):set_fields {ignore_in_pypp = false}
-
+RECIPE("fish-oil-to-tin"):replace_unlock("molecular-decohesion-mk02", "molecular-decohesion-mk01")
+RECIPE("meat-to-tin"):replace_unlock("molecular-decohesion-mk01", "water-animals-mk01")
+RECIPE("tin-plate-1"):replace_unlock("mining-with-fluid", "water-animals-mk01")
+RECIPE("tinned-cable"):replace_unlock("mining-with-fluid", "solder-mk01")
 RECIPE("fish-food-01"):replace_unlock("fish-mk01", "fish-mk02")
-
-RECIPE("saline-water"):replace_unlock("electronics", "fish-mk01")
 
 RECIPE("full-render-fish"):replace_result("meat", "meat", 4)
 
@@ -198,6 +198,8 @@ RECIPE("breed-fish-simple"):remove_ingredient("small-lamp"):add_unlock("fish-mk0
     {type = "fluid", name = "waste-water", amount = 100}
   }
 }
+
+RECIPE("saline-water"):replace_unlock("electronics", "fish-mk01")
 
 TECHNOLOGY("water-animals-mk01"):remove_pack("py-science-pack-1"):set_fields {prerequisites = {}}
 
