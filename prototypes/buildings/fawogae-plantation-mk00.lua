@@ -33,20 +33,7 @@ require "make_copy" ("fawogae-plantation"):set_fields{
     fluid_box = {
       volume = 10,
       pipe_covers = py.pipe_covers(false, true, true, true),
-      pipe_picture = py.pipe_pictures("assembling-machine-3", {0, 0.22}, {0.02, -1}, nil, nil, {
-        north = {
-            filename = "__pycoalprocessinggraphics__/graphics/entity/fawogae-plantation/pipe-north.png",
-            priority = "low",
-            width = 32,
-            height = 32
-        },
-        south = {
-            filename = "__pycoalprocessinggraphics__/graphics/entity/fawogae-plantation/pipe-south.png",
-            priority = "extra-high",
-            width = 32,
-            height = 32
-        }
-      }),
+      pipe_picture = data.raw["assembling-machine"]["fawogae-plantation-mk01"].fluid_boxes[1].pipe_picture,
       pipe_connections = {
         {flow_direction = "input-output", position = {-2.5, 0.5}, direction = defines.direction.west},
         {flow_direction = "input-output", position = {2.5, -0.5}, direction = defines.direction.east}
@@ -56,6 +43,6 @@ require "make_copy" ("fawogae-plantation"):set_fields{
     minimum_temperature = 250,
     scale_fluid_usage = true
   },
-  fluid_boxes = nil,
+  fluid_boxes = {},
   allowed_module_categories = {"fawogae"}
 }
