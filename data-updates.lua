@@ -169,7 +169,6 @@ ENTITY("offshore-pump"):set_fields{pumping_speed = 1.5}
 
 -- move faw and things to faw tech
 for _, recipe in pairs{
-  "fawogae-spore",
   "offshore-pump",
   "stone-furnace",
   "boiler",
