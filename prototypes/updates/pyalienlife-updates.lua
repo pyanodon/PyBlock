@@ -49,7 +49,7 @@ RECIPE("fawogae-to-iron"):replace_unlock("molecular-decohesion", "atomizer-mk00"
 RECIPE("wood-seeds"):replace_unlock("wood-processing", "wood-processing-0")
 
 -- fawogae to raw coal
-RECIPE("coal-fawogae"):replace_unlock("fawogae-mk01", "coal-processing-mk00"):set_fields {category = "distilator"}:set_result_amount("raw-coal", 5)
+RECIPE("coal-fawogae"):replace_unlock("fawogae-mk01", "coal-processing-0"):set_fields {category = "distilator"}:set_result_amount("raw-coal", 5)
 
 -- seaweed
 RECIPE("seaweed-crop-mk01"):remove_ingredient("pipe"):remove_ingredient("stone-brick"):remove_ingredient("steam-engine"):add_ingredient({type = "item", name = "seaweed-crop-mk00", amount = 1})
