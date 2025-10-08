@@ -12,6 +12,7 @@ Date: ???
     - Sawweed Crop Mk 00 (this name too)
     - LandBlock preset (normal terrain gen, no resources)
   Changes:
+    - Increased Atomizer MK 00 power draw from 500 -> 700 kW
     - Moved fish to tin back to molecular decohesion stage 2
     - Moved fish oil to tin to molecular decohesion stage 1
     - Moved meat to tin to water animals stage 1
