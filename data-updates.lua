@@ -176,24 +176,24 @@ for _, recipe in pairs{
   "pipe",
   "pipe-to-ground"
 } do
-  RECIPE(recipe):add_unlock("fawogae-mk00"):set_fields {enabled = false}
+  RECIPE(recipe):add_unlock("fawogae-mk00").enabled = false
 end
 
 -- move starter ash separation recipes to ash-separation and set trigger tech
 TECHNOLOGY("ash-separation"):set_fields {research_trigger = {type = "craft-item", item = "ash", count = 200}, prerequisites = {"atomizer-mk00"}}
-RECIPE("steam-engine"):add_unlock("ash-separation"):set_fields {enabled = false}
-RECIPE("small-electric-pole"):add_unlock("ash-separation"):set_fields {enabled = false}
+RECIPE("steam-engine"):add_unlock("ash-separation").enabled = false
+RECIPE("small-electric-pole"):add_unlock("ash-separation").enabled = false
 data.raw["technology"]["ash-separation"].unit = nil
 
 -- set automation science pack to require 10 copper plates
 TECHNOLOGY("automation-science-pack"):set_fields {research_trigger = {type = "craft-item", item = "copper-plate", count = 10}}
-RECIPE("inductor1-2"):add_unlock("automation-science-pack"):set_fields {enabled = false}
-RECIPE("burner-mining-drill"):add_unlock("automation-science-pack"):set_fields {enabled = false}
+RECIPE("inductor1-2"):add_unlock("automation-science-pack").enabled = false
+RECIPE("burner-mining-drill"):add_unlock("automation-science-pack").enabled = false
 data.raw["technology"]["automation-science-pack"].prerequisites = {"ash-separation"}
 data.raw["technology"]["automation-science-pack"].unit = nil
 
 -- move mechanical inserter to automation
-RECIPE("burner-inserter"):add_unlock("automation"):set_fields {enabled = false}
+RECIPE("burner-inserter"):add_unlock("automation").enabled = false
 
 -- mk01 building updates
 RECIPE("flora-collector-mk01"):replace_ingredient("soil-extractor-mk01", "soil-extractor-mk00", 1)
@@ -207,12 +207,12 @@ RECIPE("slaughterhouse-mk01"):add_ingredient{type = "item", name = "slaughterhou
 RECIPE("soil-extractor-mk01"):replace_unlock("automation-science-pack", "soil-washing"):replace_ingredient("burner-mining-drill", "soil-extractor-mk00", 1)
 RECIPE("solid-separator"):replace_unlock("ash-separation", "steel-processing"):add_ingredient{type = "item", name = "solid-separator-mk00", amount = 1}:add_ingredient_amount("small-parts-01", -20):add_ingredient_amount("steel-plate", -10):add_ingredient_amount("inductor1", -5)
 -- RECIPE("washer"):replace_ingredient("steam-engine", "washer-mk00", 1):replace_unlock("soil-washing", "electrolysis")
-RECIPE("wpu-mk01"):replace_unlock("automation-science-pack", "wood-processing"):add_ingredient{type = "item", name = "inductor1", amount = 12} :add_ingredient{type = "item", name = "wpu-mk00", amount = 1}:set_fields {enabled = false}
+RECIPE("wpu-mk01"):replace_unlock("automation-science-pack", "wood-processing"):add_ingredient{type = "item", name = "inductor1", amount = 12} :add_ingredient{type = "item", name = "wpu-mk00", amount = 1}.enabled = false
 
 -- move check valve from fluid handling to assembly
-RECIPE("py-check-valve"):remove_unlock("fluid-handling"):add_unlock("steel-processing")
+RECIPE("py-check-valve"):replace_unlock("fluid-handling", "steel-processing")
 
-RECIPE("earth-generic-sample"):remove_unlock("xenobiology"):add_unlock("biotech-mk01")
+RECIPE("earth-generic-sample"):replace_unlock("xenobiology", "biotech-mk01")
 
 RECIPE("data-array"):remove_ingredient("titanium-plate")
 

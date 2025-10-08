@@ -16,7 +16,7 @@ for _, technology in pairs{
   "mining-with-fluid",
   "steel-processing"
 } do
-  TECHNOLOGY(technology):set_fields{ignore_tech_cost_multiplier = false}
+  TECHNOLOGY(technology).ignore_tech_cost_multiplier = false
 end
 
 -- zerostart
