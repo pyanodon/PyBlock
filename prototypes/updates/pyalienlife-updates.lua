@@ -132,8 +132,8 @@ RECIPE("fish-farm-mk01").ingredients = {
   {type = "item", name = "pump", amount = 1}
 }
 RECIPE("breed-fish-egg-1"):set_ingredient_amount("fish", 8):set_ingredient_amount("phytoplankton", 30)
-RECIPE("fish-oil-to-tin"):replace_unlock("molecular-decohesion-mk02", "molecular-decohesion-mk01")
-RECIPE("meat-to-tin"):replace_unlock("molecular-decohesion-mk01", "water-animals-mk01")
+RECIPE("fish-oil-to-tin"):replace_unlock("molecular-decohesion-mk02", "water-animals-mk01")
+RECIPE("meat-to-tin"):replace_unlock("molecular-decohesion", "water-animals-mk01")
 RECIPE("tin-plate-1"):replace_unlock("mining-with-fluid", "water-animals-mk01")
 RECIPE("tinned-cable"):replace_unlock("mining-with-fluid", "solder-mk01")
 RECIPE("fish-food-01"):replace_unlock("fish-mk01", "fish-mk02")
