@@ -156,7 +156,7 @@ RECIPE("breed-fish-0"):remove_ingredient("small-lamp"):add_unlock("fish-mk01"):s
     {type = "item", name = "fish", amount = 12},
     {type = "fluid", name = "waste-water", amount = 100}
   }
-}
+}.icons[2].icon = "__pyalienlifegraphics__/graphics/icons/0.png"
 
 RECIPE("saline-water"):replace_unlock("electronics", "fish-mk01")
 
