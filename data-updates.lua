@@ -235,7 +235,7 @@ for i = 1, 12 do
     }
   }
   data.raw.technology["pumping-productivity-" .. i] = tech
-  TECHNOLOGY("pumping-productivity-" .. i):remove_prereq("mining-productivity-" .. i):add_prereq("pumping-productivity-" .. i - 1).effects = {}
+  TECHNOLOGY("pumping-productivity-" .. i):remove_prereq("mining-productivity-" .. i - 1):add_prereq("pumping-productivity-" .. i - 1).effects = {}
 end
 
 drilling_categories = {
