@@ -37,6 +37,8 @@ Date: ???
     - Changed the stone furnace recipe to take 8 stone bricks instead of 5 stone
     - Changed bootstrapping fawogae recipe to only require 2 wood instead of an empty planter box
     - Nerfed rich clay to bricks, but reduced the stone useage per brick (assuming crushing stone -> gravel -> sand) and added a charcoal component to the recipe. And moved it to the HPF
+  Bugfixes:
+    - Fixed pumping productivity having prerequesites on mining prod instead of previous levels of pumping prod
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.14
 Date: 2025-09-16
