@@ -63,13 +63,13 @@ RECIPE("moss-farm-mk01"):remove_ingredient("aluminium-plate")
 TECHNOLOGY("moss-mk01"):remove_prereq("botany-mk01")
 
 --cadaveric for copper
-RECIPE("cadaveric-to-copper"):replace_unlock("molecular-decohesion-mk03", "cadaveric-arum"):replace_ingredient("cadaveric-arum", "cadaveric-arum", 3):replace_result("copper-ore", "copper-ore", 60).energy_required = 20
+RECIPE("cadaveric-to-copper"):replace_unlock("molecular-decohesion-mk03", "cadaveric-arum"):set_ingredient_amount("cadaveric-arum", 3):set_result_amount("copper-ore", 60).energy_required = 20
 RECIPE("cadaveric-arum-sample"):remove_ingredient("alien-sample-02"):remove_ingredient("cdna"):remove_ingredient("earth-tropical-tree-sample"):remove_ingredient("earth-flower-sample"):remove_ingredient("bio-sample")
-RECIPE("cadaveric-arum-codex"):remove_ingredient("electronic-circuit"):replace_ingredient("tinned-cable", "tinned-cable", 5):replace_ingredient("small-lamp", "small-lamp", 2)
+RECIPE("cadaveric-arum-codex"):remove_ingredient("electronic-circuit"):set_ingredient_amount("tinned-cable", 5):set_ingredient_amount("small-lamp", 2)
 TECHNOLOGY("cadaveric-arum"):remove_prereq("botany-mk02"):remove_pack("py-science-pack-1"):remove_pack("logistic-science-pack"):remove_pack("py-science-pack-2")
-RECIPE("cadaveric-arum-1"):replace_result("cadaveric-arum", "cadaveric-arum", 7).energy_required = 110
-RECIPE("cadaveric-arum-1-soil"):replace_result("cadaveric-arum", "cadaveric-arum", 7).energy_required = 126 -- TURD
-RECIPE("cadaveric-arum-1-msa"):replace_result("cadaveric-arum", "cadaveric-arum", 7).energy_required = 110  -- TURD
+RECIPE("cadaveric-arum-1"):set_result_amount("cadaveric-arum", 7).energy_required = 110
+RECIPE("cadaveric-arum-1-soil"):set_result_amount("cadaveric-arum", 7).energy_required = 126 -- TURD
+RECIPE("cadaveric-arum-1-msa"):set_result_amount("cadaveric-arum", 7).energy_required = 110  -- TURD
 RECIPE("stone-wool"):replace_unlock("zipir", "cadaveric-arum")
 RECIPE("stone-wool2"):replace_unlock("zipir", "cadaveric-arum")
 RECIPE("cadaveric-arum-mk01"):remove_ingredient("hydrocyclone-mk01"):remove_ingredient("electronic-circuit"):remove_ingredient("plastic-bar"):remove_ingredient("intermetallics"):remove_ingredient("steel-plate"):add_ingredient {type = "item", name = "steel-plate", amount = 5}:add_ingredient {type = "item", name = "pipe", amount = 4}:add_ingredient {type = "item", name = "soil", amount = 20}:remove_ingredient("botanical-nursery")
@@ -80,9 +80,9 @@ TECHNOLOGY("cadaveric-arum-mk02"):remove_pack("chemical-science-pack")
 
 -- move fawogae with manure up (even though it doesnt use manure anymore)
 TECHNOLOGY("fawogae-mk01"):remove_pack("py-science-pack-1").prerequisites = {}
-RECIPE("fawogae-2"):replace_unlock("fawogae-mk02", "fawogae-mk01"):replace_result("fawogae", "fawogae", 18)
+RECIPE("fawogae-2"):replace_unlock("fawogae-mk02", "fawogae-mk01"):set_result_amount("fawogae", 18)
 RECIPE("fungal-substrate"):replace_unlock("mycology-mk02", "fawogae-mk01")
-RECIPE("dried-meat-01"):replace_unlock("rendering", "water-animals-mk01"):replace_result("dried-meat", "dried-meat", 8)
+RECIPE("dried-meat-01"):replace_unlock("rendering", "water-animals-mk01"):set_result_amount("dried-meat", 8)
 
 -- move faw 2 up to logi
 TECHNOLOGY("fawogae-mk02"):remove_pack("py-science-pack-2"):add_pack("logistic-science-pack")
@@ -109,8 +109,8 @@ RECIPE {
 }:add_unlock("moss-mk01")
 
 -- some changes to flue gas/tailings/acid gas/mossogen
-RECIPE("tar-quenching"):replace_result("water-saline", "water-saline", 80)
-RECIPE("sulfur-void-tar"):replace_result("tar", "tar", 150)
+RECIPE("tar-quenching"):set_result_amount("water-saline", 80)
+RECIPE("sulfur-void-tar"):set_result_amount("tar", 150)
 
 --Tin from fish
 TECHNOLOGY("molecular-decohesion").prerequisites = {}
@@ -119,7 +119,7 @@ TECHNOLOGY("fish-mk01"):remove_pack("py-science-pack-1").prerequisites = {}
 
 TECHNOLOGY("microbiology-mk01"):remove_pack("py-science-pack-1").prerequisites = {}
 RECIPE("plankton-farm"):remove_ingredient("intermetallics"):remove_ingredient("storage-tank"):remove_ingredient("electronic-circuit")
-RECIPE("jerky-to-phytoplankton"):replace_ingredient("dried-meat", "dried-meat", 1):replace_result("phytoplankton", "phytoplankton", 20)
+RECIPE("jerky-to-phytoplankton"):set_ingredient_amount("dried-meat", 1):set_result_amount("phytoplankton", 20)
 RECIPE("phytoplankton"):replace_unlock("microbiology-mk01", "tin-mk01")
 RECIPE("phytoplankton-3"):replace_unlock("microbiology-mk03", "microbiology-mk01"):multiply_ingredient_amount("flue-gas", 3).autotech_ignore = true
 RECIPE("phytoplankton-2"):replace_unlock("microbiology-mk04", "microbiology-mk02")
@@ -131,20 +131,20 @@ RECIPE("fish-farm-mk01").ingredients = {
   {type = "item", name = "seaweed-crop-mk01", amount = 1},
   {type = "item", name = "pump", amount = 1}
 }
-RECIPE("breed-fish-egg-1"):replace_ingredient("fish", "fish", 8):replace_ingredient("phytoplankton", "phytoplankton", 30)
+RECIPE("breed-fish-egg-1"):set_ingredient_amount("fish", 8):set_ingredient_amount("phytoplankton", 30)
 RECIPE("fish-oil-to-tin"):replace_unlock("molecular-decohesion-mk02", "molecular-decohesion-mk01")
 RECIPE("meat-to-tin"):replace_unlock("molecular-decohesion-mk01", "water-animals-mk01")
 RECIPE("tin-plate-1"):replace_unlock("mining-with-fluid", "water-animals-mk01")
 RECIPE("tinned-cable"):replace_unlock("mining-with-fluid", "solder-mk01")
 RECIPE("fish-food-01"):replace_unlock("fish-mk01", "fish-mk02")
 
-RECIPE("full-render-fish"):replace_result("meat", "meat", 4)
+RECIPE("full-render-fish"):set_result_amount("meat", 4)
 
 RECIPE("breed-fish-1"):remove_ingredient("oxygen").results = {
   {type = "item", name = "fish", amount = 15},
   {type = "fluid", name = "waste-water", amount = 100}
 }
-RECIPE("breed-fish-1-agressive-selection"):replace_result("fish", {type = "item", name = "fish", amount = 13})
+RECIPE("breed-fish-1-agressive-selection"):set_result_amount("fish", 13)
 
 local breed_fish = table.deepcopy(data.raw["recipe"]["breed-fish-1"])
 breed_fish.name = "breed-fish-simple"
@@ -189,8 +189,8 @@ RECIPE("flavonoids"):replace_unlock("yaedols", "biotech-mk01")
 
 --Titanium from yaedols
 TECHNOLOGY("yaedols"):remove_pack("logistic-science-pack"):remove_pack("py-science-pack-1"):remove_prereq("mycology-mk02")
-RECIPE("yaedols-2"):replace_ingredient("fungal-substrate-03", "fungal-substrate-02", 2) -- replace special fungal substrate with improved fungal substrate
-RECIPE("yaedols-mk02"):replace_ingredient("fungal-substrate-03", "fungal-substrate-02", 5)
+RECIPE("yaedols-2"):set_ingredient_amount("fungal-substrate-02", 2) -- replace special fungal substrate with improved fungal substrate
+RECIPE("yaedols-mk02"):set_ingredient_amount("fungal-substrate-02", 5)
 
 TECHNOLOGY("phytomining"):remove_pack("py-science-pack-1"):remove_pack("logistic-science-pack"):remove_pack("py-science-pack-2").prerequisites = {}
 
@@ -198,13 +198,13 @@ TECHNOLOGY("compost"):remove_pack("py-science-pack-1").prerequisites = { "steel-
 
 RECIPE("smelter-mk01"):remove_ingredient("titanium-plate")
 
-RECIPE("yaedols-codex"):replace_ingredient("electronic-circuit", "electronic-circuit", 25)
+RECIPE("yaedols-codex"):set_ingredient_amount("electronic-circuit", 25)
 RECIPE("yaedols-culture-mk01"):remove_ingredient("intermetallics"):remove_ingredient("titanium-plate"):set_ingredient_amount("electronic-circuit", 25)
 
 RECIPE("yaedols-sample"):remove_ingredient("cdna"):remove_ingredient("alien-sample01"):remove_ingredient("bio-sample"):remove_ingredient("moss-gen")
 RECIPE("yaedols-1"):remove_ingredient("fertilizer")
 
-RECIPE("ti-biomass-extraction"):remove_ingredient("steam"):add_ingredient {type = "fluid", name = "steam", amount = 100, minimum_temperature = 250}:replace_unlock("phytomining-mk02", "yaedols")
+RECIPE("ti-biomass-extraction"):remove_ingredient("steam"):add_ingredient{type = "fluid", name = "steam", amount = 100, minimum_temperature = 250}:replace_unlock("phytomining-mk02", "yaedols")
 RECIPE("yaedols-ti"):replace_unlock("phytomining-mk02", "yaedols")
 
 RECIPE("titanium-plate-1"):replace_unlock("alloys-mk01", "yaedols")
@@ -227,7 +227,7 @@ RECIPE("s-biomass-extraction"):replace_unlock("phytomining", "phytomining-mk02")
 
 -- Bhoddos to uranium
 TECHNOLOGY("chemical-science-pack"):add_prereq("bhoddos")
-RECIPE("ur-biomass-extraction"):replace_unlock("phytomining-mk03", "phytomining-mk02"):replace_result("uranium-ore", "uranium-ore", 50):replace_ingredient("ur-biomass", "ur-biomass", 4).energy_required = 80
+RECIPE("ur-biomass-extraction"):replace_unlock("phytomining-mk03", "phytomining-mk02"):set_result_amount("uranium-ore", 50):set_ingredient_amount("ur-biomass", 4).energy_required = 80
 RECIPE("bhodos-ur"):set_fields {
   ingredients = {
     {type = "fluid", name = "pressured-steam", amount = 500, minimum_temperature = 2000},
