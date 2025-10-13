@@ -75,12 +75,9 @@ for _, recipe in pairs{
   }
 end
 
-data.raw.technology["excavation-1"].unit.ingredients = {{"automation-science-pack", 1}, {"py-science-pack-1", 1}}
-data.raw.technology["excavation-1"].prerequisites = nil
+TECHNOLOGY("excavation-1"):remove_pack("logistic-science-pack"):remove_pack("chemical-science-pack")
 
-table.insert(RECIPE("soot-separation").results, {type = "item", name = "ore-nickel", amount = 1, probability = 0.1})
-
-RECIPE("soot-separation"):set_fields {unlock_results = true, ignore_in_pypp = false}
+RECIPE("soot-separation"):add_ingredient{type = "item", name = "ore-nickel", amount = 1, probability = 0.1}
 
 RECIPE("mining-antimony"):replace_unlock("excavation-2", "excavation-1")
 
@@ -90,7 +87,7 @@ TECHNOLOGY("coal-processing-1"):add_prereq("seaweed-mk00")
 
 -- reduce fish oil to lube cost to increase drilling yield relative to fish input
 RECIPE("mining-borax"):replace_ingredient("drilling-fluid-1", "lubricant")
-RECIPE("fish-oil-to-lube"):replace_ingredient("fish-oil", "fish-oil", 50)
+RECIPE("fish-oil-to-lube"):set_ingredient_amount("fish-oil", 50)
 
 -- create new soot to ore recipes that generalize byproducts
 local ores = {
@@ -201,7 +198,7 @@ data.raw["technology"]["automation-science-pack"].unit = nil
 RECIPE("burner-inserter"):add_unlock("automation").enabled = false
 
 -- mk01 building updates
-RECIPE("flora-collector-mk01"):replace_ingredient("soil-extractor-mk01", "soil-extractor-mk00", 1)
+RECIPE("flora-collector-mk01"):replace_ingredient("soil-extractor-mk01", "soil-extractor-mk00")
 RECIPE("compost-plant-mk01"):replace_unlock("compost", "fertilizer-mk01"):add_ingredient{type = "item", name = "compost-plant-mk00", amount = 1}
 RECIPE("distilator"):add_ingredient{type = "item", name = "ddc-mk00", amount = 1}
 RECIPE("fwf-mk01"):remove_ingredient("steam-engine"):add_ingredient{type = "item", name = "fwf-mk00", amount = 1}
@@ -209,7 +206,7 @@ RECIPE("fwf-mk01"):remove_ingredient("steam-engine"):add_ingredient{type = "item
 -- RECIPE("spore-collector-mk01"):remove_ingredient("steam-engine"):add_ingredient{type = "item", name = "spore-collector-mk00", amount = 1}
 RECIPE("geothermal-plant-mk01"):add_ingredient{type = "item", name = "pipe", amount = 80}:add_ingredient{type = "item", name = "concrete", amount = 150}
 RECIPE("slaughterhouse-mk01"):add_ingredient{type = "item", name = "slaughterhouse-mk00", amount = 1}
-RECIPE("soil-extractor-mk01"):replace_unlock("automation-science-pack", "soil-washing"):replace_ingredient("burner-mining-drill", "soil-extractor-mk00", 1)
+RECIPE("soil-extractor-mk01"):replace_unlock("automation-science-pack", "soil-washing"):set_ingredient_amount("soil-extractor-mk00", 1)
 RECIPE("solid-separator"):replace_unlock("ash-separation", "steel-processing"):add_ingredient{type = "item", name = "solid-separator-mk00", amount = 1}:add_ingredient_amount("small-parts-01", -20):add_ingredient_amount("steel-plate", -10):add_ingredient_amount("inductor1", -5)
 -- RECIPE("washer"):replace_ingredient("steam-engine", "washer-mk00", 1):replace_unlock("soil-washing", "electrolysis")
 RECIPE("wpu-mk01"):replace_unlock("automation-science-pack", "wood-processing"):add_ingredient{type = "item", name = "inductor1", amount = 12} :add_ingredient{type = "item", name = "wpu-mk00", amount = 1}.enabled = false
@@ -221,7 +218,7 @@ RECIPE("earth-generic-sample"):replace_unlock("xenobiology", "biotech-mk01")
 
 RECIPE("data-array"):remove_ingredient("titanium-plate")
 
-RECIPE("molten-zinc-01"):replace_ingredient("heavy-oil", "heavy-oil", 40)
+RECIPE("molten-zinc-01"):set_ingredient_amount("heavy-oil", 40)
 
 -- create pumping productivity techs
 for i = 1, 12 do
