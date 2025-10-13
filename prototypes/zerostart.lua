@@ -49,12 +49,9 @@ RECIPE("sand-brick"):set_fields{
   crafting_category = "hpf"
 }
 
--- copy handcrafting recipes with a bit of prod
-for recipe_name, modifications in pairs{
-  ["ash-separation"] = {ingredients = {"iron-ore", "copper-ore"}, boost = 1.5}
-} do
-  RECIPE(recipe_name)
-end
+-- allow the player to handcraft basic soot and ash separation
+RECIPE("ash-separation").additional_categories = {"handcrafting", "solid-separator"}
+RECIPE("soot-separation").additional_categories = {"handcrafting", "solid-separator"}
 
 -- update seaweed to spoil if spoilage is enabled
 if feature_flags.spoiling and settings.startup["py-enable-decay"].value then
