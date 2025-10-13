@@ -13,6 +13,15 @@ Date: ???
     - LandBlock preset (normal terrain gen, no resources)
   Changes:
     - Increased Atomizer MK 00 power draw from 500 -> 700 kW
+    - Increased Automated Screener MK 00 power draw from 80 -> 180 kW
+    - Increased Compost Plant MK 00 power draw from 300 -> 450 kW
+    - Increased DDC MK 00 power draw from 200 -> 280 kW
+    - Increased Slaughterhouse MK 00 power draw from 150 -> 250 kW
+    - Increased Soil Extractor MK 00 power draw from 200 -> 320 kW
+    - Increased Solid Separator MK 00 power draw from 800 -> 1200 kW
+    - Increased Washer MK 00 power draw from 100 -> 200 kW
+    - Increased WPU MK 00 power draw from 150 -> 350 kW
+    - Increased Shunt Inserter power draw
     - Moved fish to tin back to molecular decohesion stage 2
     - Moved fish oil to tin to molecular decohesion stage 1
     - Moved meat to tin to water animals stage 1

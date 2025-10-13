@@ -27,6 +27,7 @@ ITEM {
 }
 
 require "make_copy" ("soil-extractor"):set_fields{
+  energy_usage = "320kW",
   energy_source = {
     type = "fluid",
     effectivity = 1,
@@ -53,6 +54,5 @@ require "make_copy" ("soil-extractor"):set_fields{
       filter = "steam",
     },
     scale_fluid_usage = true,
-  },
-  energy_usage = "200kW"
+  }
 }
