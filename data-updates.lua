@@ -8,6 +8,12 @@ if settings.startup["pypp-tests"].value == true or mods["autotech"] then
   end
 end
 
+-- mark items as not startup items
+data.raw.item["copper-plate"].autotech_startup = nil
+data.raw.item["iron-chest"].autotech_startup = nil
+data.raw.item["burner-mining-drill"].autotech_startup = nil
+data.raw.item["stone-furnace"].autotech_startup = nil
+
 require("prototypes/updates/pycoalprocessing-updates")
 require("prototypes/updates/pypetroleumhandling-updates")
 require("prototypes/updates/pyrawores-updates")
