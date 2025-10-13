@@ -182,22 +182,6 @@ RECIPE{
   },
   main_product = "ash"
 }:add_unlock("ash-separation")
--- handsort ash for soot and oxide
-RECIPE{
-  name = "ash-sorting-manual",
-  enabled = true,
-  energy_required = 2,
-  icon = "__pycoalprocessinggraphics__/graphics/icons/ash-separation.png",
-  icon_size = 32,
-  category = "handcrafting",
-  ingredients = {{type = "item", name = "ash", amount = 5}},
-  results = {
-    { type = "item", name = "coal-dust", amount = 1, probability = 0.5 },
-    { type = "item", name = "iron-oxide", amount = 1, probability = 0.2 },
-    { type = "item", name = "soot", amount = 1, probability = 0.75 }
-  },
-  allow_as_intermediate = false
-}
 -- handsort soot for copper and iron
 RECIPE{
   name = "soot-sorting-manual",
