@@ -4,6 +4,7 @@ require "recipes.recipes-zerostart"
 local dry_seaweed = table.deepcopy(data.raw.module.seaweed)
 dry_seaweed.name = "dry-seaweed"
 dry_seaweed.localised_name = nil
+dry_seaweed.icons[1].tint = {0.8, 0.8, 0.8, 1}
 -- TODO update icon and possibly description, as well as module properties
 ---@diagnostic disable-next-line: undefined-field
 if type(data.data_crawler) == "string" and string.sub(data.data_crawler, 1, 5) == "yafc " then
