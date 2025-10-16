@@ -70,7 +70,7 @@ for _, recipe in pairs{
   "landfill"
 } do
   RECIPE(recipe):set_fields{
-    ingredients = {{type = "item", name = "soil", amount = 180}},
+    ingredients = {{type = "item", name = "soil", amount = 120}},
     energy_required = 15,
   }
 end
