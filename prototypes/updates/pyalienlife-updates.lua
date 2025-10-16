@@ -158,8 +158,8 @@ RECIPE("breed-fish-0"):remove_ingredient("small-lamp"):add_unlock("fish-mk01"):s
   }
 }.icons[2].icon = "__pyalienlifegraphics__/graphics/icons/0.png"
 
-RECIPE("breed-fish-0"):set_ingredient_amount("saline-water", 60)
-RECIPE("breed-fish-1"):set_ingredient_amount("saline-water", 80)
+RECIPE("breed-fish-0"):set_ingredient_amount("water-saline", 60)
+RECIPE("breed-fish-1"):set_ingredient_amount("water-saline", 80)
 
 RECIPE("saline-water"):replace_unlock("electronics", "fish-mk01")
 
