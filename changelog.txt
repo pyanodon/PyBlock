@@ -44,6 +44,7 @@ Date: ???
     - Changed bootstrapping fawogae recipe to only require 2 wood instead of an empty planter box
     - Nerfed rich clay to bricks, but reduced the stone useage per brick (assuming crushing stone -> gravel -> sand) and added a charcoal component to the recipe. And moved it to the HPF
   Bugfixes:
+    - Moved flavonoids all the way back to the Py2 tech where it belongs
     - Fixed Slaughterhouse Mk 00 crafting speed by being 1 instead of 0.5
     - Fixed pumping productivity having prerequesites on mining prod instead of previous levels of pumping prod
     - Fixed simple fish breeding recipe having a 1 instead of a 0 on the icon when recipe signals are enabled. Resolves https://github.com/pyanodon/pybugreports/issues/1238

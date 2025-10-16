@@ -188,7 +188,7 @@ RECIPE("zn-biomass-extraction"):remove_ingredient("steam"):add_ingredient {type 
 --PY SCI 1 TWEAKS
 RECIPE("biofactory-mk01"):replace_unlock("plastics", "biotech-mk01")
 
-RECIPE("flavonoids"):replace_unlock("yaedols", "biotech-mk01")
+RECIPE("flavonoids"):replace_unlock("yaedols", "py-science-pack-2")
 
 --Titanium from yaedols
 TECHNOLOGY("yaedols"):remove_pack("logistic-science-pack"):remove_pack("py-science-pack-1"):remove_prereq("mycology-mk02")
