@@ -1,6 +1,4 @@
-if not mods["aai-loaders"] then
-  return
-end
+if not mods["aai-loaders"] then return end
 
 AAILoaders.make_tier{
   name = "shunt",

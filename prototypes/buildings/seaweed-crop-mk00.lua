@@ -28,13 +28,11 @@ ITEM {
 
 require "make_copy" ("seaweed-crop"):set_fields{
   crafting_speed = data.raw["assembling-machine"]["seaweed-crop-mk01"].crafting_speed * 0.2,
-  module_slots = data.raw["assembling-machine"]["seaweed-crop-mk01"].module_slots,
   energy_usage = "150kW",
   energy_source = {
     type = "void",
     usage_priority = "secondary-input",
     emissions_per_minute = {pollution = -5},
   },
-  allowed_module_categories = {"seaweed"},
-  fixed_recipe = "seaweed-1"
+  allowed_module_categories = {"seaweed"}
 }

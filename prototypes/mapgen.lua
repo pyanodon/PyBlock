@@ -362,64 +362,6 @@ data.raw["map-gen-presets"].default["pyblock-classic"] = {
   }
 }
 
-local void_water = table.deepcopy(data.raw.tile["out-of-map"])
-void_water.name = "void-water"
-void_water.order = "a[water]-b[void-water]z"
-void_water.map_color = {0, 0, 0}
-void_water.default_cover_tile = "landfill"
-void_water.autoplace = {
-  control = "water",
-  probability_expression = "water_base(-2, 200)"
-}
-void_water.transition_merges_with_tile = "water"
-data:extend{void_water}
-
-log(serpent.block(data.raw.tile["deepwater"]))
-log(serpent.block(data.raw.tile["out-of-map"]))
-log(serpent.block(data.raw.tile["landfill"]))
-
-data.raw.item["landfill"].place_as_tile.condition = {layers = {}}
-table.insert(data.raw.item["landfill"].place_as_tile.tile_condition, "void-water")
-table.insert(data.raw.tile.landfill.transitions[2].to_tiles, "void-water")
-
-data.raw["map-gen-presets"].default["pyblock-void"] = {
-  order = "z",
-  basic_settings = {
-    default_enable_all_autoplace_controls = false,
-    property_expression_names = {
-      elevation = "pyblock_classic",
-      moisture = "moisture_basic",
-      aux = "aux_basic",
-    },
-    autoplace_settings = {
-      ["entity"] = {
-        treat_missing_as_default = false
-      },
-      ["tile"] = {
-        treat_missing_as_default = false,
-        settings = {
-          ["void-water"] = {
-            frequency = 1,
-            size = 1,
-            richness = 1,
-          },
-          ["dirt-1"] = {},
-          ["deepwater"] = {
-            size = 0
-          },
-          ["water"] = {
-            size = 0
-          }
-        }
-      }
-    },
-    autoplace_controls = {
-      ["water"] = {},
-    },
-    starting_area = "none",
-  }
-}
-
 data.raw["map-gen-presets"].default["pyblock-archipeligo"] = {
   order = "k",
   basic_settings = {
@@ -464,3 +406,42 @@ data.raw["map-gen-presets"].default["pyblock-archipeligo"] = {
   }
 }
 
+data.raw["map-gen-presets"].default["pyblock-landblock"] = {
+  order = "l",
+  basic_settings = {
+    property_expression_names = {
+      elevation = "pyblock_archipeligo",
+      moisture = "moisture_basic",
+      aux = "aux_basic",
+    },
+    cliff_settings = {
+      cliff_elevation_interval = 0
+    },
+    autoplace_settings = {
+      entity = {
+        treat_missing_as_default = false,
+        settings = {
+          fish = {
+            frequency = 1
+          },
+          driftwood = {
+            frequency = 1
+          },
+          seaweed = {
+            frequency = 1
+          }
+        }
+      }
+    },
+    autoplace_controls = {
+      ["enemy-base"] = {
+        frequency = 0
+      }
+    }
+  },
+  advanced_settings = {
+    pollution = {
+      enabled = false
+    }
+  }
+}

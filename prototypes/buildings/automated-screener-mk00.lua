@@ -34,5 +34,5 @@ require "make_copy" ("automated-screener"):set_fields{
     burnt_inventory_size = 1,
     emissions_per_minute = {pollution = 0.06}
   },
-  energy_usage = "80kW"
+  energy_usage = "180kW"
 }

@@ -28,7 +28,6 @@ ITEM {
 
 require "make_copy" ("fwf"):set_fields{
   crafting_speed = data.raw["assembling-machine"]["fwf-mk01"].crafting_speed * 0.2,
-  module_slots = data.raw["assembling-machine"]["fwf-mk01"].module_slots,
   energy_usage = "80kW",
   energy_source = {
     type = "void",
