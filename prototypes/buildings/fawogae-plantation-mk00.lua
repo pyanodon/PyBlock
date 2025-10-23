@@ -29,6 +29,7 @@ require "make_copy" ("fawogae-plantation"):set_fields{
   energy_usage = "48kW",
   energy_source = {
     type = "fluid",
+    effectivity = 0.5,
     fluid_box = {
       volume = 10,
       pipe_covers = py.pipe_covers(false, true, true, true),

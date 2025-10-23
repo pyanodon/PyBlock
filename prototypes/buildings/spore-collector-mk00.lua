@@ -30,6 +30,7 @@ require "make_copy" ("spore-collector"):set_fields{
   energy_usage = "65kW",
   energy_source = {
     type = "fluid",
+    effectivity = 0.5,
     fluid_box = {
       volume = 10,
       pipe_covers = pipecoverspictures(),

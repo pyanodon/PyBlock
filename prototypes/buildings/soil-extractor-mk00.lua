@@ -30,7 +30,7 @@ require "make_copy" ("soil-extractor"):set_fields{
   energy_usage = "320kW",
   energy_source = {
     type = "fluid",
-    effectivity = 1,
+    effectivity = 0.5,
     emissions = 1,
     fluid_box = {
       volume = 200,

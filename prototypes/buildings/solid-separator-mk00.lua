@@ -63,7 +63,7 @@ ENTITY {
   crafting_speed = 0.5,
   energy_source = {
     type = "fluid",
-    effectivity = 1,
+    effectivity = 0.5,
     emissions = 1,
     fluid_box = {
       volume = 200,

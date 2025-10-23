@@ -125,7 +125,7 @@ ENTITY {
   energy_source = {
     type = "burner",
     fuel_categories = {"chemical", "biomass"},
-    effectivity = 1,
+    effectivity = 0.5,
     fuel_inventory_size = 1,
     burnt_inventory_size = 1,
     emissions = 0.01,
