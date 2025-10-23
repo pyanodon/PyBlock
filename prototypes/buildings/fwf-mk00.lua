@@ -27,11 +27,23 @@ ITEM {
 }
 
 require "make_copy" ("fwf"):set_fields{
-  energy_usage = "80kW",
+  energy_usage = "212kW",
   energy_source = {
-    type = "void",
-    usage_priority = "secondary-input",
+    type = "fluid",
+    effectivity = 0.5,
+    fluid_box = {
+      volume = 200,
+      pipe_covers = py.pipe_covers(false, true, true, true),
+      pipe_picture = data.raw["assembling-machine"]["fwf-mk01"].fluid_boxes[1].pipe_picture,
+      pipe_connections = {
+        {flow_direction = "input", position = {-5.0, 7.0}, direction = defines.direction.south},
+        {flow_direction = "input", position = {5.0, 7.0}, direction = defines.direction.south}
+      },
+      filter = "steam"
+    },
     emissions_per_minute = {pollution = -10},
+    minimum_temperature = 250,
+    scale_fluid_usage = true
   },
   allowed_module_categories = {"tree"}
 }

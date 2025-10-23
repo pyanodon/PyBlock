@@ -27,11 +27,24 @@ ITEM {
 }
 
 require "make_copy" ("seaweed-crop"):set_fields{
-  energy_usage = "150kW",
+  energy_usage = "204kW",
   energy_source = {
-    type = "void",
-    usage_priority = "secondary-input",
-    emissions_per_minute = {pollution = -5},
+    type = "fluid",
+    effectivity = 0.5,
+    fluid_box = {
+      volume = 200,
+      pipe_covers = pipecoverspictures(),
+      pipe_picture = py.sexy_pipe_pictures(),
+      secondary_draw_orders = {north = -1, east = -1, west = -1},
+      pipe_connections = {
+        {flow_direction = "input-output", position = {6.0, -4.0}, direction = defines.direction.east},
+        {flow_direction = "input-output", position = {-6.0, -4.0}, direction = defines.direction.west}
+      },
+      filter = "steam"
+    },
+    emissions_per_minute = {pollution = -10},
+    minimum_temperature = 250,
+    scale_fluid_usage = true
   },
   allowed_module_categories = {"seaweed"}
 }
