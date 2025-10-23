@@ -202,8 +202,8 @@ RECIPE("flora-collector-mk01"):replace_ingredient("soil-extractor-mk01", "soil-e
 RECIPE("compost-plant-mk01"):replace_unlock("compost", "fertilizer-mk01"):add_ingredient{type = "item", name = "compost-plant-mk00", amount = 1}
 RECIPE("distilator"):add_ingredient{type = "item", name = "ddc-mk00", amount = 1}
 RECIPE("fwf-mk01"):remove_ingredient("steam-engine"):add_ingredient{type = "item", name = "fwf-mk00", amount = 1}
--- RECIPE("fawogae-plantation-mk01"):remove_ingredient("steam-engine"):add_ingredient{type = "item", name = "fawogae-plantation-mk00", amount = 1}
--- RECIPE("spore-collector-mk01"):remove_ingredient("steam-engine"):add_ingredient{type = "item", name = "spore-collector-mk00", amount = 1}
+RECIPE("fawogae-plantation-mk01"):remove_ingredient("steam-engine"):add_ingredient{type = "item", name = "fawogae-plantation-mk00", amount = 1}
+RECIPE("spore-collector-mk01"):remove_ingredient("steam-engine"):add_ingredient{type = "item", name = "spore-collector-mk00", amount = 1}
 RECIPE("geothermal-plant-mk01"):add_ingredient{type = "item", name = "pipe", amount = 80}:add_ingredient{type = "item", name = "concrete", amount = 150}
 RECIPE("slaughterhouse-mk01"):add_ingredient{type = "item", name = "slaughterhouse-mk00", amount = 1}
 RECIPE("soil-extractor-mk01"):replace_unlock("automation-science-pack", "soil-washing"):replace_ingredient("burner-mining-drill", "soil-extractor-mk00", 1)
