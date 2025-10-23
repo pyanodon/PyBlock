@@ -18,6 +18,7 @@ Date: ???
     - Moved titanium smelting recipe to evaporation
     - Re-added Bio-sample to Yaedols sample recipe
     - Re-added titanium to Yaedols culture recipe
+    - Made MK 00 machines half as efficient to match the efficiency of steam engines
     - Increased Atomizer MK 00 power draw from 500 -> 700 kW
     - Increased Automated Screener MK 00 power draw from 80 -> 180 kW
     - Increased Compost Plant MK 00 power draw from 300 -> 450 kW
