@@ -88,6 +88,7 @@ RECIPE("dried-meat-01"):replace_unlock("rendering", "water-animals-mk01"):set_re
 TECHNOLOGY("fawogae-mk02"):remove_pack("py-science-pack-2"):add_pack("logistic-science-pack")
 
 -- double faw speeds (you're welcome skosko)
+data.raw["assembling-machine"]["fawogae-plantation-mk00"].crafting_speed = 4 * data.raw["assembling-machine"]["fawogae-plantation-mk00"].crafting_speed
 data.raw["assembling-machine"]["fawogae-plantation-mk01"].crafting_speed = 4 * data.raw["assembling-machine"]["fawogae-plantation-mk01"].crafting_speed
 data.raw["assembling-machine"]["fawogae-plantation-mk02"].crafting_speed = 4 * data.raw["assembling-machine"]["fawogae-plantation-mk02"].crafting_speed
 data.raw["assembling-machine"]["fawogae-plantation-mk03"].crafting_speed = 4 * data.raw["assembling-machine"]["fawogae-plantation-mk03"].crafting_speed

@@ -26,7 +26,6 @@ ITEM {
 }
 
 require "make_copy" ("fawogae-plantation"):set_fields{
-  crafting_speed = data.raw["assembling-machine"]["fawogae-plantation-mk01"].crafting_speed * 0.2 * 4,
   energy_usage = "48kW",
   energy_source = {
     type = "fluid",
