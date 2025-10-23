@@ -32,7 +32,7 @@ require "make_copy" ("spore-collector"):set_fields{
     type = "fluid",
     effectivity = 0.5,
     fluid_box = {
-      volume = 10,
+      volume = 200,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
         {flow_direction = "input-output",   position = {-3, 0}, direction = 12},

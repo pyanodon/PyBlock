@@ -31,7 +31,7 @@ require "make_copy" ("fawogae-plantation"):set_fields{
     type = "fluid",
     effectivity = 0.5,
     fluid_box = {
-      volume = 10,
+      volume = 200,
       pipe_covers = py.pipe_covers(false, true, true, true),
       pipe_picture = data.raw["assembling-machine"]["fawogae-plantation-mk01"].fluid_boxes[1].pipe_picture,
       pipe_connections = {
@@ -40,6 +40,7 @@ require "make_copy" ("fawogae-plantation"):set_fields{
       },
       filter = "steam"
     },
+    emissions_per_minute = {pollution = -10},
     minimum_temperature = 250,
     scale_fluid_usage = true
   },
