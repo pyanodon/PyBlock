@@ -214,10 +214,6 @@ RECIPE("wpu-mk01"):replace_unlock("automation-science-pack", "wood-processing"):
 -- move check valve from fluid handling to assembly
 RECIPE("py-check-valve"):replace_unlock("fluid-handling", "steel-processing")
 
-RECIPE("earth-generic-sample"):replace_unlock("xenobiology", "biotech-mk01")
-
-RECIPE("data-array"):remove_ingredient("titanium-plate")
-
 RECIPE("molten-zinc-01"):set_ingredient_amount("heavy-oil", 40)
 
 -- create pumping productivity techs

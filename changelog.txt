@@ -12,6 +12,12 @@ Date: ???
     - Sawweed Crop Mk 00 (this name too)
     - LandBlock preset (normal terrain gen, no resources)
   Changes:
+    - Moved Generic Earth DNA Sample, Bio-container, and Bio-sample to xenobiology from biotech mk01
+    - Moved Biofactory mk01 back to plastics from biotech mk01
+    - Re-added titanium to Smelter and Data array recipes
+    - Moved titanium smelting recipe to evaporation
+    - Re-added Bio-sample to Yaedols sample recipe
+    - Re-added titanium to Yaedols culture recipe
     - Increased Atomizer MK 00 power draw from 500 -> 700 kW
     - Increased Automated Screener MK 00 power draw from 80 -> 180 kW
     - Increased Compost Plant MK 00 power draw from 300 -> 450 kW

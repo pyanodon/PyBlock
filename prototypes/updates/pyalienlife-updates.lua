@@ -72,7 +72,7 @@ RECIPE("cadaveric-arum-1-soil"):set_result_amount("cadaveric-arum", 7).energy_re
 RECIPE("cadaveric-arum-1-msa"):set_result_amount("cadaveric-arum", 7).energy_required = 110  -- TURD
 RECIPE("stone-wool"):replace_unlock("zipir", "cadaveric-arum")
 RECIPE("stone-wool2"):replace_unlock("zipir", "cadaveric-arum")
-RECIPE("cadaveric-arum-mk01"):remove_ingredient("hydrocyclone-mk01"):remove_ingredient("electronic-circuit"):remove_ingredient("plastic-bar"):remove_ingredient("intermetallics"):remove_ingredient("steel-plate"):add_ingredient {type = "item", name = "steel-plate", amount = 5}:add_ingredient {type = "item", name = "pipe", amount = 4}:add_ingredient {type = "item", name = "soil", amount = 20}:remove_ingredient("botanical-nursery")
+RECIPE("cadaveric-arum-mk01"):remove_ingredient("hydrocyclone-mk01"):remove_ingredient("electronic-circuit"):remove_ingredient("plastic-bar"):remove_ingredient("intermetallics"):set_ingredient_amount("steel-plate", 5):add_ingredient {type = "item", name = "pipe", amount = 4}:add_ingredient {type = "item", name = "soil", amount = 20}:remove_ingredient("botanical-nursery")
 
 -- move cadaveric 2 up to logi
 RECIPE("blood-meal"):replace_unlock("nylon", "cadaveric-arum-mk02")
@@ -186,8 +186,9 @@ RECIPE("kicalk-zn"):replace_unlock("phytomining-mk02", "phytomining")
 
 RECIPE("zn-biomass-extraction"):remove_ingredient("steam"):add_ingredient {type = "fluid", name = "steam", amount = 100, minimum_temperature = 250}:replace_unlock("phytomining-mk02", "phytomining")
 
---PY SCI 1 TWEAKS
-RECIPE("biofactory-mk01"):replace_unlock("plastics", "biotech-mk01")
+-- move biocontainer, biosample, generic DNA sample to xenobiology
+RECIPE("bio-container"):replace_unlock("biotech-mk01", "xenobiology")
+RECIPE("bio-sample"):replace_unlock("biotech-mk01", "xenobiology")
 
 RECIPE("flavonoids"):replace_unlock("yaedols", "py-science-pack-2")
 
@@ -200,18 +201,16 @@ TECHNOLOGY("phytomining"):remove_pack("py-science-pack-1"):remove_pack("logistic
 
 TECHNOLOGY("compost"):remove_pack("py-science-pack-1").prerequisites = { "steel-processing" }
 
-RECIPE("smelter-mk01"):remove_ingredient("titanium-plate")
-
 RECIPE("yaedols-codex"):set_ingredient_amount("electronic-circuit", 25)
-RECIPE("yaedols-culture-mk01"):remove_ingredient("intermetallics"):remove_ingredient("titanium-plate"):set_ingredient_amount("electronic-circuit", 25)
+RECIPE("yaedols-culture-mk01"):remove_ingredient("intermetallics"):set_ingredient_amount("electronic-circuit", 25):set_ingredient_amount("titanium-plate", 20)
 
-RECIPE("yaedols-sample"):remove_ingredient("cdna"):remove_ingredient("alien-sample01"):remove_ingredient("bio-sample"):remove_ingredient("moss-gen")
+RECIPE("yaedols-sample"):remove_ingredient("cdna"):remove_ingredient("alien-sample01"):remove_ingredient("moss-gen")
 RECIPE("yaedols-1"):remove_ingredient("fertilizer")
 
-RECIPE("ti-biomass-extraction"):remove_ingredient("steam"):add_ingredient{type = "fluid", name = "steam", amount = 100, minimum_temperature = 250}:replace_unlock("phytomining-mk02", "yaedols")
 RECIPE("yaedols-ti"):replace_unlock("phytomining-mk02", "yaedols")
+RECIPE("ti-biomass-extraction"):replace_ingredient("steam", {type = "fluid", name = "steam", amount = 100, minimum_temperature = 250}):replace_unlock("phytomining-mk02", "yaedols")
 
-RECIPE("titanium-plate-1"):replace_unlock("alloys-mk01", "yaedols")
+RECIPE("titanium-plate-1"):replace_unlock("alloys-mk01", "fluid-processing-machines-1")
 
 RECIPE("flue-gas-1").category = "gasifier"
 RECIPE("flue-gas-3"):remove_unlock("compost")
