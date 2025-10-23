@@ -16,7 +16,6 @@ return function (base_name)
   new_entity.crafting_speed = new_entity.crafting_speed * 0.5
   new_entity.fast_replaceable_group = base_name
   new_entity.module_slots = ENTITY(base_name .. "-mk01").module_slots ~= 1 and ENTITY(base_name .. "-mk01").module_slots or 0
-  new_entity.crafting_speed = 0.5
   new_entity.next_upgrade = base_name .. "-mk01"
   data.raw[new_entity.type][base_name .. "-mk00"] = new_entity
   return ENTITY(base_name .. "-mk00")
