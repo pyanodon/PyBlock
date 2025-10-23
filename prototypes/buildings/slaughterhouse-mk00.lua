@@ -30,7 +30,7 @@ ITEM {
 }
 
 require "make_copy" ("slaughterhouse"):set_fields{
-  energy_usage = "250kW",
+  energy_usage = "125kW",
   energy_source = {
     type = "fluid",
     effectivity = 0.5,

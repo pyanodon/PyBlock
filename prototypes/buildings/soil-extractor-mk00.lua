@@ -27,7 +27,7 @@ ITEM {
 }
 
 require "make_copy" ("soil-extractor"):set_fields{
-  energy_usage = "320kW",
+  energy_usage = "160kW",
   energy_source = {
     type = "fluid",
     effectivity = 0.5,

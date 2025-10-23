@@ -49,7 +49,7 @@ burner_washer.energy_source = {
   },
   scale_fluid_usage = true
 }
-burner_washer.energy_usage = "200kW"
+burner_washer.energy_usage = "100kW"
 burner_washer.next_upgrade = "washer"
 burner_washer.graphics_set.animation.layers[2].tint = {r = 0.5, g = 0.5, b = 0.5, a = 1.0}
 data.raw["assembling-machine"]["washer-mk00"] = burner_washer

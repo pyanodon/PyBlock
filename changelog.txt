@@ -18,16 +18,16 @@ Date: ???
     - Moved titanium smelting recipe to evaporation
     - Re-added Bio-sample to Yaedols sample recipe
     - Re-added titanium to Yaedols culture recipe
-    - Made MK 00 machines half as efficient to match the efficiency of steam engines
+    - Made MK 00 machines half as efficient to match the efficiency of steam engines, so 700 kW steam for MK 00 is the same steam consumption as 700 kW electric for MK 01
     - Increased Atomizer MK 00 power draw from 500 -> 700 kW
-    - Increased Automated Screener MK 00 power draw from 80 -> 180 kW
-    - Increased Compost Plant MK 00 power draw from 300 -> 450 kW
+    - Increased Automated Screener MK 00 power draw from 80 -> 270 kW
+    - Increased Compost Plant MK 00 power draw from 300 -> 440 kW
     - Increased DDC MK 00 power draw from 200 -> 280 kW
     - Increased Slaughterhouse MK 00 power draw from 150 -> 250 kW
     - Increased Soil Extractor MK 00 power draw from 200 -> 320 kW
-    - Increased Solid Separator MK 00 power draw from 800 -> 1200 kW
+    - Increased Solid Separator MK 00 power draw from 800 -> 1.2 MW
     - Increased Washer MK 00 power draw from 100 -> 200 kW
-    - Increased WPU MK 00 power draw from 150 -> 350 kW
+    - Increased WPU MK 00 power draw from 150 -> 390 kW
     - Increased Shunt Inserter power draw
     - Decreased saline water costs of the first two fish breeding recipes to 60 and 80, respectively
     - Moved fish to tin back to molecular decohesion stage 2

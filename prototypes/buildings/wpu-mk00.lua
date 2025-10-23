@@ -29,7 +29,7 @@ ITEM {
 }
 
 require "make_copy" ("wpu"):set_fields{
-  energy_usage = "350kW",
+  energy_usage = "195kW",
   crafting_categories = {"wpu", "wpu-handcrafting"},
   energy_source = {
     type = "fluid",

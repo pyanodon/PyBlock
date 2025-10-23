@@ -43,7 +43,7 @@ require "make_copy" ("compost-plant"):set_fields{
     },
     scale_fluid_usage = true,
   },
-  energy_usage = "450kW",
+  energy_usage = "220kW",
   source_inventory_size = 1,
   result_inventory_size = 1
 }
