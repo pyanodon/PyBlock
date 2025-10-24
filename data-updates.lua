@@ -247,7 +247,8 @@ drilling_categories = {
 pumping_categories = {
   coalbed = true,
   fracking = true,
-  pumpjack = true
+  pumpjack = true,
+  geowater = true
 }
 
 for r, recipe in pairs(data.raw.recipe) do
