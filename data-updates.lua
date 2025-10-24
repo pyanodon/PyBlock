@@ -77,7 +77,7 @@ end
 
 TECHNOLOGY("excavation-1"):remove_pack("logistic-science-pack"):remove_pack("chemical-science-pack")
 
-RECIPE("soot-separation"):add_ingredient{type = "item", name = "ore-nickel", amount = 1, probability = 0.1}
+RECIPE("soot-separation"):add_result{type = "item", name = "ore-nickel", amount = 1, probability = 0.1}
 
 RECIPE("mining-antimony"):replace_unlock("excavation-2", "excavation-1")
 
