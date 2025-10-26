@@ -4,7 +4,7 @@ TECHNOLOGY {
   icon = "__PyBlock__/graphics/technology/molecular-decohesion-mk00.png",
   icon_size = 128,
   order = "c-a",
-  prerequisites = {"fawogae-mk00"},
+  prerequisites = {"coal-processing-0"},
   effects = {},
   research_trigger = {
     type = "craft-item",
@@ -30,6 +30,21 @@ TECHNOLOGY {
 
 TECHNOLOGY {
   type = "technology",
+  name = "coal-processing-0",
+  icon = "__PyBlock__/graphics/technology/coal-processing-0.png",
+  icon_size = 128,
+  order = "c-a",
+  prerequisites = {"fawogae-mk00"},
+  effects = {},
+  research_trigger = {
+    type = "craft-item",
+    item = "fawogae",
+    count = 10
+  }
+}
+
+TECHNOLOGY {
+  type = "technology",
   name = "wood-processing-0",
   icon = "__PyBlock__/graphics/technology/wood-processing-0.png",
   icon_size = 128,
@@ -46,10 +61,18 @@ TECHNOLOGY {
   ignore_tech_cost_multiplier = true
 }
 
+TECHNOLOGY {
+  type = "technology",
+  name = "water-invertebrates-mk00",
+  icon = "__PyBlock__/graphics/technology/water-invertebrates-mk00.png",
+  icon_size = 128,
+  order = "c-a",
+}
+
 --buildings--
 require("prototypes/buildings/atomizer-mk00")
 require("prototypes/buildings/ddc-mk00")
-require("prototypes/buildings/washer-mk00")
+-- require("prototypes/buildings/washer-mk00")
 require("prototypes/buildings/automated-screener-mk00")
 require("prototypes/buildings/compost-plant-mk00")
 require("prototypes/buildings/soil-extractor-mk00")
@@ -62,6 +85,10 @@ require("prototypes/buildings/shunt-loader")
 require("prototypes/buildings/shunt-inserter")
 require("prototypes/buildings/seaweed-crop-mk00")
 require("prototypes/buildings/fwf-mk00")
+require("prototypes/buildings/fawogae-plantation-mk00")
+require("prototypes/buildings/spore-collector-mk00")
+require("prototypes/buildings/bioreactor-mk00")
+require("prototypes/buildings/sponge-culture-mk00")
 
 --UNUSED
 --require("prototypes/buildings/fish-farm-mk00")

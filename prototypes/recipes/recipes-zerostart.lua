@@ -26,21 +26,19 @@ RECIPE{
   allow_as_intermediate = false,
   main_product = "soil"
 }
-if settings.startup["disable-pyblock-floaters"].value then
-  RECIPE{
-    name = "forage-fish",
-    enabled = true,
-    energy_required = 1,
-    category = "handcrafting",
-    results = {{type = "item", name = "fish", amount_min = 0, amount_max = 5}},
-    allow_as_intermediate = false,
-    main_product = "soil"
-  }
-end
+RECIPE{
+  name = "forage-fish",
+  enabled = true,
+  energy_required = 8,
+  category = "handcrafting",
+  results = {{type = "item", name = "fish", amount_min = 0, amount_max = 2}},
+  allow_as_intermediate = false,
+  main_product = "fish"
+}
 
 -- quicker dehydration
 RECIPE{
-  name = "dry-seaweed",
+  name = "manual-dry-seaweed",
   enabled = true,
   energy_required = 0.5,
   category = "handcrafting",
@@ -50,13 +48,14 @@ RECIPE{
   main_product = "dry-seaweed"
 }
 RECIPE{
-  name = "bulk-dry-seaweed",
+  name = "dry-seaweed",
   enabled = false,
   energy_required = 5,
   category = "smelting",
   ingredients = {{type = "item", name = "seaweed", amount = 4}},
   results = {{type = "item", name = "dry-seaweed", amount_min = 0, amount_max = 4, probability = 0.9}},
   allow_as_intermediate = false,
+  allow_productivity = true,
   main_product = "dry-seaweed"
 }:add_unlock("seaweed-mk00")
 -- rehydration and bulk rehydration
@@ -73,13 +72,13 @@ RECIPE{
 RECIPE{
   name = "seaweed-rehydrate",
   enabled = false,
-  energy_required = 0.5,
-  category = "crafting-with-fluid",
+  energy_required = 5,
+  category = "seaweed",
   ingredients = {
-    { type = "item", name = "dry-seaweed", amount = 2 },
+    { type = "item", name = "dry-seaweed", amount = 8 },
     { type = "fluid", name = "water", amount = 100 }
   },
-  results = {{type = "item", name = "seaweed", amount = 2}},
+  results = {{type = "item", name = "seaweed", amount = 8}},
   allow_as_intermediate = false,
   main_product = "seaweed"
 }:add_unlock("seaweed-mk00")
@@ -92,17 +91,22 @@ RECIPE{
   category = "handcrafting",
   ingredients = {{type = "item", name = "wood", amount = 1}},
   results = {{type = "item", name = "charcoal", amount = 1, probability = 0.5}},
+  subgroup = 'py-items',
+  order = 'charcoal',
   allow_as_intermediate = false,
   main_product = "charcoal"
 }
 RECIPE{
-  name = "bulk-charcoal",
+  name = "charcoal",
   enabled = false,
   energy_required = 5,
   category = "smelting",
-  ingredients = {{type = "item", name = "wood", amount = 2}},
-  results = {{type = "item", name = "charcoal", amount_min = 0, amount_max = 5}},
+  ingredients = {{type = "item", name = "wood", amount = 3}},
+  results = {{type = "item", name = "charcoal", amount_min = 0, amount_max = 6}},
+  subgroup = 'py-items',
+  order = 'charcoal',
   allow_as_intermediate = false,
+  allow_productivity = true,
   main_product = "charcoal"
 }:add_unlock("wood-processing-0")
 
@@ -138,7 +142,7 @@ RECIPE{
 -- crush charcoal into ash and dust
 RECIPE{
   name = "handsort-charcoal",
-  enabled = false,
+  enabled = true,
   energy_required = 1,
   category = "handcrafting",
   ingredients = {{type = "item", name = "charcoal", amount = 1}},
@@ -149,7 +153,7 @@ RECIPE{
   },
   allow_as_intermediate = false,
   main_product = "ash"
-}:add_unlock("fawogae-mk00")
+}
 -- sort charcoal, but automatic
 RECIPE{
   name = "sort-charcoal",
@@ -178,26 +182,10 @@ RECIPE{
   },
   main_product = "ash"
 }:add_unlock("ash-separation")
--- handsort ash for soot and oxide
-RECIPE{
-  name = "ash-sorting-manual",
-  enabled = false,
-  energy_required = 2,
-  icon = "__pycoalprocessinggraphics__/graphics/icons/ash-separation.png",
-  icon_size = 32,
-  category = "handcrafting",
-  ingredients = {{type = "item", name = "ash", amount = 5}},
-  results = {
-    { type = "item", name = "coal-dust", amount = 1, probability = 0.5 },
-    { type = "item", name = "iron-oxide", amount = 1, probability = 0.2 },
-    { type = "item", name = "soot", amount = 1, probability = 0.75 }
-  },
-  allow_as_intermediate = false
-}:add_unlock("fawogae-mk00")
 -- handsort soot for copper and iron
 RECIPE{
   name = "soot-sorting-manual",
-  enabled = false,
+  enabled = true,
   energy_required = 2,
   icon = "__pypetroleumhandlinggraphics__/graphics/icons/class-s.png",
   category = "handcrafting",
@@ -207,7 +195,7 @@ RECIPE{
     { type = "item", name = "copper-ore", amount = 1, probability = 0.4 }
   },
   allow_as_intermediate = false
-}:add_unlock("fawogae-mk00")
+}
 
 -- basic swf recipe
 RECIPE{

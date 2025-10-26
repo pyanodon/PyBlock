@@ -4,6 +4,7 @@ require "recipes.recipes-zerostart"
 local dry_seaweed = table.deepcopy(data.raw.module.seaweed)
 dry_seaweed.name = "dry-seaweed"
 dry_seaweed.localised_name = nil
+dry_seaweed.icons[1].tint = {0.8, 0.8, 0.8, 1}
 -- TODO update icon and possibly description, as well as module properties
 ---@diagnostic disable-next-line: undefined-field
 if type(data.data_crawler) == "string" and string.sub(data.data_crawler, 1, 5) == "yafc " then
@@ -29,8 +30,8 @@ ITEM{
   name = "charcoal",
   icon = "__PyBlock__/graphics/icons/charcoal.png",
   subgroup = 'py-items',
-  order = 'a3',
-  stack_size = 100
+  order = 'charcoal',
+  stack_size = 200
 }
 
 -- change stone furnace to take bricks, and more of them
@@ -49,7 +50,16 @@ RECIPE("sand-brick"):set_fields{
   crafting_category = "hpf"
 }
 
+-- allow the player to handcraft basic soot and ash separation
+RECIPE("ash-separation").additional_categories = {"handcrafting", "solid-separator"}
+RECIPE("soot-separation").additional_categories = {"handcrafting", "solid-separator"}
+
 -- update seaweed to spoil if spoilage is enabled
-if feature_flags.spoiling then
+if feature_flags.spoiling and settings.startup["py-enable-decay"].value then
   ITEM("seaweed"):spoil("dry-seaweed", 60*60*60) -- spoil after an hour
+  for _, recipe in pairs{
+    ""
+  } do
+    -- replace charcoal with hot coals in certain recipes
+  end
 end

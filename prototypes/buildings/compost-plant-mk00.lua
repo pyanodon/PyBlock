@@ -29,7 +29,7 @@ ITEM {
 require "make_copy" ("compost-plant"):set_fields{
   energy_source = {
     type = "fluid",
-    effectivity = 1,
+    effectivity = 0.5,
     emissions = 1,
     fluid_box = {
       volume = 200,
@@ -43,7 +43,7 @@ require "make_copy" ("compost-plant"):set_fields{
     },
     scale_fluid_usage = true,
   },
-  energy_usage = "450kW",
+  energy_usage = "220kW",
   source_inventory_size = 1,
   result_inventory_size = 1
 }

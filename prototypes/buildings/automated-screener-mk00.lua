@@ -29,10 +29,10 @@ require "make_copy" ("automated-screener"):set_fields{
   energy_source = {
     type = "burner",
     fuel_categories = {"chemical", "biomass"},
-    effectivity = 1,
+    effectivity = 0.5,
     fuel_inventory_size = 1,
     burnt_inventory_size = 1,
     emissions_per_minute = {pollution = 0.06}
   },
-  energy_usage = "180kW"
+  energy_usage = "135kW"
 }

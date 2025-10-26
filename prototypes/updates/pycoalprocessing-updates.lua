@@ -17,7 +17,7 @@ RECIPE("landfill"):remove_unlock("landfill"):set_fields {enabled = true}
 
 TECHNOLOGY("landfill"):set_fields {enabled = false}
 
-RECIPE("coal-gas-from-wood"):replace_unlock("coal-processing-1", "fawogae-mk00")
+RECIPE("coal-gas-from-wood"):replace_unlock("coal-processing-1", "coal-processing-0")
 
 -- buff tailings -> nexelit
 RECIPE("nexelit-ore-1"):replace_result("nexelit-ore", "nexelit-ore", 3)

@@ -60,7 +60,7 @@ RECIPE {
   results = {
     {type = "item", name = "ddc-mk00", amount = 1}
   }
-}:add_unlock("fawogae-mk00")
+}:add_unlock("coal-processing-0")
 
 ITEM {
   type = "item",
@@ -125,7 +125,7 @@ ENTITY {
   energy_source = {
     type = "burner",
     fuel_categories = {"chemical", "biomass"},
-    effectivity = 1,
+    effectivity = 0.5,
     fuel_inventory_size = 1,
     burnt_inventory_size = 1,
     emissions = 0.01,

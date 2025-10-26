@@ -12,25 +12,124 @@ Date: ???
     - Sawweed Crop Mk 00 (this name too)
     - LandBlock preset (normal terrain gen, no resources)
   Changes:
+    - Moved Generic Earth DNA Sample, Bio-container, and Bio-sample to xenobiology from biotech mk01
+    - Moved Biofactory mk01 back to plastics from biotech mk01
+    - Re-added titanium to Smelter and Data array recipes
+    - Moved titanium smelting recipe to evaporation
+    - Re-added Bio-sample to Yaedols sample recipe
+    - Re-added titanium to Yaedols culture recipe
+    - Made MK 00 machines half as efficient to match the efficiency of steam engines, so 700 kW steam for MK 00 is the same steam consumption as 700 kW electric for MK 01
+    - Increased Atomizer MK 00 power draw from 500 -> 700 kW
+    - Increased Automated Screener MK 00 power draw from 80 -> 270 kW
+    - Increased Compost Plant MK 00 power draw from 300 -> 440 kW
+    - Increased DDC MK 00 power draw from 200 -> 280 kW
+    - Increased Slaughterhouse MK 00 power draw from 150 -> 250 kW
+    - Increased Soil Extractor MK 00 power draw from 200 -> 320 kW
+    - Increased Solid Separator MK 00 power draw from 800 -> 1.2 MW
+    - Increased Washer MK 00 power draw from 100 -> 200 kW
+    - Increased WPU MK 00 power draw from 150 -> 390 kW
+    - Increased Shunt Inserter power draw
+    - Decreased saline water costs of the first two fish breeding recipes to 60 and 80, respectively
+    - Moved fish to tin back to molecular decohesion stage 2
+    - Moved fish oil to tin to molecular decohesion stage 1
+    - Moved meat to tin to water animals stage 1
+    - Moved tin plate smelting to water animals stage 1
+    - Moved tinned cable to solder stage 1
+    - Increased phytoplankton from flue gas cost
+    - Moved tin mk01 back to py1, now you need to use jerky or flue gas
     - Nerfed offshore pump from 1200/s -> 90/s
     - Buffed pumpjack water pumping from 300/s -> 450/s (increases with machine level)
-    - Increased energy cost of most mk00 machines: atomizer, automated screener, compost plant, ddc, solid separator, washer, wpu, and shunt inserter
+    - Moved washer mk01 to electrolysis and mk00 to soil washing
     - Changed native flora, sap, and moss cultivation recipes to be higher probability but more expensive
     - Moved sap cultivation to sap tech
-    - Removed the 'ignore_tech_cost_multiplier' flag from unrelated technologies
     - Removed stone and stone furnace from the starting inventory
     - Reduced seaweed and driftwood generation probability
-    - Updated landfill recipe to replace sand with soil
+    - Updated landfill recipe to just require soil
     - Moved solid separator mk01 to steel processing
-    - Reduced Laughterhouse Mk 00 crafting speed by 50%
-    - If spoilage is enabled, seaweed spoils into dry seaweed after two hours. This includes when in module slots of seaweed crop farms. Use the "Module Inserter" mod to interact with the module slots
-    - Added optional (recommended) dependency on Module Inserter for when spoilage is enabled.
+    - If spoilage is enabled, seaweed spoils into dry seaweed after two hours. This includes when in module slots of seaweed crop farms.
     - Changed the stone furnace recipe to take 8 stone bricks instead of 5 stone
     - Changed bootstrapping fawogae recipe to only require 2 wood instead of an empty planter box
     - Nerfed rich clay to bricks, but reduced the stone useage per brick (assuming crushing stone -> gravel -> sand) and added a charcoal component to the recipe. And moved it to the HPF
+    - Allowed geothermal vents to be affected by pumping productivity
+  Bugfixes:
+    - Moved flavonoids all the way back to the Py2 tech where it belongs
+    - Fixed Automated Screener Mk 00 not being an ingredient for the Mk 01 version
+    - Fixed Slaughterhouse Mk 00 crafting speed by being 1 instead of 0.5
+    - Fixed pumping productivity having prerequesites on mining prod instead of previous levels of pumping prod
+    - Fixed simple fish breeding recipe having a 1 instead of a 0 on the icon when recipe signals are enabled. Resolves https://github.com/pyanodon/pybugreports/issues/1238
+---------------------------------------------------------------------------------------------------
+Version: 3.2.14
+Date: 2025-09-16
+  Bugfixes:
+    - Fixed game not loading because steam power is a required research for automation science pack
+---------------------------------------------------------------------------------------------------
+Version: 3.2.13
+Date: 2025-09-16
+  Bugfixes:
+    - Fixed some techs having a too-fast cycle time
+---------------------------------------------------------------------------------------------------
+Version: 3.2.12
+Date: 2025-09-15
+  Bugfixes:
+    - Added DDC MK 00 to the DDC MK 01 recipe
+    - Autoteched the research tree. Things are definitely out of place.
+    - Moved Guar to logi sci to facilitate Phadai food production for rare earth ore
+---------------------------------------------------------------------------------------------------
+Version: 3.2.11
+Date: 2025-09-04
+  Changes:
+    - Buffed uranium phytomining to make MOX cells a viable option. I have no idea if MOX or uranium cells are better, but both are possible. Without candy shuffling at low science levels, uranium is far superior, but MOX is no longer a trap
+    - Buffed uranium enriched biomass to uranium ore recipe from 5:40 to 4:50
+    - Buffed uranium enriched biomass recipe times from 180:120:80, 120:100:80
+    - Buffed uranium enriched biomass recipe output from 10:20:80, 40:60:80
+    - Reduced bhoddos cost of urnaium enriched biomass from 8->5
+  Locale:
+    - Added Dutch locale courtesy of QatSquirrel on github
+---------------------------------------------------------------------------------------------------
+Version: 3.2.10
+Date: 2025-08-28
+  Changes:
+    - Marked Stellar Expedition as incompatible
+    - Reduced TBP cost of Uranyl Nitrate from 15 -> 10, increased crafting time from 15 -> 42
+---------------------------------------------------------------------------------------------------
+Version: 3.2.9
+Date: 2025-08-23
+  Bugfixes:
+    - Fixed crash with pyalienlife 3.0.57 due to duplicated functionality
+---------------------------------------------------------------------------------------------------
+Version: 3.2.8
+Date: 2025-08-17
+  Bugfixes:
+    - Fixed an occasional crash where the atomizer tech icon was the wrong size. Resolves https://github.com/pyanodon/pybugreports/issues/1157
+---------------------------------------------------------------------------------------------------
+Version: 3.2.7
+Date: 2025-08-13
+  Changes:
+    - Migrated wpu to wpu-mk01 internally
+---------------------------------------------------------------------------------------------------
+Version: 3.2.6
+Date: 2025-08-13
+  Changes:
+    - Changed internal name of "dirty-water-light" to "muddy-sludge".
+    - Changed internal name of "dirty-water-heavy" to "tailings".
+  Bugfixes:
+    - Fixed disabling fun entity names mod setting not applying to atomizer and solid separator
+    - Fixed disabling fun entity names mod setting breaking when using non-english locale
+---------------------------------------------------------------------------------------------------
+Version: 3.2.5
+Date: 2025-06-08
+  Locale:
+    - Updated Russian translation courtesy of @Astorin on github
+  Changes:
+    - Added DDC MK 00 to the DDC MK 01 recipe
+    - Added Automated Screamer MK 00 to the Automated Screener MK 01 recipe
+    - Added a mod setting to get rid of the fun MK 00 entity names DON'T YOU DARE USE IT
+  Bugfixes:
+    - Fix indentation so the changelog loads in the in-game mod manager
+    - Fixed Fawogae 2 not being moved to Fawogae Stage 1 and having incorrect product amount
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.4
-Date: ???
+Date: 2025-06-01
   Changes:
     - Buffed fertilized and agressive flora cultivation to be better than the previous recipe when considering the flora cost of manure
     - Buffed Thickened Coal Fines to Carbon Dust ratio from 1000:12 to 200:8. Resolves https://github.com/pyanodon/pybugreports/issues/976
@@ -357,9 +456,9 @@ Date: 2023-9-15
     - Moved saline to salt evap to evaporation tech
     - Added thumbnail. credit: Burr on discord
   Cadavaric arum:
-      - Removed botanical nursury from recipe
-      - Reduced steel plate requirement from 60 to 5
-      - added pipes(4), iron plates(5), and soil(20) as ingredients
+    - Removed botanical nursury from recipe
+    - Reduced steel plate requirement from 60 to 5
+    - added pipes(4), iron plates(5), and soil(20) as ingredients
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.2
 Date: 2023-9-4

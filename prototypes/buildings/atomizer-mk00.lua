@@ -4,7 +4,7 @@ RECIPE {
   energy_required = 0.5,
   enabled = false,
   ingredients = {
-    {type = "item", name = "washer-mk00",  amount = 1},
+    -- {type = "item", name = "washer-mk00",  amount = 1},
     {type = "item", name = "iron-plate",   amount = 15},
     {type = "item", name = "copper-plate", amount = 20},
     {type = "item", name = "pipe",         amount = 10}
@@ -37,5 +37,5 @@ require "make_copy" ("atomizer"):set_fields{
     burnt_inventory_size = 1,
     emissions_per_minute = {pollution = 0.06}
   },
-  energy_usage = "500kW"
+  energy_usage = "700kW"
 }

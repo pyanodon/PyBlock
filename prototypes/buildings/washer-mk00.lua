@@ -2,7 +2,7 @@ RECIPE {
   type = "recipe",
   name = "washer-mk00",
   energy_required = 4,
-  enabled = true,
+  enabled = false,
   ingredients = {
     {type = "item", name = "steam-engine",    amount = 1},
     {type = "item", name = "iron-plate",      amount = 10},
@@ -12,7 +12,7 @@ RECIPE {
   results = {
     {type = "item", name = "washer-mk00", amount = 1}
   }
-}
+}:add_unlock("soil-washing")
 
 ITEM {
   type = "item",
@@ -35,7 +35,7 @@ burner_washer.module_slots = 0
 burner_washer.crafting_speed = 0.5
 burner_washer.energy_source = {
   type = "fluid",
-  effectivity = 1,
+    effectivity = 0.5,
   emissions = 1,
   fluid_box = {
     volume = 200,
@@ -49,7 +49,7 @@ burner_washer.energy_source = {
   },
   scale_fluid_usage = true
 }
-burner_washer.energy_usage = "200kW"
+burner_washer.energy_usage = "100kW"
 burner_washer.next_upgrade = "washer"
 burner_washer.graphics_set.animation.layers[2].tint = {r = 0.5, g = 0.5, b = 0.5, a = 1.0}
 data.raw["assembling-machine"]["washer-mk00"] = burner_washer

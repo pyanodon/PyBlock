@@ -77,6 +77,25 @@ RECIPE {
   main_product = "saps"
 }:add_unlock("sap-mk01")
 
+-- sponge cultivation, for glass
+RECIPE {
+  type = "recipe",
+  name = "synthesize-sponge",
+  category = "seaweed",
+	subgroup = "py-alienlife-genetics",
+  enabled = false,
+  energy_required = 80,
+  ingredients = {
+    { type = "item", name = "stone", amount = 30 },
+    { type = "fluid", name = "water", amount = 1500 },
+    { type = "item", name = "seaweed", amount = 60 }
+  },
+  results = {
+    { type = "item", name = "sea-sponge", amount = 1, probability = 0.4 }
+  },
+  show_amount_in_title = false
+}:add_unlock("glass")
+
 -- native flora recipes
 RECIPE {
   type = "recipe",
