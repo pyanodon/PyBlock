@@ -42,7 +42,9 @@ end)
 
 -- landfill generation script
 script.on_event(defines.events.on_chunk_generated, function (event)
-  local tiles = event.surface.find_tiles_filtered{
+  local surface = event.surface
+  -- replaces walkable tiles with landfill
+  local tiles = surface.find_tiles_filtered{
     area = event.area,
     collision_mask = "water_tile",
     invert = true
@@ -55,12 +57,12 @@ script.on_event(defines.events.on_chunk_generated, function (event)
     }
   end
   -- set as landfill
-  event.surface.set_tiles(
+  surface.set_tiles(
     to_replace
   )
   -- set water as hidden tile
   for _, tile in pairs(to_replace) do
-    event.surface.set_hidden_tile(tile.position, "water")
+    surface.set_hidden_tile(tile.position, "water")
   end
 end)
 
@@ -69,4 +71,34 @@ script.on_configuration_changed(function (event)
   if event.mod_changes.PyBlock and event.mod_changes.PyBlock.old_version and helpers.compare_versions(event.mod_changes.PyBlock.old_version, "3.3.0") == -1 and helpers.compare_versions(event.mod_changes.PyBlock.new_version, "3.3.0") >= 0 then
     game.show_message_dialog {text = {"messages.pyblock-new-save-warning"}}
   end
+end)
+
+script.on_event(defines.events.on_cutscene_started, function(event)
+  if storage.easter_egg_spawned then return end
+  local surface = game.get_player(event.player_index).surface
+  -- shitty hack
+  local victims = surface.find_entities_filtered{
+    area = {{-32, -32}, {32, 32}},
+    name = "seaweed",
+    type = "fish",
+    limit = 1
+  }
+  if #victims > 0 then
+    victim = victims[#victims == 1 and 1 or math.random(1, #victims)]
+    local position, force = victim.position, victim.force
+    victim.destroy()
+    local result = surface.create_entity{
+      name = "corpse-easter-egg",
+      position = position,
+      collision_mask = "water_tile",
+      force = force
+    }
+    if result then
+      log(serpent.line(position))
+    end
+  end
+  for _, victim in pairs(victims) do
+
+  end
+  storage.easter_egg_spawned = true
 end)
