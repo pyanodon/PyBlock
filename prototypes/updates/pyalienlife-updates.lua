@@ -172,6 +172,21 @@ RECIPE("zogna-bacteria"):replace_unlock("microbiology-mk01", "biotech-mk01")
 
 RECIPE("soot-to-lead"):replace_unlock("oil-sands", "solder-mk01")
 
+-- glass
+-- RECIPE("zogna-bacteria"):remove_ingredient("small-lamp"):set_result_amount("zogna-bacteria", 15).energy_required = 6
+-- RECIPE("zogna-bacteria-darkness"):add_ingredient("small-lamp") -- TURD variation, it produces 20 with the lamp addition
+RECIPE("incubator-mk01"):remove_ingredient("duralumin"):remove_ingredient("titanium-plate"):add_ingredient{type = "item", name = "steel-plate", amount = 20}
+RECIPE("sea-sponge-processing-01"):replace_unlock("water-invertebrates-mk01", "glass")
+RECIPE("sea-sponge-1"):replace_unlock("water-invertebrates-mk01", "water-invertebrates-mk00")
+RECIPE("sea-sponge-sprouts"):replace_unlock("water-invertebrates-mk01", "water-invertebrates-mk00")
+RECIPE("sea-sponge-sprouts-processing-01"):replace_unlock("water-invertebrates-mk01", "water-invertebrates-mk00")
+RECIPE("sea-sponge-codex"):remove_unlock("water-invertebrates-mk01"):set_fields{hidden = true, hidden_in_factoriopedia = true}
+RECIPE("earth-sea-sponge-sample"):remove_unlock("water-invertebrates-mk01"):set_fields{hidden = true, hidden_in_factoriopedia = true}
+RECIPE("sea-sponge"):remove_unlock("water-invertebrates-mk01"):set_fields{hidden = true, hidden_in_factoriopedia = true}
+--[[
+
+--]]
+
 --Zinc
 
 TECHNOLOGY("kicalk"):remove_pack("py-science-pack-1"):remove_pack("logistic-science-pack")

@@ -61,6 +61,14 @@ TECHNOLOGY {
   ignore_tech_cost_multiplier = true
 }
 
+TECHNOLOGY {
+  type = "technology",
+  name = "water-invertebrates-mk00",
+  icon = "__PyBlock__/graphics/technology/water-invertebrates-mk00.png",
+  icon_size = 128,
+  order = "c-a",
+}
+
 --buildings--
 require("prototypes/buildings/atomizer-mk00")
 require("prototypes/buildings/ddc-mk00")
@@ -79,6 +87,8 @@ require("prototypes/buildings/seaweed-crop-mk00")
 require("prototypes/buildings/fwf-mk00")
 require("prototypes/buildings/fawogae-plantation-mk00")
 require("prototypes/buildings/spore-collector-mk00")
+require("prototypes/buildings/bioreactor-mk00")
+require("prototypes/buildings/sponge-culture-mk00")
 
 --UNUSED
 --require("prototypes/buildings/fish-farm-mk00")

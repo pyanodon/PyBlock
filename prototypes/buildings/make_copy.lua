@@ -1,5 +1,5 @@
 return function (base_name)
-  new_entity = table.deepcopy(data.raw["assembling-machine"][base_name .. "-mk01"] or data.raw.furnace[base_name .. "-mk01"])
+  new_entity = assert(table.deepcopy(data.raw["assembling-machine"][base_name .. "-mk01"] or data.raw.furnace[base_name .. "-mk01"]), "ERROR! no entity found: " .. base_name .. "-mk01")
   new_entity.name = base_name .. "-mk00"
   new_entity.localised_name = settings.startup["disable-pyblock-fun-names"].value and {"entity-name-alt." .. base_name .. "-mk00"} or {"entity-name." .. base_name .. "-mk00"}
   new_entity.localised_description = {"?", {"entity-description." .. base_name .. "-mk00"}, {"entity-description." .. base_name}}
