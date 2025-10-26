@@ -53,6 +53,7 @@ Date: ???
     - Allowed geothermal vents to be affected by pumping productivity
   Bugfixes:
     - Moved flavonoids all the way back to the Py2 tech where it belongs
+    - Fixed Automated Screener Mk 00 not being an ingredient for the Mk 01 version
     - Fixed Slaughterhouse Mk 00 crafting speed by being 1 instead of 0.5
     - Fixed pumping productivity having prerequesites on mining prod instead of previous levels of pumping prod
     - Fixed simple fish breeding recipe having a 1 instead of a 0 on the icon when recipe signals are enabled. Resolves https://github.com/pyanodon/pybugreports/issues/1238
