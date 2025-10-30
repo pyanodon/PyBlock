@@ -4,7 +4,11 @@ if settings.startup["pypp-tests"].value == true or mods["autotech"] then
   end
   -- so the game loads
   for _, planet in pairs(data.raw.planet) do
-    planet.map_gen_settings.autoplace_settings.entity.settings = {}
+    planet.map_gen_settings.autoplace_settings.entity.settings = {
+      driftwood = {},
+      seaweed = {},
+      fish = {}
+    }
   end
 end
 

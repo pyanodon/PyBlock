@@ -74,31 +74,27 @@ script.on_configuration_changed(function (event)
 end)
 
 script.on_event(defines.events.on_cutscene_started, function(event)
-  if storage.easter_egg_spawned then return end
   local surface = game.get_player(event.player_index).surface
   -- shitty hack
-  local victims = surface.find_entities_filtered{
-    area = {{-32, -32}, {32, 32}},
-    name = "seaweed",
-    type = "fish",
-    limit = 1
-  }
-  if #victims > 0 then
-    victim = victims[#victims == 1 and 1 or math.random(1, #victims)]
-    local position, force = victim.position, victim.force
-    victim.destroy()
-    local result = surface.create_entity{
-      name = "corpse-easter-egg",
-      position = position,
-      collision_mask = "water_tile",
-      force = force
+  local radius = 10
+  while true do
+    local victims = surface.find_entities_filtered{
+      radius = radius,
+      position = {-15, 5},
+      type = "fish"
     }
-    if result then
-      log(serpent.line(position))
+    if #victims > 0 then
+      victim = victims[#victims == 1 and 1 or math.random(1, #victims)]
+      local position, force = victim.position, victim.force
+      victim.destroy()
+      local result = surface.create_entity{
+        name = "corpse-easter-egg",
+        position = position,
+        collision_mask = "water_tile",
+        force = force
+      }
+      break
     end
+    radius = radius * 2
   end
-  for _, victim in pairs(victims) do
-
-  end
-  storage.easter_egg_spawned = true
 end)
