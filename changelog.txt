@@ -48,6 +48,7 @@ Date: ???
     - Moved solid separator mk01 to steel processing
     - If spoilage is enabled, seaweed spoils into dry seaweed after two hours. This includes when in module slots of seaweed crop farms.
     - Changed the stone furnace recipe to take 8 stone bricks instead of 5 stone
+    - Changed fawogae plantation fluid connections to be passthrough
     - Changed bootstrapping fawogae recipe to only require 2 wood instead of an empty planter box
     - Nerfed rich clay to bricks, but reduced the stone useage per brick (assuming crushing stone -> gravel -> sand) and added a charcoal component to the recipe. And moved it to the HPF
     - Allowed geothermal vents to be affected by pumping productivity

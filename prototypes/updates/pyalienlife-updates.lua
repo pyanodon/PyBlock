@@ -15,6 +15,9 @@ RECIPE("fawogae-plantation-mk01").ingredients = {
   {type = "item", name = "stone-brick", amount = 10}
 }
 
+data.raw["assembling-machine"]["fawogae-plantation-mk01"].fluid_boxes[1].pipe_connections[1].flow_direction = "input-output"
+data.raw["assembling-machine"]["fawogae-plantation-mk01"].fluid_boxes[2].pipe_connections[1].flow_direction = "input-output"
+
 RECIPE("fawogae-spore"):replace_unlock("fawogae-mk01", "fawogae-mk00").energy_required = 1
 RECIPE("fawogae-1"):replace_unlock("fawogae-mk01", "fawogae-mk00")
 
