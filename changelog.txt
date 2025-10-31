@@ -32,7 +32,7 @@ Date: ???
     - Decreased saline water costs of the first two fish breeding recipes to 60 and 80, respectively
     - Moved fish to tin back to molecular decohesion stage 2
     - Moved fish oil to tin to molecular decohesion stage 1
-    - Moved meat to tin to water animals stage 1
+    - Moved meat to tin to water animals stage 1 and reduced output to 4 tin ore per 5 meat
     - Moved tin plate smelting to water animals stage 1
     - Moved tinned cable to solder stage 1
     - Increased phytoplankton from flue gas cost
