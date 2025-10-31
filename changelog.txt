@@ -46,6 +46,7 @@ Date: ???
     - Reduced seaweed and driftwood generation probability
     - Updated landfill recipe to just require soil
     - Moved solid separator mk01 to steel processing
+    - Cadaveric arums now require acid gas. Their seeds requirement has been reduced to match.
     - If spoilage is enabled, seaweed spoils into dry seaweed after two hours. This includes when in module slots of seaweed crop farms.
     - Changed the stone furnace recipe to take 8 stone bricks instead of 5 stone
     - Changed fawogae plantation fluid connections to be passthrough
