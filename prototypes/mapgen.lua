@@ -35,6 +35,9 @@ data.raw["map-gen-presets"].default["pyblock-recommended"] = {
           },
           seaweed = {
             frequency = 1
+          },
+          ["corpse-easter-egg"] = {
+            frequency = 1
           }
         }
       }
@@ -209,6 +212,9 @@ data.raw["map-gen-presets"].default["pyblock-classic"] = {
             frequency = 1
           },
           seaweed = {
+            frequency = 1
+          },
+          ["corpse-easter-egg"] = {
             frequency = 1
           }
         }
@@ -385,6 +391,9 @@ data.raw["map-gen-presets"].default["pyblock-archipeligo"] = {
           },
           seaweed = {
             frequency = 1
+          },
+          ["corpse-easter-egg"] = {
+            frequency = 1
           }
         }
       }
@@ -428,6 +437,9 @@ data.raw["map-gen-presets"].default["pyblock-landblock"] = {
             frequency = 1
           },
           seaweed = {
+            frequency = 1
+          },
+          ["corpse-easter-egg"] = {
             frequency = 1
           }
         }

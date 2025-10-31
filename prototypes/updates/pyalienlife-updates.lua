@@ -83,7 +83,7 @@ RECIPE("stone-wool"):replace_unlock("zipir", "cadaveric-arum")
 RECIPE("stone-wool2"):replace_unlock("zipir", "cadaveric-arum")
 RECIPE("cadaveric-arum-mk01"):remove_ingredient("hydrocyclone-mk01"):remove_ingredient("electronic-circuit"):remove_ingredient("plastic-bar"):remove_ingredient("intermetallics"):set_ingredient_amount("steel-plate", 5):add_ingredient {type = "item", name = "pipe", amount = 4}:add_ingredient {type = "item", name = "soil", amount = 20}:remove_ingredient("botanical-nursery")
 
--- add acid gas req
+-- add acid gas req, reduce seed useage to match
 for _, addendum in pairs{
   "",
   "-msa",

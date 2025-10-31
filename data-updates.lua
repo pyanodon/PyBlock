@@ -32,7 +32,6 @@ require("prototypes/mapgen")
 --require("prototypes/updates/pyfusionenergy-updates")
 --require('prototypes/updates/pyhightech-updates')
 
---add driftwood for closer logs
 data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings.driftwood = {}
 
 data:extend {
@@ -59,7 +58,10 @@ data:extend {
         scale = 0.5
       }
     },
-    autoplace = {probability_expression = 0.001},
+    autoplace = {
+      probability_expression = 0.0025,
+      order = "driftwood"
+    },
     protected_from_tile_building = false
   }
 }
