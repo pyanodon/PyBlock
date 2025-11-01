@@ -73,13 +73,11 @@ script.on_configuration_changed(function (event)
   end
 end)
 
-if script.active_mods.pyvoidblock then return end
-
 script.on_event(defines.events.on_cutscene_started, function(event)
   local surface = game.get_player(event.player_index).surface
   -- shitty hack
   local radius = 10
-  while true do
+  while radius <= 200 do
     local victims = surface.find_entities_filtered{
       radius = radius,
       position = {-15, 5},
@@ -97,6 +95,6 @@ script.on_event(defines.events.on_cutscene_started, function(event)
       }
       break
     end
-    radius = radius * 2
+    radius = radius + 10
   end
 end)
