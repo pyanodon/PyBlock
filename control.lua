@@ -73,6 +73,8 @@ script.on_configuration_changed(function (event)
   end
 end)
 
+if script.active_mods.pyvoidblock then return end
+
 script.on_event(defines.events.on_cutscene_started, function(event)
   local surface = game.get_player(event.player_index).surface
   -- shitty hack
