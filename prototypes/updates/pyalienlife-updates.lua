@@ -193,16 +193,32 @@ RECIPE("zogna-bacteria"):replace_unlock("microbiology-mk01", "biotech-mk01")
 RECIPE("soot-to-lead"):replace_unlock("oil-sands", "solder-mk01")
 
 -- glass
--- RECIPE("zogna-bacteria"):remove_ingredient("small-lamp"):set_result_amount("zogna-bacteria", 15).energy_required = 6
--- RECIPE("zogna-bacteria-darkness"):add_ingredient("small-lamp") -- TURD variation, it produces 20 with the lamp addition
+RECIPE("zogna-bacteria"):remove_ingredient("small-lamp"):set_result_amount("zogna-bacteria", 15).energy_required = 6
+-- RECIPE("zogna-bacteria-darkness"):add_ingredient("small-lamp", 1):set_result_amount("zogna-bacteria", 20) -- TURD variation, it produces 20 with the lamp addition
 RECIPE("incubator-mk01"):remove_ingredient("duralumin"):remove_ingredient("titanium-plate"):add_ingredient{type = "item", name = "steel-plate", amount = 20}
-RECIPE("sea-sponge-processing-01"):replace_unlock("water-invertebrates-mk01", "glass")
-RECIPE("sea-sponge-1"):replace_unlock("water-invertebrates-mk01", "water-invertebrates-mk00")
 RECIPE("sea-sponge-sprouts"):replace_unlock("water-invertebrates-mk01", "water-invertebrates-mk00")
-RECIPE("sea-sponge-sprouts-processing-01"):replace_unlock("water-invertebrates-mk01", "water-invertebrates-mk00")
 RECIPE("sea-sponge-codex"):remove_unlock("water-invertebrates-mk01"):set_fields{hidden = true, hidden_in_factoriopedia = true}
 RECIPE("earth-sea-sponge-sample"):remove_unlock("water-invertebrates-mk01"):set_fields{hidden = true, hidden_in_factoriopedia = true}
 RECIPE("sea-sponge"):remove_unlock("water-invertebrates-mk01"):set_fields{hidden = true, hidden_in_factoriopedia = true}
+RECIPE("sea-sponge-1"):replace_unlock("water-invertebrates-mk01", "biotech-mk01"):set_ingredient_amount("zogna-bacteria", 20)
+RECIPE("sea-sponge-processing-01"):replace_unlock("water-invertebrates-mk01", "glass"):set_result_amount("ore-quartz", 100).energy_required = 20
+RECIPE("sea-sponge-sprouts-processing-01"):replace_unlock("water-invertebrates-mk01", "water-invertebrates-mk00"):set_result_amount("ore-quartz", 70).energy_required = 16
+
+-- t0 sponge
+RECIPE {
+  type = "recipe",
+  name = "sea-sponge-0",
+  category = "sponge",
+  enabled = false,
+  energy_required = 350,
+  ingredients = {
+    {type = "item", name = "sea-sponge-sprouts", amount = 1},
+    {type = "fluid", name = "muddy-sludge", amount = 150}
+  },
+  results = {
+    {type = "item", name = "sea-sponge", amount_min = 0, amount_max = 2, probability = 0.7}
+  }
+}:add_unlock("water-invertebrates-mk00")
 --[[
 
 --]]

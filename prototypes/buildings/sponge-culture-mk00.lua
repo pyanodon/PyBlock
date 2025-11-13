@@ -30,9 +30,21 @@ ITEM {
 require "make_copy" ("sponge-culture"):set_fields{
   energy_usage = "400kW",
   energy_source = {
-    type = "void",
-    usage_priority = "secondary-input",
+    type = "fluid",
+    effectivity = 0.5,
+    fluid_box = {
+      volume = 200,
+      pipe_covers = py.pipe_covers(false, true, true, true),
+      pipe_picture = data.raw["assembling-machine"]["sponge-culture-mk01"].fluid_boxes[1].pipe_picture,
+      pipe_connections = {
+        {flow_direction = "input-output", position = {-5, 2}, direction = defines.direction.west},
+        {flow_direction = "input-output", position = {5, 2}, direction = defines.direction.east}
+      },
+      filter = "steam"
+    },
     emissions_per_minute = {pollution = -10},
+    minimum_temperature = 250,
+    scale_fluid_usage = true
   },
   allowed_module_categories = {"sponge"}
 }
