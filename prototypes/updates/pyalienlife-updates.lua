@@ -216,7 +216,7 @@ RECIPE("sea-sponge-sprouts"):replace_unlock("water-invertebrates-mk01", "water-i
   name = "sea-sponge-sprouts",
   amount_min = 0,
   amount_max = 24,
-  probability = 1.3
+  probability = 0.85
 }):set_fields{
   main_product = "sea-sponge-sprouts",
   energy_required = 24
@@ -235,7 +235,7 @@ RECIPE{
     {type = "fluid", name = "water-saline", amount = 1000},
   },
   results = {
-    {type = "item", name = "sea-sponge-sprouts", amount_min = 0, amount_max = 42, probability = 0.75},
+    {type = "item", name = "sea-sponge-sprouts", amount_min = 0, amount_max = 42, probability = 1.1},
     {type = "fluid", name = "muddy-sludge", amount = 1200}
   },
   main_product = "sea-sponge-sprouts"
@@ -253,7 +253,7 @@ RECIPE {
     {type = "fluid", name = "muddy-sludge", amount = 150}
   },
   results = {
-    {type = "item", name = "sea-sponge", amount_min = 0, amount_max = 2, probability = 0.6}
+    {type = "item", name = "sea-sponge", amount_min = 0, amount_max = 2, probability = 1.2}
   }
 }:add_unlock("water-invertebrates-mk00")
 --[[
