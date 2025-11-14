@@ -201,8 +201,8 @@ RECIPE("earth-sea-sponge-sample"):remove_unlock("water-invertebrates-mk01"):set_
 RECIPE("sea-sponge"):remove_unlock("water-invertebrates-mk01"):set_fields{hidden = true, hidden_in_factoriopedia = true}
 RECIPE("sea-sponge-processing-01"):replace_unlock("water-invertebrates-mk01", "glass")--:set_result_amount("ore-quartz", 100).energy_required = 20
 RECIPE("sea-sponge-sprouts-processing-01"):replace_unlock("water-invertebrates-mk01", "water-invertebrates-mk00")--:set_result_amount("ore-quartz", 70).energy_required = 16
-RECIPE("sea-sponge-1"):replace_unlock("water-invertebrates-mk01", "biotech-mk01"):set_ingredient_amount("zogna-bacteria", 10):set_ingredient_amount("sea-sponge-sprouts", 5):replace_result("sea-sponge", {type = "item", name = "sea-sponge", amount_min = 0, amount_max = 5, probability = 0.75})
-RECIPE("sea-sponge-2"):set_ingredient_amount("zogna-bacteria", 10):set_ingredient_amount("sea-sponge-sprouts", 7):replace_result("sea-sponge", {type = "item", name = "sea-sponge", amount_min = 0, amount_max = 7, probability = 0.9})
+RECIPE("sea-sponge-1"):replace_unlock("water-invertebrates-mk01", "biotech-mk01"):set_ingredient_amount("zogna-bacteria", 10):set_ingredient_amount("sea-sponge-sprouts", 5):replace_result("sea-sponge", {type = "item", name = "sea-sponge", amount_min = 0, amount_max = 5, probability = 1.5})
+RECIPE("sea-sponge-2"):set_ingredient_amount("zogna-bacteria", 10):set_ingredient_amount("sea-sponge-sprouts", 7):replace_result("sea-sponge", {type = "item", name = "sea-sponge", amount_min = 0, amount_max = 7, probability = 1.8})
 RECIPE("sea-sponge-sprouts"):replace_unlock("water-invertebrates-mk01", "water-invertebrates-mk00"):add_ingredient{
   type = "fluid",
   name = "water-saline",
@@ -216,7 +216,7 @@ RECIPE("sea-sponge-sprouts"):replace_unlock("water-invertebrates-mk01", "water-i
   name = "sea-sponge-sprouts",
   amount_min = 0,
   amount_max = 24,
-  probability = 0.65
+  probability = 1.3
 }):set_fields{
   main_product = "sea-sponge-sprouts",
   energy_required = 24
