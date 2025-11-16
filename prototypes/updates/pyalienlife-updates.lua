@@ -199,24 +199,23 @@ RECIPE("incubator-mk01"):remove_ingredient("duralumin"):remove_ingredient("titan
 RECIPE("sea-sponge-codex"):remove_unlock("water-invertebrates-mk01"):set_fields{hidden = true, hidden_in_factoriopedia = true}
 RECIPE("earth-sea-sponge-sample"):remove_unlock("water-invertebrates-mk01"):set_fields{hidden = true, hidden_in_factoriopedia = true}
 RECIPE("sea-sponge"):remove_unlock("water-invertebrates-mk01"):set_fields{hidden = true, hidden_in_factoriopedia = true}
-RECIPE("sea-sponge-processing-01"):replace_unlock("water-invertebrates-mk01", "glass")--:set_result_amount("ore-quartz", 100).energy_required = 20
-RECIPE("sea-sponge-sprouts-processing-01"):replace_unlock("water-invertebrates-mk01", "water-invertebrates-mk00")--:set_result_amount("ore-quartz", 70).energy_required = 16
-RECIPE("sea-sponge-1"):replace_unlock("water-invertebrates-mk01", "biotech-mk01"):set_ingredient_amount("zogna-bacteria", 10):set_ingredient_amount("sea-sponge-sprouts", 5):replace_result("sea-sponge", {type = "item", name = "sea-sponge", amount_min = 0, amount_max = 5, probability = 1.5})
-RECIPE("sea-sponge-2"):set_ingredient_amount("zogna-bacteria", 10):set_ingredient_amount("sea-sponge-sprouts", 7):replace_result("sea-sponge", {type = "item", name = "sea-sponge", amount_min = 0, amount_max = 7, probability = 1.8})
+RECIPE("sea-sponge-processing-01"):replace_unlock("water-invertebrates-mk01", "glass"):set_result_amount("ore-quartz", 31).energy_required = 24
+RECIPE("sea-sponge-sprouts-processing-01"):replace_unlock("water-invertebrates-mk01", "water-invertebrates-mk00"):set_result_amount("ore-quartz", 6).energy_required = 16
+RECIPE("sea-sponge-1"):replace_unlock("water-invertebrates-mk01", "biotech-mk01"):set_ingredient_amount("zogna-bacteria", 4):set_ingredient_amount("sea-sponge-sprouts", 5):replace_result("sea-sponge", {type = "item", name = "sea-sponge", amount_min = 2, amount_max = 5}).energy_required = 110
+RECIPE("sea-sponge-2"):set_ingredient_amount("zogna-bacteria", 4):set_ingredient_amount("sea-sponge-sprouts", 7):replace_result("sea-sponge", {type = "item", name = "sea-sponge", amount_min = 4, amount_max = 7}).energy_required = 70
 RECIPE("sea-sponge-sprouts"):replace_unlock("water-invertebrates-mk01", "water-invertebrates-mk00"):add_ingredient{
   type = "fluid",
   name = "water-saline",
-  amount = 1200
+  amount = 300
 }:add_result{
   type = "fluid",
   name = "muddy-sludge",
-  amount = 1200
+  amount = 300
 }:replace_result("sea-sponge-sprouts", {
   type = "item",
   name = "sea-sponge-sprouts",
   amount_min = 0,
-  amount_max = 24,
-  probability = 0.85
+  amount_max = 18
 }):set_fields{
   main_product = "sea-sponge-sprouts",
   energy_required = 24
@@ -232,11 +231,11 @@ RECIPE{
   ingredients = {
     {type = "item", name = "sea-sponge", amount = 1},
     {type = "fluid", name = "phytoplankton", amount = 200},
-    {type = "fluid", name = "water-saline", amount = 1000},
+    {type = "fluid", name = "water-saline", amount = 100},
   },
   results = {
-    {type = "item", name = "sea-sponge-sprouts", amount_min = 0, amount_max = 42, probability = 1.1},
-    {type = "fluid", name = "muddy-sludge", amount = 1200}
+    {type = "item", name = "sea-sponge-sprouts", amount_min = 0, amount_max = 34},
+    {type = "fluid", name = "muddy-sludge", amount = 300}
   },
   main_product = "sea-sponge-sprouts"
 }:add_unlock("water-invertebrates-mk01")
@@ -247,13 +246,13 @@ RECIPE {
   name = "sea-sponge-0",
   category = "sponge",
   enabled = false,
-  energy_required = 100,
+  energy_required = 150,
   ingredients = {
     {type = "item", name = "sea-sponge-sprouts", amount = 2},
     {type = "fluid", name = "muddy-sludge", amount = 150}
   },
   results = {
-    {type = "item", name = "sea-sponge", amount_min = 0, amount_max = 2, probability = 1.2}
+    {type = "item", name = "sea-sponge", amount_min = 0, amount_max = 2}
   }
 }:add_unlock("water-invertebrates-mk00")
 --[[
