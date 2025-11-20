@@ -218,7 +218,7 @@ RECIPE("sea-sponge-sprouts"):replace_unlock("water-invertebrates-mk01", "water-i
   amount_max = 18
 }):set_fields{
   main_product = "sea-sponge-sprouts",
-  energy_required = 24
+  energy_required = 11
 }
 
 -- advanced sprout creation
@@ -227,7 +227,7 @@ RECIPE{
   name = "sea-sponge-sprouts-2",
   category = "bio-reactor",
   enabled = false,
-  energy_required = 35,
+  energy_required = 17,
   ingredients = {
     {type = "item", name = "sea-sponge", amount = 1},
     {type = "fluid", name = "phytoplankton", amount = 200},
@@ -255,9 +255,6 @@ RECIPE {
     {type = "item", name = "sea-sponge", amount_min = 0, amount_max = 2}
   }
 }:add_unlock("water-invertebrates-mk00")
---[[
-
---]]
 
 --Zinc
 
@@ -344,9 +341,6 @@ RECIPE("bhodos-ur-3"):set_fields {
   },
   energy_required = 80
 }
-
---Vrauks
--- RECIPE("vrauks"):remove_ingredient("native-flora")
 
 --moly ore
 TECHNOLOGY("molecular-decohesion-mk02"):remove_pack("py-science-pack-2")

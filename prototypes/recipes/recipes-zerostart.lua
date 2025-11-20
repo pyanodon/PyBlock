@@ -2,7 +2,7 @@
 RECIPE{
   name = "forage-seaweed",
   enabled = true,
-  energy_required = 2.5,
+  energy_required = 5,
   category = "handcrafting",
   results = {{type = "item", name = "seaweed", amount_min = 0, amount_max = 4}},
   allow_as_intermediate = false,
@@ -11,7 +11,7 @@ RECIPE{
 RECIPE{
   name = "forage-wood",
   enabled = true,
-  energy_required = 2.5,
+  energy_required = 5,
   category = "handcrafting",
   results = {{type = "item", name = "log", amount_min = 0, amount_max = 2}},
   allow_as_intermediate = false,
@@ -20,7 +20,7 @@ RECIPE{
 RECIPE{
   name = "forage-soil",
   enabled = true,
-  energy_required = 1,
+  energy_required = 2,
   category = "handcrafting",
   results = {{type = "item", name = "soil", amount_min = 0, amount_max = 5}},
   allow_as_intermediate = false,
@@ -147,9 +147,9 @@ RECIPE{
   category = "handcrafting",
   ingredients = {{type = "item", name = "charcoal", amount = 1}},
   results = {
-    { type = "item", name = "ash", amount = 1, probability = 0.4 },
-    { type = "item", name = "coal-dust", amount = 1, probability = 0.2 },
-    { type = "item", name = "soot", amount = 1, probability = 0.75 }
+    { type = "item", name = "ash", amount = 1, probability = 0.3 },
+    { type = "item", name = "coal-dust", amount = 1, probability = 0.1 },
+    { type = "item", name = "soot", amount = 1, probability = 0.45 }
   },
   allow_as_intermediate = false,
   main_product = "ash"
@@ -176,9 +176,9 @@ RECIPE{
   category = "solid-separator",
   ingredients = {{type = "item", name = "charcoal", amount = 4}},
   results = {
-    { type = "item", name = "ash", amount_min = 0, amount_max = 3, probability = 0.8 },
-    { type = "item", name = "coal-dust", amount = 1, probability = 0.4 },
-    { type = "item", name = "soot", amount = 1, probability = 0.2 }
+    { type = "item", name = "ash", amount_min = 0, amount_max = 3 },
+    { type = "item", name = "coal-dust", amount = 1, probability = 0.6 },
+    { type = "item", name = "soot", amount_min = 0, amount_max = 4, probability = 0.7 }
   },
   main_product = "ash"
 }:add_unlock("ash-separation")
@@ -186,13 +186,13 @@ RECIPE{
 RECIPE{
   name = "soot-sorting-manual",
   enabled = true,
-  energy_required = 2,
+  energy_required = 5,
   icon = "__pypetroleumhandlinggraphics__/graphics/icons/class-s.png",
   category = "handcrafting",
   ingredients = {{type = "item", name = "soot", amount = 1}},
   results = {
-    { type = "item", name = "iron-ore", amount = 1, probability = 0.4 },
-    { type = "item", name = "copper-ore", amount = 1, probability = 0.4 }
+    { type = "item", name = "iron-ore", amount = 1, probability = 0.1 },
+    { type = "item", name = "copper-ore", amount = 1, probability = 0.1 }
   },
   allow_as_intermediate = false
 }

@@ -190,13 +190,13 @@ end
 -- move starter ash separation recipes to ash-separation and set trigger tech
 TECHNOLOGY("ash-separation"):set_fields {research_trigger = {type = "craft-item", item = "ash", count = 200}, prerequisites = {"atomizer-mk00"}}
 RECIPE("steam-engine"):add_unlock("ash-separation").enabled = false
-RECIPE("small-electric-pole"):add_unlock("ash-separation").enabled = false
 data.raw["technology"]["ash-separation"].unit = nil
 
 -- set automation science pack to require 10 copper plates
 TECHNOLOGY("automation-science-pack"):set_fields {research_trigger = {type = "craft-item", item = "copper-plate", count = 10}}
 RECIPE("inductor1-2"):add_unlock("automation-science-pack").enabled = false
 RECIPE("burner-mining-drill"):add_unlock("automation-science-pack").enabled = false
+RECIPE("small-electric-pole"):add_unlock("automation-science-pack").enabled = false
 data.raw["technology"]["automation-science-pack"].prerequisites = {"ash-separation"}
 data.raw["technology"]["automation-science-pack"].unit = nil
 

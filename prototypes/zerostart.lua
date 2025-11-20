@@ -30,11 +30,15 @@ ITEM{
   icon = "__PyBlock__/graphics/icons/charcoal.png",
   subgroup = 'py-items',
   order = 'charcoal',
-  stack_size = 200
+  stack_size = 200,
+  fuel_category = "chemical",
+  fuel_value = "1MJ",
+  burnt_result = "ash"
 }
 
 -- change stone furnace to take bricks, and more of them
 RECIPE("stone-furnace"):replace_ingredient("stone", "stone-brick", 8)
+RECIPE("stone-brick"):add_unlock("crusher").enabled = false
 
 -- update sand-brick recipe
 RECIPE("sand-brick"):set_fields{
@@ -51,6 +55,7 @@ RECIPE("sand-brick"):set_fields{
 
 -- allow the player to handcraft basic soot and ash separation
 RECIPE("ash-separation").additional_categories = {"handcrafting", "solid-separator"}
+-- TODO enable by default once autotech understands additional_categories
 RECIPE("soot-separation").additional_categories = {"handcrafting", "solid-separator"}
 
 -- update seaweed to spoil if spoilage is enabled
