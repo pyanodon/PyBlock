@@ -272,7 +272,7 @@ for r, recipe in pairs(data.raw.recipe) do
       data.raw.technology["pumping-productivity-" .. i].effects[#data.raw.technology["pumping-productivity-" .. i].effects + 1] = {
         type = "change-recipe-productivity",
         recipe = r,
-        change = 0.1
+        change = 0.05
       }
     end
   end
