@@ -262,13 +262,13 @@ TECHNOLOGY("kicalk"):remove_pack("py-science-pack-1"):remove_pack("logistic-scie
 
 RECIPE("kicalk-sample"):remove_ingredient("alien-sample01"):remove_ingredient("cdna")
 
-RECIPE("kicalk-codex"):remove_ingredient("electronic-circuit")
+RECIPE("kicalk-codex"):set_ingredient_amount("electronic-circuit", 5)
 
 RECIPE("kicalk-plantation-mk01"):remove_ingredient("intermetallics")
 
-RECIPE("kicalk-zn"):replace_unlock("phytomining-mk02", "phytomining")
+RECIPE("kicalk-zn"):replace_unlock("phytomining-mk02", "kicalk")
 
-RECIPE("zn-biomass-extraction"):remove_ingredient("steam"):add_ingredient {type = "fluid", name = "steam", amount = 100, minimum_temperature = 250}:replace_unlock("phytomining-mk02", "phytomining")
+RECIPE("zn-biomass-extraction"):remove_ingredient("steam"):add_ingredient {type = "fluid", name = "steam", amount = 100, minimum_temperature = 250}:replace_unlock("phytomining-mk02", "kicalk")
 
 -- move biocontainer, biosample, generic DNA sample to xenobiology
 RECIPE("bio-container"):replace_unlock("biotech-mk01", "xenobiology")
@@ -298,19 +298,6 @@ RECIPE("titanium-plate-1"):replace_unlock("alloys-mk01", "fluid-processing-machi
 
 RECIPE("flue-gas-1").category = "gasifier"
 RECIPE("flue-gas-3"):remove_unlock("compost")
-
---moving later biomasses to later tech
-RECIPE("grod-sn"):replace_unlock("phytomining", "phytomining-mk02")
-RECIPE("navens-fe"):replace_unlock("phytomining", "phytomining-mk02")
-RECIPE("rennea-cu"):replace_unlock("phytomining", "phytomining-mk02")
-RECIPE("tuuphra-nacl"):replace_unlock("phytomining", "phytomining-mk02")
-RECIPE("yotoi-fe"):replace_unlock("phytomining", "phytomining-mk02")
-RECIPE("sn-biomass-extraction"):replace_unlock("phytomining", "phytomining-mk02")
-RECIPE("cu-biomass-extraction"):replace_unlock("phytomining", "phytomining-mk02")
-RECIPE("nacl-biomass-extraction"):replace_unlock("phytomining", "phytomining-mk02")
-RECIPE("fe-biomass-extraction"):replace_unlock("phytomining", "phytomining-mk02")
-RECIPE("cadaveric-pb"):replace_unlock("phytomining", "phytomining-mk02")
-RECIPE("s-biomass-extraction"):replace_unlock("phytomining", "phytomining-mk02")
 
 -- Bhoddos to uranium
 TECHNOLOGY("chemical-science-pack"):add_prereq("bhoddos")
