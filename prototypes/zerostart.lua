@@ -23,16 +23,24 @@ for _, inserter in pairs(data.raw.inserter) do
 end
 
 -- wood burns into charcoal
-ITEM("wood"):set_fields{burnt_result = "charcoal"}
+ITEM("wood"):set_fields{burnt_result = "hot-coals"}
+ITEM{
+  type = "item",
+  name = "hot-coals",
+  icon = "__PyBlock__/graphics/icons/charcoal.png",
+  subgroup = 'py-items',
+  order = 'hot-coals',
+  stack_size = 100,
+}
 ITEM{
   type = "item",
   name = "charcoal",
   icon = "__PyBlock__/graphics/icons/charcoal.png",
   subgroup = 'py-items',
   order = 'charcoal',
-  stack_size = 200,
+  stack_size = 100,
   fuel_category = "chemical",
-  fuel_value = "1MJ",
+  fuel_value = "8MJ",
   burnt_result = "ash"
 }
 
@@ -46,7 +54,7 @@ RECIPE("sand-brick"):set_fields{
   category = "hpf",
   ingredients = {
     { type = "item", name = "sand", amount = 4 },
-    { type = "item", name = "charcoal", amount = 8 },
+    { type = "item", name = "charcoal", amount = 3 },
     { type = "item", name = "rich-clay", amount = 4 },
   },
   results = {{type = "item", name = "stone-brick", amount = 8}},
@@ -56,14 +64,14 @@ RECIPE("sand-brick"):set_fields{
 -- allow the player to handcraft basic soot and ash separation
 RECIPE("ash-separation").additional_categories = {"handcrafting", "solid-separator"}
 -- TODO enable by default once autotech understands additional_categories
-RECIPE("soot-separation").additional_categories = {"handcrafting", "solid-separator"}
+RECIPE("soot-separation"):remove_unlock("ash-separation"):set_fields{
+  additional_categories = {"handcrafting", "solid-separator"},
+  category = "handcrafting",
+  enabled = true
+}.autotech_ignore = nil
 
 -- update seaweed to spoil if spoilage is enabled
 if feature_flags.spoiling and settings.startup["py-enable-decay"].value then
   ITEM("seaweed"):spoil("dry-seaweed", 60*60*60) -- spoil after an hour
-  for _, recipe in pairs{
-    ""
-  } do
-    -- replace charcoal with hot coals in certain recipes
-  end
+  -- TODO have hot coals spoil to just coals
 end

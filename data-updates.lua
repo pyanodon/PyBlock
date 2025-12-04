@@ -115,23 +115,23 @@ local ores = {
     technology = "mining-with-fluid",
     byproduct_probability = 0.1
   },
-  ["ore-zinc"] = {
-    recipe_extension = "zinc",
-    amount = 6,
-    technology = "oil-sands",
-    byproduct_probability = 0.1
-  },
   ["ore-lead"] = {
     recipe_extension = "lead",
     amount = 8,
     technology = "solder-mk01",
     byproduct_probability = 0.1
   },
+  ["ore-zinc"] = {
+    recipe_extension = "zinc",
+    amount = 6,
+    technology = "oil-sands",
+    byproduct_probability = 0.06
+  },
   ["ore-nickel"] = {
     recipe_extension = "nickel",
     amount = 0,
     technology = "",
-    byproduct_probability = 0.1
+    byproduct_probability = 0.03
   }
 }
 for o, ore in pairs(ores) do
@@ -147,7 +147,7 @@ for o, ore in pairs(ores) do
       },
       result = nil,
       main_product = o,
-      ignore_in_pypp = false
+      autotech_ignore = false
     }
     for s, secondary_ore in pairs(ores) do
       if s ~= o then
@@ -264,7 +264,7 @@ for r, recipe in pairs(data.raw.recipe) do
       data.raw.technology["mining-productivity-" .. i].effects[#data.raw.technology["mining-productivity-" .. i].effects + 1] = {
         type = "change-recipe-productivity",
         recipe = r,
-        change = 0.1
+        change = 0.05
       }
     end
   elseif pumping_categories[recipe.category] then

@@ -85,29 +85,29 @@ RECIPE{
 
 -- charcoal recipes
 RECIPE{
-  name = "handburn-charcoal",
+  name = "handburn-wood",
   enabled = true,
   energy_required = 1,
   category = "handcrafting",
   ingredients = {{type = "item", name = "wood", amount = 1}},
-  results = {{type = "item", name = "charcoal", amount = 1, probability = 0.5}},
+  results = {{type = "item", name = "hot-coals", amount = 1, probability = 0.8}},
   subgroup = 'py-items',
-  order = 'charcoal',
+  order = 'hot-coals',
   allow_as_intermediate = false,
-  main_product = "charcoal"
+  main_product = "hot-coals"
 }
 RECIPE{
-  name = "charcoal",
+  name = "bulk-hot-coals",
   enabled = false,
   energy_required = 5,
   category = "smelting",
   ingredients = {{type = "item", name = "wood", amount = 3}},
-  results = {{type = "item", name = "charcoal", amount_min = 0, amount_max = 6}},
+  results = {{type = "item", name = "hot-coals", amount_min = 2, amount_max = 8}},
   subgroup = 'py-items',
-  order = 'charcoal',
+  order = 'hot-coals',
   allow_as_intermediate = false,
   allow_productivity = true,
-  main_product = "charcoal"
+  main_product = "hot-coals"
 }:add_unlock("wood-processing-0")
 
 -- handcraft bricks
@@ -118,7 +118,7 @@ RECIPE{
   category = "handcrafting",
   ingredients = {
     { type = "item", name = "dry-seaweed", amount = 1 },
-    { type = "item", name = "charcoal", amount = 3 },
+    { type = "item", name = "charcoal", amount = 1 },
     { type = "item", name = "soil", amount = 4 }
   },
   results = {{type = "item", name = "stone-brick", amount = 3}},
@@ -132,31 +132,30 @@ RECIPE{
   category = "hpf",
   ingredients = {
     { type = "item", name = "dry-seaweed", amount = 3 },
-    { type = "item", name = "charcoal", amount = 6 },
+    { type = "item", name = "charcoal", amount = 2 },
     { type = "item", name = "soil", amount = 4 }
   },
   results = {{type = "item", name = "stone-brick", amount = 8}},
   main_product = "stone-brick"
 }:add_unlock("coal-processing-1")
 
--- crush charcoal into ash and dust
+-- sort through coals
 RECIPE{
-  name = "handsort-charcoal",
+  name = "handsort-coals",
   enabled = true,
   energy_required = 1,
   category = "handcrafting",
-  ingredients = {{type = "item", name = "charcoal", amount = 1}},
+  ingredients = {{type = "item", name = "hot-coals", amount = 1}},
   results = {
     { type = "item", name = "ash", amount = 1, probability = 0.3 },
-    { type = "item", name = "coal-dust", amount = 1, probability = 0.1 },
+    { type = "item", name = "charcoal", amount = 1, probability = 0.2 },
     { type = "item", name = "soot", amount = 1, probability = 0.45 }
   },
   allow_as_intermediate = false,
   main_product = "ash"
-}
--- sort charcoal, but automatic
+} -- sort coals, but automatic
 RECIPE{
-  name = "sort-charcoal",
+  name = "sort-hot-coals",
   enabled = false,
   energy_required = 2.5,
   icons = {
@@ -165,7 +164,7 @@ RECIPE{
       icon_size = 32
     },
     {
-      icon = "__PyBlock__/graphics/icons/charcoal.png",
+      icon = "__PyBlock__/graphics/icons/hot-coals.png",
       icon_size = 64,
       scale = 0.2,
       shift = {
@@ -174,28 +173,26 @@ RECIPE{
     }
   },
   category = "solid-separator",
-  ingredients = {{type = "item", name = "charcoal", amount = 4}},
+  ingredients = {{type = "item", name = "hot-coals", amount = 4}},
   results = {
     { type = "item", name = "ash", amount_min = 0, amount_max = 3 },
-    { type = "item", name = "coal-dust", amount = 1, probability = 0.6 },
+    { type = "item", name = "charcoal", amount_min = 0, amount_max = 2 },
     { type = "item", name = "soot", amount_min = 0, amount_max = 4, probability = 0.7 }
   },
   main_product = "ash"
 }:add_unlock("ash-separation")
--- handsort soot for copper and iron
 RECIPE{
-  name = "soot-sorting-manual",
-  enabled = true,
-  energy_required = 5,
-  icon = "__pypetroleumhandlinggraphics__/graphics/icons/class-s.png",
-  category = "handcrafting",
-  ingredients = {{type = "item", name = "soot", amount = 1}},
+  name = "compress-hot-coals",
+  enabled = false,
+  energy_required = 7,
+  category = "hpf",
+  ingredients = {{type = "item", name = "hot-coals", amount = 8}},
   results = {
-    { type = "item", name = "iron-ore", amount = 1, probability = 0.1 },
-    { type = "item", name = "copper-ore", amount = 1, probability = 0.1 }
+    { type = "item", name = "charcoal", amount_min = 1, amount_max = 5 },
+    { type = "item", name = "ash", amount = 1, probability = 0.6 }
   },
-  allow_as_intermediate = false
-}
+  main_product = "charcoal"
+}:add_unlock("coke-mk01")
 
 -- basic swf recipe
 RECIPE{
