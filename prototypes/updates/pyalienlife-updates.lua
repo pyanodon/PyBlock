@@ -56,6 +56,10 @@ RECIPE("fawogae-to-iron"):replace_unlock("molecular-decohesion", "atomizer-mk00"
 
 -- fwf updates
 RECIPE("wood-seeds"):replace_unlock("wood-processing", "wood-processing-0")
+RECIPE("tree"):replace_unlock("wood-processing", "wood-processing-0")
+RECIPE("wood-seedling"):replace_unlock("wood-processing", "wood-processing-0")
+RECIPE("log1"):replace_unlock("wood-processing", "wood-processing-0")
+RECIPE("log2"):replace_unlock("wood-processing", "wood-processing-0")
 
 -- fawogae to raw coal
 RECIPE("coal-fawogae"):replace_unlock("fawogae-mk01", "coal-processing-0"):set_result_amount("raw-coal", 5).category = "distilator"
@@ -63,9 +67,6 @@ RECIPE("coal-fawogae"):replace_unlock("fawogae-mk01", "coal-processing-0"):set_r
 -- seaweed
 RECIPE("seaweed-crop-mk01"):remove_ingredient("pipe"):remove_ingredient("stone-brick"):remove_ingredient("steam-engine"):add_ingredient({type = "item", name = "seaweed-crop-mk00", amount = 1})
 RECIPE("seaweed-1"):replace_unlock("seaweed-mk01", "seaweed-mk00")
-
--- botanical nursery
-RECIPE("botanical-nursery"):remove_ingredient("fluid-drill-mk01")
 
 -- moss farm
 RECIPE("moss-farm-mk01"):remove_ingredient("aluminium-plate")
@@ -81,7 +82,13 @@ RECIPE("cadaveric-arum-1-soil"):set_result_amount("cadaveric-arum", 7).energy_re
 RECIPE("cadaveric-arum-1-msa"):set_result_amount("cadaveric-arum", 7).energy_required = 110  -- TURD
 RECIPE("stone-wool"):replace_unlock("zipir", "cadaveric-arum")
 RECIPE("stone-wool2"):replace_unlock("zipir", "cadaveric-arum")
-RECIPE("cadaveric-arum-mk01"):remove_ingredient("hydrocyclone-mk01"):remove_ingredient("electronic-circuit"):remove_ingredient("plastic-bar"):remove_ingredient("intermetallics"):set_ingredient_amount("steel-plate", 5):add_ingredient {type = "item", name = "pipe", amount = 4}:add_ingredient {type = "item", name = "soil", amount = 20}:remove_ingredient("botanical-nursery")
+RECIPE("cadaveric-arum-mk01").ingredients = {
+  {type = "item", name = "botanical-nursery", amount = 1},
+  {type = "item", name = "steel-plate", amount = 10},
+  {type = "item", name = "inductor1", amount = 5},
+  {type = "item", name = "iron-gear-wheel", amount = 8},
+  {type = "item", name = "pipe", amount = 12}
+}
 
 -- add acid gas req, reduce seed useage to match
 for _, addendum in pairs{
@@ -268,7 +275,7 @@ RECIPE("kicalk-plantation-mk01"):remove_ingredient("intermetallics")
 
 RECIPE("kicalk-zn"):replace_unlock("phytomining-mk02", "kicalk")
 
-RECIPE("zn-biomass-extraction"):remove_ingredient("steam"):add_ingredient {type = "fluid", name = "steam", amount = 100, minimum_temperature = 250}:replace_unlock("phytomining-mk02", "kicalk")
+RECIPE("zn-biomass-extraction"):replace_ingredient("steam", {type = "fluid", name = "steam", amount = 100, minimum_temperature = 250}):replace_unlock("phytomining-mk02", "kicalk")
 
 -- move biocontainer, biosample, generic DNA sample to xenobiology
 RECIPE("bio-container"):replace_unlock("biotech-mk01", "xenobiology")

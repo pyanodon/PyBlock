@@ -46,7 +46,8 @@ ITEM{
 
 -- change stone furnace to take bricks, and more of them
 RECIPE("stone-furnace"):replace_ingredient("stone", "stone-brick", 8)
-RECIPE("stone-brick"):add_unlock("crusher").enabled = false
+RECIPE("stone-brick"):set_fields{enabled = false, hidden = true, hidden_in_factoriopedia = true}
+RECIPE("bricks-to-stone"):set_result_amount("stone", 7.5)
 
 -- update sand-brick recipe
 RECIPE("sand-brick"):set_fields{

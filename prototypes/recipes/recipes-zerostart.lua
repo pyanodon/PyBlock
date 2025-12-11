@@ -193,27 +193,3 @@ RECIPE{
   },
   main_product = "charcoal"
 }:add_unlock("coke-mk01")
-
--- basic swf recipe
-RECIPE{
-  name = "log0",
-  enabled = false,
-  energy_required = 120,
-  category = "fwf",
-  ingredients = {{type = "item", name = "wood-seeds", amount = 2}},
-  results = {{type = "item", name = "log", amount = 5}},
-  main_product = "log"
-}:add_unlock("wood-processing-0")
--- basic tree recipe for swf
-RECIPE{
-  name = "tree-mk00",
-  enabled = false,
-  energy_required = 40,
-  category = "handcrafting",
-  ingredients = {
-    {type = "item", name = "wood-seeds", amount = 7},
-    {type = "item", name = "planter-box", amount = 2},
-  },
-  results = {{type = "item", name = "tree-mk01", amount = 1}},
-  main_product = "tree-mk01"
-}:add_unlock("wood-processing-0")

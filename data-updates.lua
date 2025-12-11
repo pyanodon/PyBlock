@@ -193,18 +193,17 @@ RECIPE("steam-engine"):add_unlock("ash-separation").enabled = false
 data.raw["technology"]["ash-separation"].unit = nil
 
 -- set automation science pack to require 10 copper plates
-TECHNOLOGY("automation-science-pack"):set_fields {research_trigger = {type = "craft-item", item = "copper-plate", count = 10}}
+TECHNOLOGY("automation-science-pack"):set_fields {research_trigger = {type = "craft-item", item = "copper-plate", count = 10}, prerequisites = {"ash-separation"}}
 RECIPE("inductor1-2"):add_unlock("automation-science-pack").enabled = false
 RECIPE("burner-mining-drill"):add_unlock("automation-science-pack").enabled = false
 RECIPE("small-electric-pole"):add_unlock("automation-science-pack").enabled = false
-data.raw["technology"]["automation-science-pack"].prerequisites = {"ash-separation"}
-data.raw["technology"]["automation-science-pack"].unit = nil
 
 -- move mechanical inserter to automation
 RECIPE("burner-inserter"):add_unlock("automation").enabled = false
 
 -- mk01 building updates
 RECIPE("flora-collector-mk01"):replace_ingredient("soil-extractor-mk01", "soil-extractor-mk00")
+RECIPE("botanical-nursery"):replace_ingredient("soil-extractor-mk01", "botanical-nursery-mk00"):remove_ingredient("fluid-drill-mk01"):set_ingredient_amount("planter-box", 5)
 RECIPE("compost-plant-mk01"):replace_unlock("compost", "fertilizer-mk01"):add_ingredient{type = "item", name = "compost-plant-mk00", amount = 1}
 RECIPE("distilator"):add_ingredient{type = "item", name = "ddc-mk00", amount = 1}
 RECIPE("fwf-mk01"):remove_ingredient("steam-engine"):add_ingredient{type = "item", name = "fwf-mk00", amount = 1}
