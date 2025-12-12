@@ -47,7 +47,7 @@ ITEM{
 -- change stone furnace to take bricks, and more of them
 RECIPE("stone-furnace"):replace_ingredient("stone", "stone-brick", 8)
 RECIPE("stone-brick"):set_fields{enabled = false, hidden = true, hidden_in_factoriopedia = true}
-RECIPE("bricks-to-stone"):set_result_amount("stone", 7.5)
+RECIPE("bricks-to-stone"):replace_result("stone", {type = "item", name = "stone", amount_min = 7, amount_max = 8})
 
 -- update sand-brick recipe
 RECIPE("sand-brick"):set_fields{
