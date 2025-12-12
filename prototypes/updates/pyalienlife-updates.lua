@@ -228,7 +228,7 @@ RECIPE("sea-sponge-sprouts"):replace_unlock("water-invertebrates-mk01", "water-i
   energy_required = 11
 }
 
--- advanced sprout creation
+-- advanced sprout creation, now in quartz 2
 RECIPE{
   type = "recipe",
   name = "sea-sponge-sprouts-2",
@@ -245,7 +245,7 @@ RECIPE{
     {type = "fluid", name = "muddy-sludge", amount = 300}
   },
   main_product = "sea-sponge-sprouts"
-}:add_unlock("water-invertebrates-mk01")
+}:add_unlock("quartz-mk02")
 
 -- t0 sponge
 RECIPE {
@@ -262,6 +262,13 @@ RECIPE {
     {type = "item", name = "sea-sponge", amount_min = 0, amount_max = 2}
   }
 }:add_unlock("water-invertebrates-mk00")
+
+-- move electric sponges to quartz 2
+RECIPE("sponge-culture-mk01"):replace_unlock("water-invertabrates-mk01", "quartz-mk02")
+
+-- quartz tube never should've been there to begin with, if it goes through should be part of AL
+RECIPE("quartz-tube"):replace_unlock("quartz-mk02", "bioprocessing")
+
 
 --Zinc
 
