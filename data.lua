@@ -69,6 +69,14 @@ TECHNOLOGY {
   order = "c-a",
 }
 
+TECHNOLOGY {
+  type = "technology",
+  name = "bitumen-processing",
+  icon = "__PyBlock__/graphics/technology/bitumen-processing.png",--placeholder, requires proper icon, I don't know the rules for them
+  icon_size = 128,
+  order = "c-a",
+}
+
 --buildings--
 require("prototypes/buildings/atomizer-mk00")
 require("prototypes/buildings/ddc-mk00")
