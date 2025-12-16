@@ -36,28 +36,18 @@ RECIPE{
   main_product = "fish"
 }
 
--- quicker dehydration
-RECIPE{
-  name = "manual-dry-seaweed",
-  enabled = true,
-  energy_required = 0.5,
-  category = "handcrafting",
-  ingredients = {{type = "item", name = "seaweed", amount = 1}},
-  results = {{type = "item", name = "dry-seaweed", amount = 1}},
-  allow_as_intermediate = false,
-  main_product = "dry-seaweed"
-}
 RECIPE{
   name = "dry-seaweed",
-  enabled = false,
+  enabled = true,
   energy_required = 5,
-  category = "smelting",
+  category = "handcrafting",
+  additional_categories = {"smelting"},
   ingredients = {{type = "item", name = "seaweed", amount = 4}},
   results = {{type = "item", name = "dry-seaweed", amount_min = 0, amount_max = 4, probability = 0.9}},
   allow_as_intermediate = false,
   allow_productivity = true,
   main_product = "dry-seaweed"
-}:add_unlock("seaweed-mk00")
+}
 -- rehydration and bulk rehydration
 RECIPE{
   name = "wet-seaweed",
@@ -83,17 +73,6 @@ RECIPE{
   main_product = "seaweed"
 }:add_unlock("seaweed-mk00")
 
--- charcoal recipes
--- RECIPE{
---   name = "handburn-wood",
---   enabled = true,
---   energy_required = 1,
---   category = "handcrafting",
---   ingredients = {{type = "item", name = "wood", amount = 1}},
---   results = {{type = "item", name = "hot-coals", amount = 1, probability = 0.8}},
---   allow_as_intermediate = false,
---   main_product = "hot-coals"
--- }
 RECIPE{
   name = "hot-coals",
   enabled = true,
