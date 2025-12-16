@@ -205,7 +205,7 @@ RECIPE("burner-inserter"):add_unlock("automation").enabled = false
 RECIPE("flora-collector-mk01"):replace_ingredient("soil-extractor-mk01", "soil-extractor-mk00")
 RECIPE("botanical-nursery"):replace_ingredient("soil-extractor-mk01", "botanical-nursery-mk00"):remove_ingredient("fluid-drill-mk01"):set_ingredient_amount("planter-box", 5)
 RECIPE("sponge-culture-mk01"):replace_ingredient("steam-engine", "sponge-culture-mk00", 1)
-RECIPE("bio-reactor-mk01"):add_ingredient("bio-reactor-mk00")
+RECIPE("bio-reactor-mk01"):add_ingredient({type = "item", name = "bio-reactor-mk00", amount = 1})
 RECIPE("compost-plant-mk01"):replace_unlock("compost", "fertilizer-mk01"):add_ingredient{type = "item", name = "compost-plant-mk00", amount = 1}
 RECIPE("distilator"):add_ingredient{type = "item", name = "ddc-mk00", amount = 1}
 RECIPE("fwf-mk01"):remove_ingredient("steam-engine"):add_ingredient{type = "item", name = "fwf-mk00", amount = 1}
@@ -215,9 +215,13 @@ RECIPE("geothermal-plant-mk01"):add_ingredient{type = "item", name = "pipe", amo
 RECIPE("slaughterhouse-mk01"):add_ingredient{type = "item", name = "slaughterhouse-mk00", amount = 1}
 RECIPE("soil-extractor-mk01"):replace_unlock("automation-science-pack", "soil-washing"):replace_ingredient("burner-mining-drill", "soil-extractor-mk00", 1)
 RECIPE("solid-separator"):replace_unlock("ash-separation", "steel-processing"):add_ingredient{type = "item", name = "solid-separator-mk00", amount = 1}:add_ingredient_amount("small-parts-01", -20):add_ingredient_amount("steel-plate", -10):add_ingredient_amount("inductor1", -5)
--- RECIPE("washer"):replace_ingredient("steam-engine", "washer-mk00", 1):replace_unlock("soil-washing", "electrolysis")
 RECIPE("automated-screener-mk01"):replace_ingredient("fluid-drill-mk01", "automated-screener-mk00", 1)
 RECIPE("wpu-mk01"):replace_unlock("automation-science-pack", "wood-processing"):add_ingredient{type = "item", name = "inductor1", amount = 12} :add_ingredient{type = "item", name = "wpu-mk00", amount = 1}.enabled = false
+
+-- move oil sands back to normalish place
+RECIPE("acetone-void-degrease"):replace_unlock("paramagnetic-material", "oil-sands")
+RECIPE("low-distillate-to-grease"):replace_unlock("heavy-oil-mk02", "oil-sands")
+RECIPE("grease-table-mk01"):replace_unlock("machines-mk03", "machines-mk02"):replace_ingredient("advanced-circuit", "electronic-circuit"):remove_ingredient("stainless-steel"):add_ingredient_amount("steel-plate", 20)
 
 -- move check valve from fluid handling to assembly
 RECIPE("py-check-valve"):replace_unlock("fluid-handling", "steel-processing")

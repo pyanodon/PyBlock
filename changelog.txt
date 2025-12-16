@@ -60,6 +60,7 @@ Date: ???
     - Added 5 electronic circuits to the kicalk bootstrapping recipe
     - Adjusted Fastwood Forestry MK 01, Seaweed Crop MK 01, and Botanical Nursery MK 01 recipes to match new MK 00 requriements
     - Increased construction costs of Cadaveric Arum Greenhouse MK 01
+    - Moves oil sands back to logi by simplifying grease table recipe (c2->c1, stainless steel->steel) and moving the required recipes to the oil sands tech
   Bugfixes:
     - Moved flavonoids all the way back to the Py2 tech where it belongs
     - Fixed Automated Screener Mk 00 not being an ingredient for the Mk 01 version
