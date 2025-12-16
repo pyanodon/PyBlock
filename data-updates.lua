@@ -204,6 +204,8 @@ RECIPE("burner-inserter"):add_unlock("automation").enabled = false
 -- mk01 building updates
 RECIPE("flora-collector-mk01"):replace_ingredient("soil-extractor-mk01", "soil-extractor-mk00")
 RECIPE("botanical-nursery"):replace_ingredient("soil-extractor-mk01", "botanical-nursery-mk00"):remove_ingredient("fluid-drill-mk01"):set_ingredient_amount("planter-box", 5)
+RECIPE("sponge-culture-mk01"):replace_ingredient("steam-engine", "sponge-culture-mk00", 1)
+RECIPE("bio-reactor-mk01"):add_ingredient("bio-reactor-mk00")
 RECIPE("compost-plant-mk01"):replace_unlock("compost", "fertilizer-mk01"):add_ingredient{type = "item", name = "compost-plant-mk00", amount = 1}
 RECIPE("distilator"):add_ingredient{type = "item", name = "ddc-mk00", amount = 1}
 RECIPE("fwf-mk01"):remove_ingredient("steam-engine"):add_ingredient{type = "item", name = "fwf-mk00", amount = 1}
