@@ -4,11 +4,11 @@ RECIPE {
     energy_required = 1,
     enabled = true,
     ingredients = {
-        {type = "item", name = "stone-brick",     amount = 50},
-        {type = "item", name = "iron-plate",      amount = 25},
+        {type = "item", name = "stone-brick",     amount = 15},
+        {type = "item", name = "iron-plate",      amount = 18},
         {type = "item", name = "pipe",            amount = 5},
         {type = "item", name = "copper-cable",    amount = 2},
-        {type = "item", name = "iron-gear-wheel", amount = 20},
+        {type = "item", name = "iron-gear-wheel", amount = 12},
     },
     results = {
         {type = "item", name = "fwf-mk00", amount = 1}

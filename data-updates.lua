@@ -89,8 +89,6 @@ RECIPE("mining-antimony"):replace_unlock("excavation-2", "excavation-1")
 
 RECIPE("ground-borer"):remove_ingredient("intermetallics")
 
-TECHNOLOGY("coal-processing-1"):add_prereq("seaweed-mk00")
-
 -- reduce fish oil to lube cost to increase drilling yield relative to fish input
 RECIPE("mining-borax"):replace_ingredient("drilling-fluid-1", "lubricant")
 RECIPE("fish-oil-to-lube"):set_ingredient_amount("fish-oil", 50)
@@ -217,6 +215,9 @@ RECIPE("soil-extractor-mk01"):replace_unlock("automation-science-pack", "soil-wa
 RECIPE("solid-separator"):replace_unlock("ash-separation", "steel-processing"):add_ingredient{type = "item", name = "solid-separator-mk00", amount = 1}:add_ingredient_amount("small-parts-01", -20):add_ingredient_amount("steel-plate", -10):add_ingredient_amount("inductor1", -5)
 RECIPE("automated-screener-mk01"):replace_ingredient("fluid-drill-mk01", "automated-screener-mk00", 1)
 RECIPE("wpu-mk01"):replace_unlock("automation-science-pack", "wood-processing"):add_ingredient{type = "item", name = "inductor1", amount = 12} :add_ingredient{type = "item", name = "wpu-mk00", amount = 1}.enabled = false
+
+-- clear prerequisites
+TECHNOLOGY("moss-mk01"):remove_prereq("soil-washing")
 
 -- move oil sands back to normalish place
 RECIPE("acetone-void-degrease"):replace_unlock("paramagnetic-material", "oil-sands")

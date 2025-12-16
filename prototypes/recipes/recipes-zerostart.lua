@@ -84,52 +84,35 @@ RECIPE{
 }:add_unlock("seaweed-mk00")
 
 -- charcoal recipes
+-- RECIPE{
+--   name = "handburn-wood",
+--   enabled = true,
+--   energy_required = 1,
+--   category = "handcrafting",
+--   ingredients = {{type = "item", name = "wood", amount = 1}},
+--   results = {{type = "item", name = "hot-coals", amount = 1, probability = 0.8}},
+--   allow_as_intermediate = false,
+--   main_product = "hot-coals"
+-- }
 RECIPE{
-  name = "handburn-wood",
+  name = "hot-coals",
   enabled = true,
-  energy_required = 1,
-  category = "handcrafting",
-  ingredients = {{type = "item", name = "wood", amount = 1}},
-  results = {{type = "item", name = "hot-coals", amount = 1, probability = 0.8}},
-  subgroup = 'py-items',
-  order = 'hot-coals',
-  allow_as_intermediate = false,
-  main_product = "hot-coals"
-}
-RECIPE{
-  name = "bulk-hot-coals",
-  enabled = false,
   energy_required = 5,
   category = "smelting",
   ingredients = {{type = "item", name = "wood", amount = 3}},
   results = {{type = "item", name = "hot-coals", amount_min = 2, amount_max = 8}},
-  subgroup = 'py-items',
-  order = 'hot-coals',
   allow_as_intermediate = false,
   allow_productivity = true,
   main_product = "hot-coals"
-}:add_unlock("wood-processing-0")
-
--- handcraft bricks
-RECIPE{
-  name = "seaweed-bricks-handcraft",
-  enabled = true,
-  energy_required = 2,
-  category = "handcrafting",
-  ingredients = {
-    { type = "item", name = "dry-seaweed", amount = 1 },
-    { type = "item", name = "charcoal", amount = 1 },
-    { type = "item", name = "soil", amount = 4 }
-  },
-  results = {{type = "item", name = "stone-brick", amount = 3}},
-  main_product = "stone-brick"
 }
--- proper smelt bricks
+
+-- proper bricks
 RECIPE{
   name = "seaweed-bricks",
-  enabled = false,
+  enabled = true,
   energy_required = 5,
-  category = "hpf",
+  category = "handcrafting",
+  additional_categories = {"hpf"},
   ingredients = {
     { type = "item", name = "dry-seaweed", amount = 3 },
     { type = "item", name = "charcoal", amount = 2 },
@@ -137,7 +120,7 @@ RECIPE{
   },
   results = {{type = "item", name = "stone-brick", amount = 8}},
   main_product = "stone-brick"
-}:add_unlock("coal-processing-1")
+}
 
 -- sort through coals
 RECIPE{
