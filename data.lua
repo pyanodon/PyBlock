@@ -45,10 +45,20 @@ TECHNOLOGY {
 
 TECHNOLOGY {
   type = "technology",
+  name = "moss-mk00",
+  icon = "__PyBlock__/graphics/technology/moss-mk00.png",
+  icon_size = 128,
+  order = "c-a",
+  ignore_tech_cost_multiplier = true
+}
+
+TECHNOLOGY {
+  type = "technology",
   name = "wood-processing-0",
   icon = "__PyBlock__/graphics/technology/wood-processing-0.png",
   icon_size = 128,
   order = "c-a",
+  prerequisites = {"moss-mk00"},
   ignore_tech_cost_multiplier = true
 }
 
@@ -72,9 +82,9 @@ TECHNOLOGY {
 --buildings--
 require("prototypes/buildings/atomizer-mk00")
 require("prototypes/buildings/ddc-mk00")
--- require("prototypes/buildings/washer-mk00")
+require("prototypes/buildings/moss-farm-mk00")
 require("prototypes/buildings/botanical-nursery-mk00")
-require("prototypes/buildings/automated-screener-mk00")
+-- require("prototypes/buildings/automated-screener-mk00")
 require("prototypes/buildings/compost-plant-mk00")
 require("prototypes/buildings/soil-extractor-mk00")
 require("prototypes/buildings/solid-separator-mk00")

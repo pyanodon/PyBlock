@@ -4,12 +4,11 @@ RECIPE {
     energy_required = 1,
     enabled = true,
     ingredients = {
-        {type = "item", name = "steam-engine",     amount = 2},
-        {type = "item", name = "gasifier",      amount = 1},
+        {type = "item", name = "steam-engine",    amount = 2},
         {type = "item", name = "iron-gear-wheel", amount = 20},
-        {type = "item", name = "steel-plate",            amount = 10},
-        {type = "item", name = "glass",    amount = 15},
-        {type = "item", name = "stone-brick",    amount = 30},
+        {type = "item", name = "steel-plate",     amount = 10},
+        {type = "item", name = "glass",           amount = 15},
+        {type = "item", name = "stone-brick",     amount = 30},
     },
     results = {
         {type = "item", name = "sponge-culture-mk00", amount = 1}

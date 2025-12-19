@@ -189,10 +189,7 @@ RECIPE("breed-fish-0"):remove_ingredient("small-lamp"):add_unlock("fish-mk01"):s
 RECIPE("breed-fish-0"):set_ingredient_amount("water-saline", 60)
 RECIPE("breed-fish-1"):set_ingredient_amount("water-saline", 80)
 
-RECIPE("saline-water"):replace_unlock("electronics", "fish-mk01")
-
 TECHNOLOGY("water-animals-mk01"):remove_pack("py-science-pack-1").prerequisites = {}
-
 RECIPE("zogna-bacteria"):replace_unlock("microbiology-mk01", "biotech-mk01")
 
 --Lead
@@ -205,6 +202,7 @@ RECIPE("zogna-bacteria-darkness"):add_ingredient{type = "item", name = "small-la
 RECIPE("incubator-mk01"):remove_ingredient("duralumin"):remove_ingredient("titanium-plate"):add_ingredient{type = "item", name = "steel-plate", amount = 20}
 RECIPE("sea-sponge-codex"):remove_unlock("water-invertebrates-mk01"):set_fields{hidden = true, hidden_in_factoriopedia = true}
 RECIPE("earth-sea-sponge-sample"):remove_unlock("water-invertebrates-mk01"):set_fields{hidden = true, hidden_in_factoriopedia = true}
+RECIPE("saline-water"):replace_unlock("electronics", "water-invertebrates-mk00")
 RECIPE("sea-sponge"):remove_unlock("water-invertebrates-mk01"):set_fields{hidden = true, hidden_in_factoriopedia = true}
 RECIPE("sea-sponge-processing-01"):replace_unlock("water-invertebrates-mk01", "glass"):set_result_amount("ore-quartz", 31).energy_required = 24
 RECIPE("sea-sponge-sprouts-processing-01"):replace_unlock("water-invertebrates-mk01", "water-invertebrates-mk00"):set_result_amount("ore-quartz", 6).energy_required = 16

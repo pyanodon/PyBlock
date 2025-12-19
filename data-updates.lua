@@ -13,10 +13,20 @@ if settings.startup["pypp-tests"].value == true or mods["autotech"] then
 end
 
 -- mark items as not startup items
-data.raw.item["copper-plate"].autotech_startup = nil
-data.raw.item["iron-chest"].autotech_startup = nil
-data.raw.item["burner-mining-drill"].autotech_startup = nil
-data.raw.item["stone-furnace"].autotech_startup = nil
+for _, prototype in pairs{
+  "item",
+  "ammo",
+  "capsule",
+  "gun",
+  "module",
+  "tool",
+  "armor",
+  "repair-tool"
+} do
+  for _, item in pairs(data.raw[prototype]) do
+    item.autotech_startup = nil
+  end
+end
 
 require("prototypes/updates/pycoalprocessing-updates")
 require("prototypes/updates/pypetroleumhandling-updates")
@@ -202,7 +212,7 @@ RECIPE("burner-inserter"):add_unlock("automation").enabled = false
 -- mk01 building updates
 RECIPE("flora-collector-mk01"):replace_ingredient("soil-extractor-mk01", "soil-extractor-mk00")
 RECIPE("botanical-nursery"):replace_ingredient("soil-extractor-mk01", "botanical-nursery-mk00"):remove_ingredient("fluid-drill-mk01"):set_ingredient_amount("planter-box", 5)
-RECIPE("sponge-culture-mk01"):replace_ingredient("steam-engine", "sponge-culture-mk00", 1)
+RECIPE("sponge-culture-mk01"):replace_ingredient("steam-engine", "sponge-culture-mk00", 1):replace_unlock("water-invertebrates-mk01", "intermetallics-mk01")
 RECIPE("bio-reactor-mk01"):add_ingredient({type = "item", name = "bio-reactor-mk00", amount = 1})
 RECIPE("compost-plant-mk01"):replace_unlock("compost", "fertilizer-mk01"):add_ingredient{type = "item", name = "compost-plant-mk00", amount = 1}
 RECIPE("distilator"):add_ingredient{type = "item", name = "ddc-mk00", amount = 1}
@@ -213,11 +223,16 @@ RECIPE("geothermal-plant-mk01"):add_ingredient{type = "item", name = "pipe", amo
 RECIPE("slaughterhouse-mk01"):add_ingredient{type = "item", name = "slaughterhouse-mk00", amount = 1}
 RECIPE("soil-extractor-mk01"):replace_unlock("automation-science-pack", "soil-washing"):replace_ingredient("burner-mining-drill", "soil-extractor-mk00", 1)
 RECIPE("solid-separator"):replace_unlock("ash-separation", "steel-processing"):add_ingredient{type = "item", name = "solid-separator-mk00", amount = 1}:add_ingredient_amount("small-parts-01", -20):add_ingredient_amount("steel-plate", -10):add_ingredient_amount("inductor1", -5)
-RECIPE("automated-screener-mk01"):replace_ingredient("fluid-drill-mk01", "automated-screener-mk00", 1)
+-- RECIPE("automated-screener-mk01"):replace_ingredient("fluid-drill-mk01", "automated-screener-mk00", 1)
 RECIPE("wpu-mk01"):replace_unlock("automation-science-pack", "wood-processing"):add_ingredient{type = "item", name = "inductor1", amount = 12} :add_ingredient{type = "item", name = "wpu-mk00", amount = 1}.enabled = false
 
--- clear prerequisites
-TECHNOLOGY("moss-mk01"):remove_prereq("soil-washing")
+-- fwf mk00/moss mk00 adjustments
+RECIPE("moss-farm-mk01"):replace_ingredient("soil", {type = "item", name = "glass", amount = 20})
+RECIPE("Moss-1"):replace_unlock("moss-mk01", "moss-mk00")
+
+-- autotech fixes yes its still being weird
+TECHNOLOGY("moss-mk01"):remove_prereq("soil-washing"):add_prereq("crusher")
+TECHNOLOGY("glass"):add_prereq("crusher")
 
 -- move oil sands back to normalish place
 RECIPE("acetone-void-degrease"):replace_unlock("paramagnetic-material", "oil-sands")
@@ -250,14 +265,14 @@ for i = 1, 12 do
   TECHNOLOGY("pumping-productivity-" .. i):remove_prereq("mining-productivity-" .. i - 1):add_prereq("pumping-productivity-" .. i - 1).effects = {}
 end
 
-drilling_categories = {
+local drilling_categories = {
   clay = true,
   ["soil-extraction"] = true,
   ["ground-borer"] = true,
   ["sand-extractor"] = true
 }
 
-pumping_categories = {
+local pumping_categories = {
   coalbed = true,
   fracking = true,
   pumpjack = true,
@@ -284,21 +299,21 @@ for r, recipe in pairs(data.raw.recipe) do
   end
 end
 
-if settings.startup["disable-pyblock-fun-names"].value then
-  for _, entity in pairs({
-    "atomizer-mk00",
-    "automated-screener-mk00",
-    "ddc-mk00",
-    "slaughterhouse-mk00",
-    "soil-extractor-mk00",
-    "washer-mk00",
-    "wpu-mk00",
-    "solid-separator-mk00"
-  }) do
-    data.raw["assembling-machine"][entity].localised_name = { "", "entity-name-alt." .. entity, "entity-name." .. entity }
-  end
-  data.raw["furnace"]["compost-plant-mk00"].localised_name = { "", "entity-name-alt.compost-plant-mk00", "entity-name-alt.compost-plant-mk00" }
-end
+-- if settings.startup["disable-pyblock-fun-names"].value then
+--   for _, entity in pairs({
+--     "atomizer-mk00",
+--     "automated-screener-mk00",
+--     "ddc-mk00",
+--     "slaughterhouse-mk00",
+--     "soil-extractor-mk00",
+--     "washer-mk00",
+--     "wpu-mk00",
+--     "solid-separator-mk00"
+--   }) do
+--     data.raw["assembling-machine"][entity].localised_name = { "", "entity-name-alt." .. entity, "entity-name." .. entity }
+--   end
+--   data.raw["furnace"]["compost-plant-mk00"].localised_name = { "", "entity-name-alt.compost-plant-mk00", "entity-name-alt.compost-plant-mk00" }
+-- end
 
 if register_cache_file ~= nil then
   register_cache_file({"pycoalprocessing", "pyfusionenergy", "pyindustry", "pyrawores", "pypetroleumhandling", "pyalienlife", "pyhightech", "pyalternativeenergy", "PyBlock"}, "__PyBlock__/cached-configs/PyBlock+pyalienlife+pyalternativeenergy+pycoalprocessing+pyfusionenergy+pyhightech+pyindustry+pypetroleumhandling+pyrawores")

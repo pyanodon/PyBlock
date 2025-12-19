@@ -1,25 +1,3 @@
--- early quartz
-RECIPE {
-	type = "recipe",
-	name = "sand-quartz-sifting",
-	category = "screener",
-	enabled = false,
-	ingredients =
-	{
-		{ type = "item", name = "sand", amount = 10 }
-	},
-	results =
-	{
-		{ type = "item", name = "ore-quartz", amount = 2 }
-	},
-	main_product = "ore-quartz",
-	icon = "__pyraworesgraphics__/graphics/icons/ores/ore-quartz.png",
-	icon_size = 32,
-	subgroup = "py-washer",
-	order = "c",
-	energy_required = 4
-}:add_unlock("glass")
-
 -- geothermal water fake mining recipe
 RECIPE {
 	type = "recipe",
@@ -47,16 +25,16 @@ RECIPE {
   enabled = false,
   energy_required = 160,
   ingredients = {
-    { type = "item", name = "stone", amount = 24 },
+    { type = "item", name = "stone-brick", amount = 24 },
     { type = "fluid", name = "water", amount = 4200 },
   },
   results = {
-    { type = "item", name = "stone", amount_min = 6, amount_max = 12, probability = 0.5 },
+    { type = "item", name = "stone-brick", amount_min = 6, amount_max = 24 },
     { type = "fluid", name = "muddy-sludge", amount = 1200 },
     { type = "item", name = "moss", amount = 1, probability = 0.4 },
   },
   main_product = "moss"
-}:add_unlock("moss-mk01")
+}:add_unlock("moss-mk00")
 
 -- bootstrapping wood to sap
 RECIPE {

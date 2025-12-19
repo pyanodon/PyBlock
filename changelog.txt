@@ -2,7 +2,7 @@
 Version: 3.3.0
 Date: ???
   Features:
-    - Added foraging (handcrafting) recipes for soil, seaweed, logs, and fawoage spores
+    - Added foraging (handcrafting) recipes for soil, seaweed, logs, and fish
     - Wood (not logs) burns into hot coals
     - Seaweed spoils into dry seaweed if spoilage is enabled, or can be cooked in a furnace to speed up the process (or if spoilage is disabled)
     - Dry seaweed can be rehydrated by hand or in an assembling machine
@@ -11,6 +11,7 @@ Date: ???
     - Moved certain wood processing recipes to new Wood Processing 0 tech
     - Slowwood Forestry Mk 00 (yes, the classic name can be disabled you heathen)
     - Botanical Nursery Mk 00 (this name too)
+    - Musk Farm MK 00
     - Sawweed Crop Mk 00 (and this one)
     - LandBlock preset (normal terrain gen, no resources)
   Changes:

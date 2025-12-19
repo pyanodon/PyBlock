@@ -12,7 +12,6 @@ for _, technology in pairs{
   "botany-mk01",
   "moss-mk01",
   "glass",
-  "soil-washing",
   "mining-with-fluid",
   "steel-processing"
 } do
