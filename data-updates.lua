@@ -213,6 +213,7 @@ RECIPE("burner-inserter"):add_unlock("automation").enabled = false
 RECIPE("flora-collector-mk01"):replace_ingredient("soil-extractor-mk01", "soil-extractor-mk00")
 RECIPE("botanical-nursery"):replace_ingredient("soil-extractor-mk01", "botanical-nursery-mk00"):remove_ingredient("fluid-drill-mk01"):set_ingredient_amount("planter-box", 5)
 RECIPE("sponge-culture-mk01"):replace_ingredient("steam-engine", "sponge-culture-mk00", 1):replace_unlock("water-invertebrates-mk01", "intermetallics-mk01")
+RECIPE("moss-farm-mk01"):replace_ingredient("steam-engine", "moss-farm-mk00", 1)
 RECIPE("bio-reactor-mk01"):add_ingredient({type = "item", name = "bio-reactor-mk00", amount = 1})
 RECIPE("compost-plant-mk01"):replace_unlock("compost", "fertilizer-mk01"):add_ingredient{type = "item", name = "compost-plant-mk00", amount = 1}
 RECIPE("distilator"):add_ingredient{type = "item", name = "ddc-mk00", amount = 1}
@@ -243,6 +244,30 @@ RECIPE("grease-table-mk01"):replace_unlock("machines-mk03", "machines-mk02"):rep
 RECIPE("py-check-valve"):replace_unlock("fluid-handling", "steel-processing")
 
 RECIPE("molten-zinc-01"):set_ingredient_amount("heavy-oil", 40)
+
+-- move phyto 3 to py4 and phyto 2 to py3
+TECHNOLOGY("phytomining-mk03"):add_pack("py-science-pack-4")
+TECHNOLOGY("phytomining-mk02"):add_pack("py-science-pack-3")
+
+-- nickel phytomining to ralesias
+RECIPE("ralesia-ni"):replace_unlock("phytomining-mk02", "ralesia")
+RECIPE("ni-biomass-extraction"):replace_unlock("phytomining-mk02", "ralesia")
+
+-- move grod alum/lead to py1
+RECIPE("bedding"):replace_unlock("grod", "yotoi")
+RECIPE("grod-al"):replace_unlock("phytomining-mk02", "grod")
+RECIPE("al-biomass-extraction"):replace_unlock("phytomining-mk02", "grod")
+RECIPE("grod-pb"):replace_unlock("phytomining-mk02", "grod")
+RECIPE("pb-biomass-extraction"):replace_unlock("phytomining-mk02", "grod")
+TECHNOLOGY("grod"):remove_prereq("yotoi"):remove_pack("py-science-pack-2")
+
+-- move salt phyto to tuuphra
+RECIPE("tuuphra-nacl"):replace_unlock("phytomining-mk01", "tuuphra")
+RECIPE("nacl-biomass-extraction"):replace_unlock("phytomining-mk01", "tuuphra")
+
+--NIOBIUM
+RECIPE("guar-nb"):replace_unlock("phytomining-mk02", "guar")
+RECIPE("nb-biomass-extraction"):replace_unlock("phytomining-mk02", "guar")
 
 -- create pumping productivity techs
 for i = 1, 12 do

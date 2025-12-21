@@ -349,11 +349,6 @@ RECIPE("yotoi-leaves-to-chromium"):replace_unlock("molecular-decohesion-mk02", "
 
 RECIPE("yotoi-seed-to-chromium"):replace_unlock("molecular-decohesion-mk02", "molecular-decohesion-mk03")
 
---NIOBIUM
-TECHNOLOGY("phytomining-mk02"):remove_pack("chemical-science-pack")
-RECIPE("nb-biomass-extraction"):replace_unlock("phytomining-mk02", "guar")
-RECIPE("guar-nb"):replace_unlock("phytomining-mk02", "guar")
-
 -- move guar back to logi so they can be used for phadai
 TECHNOLOGY("guar"):remove_pack("py-science-pack-2"):remove_prereq("py-science-pack-2")
 
