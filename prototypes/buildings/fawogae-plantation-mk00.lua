@@ -44,6 +44,5 @@ require "make_copy" ("fawogae-plantation"):set_fields{
     minimum_temperature = 250,
     scale_fluid_usage = true
   },
-  fluid_boxes = {},
   allowed_module_categories = {"fawogae"}
 }
