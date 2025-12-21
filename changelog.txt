@@ -70,6 +70,18 @@ Date: ???
     - Fixed simple fish breeding recipe having a 1 instead of a 0 on the icon when recipe signals are enabled. Resolves https://github.com/pyanodon/pybugreports/issues/1238
     - Fixed mining and pumping productivity bonus being 10% instead of 5%
 ---------------------------------------------------------------------------------------------------
+Version: 3.2.16
+Date: 2025-12-21
+  Changes:
+    - Moved pYHardMode compat to hardmode
+    - Fixed Creature Chamber TURD path 1 Phadai recipe requiring more items than the basic recipe
+---------------------------------------------------------------------------------------------------
+Version: 3.2.15
+Date: 2025-10-02
+  Bugfixes:
+    - Added Polish locale courtesy of @S3BA-pl on Github
+    - Fixed WPU MK 01 recipe not being adjusted
+---------------------------------------------------------------------------------------------------
 Version: 3.2.14
 Date: 2025-09-16
   Bugfixes:
