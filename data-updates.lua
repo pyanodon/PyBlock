@@ -262,8 +262,8 @@ RECIPE("pb-biomass-extraction"):replace_unlock("phytomining-mk02", "grod")
 TECHNOLOGY("grod"):remove_prereq("yotoi"):remove_pack("py-science-pack-2")
 
 -- move salt phyto to tuuphra
-RECIPE("tuuphra-nacl"):replace_unlock("phytomining-mk01", "tuuphra")
-RECIPE("nacl-biomass-extraction"):replace_unlock("phytomining-mk01", "tuuphra")
+RECIPE("tuuphra-nacl"):replace_unlock("phytomining", "tuuphra")
+RECIPE("nacl-biomass-extraction"):replace_unlock("phytomining", "tuuphra")
 
 --NIOBIUM
 RECIPE("guar-nb"):replace_unlock("phytomining-mk02", "guar")
