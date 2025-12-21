@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.16
-Date: ????
+Date: 2025-12-21
   Changes:
     - Moved pYHardMode compat to hardmode
     - Fixed Creature Chamber TURD path 1 Phadai recipe requiring more items than the basic recipe
