@@ -27,7 +27,7 @@ ITEM("wood"):set_fields{burnt_result = "hot-coals"}
 ITEM{
   type = "item",
   name = "hot-coals",
-  icon = "__PyBlock__/graphics/icons/charcoal.png",
+  icon = "__PyBlock__/graphics/icons/hot-coals.png",
   subgroup = 'py-items',
   order = 'hot-coals',
   stack_size = 100,
