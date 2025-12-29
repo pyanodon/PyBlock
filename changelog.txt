@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.3.0
-Date: ???
+Date: 2025-12-29
   Features:
     - Added foraging (handcrafting) recipes for soil, seaweed, logs, and fish
     - Wood (not logs) burns into hot coals
