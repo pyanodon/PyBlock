@@ -1,11 +1,11 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.17
-Date: ???
+Date: 2025-12-29
   Bugfixes:
     - Fixed missing recipes due to iterating a table while modifying it
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.16
-Date: 2025-12-29
+Date: 2025-12-21
   Changes:
     - Moved pYHardMode compat to hardmode
     - Fixed Creature Chamber TURD path 1 Phadai recipe requiring more items than the basic recipe
