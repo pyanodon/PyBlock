@@ -4,7 +4,7 @@ RECIPE{
   enabled = true,
   energy_required = 5,
   category = "handcrafting",
-  results = {{type = "item", name = "seaweed", amount_min = 0, amount_max = 4}},
+  results = {{type = "item", name = "seaweed", amount_min = 0, amount_max = 4, ignored_by_stats = 4}},
   allow_as_intermediate = false,
   main_product = "seaweed"
 }
@@ -13,7 +13,7 @@ RECIPE{
   enabled = true,
   energy_required = 5,
   category = "handcrafting",
-  results = {{type = "item", name = "log", amount_min = 0, amount_max = 2}},
+  results = {{type = "item", name = "log", amount_min = 0, amount_max = 2, ignored_by_stats = 2}},
   allow_as_intermediate = false,
   main_product = "log"
 }
@@ -22,7 +22,7 @@ RECIPE{
   enabled = true,
   energy_required = 2,
   category = "handcrafting",
-  results = {{type = "item", name = "soil", amount_min = 0, amount_max = 5}},
+  results = {{type = "item", name = "soil", amount_min = 0, amount_max = 5, ignored_by_stats = 5}},
   allow_as_intermediate = false,
   main_product = "soil"
 }
@@ -31,7 +31,7 @@ RECIPE{
   enabled = true,
   energy_required = 8,
   category = "handcrafting",
-  results = {{type = "item", name = "fish", amount_min = 0, amount_max = 2}},
+  results = {{type = "item", name = "fish", amount_min = 0, amount_max = 2, ignored_by_stats = 2}},
   allow_as_intermediate = false,
   main_product = "fish"
 }

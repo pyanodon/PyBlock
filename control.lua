@@ -98,3 +98,5 @@ script.on_event(defines.events.on_cutscene_started, function(event)
     radius = radius + 10
   end
 end)
+
+require "scripts.milestones"
