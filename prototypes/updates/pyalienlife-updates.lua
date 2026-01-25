@@ -283,8 +283,8 @@ RECIPE("flavonoids"):replace_unlock("yaedols", "py-science-pack-2")
 
 --Titanium from yaedols
 TECHNOLOGY("yaedols"):remove_pack("logistic-science-pack"):remove_pack("py-science-pack-1"):remove_prereq("mycology-mk02")
-RECIPE("yaedols-2"):set_ingredient_amount("fungal-substrate-02", 2) -- replace special fungal substrate with improved fungal substrate
-RECIPE("yaedols-mk02"):set_ingredient_amount("fungal-substrate-02", 5)
+RECIPE("yaedols-2"):replace_ingredient("fungal-substrate-03", "fungal-substrate-02", 2) -- replace special fungal substrate with improved fungal substrate
+RECIPE("yaedols-mk02"):replace_ingredient("fungal-substrate-03", "fungal-substrate-02", 5)
 
 TECHNOLOGY("phytomining"):remove_pack("py-science-pack-1"):remove_pack("logistic-science-pack"):remove_pack("py-science-pack-2").prerequisites = {}
 
