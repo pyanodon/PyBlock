@@ -104,7 +104,7 @@ RECIPE{
 
 -- sort through coals
 RECIPE{
-  name = "handsort-coals",
+  name = "handsort-hot-coals",
   enabled = true,
   energy_required = 1,
   category = "handcrafting",
