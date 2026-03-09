@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.18
 Date: 2026-03-08
+  Changes:
+    - Added German locale courtesy of @Spunk42 on Github
   Bugfixes:
     - Fixed terrain generation incompatibility with Gridlocked
 ---------------------------------------------------------------------------------------------------
