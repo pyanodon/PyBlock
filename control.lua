@@ -1,3 +1,5 @@
+require "__pypostprocessing__.lib"
+
 script.on_init(function(event)
   if remote.interfaces['freeplay'] then
     local created_items = remote.call('freeplay', 'get_created_items')
@@ -84,7 +86,7 @@ script.on_event(defines.events.on_cutscene_started, function(event)
       type = "fish"
     }
     if #victims > 0 then
-      victim = victims[#victims == 1 and 1 or math.random(1, #victims)]
+      local victim = victims[#victims == 1 and 1 or math.random(1, #victims)]
       local position, force = victim.position, victim.force
       victim.destroy()
       local result = surface.create_entity{
@@ -100,3 +102,6 @@ script.on_event(defines.events.on_cutscene_started, function(event)
 end)
 
 require "scripts.milestones"
+require "scripts.drilling"
+
+py.finalize_events()
