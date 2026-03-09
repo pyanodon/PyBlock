@@ -1,9 +1,11 @@
-require "make_borehole" ("geothermal-plant-mk01",{
+require "make_rig" ("geothermal-plant-mk01",{
   { flow_direction = "input-output", position = {5, 2}, direction = defines.direction.east },
   { flow_direction = "input-output", position = {5, -2}, direction = defines.direction.east },
   { flow_direction = "input-output", position = {-5, 2}, direction = defines.direction.west },
   { flow_direction = "input-output", position = {-5, -2}, direction = defines.direction.west },
 })
+
+require "make_borehole" ("geothermal-crack")
 
 -- add extra fluidboxes to regenrative heat exchanger
 data.raw["assembling-machine"].rhe.fluid_boxes = {
@@ -38,54 +40,3 @@ RECIPE("geo-he-00"):set_fields {
     {type = "fluid", name = "steam",             amount = 320, temperature = 500}
   }
 }
-
-data.raw.resource["geothermal-crack"].minable.fluid_amount = 0
-data.raw.resource["geothermal-crack"].minable.required_fluid = nil
-
--- copy of geothermal crack to represent drilling
-data:extend {{
-    type = "resource",
-    name = "geothermal-crack-borehole",
-    category = "geothermal-crack",
-    icon = "__pyalternativeenergygraphics__/graphics/icons/geothermal-crack.png",
-    icon_size = 64,
-    flags = {"placeable-neutral"},
-    order = "a-b-a",
-    map_color = {r = 0.639, g = 0.074, b = 0.007},
-    highlight = true,
-    map_grid = false,
-    minable = {
-        mining_time = 1,
-        results = {},
-        required_fluid = "pressured-water",
-        fluid_amount = 100
-    },
-    resource_patch_search_radius = 12,
-    collision_box = {{-5.3, -5.3}, {5.3, 5.3}},
-    selection_box = {{-5.5, -5.5}, {5.5, 5.5}},
-    collision_mask = {layers = {resource = true}},
-    stage_counts = {0},
-    stages = {
-        layers = {
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/ore/geothermal-crack/geothermal-crack.png",
-                priority = "extra-high",
-                width = 352,
-                height = 352,
-                frame_count = 1,
-                variation_count = 1,
-                shift = util.by_pixel(0, 0)
-            },
-            {
-                filename = "__pyalternativeenergygraphics__/graphics/ore/geothermal-crack/glow.png",
-                priority = "extra-high",
-                draw_as_glow = true,
-                width = 352,
-                height = 352,
-                frame_count = 1,
-                variation_count = 1,
-                shift = util.by_pixel(0, 0)
-            }
-        }
-    }
-}}
