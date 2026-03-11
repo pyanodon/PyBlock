@@ -157,118 +157,51 @@ RECIPE {
   main_product = "native-flora"
 }:add_unlock("fertilizer-mk02")
 
---UNUSED
-
---nickel from clay
-
---new fluids for ree from ash
---[[
-RECIPE {
-	type = "recipe",
-	name = "propene-to-butanol",
-	ingredients =
-	{
-		{ type = "fluid", name = "propene", amount = 50 },
-		{ type = "fluid", name = "hydrogen", amount = 50 },
-		{ type = "fluid", name = "carbon-dioxide", amount = 25 }
-	},
-	results =
-	{
-		{ type = "fluid", name = "butanol", amount = 50 }
-	},
-	main_product = "butanol",
-	category = "electrolyzer"
-}:add_unlock("uranium-mk01")
-]]--
-
---[[
-RECIPE {
-	type = "recipe",
-	name = "phosphorus-tricloride",
-	ingredients =
-	{
-		{ type = "item", name = "powdered-phosphate-rock", amount = 10 },
-		{ type = "fluid", name = "chlorine", amount = 60 }
-	},
-	results =
-	{
-		{ type = "fluid", name = "phosphorus-tricloride", amount = 50 }
-	},
-	main_product = "phosphorus-tricloride",
-	category = "electrolyzer"
-}:add_unlock("uranium-mk01")
-]]--
-
 --make phosphorous acid: not used atm
---[[
-	{
-	type = "recipe",
-	name = "phosphorus-acid",
-	ingredients =
-		{
-			{type = "fluid", name = "phosphorus-tricloride", amount = 20},
-			{type = "fluid", name = "water", amount = 60}
-		},
-	results =
-		{
-			{type = "fluid", name = "phosphorus-acid", amount = 20},
-			{type = "fluid", name = "hydrogen-chloride", amount = 60},
-		},
-	main_product = "phosphorus-acid"
-	},
-	]] --
+-- RECIPE {
+-- 	type = "recipe",
+-- 	name = "phosphorus-acid",
+-- 	ingredients =
+-- 		{
+-- 			{type = "fluid", name = "phosphorus-tricloride", amount = 20},
+-- 			{type = "fluid", name = "water", amount = 60}
+-- 		},
+-- 	results =
+-- 		{
+-- 			{type = "fluid", name = "phosphorus-acid", amount = 20},
+-- 			{type = "fluid", name = "hydrogen-chloride", amount = 60},
+-- 		},
+-- 	main_product = "phosphorus-acid"
+-- 	}
 
-	--[[
-RECIPE {
-	type = "recipe",
-	name = "phosphoryl-chloride",
-	ingredients =
-	{
-		{ type = "fluid", name = "phosphorus-tricloride", amount = 20 },
-		{ type = "fluid", name = "oxygen", amount = 10 }
-	},
-	results =
-	{
-		{ type = "fluid", name = "phosphoryl-chloride", amount = 40 }
-	},
-	main_product = "phosphoryl-chloride",
-	category = "electrolyzer"
-}:add_unlock("uranium-mk01")
-]]--
+-- RECIPE {
+-- 	type = "recipe",
+-- 	name = "phosphoryl-chloride",
+-- 	ingredients =
+-- 	{
+-- 		{ type = "fluid", name = "phosphorus-tricloride", amount = 20 },
+-- 		{ type = "fluid", name = "oxygen", amount = 10 }
+-- 	},
+-- 	results =
+-- 	{
+-- 		{ type = "fluid", name = "phosphoryl-chloride", amount = 40 }
+-- 	},
+-- 	main_product = "phosphoryl-chloride",
+-- 	category = "electrolyzer"
+-- }:add_unlock("uranium-mk01")
 
---[[
-RECIPE {
-	type = "recipe",
-	name = "tributyl-phosphate",
-	ingredients =
-	{
-		{ type = "fluid", name = "phosphoryl-chloride", amount = 10 },
-		{ type = "fluid", name = "butanol", amount = 30 }
-	},
-	results =
-	{
-		{ type = "fluid", name = "tributyl-phosphate", amount = 10 },
-		{ type = "fluid", name = "hydrogen-chloride", amount = 30 },
-	},
-	main_product = "tributyl-phosphate",
-	category = "electrolyzer"
-}:add_unlock("uranium-mk01")
-]]
-
---[[
 RECIPE {
 	type = "recipe",
 	name = "ree-from-ash",
-	ingredients =
-	{
-		{ type = "fluid", name = "tributyl-phosphate", amount = 20 },
+	category = "electrolyzer",
+  subgroup = "py-rawores-rare-earth",
+  enabled = false,
+  energy_required = 30,
+	ingredients ={
+		{ type = "item", name = "tbp", amount = 2 },
 		{ type = "item", name = "ash", amount = 25 }
 	},
-	results =
-	{
+	results = {
 		{ type = "item", name = "rare-earth-ore", amount = 5 },
-	},
-	main_product = "rare-earth-ore",
-	category = "electrolyzer"
-}:add_unlock("rare-earth-tech")
-]]
+	}
+}:add_unlock("tbp")

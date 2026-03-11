@@ -3,6 +3,8 @@ Version: 3.3.1
 Date: ????
   Features:
     - Added proper milestones support for pyblock specific progression
+  Changes:
+    - Moved TBP to logi sci. Added recipe for REO from ash+TBP
   Bugfixes:
     - Fixed yaedols 2 using special fungal substrate instead of advanced
 ---------------------------------------------------------------------------------------------------
