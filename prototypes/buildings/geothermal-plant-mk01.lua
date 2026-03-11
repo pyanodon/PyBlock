@@ -1,9 +1,16 @@
-require "make_rig" ("geothermal-plant-mk01",{
-  { flow_direction = "input-output", position = {5, 2}, direction = defines.direction.east },
-  { flow_direction = "input-output", position = {5, -2}, direction = defines.direction.east },
-  { flow_direction = "input-output", position = {-5, 2}, direction = defines.direction.west },
-  { flow_direction = "input-output", position = {-5, -2}, direction = defines.direction.west },
-})
+require "make_rig" (
+  "geothermal-plant-mk01",
+  {
+    { flow_direction = "input-output", position = {5, 2}, direction = defines.direction.east },
+    { flow_direction = "input-output", position = {5, -2}, direction = defines.direction.east },
+    { flow_direction = "input-output", position = {-5, 2}, direction = defines.direction.west },
+    { flow_direction = "input-output", position = {-5, -2}, direction = defines.direction.west },
+  },
+  100,
+  "geowater"
+)
+
+ENTITY("geothermal-plant-mk01").fixed_recipe = "geothermal-drilling"
 
 require "make_borehole" ("geothermal-crack")
 

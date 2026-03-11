@@ -114,6 +114,7 @@ require("prototypes/entity")
 
 --Recipes
 require("prototypes/recipes/recipes")
+require("prototypes/recipes/recipes-drilling")
 require("prototypes/recipes/recipes-kimberlite")
 require("prototypes/recipes/recipes-uranium")
 

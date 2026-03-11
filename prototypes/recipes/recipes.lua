@@ -1,26 +1,3 @@
--- geothermal water fake mining recipe
-RECIPE {
-	type = "recipe",
-	name = "geothermal-drilling",
-	category = "geowater",
-	enabled = true,
-  hidden_from_player_crafting = true,
-	energy_required = 1,
-	ingredients = {
-    { type = "item", name = "pipe", amount = 1 },
-    { type = "item", name = "small-parts-01", amount = 1 },
-	},
-	results = {
-		{ type = "fluid", name = "geothermal-water", amount_min = 1000, amount_max = 40000, temperature = 3000, fluidbox_index = 1 },
-		{ type = "fluid", name = "pressured-water", amount = 0, fluidbox_index = 2 },
-		{ type = "fluid", name = "drilling-fluid-0", amount = 0, fluidbox_index = 3 },
-		{ type = "fluid", name = "drilling-fluid-1", amount = 0, fluidbox_index = 4 },
-		{ type = "fluid", name = "drilling-fluid-2", amount = 0, fluidbox_index = 5 },
-		{ type = "fluid", name = "drilling-fluid-3", amount = 0, fluidbox_index = 6 },
-	},
-	main_product = "geothermal-water",
-}
-
 -- bootstrapping stone to moss
 RECIPE {
   type = "recipe",

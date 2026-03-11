@@ -1,5 +1,5 @@
-return function (name, connection_definitions)
-  ITEM(name).place_result = name
+return function (name, connection_definitions, rocket_parts, crafting_category)
+  ITEM(name).place_result = name .. "-silo"
 
   if data.raw["mining-drill"][name] then
     local drill = ENTITY(name)
@@ -16,8 +16,8 @@ return function (name, connection_definitions)
       dying_explosion = drill.dying_explosion,
       collision_box = table.deepcopy(drill.collision_box),
       selection_box = table.deepcopy(drill.selection_box),
-      crafting_categories = {"geowater"}, -- TODO
-      rocket_parts_required = 5, -- TODO
+      crafting_categories = {crafting_category},
+      rocket_parts_required = rocket_parts,
       crafting_speed = 1,
       to_be_inserted_to_rocket_inventory_size = 1,
       show_recipe_icon = false,
@@ -97,7 +97,6 @@ return function (name, connection_definitions)
       silo_fade_out_end_distance = 0,
       allowed_effects = {},
       module_slots = 0,
-      vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
       working_sound = drill.working_sound,
       stateless_visualisation = table.deepcopy(drill.graphics_set)
     }
