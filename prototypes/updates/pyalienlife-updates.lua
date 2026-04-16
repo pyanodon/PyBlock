@@ -345,8 +345,9 @@ RECIPE("bhoddos-to-ti"):replace_unlock("molecular-decohesion-mk02", "molecular-d
 
 RECIPE("grod-to-zinc"):replace_unlock("molecular-decohesion-mk02", "molecular-decohesion-mk03")
 
+-- move yotoi to chromium around
+RECIPE("yotoi-fruit-to-chromium"):replace_unlock("molecular-decohesion-mk03", "yotoi")
 RECIPE("yotoi-leaves-to-chromium"):replace_unlock("molecular-decohesion-mk02", "molecular-decohesion-mk03")
-
 RECIPE("yotoi-seed-to-chromium"):replace_unlock("molecular-decohesion-mk02", "molecular-decohesion-mk03")
 
 -- move guar back to logi so they can be used for phadai

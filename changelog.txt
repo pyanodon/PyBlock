@@ -5,6 +5,7 @@ Date: ????
     - Added proper milestones support for pyblock specific progression
   Changes:
     - Reverted the tar quenching nerf introduced in 3.2.1
+    - Moved yotoi fruit to chromium ore from molecular decohesion 2 to yotoi aloe stage 1
   Bugfixes:
     - Fixed yaedols 2 using special fungal substrate instead of advanced
     - Fixed missing recipe locales
