@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "bio-reactor-mk00",
-    energy_required = 1,
+    energy_required = 0.5,
     enabled = true,
     ingredients = {
         {type = "item", name = "steam-engine",     amount = 4},

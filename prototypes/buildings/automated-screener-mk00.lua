@@ -1,7 +1,7 @@
 RECIPE {
   type = "recipe",
   name = "automated-screener-mk00",
-  energy_required = 10,
+  energy_required = 1,
   enabled = false,
   ingredients = {
     {type = "item", name = "iron-plate",      amount = 40},

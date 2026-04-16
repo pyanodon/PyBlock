@@ -7,6 +7,7 @@ Date: ????
     - Reverted the tar quenching nerf introduced in 3.2.1
     - Moved yotoi fruit to chromium ore from molecular decohesion 2 to yotoi aloe stage 1
     - Moved chitin to phosphate rock from molecular decohesion 3 to molecular decohesion mk02
+    - Made shunt inserters an ingredient to mechanical inserters
   Bugfixes:
     - Fixed yaedols 2 using special fungal substrate instead of advanced
     - Fixed missing recipe locales
@@ -15,6 +16,7 @@ Date: ????
     - Fixed that Fastwood Forestry TURD did not have the right mk01 recipe
     - Fixed that Fawogae Plantation TURD did not have the right mk01 recipe
     - Fixed that Cadaveric Arum TURD did not have the right mk01 recipe
+    - Fixed mk00 crafting times not matching the other tiers
 ---------------------------------------------------------------------------------------------------
 Version: 3.3.0
 Date: 2025-12-29

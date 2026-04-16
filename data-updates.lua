@@ -207,7 +207,7 @@ RECIPE("burner-mining-drill"):add_unlock("automation-science-pack").enabled = fa
 RECIPE("small-electric-pole"):add_unlock("automation-science-pack").enabled = false
 
 -- move mechanical inserter to automation
-RECIPE("burner-inserter"):add_unlock("automation").enabled = false
+RECIPE("burner-inserter"):replace_ingredient("iron-plate", {type = "item", name = "shunt-inserter", amount = 1}):add_unlock("automation").enabled = false
 
 -- mk01 building updates
 RECIPE("flora-collector-mk01"):replace_ingredient("soil-extractor-mk01", "soil-extractor-mk00")

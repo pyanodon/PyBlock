@@ -1,7 +1,7 @@
 RECIPE {
   type = "recipe",
   name = "soil-extractor-mk00",
-  energy_required = 6,
+  energy_required = 0.5,
   enabled = false,
   ingredients = {
     {type = "item", name = "burner-mining-drill", amount = 2},

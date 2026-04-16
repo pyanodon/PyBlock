@@ -1,7 +1,7 @@
 RECIPE {
   type = "recipe",
   name = "washer-mk00",
-  energy_required = 4,
+  energy_required = 0.5,
   enabled = false,
   ingredients = {
     {type = "item", name = "steam-engine",    amount = 1},

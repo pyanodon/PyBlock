@@ -49,7 +49,7 @@ end
 RECIPE {
   type = "recipe",
   name = "ddc-mk00",
-  energy_required = 8,
+  energy_required = 0.5,
   enabled = false,
   ingredients =
   {

@@ -1,7 +1,7 @@
 RECIPE {
     type = "recipe",
     name = "botanical-nursery-mk00",
-    energy_required = 1,
+    energy_required = 0.5,
     enabled = true,
     ingredients = {
         {type = "item", name = "soil-extractor-mk00", amount = 1},
