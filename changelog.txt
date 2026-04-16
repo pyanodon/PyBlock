@@ -3,6 +3,8 @@ Version: 3.3.1
 Date: ????
   Features:
     - Added proper milestones support for pyblock specific progression
+  Changes:
+    - Reverted the tar quenching nerf introduced in 3.2.1
   Bugfixes:
     - Fixed yaedols 2 using special fungal substrate instead of advanced
 ---------------------------------------------------------------------------------------------------
