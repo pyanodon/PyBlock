@@ -136,10 +136,6 @@ RECIPE {
   }
 }:add_unlock("moss-mk01")
 
--- some changes to flue gas/tailings/acid gas/mossogen
-RECIPE("tar-quenching"):set_result_amount("water-saline", 80)
-RECIPE("sulfur-void-tar"):set_result_amount("tar", 150)
-
 --Tin from fish
 TECHNOLOGY("molecular-decohesion").prerequisites = {}
 
