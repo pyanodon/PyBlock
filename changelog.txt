@@ -10,6 +10,11 @@ Date: ????
   Bugfixes:
     - Fixed yaedols 2 using special fungal substrate instead of advanced
     - Fixed missing recipe locales
+    - Fixed that Moss Farm TURD did not have the right mk01 recipe
+    - Fixed that Seaweed Farm TURD did not have the right mk01 recipe
+    - Fixed that Fastwood Forestry TURD did not have the right mk01 recipe
+    - Fixed that Fawogae Plantation TURD did not have the right mk01 recipe
+    - Fixed that Cadaveric Arum TURD did not have the right mk01 recipe
 ---------------------------------------------------------------------------------------------------
 Version: 3.3.0
 Date: 2025-12-29

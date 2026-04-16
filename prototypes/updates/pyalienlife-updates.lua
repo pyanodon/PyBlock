@@ -14,6 +14,15 @@ RECIPE("fawogae-plantation-mk01").ingredients = {
   {type = "item", name = "iron-plate", amount = 20},
   {type = "item", name = "stone-brick", amount = 10}
 }
+RECIPE("fawogae-plantation-mk01-with-pressure-pump").ingredients = {
+  {type = "item", name = "pipe", amount = 10},
+  {type = "item", name = "wood", amount = 50},
+  {type = "item", name = "soil", amount = 100},
+  {type = "item", name = "iron-plate", amount = 20},
+  {type = "item", name = "stone-brick", amount = 10},
+  {type = "item", name = "vacuum-pump-mk01", amount = 1},
+  {type = "item", name = "fawogae-plantation-mk00", amount = 1}
+}
 for _, entity in pairs{
   "fawogae-plantation-mk01",
   "fawogae-plantation-mk02",
@@ -65,11 +74,9 @@ RECIPE("log2"):replace_unlock("wood-processing", "wood-processing-0")
 RECIPE("coal-fawogae"):replace_unlock("fawogae-mk01", "coal-processing-0"):set_result_amount("raw-coal", 5).category = "distilator"
 
 -- seaweed
-RECIPE("seaweed-crop-mk01"):remove_ingredient("pipe"):remove_ingredient("stone-brick"):remove_ingredient("steam-engine"):add_ingredient({type = "item", name = "seaweed-crop-mk00", amount = 1})
 RECIPE("seaweed-1"):replace_unlock("seaweed-mk01", "seaweed-mk00")
 
 -- moss farm
-RECIPE("moss-farm-mk01"):remove_ingredient("aluminium-plate")
 TECHNOLOGY("moss-mk01"):remove_prereq("botany-mk01")
 
 --cadaveric for copper
@@ -88,6 +95,14 @@ RECIPE("cadaveric-arum-mk01").ingredients = {
   {type = "item", name = "inductor1", amount = 5},
   {type = "item", name = "iron-gear-wheel", amount = 8},
   {type = "item", name = "pipe", amount = 12}
+}
+RECIPE("cadaveric-arum-mk01-with-nanofibrils").ingredients = {
+  {type = "item", name = "botanical-nursery", amount = 1},
+  {type = "item", name = "steel-plate", amount = 10},
+  {type = "item", name = "inductor1", amount = 5},
+  {type = "item", name = "iron-gear-wheel", amount = 8},
+  {type = "item", name = "pipe", amount = 12},
+  {type = "item", name = "nanofibrils", amount = 6}
 }
 
 -- add acid gas req, reduce seed useage to match

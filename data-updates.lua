@@ -213,11 +213,15 @@ RECIPE("burner-inserter"):add_unlock("automation").enabled = false
 RECIPE("flora-collector-mk01"):replace_ingredient("soil-extractor-mk01", "soil-extractor-mk00")
 RECIPE("botanical-nursery"):replace_ingredient("soil-extractor-mk01", "botanical-nursery-mk00"):remove_ingredient("fluid-drill-mk01"):set_ingredient_amount("planter-box", 5)
 RECIPE("sponge-culture-mk01"):replace_ingredient("steam-engine", "sponge-culture-mk00", 1):replace_unlock("water-invertebrates-mk01", "intermetallics-mk01")
-RECIPE("moss-farm-mk01"):replace_ingredient("steam-engine", "moss-farm-mk00", 1)
+RECIPE("moss-farm-mk01"):replace_ingredient("steam-engine", "moss-farm-mk00", 1):remove_ingredient("aluminium-plate")
+RECIPE("moss-farm-mk01-with-bioreactor"):replace_ingredient("steam-engine", "moss-farm-mk00", 1):remove_ingredient("aluminium-plate")
 RECIPE("bio-reactor-mk01"):add_ingredient({type = "item", name = "bio-reactor-mk00", amount = 1})
 RECIPE("compost-plant-mk01"):replace_unlock("compost", "fertilizer-mk01"):add_ingredient{type = "item", name = "compost-plant-mk00", amount = 1}
 RECIPE("distilator"):add_ingredient{type = "item", name = "ddc-mk00", amount = 1}
 RECIPE("fwf-mk01"):remove_ingredient("steam-engine"):add_ingredient{type = "item", name = "fwf-mk00", amount = 1}
+RECIPE("fwf-mk01-with-furnace"):remove_ingredient("steam-engine"):add_ingredient{type = "item", name = "fwf-mk00", amount = 1}
+RECIPE("seaweed-crop-mk01"):remove_ingredient("pipe"):remove_ingredient("stone-brick"):remove_ingredient("steam-engine"):add_ingredient{type = "item", name = "seaweed-crop-mk00", amount = 1}
+RECIPE("seaweed-crop-mk01-with-ai"):remove_ingredient("pipe"):remove_ingredient("stone-brick"):remove_ingredient("steam-engine"):add_ingredient{type = "item", name = "seaweed-crop-mk00", amount = 1}
 RECIPE("fawogae-plantation-mk01"):remove_ingredient("steam-engine"):add_ingredient{type = "item", name = "fawogae-plantation-mk00", amount = 1}
 RECIPE("spore-collector-mk01"):remove_ingredient("steam-engine"):add_ingredient{type = "item", name = "spore-collector-mk00", amount = 1}
 RECIPE("geothermal-plant-mk01"):add_ingredient{type = "item", name = "pipe", amount = 80}:add_ingredient{type = "item", name = "concrete", amount = 150}
