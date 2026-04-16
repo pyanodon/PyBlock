@@ -89,6 +89,18 @@ Date: 2025-12-29
     - Fixed simple fish breeding recipe having a 1 instead of a 0 on the icon when recipe signals are enabled. Resolves https://github.com/pyanodon/pybugreports/issues/1238
     - Fixed mining and pumping productivity bonus being 10% instead of 5%
 ---------------------------------------------------------------------------------------------------
+Version: 3.2.18
+Date: 2026-03-08
+  Changes:
+    - Added German locale courtesy of @Spunk42 on Github
+  Bugfixes:
+    - Fixed terrain generation incompatibility with Gridlocked
+---------------------------------------------------------------------------------------------------
+Version: 3.2.17
+Date: 2025-12-29
+  Bugfixes:
+    - Fixed missing recipes due to iterating a table while modifying it
+---------------------------------------------------------------------------------------------------
 Version: 3.2.16
 Date: 2025-12-21
   Changes:
