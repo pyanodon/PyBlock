@@ -10,6 +10,9 @@ TECHNOLOGY("drill-head-mk01"):remove_pack("logistic-science-pack"):add_pack("py-
 
 RECIPE("drill-head-3"):remove_unlock("drill-head-mk01"):add_unlock("excavation-1")
 
+-- buff sulfur voiding
+RECIPE("sulfur-void-tar"):set_result_amount("tar", 150)
+
 -- move acrolein to tbp so that it can be made in py2
 RECIPE("acrolein"):remove_unlock("microfibers"):add_unlock("tbp")
 RECIPE("acrolein2"):remove_unlock("microfibers"):add_unlock("tbp")

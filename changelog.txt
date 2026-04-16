@@ -1,4 +1,94 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.3.1
+Date: 2026-04-16
+  Features:
+    - Added proper milestones support for pyblock specific progression
+  Changes:
+    - Reverted the tar quenching nerf introduced in 3.2.1
+    - Moved yotoi fruit to chromium ore from molecular decohesion 2 to yotoi aloe stage 1
+    - Moved chitin to phosphate rock from molecular decohesion 3 to molecular decohesion mk02
+    - Made shunt inserters an ingredient to mechanical inserters
+  Bugfixes:
+    - Fixed yaedols 2 using special fungal substrate instead of advanced
+    - Fixed missing recipe locales
+    - Fixed that Moss Farm TURD did not have the right mk01 recipe
+    - Fixed that Seaweed Farm TURD did not have the right mk01 recipe
+    - Fixed that Fastwood Forestry TURD did not have the right mk01 recipe
+    - Fixed that Fawogae Plantation TURD did not have the right mk01 recipe
+    - Fixed that Cadaveric Arum TURD did not have the right mk01 recipe
+    - Fixed mk00 crafting times not matching the other tiers
+---------------------------------------------------------------------------------------------------
+Version: 3.3.0
+Date: 2025-12-29
+  Features:
+    - Added foraging (handcrafting) recipes for soil, seaweed, logs, and fish
+    - Wood (not logs) burns into hot coals
+    - Seaweed spoils into dry seaweed if spoilage is enabled, or can be cooked in a furnace to speed up the process (or if spoilage is disabled)
+    - Dry seaweed can be rehydrated by hand or in an assembling machine
+    - Hot coals can be separated into coal dush, soot, and charcoal
+    - Dry seaweed, soil, and charcoal can be combined into stone bricks. Bricks can no longer be smelted from stone
+    - Moved certain wood processing recipes to new Wood Processing 0 tech
+    - Slowwood Forestry Mk 00 (yes, the classic name can be disabled you heathen)
+    - Botanical Nursery Mk 00 (this name too)
+    - Musk Farm MK 00
+    - Sawweed Crop Mk 00 (and this one)
+    - LandBlock preset (normal terrain gen, no resources)
+  Changes:
+    - Moved Generic Earth DNA Sample, Bio-container, and Bio-sample to xenobiology from biotech mk01
+    - Moved Biofactory mk01 back to plastics from biotech mk01
+    - Re-added titanium to Smelter and Data array recipes
+    - Moved titanium smelting recipe to evaporation
+    - Re-added Bio-sample to Yaedols sample recipe
+    - Re-added titanium to Yaedols culture recipe
+    - Made MK 00 machines half as efficient to match the efficiency of steam engines, so 700 kW steam for MK 00 is the same steam consumption as 700 kW electric for MK 01
+    - Increased Atomizer MK 00 power draw from 500 -> 700 kW
+    - Increased Automated Screener MK 00 power draw from 80 -> 270 kW
+    - Increased Compost Plant MK 00 power draw from 300 -> 440 kW
+    - Increased DDC MK 00 power draw from 200 -> 280 kW
+    - Increased Slaughterhouse MK 00 power draw from 150 -> 250 kW
+    - Increased Soil Extractor MK 00 power draw from 200 -> 320 kW
+    - Increased Solid Separator MK 00 power draw from 800 -> 1.2 MW
+    - Increased Washer MK 00 power draw from 100 -> 200 kW
+    - Increased WPU MK 00 power draw from 150 -> 390 kW
+    - Increased Shunt Inserter power draw
+    - Decreased saline water costs of the first two fish breeding recipes to 60 and 80, respectively
+    - Moved fish to tin back to molecular decohesion stage 2
+    - Moved fish oil to tin to molecular decohesion stage 1
+    - Moved meat to tin to water animals stage 1 and reduced output to 4 tin ore per 5 meat
+    - Moved tin plate smelting to water animals stage 1
+    - Moved tinned cable to solder stage 1
+    - Increased phytoplankton from flue gas cost
+    - Moved tin mk01 back to py1, now you need to use jerky or flue gas
+    - Nerfed offshore pump from 1200/s -> 90/s
+    - Buffed pumpjack water pumping from 300/s -> 450/s (increases with machine level)
+    - Moved washer mk01 to electrolysis and mk00 to soil washing
+    - Changed native flora, sap, and moss cultivation recipes to be higher probability but more expensive
+    - Moved sap cultivation to sap tech
+    - Removed stone and stone furnace from the starting inventory
+    - Reduced seaweed and driftwood generation probability
+    - Updated landfill recipe to just require soil
+    - Moved solid separator mk01 to steel processing
+    - Cadaveric arums now require acid gas. Their seeds requirement has been reduced to match.
+    - If spoilage is enabled, seaweed spoils into dry seaweed after two hours. This includes when in module slots of seaweed crop farms.
+    - Changed the stone furnace recipe to take 8 stone bricks instead of 5 stone
+    - Changed fawogae plantation fluid connections to be passthrough
+    - Changed bootstrapping fawogae recipe to only require 2 wood instead of an empty planter box
+    - Nerfed rich clay to bricks, but reduced the stone useage per brick (assuming crushing stone -> gravel -> sand) and added a charcoal component to the recipe. And moved it to the HPF
+    - Allowed geothermal vents to be affected by pumping productivity
+    - Returned phytomining MK 01 to its normal spot with the usual unlocks
+    - Moved kicalk zinc phytomining to kicalk mk01
+    - Added 5 electronic circuits to the kicalk bootstrapping recipe
+    - Adjusted Fastwood Forestry MK 01, Seaweed Crop MK 01, and Botanical Nursery MK 01 recipes to match new MK 00 requriements
+    - Increased construction costs of Cadaveric Arum Greenhouse MK 01
+    - Moves oil sands back to logi by simplifying grease table recipe (c2->c1, stainless steel->steel) and moving the required recipes to the oil sands tech
+  Bugfixes:
+    - Moved flavonoids all the way back to the Py2 tech where it belongs
+    - Fixed Automated Screener Mk 00 not being an ingredient for the Mk 01 version
+    - Fixed Slaughterhouse Mk 00 crafting speed by being 1 instead of 0.5
+    - Fixed pumping productivity having prerequesites on mining prod instead of previous levels of pumping prod
+    - Fixed simple fish breeding recipe having a 1 instead of a 0 on the icon when recipe signals are enabled. Resolves https://github.com/pyanodon/pybugreports/issues/1238
+    - Fixed mining and pumping productivity bonus being 10% instead of 5%
+---------------------------------------------------------------------------------------------------
 Version: 3.2.18
 Date: 2026-03-08
   Changes:
@@ -35,7 +125,7 @@ Date: 2025-09-16
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.12
 Date: 2025-09-15
-  Changes:
+  Bugfixes:
     - Added DDC MK 00 to the DDC MK 01 recipe
     - Autoteched the research tree. Things are definitely out of place.
     - Moved Guar to logi sci to facilitate Phadai food production for rare earth ore

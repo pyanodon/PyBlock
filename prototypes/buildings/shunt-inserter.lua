@@ -82,8 +82,8 @@ ENTITY {
   rotation_speed = 0.0175,
   insert_position = {0, 1.2},
   pickup_position = {0, -1},
-  energy_per_movement = "10kW",
-  energy_per_rotation = "10kW",
+  energy_per_movement = "12kW",
+  energy_per_rotation = "12kW",
   hide_connection_info = true,
   filter_count = 1,
   platform_picture = {

@@ -1,50 +1,3 @@
-
--- soil to stone
-RECIPE {
-	type = "recipe",
-	name = "soil-to-stone",
-	category = "washer",
-	enabled = true,
-	energy_required = 4,
-	ingredients =
-	{
-		{ type = "item", name = "soil", amount = 24 },
-		{ type = "fluid", name = "water", amount = 400 }
-	},
-	results =
-	{
-		{ type = "item", name = "stone", amount = 10 },
-		{ type = "fluid", name = "muddy-sludge", amount = 50 }
-	},
-	main_product = "stone",
-	icon = "__pycoalprocessinggraphics__/graphics/icons/soil-washer.png",
-	icon_size = 32,
-	subgroup = "py-washer",
-	order = "c"
-}
-
--- early quartz
-RECIPE {
-	type = "recipe",
-	name = "sand-quartz-sifting",
-	category = "screener",
-	enabled = false,
-	ingredients =
-	{
-		{ type = "item", name = "sand", amount = 10 }
-	},
-	results =
-	{
-		{ type = "item", name = "ore-quartz", amount = 2 }
-	},
-	main_product = "ore-quartz",
-	icon = "__pyraworesgraphics__/graphics/icons/ores/ore-quartz.png",
-	icon_size = 32,
-	subgroup = "py-washer",
-	order = "c",
-	energy_required = 4
-}:add_unlock("glass")
-
 -- geothermal water fake mining recipe
 RECIPE {
 	type = "recipe",
@@ -72,16 +25,16 @@ RECIPE {
   enabled = false,
   energy_required = 160,
   ingredients = {
-    { type = "item", name = "stone", amount = 24 },
-    { type = "fluid", name = "water", amount = 1200 },
+    { type = "item", name = "stone-brick", amount = 24 },
+    { type = "fluid", name = "water", amount = 4200 },
   },
   results = {
-    { type = "item", name = "stone", amount_min = 6, amount_max = 12, probability = 0.5 },
+    { type = "item", name = "stone-brick", amount_min = 6, amount_max = 24 },
     { type = "fluid", name = "muddy-sludge", amount = 1200 },
-    { type = "item", name = "moss", amount = 1, probability = 0.08 },
+    { type = "item", name = "moss", amount = 1, probability = 0.4 },
   },
   main_product = "moss"
-}:add_unlock("moss-mk01")
+}:add_unlock("moss-mk00")
 
 -- bootstrapping wood to sap
 RECIPE {
@@ -92,15 +45,34 @@ RECIPE {
   enabled = false,
   energy_required = 120,
   ingredients = {
-    { type = "item", name = "wood-seedling", amount = 12 },
-    { type = "fluid", name = "water", amount = 800 },
+    { type = "item", name = "wood-seedling", amount = 30 },
+    { type = "fluid", name = "water", amount = 6500 },
   },
   results = {
-    { type = "item", name = "saps", amount_min = 0, amount_max = 2, probability = 0.1 },
-    { type = "item", name = "log", amount = 4 }
+    { type = "item", name = "saps", amount_min = 0, amount_max = 2, probability = 0.8 },
+    { type = "item", name = "log", amount = 10 }
   },
   main_product = "saps"
-}:add_unlock("wood-processing")
+}:add_unlock("sap-mk01")
+
+-- sponge cultivation, for glass
+RECIPE {
+  type = "recipe",
+  name = "synthesize-sponge",
+  category = "seaweed",
+	subgroup = "py-alienlife-genetics",
+  enabled = false,
+  energy_required = 80,
+  ingredients = {
+    { type = "item", name = "stone", amount = 30 },
+    { type = "fluid", name = "water", amount = 1500 },
+    { type = "item", name = "seaweed", amount = 60 }
+  },
+  results = {
+    { type = "item", name = "sea-sponge", amount = 1, probability = 0.4 }
+  },
+  show_amount_in_title = false
+}:add_unlock("glass")
 
 -- native flora recipes
 RECIPE {
@@ -111,12 +83,12 @@ RECIPE {
   enabled = false,
   energy_required = 12,
   ingredients = {
-    { type = "item", name = "soil", amount = 8 },
-    { type = "fluid", name = "water", amount = 500 },
-    { type = "item", name = "fawogae", amount = 4 }
+    { type = "item", name = "soil", amount = 140 },
+    { type = "fluid", name = "water", amount = 2700 },
+    { type = "item", name = "fawogae", amount = 20 }
   },
   results = {
-    { type = "item", name = "native-flora", amount = 1, probability = 0.02 }
+    { type = "item", name = "native-flora", amount = 1, probability = 0.6 }
   },
   show_amount_in_title = false
 }:add_unlock("automation-science-pack")

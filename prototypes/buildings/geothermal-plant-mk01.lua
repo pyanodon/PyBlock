@@ -148,3 +148,15 @@ data.raw["assembling-machine"].rhe.fluid_boxes = {
     pipe_connections = {{flow_direction = "output", position = {0.0, 1.95}, direction = defines.direction.south}}
   }
 }
+
+-- slow down geowater->steam recipe, and add more ingredients
+RECIPE("geo-he-00"):set_fields {
+  energy_required = 10,
+  ingredients = {
+    {type = "fluid", name = "geothermal-water", amount = 180, minimum_temperature = 950},
+    {type = "fluid", name = "water",            amount = 400}
+  },
+  results = {
+    {type = "fluid", name = "steam",             amount = 320, temperature = 500}
+  }
+}
