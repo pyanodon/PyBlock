@@ -3,6 +3,7 @@ Version: 3.3.0
 Date: ???
   Changes:
     - Updated for 2.1
+    - Updated shunt inserter graphics. Thank you Talander!
   Bugfixes:
     - Fixed that alt names were concatenated instead of chosen. Resolves https://github.com/pyanodon/pybugreports/issues/1497
 ---------------------------------------------------------------------------------------------------
