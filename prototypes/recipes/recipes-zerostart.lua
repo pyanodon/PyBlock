@@ -96,6 +96,7 @@ RECIPE{
     { type = "item", name = "soil", amount = 4 }
   },
   results = {{type = "item", name = "stone-brick", amount = 8}},
+  allow_productivity = true,
   main_product = "stone-brick"
 }
 
@@ -139,6 +140,7 @@ RECIPE{
     { type = "item", name = "charcoal", amount_min = 0, amount_max = 2 },
     { type = "item", name = "soot", amount_min = 0, amount_max = 4, independent_probability = 0.7 }
   },
+  allow_productivity = true,
   main_product = "ash"
 }:add_unlock("ash-separation")
 RECIPE{
@@ -151,5 +153,6 @@ RECIPE{
     { type = "item", name = "charcoal", amount_min = 1, amount_max = 5 },
     { type = "item", name = "ash", amount = 1, independent_probability = 0.6 }
   },
+  allow_productivity = true,
   main_product = "charcoal"
 }:add_unlock("coke-mk01")
