@@ -3,6 +3,8 @@ Version: 3.3.0
 Date: ???
   Changes:
     - Updated for 2.1
+  Bugfixes:
+    - Fixed that alt names were concatenated instead of chosen. Resolves https://github.com/pyanodon/pybugreports/issues/1497
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.18
 Date: 2026-03-08
