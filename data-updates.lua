@@ -67,7 +67,7 @@ end
 data.raw.technology["excavation-1"].unit.ingredients = {{"automation-science-pack", 1}, {"py-science-pack-1", 1}}
 data.raw.technology["excavation-1"].prerequisites = nil
 
-table.insert(RECIPE("soot-separation").results, {type = "item", name = "ore-nickel", amount = 1, probability = 0.1})
+RECIPE("soot-separation"):add_result{type = "item", name = "ore-nickel", amount = 1, independent_probability = 0.1}
 
 RECIPE("soot-separation").unlock_results = true
 
@@ -127,7 +127,7 @@ for o, ore in pairs(ores) do
       },
       results = {
         {type = "item", name = o,     amount = ore.amount},
-        {type = "item", name = "ash", amount = 1,         probability = 0.3}
+        {type = "item", name = "ash", amount = 1,         independent_probability = 0.3}
       },
       result = nil,
       main_product = o,
@@ -135,7 +135,7 @@ for o, ore in pairs(ores) do
     }
     for s, secondary_ore in pairs(ores) do
       if s ~= o then
-        table.insert(data.raw.recipe["soot-to-" .. ore.recipe_extension].results, {type = "item", name = s, amount = 1, probability = secondary_ore.byproduct_probability})
+        RECIPE("soot-to-" .. ore.recipe_extension):add_result{type = "item", name = s, amount = 1, independent_probability = secondary_ore.byproduct_probability}
       end
     end
   end
@@ -214,15 +214,6 @@ RECIPE("automated-screener-mk01"):add_ingredient {type = "item", name = "automat
 
 RECIPE("distilator"):add_ingredient {type = "item", name = "ddc-mk00", amount = 1}
 
--- data.raw.technology["mega-farm"].unit.ingredients = {{"automation-science-pack", 1},{"py-science-pack-1",1}}
--- TECHNOLOGY("mega-farm"):set_fields{prerequisites = {}}
-
--- RECIPE("mega-farm"):set_fields{ingredients = {}}:add_ingredient({"concrete", 200}):add_ingredient({"treated-wood", 50})
-
--- RECIPE("replicator-bioreserve"):set_fields{ingredients = {}}
-
--- data.raw.technology["mega-farm-bioreserve"].unit.ingredients = {{"automation-science-pack", 1},{"py-science-pack-1",1}}
-
 RECIPE("earth-generic-sample"):remove_unlock("xenobiology"):add_unlock("biotech-mk01")
 
 RECIPE("data-array"):remove_ingredient("titanium-plate")
@@ -251,32 +242,32 @@ for i = 1, 12 do
 end
 
 drilling_categories = {
-  clay = true,
-  ["soil-extraction"] = true,
-  ["ground-borer"] = true,
-  ["sand-extractor"] = true
+  "clay",
+  "soil-extraction",
+  "ground-borer",
+  "sand-extractor"
 }
 
 pumping_categories = {
-  coalbed = true,
-  fracking = true,
-  pumpjack = true
+  "coalbed",
+  "fracking",
+  "pumpjack"
 }
 
-for r, recipe in pairs(data.raw.recipe) do
-  if drilling_categories[recipe.category] then
+for recipe in pairs(data.raw.recipe) do
+  if RECIPE(recipe):has_categories(drilling_categories) then
     for i = 1, 12 do
       data.raw.technology["mining-productivity-" .. i].effects[#data.raw.technology["mining-productivity-" .. i].effects + 1] = {
         type = "change-recipe-productivity",
-        recipe = r,
+        recipe = recipe,
         change = 0.1
       }
     end
-  elseif pumping_categories[recipe.category] then
+  elseif RECIPE(recipe):has_categories(pumping_categories) then
     for i = 1, 12 do
       data.raw.technology["pumping-productivity-" .. i].effects[#data.raw.technology["pumping-productivity-" .. i].effects + 1] = {
         type = "change-recipe-productivity",
-        recipe = r,
+        recipe = recipe,
         change = 0.1
       }
     end

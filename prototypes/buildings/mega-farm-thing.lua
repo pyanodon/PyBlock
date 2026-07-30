@@ -327,7 +327,7 @@ ENTITY {
       filename = "__base__/sound/silo-rocket.ogg",
       volume = 1.0
     }
-	]] --
+  ]] --
 }
 
 data:extend {{

@@ -4,7 +4,7 @@
 RECIPE {
     type = "recipe",
     name = "sodium-acetate",
-    category = "biofactory",
+    categories = {"biofactory"},
     enabled = false,
     energy_required = 5,
     ingredients = {
@@ -23,7 +23,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "ethane",
-    category = "electrolyzer",
+    categories = {"electrolyzer"},
     enabled = false,
     energy_required = 12,
     ingredients = {
@@ -44,7 +44,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "dichloroethane",
-    category = "chemistry",
+    categories = {"chemistry"},
     enabled = false,
     energy_required = 15,
     ingredients = {
@@ -65,7 +65,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "fecl2",
-    category = "chemistry",
+    categories = {"chemistry"},
     enabled = false,
     energy_required = 6,
     ingredients = {
@@ -84,7 +84,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "fecl3",
-    category = "chemistry",
+    categories = {"chemistry"},
     enabled = false,
     energy_required = 8,
     ingredients = {
@@ -102,7 +102,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "ethylenediamine",
-    category = "fbreactor",
+    categories = {"fbreactor"},
     enabled = false,
     energy_required = 12,
     ingredients = {
@@ -123,7 +123,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "nylon-rope",
-    category = "crafting",
+    categories = {"crafting"},
     enabled = false,
     energy_required = 6,
     ingredients = {
@@ -140,7 +140,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "nylon-rope-coated",
-    category = "hydroclassifier",
+    categories = {"hydroclassifier"},
     enabled = false,
     energy_required = 9,
     ingredients = {
@@ -158,7 +158,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "nylon-rope-uranyl-soaked",
-    category = "hydroclassifier",
+    categories = {"hydroclassifier"},
     enabled = false,
     energy_required = 60,
     ingredients = {
@@ -176,7 +176,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "uranyl-nitrate",
-    category = "scrubber",
+    categories = {"scrubber"},
     enabled = false,
     energy_required = 42,
     ingredients = {
@@ -184,7 +184,7 @@ RECIPE {
         {type = "item", name = "tbp", amount = 10},
     },
     results = {
-        {type = "item", name = "uranyl-nitrate", amount = 10, probability = .6},
+        {type = "item", name = "uranyl-nitrate", amount = 10, independent_probability = .6},
     },
     main_product = "uranyl-nitrate",
     subgroup = "py-rawores-uranium",
@@ -194,7 +194,7 @@ RECIPE {
 RECIPE {
     type = "recipe",
     name = "uranium-ore",
-    category = "leaching",
+    categories = {"leaching"},
     enabled = false,
     energy_required = 20,
     ingredients = {

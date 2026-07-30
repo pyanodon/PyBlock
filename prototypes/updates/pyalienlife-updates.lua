@@ -12,7 +12,7 @@ RECIPE("fawogae-1"):set_fields {enabled = true}:remove_unlock("fawogae-mk01")
 RECIPE {
   type = "recipe",
   name = "fawogae-start",
-  category = "handcrafting",
+  categories = {"handcrafting"},
   enabled = true,
   energy_required = 5,
   ingredients = {
@@ -55,7 +55,7 @@ data.raw["assembling-machine"]["spore-collector-mk01"].energy_source = {
 }
 
 -- fawogae to raw coal
-RECIPE("coal-fawogae"):set_fields {enabled = true}:remove_unlock("fawogae-mk01"):set_fields {category = "distilator"}:replace_result("raw-coal", "raw-coal", 5)
+RECIPE("coal-fawogae"):set_fields {enabled = true}:remove_unlock("fawogae-mk01"):replace_category("hpf", "distilator"):replace_result("raw-coal", "raw-coal", 5)
 
 -- seaweed
 RECIPE("seaweed-crop-mk01"):remove_ingredient("tin-plate")
@@ -98,7 +98,7 @@ if settings.startup["py-enable-decay"] and mods["enable-all-feature-flags"] then
   RECIPE {
     type = "recipe",
     name = "dried-meat-01",
-    category = "smelting",
+    categories = {"smelting"},
     enabled = false,
     energy_required = 45,
     ingredients = {
@@ -118,7 +118,7 @@ data.raw["assembling-machine"]["fawogae-plantation-mk04"].crafting_speed = 2 * d
 RECIPE {
   type = "recipe",
   name = "mossogen",
-  category = "hpf",
+  categories = {"hpf"},
   enabled = false,
   energy_required = 6,
   ingredients = {
@@ -218,8 +218,6 @@ RECIPE("ti-biomass-extraction"):remove_ingredient("steam"):add_ingredient {type 
 RECIPE("yaedols-ti"):remove_unlock("phytomining-mk02"):add_unlock("yaedols")
 
 RECIPE("titanium-plate-1"):remove_unlock("alloys-mk01"):add_unlock("yaedols")
-
-RECIPE("flue-gas-1"):set_fields {category = "gasifier"}
 
 RECIPE("flue-gas-3"):remove_unlock("compost")
 
