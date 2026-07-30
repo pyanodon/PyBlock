@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.4.2
+Date: ????
+  Bugfixes:
+    - Fixed that (with hardmode) burner did not have burnt result inventory. Resolves https://github.com/pyanodon/pybugreports/issues/1490
+---------------------------------------------------------------------------------------------------
 Version: 3.4.1
 Date: 2026-04-16
   Features:
