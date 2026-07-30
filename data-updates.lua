@@ -220,6 +220,9 @@ RECIPE("data-array"):remove_ingredient("titanium-plate")
 
 RECIPE("molten-zinc-01"):replace_ingredient("heavy-oil", "heavy-oil", 40)
 
+-- remove min temp, stopgap fix until wube fixes fluid temp 'mixing'
+ENTITY("steam-engine").fluid_box.minimum_temperature = nil
+
 -- create pumping productivity techs
 for i = 1, 12 do
   local tech = table.deepcopy(data.raw.technology["mining-productivity-" .. i])

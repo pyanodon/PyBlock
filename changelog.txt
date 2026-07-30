@@ -4,6 +4,7 @@ Date: ???
   Changes:
     - Updated for 2.1
     - Updated shunt inserter graphics. Thank you Talander!
+    - Removed steam engine minimum steam temperature as a stopgap fix until wube fixed fluid temp 'mixing'
   Bugfixes:
     - Fixed that alt names were concatenated instead of chosen. Resolves https://github.com/pyanodon/pybugreports/issues/1497
 ---------------------------------------------------------------------------------------------------
