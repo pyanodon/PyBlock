@@ -9,6 +9,7 @@ require("prototypes/updates/pypetroleumhandling-updates")
 require("prototypes/updates/pyrawores-updates")
 require("prototypes/updates/pyalienlife-updates")
 require("prototypes/updates/pyalternativeenergy-updates")
+require("prototypes/updates/pyhardmode-updates")
 
 --mapgen--
 require("prototypes/mapgen")
