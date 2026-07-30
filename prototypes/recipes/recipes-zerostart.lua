@@ -3,7 +3,7 @@ RECIPE{
   name = "forage-seaweed",
   enabled = true,
   energy_required = 5,
-  category = "handcrafting",
+  categories = {"handcrafting"},
   results = {{type = "item", name = "seaweed", amount_min = 0, amount_max = 4, ignored_by_stats = 4}},
   allow_as_intermediate = false,
   main_product = "seaweed"
@@ -12,7 +12,7 @@ RECIPE{
   name = "forage-wood",
   enabled = true,
   energy_required = 5,
-  category = "handcrafting",
+  categories = {"handcrafting"},
   results = {{type = "item", name = "log", amount_min = 0, amount_max = 2, ignored_by_stats = 2}},
   allow_as_intermediate = false,
   main_product = "log"
@@ -21,7 +21,7 @@ RECIPE{
   name = "forage-soil",
   enabled = true,
   energy_required = 2,
-  category = "handcrafting",
+  categories = {"handcrafting"},
   results = {{type = "item", name = "soil", amount_min = 0, amount_max = 5, ignored_by_stats = 5}},
   allow_as_intermediate = false,
   main_product = "soil"
@@ -30,7 +30,7 @@ RECIPE{
   name = "forage-fish",
   enabled = true,
   energy_required = 8,
-  category = "handcrafting",
+  categories = {"handcrafting"},
   results = {{type = "item", name = "fish", amount_min = 0, amount_max = 2, ignored_by_stats = 2}},
   allow_as_intermediate = false,
   main_product = "fish"
@@ -40,8 +40,7 @@ RECIPE{
   name = "dry-seaweed",
   enabled = true,
   energy_required = 5,
-  category = "handcrafting",
-  additional_categories = {"smelting"},
+  categories = {"handcrafting", "smelting"},
   ingredients = {{type = "item", name = "seaweed", amount = 4}},
   results = {{type = "item", name = "dry-seaweed", amount_min = 0, amount_max = 4, probability = 0.9}},
   allow_as_intermediate = false,
@@ -53,7 +52,7 @@ RECIPE{
   name = "wet-seaweed",
   enabled = true,
   energy_required = 0.5,
-  category = "handcrafting",
+  categories = {"handcrafting"},
   ingredients = {{type = "item", name = "dry-seaweed", amount = 1}},
   results = {{type = "item", name = "seaweed", amount = 1}},
   allow_as_intermediate = false,
@@ -63,7 +62,7 @@ RECIPE{
   name = "seaweed-rehydrate",
   enabled = false,
   energy_required = 5,
-  category = "seaweed",
+  categories = {"seaweed"},
   ingredients = {
     { type = "item", name = "dry-seaweed", amount = 8 },
     { type = "fluid", name = "water", amount = 100 }
@@ -77,8 +76,7 @@ RECIPE{
   name = "hot-coals",
   enabled = true,
   energy_required = 5,
-  category = "handcrafting",
-  additional_categories = {"smelting"},
+  categories = {"handcrafting", "smelting"},
   ingredients = {{type = "item", name = "wood", amount = 3}},
   results = {{type = "item", name = "hot-coals", amount_min = 2, amount_max = 8}},
   allow_as_intermediate = false,
@@ -91,8 +89,7 @@ RECIPE{
   name = "seaweed-bricks",
   enabled = true,
   energy_required = 5,
-  category = "handcrafting",
-  additional_categories = {"hpf"},
+  categories = {"handcrafting", "hpf"},
   ingredients = {
     { type = "item", name = "dry-seaweed", amount = 3 },
     { type = "item", name = "charcoal", amount = 2 },
@@ -107,7 +104,7 @@ RECIPE{
   name = "handsort-coals",
   enabled = true,
   energy_required = 1,
-  category = "handcrafting",
+  categories = {"handcrafting"},
   ingredients = {{type = "item", name = "hot-coals", amount = 1}},
   results = {
     { type = "item", name = "ash", amount = 1, probability = 0.3 },
@@ -135,7 +132,7 @@ RECIPE{
       }
     }
   },
-  category = "solid-separator",
+  categories = {"solid-separator"},
   ingredients = {{type = "item", name = "hot-coals", amount = 4}},
   results = {
     { type = "item", name = "ash", amount_min = 0, amount_max = 3 },
@@ -148,7 +145,7 @@ RECIPE{
   name = "compress-hot-coals",
   enabled = false,
   energy_required = 7,
-  category = "hpf",
+  categories = {"hpf"},
   ingredients = {{type = "item", name = "hot-coals", amount = 8}},
   results = {
     { type = "item", name = "charcoal", amount_min = 1, amount_max = 5 },

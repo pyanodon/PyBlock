@@ -33,6 +33,7 @@ require("prototypes/updates/pypetroleumhandling-updates")
 require("prototypes/updates/pyrawores-updates")
 require("prototypes/updates/pyalienlife-updates")
 require("prototypes/updates/pyalternativeenergy-updates")
+require("prototypes/updates/pyhardmode-updates")
 
 --mapgen--
 require("prototypes/mapgen")
@@ -93,7 +94,7 @@ end
 
 TECHNOLOGY("excavation-1"):remove_pack("logistic-science-pack"):remove_pack("chemical-science-pack")
 
-RECIPE("soot-separation"):add_result{type = "item", name = "ore-nickel", amount = 1, probability = 0.1}
+RECIPE("soot-separation"):add_result{type = "item", name = "ore-nickel", amount = 1, independent_probability = 0.1}
 
 RECIPE("mining-antimony"):replace_unlock("excavation-2", "excavation-1")
 
@@ -151,7 +152,7 @@ for o, ore in pairs(ores) do
       },
       results = {
         {type = "item", name = o,     amount = ore.amount},
-        {type = "item", name = "ash", amount = 1,         probability = 0.3}
+        {type = "item", name = "ash", amount = 1,         independent_probability = 0.3}
       },
       result = nil,
       main_product = o,
@@ -159,7 +160,7 @@ for o, ore in pairs(ores) do
     }
     for s, secondary_ore in pairs(ores) do
       if s ~= o then
-        table.insert(data.raw.recipe["soot-to-" .. ore.recipe_extension].results, {type = "item", name = s, amount = 1, probability = secondary_ore.byproduct_probability})
+        RECIPE("soot-to-" .. ore.recipe_extension):add_result{type = "item", name = s, amount = 1, independent_probability = secondary_ore.byproduct_probability}
       end
     end
   end
@@ -273,6 +274,9 @@ RECIPE("nacl-biomass-extraction"):replace_unlock("phytomining", "tuuphra")
 RECIPE("guar-nb"):replace_unlock("phytomining-mk02", "guar")
 RECIPE("nb-biomass-extraction"):replace_unlock("phytomining-mk02", "guar")
 
+-- remove min temp, stopgap fix until wube fixes fluid temp 'mixing'
+ENTITY("steam-engine").fluid_box.minimum_temperature = nil
+
 -- create pumping productivity techs
 for i = 1, 12 do
   local tech = table.deepcopy(data.raw.technology["mining-productivity-" .. i])
@@ -294,35 +298,34 @@ for i = 1, 12 do
   TECHNOLOGY("pumping-productivity-" .. i):remove_prereq("mining-productivity-" .. i - 1):add_prereq("pumping-productivity-" .. i - 1).effects = {}
 end
 
-local drilling_categories = {
-  clay = true,
-  ["soil-extraction"] = true,
-  ["ground-borer"] = true,
-  ["sand-extractor"] = true
+drilling_categories = {
+  "clay",
+  "soil-extraction",
+  "ground-borer",
+  "sand-extractor"
 }
 
-local pumping_categories = {
-  coalbed = true,
-  fracking = true,
-  pumpjack = true,
-  geowater = true
+pumping_categories = {
+  "coalbed",
+  "fracking",
+  "pumpjack"
 }
 
-for r, recipe in pairs(data.raw.recipe) do
-  if drilling_categories[recipe.category] then
+for recipe in pairs(data.raw.recipe) do
+  if RECIPE(recipe):has_categories(drilling_categories) then
     for i = 1, 12 do
       data.raw.technology["mining-productivity-" .. i].effects[#data.raw.technology["mining-productivity-" .. i].effects + 1] = {
         type = "change-recipe-productivity",
-        recipe = r,
-        change = 0.05
+        recipe = recipe,
+        change = 0.1
       }
     end
-  elseif pumping_categories[recipe.category] then
+  elseif RECIPE(recipe):has_categories(pumping_categories) then
     for i = 1, 12 do
       data.raw.technology["pumping-productivity-" .. i].effects[#data.raw.technology["pumping-productivity-" .. i].effects + 1] = {
         type = "change-recipe-productivity",
-        recipe = r,
-        change = 0.05
+        recipe = recipe,
+        change = 0.1
       }
     end
   end

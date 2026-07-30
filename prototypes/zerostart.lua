@@ -52,22 +52,20 @@ RECIPE("bricks-to-stone"):replace_result("stone", {type = "item", name = "stone"
 -- update sand-brick recipe
 RECIPE("sand-brick"):set_fields{
   energy_required = 10,
-  category = "hpf",
+  categories = {"hpf"},
   ingredients = {
     { type = "item", name = "sand", amount = 4 },
     { type = "item", name = "charcoal", amount = 3 },
     { type = "item", name = "rich-clay", amount = 4 },
   },
-  results = {{type = "item", name = "stone-brick", amount = 8}},
-  crafting_category = "hpf"
+  results = {{type = "item", name = "stone-brick", amount = 8}}
 }
 
 -- allow the player to handcraft basic soot and ash separation
 RECIPE("ash-separation").additional_categories = {"handcrafting", "solid-separator"}
 -- TODO enable by default once autotech understands additional_categories
 RECIPE("soot-separation"):remove_unlock("ash-separation"):set_fields{
-  additional_categories = {"handcrafting", "solid-separator"},
-  category = "handcrafting",
+  categories = {"handcrafting", "solid-separator"},
   enabled = true
 }.autotech_ignore = nil
 

@@ -1,7 +1,7 @@
 RECIPE{
   type = "recipe",
   name = "coal-dust-early",
-  category = "centrifuging",
+  categories = {"centrifuging"},
   enabled = false,
   energy_required = 10,
   ingredients = {
@@ -18,7 +18,7 @@ RECIPE{
 RECIPE{
   type = "recipe",
   name = "making-dust-into-diamonds",
-  category = "hpf",
+  categories = {"hpf"},
   enabled = false,
   energy_required = 45,
   ingredients = {

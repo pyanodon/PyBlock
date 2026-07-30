@@ -1,5 +1,5 @@
 ---------------------------------------------------------------------------------------------------
-Version: 3.3.1
+Version: 3.4.1
 Date: 2026-04-16
   Features:
     - Added proper milestones support for pyblock specific progression
@@ -18,7 +18,7 @@ Date: 2026-04-16
     - Fixed that Cadaveric Arum TURD did not have the right mk01 recipe
     - Fixed mk00 crafting times not matching the other tiers
 ---------------------------------------------------------------------------------------------------
-Version: 3.3.0
+Version: 3.4.0
 Date: 2025-12-29
   Features:
     - Added foraging (handcrafting) recipes for soil, seaweed, logs, and fish
@@ -88,6 +88,15 @@ Date: 2025-12-29
     - Fixed pumping productivity having prerequesites on mining prod instead of previous levels of pumping prod
     - Fixed simple fish breeding recipe having a 1 instead of a 0 on the icon when recipe signals are enabled. Resolves https://github.com/pyanodon/pybugreports/issues/1238
     - Fixed mining and pumping productivity bonus being 10% instead of 5%
+---------------------------------------------------------------------------------------------------
+Version: 3.3.0
+Date: 2026-07-30
+  Changes:
+    - Updated for 2.1
+    - Updated shunt inserter graphics. Thank you Talander!
+    - Removed steam engine minimum steam temperature as a stopgap fix until wube fixed fluid temp 'mixing'
+  Bugfixes:
+    - Fixed that alt names were concatenated instead of chosen. Resolves https://github.com/pyanodon/pybugreports/issues/1497
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.18
 Date: 2026-03-08

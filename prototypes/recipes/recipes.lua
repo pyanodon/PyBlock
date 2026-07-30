@@ -1,27 +1,27 @@
 -- geothermal water fake mining recipe
 RECIPE {
-	type = "recipe",
-	name = "geothermal-water",
-	category = "geowater",
-	enabled = false,
-	energy_required = 4,
-	ingredients = {
-		{ type = "fluid", name = "pressured-water", amount = 3750 },
+  type = "recipe",
+  name = "geothermal-water",
+  categories = {"geowater"},
+  enabled = false,
+  energy_required = 4,
+  ingredients = {
+    { type = "fluid", name = "pressured-water", amount = 3750 },
     { type = "item", name = "pipe", amount = 20 }
-	},
-	results = {
-		{ type = "fluid", name = "geothermal-water", amount = 400, temperature = 3000 },
-    { type = "item", name = "pipe", amount_min = 0, amount_max = 20, probability = 0.9 }
-	},
-	main_product = "geothermal-water",
+  },
+  results = {
+    { type = "fluid", name = "geothermal-water", amount = 400, temperature = 3000 },
+    { type = "item", name = "pipe", amount_min = 0, amount_max = 20, independent_probability = 0.9 }
+  },
+  main_product = "geothermal-water",
 }:add_unlock("geothermal-power-mk01")
 
 -- bootstrapping stone to moss
 RECIPE {
   type = "recipe",
   name = "moss-cultivation",
-  category = "washer",
-	subgroup = "py-alienlife-moss",
+  categories = {"washer"},
+  subgroup = "py-alienlife-moss",
   enabled = false,
   energy_required = 160,
   ingredients = {
@@ -31,7 +31,7 @@ RECIPE {
   results = {
     { type = "item", name = "stone-brick", amount_min = 6, amount_max = 24 },
     { type = "fluid", name = "muddy-sludge", amount = 1200 },
-    { type = "item", name = "moss", amount = 1, probability = 0.4 },
+    { type = "item", name = "moss", amount = 1, independent_probability = 0.4 },
   },
   main_product = "moss"
 }:add_unlock("moss-mk00")
@@ -40,8 +40,8 @@ RECIPE {
 RECIPE {
   type = "recipe",
   name = "sap-cultivation",
-  category = "fwf",
-	subgroup = "py-alienlife-sap",
+  categories = {"fwf"},
+  subgroup = "py-alienlife-sap",
   enabled = false,
   energy_required = 120,
   ingredients = {
@@ -49,7 +49,7 @@ RECIPE {
     { type = "fluid", name = "water", amount = 6500 },
   },
   results = {
-    { type = "item", name = "saps", amount_min = 0, amount_max = 2, probability = 0.8 },
+    { type = "item", name = "saps", amount_min = 0, amount_max = 2, independent_probability = 0.8 },
     { type = "item", name = "log", amount = 10 }
   },
   main_product = "saps"
@@ -59,7 +59,7 @@ RECIPE {
 RECIPE {
   type = "recipe",
   name = "synthesize-sponge",
-  category = "seaweed",
+  categories = {"seaweed"},
 	subgroup = "py-alienlife-genetics",
   enabled = false,
   energy_required = 80,
@@ -78,8 +78,8 @@ RECIPE {
 RECIPE {
   type = "recipe",
   name = "synthesize-flora",
-  category = "cultivation",
-	subgroup = "py-alienlife-genetics",
+  categories = {"cultivation"},
+  subgroup = "py-alienlife-genetics",
   enabled = false,
   energy_required = 12,
   ingredients = {
@@ -88,7 +88,7 @@ RECIPE {
     { type = "item", name = "fawogae", amount = 20 }
   },
   results = {
-    { type = "item", name = "native-flora", amount = 1, probability = 0.6 }
+    { type = "item", name = "native-flora", amount = 1, independent_probability = 0.6 }
   },
   show_amount_in_title = false
 }:add_unlock("automation-science-pack")
@@ -96,8 +96,8 @@ RECIPE {
 RECIPE {
   type = "recipe",
   name = "flora-cultivation",
-  category = "cultivation",
-	subgroup = "py-alienlife-genetics",
+  categories = {"cultivation"},
+  subgroup = "py-alienlife-genetics",
   enabled = false,
   energy_required = 15,
   ingredients = {
@@ -115,8 +115,8 @@ RECIPE {
 RECIPE {
   type = "recipe",
   name = "flora-cultivation-2",
-  category = "cultivation",
-	subgroup = "py-alienlife-genetics",
+  categories = {"cultivation"},
+  subgroup = "py-alienlife-genetics",
   enabled = false,
   energy_required = 20,
   ingredients = {
@@ -135,8 +135,8 @@ RECIPE {
 RECIPE {
   type = "recipe",
   name = "flora-cultivation-3",
-  category = "cultivation",
-	subgroup = "py-alienlife-genetics",
+  categories = {"cultivation"},
+  subgroup = "py-alienlife-genetics",
   enabled = false,
   energy_required = 30,
   ingredients = {
@@ -159,111 +159,111 @@ RECIPE {
 --new fluids for ree from ash
 --[[
 RECIPE {
-	type = "recipe",
-	name = "propene-to-butanol",
-	ingredients =
-	{
-		{ type = "fluid", name = "propene", amount = 50 },
-		{ type = "fluid", name = "hydrogen", amount = 50 },
-		{ type = "fluid", name = "carbon-dioxide", amount = 25 }
-	},
-	results =
-	{
-		{ type = "fluid", name = "butanol", amount = 50 }
-	},
-	main_product = "butanol",
-	category = "electrolyzer"
+  type = "recipe",
+  name = "propene-to-butanol",
+  ingredients =
+  {
+    { type = "fluid", name = "propene", amount = 50 },
+    { type = "fluid", name = "hydrogen", amount = 50 },
+    { type = "fluid", name = "carbon-dioxide", amount = 25 }
+  },
+  results =
+  {
+    { type = "fluid", name = "butanol", amount = 50 }
+  },
+  main_product = "butanol",
+   categories = {"electrolyzer"}
 }:add_unlock("uranium-mk01")
 ]]--
 
 --[[
 RECIPE {
-	type = "recipe",
-	name = "phosphorus-tricloride",
-	ingredients =
-	{
-		{ type = "item", name = "powdered-phosphate-rock", amount = 10 },
-		{ type = "fluid", name = "chlorine", amount = 60 }
-	},
-	results =
-	{
-		{ type = "fluid", name = "phosphorus-tricloride", amount = 50 }
-	},
-	main_product = "phosphorus-tricloride",
-	category = "electrolyzer"
+  type = "recipe",
+  name = "phosphorus-tricloride",
+  ingredients =
+  {
+    { type = "item", name = "powdered-phosphate-rock", amount = 10 },
+    { type = "fluid", name = "chlorine", amount = 60 }
+  },
+  results =
+  {
+    { type = "fluid", name = "phosphorus-tricloride", amount = 50 }
+  },
+  main_product = "phosphorus-tricloride",
+   categories = {"electrolyzer"}
 }:add_unlock("uranium-mk01")
 ]]--
 
 --make phosphorous acid: not used atm
 --[[
-	{
-	type = "recipe",
-	name = "phosphorus-acid",
-	ingredients =
-		{
-			{type = "fluid", name = "phosphorus-tricloride", amount = 20},
-			{type = "fluid", name = "water", amount = 60}
-		},
-	results =
-		{
-			{type = "fluid", name = "phosphorus-acid", amount = 20},
-			{type = "fluid", name = "hydrogen-chloride", amount = 60},
-		},
-	main_product = "phosphorus-acid"
-	},
-	]] --
+  {
+  type = "recipe",
+  name = "phosphorus-acid",
+  ingredients =
+    {
+      {type = "fluid", name = "phosphorus-tricloride", amount = 20},
+      {type = "fluid", name = "water", amount = 60}
+    },
+  results =
+    {
+      {type = "fluid", name = "phosphorus-acid", amount = 20},
+      {type = "fluid", name = "hydrogen-chloride", amount = 60},
+    },
+  main_product = "phosphorus-acid"
+  },
+  ]] --
 
-	--[[
+  --[[
 RECIPE {
-	type = "recipe",
-	name = "phosphoryl-chloride",
-	ingredients =
-	{
-		{ type = "fluid", name = "phosphorus-tricloride", amount = 20 },
-		{ type = "fluid", name = "oxygen", amount = 10 }
-	},
-	results =
-	{
-		{ type = "fluid", name = "phosphoryl-chloride", amount = 40 }
-	},
-	main_product = "phosphoryl-chloride",
-	category = "electrolyzer"
+  type = "recipe",
+  name = "phosphoryl-chloride",
+  ingredients =
+  {
+    { type = "fluid", name = "phosphorus-tricloride", amount = 20 },
+    { type = "fluid", name = "oxygen", amount = 10 }
+  },
+  results =
+  {
+    { type = "fluid", name = "phosphoryl-chloride", amount = 40 }
+  },
+  main_product = "phosphoryl-chloride",
+   categories = {"electrolyzer"}
 }:add_unlock("uranium-mk01")
 ]]--
 
 --[[
 RECIPE {
-	type = "recipe",
-	name = "tributyl-phosphate",
-	ingredients =
-	{
-		{ type = "fluid", name = "phosphoryl-chloride", amount = 10 },
-		{ type = "fluid", name = "butanol", amount = 30 }
-	},
-	results =
-	{
-		{ type = "fluid", name = "tributyl-phosphate", amount = 10 },
-		{ type = "fluid", name = "hydrogen-chloride", amount = 30 },
-	},
-	main_product = "tributyl-phosphate",
-	category = "electrolyzer"
+  type = "recipe",
+  name = "tributyl-phosphate",
+  ingredients =
+  {
+    { type = "fluid", name = "phosphoryl-chloride", amount = 10 },
+    { type = "fluid", name = "butanol", amount = 30 }
+  },
+  results =
+  {
+    { type = "fluid", name = "tributyl-phosphate", amount = 10 },
+    { type = "fluid", name = "hydrogen-chloride", amount = 30 },
+  },
+  main_product = "tributyl-phosphate",
+   categories = {"electrolyzer"}
 }:add_unlock("uranium-mk01")
 ]]
 
 --[[
 RECIPE {
-	type = "recipe",
-	name = "ree-from-ash",
-	ingredients =
-	{
-		{ type = "fluid", name = "tributyl-phosphate", amount = 20 },
-		{ type = "item", name = "ash", amount = 25 }
-	},
-	results =
-	{
-		{ type = "item", name = "rare-earth-ore", amount = 5 },
-	},
-	main_product = "rare-earth-ore",
-	category = "electrolyzer"
+  type = "recipe",
+  name = "ree-from-ash",
+  ingredients =
+  {
+    { type = "fluid", name = "tributyl-phosphate", amount = 20 },
+    { type = "item", name = "ash", amount = 25 }
+  },
+  results =
+  {
+    { type = "item", name = "rare-earth-ore", amount = 5 },
+  },
+  main_product = "rare-earth-ore",
+   categories = {"electrolyzer"}
 }:add_unlock("rare-earth-tech")
 ]]

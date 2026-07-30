@@ -40,8 +40,8 @@ RECIPE("fawogae-1"):replace_unlock("fawogae-mk01", "fawogae-mk00")
 RECIPE {
   type = "recipe",
   name = "fawogae-start",
-  category = "handcrafting",
-  enabled = false,
+  categories = {"handcrafting"},
+  enabled = true,
   energy_required = 5,
   allow_as_intermediate = false,
   ingredients = {
@@ -71,7 +71,7 @@ RECIPE("log1"):replace_unlock("wood-processing", "wood-processing-0")
 RECIPE("log2"):replace_unlock("wood-processing", "wood-processing-0")
 
 -- fawogae to raw coal
-RECIPE("coal-fawogae"):replace_unlock("fawogae-mk01", "coal-processing-0"):set_result_amount("raw-coal", 5).category = "distilator"
+RECIPE("coal-fawogae"):replace_unlock("fawogae-mk01", "coal-processing-0"):set_result_amount("raw-coal", 5):replace_category("hpf", "distilator")
 
 -- seaweed
 RECIPE("seaweed-1"):replace_unlock("seaweed-mk01", "seaweed-mk00")
@@ -140,7 +140,7 @@ data.raw["assembling-machine"]["fawogae-plantation-mk04"].crafting_speed = 4 * d
 RECIPE {
   type = "recipe",
   name = "mossogen",
-  category = "hpf",
+  categories = {"hpf"},
   enabled = false,
   energy_required = 6,
   ingredients = {
@@ -241,7 +241,7 @@ RECIPE("sea-sponge-sprouts"):replace_unlock("water-invertebrates-mk01", "water-i
 RECIPE{
   type = "recipe",
   name = "sea-sponge-sprouts-2",
-  category = "bio-reactor",
+  categories = {"bio-reactor"},
   enabled = false,
   energy_required = 17,
   ingredients = {
@@ -260,7 +260,7 @@ RECIPE{
 RECIPE {
   type = "recipe",
   name = "sea-sponge-0",
-  category = "sponge",
+  categories = {"sponge"},
   enabled = false,
   energy_required = 150,
   ingredients = {
@@ -312,7 +312,6 @@ RECIPE("ti-biomass-extraction"):replace_ingredient("steam", {type = "fluid", nam
 
 RECIPE("titanium-plate-1"):replace_unlock("alloys-mk01", "fluid-processing-machines-1")
 
-RECIPE("flue-gas-1").category = "gasifier"
 RECIPE("flue-gas-3"):remove_unlock("compost")
 
 -- Bhoddos to uranium
