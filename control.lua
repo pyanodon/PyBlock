@@ -34,8 +34,8 @@ script.on_event(defines.events.on_player_created, function(event)
   local nauvis = game.surfaces["nauvis"]
   if not nauvis then return end
   local elevation = game.surfaces["nauvis"].map_gen_settings.property_expression_names.elevation
-	if elevation ~= "pyblock_classic" and elevation ~= "pyblock_island" and elevation ~= "pyblock_archipeligo" then
-		player.print {"messages.pyblock-warning-no-preset"}
+  if elevation ~= "pyblock_classic" and elevation ~= "pyblock_island" and elevation ~= "pyblock_archipeligo" then
+    player.print {"messages.pyblock-warning-no-preset"}
   end
   player.print {"messages.pyblock-intro"}
 end)

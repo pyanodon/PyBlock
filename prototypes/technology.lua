@@ -51,19 +51,19 @@ table.insert(data.raw.technology["rare-earth-tech"].effects,{type="unlock-recipe
 table.insert(data.raw.technology["rare-earth-tech"].effects,{type="unlock-recipe", recipe = "ree-from-ash"})
 
 data:extend({
-	{
-	type = "technology",
-	name = "early-concrete",
-	icon = "__base__/graphics/technology/concrete.png",
-	icon_size = 128,
-	effects =
-		{
-			{
-			type = "unlock-recipe",
-			recipe = "concrete"
-			}
-		},
-	unit =
+  {
+  type = "technology",
+  name = "early-concrete",
+  icon = "__base__/graphics/technology/concrete.png",
+  icon_size = 128,
+  effects =
+    {
+      {
+      type = "unlock-recipe",
+      recipe = "concrete"
+      }
+    },
+  unit =
     {
       count = 40,
       ingredients =
@@ -72,8 +72,8 @@ data:extend({
       },
       time = 30
     },
-	order = "c-c-a"
-	},
+  order = "c-c-a"
+  },
 })
 
 --move crude oil, heavy oil, light oil and petrol from fuel production to oil processing

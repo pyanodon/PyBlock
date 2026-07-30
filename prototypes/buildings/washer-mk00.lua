@@ -78,21 +78,21 @@ data.raw["assembling-machine"]["washer-mk00"] = burner_washer
 --       type = "fluid",
 --       effectivity = 1,
 --       emissions = 1,
--- 	  fluid_box =
--- 		{
--- 		base_area = 1,
--- 		height = 2,
--- 		base_level = -1,
--- 		pipe_covers = pipecoverspictures(),
--- 		pipe_connections =
--- 			{
--- 			{type = "input-output", position = {-3.5,0.5}},
--- 			{type = "input-output", position = {3.5, 0.5} }
--- 			},
--- 		filter = "steam",
--- 		production_type = "input-output",
--- 		},
--- 		scale_fluid_usage = true,
+--     fluid_box =
+--     {
+--     base_area = 1,
+--     height = 2,
+--     base_level = -1,
+--     pipe_covers = pipecoverspictures(),
+--     pipe_connections =
+--       {
+--       {type = "input-output", position = {-3.5,0.5}},
+--       {type = "input-output", position = {3.5, 0.5} }
+--       },
+--     filter = "steam",
+--     production_type = "input-output",
+--     },
+--     scale_fluid_usage = true,
 --     },
 --     energy_usage = "100kW",
 --     animation = {
