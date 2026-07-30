@@ -42,7 +42,7 @@ RECIPE{
   energy_required = 5,
   categories = {"handcrafting", "smelting"},
   ingredients = {{type = "item", name = "seaweed", amount = 4}},
-  results = {{type = "item", name = "dry-seaweed", amount_min = 0, amount_max = 4, probability = 0.9}},
+  results = {{type = "item", name = "dry-seaweed", amount_min = 0, amount_max = 4, independent_probability = 0.9}},
   allow_as_intermediate = false,
   allow_productivity = true,
   main_product = "dry-seaweed"
@@ -107,9 +107,9 @@ RECIPE{
   categories = {"handcrafting"},
   ingredients = {{type = "item", name = "hot-coals", amount = 1}},
   results = {
-    { type = "item", name = "ash", amount = 1, probability = 0.3 },
-    { type = "item", name = "charcoal", amount = 1, probability = 0.2 },
-    { type = "item", name = "soot", amount = 1, probability = 0.45 }
+    { type = "item", name = "ash", amount = 1, independent_probability = 0.3 },
+    { type = "item", name = "charcoal", amount = 1, independent_probability = 0.2 },
+    { type = "item", name = "soot", amount = 1, independent_probability = 0.45 }
   },
   allow_as_intermediate = false,
   main_product = "ash"
@@ -137,7 +137,7 @@ RECIPE{
   results = {
     { type = "item", name = "ash", amount_min = 0, amount_max = 3 },
     { type = "item", name = "charcoal", amount_min = 0, amount_max = 2 },
-    { type = "item", name = "soot", amount_min = 0, amount_max = 4, probability = 0.7 }
+    { type = "item", name = "soot", amount_min = 0, amount_max = 4, independent_probability = 0.7 }
   },
   main_product = "ash"
 }:add_unlock("ash-separation")
@@ -149,7 +149,7 @@ RECIPE{
   ingredients = {{type = "item", name = "hot-coals", amount = 8}},
   results = {
     { type = "item", name = "charcoal", amount_min = 1, amount_max = 5 },
-    { type = "item", name = "ash", amount = 1, probability = 0.6 }
+    { type = "item", name = "ash", amount = 1, independent_probability = 0.6 }
   },
   main_product = "charcoal"
 }:add_unlock("coke-mk01")

@@ -13,7 +13,7 @@ if settings.startup["pypp-tests"].value == true or mods["autotech"] then
 end
 
 -- mark items as not startup items
-for _, prototype in pairs{
+for _, namespace in pairs{
   "item",
   "ammo",
   "capsule",
@@ -23,7 +23,7 @@ for _, prototype in pairs{
   "armor",
   "repair-tool"
 } do
-  for _, item in pairs(data.raw[prototype]) do
+  for _, item in pairs(data.raw[namespace] or {}) do
     item.autotech_startup = nil
   end
 end

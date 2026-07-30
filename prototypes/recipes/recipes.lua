@@ -69,7 +69,7 @@ RECIPE {
     { type = "item", name = "seaweed", amount = 60 }
   },
   results = {
-    { type = "item", name = "sea-sponge", amount = 1, probability = 0.4 }
+    { type = "item", name = "sea-sponge", amount = 1, independent_probability = 0.4 }
   },
   show_amount_in_title = false
 }:add_unlock("glass")

@@ -62,8 +62,8 @@ RECIPE("sand-brick"):set_fields{
   results = {{type = "item", name = "stone-brick", amount = 8}}
 }
 
--- allow the player to handcraft basic soot and ash separation
-RECIPE("ash-separation").additional_categories = {"handcrafting", "solid-separator"}
+-- allow the player to handcraft basic soot and ash separation (default handcraft for autotech)
+RECIPE("ash-separation").categories = {"handcrafting", "solid-separator"}
 -- TODO enable by default once autotech understands additional_categories
 RECIPE("soot-separation"):remove_unlock("ash-separation"):set_fields{
   categories = {"handcrafting", "solid-separator"},
