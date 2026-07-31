@@ -49,8 +49,8 @@ end
 RECIPE {
   type = "recipe",
   name = "ddc-mk00",
-  energy_required = 8,
-  enabled = true,
+  energy_required = 0.5,
+  enabled = false,
   ingredients =
   {
     {type = "item", name = "iron-plate",    amount = 15},
@@ -60,7 +60,7 @@ RECIPE {
   results = {
     {type = "item", name = "ddc-mk00", amount = 1}
   }
-}
+}:add_unlock("coal-processing-0")
 
 ITEM {
   type = "item",
@@ -120,12 +120,12 @@ ENTITY {
   crafting_categories = {"distilator"},
   crafting_speed = 0.5,
   result_inventory_size = 2,
-  energy_usage = "200kW",
+  energy_usage = "280kW",
   source_inventory_size = 1,
   energy_source = {
     type = "burner",
     fuel_categories = {"chemical", "biomass"},
-    effectivity = 1,
+    effectivity = 0.5,
     fuel_inventory_size = 1,
     burnt_inventory_size = 1,
     emissions = 0.01,
