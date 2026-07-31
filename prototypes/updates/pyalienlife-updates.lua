@@ -316,7 +316,8 @@ RECIPE("flue-gas-3"):remove_unlock("compost")
 
 -- Bhoddos to uranium
 TECHNOLOGY("chemical-science-pack"):add_prereq("bhoddos")
-RECIPE("ur-biomass-extraction"):replace_unlock("phytomining-mk03", "phytomining-mk02"):set_result_amount("uranium-ore", 50):set_ingredient_amount("ur-biomass", 4).energy_required = 80
+TECHNOLOGY("phytomining"):add_prereq("coalplant-mk02")
+RECIPE("ur-biomass-extraction"):replace_unlock("phytomining-mk03", "phytomining"):set_result_amount("uranium-ore", 50):set_ingredient_amount("ur-biomass", 4).energy_required = 80
 RECIPE("bhodos-ur"):set_fields {
   ingredients = {
     {type = "fluid", name = "pressured-steam", amount = 500, minimum_temperature = 2000},
@@ -324,7 +325,7 @@ RECIPE("bhodos-ur"):set_fields {
   },
   results = {{type = "item", name = "ur-biomass", amount = 40}},
   energy_required = 120
-}:replace_unlock("phytomining-mk03", "phytomining-mk02")
+}:replace_unlock("phytomining-mk03", "phytomining")
 RECIPE("bhodos-ur-2"):set_fields {
   ingredients = {
     {type = "fluid", name = "pressured-steam", amount = 500, minimum_temperature = 2000},
