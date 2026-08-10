@@ -104,7 +104,7 @@ ENTITY {
     damaged_trigger_effect = hit_effects.entity(),
     energy_source = {
       type = "fluid",
-      burns_fluid = true,
+      burns_fluid = false,
       scale_fluid_usage = true,
       fluid_box = {
         volume = 20,
