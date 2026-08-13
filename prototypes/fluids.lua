@@ -86,3 +86,14 @@ data:extend({
     gas_temperature = 15
   }
 })
+-- fake item to represent depth drilled
+FLUID{
+  type = "fluid",
+  name = "depth",
+  icon = "__core__/graphics/icons/technology/effect-constant/effect-constant-capacity.png",
+  icon_size = 64,
+  flags = {},
+  default_temperature = 15,
+  base_color = {0, 0, 0},
+  flow_color = {0, 0, 0}
+}

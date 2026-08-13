@@ -12,7 +12,7 @@ data:extend
   ]]--
   {
     type = "recipe-category",
-    name = "geowater",
+    name = "geothermal-boring",
   },
   {
     type = "recipe-category",

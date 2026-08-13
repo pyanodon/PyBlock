@@ -1,19 +1,101 @@
--- geothermal water fake mining recipe
+-- geothermal borehole construction
 RECIPE {
   type = "recipe",
-  name = "geothermal-water",
-  categories = {"geowater"},
+  name = "geothermal-borehole-1",
+  categories = {"geothermal-boring"},
+  raise_on_crafted = true,
+  enabled = false,
+  energy_required = 20,
+  ingredients = {
+    { type = "item", name = "pipe", amount = 10 }
+  },
+  results = {
+    { type = "fluid", name = "depth", amount_min = 0, amount_max = 20, independent_probability = 0.2, fluidbox_index = 1}
+  },
+  main_product = "depth",
+  allow_productivity = true
+}:add_unlock("geothermal-power-mk01")
+RECIPE {
+  type = "recipe",
+  name = "geothermal-borehole-2",
+  categories = {"geothermal-boring"},
+  raise_on_crafted = true,
+  enabled = false,
+  energy_required = 15,
+  ingredients = {
+    { type = "item", name = "niobium-pipe", amount = 10 }
+  },
+  results = {
+    { type = "fluid", name = "depth", amount_min = 0, amount_max = 20, independent_probability = 0.5, fluidbox_index = 1}
+  },
+  main_product = "depth",
+  allow_productivity = true
+}:add_unlock("geothermal-power-mk01")
+RECIPE {
+  type = "recipe",
+  name = "geothermal-borehole-3",
+  categories = {"geothermal-boring"},
+  raise_on_crafted = true,
+  enabled = false,
+  energy_required = 10,
+  ingredients = {
+    { type = "item", name = "ht-pipes", amount = 10 }
+  },
+  results = {
+    { type = "fluid", name = "depth", amount_min = 0, amount_max = 20, independent_probability = 0.9, fluidbox_index = 1}
+  },
+  main_product = "depth",
+  allow_productivity = true
+}:add_unlock("geothermal-power-mk01")
+
+-- geothermal borehole use
+RECIPE{
+  type = "recipe",
+  name = "geothermal-water-1",
+  categories = {"geothermal-boring"},
+  raise_on_crafted = true,
   enabled = false,
   energy_required = 4,
   ingredients = {
-    { type = "fluid", name = "pressured-water", amount = 3750 },
-    { type = "item", name = "pipe", amount = 20 }
+    { type = "fluid", name = "pressured-water", amount = 600 },
   },
   results = {
-    { type = "fluid", name = "geothermal-water", amount = 400, temperature = 3000 },
-    { type = "item", name = "pipe", amount_min = 0, amount_max = 20, independent_probability = 0.9 }
+    { type = "fluid", name = "geothermal-water", amount = 600, temperature = 1000 },
   },
   main_product = "geothermal-water",
+  allow_productivity = true
+}:add_unlock("geothermal-power-mk01")
+RECIPE{
+  type = "recipe",
+  name = "geothermal-water-2",
+  categories = {"geothermal-boring"},
+  raise_on_crafted = true,
+  enabled = false,
+  energy_required = 8,
+  ingredients = {
+    { type = "fluid", name = "pressured-water", amount = 600 },
+  },
+  results = {
+    { type = "fluid", name = "geothermal-water", amount = 600, temperature = 2000 },
+  },
+  main_product = "geothermal-water",
+  allow_productivity = true
+}:add_unlock("geothermal-power-mk01")
+RECIPE{
+  type = "recipe",
+  name = "geothermal-water-3",
+  categories = {"geothermal-boring"},
+  raise_on_crafted = true,
+  enabled = false,
+  energy_required = 12,
+  ingredients = {
+    { type = "fluid", name = "pressured-water", amount = 600 },
+  },
+  results = {
+    { type = "fluid", name = "geothermal-water", amount = 600, temperature = 3000 },
+  },
+  main_product = "geothermal-water",
+  allow_productivity = true
 }:add_unlock("geothermal-power-mk01")
 
 -- bootstrapping stone to moss
