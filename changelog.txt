@@ -6,6 +6,10 @@ Date: ????
     - Allow productivity in seaweed bricks, sorting hot coals, and compressing hot coals
     - Bhoddos -> uranium biomass and uranium biomass -> uranium have been moved from phytomining 2 to phytomining
     - Phytomining now requires coal power 2 to be researched
+    - Buffed thickened coal fines to coal dust output from 8 to 8-12
+    - Halved steam cost of diamond forging
+    - Slowed diamond forging from 45 sec to 60 sec
+    - Buffed kimberlite output of diamond forging from 0-5 to 1-9
   Bugfixes:
     - Fixed recommended preset string formatting
     - Fixed that (with hardmode) burner did not have burnt result inventory. Resolves https://github.com/pyanodon/pybugreports/issues/1490
