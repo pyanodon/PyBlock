@@ -100,11 +100,16 @@ Date: 2025-12-29
     - Fixed simple fish breeding recipe having a 1 instead of a 0 on the icon when recipe signals are enabled. Resolves https://github.com/pyanodon/pybugreports/issues/1238
     - Fixed mining and pumping productivity bonus being 10% instead of 5%
 ---------------------------------------------------------------------------------------------------
+Version: 3.3.1
+Date: 2026-08-12
+  Changes:
+    - Fixed that shunt inserters would attempt to burn steam. Resolves https://github.com/pyanodon/pybugreports/issues/1550
+---------------------------------------------------------------------------------------------------
 Version: 3.3.0
 Date: 2026-07-30
   Changes:
     - Updated for 2.1
-    - Updated shunt inserter graphics. Thank you Talander!
+    - Updated shunt inserter graphics. Thank you Talandar!
     - Removed steam engine minimum steam temperature as a stopgap fix until wube fixed fluid temp 'mixing'
   Bugfixes:
     - Fixed that alt names were concatenated instead of chosen. Resolves https://github.com/pyanodon/pybugreports/issues/1497
