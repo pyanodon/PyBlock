@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.4.2
-Date: ????
+Date: 2026-09-22
   Changes:
     - Dry seaweed has 10% the module speed as regular seaweed
     - Allow productivity in seaweed bricks, sorting hot coals, and compressing hot coals
