@@ -13,8 +13,8 @@ RECIPE{
     {type = "fluid", name = "water", amount = 50},
   },
   main_product = "thickened-coal-fines",
-  subgroup = "py-fusion-recipes",
-  order = "h"
+  subgroup = "py-fusion-items",
+  order = "a"
 }:add_unlock("diamond-mining")
 
 RECIPE{
@@ -30,8 +30,8 @@ RECIPE{
     {type = "item", name = "carbon-dust", amount = 8},
   },
   main_product = "carbon-dust",
-  subgroup = "py-fusion-recipes",
-  order = "h"
+  subgroup = "py-fusion-items",
+  order = "a"
 }:add_unlock("diamond-mining")
 
 RECIPE{
@@ -48,6 +48,6 @@ RECIPE{
     {type = "item", name = "kimberlite-rock", amount_min = 0, amount_max = 5},
   },
   main_product = "kimberlite-rock",
-  subgroup = "py-fusion-recipes",
-  order = "h"
+  subgroup = "py-fusion-items",
+  order = "a"
 }:add_unlock("diamond-mining")
