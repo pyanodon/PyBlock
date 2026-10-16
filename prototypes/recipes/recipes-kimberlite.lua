@@ -1,5 +1,24 @@
 RECIPE{
   type = "recipe",
+  name = "thicken-coal-fines",
+  categories = {"thickener"},
+  enabled = false,
+  energy_required = 5,
+  ingredients = {
+    {type = "fluid", name = "high-ash-fines", amount = 150},
+    {type = "item", name = "starch", amount = 1},
+  },
+  results = {
+    {type = "fluid", name = "thickened-coal-fines", amount = 100},
+    {type = "fluid", name = "water", amount = 50},
+  },
+  main_product = "thickened-coal-fines",
+  subgroup = "py-fusion-items",
+  order = "a"
+}:add_unlock("diamond-mining")
+
+RECIPE{
+  type = "recipe",
   name = "coal-dust-early",
   categories = {"centrifuging"},
   enabled = false,
