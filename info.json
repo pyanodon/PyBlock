@@ -1,6 +1,6 @@
 {
 	"name": "PyBlock",
-	"version": "3.3.1",
+	"version": "3.4.2",
 	"factorio_version": "2.1",
 	"title": "PyBlock",
 	"author": "KingArthur, protocol_1903",
@@ -8,8 +8,8 @@
 	"homepage": "",
 	"description": "Pymod edition of a Sea Block style game",
 	"dependencies": [
-	"base >= 2.1",
-	"pyalternativeenergy >= 3.2.0",
+	"base >= 2.1.20",
+	"pyalternativeenergy >= 3.2.8",
   "? aai-loaders",
   "! pystellarexpedition"
 	]
