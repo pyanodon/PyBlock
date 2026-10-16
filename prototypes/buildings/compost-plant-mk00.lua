@@ -62,6 +62,7 @@ ENTITY {
     },
     scale_fluid_usage = true,
   },
+  tall = true,
   energy_usage = "300kW",
   graphics_set = {
     animation = {
